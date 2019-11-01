@@ -1,0 +1,19 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.simulationalgorithm
+name: SimulationAlgorithm
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Zamana bağımsız bir benzetim algoritmasını temsil eder.
+
+
+  Zamana bağımsız simülasyon tekniği bir <xref:microsoft.quantum.simulation.evolutiongenerator> dönüştürür
+
+  belirli bir zaman aralığı için Unitary saat evrimi.
+syntax: newtype SimulationAlgorithm = ((Double, Microsoft.Quantum.Simulation.EvolutionGenerator, Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: 0d70a6f73c49f4759473981cd2f34254f7d721f7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221635"

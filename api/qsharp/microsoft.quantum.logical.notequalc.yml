@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.notequalc
+name: NotEqualC
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Yalnızca iki giriş eşitse true değerini döndürür.
+syntax: 'function NotEqualC (a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex) : Bool'
+input:
+  content: '(a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex)'
+  types:
+  - name: a
+    summary: Karşılaştırılacak ilk değer.
+    uid: microsoft.quantum.math.complex
+  - name: b
+    summary: Karşılaştırılacak ikinci değer.
+    uid: microsoft.quantum.math.complex
+output:
+  content: Bool
+  types:
+  - summary: yalnızca `a` `b`eşitse `true`.
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: eb4032ba6ac9beab677fbe20621856a5d6928ceb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235371"

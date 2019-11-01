@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.mresetz
+name: MResetZ
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: '`Z` temelinde tek bir qubit ölçer ve ölçüyü takip eden standart temel durum | 0 〉 olarak sıfırlar.'
+syntax: 'operation MResetZ (target : Qubit) : Result'
+input:
+  content: '(target : Qubit)'
+  types:
+  - name: target
+    summary: Ölçülecek tek bir qubit.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: Pauli $Z $ tabanında `target` ölçme sonucu.
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: a0a07ec90e36b06640ff66340b7a3d979251b0ff
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231189"

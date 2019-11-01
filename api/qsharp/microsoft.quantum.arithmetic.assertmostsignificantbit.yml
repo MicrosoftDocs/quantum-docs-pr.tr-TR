@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.assertmostsignificantbit
+name: AssertMostSignificantBit
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Bir qubit kayıt 'nın, işaretsiz bir tamsayıyı temsil eden en önemli qubitin belirli bir durumda olduğunu onaylar.
+remarks: Bu işlemin denetlenen sürümü denetimleri yoksayar.
+syntax: 'operation AssertMostSignificantBit (value : Result, number : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(value : Result, number : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: value
+    summary: Belirtilmekte olan en yüksek bit değeri.
+    isPrimitive: true
+    uid: Result
+  - name: number
+    summary: En yüksek bitin denetlenme işaretsiz tamsayı.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.intrinsic.assert
+ms.openlocfilehash: 594ecbb7ba3ccc657c4e55f964714b86e575a6ce
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221618"

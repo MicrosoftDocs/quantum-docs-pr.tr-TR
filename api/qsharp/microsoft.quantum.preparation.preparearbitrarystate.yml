@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.preparearbitrarystate
+name: PrepareArbitraryState
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  Belirli bir hisse cıya durumunu hazırlayan bir işlem döndürür.
+
+
+  Döndürülen $U $, $n $-qubit hesaplama tabanlı durumu $ \ket{0...0} $ öğesinden $r _j e ^ {i T_J} $ karmaşık katlarla rastgele bir hisse TI $ \ket{\psı} $ hazırlar.
+
+
+  $ $ \begin{hizalaması} U\ket {0... 0} = \ket{\psı} = \frac{\sum_{j = 0} ^ {2 ^ n-1} r_j e ^ {i T_J} \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
+
+  \end{hizalaması} $ $
+remarks: $R _j < $0 negatif giriş katsayıları $ | r_j | $ değeri ile pozitif olarak değerlendirilir. $2 ^ n $ değerinden azı belirtilmişse, `coefficients` $ (r_j, T_J) = (0,0, 0,0) $ öğeleriyle doldurulur.
+syntax: 'operation PrepareArbitraryState (coefficients : Microsoft.Quantum.Math.ComplexPolar[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+references: '- Senişce Logic devreleri Vivek V. ShENdE, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176'
+input:
+  content: '(coefficients : Microsoft.Quantum.Math.ComplexPolar[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: coefficients
+    summary: Mutlak değerleri ve aşama $ (r_j, T_J) ile temsil edilen en fazla $2 ^ n $ karmaşık katsayılar dizisi. $J $ TH katsayısı, küçük endian biçiminde $ \ket{j} $ kodlu durum sayısını dizine ekler.
+    isArray: true
+    uid: microsoft.quantum.math.complexpolar
+  - name: qubits
+    summary: Qubit kodlama numarası durumlarını küçük endian biçiminde kaydeder. Bu durumun, $ \ket{0...0} $ hesaplama tabanlı durumunda başlatılması beklenir.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: f2b26a890fbe9f24f773ae5753cccaf40173d750
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228163"

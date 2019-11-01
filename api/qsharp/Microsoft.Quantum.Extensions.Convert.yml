@@ -1,0 +1,61 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.convert
+name: Microsoft. hisse. Extensions. Convert
+summary: " # <a name=\"summary\"></a>Özet\n Bunlar, .NET CLR 'nin Q # tür sistemi içinde uygun olan System. Convert ad alanındaki işlevlerden bazılarıdır.\n\n # <a name=\"remarks\"></a>Açıklamalar\n Bool, Int ve Double türleri için işlevin birkaç sürümü varsa, ilgili işlevlerde B, I ve D son eki bulunur."
+functions:
+- uid: microsoft.quantum.extensions.convert.biginttobools
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.bigintasboolarray"kullanın.
+- uid: microsoft.quantum.extensions.convert.boolstobigint
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.boolarrayasbigint"kullanın.
+- uid: microsoft.quantum.extensions.convert.pauliarraytoint
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.pauliarrayasint"kullanın.
+- uid: microsoft.quantum.extensions.convert.tobigint
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.intasbigint"kullanın.
+- uid: microsoft.quantum.extensions.convert.todouble
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.intasdouble"kullanın.
+- uid: microsoft.quantum.extensions.convert.tostringb
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.boolasstring"kullanın.
+- uid: microsoft.quantum.extensions.convert.tostringd
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.doubleasstring"kullanın.
+- uid: microsoft.quantum.extensions.convert.tostringdformat
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.doubleasstringwithformat"kullanın.
+- uid: microsoft.quantum.extensions.convert.tostringi
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.intasstring"kullanın.
+- uid: microsoft.quantum.extensions.convert.tostringiformat
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.intasstringwithformat"kullanın.
+ms.openlocfilehash: 57f341ec6e8f82cfa9fc4bb958a580743a350218
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056480"

@@ -1,0 +1,54 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.assertphase
+name: AssertPhase
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Bir eşit üst konum durumunun beklenen değere sahip olduğunu onaylar.
+
+
+  Özellikle, bazı rastgele gerçek t için beklenen değere sahip $ \frac{e ^ {ı t}} {\sqrt{2}} (e ^ {i\phi} \ tus{0} + e ^ {-i\phi} \ tus{1}) $ olarak ifade edilebilir olan bir hisse cısının $ \phi $ aşamasının $ \ Fi $.
+examples: >-
+  Şu onay başarılı olur: `qubit` durumu $ \ket{\psı} = e ^ {i 0,5} \ sqrt {1/2} \ Tus{0}+ e ^ {i 0,5} \ sqrt {1/2} \ demet{1}$;
+
+
+  - `AssertPhase(0.0,qubit,10e-10);`
+
+
+  `qubit` $ \ket{\psı} = e ^ {i 0,5} \ sqrt {1/2} \ Tus{0}+ e ^ {-i 0,5} \ sqrt {1/2} \ demet{1}$; durumunda.
+
+
+  - `AssertPhase(0.5,qubit,10e-10);`
+
+
+  `qubit`, $ \ket{\psı} = e ^ {-i 2.2} \ sqrt {1/2} \ Tus{0}+ e ^ {i 0.2} \ sqrt {1/2} \ demet{1}$; durumunda.
+
+
+  - `AssertPhase(-1.2,qubit,10e-10);`
+syntax: 'operation AssertPhase (expected : Double, qubit : Qubit, tolerance : Double) : Unit'
+input:
+  content: '(expected : Double, qubit : Qubit, tolerance : Double)'
+  types:
+  - name: expected
+    summary: $ \Phi \ in (-\pı, \pı] $ değerinin beklenen değeri.
+    isPrimitive: true
+    uid: Double
+  - name: qubit
+    summary: Beklenen durumu depolayan qubit.
+    isPrimitive: true
+    uid: Qubit
+  - name: tolerance
+    summary: Gerçek ve beklenen arasındaki fark için mutlak tolerans.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 2eaeb042f68a2a5c0cff65918653c37f26ab8d4b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73212251"

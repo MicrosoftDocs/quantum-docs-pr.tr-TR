@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.pnormalized
+name: Pnormalleştirilmemiş
+type: function
+namespace: Microsoft.Quantum.Math
+summary: >-
+  `L(p)` norm `Double`s vektörünü normalleştirir.
+
+
+  Diğer bir deyişle, `Double[]`türünde bir dizi $x verildiğinde, bu, tüm öğelerin $p $-norm $\|x\|_p $ tarafından bölündüğü bir dizi döndürür.
+syntax: 'function PNormalized (p : Double, array : Double[]) : Double[]'
+input:
+  content: '(p: Double, dizi: Double [])'
+  types:
+  - name: Lama
+    summary: $P $-norm içindeki üs $p $.
+    isPrimitive: true
+    uid: Double
+  - name: array
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double []
+  types:
+  - summary: Dizi $x $-norm $\|x\|_p $ $p tarafından normalleştirilir.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+seeAlso:
+- pnorm
+ms.openlocfilehash: 5fd219b866b14d3d6faf58cdf4f1ce2b9fbadf9d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067297"

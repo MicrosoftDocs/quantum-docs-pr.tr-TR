@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampampphasesfixedpoint
+name: AmpAmpPhasesFixedPoint
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Sabit nokta genliği yükseltme için kısmi yansıma aşamalarını hesaplar.
+syntax: 'function AmpAmpPhasesFixedPoint (nQueries : Int, successMin : Double) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
+references: "\"En Iyi sayıdaki sorgu ile sabit noktalı geniz yükseltme\" aşamalarını kullanıyoruz\n\n- [YoderLowChuang2014](https://arxiv.org/abs/1409.3305) Ayrıca bkz. \"bileşik hisse kapıları Metodolojisi\"\n- `RotationPhases` biçimindeki aşamalar için [LowYoderChuang2016](https://arxiv.org/abs/1603.03996) ."
+input:
+  content: '(nQueries : Int, successMin : Double)'
+  types:
+  - name: nQueries
+    summary: Durum hazırlığı Oracle 'a yapılan sorgu sayısı. Tek bir tamsayı olmalıdır.
+    isPrimitive: true
+    uid: Int
+  - name: successMin
+    summary: Hedef en kısa başarı olasılığı.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
+  types:
+  - summary: Sabit nokta genampme hisse algoritması uygulamasında kullanılabilen aşamaların dizisi.
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+ms.openlocfilehash: 0dc2c9b18998bac65cd746b5c4065a09a990ef13
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215702"

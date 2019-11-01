@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.embedpauli
+name: EmbedPauli
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Tek bir-qubit Pauli işleci ve bir qubit dizini verildiğinde, bu dizinde verilen tek qubit işleciyle bir multi-qubit Pauli işleci, diğer tüm dizinde `PauliI` döndürür.
+examples: >-
+  Dizi `[PauliI, PauliI, PauliX, PauliI]`almak için:
+
+
+  ```qsharp
+
+  EmbedPauli(PauliX, 2, 3);
+
+  ```
+syntax: 'function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]'
+input:
+  content: '(pauli : Pauli, location : Int, n : Int)'
+  types:
+  - name: pauli
+    summary: Verilen konuma yerleştirilecek tek qubit Pauli işleci.
+    isPrimitive: true
+    uid: Pauli
+  - name: location
+    summary: '`output[location] == pauli`gibi bir dizin, `output` bu işlevin çıktısından oluşur.'
+    isPrimitive: true
+    uid: Int
+  - name: n
+    summary: Döndürülecek dizinin uzunluğu.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Pauli[]
+  types:
+  - isArray: true
+    isPrimitive: true
+    uid: Pauli
+ms.openlocfilehash: 1e852781f6dd85e5432f5613184f028db0e84b87
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219391"

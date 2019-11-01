@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.rangeend
+name: RangeEnd
+type: function
+namespace: Microsoft.Quantum.Core
+summary: Belirtilen aralığın, dizideki son öğe olması gereken tanımlı bitiş değerini döndürür.
+remarks: >-
+  Aralık ifadesinin ilk öğesi `start`, ikinci öğesi `start+step`, üçüncü öğe ise `end` geçirilmeden `start+step+step`, vb.
+
+
+  Bir aralığın tanımlanan bitiş değerinin, Aralık tarafından belirtilen dizideki son öğeden farklı olabileceğini unutmayın; Örneğin, 0 aralığında. 2. 5 son öğe 4, ancak bitiş değeri 5 ' tir.
+syntax: 'function RangeEnd (range : Range) : Int'
+input:
+  content: '(Aralık: Aralık)'
+  types:
+  - name: aralığı
+    isPrimitive: true
+    uid: Range
+output:
+  content: "'Tir"
+  types:
+  - summary: Verilen aralığın tanımlı bitiş değeri.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066651"

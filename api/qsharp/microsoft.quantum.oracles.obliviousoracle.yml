@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.obliviousoracle
+name: ObliviousOracle
+type: newtype
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  Bir Oracle 'ın yükümlülüğü en çok genliğini temsil eder.
+
+
+  Oracle $O $ girdileri şunlardır:
+
+
+  - Anyükleyen La, $O $ 'ın üzerinde davranması $a $.
+
+  - İstenen Unitary $U $ ' in uygulandığı $s $,\_$ \ket{t} durumunda $a $.
+remarks: >-
+  Bu Oracle $ $ O\ket {s\_} tarafından tanımlanan a\ket {\ PSI}\_s = \lambdad\ket{t}\_a U \ket{\psı}\_s + \ sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cnoktalar $ $, ansınla State $ \ket{s}\_a $ to Her sistem durumunda Unitary $U $ ' i herhangi bir sistem durumu $ \ket{\psı}\_s $ ' a $ \ket{t} tarafından işaretlenen $ \lambda $ ' a bir $\_uygulayın.
+
+  İlk parametre $ \ket{s}\_a $ 'ın qubit kayıt dizinidir. İkinci parametre $ \ket{\psı}\_s $ 'ın qubit kayıt dizinidir.
+syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: f06527701dfad61843df66faca5dd265525b6aa6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231070"

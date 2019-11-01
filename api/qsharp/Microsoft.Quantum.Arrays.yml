@@ -1,0 +1,64 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.arrays
+name: Microsoft. hisse. dizileri
+summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı veri dizilerini oluşturmak ve işlemek için işlevler içerir."
+functions:
+- uid: microsoft.quantum.arrays.all
+  summary: Dizi öğeleri için tanımlanan bir dizi ve koşul verildiğinde, dizideki tüm öğelerin koşulu karşılayıp karşılamadığını denetler.
+- uid: microsoft.quantum.arrays.any
+  summary: Dizi öğeleri için tanımlanan bir dizi ve koşul verildiğinde, dizinin en az bir öğesinin koşulu karşılayıp karşılamadığını denetler.
+- uid: microsoft.quantum.arrays.constantarray
+  summary: Verilen değere eşit tüm öğelerle verilen uzunlukta bir dizi oluşturur.
+- uid: microsoft.quantum.arrays.enumerated
+  summary: Bir dizi verildiğinde, orijinal dizinin öğelerini içeren yeni bir dizi döndürür ve her bir öğenin indisleriyle birlikte.
+- uid: microsoft.quantum.arrays.exclude
+  summary: Belirli bir dizin listesindeki öğeleri dışlayarak başka bir dizinin öğelerini içeren bir dizi döndürür.
+- uid: microsoft.quantum.arrays.filtered
+  summary: Dizi öğeleri için tanımlanan bir dizi ve koşul verildiğinde, koşulu karşılayan öğelerden oluşan bir dizi döndürür.
+- uid: microsoft.quantum.arrays.fold
+  summary: Bir işlevi `f` dizi `array`aracılığıyla yineler `f(f(f(initialState, array[0]), array[1]), ...)`döndürüyor.
+- uid: microsoft.quantum.arrays.head
+  summary: Dizinin ilk öğesini döndürür.
+- uid: microsoft.quantum.arrays.indexof
+  summary: Belirli bir koşulu karşılayan dizideki ilk öğenin ilk dizinini döndürür. Böyle bir öğe yoksa-1 döndürür.
+- uid: microsoft.quantum.arrays.indexrange
+  summary: Bir dizi verildiğinde, for döngüsünde kullanılmak üzere uygun olan, bu dizinin dizinlerinin üzerinde bir Aralık döndürür.
+- uid: microsoft.quantum.arrays.lookupfunction
+  summary: Dizi verildiğinde, bu dizinin öğelerini döndüren bir işlev döndürür.
+- uid: microsoft.quantum.arrays.mapped
+  summary: Dizi öğeleri için tanımlanan bir dizi ve bir işlev verildiğinde, işlevin altındaki orijinal dizinin görüntülerinden oluşan yeni bir dizi döndürür.
+- uid: microsoft.quantum.arrays.mappedbyindex
+  summary: Bir dizi ve dizinin dizinli öğeleri için tanımlanan bir işlev verildiğinde, işlevin altındaki orijinal dizinin görüntülerinden oluşan yeni bir dizi döndürür.
+- uid: microsoft.quantum.arrays.most
+  summary: Son dizi öğesinin bırakılmasının dışında, bir giriş dizisine eşit olan bir dizi oluşturur.
+- uid: microsoft.quantum.arrays.padded
+  summary: Belirtilen bir uzunluğa kadar belirtilen değerlerle doldurulmuş bir dizi döndürür.
+- uid: microsoft.quantum.arrays.partitioned
+  summary: Bir diziyi birden çok parçaya böler.
+- uid: microsoft.quantum.arrays.rest
+  summary: İlk dizi öğesinin bırakılmasının dışında, bir giriş dizisine eşit olan bir dizi oluşturur.
+- uid: microsoft.quantum.arrays.reversed
+  summary: Giriş dizisi ile aynı öğeleri içeren, ancak ters sırada olan bir dizi oluşturun.
+- uid: microsoft.quantum.arrays.sequencei
+  summary: Verilen bir aralıktaki tamsayıların dizisini alır.
+- uid: microsoft.quantum.arrays.sequencel
+  summary: Verilen bir aralıktaki tamsayıların dizisini alır.
+- uid: microsoft.quantum.arrays.subarray
+  summary: Bir diziyi ve konumların bir listesini alır ve özgün dizinin öğelerinden belirtilen konumlara göre oluşturulmuş yeni bir dizi oluşturur.
+- uid: microsoft.quantum.arrays.tail
+  summary: Dizinin son öğesini döndürür.
+- uid: microsoft.quantum.arrays.zip
+  summary: İki dizi verildiğinde, her bir çiftin her orijinal diziden bir öğe içermesi gibi yeni bir çift dizisi döndürür.
+- uid: microsoft.quantum.arrays.zip3
+  summary: Üç dizi verildiğinde, her bir 3 tanımlama grubu her bir orijinal diziden bir öğe içerdiği için, yeni bir 3-tanımlama dizisi döndürür.
+- uid: microsoft.quantum.arrays.zip4
+  summary: Dört dizi verildiğinde, her 4 tanımlama grubu her bir orijinal diziden bir öğe içerdiği için, yeni bir 4-tanımlama dizisi dizisi döndürür.
+operations:
+- uid: microsoft.quantum.arrays.foreach
+  summary: Dizi öğeleri için tanımlanan bir dizi ve bir işlem verildiğinde, işlem altındaki orijinal dizinin görüntülerinden oluşan yeni bir dizi döndürür.
+ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057174"

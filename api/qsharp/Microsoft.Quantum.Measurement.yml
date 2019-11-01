@@ -1,0 +1,22 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.measurement
+name: Microsoft.Quantum.Measurement
+operations:
+- uid: microsoft.quantum.measurement.measurepaulis
+  summary: Multi-qubitpauli işleçleri dizisi verildiğinde, her birini belirtilen ölçüm aracını kullanarak ölçer ve sonra sonuçların dizisini döndürür.
+- uid: microsoft.quantum.measurement.measurewithscratch
+  summary: Ölçüyü gerçekleştirmek için açık bir karalama qubit kullanarak verilen Pauli işlecini ölçer.
+- uid: microsoft.quantum.measurement.mresetx
+  summary: X temelinde tek bir qubit ölçer ve ölçüyü takip eden standart temel durum | 0 〉 olarak sıfırlar.
+- uid: microsoft.quantum.measurement.mresety
+  summary: Y esasına göre tek bir qubit ölçer ve ölçüyü takip eden standart temel durum | 0 〉 olarak sıfırlar.
+- uid: microsoft.quantum.measurement.mresetz
+  summary: '`Z` temelinde tek bir qubit ölçer ve ölçüyü takip eden standart temel durum | 0 〉 olarak sıfırlar.'
+- uid: microsoft.quantum.measurement.multim
+  summary: Belirli bir dizide her bir qubit ' i standart temelinde ölçer.
+ms.openlocfilehash: 872031f8a6ebd77e72cd74e1c98e7347c09ca14a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210993"

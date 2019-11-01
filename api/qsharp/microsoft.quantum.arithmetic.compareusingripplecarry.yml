@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.compareusingripplecarry
+name: CompareUsingRippleCarry
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Bu Unitary testleri, eşit boyutlu qubit kayıtlarında depolanan `x` ve `y` depolanan iki tamsayı `x > y`karşılamadığı test. True ise, 1 çıkış qubit XORed. Aksi halde, 0 bir çıkış qubit içine XORed.
+
+
+  Diğer bir deyişle, bu Unitary $U $ şunları karşılar: $ $ \begin{hizalaması} U\ket {x} \ ayraç {y} \ ayraç {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)}.
+
+  \end{hizalaması} $ $.
+syntax: 'operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
+references: '- Yeni bir hisse Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutın, David Petrie Moulton https://arxiv.org/abs/quant-ph/0410184'
+input:
+  content: '(x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit)'
+  types:
+  - name: x
+    summary: Bir qubit kaydındaki `LittleEndian` biçimde saklanan Karşılaştırılacak ilk sayı.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: y
+    summary: Bir qubit kaydındaki `LittleEndian` biçimde saklanan ikinci sayı.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: output
+    summary: $X > y $ karşılaştırma sonucunu depolayan qubit.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: fa3db99da28f96e1cb42dd03e465440e015722fa
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221108"

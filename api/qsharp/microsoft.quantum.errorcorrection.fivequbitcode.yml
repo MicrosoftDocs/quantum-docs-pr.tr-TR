@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.fivequbitcode
+name: FiveQubitCode
+type: function
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: Yerinde sendromu ölçümlü ⟦ 5, 1, 3 ⟧ Code Encoder ve Decoder öğelerini temsil eden bir qecc değeri döndürür.
+remarks: >-
+  Bu kod, aşağıdaki iki İnceleme içinde bağımsız olarak bulunur:
+
+
+  - C. olsun. Bennett, D. DiVincenzo, J. A. Smolin ve W. K. Wootters, "karışık durum entanglement ve hisse hata düzeltmesi," fiziksel. Rev. A, 54 (1996) PP. 3824-3851; https://arxiv.org/abs/quant-ph/9604024 ve
+
+  - R. LaFlamme, C. Miquel, J. P. Paz ve W. H. Zurek, "kusursuz hisse hata düzeltme kodu," fiziksel. Rev. lett. 77 (1996) PP. 198-201; https://arxiv.org/abs/quant-ph/9602019
+syntax: 'function FiveQubitCode () : Microsoft.Quantum.ErrorCorrection.QECC'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft.Quantum.ErrorCorrection.QECC
+  types:
+  - summary: Bir `QECC` türü belirterek hisse hata düzeltme kodunun bir uygulamasını döndürür.
+    uid: microsoft.quantum.errorcorrection.qecc
+ms.openlocfilehash: 1865ededef3e3ada743a49ef81141aeffdcfed0a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220411"

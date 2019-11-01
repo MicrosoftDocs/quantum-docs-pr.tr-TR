@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.snd
+name: Snd
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Bir çift verildiğinde, ikinci öğesini döndürür.
+syntax: "function Snd (pair : ('T, 'U)) : 'U"
+input:
+  content: "(pair : ('T, 'U))"
+  types:
+  - name: pair
+    summary: İki öğe içeren bir tanımlama grubu.
+    types:
+    - uid: "'T"
+      isLocal: true
+    - uid: "'U"
+      isLocal: true
+output:
+  content: "'U"
+  types:
+  - summary: '`pair`ikinci öğesi.'
+    uid: "'U"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Çiftin ilk üyesinin türü.
+- uid: "'U"
+  summary: Çiftin ikinci üyesinin türü.
+ms.openlocfilehash: c9a7d38a389411b374fbe2b154ce22a6bed5943e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222315"

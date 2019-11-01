@@ -1,0 +1,45 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.bitwise
+name: Microsoft. hisse. Extensions. bit düzeyinde
+functions:
+- uid: microsoft.quantum.extensions.bitwise.and
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.bitwise.and"kullanın.
+- uid: microsoft.quantum.extensions.bitwise.not
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.bitwise.not"kullanın.
+- uid: microsoft.quantum.extensions.bitwise.or
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.bitwise.or"kullanın.
+- uid: microsoft.quantum.extensions.bitwise.parity
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.bitwise.parity"kullanın.
+- uid: microsoft.quantum.extensions.bitwise.xbits
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.bitwise.xbits"kullanın.
+- uid: microsoft.quantum.extensions.bitwise.xor
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.bitwise.xor"kullanın.
+- uid: microsoft.quantum.extensions.bitwise.zbits
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.bitwise.zbits"kullanın.
+ms.openlocfilehash: ac63e91ec3fefe0002f14b1542eaa97456bd33aa
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056750"

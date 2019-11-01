@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.estimatefrequencya
+name: EstimateFrequencyA
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Adjointable ve ölçüm olan bir hazırlık verildiğinde, belirli bir deneme sayısı gerçekleştirerek, ölçümün başarılı olduğu sıklığı (`Zero`döndürür) tahmin eder.
+remarks: Adjointable işlemleri için, işlemi çağırma gibi bazı varsayımlar, hedef makinelerin bazı performans iyileştirmeleri yapmasına izin veren qubits 'i tam olarak aynı duruma hazırlar.
+syntax: 'operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
+input:
+  content: '(preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
+  types:
+  - name: preparation
+    summary: Giriş kaydına verilen bir durum $ \rho $ hazırlayan bir adjointable işlemi $P $.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: measurement
+    summary: Bir işlem, ilgilendiğiniz ölçümü temsil eden $M.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Result
+  - name: nQubits
+    summary: Her birinin hazırlanması ve ölçüsünün işlem yapması gereken qubit sayısı.
+    isPrimitive: true
+    uid: Int
+  - name: nMeasurements
+    summary: İlgilendiğiniz sıklığı tahmin etmek için ölçümün kaç kez gerçekleştirilmesi gerektiği.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: $M (P (\ket{00 \ cnoktalarla 0} \bra{00 \ cnoktalar 0}) $, `Zero`döndüren sıklık 'nin tahmin edilen bir $ \hat{p} $, $ = n\_{\upok}/n\_{\Text{measurements}} $, burada $n\_{\ upok} $, gözlemlenen `Zero` sonuçlarının sayısıdır.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: cfc90cee0b98b88391ee23218489669600a97920
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229183"

@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
+name: DeterministicStateOracleFromStateOracle
+type: function
+namespace: Microsoft.Quantum.Oracles
+summary: Bir Oracle türündeki `StateOracle` `DeterministicStateOracle`dönüştürür.
+syntax: 'function DeterministicStateOracleFromStateOracle (idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle) : Microsoft.Quantum.Oracles.DeterministicStateOracle'
+input:
+  content: '(idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle)'
+  types:
+  - name: idxFlagQubit
+    summary: 'İki kayıt üzerinde açıkça işlem gören `stateOracle` $A $ bayrağının işaret eden dizin: $f $ bayrağı ve sistem $s $. Örneğin $A \tus{0}\_f\tus{\ PSI}\_s $.'
+    isPrimitive: true
+    uid: Int
+  - name: stateOracle
+    summary: Bir durum hazırlama Oracle $A $ `StateOracle`türü.
+    uid: microsoft.quantum.oracles.stateoracle
+output:
+  content: Microsoft.Quantum.Oracles.DeterministicStateOracle
+  types:
+  - summary: Aynı durum hazırlama Oracle $A $, ancak artık `DeterministicStateOracle`türünde, bu nedenle $a, s $ artık açıkça ayrı olmayan bir kayıt üzerinde çalışır, ör.  $A \ket{0\psı}\_{as} $.
+    uid: microsoft.quantum.oracles.deterministicstateoracle
+seeAlso:
+- microsoft.quantum.canon.stateoracle
+- microsoft.quantum.canon.deterministicstateoracle
+ms.openlocfilehash: 5eda40115d4d4ca7b4187f76b5e0807695913407
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231104"

@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.multiplybymodularinteger
+name: MultiplyByModularInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Bir qubit kaydındaki tamsayı sabiti ile modüler çarpma gerçekleştirir.
+
+
+  Bu işlem, N ve constMultiplier tarafından belirtilen bir şekilde, bu işlemi hesaplama temelinde belirten bir Unitary uygular: | y ⟩ ↦ | a ⋅ y (mod N) ⟩, 0 ile N-1 arasında tüm y için
+remarks: >-
+  - Devre diyagramı ve açıklama için, bkz. Şekil 7 [-Arxıv: Quant-pH/, 5095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)
+
+  - Bu işlem, [Arxıv: Quant-pH/, 5095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf) içindeki u ₐ 'a karşılık gelir
+syntax: 'operation MultiplyByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: constMultiplier
+    summary: Çarpanın çarpıldığı sabit. Mod için ortak ana olmalıdır.
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    summary: Çarpma işlemi, mod `modulus` gerçekleştirdi
+    isPrimitive: true
+    uid: Int
+  - name: multiplier
+    summary: >-
+      Bir sabit ile Çarpılmakta olan sayı.
+
+      Bu, küçük endian bit düzeninde tamsayıyı temsil eden bir qubits dizisidir.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 4a99aff903b22ad4edcd96f2a980bd65c740025f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218762"

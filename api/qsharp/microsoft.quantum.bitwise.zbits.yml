@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.bitwise.zbits
+name: ZBits
+type: function
+namespace: Microsoft.Quantum.Bitwise
+summary: Pauli işleçleri dizisinin Z bitlerini temsil eden bir tamsayı döndürür.
+remarks: "`paulis` dizi uzunluğu 63 ' den büyükse işlev oluşturulur."
+syntax: 'function ZBits (paulis : Pauli[]) : Int'
+input:
+  content: '(paulis : Pauli[])'
+  types:
+  - name: paulis
+    summary: Bir tamsayı olarak temsil edilecek Pauli işleçleri dizisi.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+output:
+  content: Int
+  types:
+  - summary: İkili temsili $ (P_{62}\,P_{61}\,\noktalar\,p_0) $ olan bir tamsayı $x $, $0 burada $p `paulis[i]` veya `PauliI`, `PauliX` ise $p _i = $1 ise `paulis[i]` veya `PauliZ`.
+    isPrimitive: true
+    uid: Int
+seeAlso:
+- xbits
+ms.openlocfilehash: 21d3da075cb4b98e5604f72b8432536bb9d51753
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217708"

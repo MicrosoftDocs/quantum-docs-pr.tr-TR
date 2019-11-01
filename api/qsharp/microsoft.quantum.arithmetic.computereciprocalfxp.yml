@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.computereciprocalfxp
+name: ComputeReciprocalFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: $1/x $ ' i $x $ bir sabit noktalı sayı için hesaplar.
+syntax: 'operation ComputeReciprocalFxP (x : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(x : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: x
+    summary: Ters çevrilme yapılacak sabit nokta sayısı.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: result
+    summary: Sonucu alacak sabit noktalı sayı. $ \Ket{0.0} $ olarak başlatılmalıdır.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 258a3386b21286e7a6a7b9a1fc716f69f1a48682
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221023"

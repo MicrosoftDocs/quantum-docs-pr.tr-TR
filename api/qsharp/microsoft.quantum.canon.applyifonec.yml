@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifonec
+name: ApplyIfOneC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Klasik sonuç değeri bir olan denetlenebilir bir işlem uygular.
+
+
+  Bir işlem `op` ve sonuç değeri `result`, `result` `One`ise `target` `op` uygular. `Zero`, `target`hiçbir şey olmaz.
+
+  Sonek `C` uygulanacak işlemin denetlenebilir olduğunu gösterir.
+syntax: "operation ApplyIfOneC (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit"
+input:
+  content: "(result : Result, (op : ('T => Unit is Ctl), target : 'T))"
+  types:
+  - name: result
+    summary: Op 'ın uygulanıp uygulanmadığını denetleyen ölçüm sonucu.
+    isPrimitive: true
+    uid: Result
+  - name: op
+    summary: Koşullu olarak uygulanacak bir işlem.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: target
+    summary: İşlemin uygulandığı giriş.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Koşullu olarak uygulanacak işlemin giriş türü.
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyifonec
+- microsoft.quantum.canon.applyifonea
+- microsoft.quantum.canon.applyifoneca
+ms.openlocfilehash: 51388c63a15b9f8244b49cc145297faef11bf5cc
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220785"

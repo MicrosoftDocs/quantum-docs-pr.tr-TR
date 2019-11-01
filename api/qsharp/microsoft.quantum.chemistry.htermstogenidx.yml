@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.htermstogenidx
+name: HTermsToGenIdx
+type: function
+namespace: Microsoft.Quantum.Chemistry
+summary: Bir dizini, `HTerm[]` veri biçimindeki bir Hamiltonian terimine bir Generatorındex olarak dönüştürür.
+syntax: 'function HTermsToGenIdx (data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[], idx : Int) : Microsoft.Quantum.Simulation.GeneratorIndex'
+input:
+  content: '(data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[], idx : Int)'
+  types:
+  - name: data
+    summary: Verileri `HTerm[]` biçiminde girin.
+    isArray: true
+    uid: microsoft.quantum.chemistry.hterm
+  - name: termType
+    summary: Generatorındex 'e ek bilgiler eklendi.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: idx
+    summary: Hamiltonian 'nin bir teriminin dizini
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.Simulation.GeneratorIndex
+  types:
+  - summary: '`termType`tarafından eklenen ek bilgilerle birlikte `data[idx]`temsil eden bir Hamiltonian terimini temsil eden bir Generatorındex.'
+    uid: microsoft.quantum.simulation.generatorindex
+ms.openlocfilehash: e64ae1fb0b87506114c527aed5412b75f000db3a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228911"

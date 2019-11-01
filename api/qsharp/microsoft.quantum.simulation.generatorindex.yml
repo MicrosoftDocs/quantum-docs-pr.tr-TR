@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.generatorindex
+name: Generatorındex
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Bu oluşturucunun, `EvolutionSet`aracılığıyla bir oluşturucunun zaman için bir eşleme varolduğu, örneğin, hermitian işleçleri, yani tüm dinamik üreticilerinin kümesinde tek bir temel terimi temsil eder.
+
+
+  İlk öğe (INT [], Double []) Tek terimli olan dizindir--Örneğin, 0,5 katsayısı olan Pauli dize XXY, ([1, 1, 2], [0,5]) tarafından dizinlenebilir. Alternatif olarak, X cos φ + Y φ gibi sürekli bir değişken tarafından parametreleştirilen Hamiltonians, örneğin ([], [φ]) tarafından temsil edilebilir. İkinci öğe, oluşturucunun üzerinde çalıştığı alt sistemin dizinini oluşturur.
+remarks: >-
+  > [!WARNING]
+
+  > Bir `GeneratorIndex` yorumu, belirli bir dizi özel kümesine başvuru dışında tanımlanmamıştır.
+
+
+  ### <a name="examples"></a>Örnekler
+
+  <xref:microsoft.quantum.simulation.paulievolutionset>kullanarak $ \pı X_2 X_5 Y_9 $ işleci şu şekilde gösterilir:
+
+
+  ```qsharp
+
+  let index = GeneratorIndex(([1, 1, 2], [PI()]), [2, 5, 9]);
+
+  ```
+syntax: newtype GeneratorIndex = ((Int[], Double[]), Int[]);
+seeAlso:
+- evolutionset
+- paulievolutionset
+ms.openlocfilehash: dc5f5b96a6d1708e94de918a65cbd68e0af06192
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067059"

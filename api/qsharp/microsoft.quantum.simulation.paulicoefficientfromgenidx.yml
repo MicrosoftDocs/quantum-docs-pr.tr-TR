@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.paulicoefficientfromgenidx
+name: Paulicoverimlilik Entfromgenıdx
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Bir `GeneratorIndex`tarafından tanımlanan Pauli teriminin katsayısını ayıklar.
+syntax: 'function PauliCoefficientFromGenIdx (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : Double'
+input:
+  content: '(Generatorındex: Microsoft. hisse. simülasyon. Generatorındex)'
+  types:
+  - name: Generatorındex
+    summary: Pauli terimini kodlayan `GeneratorIndex` türü.
+    uid: microsoft.quantum.simulation.generatorindex
+output:
+  content: Çift
+  types:
+  - summary: Bir `GeneratorIndex`tarafından tanımlanan terimin katsayısı.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: f4e3412028f11758e5e4dbf50616ede1ed6f294a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065427"

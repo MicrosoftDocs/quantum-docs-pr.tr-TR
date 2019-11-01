@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.sum
+name: Sum
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Ters çevrilebilir bir toplam kapısı uygular. Qubit `carryIn` ve `summand1` ve `summand2`ile kodlanmış iki summand bit olarak kodlanmış bir taşıma biti verildiğinde, qubit `summand1` bit düzeyinde xor `carryIn`, `summand2` ve `summand2`hesaplar.
+remarks: '`Carry` işleminin aksine, bu, yerine getirme bitini hesaplamaz.'
+syntax: 'operation Sum (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit) : Unit'
+input:
+  content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit)'
+  types:
+  - name: carryIn
+    summary: Devam eden qubit.
+    isPrimitive: true
+    uid: Qubit
+  - name: summand1
+    summary: İlk summve qubit.
+    isPrimitive: true
+    uid: Qubit
+  - name: summand2
+    summary: İkinci summand qubit, `summand1` ve `summand2`toplamının alt bitimiyle değiştirilmiştir.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 125ee44b5debf5d8c83d7fb5176c4298bd702563
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218405"

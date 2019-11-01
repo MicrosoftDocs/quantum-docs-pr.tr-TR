@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.operationpowa
+name: OperationPowA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Bir işlemi bir güce yükseltir.
+
+  Değiştirici `A`, işlemin adjointable olduğunu gösterir.
+
+
+  Diğer bir deyişle, $U $ geçidini temsil eden bir işlem verildiğinde, bir Power $m $ için ^ d $ $U yeni bir işlem döndürür.
+syntax: "function OperationPowA (oracle : ('T => Unit is Adj), power : Int) : ('T => Unit is Adj)"
+input:
+  content: "(oracle : ('T => Unit is Adj), power : Int)"
+  types:
+  - name: oracle
+    summary: Tekrarlanması için kullanılacak ağ geçidini temsil eden bir işlem $U.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: power
+    summary: $U $ öğesinin tekrarlanması için kaç kez yineleneceğini.
+    isPrimitive: true
+    uid: Int
+output:
+  content: ('T => Unit is Adj)
+  types:
+  - summary: $U ^ d $ temsil eden yeni bir işlem; burada $m = \texttt{Power} $.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+typeParameters:
+- uid: "'T"
+  summary: Kapatılacak işlemin türü.
+seeAlso:
+- microsoft.quantum.canon.operationpow
+ms.openlocfilehash: 59f7ea68a9b6528e0f3dd116c98961280edd3229
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230849"

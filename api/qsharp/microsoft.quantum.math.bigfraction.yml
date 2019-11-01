@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.bigfraction
+name: BigFraction
+type: newtype
+namespace: Microsoft.Quantum.Math
+summary: "`p/q`biçim bir Rational Number 'ı temsil eder. Tamsayı `p`, kayıt düzeninin ilk öğesidir ve `q`, kayıt düzeninin ikinci öğesidir."
+syntax: newtype BigFraction = (BigInt, BigInt);
+ms.openlocfilehash: 641939304a0846c6de4b200f87c28546278005e6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230220"

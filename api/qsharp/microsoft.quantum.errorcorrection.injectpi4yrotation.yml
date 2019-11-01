@@ -1,0 +1,63 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.injectpi4yrotation
+name: InjectPi4YRotation
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: >-
+  `Y`hakkında bir π/4 döndürmesi gerçekleştirir.
+
+
+  Döndürme, bir sihirli durum tüketerek gerçekleştirilir; diğer bir deyişle, $ $ \begin{hizalaması} \cos\frac{\pi}{8} \demet{0} + \sin \ FRAC{\pi}{8} \tus{1}bir kopyasıdır.
+
+  \end{hizalaması} $ $
+remarks: >-
+  Aşağıdakiler eşdeğerdir:
+
+
+  ```qsharp
+
+  Ry(PI() / 4.0, data);
+
+  ```
+
+
+  'nı ve
+
+
+  ```qsharp
+
+  using (magic = Qubit()) {
+      Ry(PI() / 4.0, magic);
+      InjectPi4YRotation(data, magic);
+      Reset(magic);
+  }
+
+  ```
+
+
+  Bu işlem, `Adjoint` functor 'ı destekler, bu durumda aynı sihirli durum tüketilecektir, ancak veri qubit üzerindeki etki bir $-\ Pi/4 $ $Y $-rotadır.
+syntax: 'operation InjectPi4YRotation (data : Qubit, magic : Qubit) : Unit'
+input:
+  content: '(data : Qubit, magic : Qubit)'
+  types:
+  - name: data
+    summary: $ \Pi/$4 ile $Y $ hakkında bir qubit döndürülür.
+    isPrimitive: true
+    uid: Qubit
+  - name: magic
+    summary: Başlangıçta Magic durumunda bir qubit. Bu işlemin ardından, `magic` $ \ket{0}$ durumuna döndürülür.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+ms.openlocfilehash: fa0b69740e94247aa9f31d03715464be1b29a0a6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211435"

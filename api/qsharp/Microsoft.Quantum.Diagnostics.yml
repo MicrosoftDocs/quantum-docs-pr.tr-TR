@@ -1,0 +1,82 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.diagnostics
+name: Microsoft. hisse. tanılama
+functions:
+- uid: microsoft.quantum.diagnostics.allequalityfactb
+  summary: İki dizi Boole değerinin eşit olduğunu onaylar.
+- uid: microsoft.quantum.diagnostics.dumpmachine
+  summary: Geçerli hedef makinenin durumunu döker.
+- uid: microsoft.quantum.diagnostics.dumpregister
+  summary: Geçerli hedef makinenin belirtilen qubits ile ilişkili durumunun dökümünü yapar.
+- uid: microsoft.quantum.diagnostics.equalityfactb
+  summary: Klasik bir bool değişkeninin beklenen değere sahip olduğunu onaylar.
+- uid: microsoft.quantum.diagnostics.equalityfactc
+  summary: Karmaşık bir sayının beklenen değere sahip olduğunu onaylar.
+- uid: microsoft.quantum.diagnostics.equalityfactcp
+  summary: Karmaşık bir sayının beklenen değere sahip olduğunu onaylar.
+- uid: microsoft.quantum.diagnostics.equalityfacti
+  summary: Klasik bir INT değişkeninin beklenen değere sahip olduğunu onaylar.
+- uid: microsoft.quantum.diagnostics.equalityfactl
+  summary: Klasik bir BigInt değişkeninin beklenen değere sahip olduğunu onaylar.
+- uid: microsoft.quantum.diagnostics.equalityfactr
+  summary: Klasik bir sonuç değişkeninin beklenen değere sahip olduğunu onaylar.
+- uid: microsoft.quantum.diagnostics.equalitywithintolerancefact
+  summary: Bir klasik kayan nokta değerinin, belirtilen mutlak tolerans için beklenen değere sahip olduğunu gösterir.
+- uid: microsoft.quantum.diagnostics.fact
+  summary: Klasik koşulun true olduğunu bildirir.
+- uid: microsoft.quantum.diagnostics.nearequalityfactc
+  summary: Klasik bir karmaşık sayının beklenen değerinin 1E-10 ' a kadar küçük bir toleransı olduğunu onaylar.
+- uid: microsoft.quantum.diagnostics.nearequalityfactcp
+  summary: Klasik bir karmaşık sayının beklenen değerinin 1E-10 ' a kadar küçük bir toleransı olduğunu onaylar.
+- uid: microsoft.quantum.diagnostics.nearequalityfactd
+  summary: Klasik bir kayan nokta değerinin, 1e-10 ' un küçük bir toleransına kadar beklenen değere sahip olduğunu onaylar.
+operations:
+- uid: microsoft.quantum.diagnostics.assertallzero
+  summary: Verilen qubits 'in hepsi $ \gre{0}$ durumunda olan bir onaylama.
+- uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
+  summary: Verilen qubits 'in, belirli bir toleranstan kadar $ \gre{0}$ durumunda olduğunu onaylayın.
+- uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
+  summary: >-
+    İki işlem söz konusu olduğunda, tüm giriş durumları için aynı hareket ettikleri onaylar.
+
+
+    Bu onaylama, formun tüm durumlarında işlem eylemi $V _0 \otimes... \otimes v_ {n-1} $, burada $V _K $ durumlardan biri $ \ket{0}$, $ \ayraç{1}$, $ \ket{+} $ ve $ \ket{i} $ (Pauli Y işlecinin 1 eigenstate).
+
+
+    Bu onaylama $n $ qubits kullanır ve karşılaştırılmakta olan işlemlere yönelik birden çok çağrı gerektirir.
+- uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
+  summary: >-
+    İşlem `givenU`, yalnızca işlem temelinde vektörlerde gerçekleştirilen işlemlerin eylemini denetleyerek verilen giriş boyutundaki işleme `expectedU` eşit olup olmadığını denetler.
+
+    Bu, iki unitı 'nin eşitliğine yönelik gerekli, ancak yeterli olmayan bir durumdur.
+- uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
+  summary: >-
+    İki işlem söz konusu olduğunda, tüm giriş durumları için aynı hareket ettikleri onaylar.
+
+
+    Bu onaylama işlemi, iki entanlı kasada bir qubit durum onaylamanın bir listesini azaltmak için Choi – Jamiłkowski isomorphism kullanılarak uygulanır.
+
+    Bu nedenle, bu işlem yalnızca sınanan her bir işlem için tek bir çağrıya gerek duyar, ancak ayrılacak sayıda qubit için iki kez gerekir.
+
+    Bu onaylama, örneğin, bir işlemin en iyi duruma getirilmiş bir sürümünün Naïve uygulamasına benzer bir şekilde davranması veya bir dizi hisse kullanım dışı girişleri üzerinde davranan bir işlemin bilinen durumları kabul ettiği bir işlem olduğundan emin olmak için kullanılabilir.
+- uid: microsoft.quantum.diagnostics.assertqubit
+  summary: Qubit `q` Pauli Z işlecinin beklenen eigenstate öğesinde olduğunu onaylar.
+- uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
+  summary: >-
+    Beklenen durumda bir qubitin olduğunu onaylar.
+
+
+    `expected` karmaşık bir vektörü temsil eder, $ \ket{\psı} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+
+    $A $, $b $ her birini temsil eden başlıkların ilk öğesi, karmaşık sayının gerçek bölümüdür; ikinci tane ise sanal parçadır.
+
+    Son bağımsız değişken, onaylama işlemi yapılan toleransı tanımlar.
+- uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
+  summary: Qubit `q`, Pauli Z işlecinin belirli bir toleransına kadar beklenen eigenstate olduğunu onaylar.
+summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı, sağlama işlemleri ve talep işlevleri dahil olmak üzere tanılama amaçları için yararlı işlevler ve işlemler içerir."
+ms.openlocfilehash: c387a7dc3b2e997d00d54457b0af89a04fa918d3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056866"

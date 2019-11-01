@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.evolutionset
+name: EvolutionSet
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Kolay bir şekilde uygulanabilecek ve benzetim algoritmalarını uygulamak için kullanılan bir kapı kümesini temsil eder.
+
+
+  Kümesindeki öğeler bir <xref:microsoft.quantum.simulation.generatorindex>tarafından dizine alınır ve her küme, `GeneratorIndex` bir işlev tarafından, zamanı temsil eden gerçek bir sayı tarafından parametreleştirilen işlemler olan <xref:microsoft.quantum.simulation.evolutionunitary>ile açıklanmıştır.
+syntax: newtype EvolutionSet = (Microsoft.Quantum.Simulation.GeneratorIndex -> Microsoft.Quantum.Simulation.EvolutionUnitary);
+ms.openlocfilehash: 2e3e717ca219f5e575f750a32f640215142b170c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211095"

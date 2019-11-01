@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.subarray
+name: Subarray
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Bir diziyi ve konumların bir listesini alır ve özgün dizinin öğelerinden belirtilen konumlara göre oluşturulmuş yeni bir dizi oluşturur.
+remarks: >-
+  İşlevi genel türler için tanımlanmıştır, yani bir dizi `'T[]` ve alt diziyi tanımlayan `Int[]` konumların bir listesi.
+
+  Alt dizinin oluşturulması, başvuruları korumanın aksine, belirtilen dizinin yeni ve derin bir kopyasını oluşturmaya göre belirlenir.
+
+
+  `Length(indices) < Length(array)`, bu işlev `array`bir alt kümesini döndürür. Diğer taraftan, `indices` yinelenen öğeler içeriyorsa, buna karşılık gelen `array` öğeleri de tekrarlanabilir.
+
+  `indices` ve `array` aynı uzunluysa, bu işlev `array`permütasyonları sağlar.
+syntax: "function Subarray (indices : Int[], array : 'T[]) : 'T[]"
+input:
+  content: "(indices : Int[], array : 'T[])"
+  types:
+  - name: indices
+    summary: Alt diziyi tanımlamak için kullanılan tamsayıların listesi.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: array
+    summary: "`'T`bir dizi öğe."
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Dizinleri alt diziye karşılık gelen öğelerin bir dizi `out`, örneğin `out[idx] == array[indices[idx]]`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: '`array` öğelerinin türü.'
+ms.openlocfilehash: 1590e5c24dad56db8c6a0f5dc433bf060d8ac175
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217861"

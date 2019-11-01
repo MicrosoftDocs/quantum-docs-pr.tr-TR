@@ -1,0 +1,18 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.environment
+name: Microsoft. hisse. Environment
+summary: " # <a name=\"summary\"></a>Özet\n Bu işlevler, hisse içindeki hisse hesaplamasının oluşturulduğu ortam hakkında bilgiler sağlar."
+operations:
+- uid: microsoft.quantum.environment.getqubitsavailabletoborrow
+  summary: >-
+    Şu anda ödünç alma için kullanılabilen qubits sayısını döndürür.
+
+    Buna kullanılmayan qubits dahildir; diğer bir deyişle, `GetQubitsAvailableToUse`tarafından döndürülen qubits 'i de içerir.
+- uid: microsoft.quantum.environment.getqubitsavailabletouse
+  summary: Şu anda kullanılabilecek qubits sayısını döndürür.
+ms.openlocfilehash: 50e5cfb7c1b9a4075c25b2705d00b435a09e159e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056823"

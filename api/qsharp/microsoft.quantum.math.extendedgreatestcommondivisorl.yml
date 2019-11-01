@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.extendedgreatestcommondivisorl
+name: ExtendedGreatestCommonDivisorL
+type: function
+namespace: Microsoft.Quantum.Math
+summary: '\Cdot a + v \cdot b = \operatorname{GCD} (a, b) $ $u bir demet $ (u, v) $, burada $ \operatorname{GCD} $, $a $ ve $b $ $a $ en büyük ortak bölenini hesaplar. GCD her zaman pozitif olur.'
+syntax: 'function ExtendedGreatestCommonDivisorL (a : BigInt, b : BigInt) : (BigInt, BigInt)'
+references: '- Bu uygulama https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm göre yapılır'
+input:
+  content: '(a : BigInt, b : BigInt)'
+  types:
+  - name: a
+    summary: Genişletilmiş en büyük ortak ayırıcının hesaplandığı ilk sayı
+    isPrimitive: true
+    uid: BigInt
+  - name: b
+    summary: Genişletilmiş en büyük ortak ayırıcının hesaplandığı ikinci sayı
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: (BigInt, BigInt)
+  types:
+  - summary: Demet $ (u, v) $, özellik $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $.
+    types:
+    - isPrimitive: true
+      uid: BigInt
+    - isPrimitive: true
+      uid: BigInt
+ms.openlocfilehash: 0e3c6138d5efe03603338341e37a9cf7bc07fb47
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233025"

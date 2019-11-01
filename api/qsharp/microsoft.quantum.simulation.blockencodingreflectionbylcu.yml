@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.blockencodingreflectionbylcu
+name: BlockEncodingReflectionByLCU
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Bir ilgilendiğiniz bir işleci bir `BlockEncodingReflection`olarak kodlar.
+
+
+  Bu, bazı işleci kodlayan bir `BlockEncodingReflection` Unitary $U = P\cdot V\cdot P ^ \leger $ oluşturur $H = \sum_{j} | \harflerden _j | U_j $ ilgi çekici bir şekilde oluşturulur. Genellikle $P $, $P \_{0}\sum_j\sqrt {\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ ve $V = \sum_{j}\ket{j}\bra{j}\_a\otimes u_ gibi bir durum hazırlama birimiyıdır. j $.
+remarks: Bu `BlockEncoding` uygulama, `BlockEncodingReflection`özellikleri sağlar.
+syntax: 'function BlockEncodingReflectionByLCU (statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
+input:
+  content: '(statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl))'
+  types:
+  - name: statePreparation
+    summary: Bazı hedef durumları hazırlayan bir Unitary $P $.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: selector
+    summary: $H $ 'ın bileşen unitları 'nı kodlayan bir Unitary $V $.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+output:
+  content: Microsoft.Quantum.Simulation.BlockEncodingReflection
+  types:
+  - summary: Bir Unitary $U $, yazmaçlara `a` ve `s` $H $ ' i ve $U ' ^{-1} = U $ ' karşılar.
+    uid: microsoft.quantum.simulation.blockencodingreflection
+seeAlso:
+- microsoft.quantum.canon.blockencoding
+- microsoft.quantum.canon.blockencodingreflection
+ms.openlocfilehash: a092068a61d860074ace150b0c7872eb064a63b9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219170"

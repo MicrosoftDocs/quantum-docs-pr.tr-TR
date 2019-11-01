@@ -1,0 +1,260 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.math
+name: Microsoft. hisse. matematik
+functions:
+- uid: microsoft.quantum.math.abscomplex
+  summary: '`Complex`türünde karmaşık bir sayının mutlak değerini döndürür.'
+- uid: microsoft.quantum.math.abscomplexpolar
+  summary: '`ComplexPolar`türünde karmaşık bir sayının mutlak değerini döndürür.'
+- uid: microsoft.quantum.math.absd
+  summary: Çift duyarlıklı kayan noktalı sayının mutlak değerini döndürür.
+- uid: microsoft.quantum.math.absi
+  summary: Bir tamsayının mutlak değerini döndürür.
+- uid: microsoft.quantum.math.absl
+  summary: Büyük bir tamsayının mutlak değerini döndürür.
+- uid: microsoft.quantum.math.abssquaredcomplex
+  summary: '`Complex`türünde karmaşık bir sayının kare mutlak değerini döndürür.'
+- uid: microsoft.quantum.math.abssquaredcomplexpolar
+  summary: '`ComplexPolar`türünde karmaşık bir sayının kare mutlak değerini döndürür.'
+- uid: microsoft.quantum.math.arccos
+  summary: Kosinüsü belirtilen sayı olan açıyı döndürür.
+- uid: microsoft.quantum.math.arccosh
+  summary: Bir sayının ters hiperbolik kosinüsünü hesaplar.
+- uid: microsoft.quantum.math.arcsin
+  summary: Sinüsü belirtilen sayı olan açıyı döndürür.
+- uid: microsoft.quantum.math.arcsinh
+  summary: Bir sayının ters hiperbolik sinüsünü hesaplar.
+- uid: microsoft.quantum.math.arctan
+  summary: Tanjantı belirtilen sayı olan açıyı döndürür.
+- uid: microsoft.quantum.math.arctan2
+  summary: Tanjantı belirtilen iki sayının bölümü olan açıyı döndürür.
+- uid: microsoft.quantum.math.arctanh
+  summary: Bir sayının ters hiperbolik tanjantını hesaplar.
+- uid: microsoft.quantum.math.argcomplex
+  summary: '`Complex`türünde karmaşık bir sayının aşamasını döndürür.'
+- uid: microsoft.quantum.math.argcomplexpolar
+  summary: '`ComplexPolar`türünde karmaşık bir sayının aşamasını döndürür.'
+- uid: microsoft.quantum.math.bitsizei
+  summary: >-
+    Negatif olmayan bir tamsayı `a`için, `a`temsil etmesi gereken bitlerin sayısını döndürür.
+
+
+    Diğer bir deyişle, $a < 2 ^ n $ gibi en küçük $n $ döndürür.
+- uid: microsoft.quantum.math.bitsizel
+  summary: >-
+    Negatif olmayan bir tamsayı `a`için, `a`temsil etmesi gereken bitlerin sayısını döndürür.
+
+
+    Diğer bir deyişle, $a < 2 ^ n $ gibi en küçük $n $ döndürür.
+- uid: microsoft.quantum.math.ceiling
+  summary: Belirtilen sayıdan büyük veya eşit en küçük tamsayıyı döndürür.
+- uid: microsoft.quantum.math.complexascomplexpolar
+  summary: Karmaşık sayıda `Complex` türü `ComplexPolar`karmaşık bir sayıya dönüştürür.
+- uid: microsoft.quantum.math.complexpolarascomplex
+  summary: Karmaşık sayıda `ComplexPolar` türü `Complex`karmaşık bir sayıya dönüştürür.
+- uid: microsoft.quantum.math.complexpolartocomplex
+  summary: ''
+- uid: microsoft.quantum.math.complextocomplexpolar
+  summary: ''
+- uid: microsoft.quantum.math.continuedfractionconvergenti
+  summary: Paydaya daha az veya eşit olan `fraction` için en yakın devam eden kesir convergent 'ı bulur `denominatorBound`
+- uid: microsoft.quantum.math.continuedfractionconvergentl
+  summary: Paydaya daha az veya eşit olan `fraction` için en yakın devam eden kesir convergent 'ı bulur `denominatorBound`
+- uid: microsoft.quantum.math.cos
+  summary: Belirtilen açının kosinüsünü döndürür.
+- uid: microsoft.quantum.math.cosh
+  summary: Belirtilen açının hiperbolik kosinüsünü döndürür.
+- uid: microsoft.quantum.math.dividedbyc
+  summary: İki giriş bölümünü döndürür.
+- uid: microsoft.quantum.math.dividedbycp
+  summary: İki giriş bölümünü döndürür.
+- uid: microsoft.quantum.math.dividedbyd
+  summary: İki giriş bölümünü döndürür.
+- uid: microsoft.quantum.math.dividedbyi
+  summary: İki giriş bölümünü döndürür.
+- uid: microsoft.quantum.math.dividedbyl
+  summary: İki giriş bölümünü döndürür.
+- uid: microsoft.quantum.math.divreml
+  summary: Bir BigInteger değerini diğerine böler, sonucu ve geri kalanı kayıt düzeni olarak döndürür.
+- uid: microsoft.quantum.math.e
+  summary: Doğal Logaritmik taban $e $ ' i döndürür.
+- uid: microsoft.quantum.math.expd
+  summary: Belirtilen kuvvete $e $ ' i döndürür.
+- uid: microsoft.quantum.math.expmodi
+  summary: Belirli bir mod için verilen bir kuvvete verilen bir tamsayıyı döndürür.
+- uid: microsoft.quantum.math.expmodl
+  summary: Belirli bir mod için verilen bir kuvvete verilen bir tamsayıyı döndürür.
+- uid: microsoft.quantum.math.extendedgreatestcommondivisori
+  summary: '\Cdot a + v \cdot b = \operatorname{GCD} (a, b) $ $u bir demet $ (u, v) $, burada $ \operatorname{GCD} $, $a $ ve $b $ $a $ en büyük ortak bölenini hesaplar. GCD her zaman pozitif olur.'
+- uid: microsoft.quantum.math.extendedgreatestcommondivisorl
+  summary: '\Cdot a + v \cdot b = \operatorname{GCD} (a, b) $ $u bir demet $ (u, v) $, burada $ \operatorname{GCD} $, $a $ ve $b $ $a $ en büyük ortak bölenini hesaplar. GCD her zaman pozitif olur.'
+- uid: microsoft.quantum.math.floor
+  summary: Belirtilen sayıdan küçük veya eşit en büyük tamsayıyı döndürür.
+- uid: microsoft.quantum.math.greatestcommondivisori
+  summary: $A $ ve $b $ öğesinin en büyük ortak bölenini hesaplar. GCD her zaman pozitif olur.
+- uid: microsoft.quantum.math.greatestcommondivisorl
+  summary: $A $ ve $b $ öğesinin en büyük ortak bölenini hesaplar. GCD her zaman pozitif olur.
+- uid: microsoft.quantum.math.ieeeremainder
+  summary: Belirtilen sayının bölümünün belirtilen başka bir sayı ile sonuçlanan kalan kalanı döndürür.
+- uid: microsoft.quantum.math.inversemodi
+  summary: $A \cdot b = 1 (\operatorname{mod} \texttt{Modulus}) $ gibi $b $ döndürür.
+- uid: microsoft.quantum.math.inversemodl
+  summary: $A \cdot b = 1 (\operatorname{mod} \texttt{Modulus}) $ gibi $b $ döndürür.
+- uid: microsoft.quantum.math.iscoprimei
+  summary: $A $ ve $b $ ortak ana ise true, aksi takdirde false döndürür.
+- uid: microsoft.quantum.math.iscoprimel
+  summary: $A $ ve $b $ ortak ana ise true, aksi takdirde false döndürür.
+- uid: microsoft.quantum.math.lg
+  summary: Bir sayının 2 tabanında logaritmasını hesaplar.
+- uid: microsoft.quantum.math.log
+  summary: Belirtilen sayının doğal (Base $e $) logaritmasını döndürür.
+- uid: microsoft.quantum.math.log10
+  summary: Belirtilen sayının 10 tabanında logaritmasını döndürür.
+- uid: microsoft.quantum.math.logof2
+  summary: 2 ' nin doğal logaritmasını döndürür.
+- uid: microsoft.quantum.math.max
+  summary: Tamsayılar dizisi verildiğinde, en büyük öğeyi döndürür.
+- uid: microsoft.quantum.math.maxd
+  summary: Belirtilen iki sayıdan daha büyük bir değer döndürür.
+- uid: microsoft.quantum.math.maxi
+  summary: Belirtilen iki sayıdan daha büyük bir değer döndürür.
+- uid: microsoft.quantum.math.maxl
+  summary: Belirtilen iki sayıdan daha büyük bir değer döndürür.
+- uid: microsoft.quantum.math.min
+  summary: Tamsayılar dizisi verildiğinde, en küçük öğeyi döndürür.
+- uid: microsoft.quantum.math.mind
+  summary: Belirtilen iki sayıdan daha küçük bir değer döndürür.
+- uid: microsoft.quantum.math.mini
+  summary: Belirtilen iki sayıdan daha küçük bir değer döndürür.
+- uid: microsoft.quantum.math.minl
+  summary: Belirtilen iki sayıdan daha küçük bir değer döndürür.
+- uid: microsoft.quantum.math.minusc
+  summary: İki giriş arasındaki farkı döndürür.
+- uid: microsoft.quantum.math.minuscp
+  summary: İki giriş arasındaki farkı döndürür.
+- uid: microsoft.quantum.math.minusd
+  summary: İki giriş arasındaki farkı döndürür.
+- uid: microsoft.quantum.math.minusi
+  summary: İki giriş arasındaki farkı döndürür.
+- uid: microsoft.quantum.math.minusl
+  summary: İki giriş arasındaki farkı döndürür.
+- uid: microsoft.quantum.math.modi
+  summary: Bir sayının başka bir sayıya göre mod sayısını döndürür.
+- uid: microsoft.quantum.math.modl
+  summary: Bir sayının başka bir sayıya göre mod sayısını döndürür.
+- uid: microsoft.quantum.math.modpowl
+  summary: Başka bir sayının gücünden kaynaklanan bir sayı üzerinde modüler bölüm gerçekleştirir.
+- uid: microsoft.quantum.math.modulusi
+  summary: '`value` mod `modulus`nedeniyle kurallı bir şekilde hesaplar.'
+- uid: microsoft.quantum.math.modulusl
+  summary: '`value` mod `modulus`nedeniyle kurallı bir şekilde hesaplar.'
+- uid: microsoft.quantum.math.negationc
+  summary: Bir girişin birli olumsuzunu döndürür.
+- uid: microsoft.quantum.math.negationcp
+  summary: Bir girişin birli olumsuzunu döndürür.
+- uid: microsoft.quantum.math.negationd
+  summary: Bir girişin birli olumsuzunu döndürür.
+- uid: microsoft.quantum.math.negationi
+  summary: Bir girişin birli olumsuzunu döndürür.
+- uid: microsoft.quantum.math.negationl
+  summary: Bir girişin birli olumsuzunu döndürür.
+- uid: microsoft.quantum.math.pi
+  summary: Bir dairenin çapının, π sabiti tarafından belirtilen çapının oranını gösterir.
+- uid: microsoft.quantum.math.plusa
+  summary: İki girişin toplamını (birleştirme) döndürür.
+- uid: microsoft.quantum.math.plusc
+  summary: İki giriş toplamını döndürür.
+- uid: microsoft.quantum.math.pluscp
+  summary: İki giriş toplamını döndürür.
+- uid: microsoft.quantum.math.plusd
+  summary: İki giriş toplamını döndürür.
+- uid: microsoft.quantum.math.plusi
+  summary: İki giriş toplamını döndürür.
+- uid: microsoft.quantum.math.plusl
+  summary: İki giriş toplamını döndürür.
+- uid: microsoft.quantum.math.pnorm
+  summary: >-
+    `Double`s vektörünün `L(p)` norm döndürür.
+
+
+    Diğer bir deyişle, `Double[]`türünde bir dizi $x belirtildiğinde bu, $p $-norm $\|x\|\_p = (\sum_{j} | x_j | ^ {p}) ^ {1/p} $ döndürür.
+- uid: microsoft.quantum.math.pnormalized
+  summary: >-
+    `L(p)` norm `Double`s vektörünü normalleştirir.
+
+
+    Diğer bir deyişle, `Double[]`türünde bir dizi $x verildiğinde, bu, tüm öğelerin $p $-norm $\|x\|_p $ tarafından bölündüğü bir dizi döndürür.
+- uid: microsoft.quantum.math.powc
+  summary: Verilen bir üsle oluşturulan bir sayı döndürür.
+- uid: microsoft.quantum.math.powcp
+  summary: Verilen bir üsle oluşturulan bir sayı döndürür.
+- uid: microsoft.quantum.math.powd
+  summary: X olarak x olarak, Power y sayısını döndürür.
+- uid: microsoft.quantum.math.powi
+  summary: Verilen bir üsle oluşturulan bir sayı döndürür.
+- uid: microsoft.quantum.math.powl
+  summary: Verilen bir üsle oluşturulan bir sayı döndürür.
+- uid: microsoft.quantum.math.realmod
+  summary: İki gerçek sayı arasındaki mod sayısını hesaplar.
+- uid: microsoft.quantum.math.round
+  summary: Bir değeri en yakın tamsayıya veya belirtilen kesirli basamak sayısına yuvarlar.
+- uid: microsoft.quantum.math.signd
+  summary: Bir sayının işaretini gösteren bir tamsayı döndürür.
+- uid: microsoft.quantum.math.signi
+  summary: Bir sayının işaretini gösteren bir tamsayı döndürür.
+- uid: microsoft.quantum.math.signl
+  summary: Bir sayının işaretini gösteren bir tamsayı döndürür.
+- uid: microsoft.quantum.math.sin
+  summary: Belirtilen açının sinüsünü döndürür.
+- uid: microsoft.quantum.math.sinh
+  summary: Belirtilen açının hiperbolik sinüsünü döndürür.
+- uid: microsoft.quantum.math.sqrt
+  summary: Belirtilen sayının kare kökünü döndürür.
+- uid: microsoft.quantum.math.tan
+  summary: Belirtilen açının tanjantını döndürür.
+- uid: microsoft.quantum.math.tanh
+  summary: Belirtilen açının hiperbolik tanjantını döndürür.
+- uid: microsoft.quantum.math.timesc
+  summary: İki girişin çarpımını döndürür.
+- uid: microsoft.quantum.math.timescp
+  summary: İki girişin çarpımını döndürür.
+- uid: microsoft.quantum.math.timesd
+  summary: İki girişin çarpımını döndürür.
+- uid: microsoft.quantum.math.timesi
+  summary: İki girişin çarpımını döndürür.
+- uid: microsoft.quantum.math.timesl
+  summary: İki girişin çarpımını döndürür.
+- uid: microsoft.quantum.math.truncate
+  summary: Bir sayının integral bölümünü hesaplar.
+newtypes:
+- uid: microsoft.quantum.math.bigfraction
+  summary: "`p/q`biçim bir Rational Number 'ı temsil eder. Tamsayı `p`, kayıt düzeninin ilk öğesidir ve `q`, kayıt düzeninin ikinci öğesidir."
+- uid: microsoft.quantum.math.complex
+  summary: >-
+    Gerçek ve sanal bileşenleriyle karmaşık bir sayıyı temsil eder.
+
+    Kayıt düzeninin ilk öğesi, ikinci bir-sanal bileşen olan gerçek bileşendir.
+- uid: microsoft.quantum.math.complexpolar
+  summary: >-
+    Kutupsal biçimdeki karmaşık bir sayıyı temsil eder.
+
+
+    Karmaşık bir sayının kutupsal gösterimi $c = r e ^ {ı t} $.
+- uid: microsoft.quantum.math.fraction
+  summary: "`p/q`biçim bir Rational Number 'ı temsil eder. Tamsayı `p`, kayıt düzeninin ilk öğesidir ve `q`, kayıt düzeninin ikinci öğesidir."
+summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı klasik matematik işlevlerini ve veri türlerini içerir."
+operations:
+- uid: microsoft.quantum.math.randomint
+  summary: Sıfırdan büyük veya sıfıra eşit ve belirtilen üst sınırdan küçük bir rastgele tam sayı üretir.
+- uid: microsoft.quantum.math.randomintpow2
+  summary: Verilen bit sayısında temsil edilebilir tüm tamsayılarla rastgele bir tam sayı üretir.
+- uid: microsoft.quantum.math.randomreal
+  summary: Aralıktan büyük veya sıfıra eşit ve sıfırdan küçük bir rastgele gerçek sayı döndürür.
+- uid: microsoft.quantum.math.randomsinglequbitpauli
+  summary: Tek qubit Pauli işleçlerinden birini rastgele bir şekilde döndürür.
+ms.openlocfilehash: 7f30ee26a1155b64946e8fb16f5692ec602aa602
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056294"

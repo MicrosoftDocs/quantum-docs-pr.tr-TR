@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.fold
+name: Fold
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Bir işlevi `f` dizi `array`aracılığıyla yineler `f(f(f(initialState, array[0]), array[1]), ...)`döndürüyor.
+examples: >-
+  ```qsharp
+
+  function Plus(a : Double, b : Double) {
+      return a + b;
+  }
+
+  function Sum(xs : Double[]) {
+      return Fold(Plus, 0.0, xs);
+  }
+
+  ```
+syntax: "function Fold (folder : (('State, 'T) -> 'State), state : 'State, array : 'T[]) : 'State"
+input:
+  content: "(folder : (('State, 'T) -> 'State), state : 'State, array : 'T[])"
+  types:
+  - name: folder
+    summary: Dizi üzerinde katlanmak için bir işlev.
+    isFunction: true
+    input:
+      types:
+      - uid: "'State"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'State"
+        isLocal: true
+  - name: state
+    summary: Klasörün başlangıç durumu.
+    uid: "'State"
+    isLocal: true
+  - name: array
+    summary: Üzerine katlanır değer dizisi.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'State"
+  types:
+  - summary: Tüm `array`öğelerinin üzerinde yinelendikten sonra klasör tarafından döndürülen son durum.
+    uid: "'State"
+    isLocal: true
+typeParameters:
+- uid: "'State"
+  summary: '`folder` işlevin üzerinde çalıştığı durumların türü, yani ilk bağımsız değişkeni olarak kabul eder ve döndürür.'
+- uid: "'T"
+  summary: '`array` öğelerinin türü.'
+ms.openlocfilehash: 4be4752029b10351cfb3fe0fa6aa61b84b157510
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214359"

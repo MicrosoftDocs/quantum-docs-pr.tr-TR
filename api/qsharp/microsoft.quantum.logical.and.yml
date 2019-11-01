@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.and
+name: And
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: İki değerden oluşan Boole değeri döndürür.
+remarks: >-
+  `and` işlecinin aksine, bu işlev kısa devre değildir, her iki giriş de tam olarak değerlendirilir.
+
+
+  En fazla kısa devre davranýþý, şunlar eşdeğerdir:
+
+
+  ```Q#
+
+  let x = a and b;
+
+  let x = And(a, b);
+
+  ```
+syntax: 'function And (a : Bool, b : Bool) : Bool'
+input:
+  content: '(a : Bool, b : Bool)'
+  types:
+  - name: a
+    summary: Göz önünde bulundurmanız için ilk değer.
+    isPrimitive: true
+    uid: Bool
+  - name: b
+    summary: Göz önünde bulundurmanız için ikinci değer.
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Bool
+  types:
+  - summary: yalnızca `a` ve `b` her ikisi `true`de varsa `true`.
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 22e884f8041ecd66aba875c38f0b8af234aee0e5
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233382"

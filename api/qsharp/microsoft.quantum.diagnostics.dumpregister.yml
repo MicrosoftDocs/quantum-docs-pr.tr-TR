@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.dumpregister
+name: DumpRegister
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: Geçerli hedef makinenin belirtilen qubits ile ilişkili durumunun dökümünü yapar.
+remarks: >-
+  Bu yöntem, belirtilen qubits durumuyla ilişkili bilgilerin bir dosya veya başka bir konumda dökümünü yapmanıza olanak sağlar.
+
+  Oluşturulan gerçek bilgiler ve `location` semantiği her bir hedef makineye özeldir. Ancak, konum (`()`) olarak boş bir tanımlama grubu sağlamak, genellikle çıktıyı konsola oluşturma anlamına gelir.
+
+
+  Bu yöntem, hisse geliştirme seti 'nin bir parçası olarak dağıtılan yerel tam durum simülatörü için, belirtilen qubits 'in durumunu (örneğin, karşılık gelen alt sistemin dalga işlevi) tek boyutlu bir ar olarak yazacağı bir dosyanın yolunu içeren bir dize bekler Her öğenin karşılık gelen durumu ölçme olasılığının artırıışını temsil ettiği karmaşık sayıların Ray.
+
+  Verilen qubits, başka bir qubitle ayrılarak ve durumları ayrılacaksa, yalnızca qubits 'in bir şekilde ayrılmış olduğunu bildirir.
+syntax: "function DumpRegister (location : 'T, qubits : Qubit[]) : Unit"
+input:
+  content: "(location : 'T, qubits : Qubit[])"
+  types:
+  - name: location
+    summary: Durumun dökümünün nerede oluşturulacağı hakkında bilgi sağlar.
+    uid: "'T"
+    isLocal: true
+  - name: qubits
+    summary: Raporlanacak qubits listesi.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - summary: Hiçbiri.
+    isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 6d553a95bfa619d142b681e2830fc0375c6bcae5
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227041"
