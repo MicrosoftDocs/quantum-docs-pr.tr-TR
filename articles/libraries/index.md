@@ -9,8 +9,8 @@ ms.openlocfilehash: 5a5b28f7e8c1669d26d1064753f20551a6b0d036
 ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72970384"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056445"
 ---
 Q#’de kuantum uygulamaları geliştirmeyi kolaylaştırmak için Quantum Development Kit ile birlikte birkaç kitaplık sunulur.
 Belgenin bu bölümünde bu kitaplıkları ve bunları programlarınızda kullanmayı açıklayacağız.
