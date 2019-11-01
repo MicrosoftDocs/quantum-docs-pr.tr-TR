@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.vqe.measurementoperators
+name: MeasurementOperators
+type: function
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+summary: Bir Ürdün Wigner teriminin beklentisini hesaplamak için gereken tüm ölçüm işleçlerini hesaplar.
+syntax: 'function MeasurementOperators (nQubits : Int, indices : Int[], termType : Int) : Pauli[][]'
+input:
+  content: '(nQubits : Int, indices : Int[], termType : Int)'
+  types:
+  - name: nQubits
+    summary: Molesel sistemin benzetimini yapmak için gereken qubit sayısı.
+    isPrimitive: true
+    uid: Int
+  - name: indices
+    summary: Qubit her Pauli işlecinin dizinlerini içeren bir dizi öğesine uygulanır.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: termType
+    summary: Ürdün Wıgner teriminin türü.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Pauli[][]
+  types:
+  - summary: Ölçüm işleçleri dizisi (her biri Pauli dizisi olmak üzere).
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+ms.openlocfilehash: e22af035b43d8b3ebeea22c8c4bfa0f7289ab82c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227534"

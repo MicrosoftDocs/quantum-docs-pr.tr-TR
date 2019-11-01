@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.greaterthan
+name: GreaterThan
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: $X $ ve $y $, qubit, XS ve YS içinde kodlandığı iki tamsayının karşılaştırmadan kesinlikle daha büyük bir şekilde gerçekleştirir. $X y $ >, sonuç qubit ters çevrilcektir, aksi takdirde durumunu korurlar.
+remarks: $X-y = (x ' + y) ' $ olan eli kullanır, burada ' ise birinin tamamlayıcı olduğunu gösterir.
+syntax: 'operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit'
+references: >-
+  - Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutın, David Petrie Moulton: "yeni bir 2004 hisse
+    https://arxiv.org/abs/quant-ph/0410184v1
+
+  - Thomas Haümü, MARI Roetteler, Kronysta M. Svore: "düzenleme Toffoli tabanlı modüler çarpma ile 2n + 2 qubit kullanma", 2016 https://arxiv.org/abs/1611.07995
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit)'
+  types:
+  - name: xs
+    summary: Litttaendian qubit yazmaç ilk tamsayıyı $x $.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: ys
+    summary: Litttaendian qubit yazmaç ikinci tamsayıyı $y $.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: result
+    summary: $X > y $ olarak çevrilmiş tek qubit.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 6961a6a4f22d2290a264298a3be3b15f7bdb0ac7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214954"

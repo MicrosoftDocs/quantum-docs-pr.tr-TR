@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.preparesinglequbitidentity
+name: PrepareSingleQubitIdentity
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  Yüksek ölçüde karışık durumda bir qubit hazırlar.
+
+
+  $/Boldone/$2 durumunda verilen qubit $ $ \begin{hizalaması} \Omega (\rho) \mathrel{: =} \frac{1}{4} \sum_{\mu \in \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \ Sigma\_{\mu} ^ {\ dağılım}, \end{hizalaması} $ $; $ \sigma\_i $ $i $ TH Pauli operatörü ve $ \rho $, karma durumu temsil eden bir yoğunluk operatörü.
+remarks: >-
+  Bu işlemi bir duruma uygulamanın sonucunu açıklayan karışık durum $ \ cıvadone/$2, bu işlemde yapılan rastgele seçimler üzerinde bir beklentideğeri örtülü olarak tanımlar.
+
+  Bu nedenle, tek bir uygulama için, bu işlem saf durumları saf durumlara eşler, ancak beklentide anlatıldığı gibi davranır.
+
+  Özellikle, bu işlem, bir kanalın olmayan bileşenlerini ölçmek için işlem *turuntografda* kullanılabilir.
+syntax: 'operation PrepareSingleQubitIdentity (qubit : Qubit) : Unit'
+input:
+  content: '(qubit : Qubit)'
+  types:
+  - name: qubit
+    summary: Durumu yukarıda açıklanan şekilde depolarized bir qubit.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 944178e3a8473b2206de037031bd8def546425b8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226531"

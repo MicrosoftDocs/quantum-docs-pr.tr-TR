@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.modulusi
+name: ModulusI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: '`value` mod `modulus`nedeniyle kurallı bir şekilde hesaplar.'
+remarks: Bu işlev, işleç `%` içinde C# nasıl davranacağını farklı şekilde davranır ve sonuçta, değer negatif olsa bile 0 ile `modulus - 1`arasında her zaman pozitif bir tamsayı olur.
+syntax: 'function ModulusI (value : Int, modulus : Int) : Int'
+input:
+  content: '(value : Int, modulus : Int)'
+  types:
+  - name: value
+    summary: Kalan değerin hesaplandığı değer
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    summary: Resdues 'nin aldığı mod pozitif olmalıdır
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: 0 ile `modulus - 1` arasında $r $, `value - r` mod ile bölünebilen
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 1bb3877b4d66b5ad09dabbc072d7d9fb61813745
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73212098"

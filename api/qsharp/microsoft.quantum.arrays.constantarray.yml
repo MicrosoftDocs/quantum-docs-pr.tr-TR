@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.constantarray
+name: ConstantArray
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Verilen değere eşit tüm öğelerle verilen uzunlukta bir dizi oluşturur.
+syntax: "function ConstantArray (length : Int, value : 'T) : 'T[]"
+input:
+  content: "(length : Int, value : 'T)"
+  types:
+  - name: length
+    summary: Yeni dizinin uzunluğu.
+    isPrimitive: true
+    uid: Int
+  - name: value
+    summary: Yeni dizinin her dizininde yer alacak bir değer.
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Her öğe `value``length`yeni bir uzunluk dizisi.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+ms.openlocfilehash: 7b641f4e037b760ac036abfc23ac197d7008bc0e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214444"

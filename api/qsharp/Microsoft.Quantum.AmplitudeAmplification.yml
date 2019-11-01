@@ -1,0 +1,43 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.amplitudeamplification
+name: Microsoft. hisse. yükseltilmiş Tudeyükseltme
+summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı, genliğini gerçekleştirmeye yönelik işlevler ve işlemler içerir.\n\n # <a name=\"description\"></a>Açıklama\n Kısmi yansıtımları ile yükümlülüğü uygulayan, burada uygulanan en genel genme biçimidir.\n\n Bu işlem AmpAmpObliviousByReflectionPhases aracılığıyla çağrılır.\n\n Bu iki kayıt içerir: `ancillaRegister` ve `systemRegister`.\n\n Bu, yalnızca `ancillaRegister` kaydına göre davranan `ReflectionOracle` türündeki bu yansımalar için iki Oracles kabul eder.\n\n Bu, her iki kasada de ortaklaşa bulunan `ObliviousOracle` türünde bir Oracle özel için Oracle özel düzeyini kabul eder.\n\n `ancillaRegister` giriş durumunun, ilk yansıma işlecinin benzersiz $-$1 eigenstate olduğu varsayılır $I-2 \\ ayraç {s} \\ köşeli {s} $.\n\n Bir hedef hisse cıya ilişkin yansıtıcılıkları genellikle bu durumu hesaplama tabanlı $ \\ket{0\\cnoktalar 0} $ ' dan hazırlayan bir Oracle erişimi varsayıldığında uygulanır.\n\n Bu Oracles için kuralımızın iki kayıt olması gerekir: tek bir-qubit `flagQubit` kaydı ve diğer her şey için bir kayıt.\n\n `StateOracle` Oracle, bazı gerçek genlerle `flagQubit` kaydındaki $ \\tus{1}$ tarafından işaretlenen hedef durumu oluşturmak için her iki kasada de birlikte yürütülür.\n\n Bu bayrak durumu hakkında yansıma `ReflectionOracle`, işlem `TargetStateReflectionOracle`tarafından oluşturulur.\n\n `ancillaRegister` giriş durumu hakkında yansıma `ReflectionOracle`, StateOracle 'ı ters çevirme ve ardından ReflectionStart () ile birlikte $ \\ket{0\\cnoktalar 0} $ hakkında bilgi yansıtır.\n\n `DeterministicStateOracle` Oracle türü, hedef durumu kesin olarak hiçbir bayrak olmadan oluşturmak için `qubitState` Yazmaçları üzerinde davranır.\n\n `AmpAmpObliviousByOraclePhases`, Oracles `StateOracle` ve `ObliviousOracle` yansımaları yerine kabul eden bir zorunluluvou genonu bir sürümüdür.\n\n Genüme 'nin, `ObliviousOracle` Identity operatörü olduğu ve hiçbir sistem qugeler olmadığı (`systemRegister` boş olduğu) özel bir zorunluluörün özel bir durumdur olduğunu unutmayın.\n\n Bu işlem `AmpAmByReflectionPhases` ve `AmpAmpByOraclePhases`aracılığıyla çağrılır.\n\n Grover aramasının standart durumunda kısmi yansıtılılıkları için aşamalar, AmpAmpPhasesStandard işlevi tarafından sağlanır.\n\n Örneğin, şu bağımlılıklara sahipsiniz: AmpAmpByOracle-> Ampampbyoracliaşamalar-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases."
+functions:
+- uid: microsoft.quantum.amplitudeamplification.ampampbyoracle
+  summary: Standart genliği yükseltme algoritması
+- uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
+  summary: Kısmi yansıtımları için Oracles tarafından bir aşağı yönlü yükseltme.
+- uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionsphases
+  summary: Kısmi yansıtımları ile genliği yükseltme.
+- uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyoraclephases
+  summary: Yükümlülüğü, kısmi yansıtımları için Oracles tarafından bir şekilde geliştirilmiştir.
+- uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyreflectionphases
+  summary: Kısmi yansıtımları için belirterek, yükümlülüğü uygulayan gensliği gerçekleştiren bir Unitary döndürür.
+- uid: microsoft.quantum.amplitudeamplification.ampampphasesfixedpoint
+  summary: Sabit nokta genliği yükseltme için kısmi yansıma aşamalarını hesaplar.
+- uid: microsoft.quantum.amplitudeamplification.ampampphasesstandard
+  summary: Standart genliği yükseltme için kısmi yansıma aşamalarını hesaplar.
+- uid: microsoft.quantum.amplitudeamplification.ampamprotationtoreflectionphases
+  summary: Tek qubit döndürmeler olarak belirtilen aşamaları kısmi yansıtılamalar olarak belirtilen aşamalara dönüştürür.
+- uid: microsoft.quantum.amplitudeamplification.reflectionstart
+  summary: Genlik için tipik giriş durumu olan | 0... 0 〉 dize hakkında bir yansıma oluşturur.
+- uid: microsoft.quantum.amplitudeamplification.targetstatereflectionoracle
+  summary: >-
+    Benzersiz olarak bayrak qubit tarafından işaretlenen hedef durumu hakkında bir `ReflectionOracle` oluşturur.
+
+
+    Hedef durumu 1 olarak ayarlanmış tek bir qubit ve diğerleri 0: $ \ demet{1}_F $ şeklindedir.
+operations:
+- uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
+  summary: Sabit nokta Genonu yükseltme algoritması
+newtypes:
+- uid: microsoft.quantum.amplitudeamplification.reflectionphases
+  summary: Genize göre kısmi yansıtımları dizisinin aşamaları.
+- uid: microsoft.quantum.amplitudeamplification.rotationphases
+  summary: Tek qubit döndürmeler dizisinin bir sırası için aşamalar yükseltme.
+ms.openlocfilehash: acec4d085e42811618228c8e120842dc400c50b4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057235"

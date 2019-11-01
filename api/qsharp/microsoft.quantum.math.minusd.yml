@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.minusd
+name: MinusD
+type: function
+namespace: Microsoft.Quantum.Math
+summary: İki giriş arasındaki farkı döndürür.
+syntax: 'function MinusD (a : Double, b : Double) : Double'
+input:
+  content: '(a : Double, b : Double)'
+  types:
+  - name: a
+    summary: İlk giriş $a $ kaldırılacak.
+    isPrimitive: true
+    uid: Double
+  - name: b
+    summary: İkinci giriş $b $ kaldırılacak.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double
+  types:
+  - summary: $A-b $ arasındaki fark.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: c4c74c1a9eebee07e1633e9e1d0df58de7a0a296
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233858"

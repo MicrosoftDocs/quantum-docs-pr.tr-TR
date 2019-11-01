@@ -1,0 +1,82 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.adiabaticstateenergyunitary
+name: AdiabaticStateEnergyUnitary
+type: operation
+namespace: Microsoft.Quantum.Simulation
+summary: Giriş durumuna bir `statePrepUnitary` uygulayıp, ardından bir `adiabaticUnitary`kullanarak Adiabatik eyalet hazırlama ve son olarak bir `phaseEstAlgorithm`kullanarak ortaya çıkan durum `qpeUnitary`açısından bir aşama tahmini yaparak durum hazırlığı gerçekleştirir.
+syntax: 'operation AdiabaticStateEnergyUnitary (statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double), qubits : Qubit[]) : Double'
+input:
+  content: '(statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double), qubits : Qubit[])'
+  types:
+  - name: statePrepUnitary
+    summary: İlk dinamik oluşturucusunun durum hazırlanmasını temsil eden bir Oracle.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: adiabaticUnitary
+    summary: En iyi EPS 'yi algoritmanın son durumuna uygulamak için kullanılacak Adiabatik evsel algoritmayı temsil eden bir Oracle.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: qpeUnitary
+    summary: Bir Unitary işlecini temsil eden bir Oracle $U $ \ma{\phi} $ ve taban durumu enerji $E = \fi\\, \delta t $ ile bir dinamik üreticisi kapsamında
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: phaseEstAlgorithm
+    summary: >-
+      Belirli bir Unitary işleminde aşama tahmini gerçekleştiren bir işlem.
+
+      Daha fazla ayrıntı için bkz. [yinelemeli aşama tahmini](/quantum/libraries/characterization#iterative-phase-estimation) .
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.oracles.discreteoracle
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Double
+  - name: qubits
+    summary: Simülasyonu gerçekleştirmek için kullanılacak qubit kaydı.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Double
+  types:
+  - summary: $U $ tarafından temsil edilen oluşturucunun zemin devlet enerji $ \phi $ tahmini $ \hat{\phi} $.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 747e9f6d926863ce1add86d183ca2ed1dc43c8a4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232039"

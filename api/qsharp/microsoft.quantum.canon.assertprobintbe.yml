@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.assertprobintbe
+name: Assertprobınt32
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  > [!WARNING]
+
+  > Kullanım Dışı
+
+
+  Bu işlem kaldırılmıştır.
+syntax: 'operation AssertProbIntBE (stateIndex : Int, prob : Double, qubits : Microsoft.Quantum.Arithmetic.BigEndian, tolerance : Double) : Unit'
+input:
+  content: '(Stateındex: Int, prob: Double, qubit: Microsoft. hisse. aritmetik. Bigenyen, tolerans: Double)'
+  types:
+  - name: Stateındex
+    isPrimitive: true
+    uid: Int
+  - name: prob
+    isPrimitive: true
+    uid: Double
+  - name: qubit
+    uid: microsoft.quantum.arithmetic.bigendian
+  - name: payı
+    isPrimitive: true
+    uid: Double
+output:
+  content: Birim
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 687e30ca8468329cc4b491ec124156a46d954282
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73068419"

@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.assert
+name: Assert
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: Verilen Pauli tabanında verilen qubits ölçmeye yönelik onaylar, her zaman verilen sonuca sahip olur.
+remarks: Bu işlemin adjoint ve kontrollü sürümlerinin koşulu denetyacağını unutmayın.
+syntax: 'operation Assert (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[], result : Result, msg : String)'
+  types:
+  - name: bases
+    summary: Bir multi-qubit Pauli işleci olarak ifade edilen olasılığını onaylama için bir ölçüm etkisi.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: qubits
+    summary: Onaylama yapılacak bir kayıt.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: result
+    summary: Beklenen `Measure(bases, qubits)`sonucu.
+    isPrimitive: true
+    uid: Result
+  - name: msg
+    summary: Onaylama başarısız olursa bildirilecek bir ileti.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- assertprob
+ms.openlocfilehash: 214ec7f96a5a486d0e6025e53cca1dbf4f121795
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235660"

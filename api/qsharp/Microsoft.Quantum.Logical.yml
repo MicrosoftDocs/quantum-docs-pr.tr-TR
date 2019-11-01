@@ -1,0 +1,73 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.logical
+name: Microsoft. hisse. Logical
+summary: " # <a name=\"summary\"></a>Özet\n Mantıksal ifadeler ve Boole mantığı ile çalışma işlevlerini içerir."
+functions:
+- uid: microsoft.quantum.logical.and
+  summary: İki değerden oluşan Boole değeri döndürür.
+- uid: microsoft.quantum.logical.conditioned
+  summary: Boole koşulunun değerine bağlı olarak iki değerden birini döndürür.
+- uid: microsoft.quantum.logical.equalb
+  summary: Yalnızca iki giriş eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.equalc
+  summary: Yalnızca iki giriş eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.equalcp
+  summary: Yalnızca iki giriş eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.equald
+  summary: Yalnızca iki giriş eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.equali
+  summary: Yalnızca iki giriş eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.equall
+  summary: Yalnızca iki giriş eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.equalr
+  summary: Yalnızca iki giriş eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.greaterthand
+  summary: Yalnızca bir sayı başka bir sayıdan daha büyükse true değerini döndürür.
+- uid: microsoft.quantum.logical.greaterthani
+  summary: Yalnızca bir sayı başka bir sayıdan daha büyükse true değerini döndürür.
+- uid: microsoft.quantum.logical.greaterthanl
+  summary: Yalnızca bir sayı başka bir sayıdan daha büyükse true değerini döndürür.
+- uid: microsoft.quantum.logical.greaterthanorequald
+  summary: Yalnızca bir sayı başka bir sayıdan büyük veya buna eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.greaterthanorequali
+  summary: Yalnızca bir sayı başka bir sayıdan büyük veya buna eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.greaterthanorequall
+  summary: Yalnızca bir sayı başka bir sayıdan büyük veya buna eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.lessthand
+  summary: Yalnızca bir sayı başka bir sayıdan küçükse true değerini döndürür.
+- uid: microsoft.quantum.logical.lessthani
+  summary: Yalnızca bir sayı başka bir sayıdan küçükse true değerini döndürür.
+- uid: microsoft.quantum.logical.lessthanl
+  summary: Yalnızca bir sayı başka bir sayıdan küçükse true değerini döndürür.
+- uid: microsoft.quantum.logical.lessthanorequald
+  summary: Yalnızca bir sayı başka bir sayıdan küçük veya ona eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.lessthanorequali
+  summary: Yalnızca bir sayı başka bir sayıdan küçük veya ona eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.lessthanorequall
+  summary: Yalnızca bir sayı başka bir sayıdan küçük veya ona eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.not
+  summary: Değerin Boole olumsuzunu döndürür.
+- uid: microsoft.quantum.logical.notequalb
+  summary: Yalnızca iki giriş eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.notequalc
+  summary: Yalnızca iki giriş eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.notequalcp
+  summary: Yalnızca iki giriş eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.notequald
+  summary: Yalnızca iki giriş eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.notequali
+  summary: Yalnızca iki giriş eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.notequall
+  summary: Yalnızca iki giriş eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.notequalr
+  summary: Yalnızca iki giriş eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.or
+  summary: İki değerden oluşan Boole birleşim durumunu döndürür.
+- uid: microsoft.quantum.logical.xor
+  summary: İki değerin Boole dışlamalı bir ilişkisini döndürür.
+ms.openlocfilehash: 12f462356dfe7ae4bf7c60110e71a9928bc8c178
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056288"

@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.reflectionstart
+name: ReflectionStart
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Genlik için tipik giriş durumu olan | 0... 0 〉 dize hakkında bir yansıma oluşturur.
+syntax: 'function ReflectionStart () : Microsoft.Quantum.Oracles.ReflectionOracle'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft.Quantum.Oracles.ReflectionOracle
+  types:
+  - summary: $ \Ket{0\cnoktalar 0} $ durumunu yansıtan bir `ReflectionOracle`.
+    uid: microsoft.quantum.oracles.reflectionoracle
+seeAlso:
+- microsoft.quantum.canon.reflectionoracle
+ms.openlocfilehash: 6598a01c19f25ee444f785a6688738f382fc94e6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215498"

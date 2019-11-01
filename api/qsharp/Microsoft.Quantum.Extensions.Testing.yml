@@ -1,0 +1,56 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.testing
+name: Microsoft.Quantum.Extensions.Testing
+operations:
+- uid: microsoft.quantum.extensions.testing.assertallzero
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.diagnostics.assertallzero"kullanın.
+- uid: microsoft.quantum.extensions.testing.assertallzerotol
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.diagnostics.assertallzerowithintolerance"kullanın.
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.diagnostics.assertoperationsequalinplace"kullanın.
+
+    Bu işlem için bağımsız değişkenlerin sırasının değiştiğini unutmayın.
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis"kullanın.
+
+    Bu işlem için bağımsız değişkenlerin sırasının değiştiğini unutmayın.
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.diagnostics.assertoperationsequalreferenced"kullanın.
+
+    Bu işlem için bağımsız değişkenlerin sırasının değiştiğini unutmayın.
+- uid: microsoft.quantum.extensions.testing.assertqubit
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.diagnostics.assertqubit"kullanın.
+- uid: microsoft.quantum.extensions.testing.assertqubitstate
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance"kullanın.
+- uid: microsoft.quantum.extensions.testing.assertqubittol
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.diagnostics.assertqubitwithintolerance"kullanın.
+ms.openlocfilehash: 031bbd476ac37f113f9fb692ccd6fca916612ac3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210363"

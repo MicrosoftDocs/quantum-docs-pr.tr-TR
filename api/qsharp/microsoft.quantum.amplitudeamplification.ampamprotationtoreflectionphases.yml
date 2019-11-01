@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampamprotationtoreflectionphases
+name: AmpAmpRotationToReflectionPhases
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Tek qubit döndürmeler olarak belirtilen aşamaları kısmi yansıtılamalar olarak belirtilen aşamalara dönüştürür.
+syntax: 'function AmpAmpRotationToReflectionPhases (rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
+references: >-
+  İçindeki kuralını kullanıyoruz
+
+
+  - Tek qubit döndürme aşamalarını yansıma işleci aşamalarına ilişkilendirmek için [ *G.H. Low, i. L. Chuang* ](https://arxiv.org/abs/1707.05391) .
+input:
+  content: '(rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases)'
+  types:
+  - name: rotPhases
+    summary: Kısmi yansıtımları 'na dönüştürülecek tek qubit döndürmeler dizisi.
+    uid: microsoft.quantum.amplitudeamplification.rotationphases
+output:
+  content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
+  types:
+  - summary: Kısmi yansıtımları olarak belirtilen aşamaları uygulayan bir işlem.
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+ms.openlocfilehash: 2e4e447fd7ceef02249aa6577ff0274db046b9f2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215617"

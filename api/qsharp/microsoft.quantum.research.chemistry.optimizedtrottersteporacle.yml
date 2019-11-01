@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.research.chemistry.optimizedtrottersteporacle
+name: Optimizedtroırsteporacle
+type: function
+namespace: Microsoft.Quantum.Research.Chemistry
+summary: En iyileştirilmiş araba adımı işlemini ve çalıştırmak için gereken parametreleri döndürür.
+syntax: 'function OptimizedTrotterStepOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, trotterStepSize : Double, trotterOrder : Int) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
+input:
+  content: '(Qnetdata: Microsoft. hisse. Chemistry. JordanWigner. JordanWignerEncodingData, Troesstepsize: Double, Troesorder: INT)'
+  types:
+  - name: Veri sorgulama
+    summary: Hamiltonian `JordanWignerEncodingData` biçimi tarafından açıklanmıştır.
+    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
+  - name: Trodan stepSize
+    summary: Rahatlık tümleştirici için adım boyutu.
+    isPrimitive: true
+    uid: Double
+  - name: Troödeme siparişi
+    summary: Araba tümleştirici sırası.
+    isPrimitive: true
+    uid: Int
+output:
+  content: (Int, (Double, (qubit [] = > birimi sıfatı + CTL))))
+  types:
+  - summary: 'Bir tanımlama grubu: `Int` ayrılan qubit sayısı, `Double` `1.0/trotterStepSize`ve işlem, sorun yadır.'
+    types:
+    - isPrimitive: true
+      uid: Int
+    - types:
+      - isPrimitive: true
+        uid: Double
+      - isOperation: true
+        input:
+          types:
+          - isArray: true
+            isPrimitive: true
+            uid: Qubit
+        output:
+          types:
+          - isPrimitive: true
+            uid: Unit
+        functors:
+        - Adjoint
+        - Controlled
+ms.openlocfilehash: f8fe25db9eac627649601b1526e4c81eb13d9b99
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066141"

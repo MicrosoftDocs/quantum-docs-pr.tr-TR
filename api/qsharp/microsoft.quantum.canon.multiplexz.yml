@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexz
+name: MultiplexZ
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Bir qubits dizisine bağlı bir Pauli Z dönüşü uygular.
+
+
+  Bu, $n $-qubit numarası State $ \ket{j} $ tarafından denetlendiğinde, "$ \theta_j $ hakkında tek-qubit Pauli işleci $Z $ ile birlikte döndürmeler gerçekleştiren çarpma özellikli Unitary işlemini uygular $U $.
+
+
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \theta_j} $.
+remarks: $2 ^ n $ değerinden azı belirtilmişse, `coefficients` $ \theta_j = $0,0 öğeleriyle doldurulur.
+syntax: 'operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
+references: '- Senişce Logic devreleri Vivek V. ShENdE, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176'
+input:
+  content: '(coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
+  types:
+  - name: coefficients
+    summary: Dizi $2 ^ n $ katsayısı $ \theta_j $. $J $ TH katsayısı, küçük endian biçiminde $ \ket{j} $ kodlu durum sayısını dizine ekler.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: control
+    summary: $n $-qubit denetim kaydı, az endian biçimindeki $ \ket{j} $ sayı durumlarını kodluyor.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: target
+    summary: $E ^ {i P \theta_j} $ tarafından döndürülen tek qubit kaydı.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 7098b849ea730b46b4cc3039520ef2b040d43d34
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222706"

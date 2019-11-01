@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.htermstogensys
+name: HTermsToGenSys
+type: function
+namespace: Microsoft.Quantum.Chemistry
+summary: '`HTerm[]` veri biçimindeki Hamiltonian bir GeneratorSystem biçimine dönüştürür.'
+syntax: 'function HTermsToGenSys (data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[]) : Microsoft.Quantum.Simulation.GeneratorSystem'
+input:
+  content: '(data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[])'
+  types:
+  - name: data
+    summary: Verileri `HTerm[]` biçiminde girin.
+    isArray: true
+    uid: microsoft.quantum.chemistry.hterm
+  - name: termType
+    summary: Generatorındex 'e ek bilgiler eklendi.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.Simulation.GeneratorSystem
+  types:
+  - summary: Giriş `data`temsil eden bir Hamiltonian 'yi temsil eden bir GeneratorSystem.
+    uid: microsoft.quantum.simulation.generatorsystem
+ms.openlocfilehash: 00ecf3fe97526621d596b4dff17e5fd937a21d7b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228894"

@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.discretephaseestimationiteration
+name: DiscretePhaseEstimationIteration
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Bir Unitary Oracle 'ın tamsayı üslerini kullanarak yinelemeli (sınıflı kontrollü) bir aşama tahmin algoritmasının tek bir yinelemesini gerçekleştirir.
+syntax: 'operation DiscretePhaseEstimationIteration (oracle : Microsoft.Quantum.Oracles.DiscreteOracle, power : Int, theta : Double, targetState : Qubit[], controlQubit : Qubit) : Unit'
+input:
+  content: '(oracle : Microsoft.Quantum.Oracles.DiscreteOracle, power : Int, theta : Double, targetState : Qubit[], controlQubit : Qubit)'
+  types:
+  - name: oracle
+    summary: $U ^ d $, bir tamsayı ve bir yazmaç üzerinde işlem gören, burada $U $, aşaması tahmin edilecek olan Unitary, ve $m $, Oracle 'a verilen tamsayı gücüne sahip olduğu bir kayıt.
+    uid: microsoft.quantum.oracles.discreteoracle
+  - name: power
+    summary: Verilen Unitary Oracle 'ın kaç kez uygulanacağını.
+    isPrimitive: true
+    uid: Int
+  - name: theta
+    summary: Hedef durum üzerinde işlem yapmadan önce denetim qubit üzerindeki aşamanın tersine çevirmek için kullanılacak açı.
+    isPrimitive: true
+    uid: Double
+  - name: targetState
+    summary: Verilen Unitary Oracle tarafından üzerinde işlem yapılan durum kaydı.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: controlQubit
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 9acf864fe93303489308078eb5039189808549f1
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229234"

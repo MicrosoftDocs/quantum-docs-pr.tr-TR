@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.boolarrayaspauli
+name: BoolArrayAsPauli
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: Bir bit dizesi verildiğinde, tek qubit Pauli işleçleri dizisi olarak temsil edilen bir multi-qubit Pauli işleci döndürür.
+remarks: Boole dizisi ve hisse kayıt uzunluğu eşit olmalıdır.
+syntax: 'function BoolArrayAsPauli (pauli : Pauli, bitApply : Bool, bits : Bool[]) : Pauli[]'
+input:
+  content: '(pauli : Pauli, bitApply : Bool, bits : Bool[])'
+  types:
+  - name: pauli
+    summary: "`bitsApply == bits[idx]`olduğu gibi qubits 'e uygulanacak Pauli işleci."
+    isPrimitive: true
+    uid: Pauli
+  - name: bitApply
+    summary: bit Bu değer ise Pauli uygulayın.
+    isPrimitive: true
+    uid: Bool
+  - name: bits
+    summary: Boolean dizisi.
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Pauli[]
+  types:
+  - isArray: true
+    isPrimitive: true
+    uid: Pauli
+ms.openlocfilehash: 3d251215e7f7bc136092caf7bafd677ecb1c05bd
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227194"

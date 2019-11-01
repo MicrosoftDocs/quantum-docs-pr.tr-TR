@@ -1,0 +1,190 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.math
+name: Microsoft. hisse. Extensions. Math
+functions:
+- uid: microsoft.quantum.extensions.math.absb
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.absl"kullanın.
+- uid: microsoft.quantum.extensions.math.absd
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.absd"kullanın.
+- uid: microsoft.quantum.extensions.math.absi
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.absi"kullanın.
+- uid: microsoft.quantum.extensions.math.arccos
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.arccos"kullanın.
+- uid: microsoft.quantum.extensions.math.arcsin
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.arcsin"kullanın.
+- uid: microsoft.quantum.extensions.math.arctan
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.arctan"kullanın.
+- uid: microsoft.quantum.extensions.math.arctan2
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.arctan2"kullanın.
+- uid: microsoft.quantum.extensions.math.ceiling
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.ceiling"kullanın.
+- uid: microsoft.quantum.extensions.math.cos
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.cos"kullanın.
+- uid: microsoft.quantum.extensions.math.cosh
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.cosh"kullanın.
+- uid: microsoft.quantum.extensions.math.divremb
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.divreml"kullanın.
+- uid: microsoft.quantum.extensions.math.e
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.e"kullanın.
+- uid: microsoft.quantum.extensions.math.expd
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.expd"kullanın.
+- uid: microsoft.quantum.extensions.math.floor
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.floor"kullanın.
+- uid: microsoft.quantum.extensions.math.ieeeremainder
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.ieeeremainder"kullanın.
+- uid: microsoft.quantum.extensions.math.log
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.log"kullanın.
+- uid: microsoft.quantum.extensions.math.log10
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.log10"kullanın.
+- uid: microsoft.quantum.extensions.math.maxb
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.maxl"kullanın.
+- uid: microsoft.quantum.extensions.math.maxd
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.maxd"kullanın.
+- uid: microsoft.quantum.extensions.math.maxi
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.maxi"kullanın.
+- uid: microsoft.quantum.extensions.math.minb
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.minl"kullanın.
+- uid: microsoft.quantum.extensions.math.mind
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.mind"kullanın.
+- uid: microsoft.quantum.extensions.math.mini
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.mini"kullanın.
+- uid: microsoft.quantum.extensions.math.modpowb
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.modpowl"kullanın.
+- uid: microsoft.quantum.extensions.math.pi
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.pi"kullanın.
+- uid: microsoft.quantum.extensions.math.powd
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.powd"kullanın.
+- uid: microsoft.quantum.extensions.math.round
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.round"kullanın.
+- uid: microsoft.quantum.extensions.math.signb
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.signl"kullanın.
+- uid: microsoft.quantum.extensions.math.signd
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.signd"kullanın.
+- uid: microsoft.quantum.extensions.math.signi
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.signi"kullanın.
+- uid: microsoft.quantum.extensions.math.sin
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.sin"kullanın.
+- uid: microsoft.quantum.extensions.math.sinh
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.sinh"kullanın.
+- uid: microsoft.quantum.extensions.math.sqrt
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.sqrt"kullanın.
+- uid: microsoft.quantum.extensions.math.tan
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.tan"kullanın.
+- uid: microsoft.quantum.extensions.math.tanh
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.tanh"kullanın.
+- uid: microsoft.quantum.extensions.math.truncate
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.truncate"kullanın.
+ms.openlocfilehash: a1a8cda192f7e95141eb2e34baa37ddaae4cb8c9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056324"

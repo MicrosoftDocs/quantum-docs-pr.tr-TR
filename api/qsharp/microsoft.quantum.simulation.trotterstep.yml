@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.trotterstep
+name: Troödeme adımı
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: ', Bir Trour – Suzuki ayrıştırma kullanarak `EvolutionGenerator` açıklanan sistem tarafından tek seferlik bir zaman adımı uygular.'
+remarks: Trour – Suzuki ayrıştırma hakkında daha fazla bilgi için bkz. [zaman Içinde sıralı bileşim](/quantum/libraries/control-flow#time-ordered-composition).
+syntax: 'function TrotterStep (evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, trotterOrder : Int, trotterStepSize : Double) : (Qubit[] => Unit is Adj + Ctl)'
+input:
+  content: '(evolutionGenerator: Microsoft. hisse. simülasyon. EvolutionGenerator, Troısıra: Int, Troıstep Boyut: Double)'
+  types:
+  - name: evolutionGenerator
+    summary: Benzetim yapılacak sistemin tüm açıklaması.
+    uid: microsoft.quantum.simulation.evolutiongenerator
+  - name: Troödeme siparişi
+    summary: Araba tümleştirici sırası. Bu, 1 veya çift bir sayı olmalıdır.
+    isPrimitive: true
+    uid: Int
+  - name: Trodan stepSize
+    summary: Tek bir rahatlık adımında benzetimli zaman-gelişme süresi.
+    isPrimitive: true
+    uid: Double
+output:
+  content: (Qubit [] = > birimi, sıfatı + CTL)
+  types:
+  - summary: Süre `trotterStepSize`için tek bir kez gelişme adımını yaklaştırın Unitary işlemi.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+ms.openlocfilehash: 0605c7de832286b8b7a11b82af50b528d233d18c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065223"

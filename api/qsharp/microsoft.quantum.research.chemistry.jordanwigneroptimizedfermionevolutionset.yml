@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.research.chemistry.jordanwigneroptimizedfermionevolutionset
+name: JordanWignerOptimizedFermionEvolutionSet
+type: function
+namespace: Microsoft.Quantum.Research.Chemistry
+summary: Bir dinamik üreticisini bir simulatable Gates kümesi ve Pauli temelinde genişletme olarak temsil eder.
+syntax: 'function JordanWignerOptimizedFermionEvolutionSet (parityQubit : Qubit) : Microsoft.Quantum.Simulation.EvolutionSet'
+input:
+  content: '(parityQubit: qubit)'
+  types:
+  - name: parityQubit
+    summary: Zaman evrimi 'nin işaretini belirleyen qubit.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Microsoft. hisse. simülasyon. EvolutionSet
+  types:
+  - summary: Jwoptimize edilmiş temel için bir `GeneratorIndex` ' EvolutionUnitary ' ile eşleyen bir `EvolutionSet`.
+    uid: microsoft.quantum.simulation.evolutionset
+ms.openlocfilehash: 7d39228c91995e38423e2b3b5894952ab3bfa533
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066209"

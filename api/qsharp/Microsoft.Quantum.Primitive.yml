@@ -1,0 +1,151 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.primitive
+name: Microsoft.Quantum.Primitive
+functions:
+- uid: microsoft.quantum.primitive.message
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.message"kullanın.
+operations:
+- uid: microsoft.quantum.primitive.assert
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.assert"kullanın.
+- uid: microsoft.quantum.primitive.assertprob
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.assertprob"kullanın.
+- uid: microsoft.quantum.primitive.ccnot
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.ccnot"kullanın.
+- uid: microsoft.quantum.primitive.cnot
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.cnot"kullanın.
+- uid: microsoft.quantum.primitive.exp
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.exp"kullanın.
+- uid: microsoft.quantum.primitive.expfrac
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.expfrac"kullanın.
+- uid: microsoft.quantum.primitive.h
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.h"kullanın.
+- uid: microsoft.quantum.primitive.i
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.i"kullanın.
+- uid: microsoft.quantum.primitive.m
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.m"kullanın.
+- uid: microsoft.quantum.primitive.measure
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.measure"kullanın.
+- uid: microsoft.quantum.primitive.multix
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.applytoeachca"kullanın.
+- uid: microsoft.quantum.primitive.r
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.r"kullanın.
+- uid: microsoft.quantum.primitive.r1
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.r1"kullanın.
+- uid: microsoft.quantum.primitive.r1frac
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.r1frac"kullanın.
+- uid: microsoft.quantum.primitive.random
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.random"kullanın.
+- uid: microsoft.quantum.primitive.reset
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.reset"kullanın.
+- uid: microsoft.quantum.primitive.resetall
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.resetall"kullanın.
+- uid: microsoft.quantum.primitive.rfrac
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.rfrac"kullanın.
+- uid: microsoft.quantum.primitive.rx
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.rx"kullanın.
+- uid: microsoft.quantum.primitive.ry
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.ry"kullanın.
+- uid: microsoft.quantum.primitive.rz
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.rz"kullanın.
+- uid: microsoft.quantum.primitive.s
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.s"kullanın.
+- uid: microsoft.quantum.primitive.swap
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.swap"kullanın.
+- uid: microsoft.quantum.primitive.t
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.t"kullanın.
+- uid: microsoft.quantum.primitive.x
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.x"kullanın.
+- uid: microsoft.quantum.primitive.y
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.y"kullanın.
+- uid: microsoft.quantum.primitive.z
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.intrinsic.z"kullanın.
+ms.openlocfilehash: 87dc52b15f7fb17c6e9c3c11ec04a91e775a36ef
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216042"

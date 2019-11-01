@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.reflectionphases
+name: ReflectionPhases
+type: newtype
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Genize göre kısmi yansıtımları dizisinin aşamaları.
+remarks: >-
+  İlk parametre, başlangıç durumu hakkında yansıma için aşamaların bir dizisidir. İkinci parametre, hedef durumu hakkında yansıma için aşamaların bir dizisidir.
+
+  Her iki dizi de aynı uzunlukta olmalıdır. Çoğu durumda, hedef durum hakkında başlangıç durumu ve son aşama hakkında ilk aşamanın genel bir aşama kaydırma ve $0 $ olarak ayarlanması gerektiğini unutmayın.
+syntax: newtype ReflectionPhases = (Double[], Double[]);
+ms.openlocfilehash: ce9bab0540f70ac0115d5b7780437410e019a09b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215566"

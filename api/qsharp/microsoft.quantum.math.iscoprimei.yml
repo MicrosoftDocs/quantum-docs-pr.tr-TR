@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.iscoprimei
+name: IsCoprimeI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: $A $ ve $b $ ortak ana ise true, aksi takdirde false döndürür.
+syntax: 'function IsCoprimeI (a : Int, b : Int) : Bool'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: ortak Prime 'nin test edilmekte olduğu ilk sayı
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: ortak Prime 'nin test edilmekte olan ikinci sayısı
+    isPrimitive: true
+    uid: Int
+output:
+  content: Bool
+  types:
+  - summary: $A $ ve $b $ ortak asal ise true (ör. en büyük ortak bölen 1), aksi takdirde false
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 3071dc6481c1bbf3fb5544e9de84ee6e944ad4ba
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232736"

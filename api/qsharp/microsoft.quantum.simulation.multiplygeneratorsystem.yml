@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.multiplygeneratorsystem
+name: Çoğullygeneratorsystem
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: '`GeneratorSystem`tüm koşulların katsayısını çarpar.'
+syntax: 'function MultiplyGeneratorSystem (multiplier : Double, generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.GeneratorSystem'
+input:
+  content: '(çarpan: Double, generatorSystem: Microsoft. hisse. simülasyon. GeneratorSystem)'
+  types:
+  - name: Çarpanını
+    summary: Katlayıcı üzerindeki çarpan.
+    isPrimitive: true
+    uid: Double
+  - name: generatorSystem
+    summary: Çarpılacak `GeneratorSystem`.
+    uid: microsoft.quantum.simulation.generatorsystem
+output:
+  content: Microsoft. hisse. simülasyon. GeneratorSystem
+  types:
+  - summary: Faktörün çarpanlarını `multiplier` daha büyük olan bir sistemi temsil eden `GeneratorSystem`.
+    uid: microsoft.quantum.simulation.generatorsystem
+seeAlso:
+- microsoft.quantum.canon.generatorsystem
+ms.openlocfilehash: e96870c4e59773542924dcd247aedc498d3f3307
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065461"

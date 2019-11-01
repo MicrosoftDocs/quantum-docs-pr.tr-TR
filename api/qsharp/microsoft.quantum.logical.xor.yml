@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.xor
+name: Xor
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: İki değerin Boole dışlamalı bir ilişkisini döndürür.
+syntax: 'function Xor (a : Bool, b : Bool) : Bool'
+input:
+  content: '(a : Bool, b : Bool)'
+  types:
+  - name: a
+    summary: Göz önünde bulundurmanız için ilk değer.
+    isPrimitive: true
+    uid: Bool
+  - name: b
+    summary: Göz önünde bulundurmanız için ikinci değer.
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Bool
+  types:
+  - summary: yalnızca `a` ve `b` tam olarak biri `true`ise `true`.
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: a876025d8b3a928e91d686b90f8ceccd65cc1e7c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235150"

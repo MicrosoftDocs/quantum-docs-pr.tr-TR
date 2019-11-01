@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.stateoracle
+name: StateOracle
+type: newtype
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  Durum hazırlığı için bir Oracle temsil eder.
+
+
+  Oracle $O $ girdileri şunlardır:
+
+
+  - Qubit $f $ bayrağını dizinleyen bir tamsayı.
+
+  - System Register $s $, istenen hisse durumu $ \ket{\psı}\_s $ ' i depolayacak.
+remarks: >-
+  Bu Oracle, $ $ O\ket{0}\_{f} \demet{0}\_s = \lambda\tus{1}\_f\ket {\ PSI}\_s + \sqrt{1-| \lambda | ^ 2} \tus{0}\_f\cnoktalar $ $, $ \ket\_{1}f $ tarafından işaretlenen temelinde $ \ket{\psi} \_s $ hedef durumu $ \lambda ${0}\_s $ hedef durumunu oluşturmak üzere hesaplama tabanlı durum $ \ket{0}\_{f} \tus s $ üzerinde çalışır.
+
+  İlk parametre, $ \tus{0}\_f $ 'ın qubit kaydına yönelik bir dizindir. İkinci parametrenin her ikisi de kaydettirir.
+syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: 1faa47c21e43355ed036498adf4e823ff3f8a0e4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067229"

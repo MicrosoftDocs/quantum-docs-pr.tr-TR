@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.reflectionoracle
+name: ReflectionOracle
+type: newtype
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  Bir yansımayı bir Oracle temsil eder.
+
+
+  Bir yansıma Oracle, $O $, girdileri vardır:
+
+
+  - Yansıtılan alt alanın döndürüleceği $ \phi $ aşaması.
+
+  - Verilen yansımanın gerçekleştirileceği qubit kaydı.
+remarks: Bu Oracle $O = \ cıvabitti-(1-e ^ {i \ Phi}) \ket{\psi}\bra{\psi} $, tek bir saf durum $ \ket{\psı} $ hakkında bir aşama $ \phi $ ile kısmi bir yansıma gerçekleştirir.
+syntax: newtype ReflectionOracle = ((Double, Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: 7ca6551a83ae279c5a937556d7c2c9dde98e4522
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230866"

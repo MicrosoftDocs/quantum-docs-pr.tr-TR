@@ -1,0 +1,63 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
+name: AssertOperationsEqualReferenced
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: >-
+  İki işlem söz konusu olduğunda, tüm giriş durumları için aynı hareket ettikleri onaylar.
+
+
+  Bu onaylama işlemi, iki entanlı kasada bir qubit durum onaylamanın bir listesini azaltmak için Choi – Jamiłkowski isomorphism kullanılarak uygulanır.
+
+  Bu nedenle, bu işlem yalnızca sınanan her bir işlem için tek bir çağrıya gerek duyar, ancak ayrılacak sayıda qubit için iki kez gerekir.
+
+  Bu onaylama, örneğin, bir işlemin en iyi duruma getirilmiş bir sürümünün Naïve uygulamasına benzer bir şekilde davranması veya bir dizi hisse kullanım dışı girişleri üzerinde davranan bir işlemin bilinen durumları kabul ettiği bir işlem olduğundan emin olmak için kullanılabilir.
+remarks: >-
+  Bu işlem, yalnızca hedef kayıt üzerinde ters işlem yapılabilmesi için beklenen davranışı modelleyen işlemin adjointable olmasını gerektirir.
+
+  Tek bir tane, bu gereksinimi veren bir yeniden çevir işlemi belirtebilir, ancak devrik işlem, isteğe bağlı olarak rastgele bir işlem için genel olarak gerçekçi değildir ve bu nedenle bir seçenek olarak burada bulunmaz.
+syntax: 'operation AssertOperationsEqualReferenced (nQubits : Int, actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj)) : Unit'
+input:
+  content: '(nQubits: Int, gerçek: (qubit [] = > Unit), beklenen: (qubit [] = > birim sıfatı))'
+  types:
+  - name: nQubits
+    summary: Her bir işleme geçirilecek qubit sayısı.
+    isPrimitive: true
+    uid: Int
+  - name: Varolan
+    summary: Test edilecek işlem.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: beklenen
+    summary: Test edilen işlem için beklenen davranışı tanımlayan işlem.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+output:
+  content: Birim
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 0dfadb6be785c7ba4eaa517c725b79955e037a32
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066583"

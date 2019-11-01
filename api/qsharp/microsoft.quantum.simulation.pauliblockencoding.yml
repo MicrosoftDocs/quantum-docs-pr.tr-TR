@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.pauliblockencoding
+name: PauliBlockEncoding
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Hamiltonian için blok kodlama Unitary oluşturur.
+
+
+  Hamiltonian $H = \sum_{j}\alpha_j P_j $, her biri gerçek katsayı $ \harflerden _j $ olan Pauli terimlerinin toplamı $P _j $ ile açıklanmıştır.
+remarks: Bu, $ \ sum_ {j} \ sqrt {\ alpha_j/\ Alpha} \ Tus{j} $ durumunun hazırlanması ve hazırlanması ve çarpma kontrollü bir Unitary <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> ve <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>oluşturmak yoluyla elde edilir.
+syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
+input:
+  content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
+  types:
+  - name: generatorSystem
+    summary: Pauli koşullarının toplamı olarak $H $ tanımlayan bir `GeneratorSystem`
+    uid: microsoft.quantum.simulation.generatorsystem
+output:
+  content: (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)
+  types:
+  - summary: >-
+      ## <a name="first-parameter"></a>İlk parametre
+
+
+      Katsayıların bir normu $ \Alpha = \sum_{j} | \harflerden _j | $.
+
+
+      ## <a name="second-parameter"></a>İkinci parametre
+
+
+      Hamiltonian $H $ 'ın `BlockEncodingReflection` Unitary $U $. Bu Unitary, $U ^ 2 = I $ ile aynı zamanda bir yansıdır.
+    types:
+    - isPrimitive: true
+      uid: Double
+    - uid: microsoft.quantum.simulation.blockencodingreflection
+ms.openlocfilehash: 352ab71457601c38b22e93f706cb59f50bf24151
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216144"

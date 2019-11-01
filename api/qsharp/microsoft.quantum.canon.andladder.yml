@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.andladder
+name: AndLadder
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Hedef qubit üzerinde denetimli bir ' ve greder ' gerçekleştirir.
+
+
+  Bu, hesaplama tabanlı vektörde aşağıdaki eşleme tarafından verilen bir Unitary uygular: $ $ \begin{hizalaması} \ket{x\_1, \noktalar, x\_n} \ket{y\_1, \noktalar, y\_{n-1}} \mapsto \ket{x\_1 , \noktalar, x\_n} \ket{y\_1 \ OPLUS (x\_1 \land x\_2), \noktalar, y\_{n-1} \oplus (x\_1 \land x\_2 \land \ cnoktalar \land x\_{n-1}} , \end{hizalaması} $ $ burada $ \ket{x\_1, \noktalar, x\_n} $ `controls`hesaplama tabanlı durumlara ve $ \ket{y\_1, \noktalar, y\_{n-1}} $ ' ın hesaplama tabanlı durumlarına başvurur.
+remarks: >-
+  - <xref:microsoft.quantum.canon.applymulticontrolledc> ve <xref:microsoft.quantum.canon.applymulticontrolledca>bir parçası olarak kullanılır.
+
+  - Açıklama ve devre diyagramı için, bkz. Şekil 4,10, Bölüm 4,3, Nielsen & Chuang.
+syntax: 'operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
+references: '- [*Michael A. Nielsen, Isaac L. Chuang*, hisse hesaplaması ve hisse bilgisi](http://doi.org/10.1017/CBO9780511976667)'
+input:
+  content: '(ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[])'
+  types:
+  - name: ccnot
+    summary: Oluşturma için kullanılacak CCNOT kapısı.
+    uid: microsoft.quantum.canon.ccnotop
+  - name: controls
+    summary: >-
+      Ve merdiveni için denetim olarak kullanılacak qubit kaydı.
+
+      Bu işlem, `controls` sabiti hesaplama tabanlı durumlarını bırakır.
+
+      `controls` uzunluğu en az 2 olmalı ve `targets`uzunluğuna eşit olmalıdır.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targets
+    summary: '`targets` uzunluğu en az 1, `controls` eksi bir uzunluğa eşit olmalıdır.'
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+ms.openlocfilehash: 2970f9c783ea233f2f1ceb4089802320efe82602
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217725"

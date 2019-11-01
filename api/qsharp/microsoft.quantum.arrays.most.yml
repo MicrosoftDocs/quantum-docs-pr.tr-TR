@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.most
+name: Most
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Son dizi öğesinin bırakılmasının dışında, bir giriş dizisine eşit olan bir dizi oluşturur.
+syntax: "function Most (array : 'T[]) : 'T[]"
+input:
+  content: "(array : 'T[])"
+  types:
+  - name: array
+    summary: İlk olarak ikinci-son öğeleri olan bir dizi çıktı dizisini biçimlendirmek içindir.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Öğeleri içeren bir dizi `array[0..Length(array) - 2]`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Dizi öğelerinin türü.
+ms.openlocfilehash: 8b7d324bac18c03692761ae3fb22669b240f3704
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218082"

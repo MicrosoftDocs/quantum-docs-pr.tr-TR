@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.identicalpointposfactfxp
+name: IdenticalPointPosFactFxP
+type: function
+namespace: Microsoft.Quantum.Arithmetic
+summary: Belirtilen dizide bulunan tüm sabit noktalı sayıların, en az önemli bir bit sayılarak aynı nokta konumlarına sahip olması onayı. Yani, dizideki tüm sabit noktalı sayılar için bit eksi nokta konumu sayısının sabit olması gerekir.
+syntax: 'function IdenticalPointPosFactFxP (fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[]) : Unit'
+input:
+  content: '(fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[])'
+  types:
+  - name: fixedPoints
+    summary: Uyumluluk için denetlenecek hisse sabit noktalı sayıların dizisi (onaylama işlemleri kullanılarak).
+    isArray: true
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 2cd4bcb86490cf468215c507d32d8dc015af2a5b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220989"

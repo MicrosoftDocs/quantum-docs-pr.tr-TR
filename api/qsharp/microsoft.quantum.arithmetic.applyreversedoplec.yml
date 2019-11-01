@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.applyreversedoplec
+name: ApplyReversedOpLEC
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Büyük endian biçimini kullanarak işaretsiz bir tamsayıyı bir yazmaç kodlamasına az endian girişi alan bir işlem uygular.
+syntax: 'operation ApplyReversedOpLEC (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Ctl), register : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
+input:
+  content: '(OP: (Microsoft. hisse. aritmetik. Littmaendian = > birimi CTL), kaydol: Microsoft. hisse. aritmetik. Bigenyen)'
+  types:
+  - name: üs
+    summary: Az endian kayıt üzerinde davranan işlem.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: kaydolunamadı
+    summary: Dönüştürülecek büyük endian kaydı.
+    uid: microsoft.quantum.arithmetic.bigendian
+output:
+  content: Birim
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Controlled
+seeAlso:
+- applyreversedople
+- applyreversedoplea
+- applyreversedopleca
+ms.openlocfilehash: 0e517509a79a6740f1369b8c477bc94ae3b617c7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057051"

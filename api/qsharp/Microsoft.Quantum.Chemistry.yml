@@ -1,0 +1,24 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.chemistry
+name: Microsoft.Quantum.Chemistry
+functions:
+- uid: microsoft.quantum.chemistry.htermstogenidx
+  summary: Bir dizini, `HTerm[]` veri biçimindeki bir Hamiltonian terimine bir Generatorındex olarak dönüştürür.
+- uid: microsoft.quantum.chemistry.htermstogensys
+  summary: '`HTerm[]` veri biçimindeki Hamiltonian bir GeneratorSystem biçimine dönüştürür.'
+- uid: microsoft.quantum.chemistry.htermtogenidx
+  summary: '`HTerm` veri biçimindeki Hamiltonian terimini bir Generatorındex öğesine dönüştürür.'
+- uid: microsoft.quantum.chemistry.isnotzero
+  summary: '`Double` numarasının yaklaşık olarak sıfır olup olmadığını denetler.'
+newtypes:
+- uid: microsoft.quantum.chemistry.hterm
+  summary: >-
+    Bir Hamiltonian C# 'nin bir terimini temsil etmesi için, öğesinden Q # öğesine geçirilen verilerin biçimi.
+
+    Temsil edilen verilerin anlamı onu alan algoritma tarafından belirlenir.
+ms.openlocfilehash: 78d6e9f54c25f9d1a6af32c157d23069b8a4872b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210925"

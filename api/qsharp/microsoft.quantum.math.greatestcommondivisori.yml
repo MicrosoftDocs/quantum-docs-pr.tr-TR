@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.greatestcommondivisori
+name: GreatestCommonDivisorI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: $A $ ve $b $ öğesinin en büyük ortak bölenini hesaplar. GCD her zaman pozitif olur.
+syntax: 'function GreatestCommonDivisorI (a : Int, b : Int) : Int'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: Genişletilmiş en büyük ortak ayırıcının hesaplandığı ilk sayı
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: Genişletilmiş en büyük ortak ayırıcının hesaplandığı ikinci sayı
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: $a $ ve $b $ öğesinin en büyük ortak böleni
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 24f187968a2b628ebe8e18d84b762def91e3bb95
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232855"

@@ -1,0 +1,55 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.cx
+name: YAZMAÇ
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Denetlenen X (CX) kapısını bir qubit çiftiyle uygular.
+
+
+  $ $ \begin{hizalaması} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{hizalaması} , $ $, satırlar ve sütunlar hisse kavramları kılavuzunda olduğu gibi düzenlenir.
+remarks: >-
+  Eşdeğer:
+
+
+  ```qsharp
+
+  Controlled X([control], target);
+
+  ```
+
+
+  ve için:
+
+
+  ```qsharp
+
+  CNOT(control, target);
+
+  ```
+syntax: 'operation CX (control : Qubit, target : Qubit) : Unit'
+input:
+  content: '(denetim: qubit, hedef: qubit)'
+  types:
+  - name: Denetimle
+    summary: CX kapısı için denetim qubit.
+    isPrimitive: true
+    uid: Qubit
+  - name: hedef
+    summary: CX kapısı için hedef qubit.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Birim
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 26cbc8dc2f22cdf8583d453b84e53b0151619f5d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067875"

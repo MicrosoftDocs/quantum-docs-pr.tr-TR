@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifzeroa
+name: ApplyIfZeroA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Klasik sonuç değeri sıfır olan bir adjointable işlemi uygular.
+
+
+  Bir işlem `op` ve sonuç değeri `result`, `result` `Zero`ise `target` `op` uygular. `One`, `target`hiçbir şey olmaz.
+
+  Sonek `A` uygulanacak işlemin adjointable olduğunu gösterir.
+syntax: "operation ApplyIfZeroA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
+input:
+  content: "(result : Result, (op : ('T => Unit is Adj), target : 'T))"
+  types:
+  - name: result
+    summary: Op 'ın uygulanıp uygulanmadığını denetleyen ölçüm sonucu.
+    isPrimitive: true
+    uid: Result
+  - name: op
+    summary: Koşullu olarak uygulanacak bir işlem.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: target
+    summary: İşlemin uygulandığı giriş.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Koşullu olarak uygulanacak işlemin giriş türü.
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applyifzeroc
+- microsoft.quantum.canon.applyifzeroa
+- microsoft.quantum.canon.applyifzeroca
+ms.openlocfilehash: 626bb5bbd18cceb409632ec0d27b48c6ea98fbbe
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220734"

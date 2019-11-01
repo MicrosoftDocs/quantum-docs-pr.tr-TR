@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.encodeintofivequbitcode
+name: EncodeIntoFiveQubitCode
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: ⟦ 5, 1, 3 ⟧ hisse koduna kodluyor.
+syntax: 'operation EncodeIntoFiveQubitCode (physRegister : Qubit[], auxQubits : Qubit[]) : Microsoft.Quantum.ErrorCorrection.LogicalRegister'
+input:
+  content: '(physRegister : Qubit[], auxQubits : Qubit[])'
+  types:
+  - name: physRegister
+    summary: Kodlanamayan bir durumu temsil eden bir qubit. Bu dizi `Qubit[]` uzunluğu 1 ' dir.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: auxQubits
+    summary: Kodlanmış durumu temsil etmek için kullanılacak yardımcı qubit kaydı.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Microsoft.Quantum.ErrorCorrection.LogicalRegister
+  types:
+  - summary: Kodlanmış durumu depolayan `LogicalRegister` türünde bir fiziksel qubit dizisi.
+    uid: microsoft.quantum.errorcorrection.logicalregister
+seeAlso:
+- logicalregister
+ms.openlocfilehash: 6147098742759d72dba9c8eee0218d973320793b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234572"

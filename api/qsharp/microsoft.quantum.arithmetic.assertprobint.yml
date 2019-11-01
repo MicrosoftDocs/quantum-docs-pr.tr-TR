@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.assertprobint
+name: AssertProbInt
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Bir hisse amacının belirli bir durumunun beklenen değere sahip olma olasılığını onaylar.
+
+
+  $N $-qubit hisse durumu $ \ket{\psı} = \sum ^ {2 ^ n-1} _ {j = 0} \harflerden _j \ket{j} $, $j $ tarafından dizin oluşturulan $ \ket{j} $ öğesinin olasılık $ | \harflerden _j | ^ 2 $ değerinin beklenen değere sahip olduğunu onaylar.
+examples: >-
+  `qubits` yazmacın bir 3-qubit hisse durumu $ \ket{\psı} = \ sqrt {1/8} \ demet{0}+ \ sqrt {7/8} \ köşeli{6}$ ' i küçük endian biçiminde kodtığını varsayalım.
+
+  Bu, sayının $ \demet{0}\equiv\demet{0}\ayraç{0}\ket{0}$ ve $ \tus{6}\equiv\ket{0}\tus{1}\tus{1}$ olduğunu gösterir. Ardından, aşağıdaki onaylar başarılı olur:
+
+
+  - `AssertProbInt(0,0.125,qubits,10e-10);`
+
+  - `AssertProbInt(6,0.875,qubits,10e-10);`
+syntax: 'operation AssertProbInt (stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double) : Unit'
+input:
+  content: '(stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double)'
+  types:
+  - name: stateIndex
+    summary: Bir `LittleEndian` yazmaç tarafından temsil edilen $ \ket{j} $ durumunun $j $ dizini.
+    isPrimitive: true
+    uid: Int
+  - name: expected
+    summary: $ | \Harflerden _j | ^ 2 $ değerinin beklenen değeri.
+    isPrimitive: true
+    uid: Double
+  - name: qubits
+    summary: $ \Ket{\psı} $ ' i küçük endian biçiminde depolayan qubit kaydı.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: tolerance
+    summary: Gerçek ve beklenen arasındaki fark için mutlak tolerans.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 183f1252ba555c10e7011eea98a5cc98fae4495a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221448"

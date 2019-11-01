@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.randomintpow2
+name: RandomIntPow2
+type: operation
+namespace: Microsoft.Quantum.Math
+summary: Verilen bit sayısında temsil edilebilir tüm tamsayılarla rastgele bir tam sayı üretir.
+remarks: Bu işlev <xref:microsoft.quantum.intrinsic.random>çağırır, bu nedenle rasgeleliği, `Random`uygulamasına bağlıdır.
+syntax: 'operation RandomIntPow2 (maxBits : Int) : Int'
+input:
+  content: '(maxBits : Int)'
+  types:
+  - name: maxBits
+    summary: Bu işlem tarafından döndürülebilecek en büyük tamsayıyı temsil etmek için gereken klasik bitlerin sayısı.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: $ [0, 2 ^ {\texttt{maxBits}}-1] $; öğesinden rastgele bir tamsayı $x diğer bir deyişle, $ \Pr (x) = \frac{1}{2 ^ {\texttt{maxBits}}} $.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: e690509a7dcd2b1ec51bdde85da6439a688e75e7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219986"

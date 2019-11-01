@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.knilldistill
+name: KnillDistill
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: >-
+  Knill Magic State deneyimlerinin algoritmasını uygular.
+
+
+  Bir sihirli durum $ $ \begin{hizalaması} \cos\frac{\pi}{8} \tus{0} + \sin \frac{\pi}{8} \tus{1} \end{hizalaması}, $ $ bir yüksek kaliteli kopya verir.
+remarks: >-
+  Knill algoritmasını izliyoruz.
+
+  Ancak, mevcut uygulama çok fazla qubit kullandığından en iyi şekilde sürer.
+
+  Sihirli durumlar bu yordama eklenir ve bu durumda daha iyi protokoller vardır.
+syntax: 'operation KnillDistill (roughMagic : Qubit[]) : Bool'
+references: '- [Knill](https://arxiv.org/abs/quant-ph/0402171)'
+input:
+  content: '(roughMagic : Qubit[])'
+  types:
+  - name: roughMagic
+    summary: Bir sihirli durumun yaklaşık kopyalarını içeren on beş qubit kaydı. Bu geri yükleme yordamının aşağıdaki uygulaması, `roughMagic[0]` daha yüksek kaliteli bir kopya içerecektir ve kaydın geri kalanı $ \ket{00\cnoktalara 0} $ duruma sıfırlanacak.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Bool
+  types:
+  - summary: '`true`, başarılı olan yordam ve daha yüksek kaliteli kopya kabul edilmelidir. `false`yordam başarısız olursa ve kaydın durumu tanımsız olarak düşünülmelidir.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 81d87b3dcd6f669a63847e331865b1f2c389f3ce
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226735"

@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.evaluatepolynomialfxp
+name: EvaluatePolynomialFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Sabit noktalı bir gösterimde bir polinom değerlendirir.
+syntax: 'operation EvaluatePolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: coefficients
+    summary: Polinom $P (x) = a_0 + A_1 x + \ cnoktalar + a_d x ^ d $ için bir çift dizi olarak polinom 'in katsayısıdır; Yani, dizi $ [a_0, A_1,..., a_d] $.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: fpx
+    summary: Polinom 'un değerlendirileceği sabit noktalı sayı girin.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: result
+    summary: $P (x) $ ' i barındıracak olan çıkış sabit noktası numarası. Başlangıçta $ \demet{0}$ durumunda olmalıdır.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 8a3531860001c09fa3dadd5ba4db276f0a20d06a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221006"

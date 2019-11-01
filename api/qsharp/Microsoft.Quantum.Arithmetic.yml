@@ -1,0 +1,223 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.arithmetic
+name: Microsoft. hisse. aritmetik
+summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı, tutarlı bir işlem aritmetik işlemi için kullanılan işlevleri ve işlemleri içerir."
+functions:
+- uid: microsoft.quantum.arithmetic.bigendianaslittleendian
+  summary: '`BigEndian` qubit kaydını, qubit sıralamasını tersine çevirerek bir `LittleEndian` qubit kaydına dönüştürür.'
+- uid: microsoft.quantum.arithmetic.identicalformatfactfxp
+  summary: Belirtilen dizide bulunan tüm sabit noktalı sayıların, aynı nokta konumlarına ve qubit numaralarına sahip olması onayı.
+- uid: microsoft.quantum.arithmetic.identicalpointposfactfxp
+  summary: Belirtilen dizide bulunan tüm sabit noktalı sayıların, en az önemli bir bit sayılarak aynı nokta konumlarına sahip olması onayı. Yani, dizideki tüm sabit noktalı sayılar için bit eksi nokta konumu sayısının sabit olması gerekir.
+- uid: microsoft.quantum.arithmetic.littleendianasbigendian
+  summary: '`LittleEndian` qubit kaydını, qubit sıralamasını tersine çevirerek bir `BigEndian` qubit kaydına dönüştürür.'
+- uid: microsoft.quantum.arithmetic.reversedopbe
+  summary: Büyük endian girişi alan bir işlem verildiğinde, küçük endian girişi alan yeni bir işlem döndürür.
+- uid: microsoft.quantum.arithmetic.reversedopbea
+  summary: Büyük endian girişi alan bir işlem verildiğinde, küçük endian girişi alan yeni bir işlem döndürür.
+- uid: microsoft.quantum.arithmetic.reversedopbec
+  summary: Büyük endian girişi alan bir işlem verildiğinde, küçük endian girişi alan yeni bir işlem döndürür.
+- uid: microsoft.quantum.arithmetic.reversedopbeca
+  summary: Büyük endian girişi alan bir işlem verildiğinde, küçük endian girişi alan yeni bir işlem döndürür.
+- uid: microsoft.quantum.arithmetic.reversedople
+  summary: Küçük endian girişi alan bir işlem verildiğinde, büyük endian girişi alan yeni bir işlem döndürür.
+- uid: microsoft.quantum.arithmetic.reversedoplea
+  summary: Küçük endian girişi alan bir işlem verildiğinde, büyük endian girişi alan yeni bir işlem döndürür.
+- uid: microsoft.quantum.arithmetic.reversedoplec
+  summary: Küçük endian girişi alan bir işlem verildiğinde, büyük endian girişi alan yeni bir işlem döndürür.
+- uid: microsoft.quantum.arithmetic.reversedopleca
+  summary: Küçük endian girişi alan bir işlem verildiğinde, büyük endian girişi alan yeni bir işlem döndürür.
+operations:
+- uid: microsoft.quantum.arithmetic.addconstantfxp
+  summary: Hisse sabit noktalı bir numaraya klasik bir sabit ekler.
+- uid: microsoft.quantum.arithmetic.addfxp
+  summary: Hisse Yazmaçları içinde depolanan iki sabit noktalı sayıyı ekler.
+- uid: microsoft.quantum.arithmetic.addi
+  summary: '`ys`kaydetme boyutuna bağlı olarak, birlikte taşıma ve olmadan ekleme arasında otomatik olarak seçer.'
+- uid: microsoft.quantum.arithmetic.applyleoperationonphasele
+  summary: <xref:microsoft.quantum.arithmetic.littleendian>türünde bir hedef kayıt üzerinde girdi olarak <xref:microsoft.quantum.arithmetic.phaselittleendian> yazmacı alan bir işlem uygular.
+- uid: microsoft.quantum.arithmetic.applyleoperationonphaselea
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyleoperationonphaselec
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyleoperationonphaseleca
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyphaseleoperationonle
+  summary: <xref:microsoft.quantum.arithmetic.phaselittleendian>türünde bir hedef kayıt üzerinde girdi olarak <xref:microsoft.quantum.arithmetic.littleendian> yazmacı alan bir işlem uygular.
+- uid: microsoft.quantum.arithmetic.applyphaseleoperationonlea
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyphaseleoperationonlec
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyphaseleoperationonleca
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyreversedopbe
+  summary: Bir yazmaç için büyük endian girişi alan, küçük endian biçimini kullanarak işaretsiz bir tamsayı olan bir işlem uygular.
+- uid: microsoft.quantum.arithmetic.applyreversedopbea
+  summary: Bir yazmaç için büyük endian girişi alan, küçük endian biçimini kullanarak işaretsiz bir tamsayı olan bir işlem uygular.
+- uid: microsoft.quantum.arithmetic.applyreversedopbec
+  summary: Bir yazmaç için büyük endian girişi alan, küçük endian biçimini kullanarak işaretsiz bir tamsayı olan bir işlem uygular.
+- uid: microsoft.quantum.arithmetic.applyreversedopbeca
+  summary: Bir yazmaç için büyük endian girişi alan, küçük endian biçimini kullanarak işaretsiz bir tamsayı olan bir işlem uygular.
+- uid: microsoft.quantum.arithmetic.applyreversedople
+  summary: Büyük endian biçimini kullanarak işaretsiz bir tamsayıyı bir yazmaç kodlamasına az endian girişi alan bir işlem uygular.
+- uid: microsoft.quantum.arithmetic.applyreversedoplea
+  summary: Büyük endian biçimini kullanarak işaretsiz bir tamsayıyı bir yazmaç kodlamasına az endian girişi alan bir işlem uygular.
+- uid: microsoft.quantum.arithmetic.applyreversedoplec
+  summary: Büyük endian biçimini kullanarak işaretsiz bir tamsayıyı bir yazmaç kodlamasına az endian girişi alan bir işlem uygular.
+- uid: microsoft.quantum.arithmetic.applyreversedopleca
+  summary: Büyük endian biçimini kullanarak işaretsiz bir tamsayıyı bir yazmaç kodlamasına az endian girişi alan bir işlem uygular.
+- uid: microsoft.quantum.arithmetic.applyxorinplace
+  summary: >-
+    Bir tamsayının 1 bite göre küçük endian kaydındaki qubits 'e `X` işlemler uygular.
+
+
+    `value` bir ' a göre belirlememize ve `InPlaceXorLE` `target`bir işaretsiz tamsayı olmasına izin verin: $ \ket{y}\rightarrow \ket{y\oplus a} $, burada $ \oplus $ bit düzeyinde dışlamalı veya işleçtir.
+- uid: microsoft.quantum.arithmetic.assertallzerofxp
+  summary: Bir hisse sabit noktalı sayının sıfıra başlatıldığını, yani tüm qubits 'in State $ \tus{0}$ olduğunu belirten yardımcı işlevi.
+- uid: microsoft.quantum.arithmetic.assertmostsignificantbit
+  summary: Bir qubit kayıt 'nın, işaretsiz bir tamsayıyı temsil eden en önemli qubitin belirli bir durumda olduğunu onaylar.
+- uid: microsoft.quantum.arithmetic.assertphaselessthan
+  summary: Phaselitttaendian içinde kodlanan `number` `value`daha az olduğunu onaylar.
+- uid: microsoft.quantum.arithmetic.assertprobint
+  summary: >-
+    Bir hisse amacının belirli bir durumunun beklenen değere sahip olma olasılığını onaylar.
+
+
+    $N $-qubit hisse durumu $ \ket{\psı} = \sum ^ {2 ^ n-1} _ {j = 0} \harflerden _j \ket{j} $, $j $ tarafından dizin oluşturulan $ \ket{j} $ öğesinin olasılık $ | \harflerden _j | ^ 2 $ değerinin beklenen değere sahip olduğunu onaylar.
+- uid: microsoft.quantum.arithmetic.carry
+  summary: Ters bir taşıma geçidi uygular. Qubit `carryIn` ve `summand1` ve `summand2`ile kodlanmış iki summand bit olarak kodlanmış bir taşıma biti verildiğinde, qubit `summand1` bit düzeyinde xor `carryIn`, `summand2` ve `summand2` hesaplar ve XORed, qubit `carryOut`.
+- uid: microsoft.quantum.arithmetic.cascadeccnot
+  summary: >-
+    , Yazmaçların bir sonraki qubit ' i üzerinde işlem gören iki qubit kayıt 'nin karşılık gelen bitleri üzerinde denetlenen CCNOT kapıları basamaklandırmasını uygular.
+
+    Her iki kasada de 0 konumundaki qubits 'lerden başlayarak, CCNOT hedef yazmacın 1. konumunda ve ardından hedef kayıttaki qubitlere göre kontrol edilir ve bu durumda, bir eylem ile biten, konumdaki hedef qubit `Length(nQubits)-1`.
+- uid: microsoft.quantum.arithmetic.cascadecnot
+  summary: Belirli bir qubit kaydındaki komşu qubit kapılarının basamaklı bir şekilde, 0 konumundaki qubitden hedef olarak 1 konumundaki qubit 'e, sonra da hedef olarak 2 konumundaki qubit 'e denetim olarak 1 konumundaki qubitden başlayarak , vb., hedef olarak `Length(register)-1` konum içinde qubit ile biter.
+- uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
+  summary: Hisse Yazmaçları içinde depolanan iki sabit noktalı sayıyı karşılaştırır ve sonucu üzerinde bir çevir denetimi yapar.
+- uid: microsoft.quantum.arithmetic.comparegti
+  summary: 'Tamsayı karşılaştırması için sarmalayıcı: `result = x > y`.'
+- uid: microsoft.quantum.arithmetic.comparegtsi
+  summary: 'İşaretli tamsayı karşılaştırması için sarmalayıcı: `result = xs > ys`.'
+- uid: microsoft.quantum.arithmetic.compareusingripplecarry
+  summary: >-
+    Bu Unitary testleri, eşit boyutlu qubit kayıtlarında depolanan `x` ve `y` depolanan iki tamsayı `x > y`karşılamadığı test. True ise, 1 çıkış qubit XORed. Aksi halde, 0 bir çıkış qubit içine XORed.
+
+
+    Diğer bir deyişle, bu Unitary $U $ şunları karşılar: $ $ \begin{hizalaması} U\ket {x} \ ayraç {y} \ ayraç {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)}.
+
+    \end{hizalaması} $ $.
+- uid: microsoft.quantum.arithmetic.computereciprocalfxp
+  summary: $1/x $ ' i $x $ bir sabit noktalı sayı için hesaplar.
+- uid: microsoft.quantum.arithmetic.computereciprocali
+  summary: Tamsayı bölme kullanılarak işaretsiz bir tamsayı x için karşılıklı 1/x hesaplar. Sonuç, bir tamsayı olarak yorumlanan `floor(2^(2*n-1) / x)`olur.
+- uid: microsoft.quantum.arithmetic.copymostsignificantbit
+  summary: Bir qubit yazmacın en önemli bitini, bir işaretsiz tamsayıyı, qubit `target`olarak temsil eden `from` kopyalar.
+- uid: microsoft.quantum.arithmetic.dividei
+  summary: İki hisse tamsayının böler.
+- uid: microsoft.quantum.arithmetic.evaluateevenpolynomialfxp
+  summary: Sabit noktalı bir gösterimde çift bir polinom değerlendirir.
+- uid: microsoft.quantum.arithmetic.evaluateoddpolynomialfxp
+  summary: Sabit noktalı bir gösterimde tek bir polinom değerlendirir.
+- uid: microsoft.quantum.arithmetic.evaluatepolynomialfxp
+  summary: Sabit noktalı bir gösterimde bir polinom değerlendirir.
+- uid: microsoft.quantum.arithmetic.greaterthan
+  summary: $X $ ve $y $, qubit, XS ve YS içinde kodlandığı iki tamsayının karşılaştırmadan kesinlikle daha büyük bir şekilde gerçekleştirir. $X y $ >, sonuç qubit ters çevrilcektir, aksi takdirde durumunu korurlar.
+- uid: microsoft.quantum.arithmetic.incrementbyinteger
+  summary: Bir işaretsiz hisse kaydetmeyi, bir klasik tamsayı tarafından, aşama döndürmeler kullanılarak arttırır.
+- uid: microsoft.quantum.arithmetic.incrementbymodularinteger
+  summary: >-
+    Bir tamsayı sabiti ile bir qubit yazmacının modüler artışını gerçekleştirir.
+
+
+    `increment` bir `modulus` by N ve tamsayı ile `target` y tarafından kodlanmış olarak, işlem şu dönüşümü gerçekleştirir: \begin{hizalaması} \ket{y} \mapsto \ket{y + 1 \operatorname{mod} N} \end{hizalaması} tamsayılar küçük endian biçiminde kodlanır.
+- uid: microsoft.quantum.arithmetic.incrementphasebyinteger
+  summary: Bir işaretsiz hisse kaydetmeyi, bir klasik tamsayı tarafından, aşama döndürmeler kullanılarak arttırır.
+- uid: microsoft.quantum.arithmetic.incrementphasebymodularinteger
+  summary: >-
+    Bir tamsayı sabiti ile bir qubit yazmacının modüler artışını gerçekleştirir.
+
+
+    A tarafından `increment` bir `modulus` by N ve tamsayı kodlamalı `target` y tarafından, işlem şu dönüşümü gerçekleştirir: | y ⟩ ↦ | y + a (mod N) ⟩ tamsayılar, QFT 'de küçük endian biçiminde kodlanır
+- uid: microsoft.quantum.arithmetic.inplacemajority
+  summary: >-
+    Bu, çoğunluk fonksiyonunu 3 qubit üzerinde yerinde hesaplar.
+
+
+    Çıkış qubit $z $ ve giriş qubitleri $x $ ve $y $ olarak belirtirseniz, işlem şu dönüşümü gerçekleştirir: $ \ket{xyz} \sağtarrow \ket{x \oplus z} \ket{y \ OPLUS z} \ket{\operatorname{MAJ} (x, y, z)} $.
+- uid: microsoft.quantum.arithmetic.invert2ssi
+  summary: Belirli bir tamsayı modül 2 ' nin tamamlayıcısını tersine çevirir.
+- uid: microsoft.quantum.arithmetic.maj
+  summary: Bu, yerinde çoğunluk işlemini 3 qubit 'e uygular.
+- uid: microsoft.quantum.arithmetic.measurefxp
+  summary: Sabit noktalı bir sayı ölçüsünde, değerini Double olarak döndürür ve tüm kaydı sıfıra sıfırlar.
+- uid: microsoft.quantum.arithmetic.measureinteger
+  summary: Bir hisse kayıt içeriğini ölçer ve bir tamsayıya dönüştürür. Ölçüm, standart hesaplama temeline göre, yani `PauliZ`eigenliğine göre yapılır.
+- uid: microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
+  summary: >-
+    Bir qubit kaydındaki modüler çarpma ve tamsayı sabitlerine göre ekleme gerçekleştirir.
+
+
+    Verilen mod $N $, sabit çarpanı $a $ ve summand $y $ için $ $ \begin{hizalaması} \ket{x} \ket{b} \mapsto \ket{x} \ket{b + a \cdot x \operatorname{mod} N} \end{hizalaması} $ $ eşlemesini uygular.
+- uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
+  summary: Modülaraddproductle ile aynıdır, ancak summand 'in tamsayıları QFT temelinde kodluyor olduğunu varsayar
+- uid: microsoft.quantum.arithmetic.multiplybymodularinteger
+  summary: >-
+    Bir qubit kaydındaki tamsayı sabiti ile modüler çarpma gerçekleştirir.
+
+
+    Bu işlem, N ve constMultiplier tarafından belirtilen bir şekilde, bu işlemi hesaplama temelinde belirten bir Unitary uygular: | y ⟩ ↦ | a ⋅ y (mod N) ⟩, 0 ile N-1 arasında tüm y için
+- uid: microsoft.quantum.arithmetic.multiplyfxp
+  summary: Hisse kasalarındaki iki sabit noktalı sayıyı çarpar.
+- uid: microsoft.quantum.arithmetic.multiplyi
+  summary: Integer `xs` tamsayı `ys` ile çarpın ve sonucu başlangıçta sıfır olması gereken `result`olarak depolayın.
+- uid: microsoft.quantum.arithmetic.multiplysi
+  summary: İmzalanan tamsayı `xs` `ys` imzalanmış tamsayı ile çarpın ve sonucu başlangıçta sıfır olması gereken `result`olarak depolayın.
+- uid: microsoft.quantum.arithmetic.preparefxp
+  summary: Bir hisse ansız sabit noktalı sayıyı klasik bir sabit olarak başlatın.
+- uid: microsoft.quantum.arithmetic.ripplecarryaddercdkm
+  summary: >-
+    Tersine çevrilebilir, yerinde Ripple-iki tamsayının eklenmesini taşır.
+
+    Littkaendian Yazmaçları `xs` ve `ys`ve bir qubit ile kodlanmış iki $n $-bit tam sayı verildiğinde, işlem, sonucun $n $ en az önemli bitlerinin `ys` tutulmakta olduğu iki tamsayının toplamını hesaplar ve yerine getirme biti XORed qubit `carry`.
+- uid: microsoft.quantum.arithmetic.ripplecarryadderd
+  summary: >-
+    Tersine çevrilebilir, yerinde Ripple-iki tamsayının eklenmesini taşır.
+
+    Littkaendian Yazmaçları `xs` ve `ys`ve bir qubit ile kodlanmış iki $n $-bit tam sayı verildiğinde, işlem, sonucun $n $ en az önemli bitlerinin `ys` tutulmakta olduğu iki tamsayının toplamını hesaplar ve yerine getirme biti XORed qubit `carry`.
+- uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
+  summary: Tersine çevrilebilir, yerinde Ripple-çıkış yapmadan iki tamsayının eklenmesini yerine getirme. Littkaendian Yazmaçları `xs` ve `ys`ile kodlanmış iki $n $ bit tamsayı verildiğinde, işlem iki tamsayı olan $2 ^ n $ sayısının toplamını hesaplar; burada $n $, girişlerin `xs` ve `ys`bit boyutudur. Bu, yerine getirme bitini hesaplamaz.
+- uid: microsoft.quantum.arithmetic.ripplecarryadderttk
+  summary: >-
+    Tersine çevrilebilir, yerinde Ripple-iki tamsayının eklenmesini taşır.
+
+    Littkaendian Yazmaçları `xs` ve `ys`ve bir qubit ile kodlanmış iki $n $-bit tam sayı verildiğinde, işlem, sonucun $n $ en az önemli bitlerinin `ys` tutulmakta olduğu iki tamsayının toplamını hesaplar ve yerine getirme biti XORed qubit `carry`.
+- uid: microsoft.quantum.arithmetic.squarefxp
+  summary: Sabit noktalı bir sayı için kareler.
+- uid: microsoft.quantum.arithmetic.squarei
+  summary: Tamsayı `xs` karesini, başlangıçta sıfır olması gereken `result`olarak hesaplar.
+- uid: microsoft.quantum.arithmetic.squaresi
+  summary: Kare işaretli tamsayı `xs` ve sonucu, başlangıçta sıfır olması gereken `result`deposın.
+- uid: microsoft.quantum.arithmetic.sum
+  summary: Ters çevrilebilir bir toplam kapısı uygular. Qubit `carryIn` ve `summand1` ve `summand2`ile kodlanmış iki summand bit olarak kodlanmış bir taşıma biti verildiğinde, qubit `summand1` bit düzeyinde xor `carryIn`, `summand2` ve `summand2`hesaplar.
+newtypes:
+- uid: microsoft.quantum.arithmetic.bigendian
+  summary: İşaretsiz bir tamsayıyı büyük endian düzeninde kodlayan kayıt. Index `0` ile qubit, işaretsiz tamsayının en yüksek bitini kodluyor.
+- uid: microsoft.quantum.arithmetic.fixedpoint
+  summary: Sabit noktalı bir sayıyı kodlayan bir qubits kaydını temsil eder. İkili noktanın solundaki qubit sayısına eşit bir tamsayı, yani 1 ' den büyük veya buna eşit ve bir hisse kayıt.
+- uid: microsoft.quantum.arithmetic.littleendian
+  summary: İşaretsiz bir tamsayıyı küçük endian düzeninde kodlayan kayıt. Index `0` ile qubit, işaretsiz bir tamsayının en düşük bitini kodluyor.
+- uid: microsoft.quantum.arithmetic.phaselittleendian
+  summary: >-
+    QFT 'de küçük endian işaretsiz tamsayılar.
+
+
+    Örneğin, $ \ket{x} $, hesaplama tabanında $x $ tamsayının küçük endian kodusıdır $ \operatorname{QFTLE} \ket{x} $, QFT 'de $x $ kodlaması örneğidir.
+- uid: microsoft.quantum.arithmetic.signedlittleendian
+  summary: Little endian depolanan bir işaretli tamsayı türü (bkz. Litttaendian).
+ms.openlocfilehash: 95a399e09ad5c1617c34a68302f9212a8ec4e0ad
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065155"

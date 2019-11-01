@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.ripplecarryadderd
+name: RippleCarryAdderD
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Tersine çevrilebilir, yerinde Ripple-iki tamsayının eklenmesini taşır.
+
+  Littkaendian Yazmaçları `xs` ve `ys`ve bir qubit ile kodlanmış iki $n $-bit tam sayı verildiğinde, işlem, sonucun $n $ en az önemli bitlerinin `ys` tutulmakta olduğu iki tamsayının toplamını hesaplar ve yerine getirme biti XORed qubit `carry`.
+remarks: Belirtilen denetlenen işlem, her işleme bir denetim ekleyen varsayılan uygulamada geliştirme yapmak için simetri ve karşılıklı işlem iptali kullanımını sağlar.
+syntax: 'operation RippleCarryAdderD (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
+references: >-
+  - Thomas G. Draper: "hisse bir bilgisayara ek ekleme", 2000.
+    https://arxiv.org/abs/quant-ph/0008033
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit)'
+  types:
+  - name: xs
+    summary: Litttaendian qubit yazmaç ilk tamsayı summand ' i çağırır.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: ys
+    summary: Litttaendian qubit yazmaç ikinci tamsayı summve, toplamın $n $ en az önemli bitini tutacak şekilde değiştirildi.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: carry
+    summary: Qubit ' i taşır, toplamın en önemli biti ile XORed.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: ef8f5ec89d0a1bf32e401385f21a6dcf1ec24db7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214580"

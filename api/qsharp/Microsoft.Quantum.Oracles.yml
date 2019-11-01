@@ -1,0 +1,80 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.oracles
+name: Microsoft.Quantum.Oracles
+summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanları, çeşitli Oracles türlerini, aşama tahmini ve genirliği gibi hisse kullanım amaçlarına göre tasarlanan çeşitli türlerde süslemek için Kullanıcı tanımlı türler sağlar."
+functions:
+- uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
+  summary: Bir Oracle türündeki `StateOracle` `DeterministicStateOracle`dönüştürür.
+- uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
+  summary: Oracles `DeterministicStateOracle` ve `ObliviousOracle`birleştirir.
+- uid: microsoft.quantum.oracles.oracletodiscrete
+  summary: "\"Siyah kutu\" Oracle 'ı temsil eden bir işlem verildiğinde, \"siyah kutu\" Oracle 'ın birden çok kez tekrarlandığı bir bağımsız Oracle döndürür."
+- uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
+  summary: >-
+    Bir Oracle 'dan belirli bir durum hakkında yansıma oluşturur.
+
+
+    <xref:microsoft.quantum.oracles.deterministicstateoracle>türünde Oracle $O $ verildiğinde, bu işlevin sonucu $ \ket{\psı} $ durumunun $O \ket{0} = \ket{\psı} $ durumunda olan bir yansıdır.
+- uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
+  summary: Bir Oracle türündeki `DeterministicStateOracle` `StateOracle`dönüştürür.
+newtypes:
+- uid: microsoft.quantum.oracles.continuousoracle
+  summary: >-
+    Sürekli bir Oracle 'ı temsil eder.
+
+
+    Bu, $U $ ' in sabit bir işlem olduğu ve $ \delta t $ ' un negatif olmayan bir gerçek sayı olduğu her zaman için $U (\delta t): \ket{\psı (t)} \mapsto \ket{\psı (t + \delta t)} $ $t uygulayan bir Oracle ' dır.
+- uid: microsoft.quantum.oracles.deterministicstateoracle
+  summary: >-
+    Belirleyici bir durum hazırlığı için Oracle 'ı temsil eder.
+
+
+    Oracle $O $ ' e giriş:
+
+
+    - İstenen hisse durumu $ \ket{\psı}\_s $ ' i depolayacak kayıt.
+- uid: microsoft.quantum.oracles.discreteoracle
+  summary: >-
+    Ayrı bir Oracle 'ı temsil eder.
+
+
+    Bu, bir sabit işlem $U $ ve negatif olmayan bir tamsayı $m $ için $U ^ d $ uygulayan bir Oracle ' dır.
+- uid: microsoft.quantum.oracles.obliviousoracle
+  summary: >-
+    Bir Oracle 'ın yükümlülüğü en çok genliğini temsil eder.
+
+
+    Oracle $O $ girdileri şunlardır:
+
+
+    - Anyükleyen La, $O $ 'ın üzerinde davranması $a $.
+
+    - İstenen Unitary $U $ ' in uygulandığı $s $,\_$ \ket{t} durumunda $a $.
+- uid: microsoft.quantum.oracles.reflectionoracle
+  summary: >-
+    Bir yansımayı bir Oracle temsil eder.
+
+
+    Bir yansıma Oracle, $O $, girdileri vardır:
+
+
+    - Yansıtılan alt alanın döndürüleceği $ \phi $ aşaması.
+
+    - Verilen yansımanın gerçekleştirileceği qubit kaydı.
+- uid: microsoft.quantum.oracles.stateoracle
+  summary: >-
+    Durum hazırlığı için bir Oracle temsil eder.
+
+
+    Oracle $O $ girdileri şunlardır:
+
+
+    - Qubit $f $ bayrağını dizinleyen bir tamsayı.
+
+    - System Register $s $, istenen hisse durumu $ \ket{\psı}\_s $ ' i depolayacak.
+ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216110"

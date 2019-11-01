@@ -1,0 +1,74 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifca
+name: ApplyIfCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Klasik bir bit üzerinde bir Unitary işlemi uygular.
+
+
+  Bir işlem `op` ve bir bit değer `bit`verildiğinde, `bit` `true`ise `target` `op` uygular. `false`, `target`hiçbir şey olmaz.
+
+  Sonek `CA` uygulanacak işlemin Unitary (denetlenebilir ve adjointable) olduğunu gösterir.
+examples: >-
+  Aşağıda, bir qubits kaydını, bir dizi `Bool` değeri olarak verilen bir klasik bit dizesiyle temsil eden bir hesaplama tabanlı duruma hazırlar:
+
+
+  ```Q#
+
+  let bitstring = [true, false, true];
+
+  using (register = Qubit(3)) {
+      ApplyToEach(ApplyIf(X, _, _), Zip(bitstring, register));
+      // register should now be in the state |101⟩.
+      ...
+  }
+
+  ```
+syntax: "operation ApplyIfCA (op : ('T => Unit is Ctl + Adj), bit : Bool, target : 'T) : Unit"
+input:
+  content: "(op : ('T => Unit is Ctl + Adj), bit : Bool, target : 'T)"
+  types:
+  - name: op
+    summary: Koşullu olarak uygulanacak bir işlem.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: bit
+    summary: Op 'ın uygulanıp uygulanmadığını denetleyen bir Boole değeri.
+    isPrimitive: true
+    uid: Bool
+  - name: target
+    summary: İşlemin uygulandığı giriş.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Koşullu olarak uygulanacak işlemin giriş türü.
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyifc
+- microsoft.quantum.canon.applyifa
+- microsoft.quantum.canon.applyifca
+ms.openlocfilehash: c78136688111a71e6a9a58972c9b9bb71603e0cf
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213764"

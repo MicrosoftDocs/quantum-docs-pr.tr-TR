@@ -1,0 +1,944 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.canon
+name: Microsoft. hisse. Canon
+functions:
+- uid: microsoft.quantum.canon.asqubitarray
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakılan bu işlev kaldırılmıştır.
+- uid: microsoft.quantum.canon.assertalmostequal
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Diagnostics.NearEqualityFactD" kullanın.
+- uid: microsoft.quantum.canon.assertalmostequaltol
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact" kullanın.
+- uid: microsoft.quantum.canon.assertboolarrayequal
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Diagnostics.AllEqualityFactB" kullanın.
+- uid: microsoft.quantum.canon.assertboolequal
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Diagnostics.EqualityFactB" kullanın.
+- uid: microsoft.quantum.canon.assertintequal
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Diagnostics.EqualityFactI" kullanın.
+- uid: microsoft.quantum.canon.assertresultequal
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Diagnostics.EqualityFactR" kullanın.
+- uid: microsoft.quantum.canon.bigendiantolittleendian
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian"kullanın.
+- uid: microsoft.quantum.canon.bind
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.bound"kullanın.
+- uid: microsoft.quantum.canon.binda
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.bounda"kullanın.
+- uid: microsoft.quantum.canon.bindc
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.boundc"kullanın.
+- uid: microsoft.quantum.canon.bindca
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.boundca"kullanın.
+- uid: microsoft.quantum.canon.bitsize
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.bitsizei"kullanın.
+- uid: microsoft.quantum.canon.boolarrfrompositiveint
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.intasboolarray"kullanın.
+- uid: microsoft.quantum.canon.boolarrfromresultarr
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.resultarrayasboolarray"kullanın.
+- uid: microsoft.quantum.canon.boolfromresult
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.resultasbool"kullanın.
+- uid: microsoft.quantum.canon.bound
+  summary: Tek bir girişte çalışan bir işlem dizisi verildiğinde, belirli bir işlemi sırayla gerçekleştiren yeni bir işlem oluşturur.
+- uid: microsoft.quantum.canon.bounda
+  summary: >-
+    Tek bir girişte çalışan bir işlem dizisi verildiğinde, belirli bir işlemi sırayla gerçekleştiren yeni bir işlem oluşturur.
+
+    Değiştirici `A` dizideki tüm işlemlerin adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.boundc
+  summary: >-
+    Tek bir girişte çalışan bir işlem dizisi verildiğinde, belirli bir işlemi sırayla gerçekleştiren yeni bir işlem oluşturur.
+
+    Değiştirici `C` dizideki tüm işlemlerin denetlenebilir olduğunu gösterir.
+- uid: microsoft.quantum.canon.boundca
+  summary: >-
+    Tek bir girişte çalışan bir işlem dizisi verildiğinde, belirli bir işlemi sırayla gerçekleştiren yeni bir işlem oluşturur.
+
+    Değiştirici `CA` dizideki tüm işlemlerin adjointable ve denetlenebilir olduğunu gösterir.
+- uid: microsoft.quantum.canon.ccontrolled
+  summary: Bir işlem işlemi verildiğinde, bir klasik denetim biti doğru ise op 'yi uygulayan yeni bir işlem döndürür. `false`, hiçbir şey olmaz.
+- uid: microsoft.quantum.canon.ccontrolleda
+  summary: >-
+    Bir işlem işlemi verildiğinde, bir klasik denetim biti doğru ise op 'yi uygulayan yeni bir işlem döndürür. `false`, hiçbir şey olmaz.
+
+    Değiştirici `A`, işlemin adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.ccontrolledc
+  summary: >-
+    Bir işlem işlemi verildiğinde, bir klasik denetim biti doğru ise op 'yi uygulayan yeni bir işlem döndürür. `false`, hiçbir şey olmaz.
+
+    Değiştirici `C`, işlemin denetlenebilir olduğunu gösterir.
+- uid: microsoft.quantum.canon.ccontrolledca
+  summary: >-
+    Bir işlem işlemi verildiğinde, bir klasik denetim biti doğru ise op 'yi uygulayan yeni bir işlem döndürür. `false`, hiçbir şey olmaz.
+
+    Değiştirici `CA`, işlemin denetlenebilir ve adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.compose
+  summary: >-
+    İki işlev birleşimini üretir.
+
+
+    Diğer bir deyişle, $ ve $g $ $f iki işlev verildiğinde, $f \circ g $ temsil eden yeni bir işlev döndürür.
+- uid: microsoft.quantum.canon.conjugatedby
+  summary: Verilen dış ve iç işlemler, dış işlemin iç işlemini sağlayan yeni bir işlem döndürür.
+- uid: microsoft.quantum.canon.conjugatedbya
+  summary: Verilen dış ve iç işlemler, dış işlemin iç işlemini sağlayan yeni bir işlem döndürür.
+- uid: microsoft.quantum.canon.conjugatedbyc
+  summary: Verilen dış ve iç işlemler, dış işlemin iç işlemini sağlayan yeni bir işlem döndürür.
+- uid: microsoft.quantum.canon.conjugatedbyca
+  summary: Verilen dış ve iç işlemler, dış işlemin iç işlemini sağlayan yeni bir işlem döndürür.
+- uid: microsoft.quantum.canon.continuedfractionconvergent
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.continuedfractionconvergenti"kullanın.
+- uid: microsoft.quantum.canon.controlledonbitstring
+  summary: Denetim yazmacı durumu belirtilen bir bit maskesine karşılık geliyorsa, hedef kayıt üzerinde bir Oracle uygulayan Unitary işlecini döndürür.
+- uid: microsoft.quantum.canon.controlledonint
+  summary: Denetim yazmacı durumu belirtilen pozitif tamsayıya karşılık geliyorsa, hedef kayıt üzerinde Oracle uygulayan bir Unitary işleci döndürür.
+- uid: microsoft.quantum.canon.curriedop
+  summary: >-
+    İki giriş üzerinde bir işlemin curried sürümünü döndürür.
+
+
+    Diğer bir deyişle, iki girişli bir işlem söz konusu olduğunda, bu işlev bir girişin bir işlemini döndüren tek bir girdinin işlemini döndürmek için Curry 'nin isomorphism $f (x, y) \equf (x) (y) $ ' u uygular.
+- uid: microsoft.quantum.canon.curryop
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.curriedop"kullanın.
+- uid: microsoft.quantum.canon.decomposeintotimestepsca
+  summary: Belirli bir işlem için Trour – Suzuki tümleştirici uygulayan bir işlem döndürür.
+- uid: microsoft.quantum.canon.delayed
+  summary: Verilen bağımsız değişkenle belirli bir işlem uygulayan bir işlem döndürür.
+- uid: microsoft.quantum.canon.delayeda
+  summary: Verilen bağımsız değişkenle belirli bir işlem uygulayan bir işlem döndürür.
+- uid: microsoft.quantum.canon.delayedc
+  summary: Verilen bağımsız değişkenle belirli bir işlem uygulayan bir işlem döndürür.
+- uid: microsoft.quantum.canon.delayedca
+  summary: Verilen bağımsız değişkenle belirli bir işlem uygulayan bir işlem döndürür.
+- uid: microsoft.quantum.canon.embedpauli
+  summary: Tek bir-qubit Pauli işleci ve bir qubit dizini verildiğinde, bu dizinde verilen tek qubit işleciyle bir multi-qubit Pauli işleci, diğer tüm dizinde `PauliI` döndürür.
+- uid: microsoft.quantum.canon.expmod
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.expmodi"kullanın.
+- uid: microsoft.quantum.canon.extendedgcd
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.extendedgreatestcommondivisori"kullanın.
+- uid: microsoft.quantum.canon.filter
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Arrays.Filtered" kullanın.
+- uid: microsoft.quantum.canon.forall
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Arrays.All" kullanın.
+- uid: microsoft.quantum.canon.forany
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Arrays.Any" kullanın.
+- uid: microsoft.quantum.canon.fst
+  summary: Bir çift verildiğinde, ilk öğesini döndürür.
+- uid: microsoft.quantum.canon.gcd
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.greatestcommondivisori"kullanın.
+- uid: microsoft.quantum.canon.ignore
+  summary: Bir işlemin veya işlevin çıkışını yoksayar.
+- uid: microsoft.quantum.canon.intabs
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakılan bu işlev kaldırılmıştır.
+- uid: microsoft.quantum.canon.intarrayfromrange
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.rangeasintarray"kullanın.
+- uid: microsoft.quantum.canon.intmax
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakılan bu işlev kaldırılmıştır.
+- uid: microsoft.quantum.canon.inversemod
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.inversemodi"kullanın.
+- uid: microsoft.quantum.canon.iscoprime
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.greatestcommondivisori"kullanın.
+- uid: microsoft.quantum.canon.isresultone
+  summary: Belirli bir sonuç değerinin `One`eşit olup olmadığını sınar.
+- uid: microsoft.quantum.canon.isresultzero
+  summary: Belirli bir sonuç değerinin `Zero`eşit olup olmadığını sınar.
+- uid: microsoft.quantum.canon.littleendiantobigendian
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian"kullanın.
+- uid: microsoft.quantum.canon.map
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Arrays.Mapped" kullanın.
+- uid: microsoft.quantum.canon.mapindex
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Arrays.MappedByIndex" kullanın.
+- uid: microsoft.quantum.canon.modulus
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.modulusi"kullanın.
+- uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
+  summary: >-
+    N-qubit numarası State $ \ket{j} $ tarafından denetleniyorsa, bir Unitary $V _j $ uygulayan, çarpma özellikli bir Unitary işlemi döndürür $U $.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.multiplexerfromgenerator
+  summary: >-
+    N-qubit numarası State $ \ket{j} $ tarafından denetleniyorsa, bir Unitary $V _j $ uygulayan, çarpma özellikli bir Unitary işlemi döndürür $U $.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.nearequalityfact
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Diagnostics.NearEqualityFactD" kullanın.
+- uid: microsoft.quantum.canon.operationpow
+  summary: >-
+    Bir işlemi bir güce yükseltir.
+
+
+    Diğer bir deyişle, $U $ geçidini temsil eden bir işlem verildiğinde, bir Power $m $ için ^ d $ $U yeni bir işlem döndürür.
+- uid: microsoft.quantum.canon.operationpowa
+  summary: >-
+    Bir işlemi bir güce yükseltir.
+
+    Değiştirici `A`, işlemin adjointable olduğunu gösterir.
+
+
+    Diğer bir deyişle, $U $ geçidini temsil eden bir işlem verildiğinde, bir Power $m $ için ^ d $ $U yeni bir işlem döndürür.
+- uid: microsoft.quantum.canon.operationpowc
+  summary: >-
+    Bir işlemi bir güce yükseltir.
+
+    Değiştirici `C`, işlemin denetlenebilir olduğunu gösterir.
+
+
+    Diğer bir deyişle, $U $ geçidini temsil eden bir işlem verildiğinde, bir Power $m $ için ^ d $ $U yeni bir işlem döndürür.
+- uid: microsoft.quantum.canon.operationpowca
+  summary: >-
+    Bir işlemi bir güce yükseltir.
+
+    Değiştirici `A`, işlemin denetlenebilir ve adjointable olduğunu gösterir.
+
+
+    Diğer bir deyişle, $U $ geçidini temsil eden bir işlem verildiğinde, bir Power $m $ için ^ d $ $U yeni bir işlem döndürür.
+- uid: microsoft.quantum.canon.pad
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Arrays.Padded" kullanın.
+- uid: microsoft.quantum.canon.paulifrombitstring
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.boolarrayaspauli"kullanın.
+- uid: microsoft.quantum.canon.pnormalize
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.pnormalized"kullanın.
+- uid: microsoft.quantum.canon.positiveintfromboolarr
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.boolarrayasint"kullanın.
+- uid: microsoft.quantum.canon.positiveintfromresultarr
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.resultarrayasint"kullanın.
+- uid: microsoft.quantum.canon.restrictedtosubregister
+  summary: Bir işlemi, bir kaydın dizin dizini (örneğin, alt kayıt) ile kısıtlar.
+- uid: microsoft.quantum.canon.restrictedtosubregistera
+  summary: >-
+    Bir işlemi, bir kaydın dizin dizini (örneğin, alt kayıt) ile kısıtlar.
+
+    Değiştirici `A`, işlemin adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.restrictedtosubregisterc
+  summary: >-
+    Bir işlemi, bir kaydın dizin dizini (örneğin, alt kayıt) ile kısıtlar.
+
+    Değiştirici `C`, işlemin denetlenebilir olduğunu gösterir.
+- uid: microsoft.quantum.canon.restrictedtosubregisterca
+  summary: >-
+    Bir işlemi, bir kaydın dizin dizini (örneğin, alt kayıt) ile kısıtlar.
+
+    Değiştirici `CA`, işlemin denetlenebilir ve adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.restricttosubregister
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.restrictedtosubregister"kullanın.
+- uid: microsoft.quantum.canon.restricttosubregistera
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.restrictedtosubregistera"kullanın.
+- uid: microsoft.quantum.canon.restricttosubregisterc
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.restrictedtosubregisterc"kullanın.
+- uid: microsoft.quantum.canon.restricttosubregisterca
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.restrictedtosubregisterca"kullanın.
+- uid: microsoft.quantum.canon.resultarrfromboolarr
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.resultarrayasboolarray"kullanın.
+- uid: microsoft.quantum.canon.resultasint
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.resultarrayasint"kullanın.
+- uid: microsoft.quantum.canon.resultfrombool
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.boolasresult"kullanın.
+- uid: microsoft.quantum.canon.reverse
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Arrays.Reversed" kullanın.
+- uid: microsoft.quantum.canon.snd
+  summary: Bir çift verildiğinde, ikinci öğesini döndürür.
+- uid: microsoft.quantum.canon.splitarray
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Arrays.Partitioned" kullanın.
+- uid: microsoft.quantum.canon.stackcapacity
+  summary: Bir <xref:microsoft.quantum.canon.resultstack>kapasitesini alır.
+- uid: microsoft.quantum.canon.stacklength
+  summary: <xref:microsoft.quantum.canon.resultstack>depolanan öğelerin sayısını alır.
+- uid: microsoft.quantum.canon.stacknew
+  summary: Verilen kapasiteye sahip yeni bir boş <xref:microsoft.quantum.canon.resultstack> oluşturur.
+- uid: microsoft.quantum.canon.stackpeek
+  summary: <xref:microsoft.quantum.canon.resultstack>en üstteki öğeyi alır.
+- uid: microsoft.quantum.canon.stackpop
+  summary: <xref:microsoft.quantum.canon.resultstack>en üstteki öğeyi kaldırır.
+- uid: microsoft.quantum.canon.stackpush
+  summary: Yeni bir öğeyi <xref:microsoft.quantum.canon.resultstack>üzerine gönderir.
+- uid: microsoft.quantum.canon.tooperation
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.functionasoperation"kullanın.
+- uid: microsoft.quantum.canon.transformedoperation
+  summary: Bir işlev ve bir işlem verildiğinde, girişi verilen işlev tarafından dönüştürülen yeni bir işlem döndürür.
+- uid: microsoft.quantum.canon.transformedoperationa
+  summary: Bir işlev ve bir işlem verildiğinde, girişi verilen işlev tarafından dönüştürülen yeni bir işlem döndürür.
+- uid: microsoft.quantum.canon.transformedoperationc
+  summary: Bir işlev ve bir işlem verildiğinde, girişi verilen işlev tarafından dönüştürülen yeni bir işlem döndürür.
+- uid: microsoft.quantum.canon.transformedoperationca
+  summary: Bir işlev ve bir işlem verildiğinde, girişi verilen işlev tarafından dönüştürülen yeni bir işlem döndürür.
+- uid: microsoft.quantum.canon.uncurriedop
+  summary: İşlemleri döndüren bir işlev verildiğinde, her iki girişi de tanımlama grubu olarak alan yeni bir işlem döndürür.
+- uid: microsoft.quantum.canon.uncurriedopa
+  summary: >-
+    İşlemleri döndüren bir işlev verildiğinde, her iki girişi de tanımlama grubu olarak alan yeni bir işlem döndürür.
+
+    Değiştirici `A`, işlemlerin adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.uncurriedopc
+  summary: >-
+    İşlemleri döndüren bir işlev verildiğinde, her iki girişi de tanımlama grubu olarak alan yeni bir işlem döndürür.
+
+    Değiştirici `C`, işlemlerin denetlenebilir olduğunu gösterir.
+- uid: microsoft.quantum.canon.uncurriedopca
+  summary: >-
+    İşlemleri döndüren bir işlev verildiğinde, her iki girişi de tanımlama grubu olarak alan yeni bir işlem döndürür.
+
+    Değiştirici `CA`, işlemlerin denetlenebilir ve adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.uncurryop
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.uncurriedop"kullanın.
+- uid: microsoft.quantum.canon.uncurryopa
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.uncurriedopa"kullanın.
+- uid: microsoft.quantum.canon.uncurryopc
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.uncurriedopc"kullanın.
+- uid: microsoft.quantum.canon.uncurryopca
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.uncurriedopca"kullanın.
+- uid: microsoft.quantum.canon.weightonepaulis
+  summary: Verilen sayıda qubit üzerinde tüm ağırlık-1 Pauli işleçleri dizisini döndürür.
+- uid: microsoft.quantum.canon.xor
+  summary: Bu, iki bitin dışlamalı veya nasıl olduğunu hesaplar.
+operations:
+- uid: microsoft.quantum.canon.adiabaticstateenergyunitary
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.simuilation.pnormalized"kullanın.
+- uid: microsoft.quantum.canon.andladder
+  summary: >-
+    Hedef qubit üzerinde denetimli bir ' ve greder ' gerçekleştirir.
+
+
+    Bu, hesaplama tabanlı vektörde aşağıdaki eşleme tarafından verilen bir Unitary uygular: $ $ \begin{hizalaması} \ket{x\_1, \noktalar, x\_n} \ket{y\_1, \noktalar, y\_{n-1}} \mapsto \ket{x\_1 , \noktalar, x\_n} \ket{y\_1 \ OPLUS (x\_1 \land x\_2), \noktalar, y\_{n-1} \oplus (x\_1 \land x\_2 \land \ cnoktalar \land x\_{n-1}} , \end{hizalaması} $ $ burada $ \ket{x\_1, \noktalar, x\_n} $ `controls`hesaplama tabanlı durumlara ve $ \ket{y\_1, \noktalar, y\_{n-1}} $ ' ın hesaplama tabanlı durumlarına başvurur.
+- uid: microsoft.quantum.canon.applydiagonalunitary
+  summary: >-
+    Bir qubits kaydının sayısal tabanlı durumlarına bir karmaşık aşamalar dizisi uygular.
+
+
+    Yani, bu, $n $-qubit numarası durum $ \ket{j} $ üzerinde ^ {i \theta_j} $ $e karmaşık bir aşama uygulayan köşegen Unitary işlemini uygular $U $.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i\theta_j} \ Tus{j} \ köşeli {j} $.
+- uid: microsoft.quantum.canon.applyfermionicswap
+  summary: Fermıonic SWAP 'ı uygular.
+- uid: microsoft.quantum.canon.applyif
+  summary: Klasik bir bit üzerine koşullu bir işlem uygular.
+- uid: microsoft.quantum.canon.applyifa
+  summary: Klasik bir bit üzerine koşullu bir adjointable işlemi uygular.
+- uid: microsoft.quantum.canon.applyifc
+  summary: Klasik bir bit üzerinde bir denetlenebilir işlem uygular.
+- uid: microsoft.quantum.canon.applyifca
+  summary: Klasik bir bit üzerinde bir Unitary işlemi uygular.
+- uid: microsoft.quantum.canon.applyifelseb
+  summary: Klasik bitin değerine bağlı olarak iki işlemden birini uygular.
+- uid: microsoft.quantum.canon.applyifelseba
+  summary: Klasik bir bit değerine bağlı olarak iki adjointable işlemden birini uygular.
+- uid: microsoft.quantum.canon.applyifelsebc
+  summary: Klasik bir bitin değerine bağlı olarak, iki denetlenebilir işlemden birini uygular.
+- uid: microsoft.quantum.canon.applyifelsebca
+  summary: Klasik bitin değerine bağlı olarak iki Unitary işlemden birini uygular.
+- uid: microsoft.quantum.canon.applyifelser
+  summary: Klasik sonucun değerine bağlı olarak iki işlemden birini uygular.
+- uid: microsoft.quantum.canon.applyifelsera
+  summary: Klasik sonucun değerine bağlı olarak iki adjointable işlemlerinden birini uygular.
+- uid: microsoft.quantum.canon.applyifelserc
+  summary: Klasik sonucun değerine bağlı olarak, iki denetlenebilir işlemden birini uygular.
+- uid: microsoft.quantum.canon.applyifelserca
+  summary: Klasik sonucun değerine bağlı olarak iki Unitary işlemden birini uygular.
+- uid: microsoft.quantum.canon.applyifone
+  summary: Klasik sonuç değeri bir olan bir işlem uygular.
+- uid: microsoft.quantum.canon.applyifonea
+  summary: Bir klasik sonuç değeri olan bir adjointable işlemi uygular.
+- uid: microsoft.quantum.canon.applyifonec
+  summary: Klasik sonuç değeri bir olan denetlenebilir bir işlem uygular.
+- uid: microsoft.quantum.canon.applyifoneca
+  summary: Klasik sonuç değeri bir olan bir Unitary işlemi uygular.
+- uid: microsoft.quantum.canon.applyifzero
+  summary: Klasik sonuç değeri sıfır olan bir işlem uygular.
+- uid: microsoft.quantum.canon.applyifzeroa
+  summary: Klasik sonuç değeri sıfır olan bir adjointable işlemi uygular.
+- uid: microsoft.quantum.canon.applyifzeroc
+  summary: Klasik sonuç değeri sıfır olan denetlenebilir bir işlem uygular.
+- uid: microsoft.quantum.canon.applyifzeroca
+  summary: Klasik sonuç değeri sıfır olan bir Unitary işlemi uygular.
+- uid: microsoft.quantum.canon.applymulticontrolledc
+  summary: >-
+    Listedir denetimli bir işlemin çarpma denetimli bir sürümünü uygular.
+
+    Değiştirici `C`, tek qubit işleminin denetlenebilir olduğunu gösterir.
+- uid: microsoft.quantum.canon.applymulticontrolledca
+  summary: >-
+    Listedir denetimli bir işlemin çarpma denetimli bir sürümünü uygular.
+
+    Değiştirici `CA`, tek qubit işleminin denetlenebilir ve adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.applypauli
+  summary: Multi-qubit Pauli operatörü verildiğinde, kayda karşılık gelen işlemi uygular.
+- uid: microsoft.quantum.canon.applypaulifrombitstring
+  summary: Bir Boolean dizisinin karşılık gelen biti verilen bir girişle eşleşiyorsa, dizideki her bir qubit üzerinde Pauli işleci uygular.
+- uid: microsoft.quantum.canon.applyquantumfouriertransform
+  summary: Küçük endian gösteriminde bir tamsayı içeren bir hisse kayıt üzerinde hisse Fourier dönüşümü gerçekleştirir.
+- uid: microsoft.quantum.canon.applyquantumfouriertransformbe
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakılan bu işlem kaldırılmıştır.
+- uid: microsoft.quantum.canon.applyquantumfouriertransformle
+  summary: ''
+- uid: microsoft.quantum.canon.applyreversedopbigendian
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE"kullanın.
+- uid: microsoft.quantum.canon.applyreversedopbigendiana
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA"kullanın.
+- uid: microsoft.quantum.canon.applyreversedopbigendianc
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC"kullanın.
+- uid: microsoft.quantum.canon.applyreversedopbigendianca
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC"kullanın.
+- uid: microsoft.quantum.canon.applyreversedoplittleendian
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE"kullanın.
+- uid: microsoft.quantum.canon.applyreversedoplittleendiana
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA"kullanın.
+- uid: microsoft.quantum.canon.applyreversedoplittleendianc
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC"kullanın.
+- uid: microsoft.quantum.canon.applyreversedoplittleendianca
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC"kullanın.
+- uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakılan bu işlem kaldırılmıştır.
+- uid: microsoft.quantum.canon.applyripplecarrycomparatorle
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry"kullanın.
+- uid: microsoft.quantum.canon.applytoeach
+  summary: Bir kayıttaki her öğeye bir tek qubit işlemi uygular.
+- uid: microsoft.quantum.canon.applytoeacha
+  summary: >-
+    Bir kayıttaki her öğeye bir tek qubit işlemi uygular.
+
+    Değiştirici `A`, tek qubit işleminin adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytoeachc
+  summary: >-
+    Bir kayıttaki her öğeye bir tek qubit işlemi uygular.
+
+    Değiştirici `C`, tek qubit işleminin denetlenebilir olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytoeachca
+  summary: >-
+    Bir kayıttaki her öğeye bir tek qubit işlemi uygular.
+
+    Değiştirici `CA`, tek qubit işleminin denetlenebilir ve adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytoeachindex
+  summary: Bir kayıttaki her dizinli öğeye bir tek qubit işlemi uygular.
+- uid: microsoft.quantum.canon.applytoeachindexa
+  summary: >-
+    Bir kayıttaki her dizinli öğeye bir tek qubit işlemi uygular.
+
+    Değiştirici `A`, tek qubit işleminin adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytoeachindexc
+  summary: >-
+    Bir kayıttaki her dizinli öğeye bir tek qubit işlemi uygular.
+
+    Değiştirici `C`, tek qubit işleminin denetlenebilir olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytoeachindexca
+  summary: >-
+    Bir kayıttaki her dizinli öğeye bir tek qubit işlemi uygular.
+
+    Değiştirici `CA`, tek qubit işleminin adjointable ve denetlenebilir olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytofirstqubit
+  summary: Kayıttaki ilk qubit 'e bir işlem uygular.
+- uid: microsoft.quantum.canon.applytofirstqubita
+  summary: >-
+    Kayıttaki ilk qubit 'e bir işlem uygular.
+
+    Değiştirici `A`, işlemin adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytofirstqubitc
+  summary: >-
+    Kayıttaki ilk qubit 'e işlem işleci uygular.
+
+    Değiştirici `C`, işlemin denetlenebilir olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytofirstqubitca
+  summary: >-
+    Kayıttaki ilk qubit 'e işlem işleci uygular.
+
+    Değiştirici `CA`, işlemin denetlenebilir ve adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytofirstthreequbits
+  summary: Kayıttaki ilk üç qubit 'e bir işlem uygular.
+- uid: microsoft.quantum.canon.applytofirstthreequbitsa
+  summary: >-
+    Kayıttaki ilk üç qubit 'e bir işlem uygular.
+
+    Değiştirici `A`, işlemin adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytofirstthreequbitsc
+  summary: >-
+    Kayıttaki ilk üç qubit 'e bir işlem uygular.
+
+    Değiştirici `C`, işlemin denetlenebilir olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytofirstthreequbitsca
+  summary: >-
+    Kayıttaki ilk üç qubit 'e bir işlem uygular.
+
+    Değiştirici `CA`, işlemin denetlenebilir ve adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytofirsttwoqubits
+  summary: Kayıttaki ilk iki qubit 'e bir işlem uygular.
+- uid: microsoft.quantum.canon.applytofirsttwoqubitsa
+  summary: >-
+    Kayıttaki ilk iki qubit 'e bir işlem uygular.
+
+    Değiştirici `A`, işlemin adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytofirsttwoqubitsc
+  summary: >-
+    Kayıttaki ilk iki qubit 'e bir işlem uygular.
+
+    Değiştirici `C`, işlemin denetlenebilir olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytofirsttwoqubitsca
+  summary: >-
+    Kayıttaki ilk iki qubit 'e bir işlem uygular.
+
+    Değiştirici `CA`, işlemin denetlenebilir ve adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytopartition
+  summary: Bir kaydın belirli bir bölümüne iki bölümden bir işlem çifti uygular.
+- uid: microsoft.quantum.canon.applytopartitiona
+  summary: >-
+    Bir kaydın belirli bir bölümüne iki bölümden bir işlem çifti uygular.
+
+    Değiştirici `A`, işlemin adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytopartitionc
+  summary: >-
+    Bir kaydın belirli bir bölümüne iki bölümden bir işlem çifti uygular.
+
+    Değiştirici `C`, işlemin denetlenebilir olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytopartitionca
+  summary: >-
+    Bir kaydın belirli bir bölümüne iki bölümden bir işlem çifti uygular.
+
+    Değiştirici `CA`, işlemin denetlenebilir ve adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytosubregister
+  summary: Bir kaydın alt kaydına bir işlem uygular, bu, dizinlerinin bir dizisi tarafından belirtilen qubits ile.
+- uid: microsoft.quantum.canon.applytosubregistera
+  summary: >-
+    Bir kaydın alt kaydına bir işlem uygular, bu, dizinlerinin bir dizisi tarafından belirtilen qubits ile.
+
+    Değiştirici `A`, işlemin adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytosubregisterc
+  summary: >-
+    Bir kaydın alt kaydına bir işlem uygular, bu, dizinlerinin bir dizisi tarafından belirtilen qubits ile.
+
+    Değiştirici `C`, işlemin denetlenebilir olduğunu gösterir.
+- uid: microsoft.quantum.canon.applytosubregisterca
+  summary: >-
+    Bir kaydın alt kaydına bir işlem uygular, bu, dizinlerinin bir dizisi tarafından belirtilen qubits ile.
+
+    Değiştirici `CA`, işlemin denetlenebilir ve adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.applywith
+  summary: İki işlem verildiğinde, diğerini diğeri ile birlikte uygular.
+- uid: microsoft.quantum.canon.applywitha
+  summary: İki işlem verildiğinde, diğerini diğeri ile birlikte uygular.
+- uid: microsoft.quantum.canon.applywithc
+  summary: ''
+- uid: microsoft.quantum.canon.applywithca
+  summary: İki işlem verildiğinde, diğerini diğeri ile birlikte uygular.
+- uid: microsoft.quantum.canon.applywithinputtransformation
+  summary: Bazı girişleri kabul eden bir işlem, bu işlemle uyumlu bir çıkış döndüren bir işlev ve bu işleve bir giriş verildiğinde, girişi işlemin beklenen bir biçime dönüştürmek için işlevini kullanarak işlemi uygular.
+- uid: microsoft.quantum.canon.applywithinputtransformationa
+  summary: Bazı girişleri kabul eden bir işlem, bu işlemle uyumlu bir çıkış döndüren bir işlev ve bu işleve bir giriş verildiğinde, girişi işlemin beklenen bir biçime dönüştürmek için işlevini kullanarak işlemi uygular.
+- uid: microsoft.quantum.canon.applywithinputtransformationc
+  summary: Bazı girişleri kabul eden bir işlem, bu işlemle uyumlu bir çıkış döndüren bir işlev ve bu işleve bir giriş verildiğinde, girişi işlemin beklenen bir biçime dönüştürmek için işlevini kullanarak işlemi uygular.
+- uid: microsoft.quantum.canon.applywithinputtransformationca
+  summary: Bazı girişleri kabul eden bir işlem, bu işlemle uyumlu bir çıkış döndüren bir işlev ve bu işleve bir giriş verildiğinde, girişi işlemin beklenen bir biçime dönüştürmek için işlevini kullanarak işlemi uygular.
+- uid: microsoft.quantum.canon.approximateqft
+  summary: Yaklaşık hisse Fourier dönüştürmesinin (AQFT) bir hisse kaydına uygulanmasını sağlar.
+- uid: microsoft.quantum.canon.asserthighestbit
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit"kullanın.
+- uid: microsoft.quantum.canon.assertlessthanphasele
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan"kullanın.
+- uid: microsoft.quantum.canon.assertphase
+  summary: >-
+    Bir eşit üst konum durumunun beklenen değere sahip olduğunu onaylar.
+
+
+    Özellikle, bazı rastgele gerçek t için beklenen değere sahip $ \frac{e ^ {ı t}} {\sqrt{2}} (e ^ {i\phi} \ tus{0} + e ^ {-i\phi} \ tus{1}) $ olarak ifade edilebilir olan bir hisse cısının $ \phi $ aşamasının $ \ Fi $.
+- uid: microsoft.quantum.canon.assertprobintbe
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakılan bu işlem kaldırılmıştır.
+- uid: microsoft.quantum.canon.cnotchain
+  summary: >-
+    Yerinde bir qubit dizisinin eşlik sayısını hesaplar.
+
+
+    $ \Ket{q_0} \ket{q_0 \ OPLUS q_1} \ket{q_0 \oplus q_1 \oplus q_2} \cnoktalar $ düzenine uyar.
+- uid: microsoft.quantum.canon.cnotchaintarget
+  summary: >-
+    Bir qubits dizisinin bir hedef qubit 'e eşlik durumunu hesaplar.
+
+
+    Dizi başlangıçta $ \ket{q_0} \ket{q_1} \cnoktalar \ket{Q_{\Text{Target}}} $ durumundaysa, son durum $ \ket{q_0} \ket{q_1 \oplus q_0} \cnoktalar \ket{Q_{n-1} \oplus \cnoktalar \oplus q_0 \oplus Q_ {\Text{Target}}} $ tarafından verilir.
+- uid: microsoft.quantum.canon.copymostsignificantbitle
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit"kullanın.
+- uid: microsoft.quantum.canon.cx
+  summary: >-
+    Denetlenen X (CX) kapısını bir qubit çiftiyle uygular.
+
+
+    $ $ \begin{hizalaması} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{hizalaması} , $ $, satırlar ve sütunlar hisse kavramları kılavuzunda olduğu gibi düzenlenir.
+- uid: microsoft.quantum.canon.cy
+  summary: >-
+    Denetimli-Y (CY) kapısını bir qubit çiftiyle uygular.
+
+
+    $ $ \begin{hizalaması} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-ı \\\\ 0 & 0 & ı & 0 \ End{hizalaması} , $ $, satırlar ve sütunlar hisse kavramları kılavuzunda olduğu gibi düzenlenir.
+- uid: microsoft.quantum.canon.cz
+  summary: >-
+    Denetlenen-Z (CZ) kapısını bir qubit çiftiyle uygular.
+
+
+    $ $ \begin{hizalaması} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{hizalaması} , $ $, satırlar ve sütunlar hisse kavramları kılavuzunda olduğu gibi düzenlenir.
+- uid: microsoft.quantum.canon.delay
+  summary: Bir gecikmeyle belirli bir işlem uygular.
+- uid: microsoft.quantum.canon.delaya
+  summary: Bir gecikmeyle belirli bir işlem uygular.
+- uid: microsoft.quantum.canon.delayc
+  summary: Bir gecikmeyle belirli bir işlem uygular.
+- uid: microsoft.quantum.canon.delayca
+  summary: Bir gecikmeyle belirli bir işlem uygular.
+- uid: microsoft.quantum.canon.hy
+  summary: >-
+    Z ve Y eksenlerini karşılıklı olarak değiştiren Hadamard dönüşümüne Y tabanlı analog uygular.
+
+
+    Tek bir qubit üzerinde Y Hadamard dönüştürme $H _Y = S H $:
+
+
+    \begin{hizalaması} H_Y \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ ı &-i \end{bmatrix}.
+
+    \end{hizalaması}
+- uid: microsoft.quantum.canon.inplacexorbe
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakılan bu işlem kaldırılmıştır.
+- uid: microsoft.quantum.canon.inplacexorle
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Measurement.ApplyXorInPlace"kullanın.
+- uid: microsoft.quantum.canon.integerincrementle
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.IncrementByInteger"kullanın.
+- uid: microsoft.quantum.canon.integerincrementphasele
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger"kullanın.
+- uid: microsoft.quantum.canon.iteratethroughcartesianpower
+  summary: Bir değişkeni, Kartezyen ürün [0,-1] × [0, 1.1] × [0,-1] × [0,-1] ve Kartezyen ürünün her öğesi için op (ARR) yöntemini yineler
+- uid: microsoft.quantum.canon.iteratethroughcartesianproduct
+  summary: Bir değişkeni `arr`, Kartezyen bir ürün [0, sınır [0]-1] × [0, sınır [1]-1] × [0, sınır [Uzunluk (sınır)-1]-1] ve Kartezyen ürünün her öğesi için op (ARR) çağrısı yapın
+- uid: microsoft.quantum.canon.measureintegerbe
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakılan bu işlem kaldırılmıştır.
+- uid: microsoft.quantum.canon.modularaddproductle
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger"kullanın.
+- uid: microsoft.quantum.canon.modularaddproductphasele
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger"kullanın.
+- uid: microsoft.quantum.canon.modularincrementle
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger"kullanın.
+- uid: microsoft.quantum.canon.modularincrementphasele
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger"kullanın.
+- uid: microsoft.quantum.canon.modularmultiplybyconstantle
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger"kullanın.
+- uid: microsoft.quantum.canon.multiplexoperations
+  summary: >-
+    Bir sayı dizisi tarafından denetlenen bir işlem dizisi uygular.
+
+
+    Diğer bir deyişle, $n $-qubit numarası $ \ket{j} $ tarafından denetlenen bir Unitary $V _j $ uygulayan çarpma özellikli Unitary $U $ uygular.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.multiplexoperationsbruteforcefromgenerator
+  summary: >-
+    N-qubit numarası State $ \ket{j} $ tarafından denetleniyorsa, bir Unitary $V _j $ uygulayan çarpma özellikli Unitary işlemini uygular $U $.
+
+
+    $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.multiplexoperationsfromgenerator
+  summary: >-
+    N-qubit numarası State $ \ket{j} $ tarafından denetleniyorsa bir Unitary $V _j $ uygulayan çarpma özellikli Unitary işlemi uygular $U $.
+
+
+    $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.multiplexpauli
+  summary: >-
+    Bir qubits dizisine bağlı bir Pauli dönüşü uygular.
+
+
+    Bu, $n $-qubit numarası State $ \ket{j} $ tarafından denetlendiğinde, "$ \theta_j $ hakkında tek-qubit Pauli işleci $P $ ile birlikte döndürmeler gerçekleştiren çarpma özellikli Unitary işlemini uygular $U $.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \theta_j} $.
+- uid: microsoft.quantum.canon.multiplexz
+  summary: >-
+    Bir qubits dizisine bağlı bir Pauli Z dönüşü uygular.
+
+
+    Bu, $n $-qubit numarası State $ \ket{j} $ tarafından denetlendiğinde, "$ \theta_j $ hakkında tek-qubit Pauli işleci $Z $ ile birlikte döndürmeler gerçekleştiren çarpma özellikli Unitary işlemini uygular $U $.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \theta_j} $.
+- uid: microsoft.quantum.canon.noop
+  summary: Bir bağımsız değişkende kimlik işlemini (No-Op) gerçekleştirir.
+- uid: microsoft.quantum.canon.qft
+  summary: Büyük endian gösteriminde bir tamsayı içeren bir hisse kayıt üzerinde hisse Fourier dönüşümü gerçekleştirir.
+- uid: microsoft.quantum.canon.qftle
+  summary: Küçük endian gösteriminde bir tamsayı içeren bir hisse kayıt üzerinde hisse Fourier dönüşümü gerçekleştirir.
+- uid: microsoft.quantum.canon.rall0
+  summary: >-
+    Bir aşama kaydırma işlemi gerçekleştirir.
+
+
+    $R = \boldone-(1-e ^ {i \ Phi}) \ket{0\cnoktalar 0} \bra{0\cnoktalar 0} $.
+- uid: microsoft.quantum.canon.rall1
+  summary: >-
+    Bir aşama kaydırma işlemi gerçekleştirir.
+
+
+    $R = \boldone-(1-e ^ {i \ Phi}) \ket{1\cnoktalar 1} \bra{1\cnoktalar 1} $.
+- uid: microsoft.quantum.canon.swapreverseregister
+  summary: Bir kayıttaki qubits 'in sırasını tersine getirmek için takas kapıları kullanır.
+- uid: microsoft.quantum.canon.with
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Canon.ApplyWith"kullanın.
+- uid: microsoft.quantum.canon.witha
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Canon.ApplyWithA"kullanın.
+- uid: microsoft.quantum.canon.withc
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Canon.ApplyWithC"kullanın.
+- uid: microsoft.quantum.canon.withca
+  summary: >-
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Canon.ApplyWithCA"kullanın.
+newtypes:
+- uid: microsoft.quantum.canon.ccnotop
+  summary: CCNOT kapısı imza türü.
+- uid: microsoft.quantum.canon.resultstack
+  summary: >-
+    `Result` değişkenlerin en son ilk çıkar yığını.
+
+    Yığın bir tamsayı kapasitesinden, yığın işaretçisinden ve `Result` dizisinden oluşur.
+ms.openlocfilehash: 8767d438adcecd7ccbd539d7c123ac42cfb8c295
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065172"

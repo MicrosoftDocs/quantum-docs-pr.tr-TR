@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.rangestep
+name: RangeStep
+type: function
+namespace: Microsoft.Quantum.Core
+summary: Bir aralığın sonraki değerinin nasıl hesaplanacağını belirten tamsayıyı döndürür.
+remarks: Aralık ifadesinin ilk öğesi `start`, ikinci öğesi `start+step`, üçüncü öğe ise `end` geçirilmeden `start+step+step`, vb.
+syntax: 'function RangeStep (range : Range) : Int'
+input:
+  content: '(Aralık: Aralık)'
+  types:
+  - name: aralığı
+    isPrimitive: true
+    uid: Range
+output:
+  content: "'Tir"
+  types:
+  - summary: Verilen aralığın tanımlı adım değeri.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 0195f0f2eb03c163ae08cc789867627286a44097
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066617"

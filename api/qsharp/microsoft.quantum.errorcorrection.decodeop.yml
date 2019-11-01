@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.decodeop
+name: DecodeOp
+type: newtype
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: >-
+  Kodlanmış bir yazmacın bir fiziksel kayda ve bir Syndrome kaydetmek için kullanılan karalama qubits 'e kodunu çözen bir işlemi temsil eder.
+
+
+  Bir DecodeOp 'ın bağımsız değişkeni, bir EncodeOp 'den dönüş ile aynıdır ve tam tersi de geçerlidir.
+syntax: newtype DecodeOp = (Microsoft.Quantum.ErrorCorrection.LogicalRegister => (Qubit[], Qubit[]));
+ms.openlocfilehash: ef9ad274336b019961256a63e7e48a8c011779bf
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234623"

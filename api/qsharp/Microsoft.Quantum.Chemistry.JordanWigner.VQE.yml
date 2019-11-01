@@ -1,0 +1,19 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.chemistry.jordanwigner.vqe
+name: Microsoft. hisse. Chemistry. JordanWigner. VQE
+functions:
+- uid: microsoft.quantum.chemistry.jordanwigner.vqe.expandedcoefficients
+  summary: Bu ve Pauli terimleri arasında bire bir eşleme elde etmek için, Ürdün-Wigner katsayısının Compact gösterimini genişletir.
+- uid: microsoft.quantum.chemistry.jordanwigner.vqe.measurementoperators
+  summary: Bir Ürdün Wigner teriminin beklentisini hesaplamak için gereken tüm ölçüm işleçlerini hesaplar.
+operations:
+- uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimateenergy
+  summary: Her bir Ürdün-Wigner koşullarına katkıda bulunan enerji miktarını toplayarak moleule 'in enerji düzeyini tahmin eder.
+- uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
+  summary: Belirli bir Ürdün-Wigner Hamiltonian terimiyle ilişkili enerjiyi hesaplar
+ms.openlocfilehash: 5c56599c1926f2a11631c74cc03545c43a724eeb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057127"

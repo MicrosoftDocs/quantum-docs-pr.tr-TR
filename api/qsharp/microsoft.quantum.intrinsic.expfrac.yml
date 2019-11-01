@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.expfrac
+name: ExpFrac
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Bir multi-qubit Pauli işlecinin üstel değeri bir dyadic kesri tarafından verilen bağımsız değişkenle uygular.
+
+
+  \begin{hizalaması} e ^ {ı \pı k [P_0 \otimes P_1 \cnoktalar P_ {N-1}]/2 ^ N}, \end{hizalaması}; burada $P _i $, `paulis`$i $ TH öğesidir ve $N = $`Length(paulis)`.
+syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[]) : Unit'
+input:
+  content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
+  types:
+  - name: paulis
+    summary: Her bir qubit üzerinde Tensor ürün faktörleri belirten tek qubit Pauli değerlerinin dizisi.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: numerator
+    summary: ', Qubit yazmacın döndürüleceği açının dyadic kesir gösteriminde pay ($k $).'
+    isPrimitive: true
+    uid: Int
+  - name: power
+    summary: İki ($n $) üssü, qubit yazmacın döndürüleceği açının paydasını belirten.
+    isPrimitive: true
+    uid: Int
+  - name: qubits
+    summary: Verilen dönüşü öğesine uygulamak için kaydolun.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: d02f48d695db3dd2d7012df5bbf22718ffe41b74
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73223777"

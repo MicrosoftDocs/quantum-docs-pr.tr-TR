@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.trottersimulationalgorithm
+name: TrotterSimulationAlgorithm
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: bir Trour – Suzuki ayrıştırma kullanan `SimulationAlgorithm` işlev, zaman evci operatörü _exp (-IHV)_.
+syntax: 'function TrotterSimulationAlgorithm (trotterStepSize : Double, trotterOrder : Int) : Microsoft.Quantum.Simulation.SimulationAlgorithm'
+input:
+  content: '(trotterStepSize : Double, trotterOrder : Int)'
+  types:
+  - name: trotterStepSize
+    summary: Tek bir rahatlık adımında benzetimli zaman-gelişme süresi.
+    isPrimitive: true
+    uid: Double
+  - name: trotterOrder
+    summary: Araba tümleştirici sırası. Bu, 1 veya çift bir sayı olmalıdır.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.Simulation.SimulationAlgorithm
+  types:
+  - summary: '`SimulationAlgorithm` türü.'
+    uid: microsoft.quantum.simulation.simulationalgorithm
+ms.openlocfilehash: 2daaeb3be5d73351797cb9f4efacb6e276b18e10
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232005"

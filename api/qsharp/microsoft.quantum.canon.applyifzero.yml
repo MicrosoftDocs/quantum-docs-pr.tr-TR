@@ -1,0 +1,51 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifzero
+name: ApplyIfZero
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Klasik sonuç değeri sıfır olan bir işlem uygular.
+
+
+  Bir işlem `op` ve sonuç değeri `result`, `result` `Zero`ise `target` `op` uygular. `One`, `target`hiçbir şey olmaz.
+syntax: "operation ApplyIfZero (result : Result, (op : ('T => Unit), target : 'T)) : Unit"
+input:
+  content: "(result : Result, (op : ('T => Unit), target : 'T))"
+  types:
+  - name: result
+    summary: Op 'ın uygulanıp uygulanmadığını denetleyen ölçüm sonucu.
+    isPrimitive: true
+    uid: Result
+  - name: op
+    summary: Koşullu olarak uygulanacak bir işlem.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: target
+    summary: İşlemin uygulandığı giriş.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Koşullu olarak uygulanacak işlemin giriş türü.
+seeAlso:
+- microsoft.quantum.canon.applyifzeroc
+- microsoft.quantum.canon.applyifzeroa
+- microsoft.quantum.canon.applyifzeroca
+ms.openlocfilehash: c9d524a4be9c3ce6179f59d59c8a83819a611966
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213645"

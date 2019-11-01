@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.exp
+name: Exp
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Multi-qubit Pauli işlecinin üstel değeri uygular.
+
+
+  \begin{hizalaması} e ^ {ı \teta [P_0 \otimes P_1 \cnoktalar P_ {N-1}]}, \end{hizalaması}; burada $P _i $, `paulis`$i $ TH öğesidir ve $N = $`Length(paulis)`.
+syntax: 'operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : Unit'
+input:
+  content: '(Paulis: Pauli [], teta: Double, qubits: qubit [])'
+  types:
+  - name: Paulis
+    summary: Her bir qubit üzerinde Tensor ürün faktörleri belirten tek qubit Pauli değerlerinin dizisi.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: harfi
+    summary: Hedef yazmacın döndürüleceği, verilen Multi-qubit Pauli operatörü ile ilgili açı.
+    isPrimitive: true
+    uid: Double
+  - name: qubit
+    summary: Verilen dönüşü öğesine uygulamak için kaydolun.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Birim
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: d301f6281d5c8a07479417fab1e25c66e2251a25
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067331"

@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.cnotchaintarget
+name: CNOTChainTarget
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Bir qubits dizisinin bir hedef qubit 'e eşlik durumunu hesaplar.
+
+
+  Dizi başlangıçta $ \ket{q_0} \ket{q_1} \cnoktalar \ket{Q_{\Text{Target}}} $ durumundaysa, son durum $ \ket{q_0} \ket{q_1 \oplus q_0} \cnoktalar \ket{Q_{n-1} \oplus \cnoktalar \oplus q_0 \oplus Q_ {\Text{Target}}} $ tarafından verilir.
+remarks: >-
+  Aşağıdakiler eşdeğerdir:
+
+
+  ```qsharp
+
+  CNOTChainTarget(Most(qs), Last(qs));
+
+  ```
+
+
+  'nı ve
+
+
+  ```qsharp
+
+  CNOTChain(qs);
+
+  ```
+syntax: 'operation CNOTChainTarget (qubits : Qubit[], targetQubit : Qubit) : Unit'
+input:
+  content: '(qubits: qubit [], targetQubit: qubit)'
+  types:
+  - name: qubit
+    summary: Eşlik öğesinin hesaplandığı qubit dizisi.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targetQubit
+    summary: "' Qubits ' öğesinin eşliği XORed olduğu son qubit."
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Birim
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 26893296ec8fe7ec8d8cc5309e2bd5066f315849
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73068045"

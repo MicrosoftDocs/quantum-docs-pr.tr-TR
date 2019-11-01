@@ -1,0 +1,69 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.statepreparationcomplexcoefficients
+name: StatePreparationComplexCoefficients
+type: function
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  Belirli bir hisse durumu hazırlayan bir işlem döndürür.
+
+
+  Döndürülen $U $, $n $-qubit hesaplama tabanlı durumu $ \ket{0...0} $ öğesinden $r _j e ^ {i T_J} $ karmaşık katlarla rastgele bir hisse TI $ \ket{\psı} $ hazırlar.
+
+
+  Yeni ayrılmış bir kayıttaki U eylemi $ $ \begin{hizalaması} U\ket {0... tarafından verilir. 0} = \ket{\psı} = \frac{\sum_{j = 0} ^ {2 ^ n-1} r_j e ^ {i T_J} \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
+
+  \end{hizalaması} $ $
+remarks: $R _j < $0 negatif giriş katsayıları $ | r_j | $ değeri ile pozitif olarak değerlendirilir. $2 ^ n $ değerinden azı belirtilmişse, `coefficients` $ (r_j, T_J) = (0,0, 0,0) $ öğeleriyle doldurulur.
+examples: >-
+  Aşağıdaki kod parçacığı, qubit yazmaç `qubitsLE`hisse durumu $ \ket{\psı} = e ^ {ı 0,1} \ sqrt {1/8} \ tus{0}+ \ sqrt {7/8} \ tus{2}$ öğesini hazırlar.
+
+
+  ```qsharp
+
+  let amplitudes = [Sqrt(0.125), 0.0, Sqrt(0.875), 0.0];
+
+  let phases = [0.1, 0.0, 0.0, 0.0];
+
+  mutable complexNumbers = new ComplexPolar[4];
+
+  for (idx in 0..3) {
+      set complexNumbers[idx] = ComplexPolar(amplitudes[idx], phases[idx]);
+  }
+
+  let op = StatePreparationComplexCoefficients(complexNumbers);
+
+  using (qubits = Qubit[2]) {
+      let qubitsLE = LittleEndian(qubits);
+      op(qubitsLE);
+  }
+
+  ```
+syntax: 'function StatePreparationComplexCoefficients (coefficients : Microsoft.Quantum.Math.ComplexPolar[]) : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl)'
+input:
+  content: '(coefficients : Microsoft.Quantum.Math.ComplexPolar[])'
+  types:
+  - name: coefficients
+    summary: Mutlak değerleri ve aşama $ (r_j, T_J) ile temsil edilen en fazla $2 ^ n $ karmaşık katsayılar dizisi. $J $ TH katsayısı, küçük endian biçiminde $ \ket{j} $ kodlu durum sayısını dizine ekler.
+    isArray: true
+    uid: microsoft.quantum.math.complexpolar
+output:
+  content: (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl)
+  types:
+  - summary: Bir durum hazırlama Unitary işlemi $U $.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+ms.openlocfilehash: 42049c1ef8c1210bf31a9979a2a6d4d9223a9c85
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226412"

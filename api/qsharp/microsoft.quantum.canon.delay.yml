@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.delay
+name: Delay
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Bir gecikmeyle belirli bir işlem uygular.
+
+
+  Bir işlem ve bu işlem için bir giriş verildiğinde, ek bir giriş sağlandıktan sonra işlemi uygular.
+
+  Özellikle, `Delay(op, arg, _)` ifade, çağrıldığında `arg` `op` uygulanan bir işlemdir.
+
+  İfade `Delay(op,arg,_)` `op`uygulamasını gecikmeye izin verir.
+syntax: "operation Delay (op : ('T => 'U), arg : 'T, aux : Unit) : 'U"
+input:
+  content: "(op : ('T => 'U), arg : 'T, aux : Unit)"
+  types:
+  - name: op
+    summary: Uygulanacak bir işlem.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+  - name: arg
+    summary: İşlemin uygulandığı giriş.
+    uid: "'T"
+    isLocal: true
+  - name: aux
+    summary: Kısmi uygulama kullanarak işlemin uygulamasını geciktirmek için kullanılan bağımsız değişken.
+    isPrimitive: true
+    uid: Unit
+output:
+  content: "'U"
+  types:
+  - uid: "'U"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Gecikecek işlemin giriş türü.
+- uid: "'U"
+  summary: Gecikecek işlemin dönüş türü.
+seeAlso:
+- microsoft.quantum.canon.delayc
+- microsoft.quantum.canon.delaya
+- microsoft.quantum.canon.delayca
+- microsoft.quantum.canon.delayed
+ms.openlocfilehash: 1759670182cff1153859c62e9c95d1be1f998674
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226123"

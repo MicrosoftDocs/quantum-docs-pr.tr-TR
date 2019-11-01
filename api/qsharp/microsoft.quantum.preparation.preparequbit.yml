@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.preparequbit
+name: PrepareQubit
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  Verilen Pauli işlecinin, + 1 (`Zero`) eigenstate ' de bir qubit hazırlar.
+
+  Identity işleci verilirse, qubit, yüksek ölçüde karışık duruma hazırlanır.
+
+
+  Qubit başlangıçta $ \ket{0}$ durumundaysa, bu işlem belirli bir Pauli işlecinin $ + $1 eigenstate veya `PauliI`için, bunun yerine en yüksek düzeyde karma durumunda (bkz. <xref:microsoft.quantum.preparation.preparesinglequbitidentity>), qubit 'i hazırlar.
+
+
+  Qubit $ \ket{0}$ dışında bir durumdaysa, bu işlem şu kapıları uygular: `PauliX`için $H $ $HS, `PauliY`için $I $ `PauliZ` ve <xref:microsoft.quantum.preparation.preparesinglequbitidentity> için `PauliI`$ $.
+syntax: 'operation PrepareQubit (basis : Pauli, qubit : Qubit) : Unit'
+input:
+  content: '(basis : Pauli, qubit : Qubit)'
+  types:
+  - name: basis
+    summary: Pauli işleci $P $.
+    isPrimitive: true
+    uid: Pauli
+  - name: qubit
+    summary: Hazırlanmaya yönelik bir qubit.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: be4eb730bebd00531aaa49302578b23f4a52237b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226548"

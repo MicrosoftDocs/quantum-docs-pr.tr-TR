@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applypaulifrombitstring
+name: ApplyPauliFromBitString
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Bir Boolean dizisinin karşılık gelen biti verilen bir girişle eşleşiyorsa, dizideki her bir qubit üzerinde Pauli işleci uygular.
+remarks: Boole dizisi ve hisse kayıt uzunluğu eşit olmalıdır.
+syntax: 'operation ApplyPauliFromBitString (pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[]) : Unit'
+input:
+  content: '(pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[])'
+  types:
+  - name: pauli
+    summary: '`bitsApply == bits[idx]` `qubits[idx]` için uygulanacak Pauli işleci'
+    isPrimitive: true
+    uid: Pauli
+  - name: bitApply
+    summary: bit Bu değer ise Pauli Uygula
+    isPrimitive: true
+    uid: Bool
+  - name: bits
+    summary: '`qubits` hangi karşılık gelen qubitin üzerinde çalışılmalıdır belirten Boole kaydı'
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+  - name: qubits
+    summary: Belirtilen Pauli işlecinin seçmeli olarak uygulanacağı hisse kayıt
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: a39d19c11a0ce48b2901097ac497c2ad9c707bba
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220683"

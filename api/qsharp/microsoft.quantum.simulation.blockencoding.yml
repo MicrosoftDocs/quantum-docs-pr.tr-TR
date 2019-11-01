@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.blockencoding
+name: Blockenkodlama
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Rastgele bir ilgilendiğiniz işlecin üst sol blokta kodlandığı bir Unitary temsil eder.
+
+
+  Diğer bir deyişle, bir `BlockEncoding`, sistem yazmacı üzerinde işlem yapan `s`, $U yardımcı durum $ \demet{0}_a $ 'a karşılık gelen sol üst blokta kodlandığı $H bir ilgi çekici operatör olan Unitary $ ' dir. Yani
+
+
+  $ $ \begin{hizalaması} (\bra{0}_a \ otimes I_s) U (\ayraç{0}_a \ otimes I_s) = H \ End{hizalaması} $ $.
+syntax: newtype BlockEncoding = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: 0991b1b54cdd8e908f60fc104edf588ae08e12e7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066039"

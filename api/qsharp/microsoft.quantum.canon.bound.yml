@@ -1,0 +1,69 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bound
+name: Bound
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Tek bir girişte çalışan bir işlem dizisi verildiğinde, belirli bir işlemi sırayla gerçekleştiren yeni bir işlem oluşturur.
+examples: >-
+  Aşağıdakiler eşdeğerdir:
+
+
+  ```qsharp
+
+  let bound = Bound([U, V]);
+
+  bound(x);
+
+  ```
+
+
+  'nı ve
+
+
+  ```qsharp
+
+  U(x); V(x);
+
+  ```
+syntax: "function Bound (operations : ('T => Unit)[]) : ('T => Unit)"
+input:
+  content: "(operations : ('T => Unit)[])"
+  types:
+  - name: operations
+    summary: Belirli bir girişte gerçekleştirilecek işlemler dizisi.
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+output:
+  content: ('T => Unit)
+  types:
+  - summary: Belirli bir işlemi girişinde sırayla gerçekleştiren yeni bir işlem.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Dizideki her bir işlemin üzerinde işlem gören hedef.
+seeAlso:
+- microsoft.quantum.canon.boundc
+- microsoft.quantum.canon.bounda
+- microsoft.quantum.canon.boundca
+ms.openlocfilehash: 67cb4cb93c5d306491bfce83caf1c112194991be
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220649"

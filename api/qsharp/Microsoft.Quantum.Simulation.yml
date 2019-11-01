@@ -1,0 +1,169 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.simulation
+name: Microsoft.Quantum.Simulation
+summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı, Dynamics 'in Dynamics sistemlerinin tutarlılığını taklit etmek için işlevler ve işlemler içerir."
+functions:
+- uid: microsoft.quantum.simulation.addgeneratorsystems
+  summary: Yeni bir `GeneratorSystem`oluşturmak için iki `GeneratorSystem`s ekler.
+- uid: microsoft.quantum.simulation.blockencodingbylcu
+  summary: >-
+    Bir ilgilendiğiniz bir işleci bir `BlockEncoding`olarak kodlar.
+
+
+    Bu, bazı işleci kodlayan bir `BlockEncoding` Unitary $U = P\cdot V\cdot P ^ \leger $ oluşturur $H = \sum_{j} | \harflerden _j | U_j $ ilgi çekici bir şekilde oluşturulur. Genellikle $P $, $P \tus{0}\_a = \ sum_j\sqrt {\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ ve $V = \sum_{j}\ket{j}\bra{j}\_a\otimes u_ olan bir durum hazırlama birimiyiyiyiydir j $.
+- uid: microsoft.quantum.simulation.blockencodingreflectionbylcu
+  summary: >-
+    Bir ilgilendiğiniz bir işleci bir `BlockEncodingReflection`olarak kodlar.
+
+
+    Bu, bazı işleci kodlayan bir `BlockEncodingReflection` Unitary $U = P\cdot V\cdot P ^ \leger $ oluşturur $H = \sum_{j} | \harflerden _j | U_j $ ilgi çekici bir şekilde oluşturulur. Genellikle $P $, $P \_{0}\sum_j\sqrt {\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ ve $V = \sum_{j}\ket{j}\bra{j}\_a\otimes u_ gibi bir durum hazırlama birimiyıdır. j $.
+- uid: microsoft.quantum.simulation.blockencodingtoreflection
+  summary: >-
+    Bir `BlockEncoding` eşdeğer bir `BLockEncodingReflection`dönüştürür.
+
+
+    Diğer bir deyişle, bazı işleci $H `BlockEncodingReflection` bir şekilde kodlayan `BlockEncoding` Unitary $U $ verildiğinde, aynı işleci kodlayan bir $U ' $ içine dönüştürür, ancak aynı zamanda ' ^ \leger = U ' $ $U karşılar.
+
+    Bu, $U $ öğesinin yardımcı kaydının boyutunu bir qubit artırır.
+- uid: microsoft.quantum.simulation.getgeneratorsystemfunction
+  summary: '`GeneratorIndex` işlevini bir `GeneratorSystem`alır.'
+- uid: microsoft.quantum.simulation.getgeneratorsystemnterms
+  summary: '`GeneratorSystem`koşulların sayısını alır.'
+- uid: microsoft.quantum.simulation.identitygeneratorindex
+  summary: Kimlik evrimi işlemine karşılık gelen sıfır Hamiltonian `H = 0`ile tutarlı bir Oluşturucu dizini döndürür.
+- uid: microsoft.quantum.simulation.identitygeneratorsystem
+  summary: Kimlik evrimi işlemine karşılık gelen sıfır Hamiltonian `H = 0`ile tutarlı bir Oluşturucu sistemi döndürür.
+- uid: microsoft.quantum.simulation.identitytimedependentgeneratorsystem
+  summary: Hamiltonian `H(s) = 0`ile tutarlı zamana bağlı bir Oluşturucu sistemi döndürür.
+- uid: microsoft.quantum.simulation.interpolatedevolution
+  summary: ', Zaman içinde zamana bağlı Oluşturucu altında bir qubit kaydına benzetimci uygulayan bir işlem döndüren, tek düzen ile iki üretici arasında enterpolasyonlar.'
+- uid: microsoft.quantum.simulation.interpolategeneratorsystems
+  summary: İki `GeneratorSystem`s arasındaki doğrusal ilişkilendirmeyi temsil eden bir `TimeDependentGeneratorSystem` döndürür.
+- uid: microsoft.quantum.simulation.intstopaulis
+  summary: Bir tamsayılar dizisini tek qubit Pauli işleçleri dizisine dönüştürür.
+- uid: microsoft.quantum.simulation.inttopauli
+  summary: Bir tamsayıyı tek qubit Pauli işlecine dönüştürür.
+- uid: microsoft.quantum.simulation.multiplygeneratorindex
+  summary: '`GeneratorIndex`katsayısı çarpar.'
+- uid: microsoft.quantum.simulation.multiplygeneratorsystem
+  summary: '`GeneratorSystem`tüm koşulların katsayısını çarpar.'
+- uid: microsoft.quantum.simulation.pauliblockencoding
+  summary: >-
+    Hamiltonian için blok kodlama Unitary oluşturur.
+
+
+    Hamiltonian $H = \sum_{j}\alpha_j P_j $, her biri gerçek katsayı $ \harflerden _j $ olan Pauli terimlerinin toplamı $P _j $ ile açıklanmıştır.
+- uid: microsoft.quantum.simulation.paulicoefficientfromgenidx
+  summary: Bir `GeneratorIndex`tarafından tanımlanan Pauli teriminin katsayısını ayıklar.
+- uid: microsoft.quantum.simulation.paulievolutionfunction
+  summary: Bir dinamik üreticisini bir simulatable Gates kümesi ve Pauli temelinde genişletme olarak temsil eder.
+- uid: microsoft.quantum.simulation.paulievolutionset
+  summary: Bir dinamik üreticisini bir simulatable Gates kümesi ve Pauli temelinde genişletme olarak temsil eder.
+- uid: microsoft.quantum.simulation.paulistringfromgenidx
+  summary: Pauli dizesini ve bir `GeneratorIndex`tarafından tanımlanan Pauli teriminin qubit dizinlerini ayıklar.
+- uid: microsoft.quantum.simulation.quantumwalkbyqubitization
+  summary: >-
+    Bir `BlockEncodingReflection` bir hisse yürüme dönüşe dönüştürür.
+
+
+    Diğer bir deyişle, bazı işleci $H bir $W kodlayan `BlockEncodingReflection` Unitary $U $, bunu $ \pm e ^ {\pm i\sin ^{-1}(H)} $ yelpazesini içeren bir hisse alım $ içine dönüştürür.
+- uid: microsoft.quantum.simulation.sumgeneratorsystems
+  summary: Yeni bir GeneratorSystem oluşturmak için birden çok `GeneratorSystem`s ekler.
+- uid: microsoft.quantum.simulation.timedependenttrottersimulationalgorithm
+  summary: zamana bağlı Schrodinger denklemini çözen bir Unitary işlecini yaklaşık olarak tahmin etmek için bir Trour – Suzuki ayrıştırma kullanan `TimeDependentSimulationAlgorithm` işlev.
+- uid: microsoft.quantum.simulation.trottersimulationalgorithm
+  summary: bir Trour – Suzuki ayrıştırma kullanan `SimulationAlgorithm` işlev, zaman evci operatörü _exp (-IHV)_.
+- uid: microsoft.quantum.simulation.trotterstep
+  summary: ', Bir Trour – Suzuki ayrıştırma kullanarak `EvolutionGenerator` açıklanan sistem tarafından tek seferlik bir zaman adımı uygular.'
+operations:
+- uid: microsoft.quantum.simulation.adiabaticstateenergyunitary
+  summary: Giriş durumuna bir `statePrepUnitary` uygulayıp, ardından bir `adiabaticUnitary`kullanarak Adiabatik eyalet hazırlama ve son olarak bir `phaseEstAlgorithm`kullanarak ortaya çıkan durum `qpeUnitary`açısından bir aşama tahmini yaparak durum hazırlığı gerçekleştirir.
+- uid: microsoft.quantum.simulation.estimateenergy
+  summary: ', Bir `phaseEstAlgorithm`kullanarak elde edilen duruma göre `qpeUnitary`göre otomatik olarak ayrılan giriş durumu aşaması tahminiyle bir `statePrepUnitary` uygulayarak durum hazırlığı gerçekleştirir.'
+- uid: microsoft.quantum.simulation.estimateenergywithadiabaticevolution
+  summary: Otomatik olarak ayrılmış bir giriş durumuna bir `statePrepUnitary` uygulayarak, ardından bir `adiabaticUnitary`kullanarak Adiabatik durum hazırlığı ve son olarak bir `phaseEstAlgorithm`kullanarak sonuç durumunda `qpeUnitary`açısından bir aşama tahmini yaparak durum hazırlığı gerçekleştirir.
+newtypes:
+- uid: microsoft.quantum.simulation.blockencoding
+  summary: >-
+    Rastgele bir ilgilendiğiniz işlecin üst sol blokta kodlandığı bir Unitary temsil eder.
+
+
+    Diğer bir deyişle, bir `BlockEncoding`, sistem yazmacı üzerinde işlem yapan `s`, $U yardımcı durum $ \demet{0}_a $ 'a karşılık gelen sol üst blokta kodlandığı $H bir ilgi çekici operatör olan Unitary $ ' dir. Yani
+
+
+    $ $ \begin{hizalaması} (\bra{0}_a \ otimes I_s) U (\ayraç{0}_a \ otimes I_s) = H \ End{hizalaması} $ $.
+- uid: microsoft.quantum.simulation.blockencodingreflection
+  summary: Aynı zamanda bir yansıma olan `BlockEncoding` temsil eder.
+- uid: microsoft.quantum.simulation.evolutiongenerator
+  summary: >-
+    Bir dinamik üreticisini bir simulatable Gates kümesi ve bu temelde bir genişletme olarak temsil eder.
+
+
+    Terim sayısı için son parametre.
+- uid: microsoft.quantum.simulation.evolutionschedule
+  summary: >-
+    Zamana bağlı bir dinamik oluşturucuyu temsil eder.
+
+
+    `Double` parametresi $ [0, 1] $ içindeki bir zamandır.
+- uid: microsoft.quantum.simulation.evolutionset
+  summary: >-
+    Kolay bir şekilde uygulanabilecek ve benzetim algoritmalarını uygulamak için kullanılan bir kapı kümesini temsil eder.
+
+
+    Kümesindeki öğeler bir <xref:microsoft.quantum.simulation.generatorindex>tarafından dizine alınır ve her küme, `GeneratorIndex` bir işlev tarafından, zamanı temsil eden gerçek bir sayı tarafından parametreleştirilen işlemler olan <xref:microsoft.quantum.simulation.evolutionunitary>ile açıklanmıştır.
+- uid: microsoft.quantum.simulation.evolutionunitary
+  summary: >-
+    Bir Unitary zaman-gelişme işlecini temsil eder.
+
+
+    İlk parametre zaman evrimi olur ve ikinci parametre Unitary tarafından üzerinde işlem yapan qubit kayıt olur.
+- uid: microsoft.quantum.simulation.generatorindex
+  summary: >-
+    Bu oluşturucunun, `EvolutionSet`aracılığıyla bir oluşturucunun zaman için bir eşleme varolduğu, örneğin, hermitian işleçleri, yani tüm dinamik üreticilerinin kümesinde tek bir temel terimi temsil eder.
+
+
+    İlk öğe (INT [], Double []) Tek terimli olan dizindir--Örneğin, 0,5 katsayısı olan Pauli dize XXY, ([1, 1, 2], [0,5]) tarafından dizinlenebilir. Alternatif olarak, X cos φ + Y φ gibi sürekli bir değişken tarafından parametreleştirilen Hamiltonians, örneğin ([], [φ]) tarafından temsil edilebilir. İkinci öğe, oluşturucunun üzerinde çalıştığı alt sistemin dizinini oluşturur.
+- uid: microsoft.quantum.simulation.generatorsystem
+  summary: >-
+    `GeneratorIndex`es koleksiyonunu temsil eder.
+
+
+    Tek Dizin tamsayı kullanarak bu koleksiyonu yineliyoruz ve koleksiyonun boyutunun bilindiği varsayılır.
+- uid: microsoft.quantum.simulation.simulationalgorithm
+  summary: >-
+    Zamana bağımsız bir benzetim algoritmasını temsil eder.
+
+
+    Zamana bağımsız simülasyon tekniği bir <xref:microsoft.quantum.simulation.evolutiongenerator> dönüştürür
+
+    belirli bir zaman aralığı için Unitary saat evrimi.
+- uid: microsoft.quantum.simulation.timedependentblockencoding
+  summary: >-
+    Bir saat kaydı tarafından denetlenen bir `BlockEncoding` temsil eder.
+
+
+    Diğer bir deyişle $U `TimeDependentBlockEncoding`, bir durum $ \ket{k}_D $, saat kaydı `d`, sistem yazmacı üzerinde işlem yapan `s` $H _K $, yardımcı durum $ \ ' a karşılık gelen sol üst blokta kodlanmış @no __t_3_ _a $. Yani
+
+
+    $ $ \begin{hizalaması} (\bra{0}\_a\otimes I_ {DS}) U (\ayraç{0}\_a\otimes I_ {DS}) = \sum_{k}\ket{k}\bra{k}\_d\otimes H_k.
+
+    \end{hizalaması} $ $.
+- uid: microsoft.quantum.simulation.timedependentgeneratorsystem
+  summary: Zamana bağlı bir dinamik üreticisini, zaman içinde dinamik oluşturucusunun değerine kadar bir işlev olarak temsil eder.
+- uid: microsoft.quantum.simulation.timedependentsimulationalgorithm
+  summary: >-
+    Zamana bağlı bir simülasyon algoritmasını temsil eder.
+
+
+    Zamana bağlı simülasyon tekniği bir <xref:microsoft.quantum.simulation.evolutionschedule> dönüştürür
+
+    belirli bir zaman aralığı için Unitary zaman-gelişini.
+- uid: microsoft.quantum.simulation.unitary
+  summary: Bir Unitary işleci altında evrimi temsil eder.
+ms.openlocfilehash: 05db213d04304a635e4e86e0f6c40f15bb81441a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215889"

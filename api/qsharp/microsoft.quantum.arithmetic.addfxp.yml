@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.addfxp
+name: AddFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Hisse Yazmaçları içinde depolanan iki sabit noktalı sayıyı ekler.
+
+
+  $ \Ket{f_1} $ ve $ \ket{f_2} $ durumlarında sırasıyla iki sabit noktalı kayıt verildiğinde, $ \ket{f_1} \ket{f_2} \mapsto \ket{f_1} \ket{f_1 + f_2} $ işlemini gerçekleştirir.
+remarks: Geçerli uygulama iki sabit noktalı sayının, en az önemli bitden ($n _i $ ve $p _i $ eşit olması gerekir) aynı nokta konumunun sayımını gerektirir.
+syntax: 'operation AddFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: fp1
+    summary: İlk sabit noktalı sayı
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: fp2
+    summary: İkinci sabit noktalı sayı, iki girişin toplamını içerecek şekilde güncelleştirilecektir.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 142c7927519e59fb3df1661b3beadd32cda0d2c8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215430"

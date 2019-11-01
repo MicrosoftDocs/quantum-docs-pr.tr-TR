@@ -1,0 +1,55 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexoperations
+name: MultiplexOperations
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Bir sayı dizisi tarafından denetlenen bir işlem dizisi uygular.
+
+
+  Diğer bir deyişle, $n $-qubit numarası $ \ket{j} $ tarafından denetlenen bir Unitary $V _j $ uygulayan çarpma özellikli Unitary $U $ uygular.
+
+
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+remarks: $2 ^ n $ değerinden azı belirtilmişse `coefficients` kimlik öğeleriyle doldurulur. Bu uygulama $n-$1 anileri La qubit kullanır.
+syntax: "operation MultiplexOperations (unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
+references: "- Hisse hızlı bir şekilde tüm hisse simülasyonu 'ne doğru, her hisse CIL. Child, Dmitrı Maslov, Yunseong Nam, Neil J. No, Yuan su https://arxiv.org/abs/1711.10980"
+input:
+  content: "(unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
+  types:
+  - name: unitaries
+    summary: En fazla $2 ^ n $ Unitary işlemi dizisi. $J $ TH işlemi, küçük endian biçiminde bir $ \ket{j} $ kodlu sayı ile dizinlenir.
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: index
+    summary: $n $-qubit denetim kaydı, az endian biçimindeki $ \ket{j} $ sayı durumlarını kodluyor.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: target
+    summary: Genel qubit kayıt $V _j $ üzerinde çalışır.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: bd248ece9d76729a33db3dfead177fa68909f438
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73223505"
