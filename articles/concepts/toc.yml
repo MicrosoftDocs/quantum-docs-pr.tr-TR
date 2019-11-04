@@ -1,0 +1,20 @@
+- name: Kuantum bilişimi nedir?
+  href: index.md
+- name: Vektörler ve matrisler
+  href: vectors-and-matrices.md
+- name: Gelişmiş matris kavramları
+  href: advanced-matrices.md
+- name: Kubit
+  href: the-qubit.md
+- name: Birden çok kubit
+  href: multiple-qubits.md
+- name: Dirac gösterimi
+  href: dirac-notation.md
+- name: Pauli ölçümleri
+  href: pauli-measurements.md
+- name: Hisse devreleri
+  href: circuits.md
+- name: Kuantum oracle’ları
+  href: oracles.md
+- name: Yazılım yığını
+  href: software-stack.md

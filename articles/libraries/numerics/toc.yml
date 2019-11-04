@@ -1,0 +1,4 @@
+- name: Yükleme ve doğrulama
+  href: installation.md
+- name: Sayısal kitaplığı kullanma
+  href: numerics.md

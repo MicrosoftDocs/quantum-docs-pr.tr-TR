@@ -6,16 +6,16 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.intro
-ms.openlocfilehash: d8759b9f043d2e13f4b0c97d54bd824c7e87d6de
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 560926f6f3e05c32a935f01ca5107a614e743ee2
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035268"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442468"
 ---
 # <a name="the-q-programming-language"></a>Q# Programlama Dili
 
-# <a name="introduction"></a>Giriş
+## <a name="introduction"></a>Giriş
 
 Kuantum bilgisayarını GPU’lar, FPGA’lar ve diğer yardımcı işlemciler için kullanılanlara benzer şekilde bir ortak işlemci olarak işleme almak, kuantum bilişimi için doğal bir modeldir.
 Birincil kontrol mantığı, klasik bir "konak" bilgisayar üzerinde klasik kod çalıştırır.
@@ -36,7 +36,7 @@ Aşağıdaki bölümlerde ayrıntılı olarak şu konular açıklanmaktadır:
 - [Deyimler](xref:microsoft.quantum.language.statements)
 - [Dosya Yapısı](xref:microsoft.quantum.language.file-structure)
 
-# <a name="conventions"></a>Kurallar
+## <a name="conventions"></a>Kurallar
 
 Tüm durumlarda genel noktalama işaretlerinin tutarlı bir şekilde kullanıldığından emin olmak için çalışıyoruz.
 Bu işaretler her zaman aynı anlama geldiğinden ve aynı kavram her zaman aynı şekilde temsil edildiğinden böylece Q# dilinin daha kolay öğrenilebileceğini ve okunabileceğini umuyoruz.
