@@ -1,0 +1,99 @@
+### YamlMime:Landing
+title: Microsoft Quantum Belgeleri
+summary: Microsoft Quantum Developer Kit'i ve kuantum algoritmalarına yönelik Q# dilini kullanmayı öğrenin. Önemli kavramları öğrenin ve ilk kuantum programınızı yazın.
+metadata:
+  title: Microsoft Quantum Belgeleri - Q# API Başvurusu
+  description: Microsoft Quantum Developer Kit'i ve kuantum algoritmalarına yönelik Q# dilini kullanmayı öğrenin. Önemli kavramları öğrenin ve ilk kuantum programınızı yazın.
+  ms.prod: quantum
+  ms.topic: landing-page
+  ms.collection: collection
+  author: cjgronlund
+  ms.author: cgronlun
+  ms.date: 09/30/2019
+  ms.openlocfilehash: 692456cb6b117b206d202b01967202b7ac89e59d
+  ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/30/2019
+  ms.locfileid: "73065070"
+landingContent:
+- title: Microsoft Quantum’u kullanmaya başlama
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Microsoft Quantum Developer Kit’e hoş geldiniz
+      url: welcome.md
+  - linkListType: get-started
+    links:
+    - text: QDK’yı yükleme
+      url: install-guide/index.md
+    - text: QDK’yı güncelleştirme
+      url: install-guide/update.md
+  - linkListType: quickstart
+    links:
+    - text: İlk kuantum programınızı yazma
+      url: quickstart.md
+- title: Kuantum bilişimi öğrenme
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Kuantum bilişimi nedir?
+      url: concepts/index.md
+    - text: Vektörler ve matrisler
+      url: concepts/vectors-and-matrices.md
+    - text: Gelişmiş matris kavramları
+      url: concepts/advanced-matrices.md
+    - text: Kubit
+      url: concepts/the-qubit.md
+    - text: Yazılım yığını
+      url: concepts/software-stack.md
+- title: Quantum geliştirme teknikleri
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Q# nedir?
+      url: techniques/file-structure.md
+    - text: İşlemler ve işlevler
+      url: techniques/operations-and-functions.md
+    - text: Yerel değişkenler
+      url: techniques/local-variables.md
+    - text: Kubitlerle çalışma
+      url: techniques/working-with-qubits.md
+    - text: 'Hepsini bir araya getirme: Işınlanma'
+      url: techniques/putting-it-all-together.md
+- title: Makineleri ve sürücüleri yönetme
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Klasik sürücüler ve makineler
+      url: machines/index.md
+    - text: QDK tam durum simülatörü
+      url: machines/full-state-simulator.md
+    - text: Kaynak tahmin aracı
+      url: machines/resources-estimator.md
+    - text: Kuantum izleme simülatörü
+      url: machines/qc-trace-simulator/index.md
+    - text: QDK Toffoli simülatörü
+      url: machines/toffoli-simulator.md
+- title: Q# dili ve kitaplıkları
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Q# diline giriş
+      url: language/index.md
+    - text: Sürüm notları
+      url: relnotes/index.md
+  - linkListType: reference
+    links:
+    - text: Standart kitaplıklar
+      url: libraries/standard/index.md
+    - text: Kimya kitaplığı
+      url: libraries/chemistry/index.md
+    - text: Sayısal kitaplığı
+      url: libraries/numerics/index.md
+  - linkListType: reference
+    links:
+    - text: Q# başvurusu
+      url: https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.bitwise?view=qsharp-preview
+    - text: C# bileşenleri
+      url: https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators?view=quantum-dotnet-latest

@@ -1,0 +1,9 @@
+- name: Standart kitaplıklar
+  topicHref: standard/index.md
+  href: standard/toc.yml
+- name: Kuantum kimyası kitaplığı
+  topicHref: chemistry/index.md
+  href: chemistry/toc.yml
+- name: Kuantum sayısal kitaplığı
+  topicHref: numerics/index.md
+  href: numerics/toc.yml

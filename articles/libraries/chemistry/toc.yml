@@ -1,0 +1,9 @@
+- name: Yükleme ve doğrulama
+  href: installation.md
+- name: Kuantum kimyası kavramları
+  href: concepts/toc.yml
+- name: Kimya kitaplığını çağırma
+  topicHref: samples/index.md
+  href: samples/toc.yml
+- name: Şema
+  href: schema/toc.yml

@@ -1,0 +1,10 @@
+- name: Hataları Raporlama
+  href: reporting-bugs.md
+- name: Belge Katkısında Bulunma
+  href: docs.md
+- name: Çekme İsteklerini Açma
+  href: pull-requests.md
+- name: Koda Katkıda Bulunma
+  href: code.md
+- name: Stil Kılavuzu
+  href: style-guide.md

@@ -1,0 +1,8 @@
+- name: Enerji düzeyi tahminleri edinme
+  href: molecular-hydrogen.md
+- name: Dosyadan Hamiltonian yükleme
+  href: loading-from-file.md
+- name: Kaynak sayılarını alma
+  href: resource-counts.md
+- name: NWChem ile uçtan uca
+  href: end-to-end.md

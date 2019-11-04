@@ -1,0 +1,10 @@
+- name: Derinlik sayacı
+  href: depth-counter.md
+- name: Ayrı giriş denetleyicisi
+  href: distinct-inputs-checker.md
+- name: Geçersiz kılınan kubit kullanımı denetleyicisi
+  href: invalidated-qubits-use-checker.md
+- name: Temel işlem sayacı
+  href: primitive-operations-counter.md
+- name: Genişlik sayacı
+  href: width-counter.md

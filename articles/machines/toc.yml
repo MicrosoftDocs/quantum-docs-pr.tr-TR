@@ -1,0 +1,11 @@
+- name: Klasik makine ve sürücüler
+  href: index.md
+- name: Kuantum simülatörü
+  href: full-state-simulator.md
+- name: Kaynak tahmin aracı
+  href: resources-estimator.md
+- name: Kuantum bilgisayar izleme simülatörü
+  topicHref: qc-trace-simulator/index.md
+  href: qc-trace-simulator/toc.yml
+- name: Toffoli simülatörü
+  href: toffoli-simulator.md
