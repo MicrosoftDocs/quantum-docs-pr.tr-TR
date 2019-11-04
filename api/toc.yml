@@ -1,0 +1,12 @@
+- name: Başvuru
+  items:
+    - name: 'Q# kitaplıkları'
+      href: qsharp/toc.yml
+    - name: .NET kitaplıkları
+      items:
+        - name: İzleme simülatörü
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators'
+        - name: Kuantum kimyası
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry'
+    - name: Python kitaplıkları
+      href: 'https://docs.microsoft.com/python/qsharp'

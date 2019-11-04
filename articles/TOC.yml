@@ -1,0 +1,40 @@
+- name: Microsoft Quantum Belgeleri
+  href: index.yml
+- name: Genel Bakış
+  href: welcome.md
+- name: Hızlı Başlangıçlar
+  items:
+    - name: QDK’yı yükleme
+      href: install-guide/index.md
+    - name: QDK’yı güncelleştirme
+      href: install-guide/update.md
+    - name: İlk kuantum programınızı yazma
+      href: quickstart.md
+- name: Kavramlar
+  items:
+    - name: Quantum geliştirme teknikleri
+      topicHref: techniques/index.md
+      href: techniques/toc.yml
+    - name: 'Q# programlama dili'
+      topicHref: language/index.md
+      href: language/toc.yml
+    - name: 'Q# kitaplıkları'
+      href: libraries/toc.yml
+    - name: Kuantum bilişimi kavramları
+      href: concepts/toc.yml
+    - name: Kuantum makinesi barındırma
+      href: machines/toc.yml
+- name: Kaynaklar
+  items:
+    - name: QDK Sürüm Notları
+      topicHref: relnotes/index.md
+      href: relnotes/toc.yml
+    - name: QDK'ye katkıda bulunma
+      href: contributing/toc.yml
+      topicHref: contributing/index.md
+    - name: Sözlük
+      href: Glossary.md
+    - name: Daha fazla bilgi edinmek için
+      href: for-more-info.md
+    - name: Lisans
+      href: license.md
