@@ -1,4 +1,4 @@
-- name: 'Q# ve dosya yapıları'
+- name: 'Q# programına genel bakış'
   href: file-structure.md
 - name: İşlemler ve işlevler
   href: operations-and-functions.md
