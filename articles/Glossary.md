@@ -1,18 +1,20 @@
 ---
-title: Sözlük | Microsoft Docs
+title: Hisse bilgi işlem sözlüğü | Microsoft Docs
 description: Hisse şartları sözlüğü
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: bfa275b3330ea2c2a541b08f137893b63b6213aa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: ce15fee2be68d41f0b806be50320b562a749c3b7
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183633"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442542"
 ---
+# <a name="quantum-computing-glossary"></a>Hisse bilgi işlem sözlüğü
+
 |Sözleşme Dönemi|Tanım|
 |-------------|----------|
 |Adjoint|İşlemin karmaşık eşleniği devrik. Bir Unitary işleci uygulayan işlemler için, adjoint işlemin tersidir.|
@@ -29,7 +31,7 @@ ms.locfileid: "73183633"
 |Ölçüm|Bir qubitden (veya qubits kümesinden) klasik bir bit elde edin. Daha fazla bilgi için [qubit kavramları](xref:microsoft.quantum.concepts.qubit) bölümüne bakın.|
 |Değiştirilebilir|Değeri oluşturulduktan sonra değiştirilmiş olan bir değişken.|
 |uzayına|İlgili adların toplanması için bir etiket (genellikle işlemler, işlevler ve türler). Örneğin ad alanı [`Microsoft.Quantum.Preparation`](xref:microsoft.quantum.preparation) , ilk durumları hazırlamaya yardımcı olan standart kitaplıkta tanımlanan tüm sembolleri Etiketler.|
-|İşlem|Q # içinde temel hisse yürütme birimi. Bu, kabaca C veya C++ veya Python içindeki bir işleve ya da Java 'daki C# statik bir yönteme eşdeğerdir.|
+|İşlem|Q # içinde temel hisse yürütme birimi. Bu kabaca C, C++ veya Python'da işlevle ya da C# veya Java'da statik yöntemle eşdeğerdir.|
 |İşleç uygulaması|Hisse bir işlem gerçekleştiriliyor. Bu, genellikle geçerli durum vektörüne bir Unitary matrisi uygular. Daha fazla ayrıntı için bkz. [hisse ve tanıtım kavramlarına giriş](xref:microsoft.quantum.concepts.intro) .|
 |Oracle|Çalışma zamanında bir hisse algoritmasına veri bağımlı bilgiler sağlayan bir altyordam. Genellikle amaç, üst konumdaki girişlere karşılık gelen çıkışların üst konumunu sağlamaktır.   |
 |Kısmi uygulama|Tüm gerekli parametreler olmadan bir işlev veya işlem çağrılıyor. , Yalnızca gelecekteki bir uygulama sırasında sağlanan eksik parametrelere ihtiyacı olan yeni bir çağrılabilir döndürür.|

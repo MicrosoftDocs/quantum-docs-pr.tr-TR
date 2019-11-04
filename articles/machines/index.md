@@ -1,19 +1,19 @@
 ---
-title: Kuantum simülatörler ve klasik sürücüler | Microsoft Docs
+title: Kuantum simülatörleri ve konak uygulamaları | Microsoft Docs
 description: Genellikle C# veya Q# olmak üzere klasik bir bilgi işlem .NET dili ile kuantum simülatörleri çalıştırmayı açıklar.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: 5ac79280669ae0acfe993a1c2ae1c069b0c01848
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 14aed75ed0ed192f88699b1c7dbacfae23f74642
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035111"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442224"
 ---
-# <a name="classical-drivers-and-machines"></a>Klasik Sürücüler ve Makineler
+# <a name="quantum-simulators-and-host-applications"></a>Kuantum simülatörleri ve konak uygulamaları
 
 ## <a name="what-youll-learn"></a>Öğrenecekleriniz
 
@@ -52,7 +52,7 @@ Bu sınıfların tümü `Microsoft.Quantum.Simulation.Simulators` ad alanında t
 * [İzleme tabanlı kaynak tahmin aracı](xref:microsoft.quantum.machines.qc-trace-simulator.intro), `QCTraceSimulator` sınıfı. Algoritmanın tüm çağrı grafı için kaynak tüketiminin gelişmiş analizini yapmaya olanak tanır.
 * Bir [Toffoli simülatörü](xref:microsoft.quantum.machines.toffoli-simulator), `ToffoliSimulator` sınıfı.
 
-## <a name="writing-a-classical-driver-program"></a>Klasik Sürücü Programı Yazma
+## <a name="writing-a-host-application"></a>Konak uygulama yazma
 
 [Kuantum program yazma](xref:microsoft.quantum.write-program) bölümünde teleport algoritmamız için basit bir C# sürücüsü yazmıştık. Bir C# sürücüsünün başlıca 4 amacı vardır:
 
@@ -94,7 +94,7 @@ Bağımsız değişkenleri bir `Run` yöntemine geçirirken uygulanacak bazı in
 * Diziler bir `Microsoft.Quantum.Simulation.Core.QArray<T>` nesnesine sarmalanmış olmalıdır.
     `QArray` sınıfı, uygun nesnelerin sıralanmış herhangi bir koleksiyonunu (`IEnumerable<T>`) alabilen bir oluşturucuya sahiptir.
 * Q# dilinde `()` olan boş demet, C# dilinde `QVoid.Instance` ile temsil edilir.
-* Boş olmayan demetler .NET `ValueType` örnekleri olarak temsil edilir.
+* Boş olmayan demetler .NET `ValueTuple` örnekleri olarak temsil edilir.
 * Kullanıcı tanımlı Q# türleri, temel tür olarak geçirilir.
 * Bir işlemi veya işlevi `Run` yöntemine geçirmek için, simülatörün `Get<>` yöntemini kullanarak işlemin veya işlevin sınıfının bir örneğini elde etmeniz gerekir.
 

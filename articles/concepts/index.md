@@ -1,21 +1,21 @@
 ---
-title: Kuantum Bilişimi Kavramları
-description: Kuantum bilişimi nedir?
+title: Kuantum bilişiminin geçmişi ve arka planı
+description: Kuantum bilişiminin geçmişini, nasıl çalıştığını gösteren bazı arka plan bilgilerini ve Microsoft Quantum Development Kit'i öğrenin.
 author: QuantumWriter
-ms.author: nawiebe@microsoft.com
+ms.author: nawiebe
 uid: microsoft.quantum.concepts.intro
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 37f5181f2d9e4e11efa29811c24116ca7d64f81b
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fb1df9e3460c18d0cdc0ff430fa236192b3aa2fa
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72978960"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442310"
 ---
-# <a name="what-is-quantum-computing"></a>Kuantum Bilişimi nedir?
+# <a name="quantum-computing-history-and-background"></a>Kuantum bilişiminin geçmişi ve arka planı
 
-Son birkaç yıl içinde birkaç yeni bilgisayar teknolojisi ortaya çıktı ve kuantum bilişimi muhtemelen geliştiricilerin tarafında en büyük yaklaşım değişimini gerektiren teknoloji oldu.  Kuantum bilgisayarlar 1980’li yıllarda [Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) ve [Yuri Manin](https://en.wikipedia.org/wiki/Yuri_Manin) tarafından önerilmiştir.  Kuantum bilişiminin altında yatan sezgi, genellikle fiziğin en büyük sıkıntılarından biri olarak görülen şeydir: basit sistemleri bile modelleyememe sorunuyla karşı karşıya kalan dikkat çekici bilimsel ilerleme. Bildiğiniz gibi, kuantum mekaniği 1900 ile 1925 arasında geliştirildi ve kimya, yoğun madde fiziği ve bilgisayar yongalarından LED aydınlatmaya varan teknolojilerin dayandığı mihenk taşı olmaya devam ediyor.  Bu başarılara karşın, en basit sistemlerin bazıları bile insanın kuantum mekaniğiyle modelleme becerisinin ötesinde görünmektedir.  Bunun nedeni, birbiriyle etkileşimde bulunan birkaç düzine parçacığın gerektirdiği bilgi işlem gücünün, geleneksel bir bilgisayarın yüzlerce yılda sağlayabileceğinden bile fazla olmasıdır.
+Son birkaç yıl içinde birkaç yeni bilgisayar teknolojisi ortaya çıktı ve kuantum bilişimi muhtemelen geliştiricilerin tarafında en büyük yaklaşım değişimini gerektiren teknoloji oldu.  Kuantum bilgisayarlar 1980’li yıllarda [Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) ve [Yuri Manin](https://en.wikipedia.org/wiki/Yuri_Manin) tarafından önerilmiştir.  Kuantum bilişiminin altında yatan sezgi, genellikle fiziğin en büyük sıkıntılarından biri olarak görülen şeydir: basit sistemleri bile modelleyememe sorunuyla karşı karşıya kalan dikkat çekici bilimsel ilerleme. Bildiğiniz gibi kuantum mekaniği 1900 ile 1925 arasında geliştirildi ve kimya, yoğun madde fiziği ve bilgisayar yongalarından LED aydınlatmaya varan teknolojilerin dayandığı mihenk taşı olmaya devam ediyor.  Bu başarılara karşın, en basit sistemlerin bazıları bile insanın kuantum mekaniğiyle modelleme becerisinin ötesinde görünmektedir.  Bunun nedeni, birbiriyle etkileşimde bulunan birkaç düzine parçacığın gerektirdiği bilgi işlem gücünün, geleneksel bir bilgisayarın yüzlerce yılda sağlayabileceğinden bile fazla olmasıdır.
 
 Kuantum mekaniğinin benzetimini yapmanın neden zor olduğunu anlamanın birçok yolu vardır.  Belki de en basit olanı, kuantum teorisinin kuantum düzeyinde bir maddenin eşzamanlı olarak birkaç farklı olası yapılandırma (*hal* olarak bilinir) halinde olduğunu söyleyen bir teori olarak yorumlanmasıdır.  Klasik olasılık teorisinin aksine, kuantum halinin potansiyel olarak gözlemlenebilecek bu çok sayıdaki yapılandırması bir dalga havuzundaki dalgalar gibi birbiriyle çakışabilir.  Bu çakışma, kuantum hal yapılandırmalarını elde etmek için istatistiksel örnekleme kullanmayı engeller.  Bunun yerine, kuantum evrimini anlamak istiyorsak bir kuantum sisteminin bulunması *mümkün olan her* yapılandırmayı izlememiz gerekir.  
 

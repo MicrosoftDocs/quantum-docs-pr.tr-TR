@@ -1,4 +1,4 @@
-- name: Klasik makine ve sürücüler
+- name: Genel Bakış
   href: index.md
 - name: Kuantum simülatörü
   href: full-state-simulator.md

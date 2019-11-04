@@ -1,21 +1,18 @@
 ---
-title: Microsoft Quantum Development Kit lisansı | Microsoft Docs
+title: Microsoft Quantum Development Kit lisansı
 description: Microsoft Quantum Development Kit lisansı
-services: service-name-with-dashes-AZURE-ONLY
-keywords: SEO uzmanınıza danışmadan anahtar sözcükler eklemeyin veya anahtar sözcükleri düzenlemeyin.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
-ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
-ms.openlocfilehash: e14720143144d4890358a1c6167541a0ea5a8362
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.author: cpalmer
+ms.date: 11/04/2019
+ms.openlocfilehash: d864c3e4ecefa6f998b9a893ecc4a3995d67dac4
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184942"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463373"
 ---
 # <a name="microsoft-software-license-terms"></a>MICROSOFT YAZILIMI LİSANS KOŞULLARI 
-# <a name="microsoft-quantum-development-kit-preview"></a>MICROSOFT HISSE GELIŞTIRME SETI (ÖNIZLEME)
+## <a name="microsoft-quantum-development-kit-preview"></a>MICROSOFT HISSE GELIŞTIRME SETI (ÖNIZLEME)
 
 
 * * *
@@ -61,13 +58,13 @@ BU LISANS KOŞULLARıNA UYMANıZ DURUMUNDA AŞAĞıDAKI HAKLARA SAHIP OLURSUNUZ.
     
     e. yazılımı paylaşma, yayımlama, dağıtma veya ödünç sağlama, yazılımın başkalarının kullanması için tek başına barındırılan bir çözüm olarak sağlanması veya yazılımı veya bu anlaşmayı herhangi bir üçüncü tarafa aktarmak.
 
-1. **dışarı aktarma kısıtlamaları**. Hedeflere, son kullanıcılara ve son kullanıma yönelik kısıtlamalar dahil olmak üzere, yazılım için geçerli olan tüm yurtiçi ve uluslararası ihracat yasalarına ve düzenlemelerine uymanız gerekir. Dışarı aktarma kısıtlamaları hakkında daha fazla bilgi için http://aka.ms/exporting ziyaret edin.
+1. **dışarı aktarma kısıtlamaları**. Hedeflere, son kullanıcılara ve son kullanıma yönelik kısıtlamalar dahil olmak üzere, yazılım için geçerli olan tüm yurtiçi ve uluslararası ihracat yasalarına ve düzenlemelerine uymanız gerekir. Dışarı aktarma kısıtlamaları hakkında daha fazla bilgi için https://aka.ms/exporting ziyaret edin.
 
 1. **Destek Hizmetleri**. Microsoft bu sözleşmenin, yazılım için herhangi bir destek hizmeti sağlamak üzere yükümlülüğü yoktur. "Olduğu gibi", "tüm hatalarıyla" ve herhangi bir garanti olmadan sunulan tüm destek.
 
 1. **Güncelleştirmeler**. Yazılım güncelleştirmeleri düzenli aralıklarla denetleyebilir ve sizin için indirebilir ve yükleyebilir. Yalnızca Microsoft veya yetkili kaynaklardan güncelleştirmeleri alabilirsiniz. Microsoft 'un size güncelleştirmeler sağlaması için sisteminizi güncelleştirmesi gerekebilir. Bu otomatik güncelleştirmeleri ek bir bildirim olmadan almayı kabul etmiş olursunuz. Güncelleştirmeler var olan tüm yazılım özelliklerini, Hizmetleri veya çevresel cihazları içermeyebilir veya desteklemiyor olabilir.
 
-1. **bağlama YÖNETIMI ve sınıf EYLEMI feragat aldığınız. Bu bölüm, içinde yaşadığınız (veya bir işletme, iş kolu, ana iş yeri) Birleşik Devletler geçerlidir**.  Ve Microsoft 'un bir itirazı varsa, siz ve Microsoft bu sorunu çözmek için 60 gün kullanmayı kabul etmiş olursunuz. Siz ve Microsoft, siz ve Microsoft, Federal Yönetim Yasası ("FAA") altındaki **Amerikan yönetimi ilişkisi öncesinde bireysel bir yönetimi bağlamayı** kabul etmiş ve **bir Jbir veya Jury önünde mahkeme yapmak için**kabul etmiş olursunuz. Bunun yerine, nötr bir aracı karar vermeyecektir. **Sınıf eylemi vavalar, sınıf genelinde yönetim, özel Attorney-genel eylemler**ve birisinin temsili bir kapasitede yaptığı başka herhangi bir işleme **izin verilmez**; ya da tüm taraflar için onay olmadan tek tek bildirileri birleştirme. Tüm yönetim anlaşması daha fazla terim içerir ve http://aka.ms/arb-agreement-1. Siz ve Microsoft bu koşulları kabul etmiş olursunuz.
+1. **bağlama YÖNETIMI ve sınıf EYLEMI feragat aldığınız. Bu bölüm, içinde yaşadığınız (veya bir işletme, iş kolu, ana iş yeri) Birleşik Devletler geçerlidir**.  Ve Microsoft 'un bir itirazı varsa, siz ve Microsoft bu sorunu çözmek için 60 gün kullanmayı kabul etmiş olursunuz. Siz ve Microsoft, siz ve Microsoft, Federal Yönetim Yasası ("FAA") altındaki **Amerikan yönetimi ilişkisi öncesinde bireysel bir yönetimi bağlamayı** kabul etmiş ve **bir Jbir veya Jury önünde mahkeme yapmak için**kabul etmiş olursunuz. Bunun yerine, nötr bir aracı karar vermeyecektir. **Sınıf eylemi vavalar, sınıf genelinde yönetim, özel Attorney-genel eylemler**ve birisinin temsili bir kapasitede yaptığı başka herhangi bir işleme **izin verilmez**; ya da tüm taraflar için onay olmadan tek tek bildirileri birleştirme. Tüm yönetim anlaşması daha fazla terim içerir ve https://aka.ms/arb-agreement-1. Siz ve Microsoft bu koşulları kabul etmiş olursunuz.
 
 1. **sözleşmenin tamamı**. İşbu sözleşme ve Microsoft 'un ek, güncelleştirmeler veya üçüncü taraf uygulamalar için sağlayabilen tüm diğer şartlar, yazılım için tüm anlaşmadır.
 

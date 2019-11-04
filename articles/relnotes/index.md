@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 169a8ac31c53f2892624618a227d8bdbdc458458
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: f8d7071b4917aba7ba7eec4e84ba4f46dff3618a
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72958888"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442169"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -20,6 +20,19 @@ Bu makale her Quantum Development Kit sürümüne ilişkin bilgileri içerir.
 Yükleme yönergeleri için bu [yükleme kılavuzuna](xref:microsoft.quantum.install) başvurun.
 
 Güncelleştirme yönergeleri için bu [güncelleştirme kılavuzuna](xref:microsoft.quantum.update) başvurun.
+
+## <a name="version-01019103107"></a>Sürüm 0.10.1910.3107
+
+*Sürüm tarihi: 1 Kasım 2019*
+
+Bu sürüm aşağıdakileri içerir:
+
+- Dil sunucusunu kendi içinde bir yürütülebilir dosya olarak dağıtmak ve .NET Core SDK sürüm bağımlılığını ortadan kaldırmak için Visual Studio Code ve Visual Studio uzantılarında yapılan güncelleştirmeler  
+- .NET Core 3.0'a geçiş
+- Yeni `Fail` yönteminin kullanıma sunulmasıyla Microsoft.Quantum.Simulation.Core.IOperationFactory'de hataya neden olan değişiklik. Yalnızca SimulatorBase'e kadar yayılmayan özel simülatörleri etkiler. Diğer ayrıntılar için [GitHub'da çekme isteğine bakın](https://github.com/microsoft/qsharp-runtime/pull/59).
+- Kullanım dışı bırakılan öznitelikler için yeni destek
+
+[Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
 
 ## <a name="version-0919093002"></a>Sürüm 0.9.1909.3002
 
@@ -448,7 +461,7 @@ Bu sürüm ile topluluk tarafından bildirilen bazı sorunları düzeltildi. Bu 
 #### <a name="hardware-and-software-requirements"></a>Donanım ve Yazılım Gereksinimleri
 
 - Quantum Development Kit ile sunulan simülatörü çalıştırmak için Microsoft Windows’un 64 bit kurulumu gerekir.
-- Quantum Deevelopment Kit ile yüklenen Microsoft’un kuantum simülatörü Advance Vector Uzantıları (AVX) kullanır ve AVX’in etkinleştirildiği bir CPU’yu gerektirir. Q1 2011 (Sandy Bridge) veya daha sonra çıkan Intel işlemciler AVX’i destekler. Daha önce çıkan CPU’lara yönelik desteği değerlendiriyoruz ve ayrıntıları daha sonra açıklayabiliriz.
+- Quantum Development Kit ile yüklenen Microsoft’un kuantum simülatörü Gelişmiş Vektör Uzantıları (AVX) kullanır ve AVX’in etkinleştirildiği bir CPU’yu gerektirir. Q1 2011 (Sandy Bridge) veya daha sonra çıkan Intel işlemciler AVX’i destekler. Daha önce çıkan CPU’lara yönelik desteği değerlendiriyoruz ve ayrıntıları daha sonra açıklayabiliriz.
 
 #### <a name="project-creation"></a>Proje Oluşturma
 

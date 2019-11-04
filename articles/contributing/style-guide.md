@@ -6,27 +6,23 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 56455e9d5cd452b8620ee794f40563d1d3040193
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 4050e2ee9e516aed7a8ba1398792562926808ee0
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183854"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463312"
 ---
 # <a name="q-style-guide"></a>S # stil kılavuzu #
 ## <a name="general-conventions"></a>Genel kurallar ##
 
 Bu kılavuzda önerilen kurallar, Q # dilinde yazılmış program ve kitaplıkların okunmasını ve anlaşılması daha kolay hale getirmeye yardımcı olmak için tasarlanmıştır.
 
-# <a name="guidancetabguidance"></a>[Rehber](#tab/guidance)
+## <a name="guidance"></a>Kılavuz
 
 Şunları öneririz:
 
 - Kullanıcılarınız için daha okunaklı ve anlaşılır kod sağlamak üzere kasıtlı olarak yapmadığınız müddetçe hiçbir şekilde hiçbir kuralı yok saymayın.
-
-# <a name="examplestabexamples"></a>[Örnekler](#tab/examples)
-
-***
 
 ## <a name="naming-conventions"></a>Adlandırma kuralları ##
 
@@ -67,9 +63,9 @@ Bu örnekte olduğu gibi diğer fiiller da yararlı olabilir `IterateThroughCart
 | Ü | Beklenen efekt |
 | ---- | ------ |
 | Başvurun | Giriş olarak verilen bir işlem çağrılır |
-| Vermediğini | Olası bir hisse ölçüsünün sonucu hakkında bir varsayım simülatör tarafından denetlenir |
+| Assert | Olası bir hisse ölçüsünün sonucu hakkında bir varsayım simülatör tarafından denetlenir |
 | Tahmin | Bir veya daha fazla ölçüden çizilen bir tahmini temsil eden klasik bir değer döndürüldü |
-| Meye | Bir hisse ölçümü gerçekleştirilir ve sonucu kullanıcıya döndürülür |
+| Measure | Bir hisse ölçümü gerçekleştirilir ve sonucu kullanıcıya döndürülür |
 | Hazırlanın | Belirli bir qubits kaydı belirli bir duruma başlatılır |
 | Örnek | Klasik bir değer, bazı dağılılardan rasgele döndürülür |
 

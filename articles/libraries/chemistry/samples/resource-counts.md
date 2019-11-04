@@ -6,16 +6,16 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.resourcecounts
-ms.openlocfilehash: b28a27c4c1f1e64644fcfb074a731ff7b65cacb6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: f9311c1987ced4336c4e98bdb984fbee009e9acc
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184092"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442458"
 ---
-## <a name="obtaining-resource-counts"></a>Kaynak sayılarını alma
+# <a name="obtaining-resource-counts"></a>Kaynak sayılarını alma
 
-Klasik bilgisayarlardaki $n $ qubit benzetimi yapma maliyeti, $n $ ile katlanarak ölçeklenebilir. Bu, tam durum simülatörü ile gerçekleştiriyoruz bir hisse ımız simülasyonu boyutunu büyük ölçüde sınırlar. Büyük Chemistry örnekleri için, yine de yararlı bilgiler elde edebilirsiniz. Burada, bir T-kapısı veya CNOT kapısı sayısı gibi kaynak maliyetlerinin, [izleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro)kullanılarak otomatik bir şekilde elde edilmesi için de Bu tür bilgiler, bu hisse maçör. Başvuru için bkz. sunulan `GetGateCount` örneği.
+Klasik bilgisayarlarda $n $ qubits benzetimi yapma maliyeti $n $ ile katlanarak ölçeklendirin. Bu, tam durum simülatörü ile gerçekleştiriyoruz bir hisse ımız simülasyonu boyutunu büyük ölçüde sınırlar. Büyük Chemistry örnekleri için, yine de yararlı bilgiler elde edebilirsiniz. Burada, bir T-kapısı veya CNOT kapısı sayısı gibi kaynak maliyetlerinin, [izleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro)kullanılarak otomatik bir şekilde elde edilmesi için de Bu tür bilgiler, bu hisse maçör. Başvuru için bkz. sunulan `GetGateCount` örneği.
 
 [Dosya yükleme](xref:microsoft.quantum.chemistry.examples.loadhamiltonian) örneğinde anlatıldığı gibi Broombridge şemasından yüklenmiş bir `FermionHamiltonian` örneğine zaten sahip olduğumuz olduğunu varsayalım. 
 
@@ -83,7 +83,7 @@ operation RunQubitizationStep (qSharpData: JordanWignerEncodingData) : Double {
 }
 ```
 
-Artık ilgilendiğiniz kaynakları izlemek için izleme simülatörünü yapılandıracağız. Bu durumda, `usePrimitiveOperationsCounter` bayrağını `true`ayarlayarak temel hisse işlemleri sayıyoruz. Soru-cevap, her türlü varsa, Q # kodunun, ölçüm sonuçlarının düzgün bir şekilde gerçekleştirilmediğini doğru bir şekilde olmadığı durumlarda özel durumların önüne geçmek için `false` olarak ayarlanır `throwOnUnconstraintMeasurement`.
+Artık ilgilendiğiniz kaynakları izlemek için izleme simülatörünü yapılandıracağız. Bu durumda, `usePrimitiveOperationsCounter` bayrağını `true`ayarlayarak temel hisse işlemleri sayıyoruz. Bir teknik ayrıntı `throwOnUnconstraintMeasurement`, Q # kodunun, varsa ölçüm sonuçları olasılığını doğru bir şekilde olmadığı durumlarda özel durumları önlemek için `false` olarak ayarlanır.
 
 ```csharp
 private static QCTraceSimulator CreateAndConfigureTraceSim()

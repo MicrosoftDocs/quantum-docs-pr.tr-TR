@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 3ec53934436b47908fd4d794a98933010f6059a7
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 2a098d89f13278d7137bf182a184a74afb9393be
+ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035298"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462877"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum Development Kit (QDK) yükleme
 
@@ -26,11 +26,13 @@ Seçtiğiniz geliştirme ortamına bağlı olarak, farklı yükleme adımları v
 
 ## <a name="develop-with-python"></a>Python ile geliştirme
 
+Python için qsharp paketi, Python’da Q# işlemleri ve işlevlerinin simülasyonunu yapmayı kolaylaştırır. IQ# (ay-kü-şarp okunur) öncelikli olarak Jupyter ve Python tarafından kullanılan ve Q# işlemlerinin derlenmesine ve benzetiminin yapılmasına yönelik temel işlevselliği sağlayan bir uzantıdır.
+
 1. Ön koşullar
 
     - [Python](https://www.python.org/downloads/) 3.6 veya üzeri
     - [PIP](https://pip.pypa.io/en/stable/installing) Python paket yöneticisi
-    - [.NET Core SDK 2.1 veya üzeri](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 veya üzeri](https://www.microsoft.com/net/download)
 
 1. `iqsharp` paketini yükleyin
 
@@ -87,11 +89,16 @@ Seçtiğiniz geliştirme ortamına bağlı olarak, farklı yükleme adımları v
 
 ## <a name="develop-with-jupyter-notebooks"></a>Jupyter not defterleri ile geliştirme
 
+Akademik ortamlarda, bilimsel laboratuvarlarda ve İnternet'te işbirliğine dayalı programlamada tercih edilen Jupyter Notebooks şimdi Q# kodu da dahil olmak üzere yerinde kod yürütme, ayrıca yönergeler, notlar ve başka içerik sağlar.  Kendi Q# not defterlerinizi oluşturmaya başlamak için gerekenler aşağıda verilmiştir.
+
+IQ# (ay-kü-şarp okunur) öncelikli olarak Jupyter ve Python tarafından .NET Core SDK için kullanılan ve Q# işlemlerinin derlenmesine ve benzetiminin yapılmasına yönelik temel işlevselliği sağlayan bir uzantıdır.
+
+
 1. Ön koşullar
 
     - [Python](https://www.python.org/downloads/) 3.6 veya üzeri
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
-    - [.NET Core SDK 2.1 veya üzeri](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 veya üzeri](https://www.microsoft.com/net/download)
 
 1. `iqsharp` paketini yükleyin
 
@@ -120,11 +127,22 @@ Seçtiğiniz geliştirme ortamına bağlı olarak, farklı yükleme adımları v
 
     - Not defterinin şu hücresini çalıştırın:
 
-        ![Jupyter not defteri hücresi](~/media/install-guide-jupyter.png)
+        ![Q# kodu içeren Jupyter not defteri hücresi](~/media/install-guide-jupyter.png)
 
         Hücrenin çıktısında `SayHello` görmeniz gerekir. Jupyter not defterlerinde çalışırken Q# kodu derlenir ve not defteri bulduğu işlemlerin adını çıkarır.
 
+
+    - Yeni bir hücrede `%simulate` magic kullanarak yeni oluşturduğunuz işlemin kuantum bilgisayarda yürütmesinin benzetimini yapın:
+
+        ![%simulate magic içeren Jupyter not defteri hücresi](~/media/install-guide-jupyter-simulate.png)
+
+        Ekrana yazdırılmış bir iletiyle birlikte çağırdığınız işlemin sonucuna da (bu örnekte boş) görüyor olmalısınız.
+
+
 ## <a name="develop-with-c-on-windows-using-visual-studio"></a>Visual Studio kullanarak Windows üzerinde C# ile geliştirme
+
+Visual Studio Q# programları geliştirmek için zengin bir ortam sunar; geliştiricilere uygulamalarını oluştururken yol gösteren kod tamamlama ve söz dizimi vurgulama gibi harika özellikler sağlar.  Q# Visual Studio uzantısı hem Q# dosyaları ve projeleri için şablonlar hem de söz dizimi vurgulama özelliği ve IntelliSense desteği içerir.
+
 
 1. Ön koşullar
 
@@ -158,12 +176,14 @@ Seçtiğiniz geliştirme ortamına bağlı olarak, farklı yükleme adımları v
 > [!NOTE]
 > * Bir Visual Studio çözümünde birden fazla projeniz varsa, çözümde yer alan tüm projelerin çözüm ile aynı klasörde veya bunun bir alt klasöründe olması gerekir.  
 
-## <a name="develop-with-c-using-vs-code"></a>VS Code kullanarak C# ile geliştirme
+## <a name="develop-with-c-using-visual-studio-code"></a>Visual Studio Code kullanarak C# ile geliştirme
+
+Visual Studio Code (VS Code) Windows, Linux ve Mac gibi çeşitli bilgisayar ortamlarında Q# programları geliştirmek için zengin bir ortam sunar; geliştiricilere uygulamalarını oluştururken yol gösteren kod tamamlama ve söz dizimi vurgulama gibi harika özellikler sağlar.  Q# VS Code uzantısı söz dizimi vurgulama özelliği ve Q# kod parçacıkları içerir.
 
 1. Ön koşullar
 
    - [VS Code](https://code.visualstudio.com/download)
-   - [.NET Core SDK 2.1 veya üzeri](https://www.microsoft.com/net/download)
+   - [.NET Core SDK 3.0 veya üzeri](https://www.microsoft.com/net/download)
 
 1. Kuantum VS Code uzantısını yükleme
 
@@ -195,9 +215,11 @@ Seçtiğiniz geliştirme ortamına bağlı olarak, farklı yükleme adımları v
 
 ## <a name="develop-with-c-using-the-dotnet-command-line-tool"></a>`dotnet` komut satırı aracını kullanarak C# ile geliştirme
 
+Kuşkusuz yalnızca .NET Core SDK'sını ve QDK proje şablonlarını yükleyerek Q# programlarını komut satırından da oluşturup çalıştırabilirsiniz. 
+
 1. Ön koşullar
 
-    - [.NET Core SDK 2.1 veya üzeri](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 veya üzeri](https://www.microsoft.com/net/download)
 
 1. .NET için Kuantum proje şablonlarını yükleme
 
