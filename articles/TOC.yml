@@ -1,15 +1,39 @@
 - name: Microsoft Quantum Belgeleri
   href: index.yml
 - name: Genel Bakış
-  href: welcome.md
+  items:
+    - name: Başlarken
+      href: welcome.md
+    - name: Kuantum bilişimi hakkında beş soru
+      items:
+        - name: Kuantum bilişimi nedir?
+          href: overview/what-is-quantum-computing.md
+        - name: Bir kuantum bilgisayar ne yapabilir?
+          href: overview/quantum-computers.md
+        - name: Kuantum bilişimini neden öğrenmeliyim?
+          href: overview/why-learn-quantum-computing.md
+        - name: 'Q# nedir?'
+          href: overview/what-is-qsharp.md
+        - name: Kuantum bilişimi öğrenme
+          href: overview/how-to-learn-quantum-computing.md
+    - name: Kuantum Katalarıyla öğrenme
+      href: intro-to-katas.md
 - name: Hızlı Başlangıçlar
+  items:
+    - name: Kuantum rastgele sayı oluşturucusu
+      href: quickstarts/qrng.md
+    - name: 'Q# ile kuantumun temelleri'
+      href: quickstart.md
+    - name: Grover’ın arama algoritmasını uygulama
+      href: quickstarts/search.md
+- name: Nasıl yapılır kılavuzları
   items:
     - name: QDK’yı yükleme
       href: install-guide/index.md
     - name: QDK’yı güncelleştirme
       href: install-guide/update.md
-    - name: İlk kuantum programınızı yazma
-      href: quickstart.md
+    - name: 'Q# projesi oluşturma'
+      href: how-to-guides/create-qsharp-project.md
 - name: Kavramlar
   items:
     - name: Quantum geliştirme teknikleri
@@ -22,7 +46,7 @@
       href: libraries/toc.yml
     - name: Kuantum bilişimi kavramları
       href: concepts/toc.yml
-    - name: Kuantum makinesi barındırma
+    - name: Kuantum simülatörleri ve kaynak tahmin araçları
       href: machines/toc.yml
 - name: Kaynaklar
   items:
