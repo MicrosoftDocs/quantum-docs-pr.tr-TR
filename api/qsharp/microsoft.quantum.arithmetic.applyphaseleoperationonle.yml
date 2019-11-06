@@ -7,9 +7,9 @@ summary: <xref:microsoft.quantum.arithmetic.phaselittleendian>türünde bir hede
 remarks: Kayıt, <xref:microsoft.quantum.canon.qftle> kullanımı tarafından `PhaseLittleEndian` dönüştürülür ve ardından `op`uygulamasından sonra özgün gösterimine döndürülür.
 syntax: 'operation ApplyPhaseLEOperationOnLE (op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
-  content: '(OP: (Microsoft. hisse. aritmetik. Phaselittliendian = > Unit), target: Microsoft. hisse. aritmetik. Littliendian)'
+  content: '(op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
-  - name: üs
+  - name: op
     summary: Uygulanacak işlem.
     isOperation: true
     input:
@@ -19,11 +19,11 @@ input:
       types:
       - isPrimitive: true
         uid: Unit
-  - name: hedef
+  - name: target
     summary: İşlemin uygulandığı kayıt.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
-  content: Birim
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -31,9 +31,10 @@ seeAlso:
 - microsoft.quantum.canon.applyphaseleoperationonlea
 - microsoft.quantum.canon.applyphaseleoperationonlea
 - microsoft.quantum.canon.applyphaseleoperationonleca
-ms.openlocfilehash: f610069706c06a3454c15b2f5170cce4b478530d
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73057237"
+metadata:
+  ms.openlocfilehash: f610069706c06a3454c15b2f5170cce4b478530d
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73057237"

@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.decomposeintotimestepsca
 name: DecomposeIntoTimeStepsCA
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Belirli bir işlem için Trour – Suzuki tümleştirici uygulayan bir işlem döndürür.
+summary: Returns an operation implementing the Trotter–Suzuki integrator for a given operation.
 syntax: "function DecomposeIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
 references: >-
   We use the implementation in
@@ -11,12 +11,12 @@ references: >-
 
   - [ *D. W. Berry, G. Ahokas, R. Cleve, B. C. Sanders* ](https://arxiv.org/abs/quant-ph/0508139)
 input:
-  content: "((nSteps: Int, Op: ((Int, Double, 'T) = > Unit, sıfatı + CTL)), Tronaorder: INT)"
+  content: "((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int)"
   types:
-  - name: Adımları
+  - name: nSteps
     isPrimitive: true
     uid: Int
-  - name: üs
+  - name: op
     isOperation: true
     input:
       types:
@@ -33,17 +33,17 @@ input:
     functors:
     - Adjoint
     - Controlled
-  - name: Troödeme siparişi
+  - name: trotterOrder
     summary: >-
-      Kullanılacak Trour – Suzuki tümleştirici sırasını seçer.
+      Selects the order of the Trotter–Suzuki integrator to be used.
 
-      1 ve 2. sipariş şu anda destekleniyor.
+      Order 1 and 2 are currently supported.
     isPrimitive: true
     uid: Int
 output:
-  content: ((Çift, 'T) = > birimi ayarlama ve CTL)
+  content: ((Double, 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Birinci parametrenin `Double` tümleştirme adımı boyutu olduğu ve ikinci parametrenin ise hedefin üzerinde çalıştığı, Haur – Suzuki tümleştirmesini uygulayan bir Unitary döndürür.
+  - summary: Returns a unitary implementing the Trotter–Suzuki integrator, where the first parameter `Double` is the integration step size, and the second parameter is the target acted upon.
     isOperation: true
     input:
       types:
@@ -60,10 +60,11 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: Her zaman adımının üzerinde işlem yapması gereken tür; genellikle `Qubit[]` ya da `Qubit`.
-ms.openlocfilehash: 328db9b314320c724cf03adb19ee59d63a33e56e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067841"
+  summary: The type which each time step should act upon; typically, either `Qubit[]` or `Qubit`.
+metadata:
+  ms.openlocfilehash: 328db9b314320c724cf03adb19ee59d63a33e56e
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067841"

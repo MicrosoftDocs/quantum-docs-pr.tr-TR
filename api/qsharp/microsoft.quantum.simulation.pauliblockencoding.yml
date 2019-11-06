@@ -4,39 +4,40 @@ name: PauliBlockEncoding
 type: function
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  Hamiltonian için blok kodlama Unitary oluşturur.
+  Creates a block-encoding unitary for a Hamiltonian.
 
 
-  Hamiltonian $H = \sum_{j}\alpha_j P_j $, her biri gerçek katsayı $ \harflerden _j $ olan Pauli terimlerinin toplamı $P _j $ ile açıklanmıştır.
-remarks: Bu, $ \ sum_ {j} \ sqrt {\ alpha_j/\ Alpha} \ Tus{j} $ durumunun hazırlanması ve hazırlanması ve çarpma kontrollü bir Unitary <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> ve <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>oluşturmak yoluyla elde edilir.
+  The Hamiltonian $H=\sum_{j}\alpha_j P_j$ is described by a sum of Pauli terms $P_j$, each with real coefficient $\alpha_j$.
+remarks: This is obtained by preparing and unpreparing the state $\sum_{j}\sqrt{\alpha_j/\alpha}\ket{j}$, and constructing a multiply-controlled unitary <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> and <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>.
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystem
-    summary: Pauli koşullarının toplamı olarak $H $ tanımlayan bir `GeneratorSystem`
+    summary: A `GeneratorSystem` that describes $H$ as a sum of Pauli terms
     uid: microsoft.quantum.simulation.generatorsystem
 output:
   content: (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)
   types:
   - summary: >-
-      ## <a name="first-parameter"></a>İlk parametre
+      ## <a name="first-parameter"></a>First parameter
 
 
-      Katsayıların bir normu $ \Alpha = \sum_{j} | \harflerden _j | $.
+      The one-norm of coefficients $\alpha=\sum_{j}|\alpha_j|$.
 
 
-      ## <a name="second-parameter"></a>İkinci parametre
+      ## <a name="second-parameter"></a>Second parameter
 
 
-      Hamiltonian $H $ 'ın `BlockEncodingReflection` Unitary $U $. Bu Unitary, $U ^ 2 = I $ ile aynı zamanda bir yansıdır.
+      A `BlockEncodingReflection` unitary $U$ of the Hamiltonian $H$. As this unitary satisfies $U^2 = I$, it is also a reflection.
     types:
     - isPrimitive: true
       uid: Double
     - uid: microsoft.quantum.simulation.blockencodingreflection
-ms.openlocfilehash: 352ab71457601c38b22e93f706cb59f50bf24151
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73216144"
+metadata:
+  ms.openlocfilehash: 352ab71457601c38b22e93f706cb59f50bf24151
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73216144"

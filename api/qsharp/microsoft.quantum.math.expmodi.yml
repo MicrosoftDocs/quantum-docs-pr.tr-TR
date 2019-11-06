@@ -4,16 +4,16 @@ name: ExpModI
 type: function
 namespace: Microsoft.Quantum.Math
 summary: >-
-  Belirli bir mod için verilen bir kuvvete verilen bir tamsayıyı döndürür.
+  Returns an integer raised to a given power, with respect to a given modulus.
 
 
-  $X $, Power by $p $ ve mod $N $ ile karşılaştırarak expBase 'i belirlememize izin verin.
+  Let us denote expBase by $x$, power by $p$ and modulus by $N$.
 
-  İşlev, $x ^ p \operatorname{mod} N $ döndürür.
+  The function returns $x^p \operatorname{mod} N$.
 
 
-  $N $, $x $ öğesinin olumlu ve gücün negatif olmadığı varsayılır.
-remarks: '`power`, `power` kendisini değil, bit sayısıyla orantılı bir zaman alır.'
+  We assume that $N$, $x$ are positive and power is non-negative.
+remarks: Takes time proportional to the number of bits in `power`, not the `power` itself.
 syntax: 'function ExpModI (expBase : Int, power : Int, modulus : Int) : Int'
 input:
   content: '(expBase : Int, power : Int, modulus : Int)'
@@ -32,9 +32,10 @@ output:
   types:
   - isPrimitive: true
     uid: Int
-ms.openlocfilehash: cd98e60dab928d1cbb5055a762c8ffa31c460009
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73229506"
+metadata:
+  ms.openlocfilehash: cd98e60dab928d1cbb5055a762c8ffa31c460009
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73229506"
