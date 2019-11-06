@@ -1,12 +1,12 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.canon.applytoeachindex
-name: Applytoeachındex
+name: ApplyToEachIndex
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: Bir kayıttaki her dizinli öğeye bir tek qubit işlemi uygular.
 syntax: "operation ApplyToEachIndex (singleElementOperation : ((Int, 'T) => Unit), register : 'T[]) : Unit"
 input:
-  content: "(singleElementOperation: ((Int, 'T) = > Unit), YAZMAÇ: 'T [])"
+  content: "(singleElementOperation : ((Int, 'T) => Unit), register : 'T[])"
   types:
   - name: singleElementOperation
     summary: Her bir qubit için uygulanacak işlem.
@@ -21,13 +21,13 @@ input:
       types:
       - isPrimitive: true
         uid: Unit
-  - name: kaydolunamadı
+  - name: register
     summary: Verilen işlemin uygulanacağı qubit dizisi.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
-  content: Birim
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -39,9 +39,10 @@ seeAlso:
 - microsoft.quantum.canon.applytoeachindexa
 - microsoft.quantum.canon.applytoeachindexc
 - microsoft.quantum.canon.applytoeachindexca
-ms.openlocfilehash: 1cbe6b342dc3d821c082a959bebbdaaada1f9763
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068521"
+metadata:
+  ms.openlocfilehash: 1cbe6b342dc3d821c082a959bebbdaaada1f9763
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068521"
