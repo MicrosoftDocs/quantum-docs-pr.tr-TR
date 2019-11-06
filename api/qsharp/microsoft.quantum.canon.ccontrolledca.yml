@@ -9,9 +9,9 @@ summary: >-
   Değiştirici `CA`, işlemin denetlenebilir ve adjointable olduğunu gösterir.
 syntax: "function CControlledCA (op : ('T => Unit is Ctl + Adj)) : ((Bool, 'T) => Unit is Ctl + Adj)"
 input:
-  content: "(OP: ('T = > birim CTL + sıfatı))"
+  content: "(op : ('T => Unit is Ctl + Adj))"
   types:
-  - name: üs
+  - name: op
     summary: Koşullu olarak uygulanacak bir işlem.
     isOperation: true
     input:
@@ -26,7 +26,7 @@ input:
     - Adjoint
     - Controlled
 output:
-  content: ((Bool, 'T) = > birim CTL + ayarlanabilir)
+  content: ((Bool, 'T) => Unit is Ctl + Adj)
   types:
   - summary: Klasik denetim biti doğru ise op olan yeni bir işlem.
     isOperation: true
@@ -48,9 +48,10 @@ typeParameters:
   summary: Koşullu olarak uygulanacak işlemin giriş türü.
 seeAlso:
 - microsoft.quantum.canon.ccontrolled
-ms.openlocfilehash: 918146c6f167050490d3a9047cf75dc66236b004
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068079"
+metadata:
+  ms.openlocfilehash: 918146c6f167050490d3a9047cf75dc66236b004
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068079"
