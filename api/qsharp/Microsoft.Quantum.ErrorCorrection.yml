@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.errorcorrection
-name: Microsoft. hisse. Errordüzeltmesini
+name: Microsoft.Quantum.ErrorCorrection
 summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı, hisse hata düzeltmesi için işlevler, işlemler ve Kullanıcı tanımlı türler içerir."
 functions:
 - uid: microsoft.quantum.errorcorrection.bitflipcode
@@ -109,9 +109,10 @@ newtypes:
   summary: Ölçüm sonuçları için tür, bir hisse kodu syndrobir hata belirten `Result[]`.
 - uid: microsoft.quantum.errorcorrection.syndromemeasop
   summary: Hata düzeltme kod bloğunun eşitleniyor işlemini ölçmek için kullanılan bir işlemi temsil eder.
-ms.openlocfilehash: 6e1ef3ba9f22dac172e4edfb93bf1012e7bb21b4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056793"
+metadata:
+  ms.openlocfilehash: 6e1ef3ba9f22dac172e4edfb93bf1012e7bb21b4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056793"

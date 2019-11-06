@@ -6,24 +6,25 @@ namespace: Microsoft.Quantum.Simulation
 summary: zamana bağlı Schrodinger denklemini çözen bir Unitary işlecini yaklaşık olarak tahmin etmek için bir Trour – Suzuki ayrıştırma kullanan `TimeDependentSimulationAlgorithm` işlev.
 syntax: 'function TimeDependentTrotterSimulationAlgorithm (trotterStepSize : Double, trotterOrder : Int) : Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm'
 input:
-  content: '(Troesstepsize: Double, Troesorder: INT)'
+  content: '(trotterStepSize : Double, trotterOrder : Int)'
   types:
-  - name: Trodan stepSize
+  - name: trotterStepSize
     summary: Tek bir rahatlık adımında benzetimli zaman-gelişme süresi.
     isPrimitive: true
     uid: Double
-  - name: Troödeme siparişi
+  - name: trotterOrder
     summary: Araba tümleştirici sırası. Bu, 1 veya çift bir sayı olmalıdır.
     isPrimitive: true
     uid: Int
 output:
-  content: Microsoft. hisse. simülasyon. TimeDependentSimulationAlgorithm
+  content: Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm
   types:
   - summary: '`TimeDependentSimulationAlgorithm` türü.'
     uid: microsoft.quantum.simulation.timedependentsimulationalgorithm
-ms.openlocfilehash: dbac8ac91d7145216f9594f26e443f3a2660831e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065257"
+metadata:
+  ms.openlocfilehash: dbac8ac91d7145216f9594f26e443f3a2660831e
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065257"

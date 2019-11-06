@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.math
-name: Microsoft. hisse. matematik
+name: Microsoft.Quantum.Math
 functions:
 - uid: microsoft.quantum.math.abscomplex
   summary: '`Complex`türünde karmaşık bir sayının mutlak değerini döndürür.'
@@ -252,9 +252,10 @@ operations:
   summary: Aralıktan büyük veya sıfıra eşit ve sıfırdan küçük bir rastgele gerçek sayı döndürür.
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: Tek qubit Pauli işleçlerinden birini rastgele bir şekilde döndürür.
-ms.openlocfilehash: 7f30ee26a1155b64946e8fb16f5692ec602aa602
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056294"
+metadata:
+  ms.openlocfilehash: 7f30ee26a1155b64946e8fb16f5692ec602aa602
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056294"

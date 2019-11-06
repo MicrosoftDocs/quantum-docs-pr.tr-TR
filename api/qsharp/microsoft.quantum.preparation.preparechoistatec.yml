@@ -1,14 +1,14 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.preparation.preparechoistatec
-name: Hazırlık yankı Istatec
+name: PrepareChoiStateC
 type: operation
 namespace: Microsoft.Quantum.Preparation
 summary: Belirli bir işlem için CHOI – Jamiłkowski durumunu, belirtilen başvuru ve hedef Yazmaçları üzerine denetimli bir değişkenle hazırlar.
 syntax: 'operation PrepareChoiStateC (op : (Qubit[] => Unit is Ctl), reference : Qubit[], target : Qubit[]) : Unit'
 input:
-  content: '(OP: (qubit [] = > birim CTL), başvuru: qubit [], hedef: qubit [])'
+  content: '(op : (Qubit[] => Unit is Ctl), reference : Qubit[], target : Qubit[])'
   types:
-  - name: üs
+  - name: op
     isOperation: true
     input:
       types:
@@ -21,16 +21,16 @@ input:
         uid: Unit
     functors:
     - Controlled
-  - name: Başvurunun
+  - name: reference
     isArray: true
     isPrimitive: true
     uid: Qubit
-  - name: hedef
+  - name: target
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
-  content: Birim
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -38,9 +38,10 @@ functors:
 - Controlled
 seeAlso:
 - preparechoistate
-ms.openlocfilehash: 79579ec18d7b5a6ff0443f26271106af37af1c65
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067195"
+metadata:
+  ms.openlocfilehash: 79579ec18d7b5a6ff0443f26271106af37af1c65
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067195"

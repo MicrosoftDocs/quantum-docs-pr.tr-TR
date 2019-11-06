@@ -1,25 +1,26 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.math.argcomplexpolar
-name: Argcomplexkutupsal
+name: ArgComplexPolar
 type: function
 namespace: Microsoft.Quantum.Math
 summary: '`ComplexPolar`türünde karmaşık bir sayının aşamasını döndürür.'
 syntax: 'function ArgComplexPolar (input : Microsoft.Quantum.Math.ComplexPolar) : Double'
 input:
-  content: '(giriş: Microsoft. hisse. Math. Complexkutupsal)'
+  content: '(input : Microsoft.Quantum.Math.ComplexPolar)'
   types:
-  - name: giriş
+  - name: input
     summary: Karmaşık sayı $c = r e ^ {i t} $.
     uid: microsoft.quantum.math.complexpolar
 output:
-  content: Çift
+  content: Double
   types:
   - summary: Aşama $ \text{Arg} [c] = t $.
     isPrimitive: true
     uid: Double
-ms.openlocfilehash: 4988eccbf920b766a4cfc4304015749eeb19dc84
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067501"
+metadata:
+  ms.openlocfilehash: 4988eccbf920b766a4cfc4304015749eeb19dc84
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067501"
