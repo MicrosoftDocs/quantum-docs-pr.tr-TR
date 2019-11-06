@@ -1,12 +1,12 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.simulation.interpolategeneratorsystems
-name: Enterpolategeneratorsystems
+name: InterpolateGeneratorSystems
 type: function
 namespace: Microsoft.Quantum.Simulation
 summary: İki `GeneratorSystem`s arasındaki doğrusal ilişkilendirmeyi temsil eden bir `TimeDependentGeneratorSystem` döndürür.
 syntax: 'function InterpolateGeneratorSystems (generatorSystemStart : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem'
 input:
-  content: '(generatorSystemStart: Microsoft. hisse. simülasyon. GeneratorSystem, generatorSystemEnd: Microsoft. hisse. simülasyon. GeneratorSystem)'
+  content: '(generatorSystemStart : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystemStart
     summary: Başlangıç `GeneratorSystem`.
@@ -15,16 +15,17 @@ input:
     summary: Bitiş `GeneratorSystem`.
     uid: microsoft.quantum.simulation.generatorsystem
 output:
-  content: Microsoft. hisse. simülasyon. TimeDependentGeneratorSystem
+  content: Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem
   types:
   - summary: Giriş Oluşturucu sistemlerinin toplamı olan ve `generatorSystemEnd`ağırlığı $ (1-s) $, `generatorSystemStart` ve ağırlığı $s $ olan bir sistemi temsil eden bir `TimeDependentGeneratorSystem`.
     uid: microsoft.quantum.simulation.timedependentgeneratorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
 - microsoft.quantum.canon.timedependentgeneratorsystem
-ms.openlocfilehash: ac01ddee211ddf2ad741b611707aa6e5e6ea70f9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065529"
+metadata:
+  ms.openlocfilehash: ac01ddee211ddf2ad741b611707aa6e5e6ea70f9
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065529"

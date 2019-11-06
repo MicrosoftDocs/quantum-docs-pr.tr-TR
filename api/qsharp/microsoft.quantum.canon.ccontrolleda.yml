@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.canon.ccontrolleda
-name: Ccontroltada dili
+name: CControlledA
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
@@ -9,9 +9,9 @@ summary: >-
   Değiştirici `A`, işlemin adjointable olduğunu gösterir.
 syntax: "function CControlledA (op : ('T => Unit is Adj)) : ((Bool, 'T) => Unit is Adj)"
 input:
-  content: "(OP: ('T = > birim sıfatı))"
+  content: "(op : ('T => Unit is Adj))"
   types:
-  - name: üs
+  - name: op
     summary: Koşullu olarak uygulanacak bir işlem.
     isOperation: true
     input:
@@ -25,7 +25,7 @@ input:
     functors:
     - Adjoint
 output:
-  content: ((Bool, 'T) = > birim ayarlama)
+  content: ((Bool, 'T) => Unit is Adj)
   types:
   - summary: Klasik denetim biti doğru ise op olan yeni bir işlem.
     isOperation: true
@@ -46,9 +46,10 @@ typeParameters:
   summary: Koşullu olarak uygulanacak işlemin giriş türü.
 seeAlso:
 - microsoft.quantum.canon.ccontrolled
-ms.openlocfilehash: e02446273f93b51a228679d3eb75bf16a2526e8a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068113"
+metadata:
+  ms.openlocfilehash: e02446273f93b51a228679d3eb75bf16a2526e8a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068113"

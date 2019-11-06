@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.canon.boundc
-name: Sıçrama DC
+name: BoundC
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
@@ -8,7 +8,7 @@ summary: >-
 
   Değiştirici `C` dizideki tüm işlemlerin denetlenebilir olduğunu gösterir.
 examples: >-
-  The following are equivalent:
+  Aşağıdakiler eşdeğerdir:
 
 
   ```qsharp
@@ -20,7 +20,7 @@ examples: >-
   ```
 
 
-  and
+  'nı ve
 
 
   ```qsharp
@@ -30,9 +30,9 @@ examples: >-
   ```
 syntax: "function BoundC (operations : ('T => Unit is Ctl)[]) : ('T => Unit is Ctl)"
 input:
-  content: "(işlemler: ('T = > birim CTL) [])"
+  content: "(operations : ('T => Unit is Ctl)[])"
   types:
-  - name: işlemler
+  - name: operations
     summary: Belirli bir girişte gerçekleştirilecek işlemler dizisi.
     isArray: true
     isOperation: true
@@ -47,7 +47,7 @@ input:
     functors:
     - Controlled
 output:
-  content: ('T = > birim CTL)
+  content: ('T => Unit is Ctl)
   types:
   - summary: Belirli bir işlemi girişinde sırayla gerçekleştiren yeni bir işlem.
     isOperation: true
@@ -66,9 +66,10 @@ typeParameters:
   summary: Dizideki her bir işlemin üzerinde işlem gören hedef.
 seeAlso:
 - microsoft.quantum.canon.bound
-ms.openlocfilehash: 46a82065b3a236ad0e0a02894d6b1b3e2a1ceba1
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068181"
+metadata:
+  ms.openlocfilehash: 46a82065b3a236ad0e0a02894d6b1b3e2a1ceba1
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068181"

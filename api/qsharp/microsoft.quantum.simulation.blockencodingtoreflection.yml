@@ -12,27 +12,25 @@ summary: >-
   Bu, $U $ öğesinin yardımcı kaydının boyutunu bir qubit artırır.
 remarks: Bu, $U $ öğesinin yardımcı kaydının boyutunu bir qubit artırır.
 syntax: 'function BlockEncodingToReflection (blockEncoding : Microsoft.Quantum.Simulation.BlockEncoding) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
-references: >-
-  - Hamiltonian Simulation by Qubitization
-    Guang Hao Low, Isaac L. Chuang
-    https://arxiv.org/abs/1610.06546
+references: '- Hamiltonian benzetim, Qubitiş, Guang Hao Low, Isaac L. Chuang https://arxiv.org/abs/1610.06546'
 input:
-  content: '(Blockenkodlama: Microsoft. hisse. simülasyon. Blockenkodlama)'
+  content: '(blockEncoding : Microsoft.Quantum.Simulation.BlockEncoding)'
   types:
-  - name: Blockenkodlama
+  - name: blockEncoding
     summary: Bir yansımaya dönüştürülecek `BlockEncoding` Unitary $U $.
     uid: microsoft.quantum.simulation.blockencoding
 output:
-  content: Microsoft. hisse. simülasyon. BlockEncodingReflection
+  content: Microsoft.Quantum.Simulation.BlockEncodingReflection
   types:
   - summary: Bir Unitary $U ' $, yazmaçlara `a` ve `s` $H $ ' ı çözer ve bu $U ' ^ \hanger = U ' $ karşılar.
     uid: microsoft.quantum.simulation.blockencodingreflection
 seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
-ms.openlocfilehash: 47eba3c59ef30f89139830aa4d9b98d22d141d8f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065631"
+metadata:
+  ms.openlocfilehash: 47eba3c59ef30f89139830aa4d9b98d22d141d8f
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065631"

@@ -11,20 +11,21 @@ remarks: >-
   Bir aralığın tanımlanan bitiş değerinin, Aralık tarafından belirtilen dizideki son öğeden farklı olabileceğini unutmayın; Örneğin, 0 aralığında. 2. 5 son öğe 4, ancak bitiş değeri 5 ' tir.
 syntax: 'function RangeEnd (range : Range) : Int'
 input:
-  content: '(Aralık: Aralık)'
+  content: '(range : Range)'
   types:
-  - name: aralığı
+  - name: range
     isPrimitive: true
     uid: Range
 output:
-  content: "'Tir"
+  content: Int
   types:
   - summary: Verilen aralığın tanımlı bitiş değeri.
     isPrimitive: true
     uid: Int
-ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066651"
+metadata:
+  ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066651"
