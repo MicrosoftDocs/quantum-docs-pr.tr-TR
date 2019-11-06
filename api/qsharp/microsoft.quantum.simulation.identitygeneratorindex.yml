@@ -1,25 +1,26 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.simulation.identitygeneratorindex
-name: Identitygeneratorındex
+name: IdentityGeneratorIndex
 type: function
 namespace: Microsoft.Quantum.Simulation
 summary: Kimlik evrimi işlemine karşılık gelen sıfır Hamiltonian `H = 0`ile tutarlı bir Oluşturucu dizini döndürür.
 syntax: 'function IdentityGeneratorIndex (idxTerm : Int) : Microsoft.Quantum.Simulation.GeneratorIndex'
 input:
-  content: '(ıdxterm: INT)'
+  content: '(idxTerm : Int)'
   types:
-  - name: ıdxterm
+  - name: idxTerm
     summary: Bu giriş yok sayılır ve Kullanıcı tanımlı <xref:microsoft.quantum.simulation.generatorsystem> türü ile tutarlılık için tanımlanmıştır.
     isPrimitive: true
     uid: Int
 output:
-  content: Microsoft. hisse. simülasyon. Generatorındex
+  content: Microsoft.Quantum.Simulation.GeneratorIndex
   types:
   - summary: Hamiltonian $H = $0 altında evrimi temsil eden bir Oluşturucu dizini.
     uid: microsoft.quantum.simulation.generatorindex
-ms.openlocfilehash: 004eea82988c6a4f6c776802d5f4634f600ed404
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065597"
+metadata:
+  ms.openlocfilehash: 004eea82988c6a4f6c776802d5f4634f600ed404
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065597"

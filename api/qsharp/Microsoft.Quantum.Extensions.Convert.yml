@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.extensions.convert
-name: Microsoft. hisse. Extensions. Convert
+name: Microsoft.Quantum.Extensions.Convert
 summary: " # <a name=\"summary\"></a>Özet\n Bunlar, .NET CLR 'nin Q # tür sistemi içinde uygun olan System. Convert ad alanındaki işlevlerden bazılarıdır.\n\n # <a name=\"remarks\"></a>Açıklamalar\n Bool, Int ve Double türleri için işlevin birkaç sürümü varsa, ilgili işlevlerde B, I ve D son eki bulunur."
 functions:
 - uid: microsoft.quantum.extensions.convert.biginttobools
@@ -53,9 +53,10 @@ functions:
     > [!WARNING]
 
     > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.intasstringwithformat"kullanın.
-ms.openlocfilehash: 57f341ec6e8f82cfa9fc4bb958a580743a350218
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056480"
+metadata:
+  ms.openlocfilehash: 57f341ec6e8f82cfa9fc4bb958a580743a350218
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056480"
