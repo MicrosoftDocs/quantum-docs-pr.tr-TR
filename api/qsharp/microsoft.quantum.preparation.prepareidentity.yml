@@ -4,16 +4,16 @@ name: PrepareIdentity
 type: operation
 namespace: Microsoft.Quantum.Preparation
 summary: >-
-  Kayıt verildiğinde, bu kaydı, en yüksek düzeyde karışık durumda hazırlar.
+  Given a register, prepares that register in the maximally mixed state.
 
 
-  Kayıt, her bir qubit 'e tüm depolarizing kanalını uygulayarak $ \ cıvadone/2 ^ N $ durumunda hazırlandı; burada $N $ kaydın uzunluğudur.
+  The register is prepared in the $\boldone / 2^N$ state by applying the complete depolarizing channel to each qubit, where $N$ is the length of the register.
 syntax: 'operation PrepareIdentity (register : Qubit[]) : Unit'
 input:
   content: '(register : Qubit[])'
   types:
   - name: register
-    summary: Durumu yukarıda açıklanan şekilde depolarized olan bir kayıt.
+    summary: A register whose state is to be depolarized in the manner described above.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -24,9 +24,10 @@ output:
     uid: Unit
 seeAlso:
 - microsoft.quantum.canon.preparesinglequbitidentity
-ms.openlocfilehash: 3242bb0249f26e78ac33f0d16eb7b7c9dcd86ee8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73226616"
+metadata:
+  ms.openlocfilehash: 3242bb0249f26e78ac33f0d16eb7b7c9dcd86ee8
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73226616"

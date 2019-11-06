@@ -4,18 +4,18 @@ name: StatePreparationComplexCoefficients
 type: function
 namespace: Microsoft.Quantum.Preparation
 summary: >-
-  Belirli bir hisse durumu hazırlayan bir işlem döndürür.
+  Returns an operation that prepares a specific quantum state.
 
 
-  Döndürülen $U $, $n $-qubit hesaplama tabanlı durumu $ \ket{0...0} $ öğesinden $r _j e ^ {i T_J} $ karmaşık katlarla rastgele bir hisse TI $ \ket{\psı} $ hazırlar.
+  The returned operation $U$ prepares an arbitrary quantum state $\ket{\psi}$ with complex coefficients $r_j e^{i t_j}$ from the $n$-qubit computational basis state $\ket{0...0}$.
 
 
-  Yeni ayrılmış bir kayıttaki U eylemi $ $ \begin{hizalaması} U\ket {0... tarafından verilir. 0} = \ket{\psı} = \frac{\sum_{j = 0} ^ {2 ^ n-1} r_j e ^ {i T_J} \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
+  The action of U on a newly-allocated register is given by $$ \begin{align} U\ket{0...0}=\ket{\psi}=\frac{\sum_{j=0}^{2^n-1}r_j e^{i t_j}\ket{j}}{\sqrt{\sum_{j=0}^{2^n-1}|r_j|^2}}.
 
-  \end{hizalaması} $ $
-remarks: $R _j < $0 negatif giriş katsayıları $ | r_j | $ değeri ile pozitif olarak değerlendirilir. $2 ^ n $ değerinden azı belirtilmişse, `coefficients` $ (r_j, T_J) = (0,0, 0,0) $ öğeleriyle doldurulur.
+  \end{align} $$
+remarks: Negative input coefficients $r_j < 0$ will be treated as though positive with value $|r_j|$. `coefficients` will be padded with elements $(r_j, t_j) = (0.0, 0.0)$ if fewer than $2^n$ are specified.
 examples: >-
-  Aşağıdaki kod parçacığı, qubit yazmaç `qubitsLE`hisse durumu $ \ket{\psı} = e ^ {ı 0,1} \ sqrt {1/8} \ tus{0}+ \ sqrt {7/8} \ tus{2}$ öğesini hazırlar.
+  The following snippet prepares the quantum state $\ket{\psi}=e^{i 0.1}\sqrt{1/8}\ket{0}+\sqrt{7/8}\ket{2}$ in the qubit register `qubitsLE`.
 
 
   ```qsharp
@@ -43,13 +43,13 @@ input:
   content: '(coefficients : Microsoft.Quantum.Math.ComplexPolar[])'
   types:
   - name: coefficients
-    summary: Mutlak değerleri ve aşama $ (r_j, T_J) ile temsil edilen en fazla $2 ^ n $ karmaşık katsayılar dizisi. $J $ TH katsayısı, küçük endian biçiminde $ \ket{j} $ kodlu durum sayısını dizine ekler.
+    summary: Array of up to $2^n$ complex coefficients represented by their absolute value and phase $(r_j, t_j)$. The $j$th coefficient indexes the number state $\ket{j}$ encoded in little-endian format.
     isArray: true
     uid: microsoft.quantum.math.complexpolar
 output:
   content: (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl)
   types:
-  - summary: Bir durum hazırlama Unitary işlemi $U $.
+  - summary: A state-preparation unitary operation $U$.
     isOperation: true
     input:
       types:
@@ -61,9 +61,10 @@ output:
     functors:
     - Adjoint
     - Controlled
-ms.openlocfilehash: 42049c1ef8c1210bf31a9979a2a6d4d9223a9c85
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73226412"
+metadata:
+  ms.openlocfilehash: 42049c1ef8c1210bf31a9979a2a6d4d9223a9c85
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73226412"

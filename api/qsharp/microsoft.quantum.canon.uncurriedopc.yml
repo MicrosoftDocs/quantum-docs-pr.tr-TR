@@ -4,15 +4,15 @@ name: UncurriedOpC
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  İşlemleri döndüren bir işlev verildiğinde, her iki girişi de tanımlama grubu olarak alan yeni bir işlem döndürür.
+  Given a function which returns operations, returns a new operation which takes both inputs as a tuple.
 
-  Değiştirici `C`, işlemlerin denetlenebilir olduğunu gösterir.
+  The modifier `C` indicates that the operations are controllable.
 syntax: "function UncurriedOpC (curriedOp : ('T -> ('U => Unit is Ctl))) : (('T, 'U) => Unit is Ctl)"
 input:
   content: "(curriedOp : ('T -> ('U => Unit is Ctl)))"
   types:
   - name: curriedOp
-    summary: İşlemleri döndüren bir işlev.
+    summary: A function which returns operations.
     isFunction: true
     input:
       types:
@@ -34,7 +34,7 @@ input:
 output:
   content: (('T, 'U) => Unit is Ctl)
   types:
-  - summary: Yeni bir işlem, `op(t, u)` `(curriedOp(t))(u)`eşdeğerdir `op`.
+  - summary: A new operation `op` such that `op(t, u)` is equivalent to `(curriedOp(t))(u)`.
     isOperation: true
     input:
       types:
@@ -50,14 +50,15 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: Bir curried işlevinin ilk bağımsız değişkeninin türü.
+  summary: The type of the first argument of a curried function.
 - uid: "'U"
-  summary: Bir curried işlevinin ikinci bağımsız değişkeninin türü.
+  summary: The type of the second argument of a curried function.
 seeAlso:
 - microsoft.quantum.canon.uncurryop
-ms.openlocfilehash: 2808ad1be091f98185ca9b218d2df6065c15a143
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73216960"
+metadata:
+  ms.openlocfilehash: 2808ad1be091f98185ca9b218d2df6065c15a143
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73216960"

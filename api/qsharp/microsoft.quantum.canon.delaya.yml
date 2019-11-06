@@ -4,20 +4,20 @@ name: DelayA
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Bir gecikmeyle belirli bir işlem uygular.
+  Applies a given operation with a delay.
 
 
-  Bir işlem ve bu işlem için bir giriş verildiğinde, ek bir giriş sağlandıktan sonra işlemi uygular.
+  Given an operation and an input to that operation, applies the operation once an additional input is provided.
 
-  Özellikle, `Delay(op, arg, _)` ifade, çağrıldığında `arg` `op` uygulanan bir işlemdir.
+  In particular, the expression `Delay(op, arg, _)` is an operation that applies `op` to `arg` when called.
 
-  İfade `Delay(op,arg,_)` `op`uygulamasını gecikmeye izin verir.
+  Expression `Delay(op,arg,_)` allows to delay the application of `op`.
 syntax: "operation DelayA (op : ('T => Unit is Adj), arg : 'T, aux : Unit) : Unit"
 input:
-  content: "(OP: ('T = > birim sıfatı), arg: 'T, AUX: Unit)"
+  content: "(op : ('T => Unit is Adj), arg : 'T, aux : Unit)"
   types:
-  - name: üs
-    summary: Uygulanacak bir işlem.
+  - name: op
+    summary: An operation to be applied.
     isOperation: true
     input:
       types:
@@ -29,30 +29,31 @@ input:
         uid: Unit
     functors:
     - Adjoint
-  - name: değişkeni
-    summary: İşlemin uygulandığı giriş.
+  - name: arg
+    summary: The input to which the operation is applied.
     uid: "'T"
     isLocal: true
-  - name: Aux
-    summary: Kısmi uygulama kullanarak işlemin uygulamasını geciktirmek için kullanılan bağımsız değişken.
+  - name: aux
+    summary: Argument used to delay the application of operation by using partial application.
     isPrimitive: true
     uid: Unit
 output:
-  content: Birim
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: Gecikecek işlemin giriş türü.
+  summary: The input type of the operation to be delayed.
 functors:
 - Adjoint
 seeAlso:
 - microsoft.quantum.canon.delay
 - microsoft.quantum.canon.delayed
-ms.openlocfilehash: f36930faacf0aa4a1ea87a09fc3018e06e62d7ac
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067807"
+metadata:
+  ms.openlocfilehash: f36930faacf0aa4a1ea87a09fc3018e06e62d7ac
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067807"

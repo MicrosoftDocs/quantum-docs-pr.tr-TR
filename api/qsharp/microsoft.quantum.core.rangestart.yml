@@ -3,12 +3,12 @@ uid: microsoft.quantum.core.rangestart
 name: RangeStart
 type: function
 namespace: Microsoft.Quantum.Core
-summary: Verilen aralığın tanımlanan başlangıç değerini döndürür.
+summary: Returns the defined start value of the given range.
 remarks: >-
-  Aralık ifadesinin ilk öğesi `start`, ikinci öğesi `start+step`, üçüncü öğe ise `end` geçirilmeden `start+step+step`, vb.
+  A range expression's first element is `start`, its second element is `start+step`, third element is `start+step+step`, etc., until `end` is passed.
 
 
-  Aralık boş bir sıra belirtmediği sürece bir aralığın tanımlanan başlangıç değerinin sıranın ilk öğesiyle aynı olduğunu unutmayın (örneğin, 2. 1).
+  Note that the defined start value of a range is the same as the first element of the sequence, unless the range specifies an empty sequence (for example, 2 .. 1).
 syntax: 'function RangeStart (range : Range) : Int'
 input:
   content: '(range : Range)'
@@ -19,12 +19,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Verilen aralığın tanımlanan başlangıç değeri.
+  - summary: The defined start value of the given range.
     isPrimitive: true
     uid: Int
-ms.openlocfilehash: 0d618a26d71a5b41e6ea6b73503e9f099b18f129
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73231767"
+metadata:
+  ms.openlocfilehash: 0d618a26d71a5b41e6ea6b73503e9f099b18f129
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73231767"

@@ -3,28 +3,29 @@ uid: microsoft.quantum.math.modl
 name: ModL
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Bir sayının başka bir sayıya göre mod sayısını döndürür.
+summary: Returns the modulus of a number with respect to another number.
 syntax: 'function ModL (a : BigInt, b : BigInt) : BigInt'
 input:
   content: '(a : BigInt, b : BigInt)'
   types:
   - name: a
-    summary: $A $, mod döndürülecek olan giriş.
+    summary: The input $a$ whose modulus is to be returned.
     isPrimitive: true
     uid: BigInt
   - name: b
-    summary: $A $ 'in mod 'un döndürüleceği sayı.
+    summary: The number with respect to which the modulus of $a$ is to be returned.
     isPrimitive: true
     uid: BigInt
 output:
   content: BigInt
   types:
-  - summary: Mod $a \bmod b $.
+  - summary: The modulus $a \bmod b$.
     isPrimitive: true
     uid: BigInt
-ms.openlocfilehash: 7431cc366b8c8e592008d2787a58e45d101dd2e6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73233722"
+metadata:
+  ms.openlocfilehash: 7431cc366b8c8e592008d2787a58e45d101dd2e6
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73233722"

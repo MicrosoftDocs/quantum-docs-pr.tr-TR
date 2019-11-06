@@ -4,15 +4,15 @@ name: SWAP
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: >-
-  DEĞIŞTIRME kapısını bir qubits çiftine uygular.
+  Applies the SWAP gate to a pair of qubits.
 
 
-  \begin{hizalaması} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix} , \end{hizalaması}
+  \begin{align} \operatorname{SWAP} \mathrel{:=} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}, \end{align}
 
 
-  satırlar ve sütunlar hisse kavramları kılavuzunda olduğu gibi sıralanır.
+  where rows and columns are ordered as in the quantum concepts guide.
 remarks: >-
-  Eşdeğer:
+  Equivalent to:
 
 
   ```qsharp
@@ -29,11 +29,11 @@ input:
   content: '(qubit1 : Qubit, qubit2 : Qubit)'
   types:
   - name: qubit1
-    summary: Takas edilecek ilk qubit.
+    summary: First qubit to be swapped.
     isPrimitive: true
     uid: Qubit
   - name: qubit2
-    summary: Takas edilecek ikinci qubit.
+    summary: Second qubit to be swapped.
     isPrimitive: true
     uid: Qubit
 output:
@@ -44,9 +44,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-ms.openlocfilehash: 32a379b784d0be0084b00a80edf8607ccf760f9e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73216365"
+metadata:
+  ms.openlocfilehash: 32a379b784d0be0084b00a80edf8607ccf760f9e
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73216365"
