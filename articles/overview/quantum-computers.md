@@ -6,18 +6,20 @@ ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.computers
-ms.openlocfilehash: d4be970c635ca090e8dcb1b58d5c840eebd4d110
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 9d8ba90a504f298f9465ebf564c43625a4d43168
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443843"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529943"
 ---
 # <a name="what-can-a-quantum-computer-do"></a>Bir kuantum bilgisayar ne yapabilir?
 
 Kuantum bilgisayarla, klasik bilgisayarla yapamayacağımız neleri yapabiliriz?
 
-Mevcut bilgisayarlarla bir çözüm bulmanın milyarlarca yıl sürebileceği dünyanın en zorlu problemlerinden bazılarını, bir kuantum bilgisayar günler, saatler, hatta dakikalar içinde çözebilir. Kuantum bilişimi araştırmacıların yeni katalizörler ve malzemeler geliştirmesine, ilaçları geliştirmesine, yapay zeka alanındaki ilerlemeleri hızlandırmasına ve evrenimizin kökeni hakkındaki temel soruları yanıtlamasına olanak tanıyacaktır.
+Mevcut bilgisayarlarla bir çözüm bulmanın milyarlarca yıl sürebileceği dünyanın en zorlu problemlerinden bazılarını, bir kuantum bilgisayar günler, saatler, hatta dakikalar içinde çözebilir.
+
+Kuantum bilişimi araştırmacıların yeni katalizörler ve malzemeler geliştirmesine, ilaçları geliştirmesine, yapay zeka alanındaki ilerlemeleri hızlandırmasına ve evrenimizin kökeni hakkındaki temel soruları yanıtlamasına olanak tanıyacaktır.
 
 ## <a name="quantum-simulation"></a>Kuantum simülasyonu
 
@@ -29,19 +31,25 @@ Kimyasal moleküller kuantum sistemleridir ve dolayısıyla bu yolla analiz edil
 
 ## <a name="cryptography"></a>Şifreleme
 
-Kuantum bilgisayarların muhtemelen en çok bilinen uygulama alanlarından biri de şifreleme teknolojisidir. 1994 yılında Peter Shor, ölçeklenebilir bir kuantum bilgisayarın oldukça yaygın bir şekilde kullanılan bir şifreleme tekniğini kırabileceğini göstermiştir.  Klasik kriptografide büyük sayıların iki asal sayıya kadar çarpanlarına ayrılması gibi büyük sayılarla gerçekleştirilecek işlemlerin zorluğuna güvenilir.  Kuantum bilişimi bu işlemleri teorik olarak mümkün hale getirir (Shor algoritmasıyla). Bu algoritmanın uygulanması kuantum donanımının mevcut ölçeğiyle fiziksel olarak mümkün olmasa da, şifreleme ve kriptografik anahtar dağıtımına yönelik orijinal kuantum algoritmaları gibi geleceğe dayanıklı veri güvenliği için kuantuma dayanıklı algoritmalar geliştirme çalışmalarını başlatmıştır.  Microsoft'ta çalışan dünyanın bir numaralı kuantum şifreleme sonrası ve güvenlik ekibinde kuantuma dayanıklı algoritmalar geliştirilmektedir. 
+Kuantum bilgisayarların muhtemelen en çok bilinen uygulama alanlarından biri de şifreleme teknolojisidir. 1994 yılında Peter Shor, ölçeklenebilir bir kuantum bilgisayarın oldukça yaygın bir şekilde kullanılan bir şifreleme tekniğini kırabileceğini göstermiştir.  Klasik kriptografide büyük sayıların iki asal sayıya kadar çarpanlarına ayrılması gibi büyük sayılarla gerçekleştirilecek işlemlerin zorluğuna güvenilir.
+
+Kuantum bilişimi bu işlemleri teorik olarak mümkün hale getirir (Shor algoritmasıyla). Bu algoritmanın uygulanması kuantum donanımının mevcut ölçeğiyle fiziksel olarak mümkün olmasa da, şifreleme ve kriptografik anahtar dağıtımına yönelik orijinal kuantum algoritmaları gibi geleceğe dayanıklı veri güvenliği için kuantuma dayanıklı algoritmalar geliştirme çalışmalarını başlatmıştır.
+
+Microsoft'ta çalışan dünyanın bir numaralı kuantum şifreleme sonrası ve güvenlik ekibinde kuantuma dayanıklı algoritmalar geliştirilmektedir.
 
 ## <a name="optimization"></a>İyileştirme
 
-İyileştirme, geniş çaplı bir alanda geniş bir arama işlemi gerçekleştirerek maliyetleri en aza indirerek iyi bir çözüm elde etmektir.   Kuantum bilgisayarda iyileştirme algoritmaları hızlandırılarak başka türlü mümkün olmayan çözümler elde edilebilir. Taşımacılık ve lojistik sektöründen sağlık, tanı ve malzeme bilimlerine kadar farklı uygulamalar tasarlanabilir. Bu sayede bu sektörler daha verimli hale getirilebilir. 
+İyileştirme, geniş çaplı bir alanda geniş bir arama işlemi gerçekleştirerek maliyetleri en aza indiren bir çözüm elde etmektir.   Kuantum bilgisayarda iyileştirme algoritmaları hızlandırılarak başka türlü mümkün olmayan çözümler elde edilebilir. Taşımacılık ve lojistik sektöründen sağlık, tanı ve malzeme bilimlerine kadar farklı uygulamalar tasarlanabilir. Bu sayede bu sektörler daha verimli hale getirilebilir.
 
-Kuantum bilişimi ile iyileştirme sayesinde günümüzdeki taşımacılık ve lojistik sektöründe, mevcut klasik sistemlerle mümkün olmayan bir şekilde yenilik geliştirilebilir. Trafik akışı iyileştirilerek trafik sıkışıklığı azaltılabilir.  Rota planlamanın yanı sıra uçak kapısı atama, paket teslimi ve iş planlama gibi birçok işlem gerçekleştirilebilir.  Malzeme bilimindeki yenilikler sayesinde yeni enerji türleri, daha fazla kapasiteye sahip piller, daha hafif ve daha güçlü malzemeler geliştirilebilir. 
+Kuantum bilişimi ile iyileştirme sayesinde günümüzdeki taşımacılık ve lojistik sektöründe, mevcut klasik sistemlerle mümkün olmayan bir şekilde yenilik geliştirilebilir.
+
+Trafik akışı iyileştirilerek trafik sıkışıklığı azaltılabilir.  Rota planlamanın yanı sıra uçak kapısı atama, paket teslimi ve iş planlama gibi birçok işlem gerçekleştirilebilir. Malzeme bilimindeki yenilikler sayesinde yeni enerji türleri, daha fazla kapasiteye sahip piller, daha hafif ve daha güçlü malzemeler geliştirilebilir.
 
 ## <a name="machine-learning"></a>Makine öğrenimi
 
 Klasik bilişimde sayısal hesaplamaların büyük bölümü temelde doğrusal denklem sistemlerini çözmekten oluşur. Bu durum özellikle hesaplama maliyetinin büyük bölümünün muazzam büyüklükteki matrislerin tersini almaya harcandığı makine öğrenmesi alanında geçerlidir.
 
-Neyse ki sistemi klasik bilgisayardan çok daha hızlı bir şekilde yaklaşık olarak çözmemize olanak sağlayan bir kuantum algoritması vardır. Bu, doğrusal denklem sistemlerinin çözülmesini gerektiren her problemde çok yüksek hız artışlarının önünü açmıştır.
+Neyse ki sistemi klasik bilgisayardan çok daha hızlı bir şekilde yaklaşık olarak çözmemize olanak sağlayan bir kuantum algoritması vardır. Bu algoritma, doğrusal denklem sistemlerinin çözülmesini gerektiren her problemde çok yüksek hız artışlarının önünü açmıştır.
 
 Bu alanlardaki sorunlara çözüm bulmak enerji krizi, iklim değişikliği, gıda kıtlığı ve kişisel/kesin tıbbi tanı sorunlarının çözülmesine yardımcı olacaktır.
 
