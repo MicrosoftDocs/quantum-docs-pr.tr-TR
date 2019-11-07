@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: a7c077eda3e46430cbe6598cb899adb460451f75
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: c3039b92c4b3235a397d5cf31280ac2673706e9d
+ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443928"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462844"
 ---
 # <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>Hızlı Başlangıç: Q# ile Kuantum Rastgele Sayı Oluşturucusu Oluşturma Tasarlama
 Kuantum rastgele sayı oluşturucusu, Q# dilinde yazılmış kuantum algoritmalarına örnek olarak gösterilebilir. Bu algoritma, kuantum mekaniklerinin özelliklerinden faydalanarak rastgele bir sayı üretir. 
@@ -69,4 +69,4 @@ Kodun gerçekleştirdiği işlemleri görselleştirmek için şu gösterimi kull
 
 <img src="./Measurement2.svg" width="450">
 
-Ölçümün sonucu tamamen rastgele olduğundan rastgele bir bit elde ettik. Bu işlevi birkaç kere çağırarak farklı tamsayılar oluşturabiliriz. Örneğin üç rastgele bit elde etmek için işlevi üç kez çağırarak rastgele 3 bitlik sayılar (0 ile 7 arasında rastgele bir sayı) oluşturabiliriz.
+Ölçümün sonucu tamamen rastgele olduğundan rastgele bir bit elde ettik. Bu işlemi birkaç kere çağırarak farklı tamsayılar oluşturabiliriz. Örneğin üç rastgele bit elde etmek için işlemi üç kez çağırarak rastgele 3 bitlik sayılar (0 ile 7 arasında rastgele bir sayı) oluşturabiliriz.

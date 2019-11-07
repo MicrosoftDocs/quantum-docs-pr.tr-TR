@@ -6,20 +6,22 @@ ms.author: nakersha
 ms.date: 10/16/2019
 ms.topic: article
 uid: microsoft.quantum.overview.why
-ms.openlocfilehash: 1ccf21aad9473f18a33bf6b12e14b021ac159cbb
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 389b745a9f19caa6272e7d537e3ee5f884cec36b
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443911"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529907"
 ---
 # <a name="why-learn-quantum-computing"></a>Kuantum bilişimini neden öğrenmeliyim?
 
-Kuantum bilgisayarlar havalıdır ama kuantum bilişimini neden öğrenmeniz gereksin? Bu bölümde bugün kuantum bilişimini öğrenmenin harika bir fikir olmasının bazı nedenlerini açıklayacağız.
+Kuantum bilgisayarlar havalıdır ama kuantum bilişimini neden öğrenmeniz gereksin?
+
+Bu bölümde bugün kuantum bilişimini öğrenmenin harika bir fikir olmasının bazı nedenlerini açıklayacağız.
 
 ## <a name="join-the-quantum-revolution"></a>Kuantum devrimine katılın
 
-Araştırmacılar gelecekteki kuantum teknolojilerinin olasılıklarını yeni hayal etmeye başladı. Bugün bazı kişilerin ikinci kuantum devrimi dedikleri dönemin başlangıcına tanıklık ediyoruz. İlk devrim lazer ve transistör gibi dünyayı değiştiren buluşlar yapmak için kuantum fiziğinin kullanılmasıydı. Son on yılda bilim kuantum sistemleri üzerinde tek tek parçacıklar düzeyinde denetim sahibi olmaya başladı. Bu, çoğu henüz keşfedilmemiş muazzam olasılıkların önünü açıyor. Tanıklık etmeyi bırakın ve siz yapmaya başlayın! Yarının dünyasını şekillendirecek teknolojiye katkıda bulunmaya bugün başlayabilirsiniz.
+Araştırmacılar gelecekteki kuantum teknolojilerinin olasılıklarını yeni hayal etmeye başladı. Bugün bazı kişilerin ikinci kuantum devrimi dedikleri dönemin başlangıcına tanıklık ediyoruz. İlk devrim lazer ve transistör gibi dünyayı değiştiren buluşlar yapmak için kuantum fiziğinin kullanılmasıydı. Son on yılda bilim kuantum sistemleri üzerinde tek tek parçacıklar düzeyinde denetim sahibi olmaya başlayarak çoğu henüz keşfedilmeyi bekleyen muazzam olasılıkların önünü açtı. Tanıklık etmeyi bırakın ve siz yapmaya başlayın! Yarının dünyasını şekillendirecek teknolojiye katkıda bulunmaya bugün başlayabilirsiniz.
 
 ## <a name="solving-great-challenges-requires-diverse-communities"></a>Büyük meydan okumaların çözümü çeşitlenmiş topluluklar gerektirir
 
@@ -27,7 +29,7 @@ Verimli kuantum bilişimini başarmak, muhtemelen çağımızın en büyük meyd
 
 ## <a name="get-inspired-by-the-quantum-world"></a>Kuantum dünyasından ilham alın
 
-Hataya dayanıklı kuantum bilgisayarlara ulaşmaktan henüz uzak olsak bile, klasik bilgisayar biliminde kuantum bilişiminin bazı etkileyici sonuçlarını şimdiden gözlemliyoruz. Son birkaç yılda kuantum bilişiminde kullanılan tekniklere dayalı birçok yeni algoritma geliştirildi. Bunlar kuantumdan esinlenen algoritmalar olarak adlandırılıyor ve klasik bilgisayarlarda çalıştırılabiliyor. Bu algoritmaların bazı örnekleri, önceki tüm klasik yöntemlerden daha hızlı performans gösteren öneri sistemleri veya genetik algoritmalarıdır. Kuantum bilişimini öğrenerek bilgisayar hesaplamaları hakkında klasik programlama perspektifinizi değiştirecek yeni bir düşünme biçimi keşfedeceksiniz!
+Hataya dayanıklı kuantum bilgisayarlara ulaşmaktan henüz uzak olsak bile, klasik bilgisayar biliminde kuantum bilişiminin bazı etkileyici sonuçlarını şimdiden gözlemliyoruz. Son birkaç yılda kuantum bilişiminde kullanılan tekniklere dayalı birçok yeni algoritma geliştirildi. Bu algoritmalar kuantumdan esinlenen algoritmalar olarak adlandırılıyor ve klasik bilgisayarlarda çalıştırılabiliyor. Bu algoritmaların bazı örnekleri, önceki tüm klasik yöntemlerden daha hızlı performans gösteren öneri sistemleri veya genetik algoritmalarıdır. Kuantum bilişimini öğrenerek bilgisayar hesaplamaları hakkında klasik programlama perspektifinizi değiştirecek yeni bir düşünme biçimi keşfedeceksiniz!
 
 ## <a name="quantum-computing-is-fun"></a>Kuantum bilişimi eğlencelidir!
 
