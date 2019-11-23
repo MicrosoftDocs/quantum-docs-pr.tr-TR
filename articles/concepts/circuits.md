@@ -72,7 +72,7 @@ Bu, algoritmadaki her bir alt yordamların nasıl çalıştığı hakkında tüm
 
 ## <a name="controlled-gates"></a>Denetlenen kapıları
 Multi-qubit hisse devresini içinde yerleşik olan diğer yapı denetimdir.
-Tek bir qubitin değerinin $G $ uygulamasını denetlediğini, belirtilen bir listedir kontrollü kapı (G) $, bir ürün durumu girişi $ \Lambda (G) (\Alpha \demet{0} + \ Beta \ @no__t_ ayraç) örneğine bakarak anlaşılabildiği bir işlem. 1_) \ket{\psı} = \Alpha \demet{0} \ket{\psı} + \beta \ ayraç{1} G\tus{\ PSI} $.
+Tek bir qubit değerinin $G $ uygulamasını denetlediğini, belirtilen $ \Lambda (G) $, bir hisse listedir kontrollü kapıdan oluşan eylem. bir ürün durumu girişi $ \Lambda (G) (\Alpha \demet{0} + \ Beta \ demet{1}) \ket{\psı} = \Alpha \tus{0} \ket{\psı} + \beta \ demet{1} G\tus{\ PSI} $ örneğine bakarak anlaşılabiliyor.
 Yani, denetlenen kapı $ \psı $ öğesini içeren Register 'a $G $, ancak yalnızca denetim qubit $1 $ değerini alırsa bu şekilde geçerlidir.
 Genel olarak, bu tür denetimli işlemleri devre diyagramlarında
 
