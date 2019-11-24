@@ -7,7 +7,7 @@ summary: >-
   Multi-qubit Pauli işlecinin üstel değeri uygular.
 
 
-  \begin{hizalaması} e ^ {ı \teta [P_0 \otimes P_1 \cnoktalar P_ {N-1}]}, \end{hizalaması}; burada $P _i $, `paulis`$i $ TH öğesidir ve $N = $`Length(paulis)`.
+  \begin{hizalaması} e ^ {ı \teta [P_0 \otimes P_1 \cnoktalar P_ {N-1}]}, \end{hizalaması}; burada $P _i $, $i `paulis`$ TH öğesidir ve $N = $`Length(paulis)`.
 syntax: 'operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : Unit'
 input:
   content: '(paulis : Pauli[], theta : Double, qubits : Qubit[])'

@@ -7,7 +7,7 @@ summary: >-
   Denetlenen-NOT (CNOT) kapısını bir qubit çiftiyle uygular.
 
 
-  \begin{hizalaması} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix} , \end{hizalaması}
+  \begin{hizalaması} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix}, \end{hizalaması}
 
 
   satırlar ve sütunlar hisse kavramları kılavuzunda olduğu gibi sıralanır.

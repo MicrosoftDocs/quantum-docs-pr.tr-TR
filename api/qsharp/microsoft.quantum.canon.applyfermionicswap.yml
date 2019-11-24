@@ -12,7 +12,7 @@ summary: >-
   Daha fazla bilgi için bkz.
 
 
-  Bu işlem, Unitary işleci tarafından temsil edilir \begin{hizalaması} F_ {Swap} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-1 \\\\ \end{bmatrix}.
+  Bu işlem, Unitary işleci \begin{hizalaması} f_ {Swap} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & & 0 & \\\\\\\\
 
   \end{hizalaması}
 syntax: 'operation ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit'

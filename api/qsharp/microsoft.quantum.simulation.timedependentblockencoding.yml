@@ -7,10 +7,10 @@ summary: >-
   Bir saat kaydı tarafından denetlenen bir `BlockEncoding` temsil eder.
 
 
-  Diğer bir deyişle $U `TimeDependentBlockEncoding`, bir durum $ \ket{k}_D $, saat kaydı `d`, sistem yazmacı üzerinde işlem yapan `s` $H _K $, yardımcı durum $ \ ' a karşılık gelen sol üst blokta kodlanmış @no __t_3_ _a $. Yani
+  Diğer bir deyişle `TimeDependentBlockEncoding`, bir durum $ \ket{k} _d $ saat kayıt `d` tarafından denetlenen bir Unitary $U $, sistem kayıt $H üzerinde işlem yapan _K `s` bir{0}_a, yardımcı durum $ \demet $ ' e karşılık gelen sol üst blokta kodlanır. Yani
 
 
-  $ $ \begin{hizalaması} (\bra{0}\_a\otimes I_ {DS}) U (\ayraç{0}\_a\otimes I_ {DS}) = \sum_{k}\ket{k}\bra{k}\_d\otimes H_k.
+  $ $ \begin{hizalaması} (\bra{0}\_a\otimes I_ {DS}) U (\demet{0}\_a\otimes I_ {DS}) = \ sum_ {k} \ket{k}\bra{k}\_d\otimes H_k.
 
   \end{hizalaması} $ $.
 syntax: newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl);
