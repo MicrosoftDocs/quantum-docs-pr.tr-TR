@@ -7,7 +7,7 @@ summary: >-
   $Z $-ekseni ile verilen bir açıda bir döndürme uygular.
 
 
-  \begin{hizalaması} R_z (\teta) \mathrel{: =} e ^ {-i \teta \ sigma_z/2} = \begin{bmatrix} e ^ {-i \teta/2} & 0 \\\\ 0 & e ^ {i \ teta/2} \end{bmatrix}.
+  \begin{hizalaması} R_z (\teta) \mathrel{: =} e ^ {-i \teta \ sigma_z/2} = \begin{bmatrix} e ^ {-i \teta/2} & 0 \\\\ 0 & e ^ {ı \ teta/2} \end{bmatrix}.
 
   \end{hizalaması}
 remarks: >-

@@ -3,12 +3,12 @@ uid: microsoft.quantum.core.rangestart
 name: RangeStart
 type: function
 namespace: Microsoft.Quantum.Core
-summary: Returns the defined start value of the given range.
+summary: Verilen aralığın tanımlanan başlangıç değerini döndürür.
 remarks: >-
-  A range expression's first element is `start`, its second element is `start+step`, third element is `start+step+step`, etc., until `end` is passed.
+  Aralık ifadesinin ilk öğesi `start`, ikinci öğesi `start+step`, üçüncü öğe ise `end` geçirilmeden `start+step+step`, vb.
 
 
-  Note that the defined start value of a range is the same as the first element of the sequence, unless the range specifies an empty sequence (for example, 2 .. 1).
+  Aralık boş bir sıra belirtmediği sürece bir aralığın tanımlanan başlangıç değerinin sıranın ilk öğesiyle aynı olduğunu unutmayın (örneğin, 2. 1).
 syntax: 'function RangeStart (range : Range) : Int'
 input:
   content: '(range : Range)'
@@ -19,7 +19,7 @@ input:
 output:
   content: Int
   types:
-  - summary: The defined start value of the given range.
+  - summary: Verilen aralığın tanımlanan başlangıç değeri.
     isPrimitive: true
     uid: Int
 metadata:

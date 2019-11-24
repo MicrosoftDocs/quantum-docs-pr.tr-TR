@@ -4,18 +4,18 @@ name: Y
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: >-
-  Applies the Pauli $Y$ gate.
+  Pauli $Y $ geçidini uygular.
 
 
-  \begin{align} \sigma_y \mathrel{:=} \begin{bmatrix} 0 & -i \\\\ i & 0 \end{bmatrix}.
+  \begin{hizalaması} \ sigma_y \mathrel{: =} \begin{bmatrix} 0 &-ı \\\\ i & 0 \end{bmatrix}.
 
-  \end{align}
+  \end{hizalaması}
 syntax: 'operation Y (qubit : Qubit) : Unit'
 input:
   content: '(qubit : Qubit)'
   types:
   - name: qubit
-    summary: Qubit to which the gate should be applied.
+    summary: Gate 'in uygulanması gereken qubit.
     isPrimitive: true
     uid: Qubit
 output:

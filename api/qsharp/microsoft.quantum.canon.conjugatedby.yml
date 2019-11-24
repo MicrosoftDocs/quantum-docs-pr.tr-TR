@@ -3,14 +3,14 @@ uid: microsoft.quantum.canon.conjugatedby
 name: ConjugatedBy
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Given outer and inner operations, returns a new operation that conjugates the inner operation by the outer operation.
-remarks: The outer operation is always assumed to be adjointable, but does not need to be controllable in order for the combined operation to be controllable.
+summary: Verilen dış ve iç işlemler, dış işlemin iç işlemini sağlayan yeni bir işlem döndürür.
+remarks: Dış işlemin her zaman adjointable olduğu varsayılır, ancak birleştirilmiş işlemin denetlenebilir olması için denetlenebilir olması gerekmez.
 syntax: "function ConjugatedBy (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit)) : ('T => Unit)"
 input:
   content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit))"
   types:
   - name: outerOperation
-    summary: The operation $U$ that should be used to conjugate $V$. $U $ dış işleminin adjointable olması gerektiğini, ancak denetlenebilir olması gerektiğini unutmayın.
+    summary: $V $ eşleniği için kullanılması gereken $U $ işlemi. $U $ dış işleminin adjointable olması gerektiğini, ancak denetlenebilir olması gerektiğini unutmayın.
     isOperation: true
     input:
       types:
