@@ -4,15 +4,15 @@ name: SWAP
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: >-
-  Applies the SWAP gate to a pair of qubits.
+  DEĞIŞTIRME kapısını bir qubits çiftine uygular.
 
 
-  \begin{align} \operatorname{SWAP} \mathrel{:=} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}, \end{align}
+  \begin{hizalaması} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}, \end{hizalaması}
 
 
-  where rows and columns are ordered as in the quantum concepts guide.
+  satırlar ve sütunlar hisse kavramları kılavuzunda olduğu gibi sıralanır.
 remarks: >-
-  Equivalent to:
+  Eşdeğer:
 
 
   ```qsharp
@@ -29,11 +29,11 @@ input:
   content: '(qubit1 : Qubit, qubit2 : Qubit)'
   types:
   - name: qubit1
-    summary: First qubit to be swapped.
+    summary: Takas edilecek ilk qubit.
     isPrimitive: true
     uid: Qubit
   - name: qubit2
-    summary: Second qubit to be swapped.
+    summary: Takas edilecek ikinci qubit.
     isPrimitive: true
     uid: Qubit
 output:

@@ -7,7 +7,7 @@ summary: >-
   Yerinde bir qubit dizisinin eşlik sayısını hesaplar.
 
 
-  $ \Ket{q_0} \ket{q_0 \ OPLUS q_1} \ket{q_0 \oplus q_1 \oplus q_2} \cnoktalar $ düzenine uyar.
+  $ \Ket{q_0} \ket{q_0 \oplus q_1} \ket{q_0 \oplus q_1 \oplus q_2} \cnoktalar $ düzenine uyar.
 syntax: 'operation CNOTChain (qubits : Qubit[]) : Unit'
 input:
   content: '(qubits : Qubit[])'

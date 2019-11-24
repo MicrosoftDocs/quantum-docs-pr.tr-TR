@@ -7,7 +7,7 @@ summary: >-
   $X $-ekseni ile verilen bir açıda bir döndürme uygular.
 
 
-  \begin{hizalaması} R_x (\teta) \mathrel{: =} e ^ {-i \teta \sigma_x/2} = \begin{bmatrix} \cos \frac{\theta}{2} &-ı\sin \frac{\theta}{2}\\\\-i\sin \ FRAC{\theta}{2} & \cos \frac{\theta}{2} \end{bmatrix}.
+  \begin{hizalaması} R_x (\teta) \mathrel{: =} e ^ {-i \teta \ sigma_x/2} = \begin{bmatrix} \cos \frac{\theta}{2} &-i\sin \frac{\theta}{2}\\\\-ı\sin \frac{\theta}{2} & \cos \frac{\theta}{2} \end{bmatrix}.
 
   \end{hizalaması}
 remarks: >-

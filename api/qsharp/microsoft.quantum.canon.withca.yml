@@ -9,7 +9,7 @@ summary: >-
   > Kullanım Dışı
 
 
-  Please use @"Microsoft.Quantum.Canon.ApplyWithCA".
+  Lütfen @"Microsoft.Quantum.Canon.ApplyWithCA"kullanın.
 syntax: "operation WithCA (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl), target : 'T) : Unit"
 input:
   content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl), target : 'T)"

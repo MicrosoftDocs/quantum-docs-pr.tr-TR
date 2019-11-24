@@ -4,17 +4,17 @@ name: MultiplexOperationsBruteForceFromGenerator
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Applies multiply-controlled unitary operation $U$ that applies a unitary $V_j$ when controlled by n-qubit number state $\ket{j}$.
+  N-qubit numarası State $ \ket{j} $ tarafından denetleniyorsa, bir Unitary $V _j $ uygulayan çarpma özellikli Unitary işlemini uygular $U $.
 
 
-  $U = \sum^{N-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
-remarks: '`coefficients` will be padded with identity elements if fewer than $2^n$ are specified. This version is implemented directly by looping through n-controlled unitary operators.'
+  $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+remarks: $2 ^ n $ değerinden azı belirtilmişse `coefficients` kimlik öğeleriyle doldurulur. Bu sürüm, n denetimli Unitary işleçleri aracılığıyla doğrudan döngülerle uygulanır.
 syntax: "operation MultiplexOperationsBruteForceFromGenerator (unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
 input:
   content: "(unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
   types:
   - name: unitaryGenerator
-    summary: A tuple where the first element `Int` is the number of unitaries $N$, and the second element `(Int -> ('T => () is Adj + Ctl))` is a function that takes an integer $j$ in $[0,N-1]$ and outputs the unitary operation $V_j$.
+    summary: İlk öğenin `Int` bir kayıt düzeni $N $ ' dir ve ikinci öğe `(Int -> ('T => () is Adj + Ctl))` $ [0, N-1] $ içinde bir tamsayı $j $ alır ve $V $ içinde Unitary işlemini çıktı olarak verir.
     types:
     - isPrimitive: true
       uid: Int
@@ -38,10 +38,10 @@ input:
           - Adjoint
           - Controlled
   - name: index
-    summary: $n$-qubit control register that encodes number states $\ket{j}$ in little-endian format.
+    summary: $n $-qubit denetim kaydı, az endian biçimindeki $ \ket{j} $ sayı durumlarını kodluyor.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: Generic qubit register that $V_j$ acts on.
+    summary: Genel qubit kayıt, $V _j $ üzerinde çalışır.
     uid: "'T"
     isLocal: true
 output:

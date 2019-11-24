@@ -7,7 +7,7 @@ summary: >-
   İki işlem söz konusu olduğunda, tüm giriş durumları için aynı hareket ettikleri onaylar.
 
 
-  Bu onaylama, formun tüm durumlarında işlem eylemi $V _0 \otimes... \otimes v_ {n-1} $, burada $V _K $ durumlardan biri $ \ket{0}$, $ \ayraç{1}$, $ \ket{+} $ ve $ \ket{i} $ (Pauli Y işlecinin 1 eigenstate).
+  Bu onaylama, formun tüm durumlarında işlem eylemi $V _0 \otimes... V_ {n-1} $, $V _k $ durumlardan biri $ \ket{0}$, $ \demet{1}$, $ \ket{+} $ ve $ \ket{i} $ (Pauli Y işlecinin) biridir.
 
 
   Bu onaylama $n $ qubits kullanır ve karşılaştırılmakta olan işlemlere yönelik birden çok çağrı gerektirir.

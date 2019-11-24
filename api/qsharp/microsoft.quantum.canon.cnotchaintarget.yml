@@ -7,7 +7,7 @@ summary: >-
   Bir qubits dizisinin bir hedef qubit 'e eşlik durumunu hesaplar.
 
 
-  Dizi başlangıçta $ \ket{q_0} \ket{q_1} \cnoktalar \ket{Q_{\Text{Target}}} $ durumundaysa, son durum $ \ket{q_0} \ket{q_1 \oplus q_0} \cnoktalar \ket{Q_{n-1} \oplus \cnoktalar \oplus q_0 \oplus Q_ {\Text{Target}}} $ tarafından verilir.
+  Dizi başlangıçta $ \ket{q_0} \ket{q_1} \cnoktalar \ket{q_ {\Text{Target}}} $ durumunda ise, son durum $ \ket{q_0} \ket{q_1 \oplus q_0} \cnoktalar \ket{q_ {n-1} \oplus \cnoktalar \oplus q_0 \oplus q_ {\Text{Target}}} $ tarafından verilir.
 remarks: >-
   Aşağıdakiler eşdeğerdir:
 
@@ -19,7 +19,7 @@ remarks: >-
   ```
 
 
-  'nı ve
+  ve
 
 
   ```qsharp

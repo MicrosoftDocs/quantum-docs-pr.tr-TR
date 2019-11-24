@@ -7,7 +7,7 @@ summary: >-
   Verilen Pauli ekseni ile dyadic kesri olarak belirtilen bir açıda bir döndürme uygular.
 
 
-  \begin{hizalaması} R_ {\mu} (n, k) \mathrel{: =} e ^ {ı \pi n \sigma_{\mu}/2 ^ k}, \end{hizalaması}; burada $ \mu \in \{I, X, Y, Z\}$.
+  \begin{hizalaması} R_ {\mu} (n, k) \mathrel{: =} e ^ {ı \pi n \ sigma_ {\mu}/2 ^ k}, \end{hizalaması}; burada $ \mu \in \{I, X, Y, Z\}$.
 
 
   > [!WARNING]

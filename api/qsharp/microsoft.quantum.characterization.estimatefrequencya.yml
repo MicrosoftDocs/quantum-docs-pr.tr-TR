@@ -46,7 +46,7 @@ input:
 output:
   content: Double
   types:
-  - summary: $M (P (\ket{00 \ cnoktalarla 0} \bra{00 \ cnoktalar 0}) $, `Zero`döndüren sıklık 'nin tahmin edilen bir $ \hat{p} $, $ = n\_{\upok}/n\_{\Text{measurements}} $, burada $n\_{\ upok} $, gözlemlenen `Zero` sonuçlarının sayısıdır.
+  - summary: $M (p (\ket{00 \ cnoktalar 0} \bra{00 \ cnoktalar 0}) $ `Zero`döndüren sıklık için tahmin $ \hat{p} $ $n\_{\upoklu} $, gözlenen `Zero` sonuçlarının sayısı olduğu\_{\upoklu}/n\_{\Text{measurements}} $ kullanılarak elde edilen untaraflı binom tahmin aracı $ \hat{p} = n.
     isPrimitive: true
     uid: Double
 metadata:
