@@ -7,7 +7,7 @@ summary: >-
   Pauli $Z $ geçidini uygular.
 
 
-  \begin{hizalaması} \sigma_z \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 &-1 \end{bmatrix}.
+  \begin{hizalaması} \ sigma_z \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 &-1 \end{bmatrix}.
 
   \end{hizalaması}
 syntax: 'operation Z (qubit : Qubit) : Unit'

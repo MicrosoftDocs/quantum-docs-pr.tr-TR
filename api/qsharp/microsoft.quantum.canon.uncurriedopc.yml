@@ -4,15 +4,15 @@ name: UncurriedOpC
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Given a function which returns operations, returns a new operation which takes both inputs as a tuple.
+  İşlemleri döndüren bir işlev verildiğinde, her iki girişi de tanımlama grubu olarak alan yeni bir işlem döndürür.
 
-  The modifier `C` indicates that the operations are controllable.
+  Değiştirici `C`, işlemlerin denetlenebilir olduğunu gösterir.
 syntax: "function UncurriedOpC (curriedOp : ('T -> ('U => Unit is Ctl))) : (('T, 'U) => Unit is Ctl)"
 input:
   content: "(curriedOp : ('T -> ('U => Unit is Ctl)))"
   types:
   - name: curriedOp
-    summary: A function which returns operations.
+    summary: İşlemleri döndüren bir işlev.
     isFunction: true
     input:
       types:
@@ -34,7 +34,7 @@ input:
 output:
   content: (('T, 'U) => Unit is Ctl)
   types:
-  - summary: A new operation `op` such that `op(t, u)` is equivalent to `(curriedOp(t))(u)`.
+  - summary: Yeni bir işlem, `op(t, u)` `(curriedOp(t))(u)`eşdeğerdir `op`.
     isOperation: true
     input:
       types:
@@ -50,9 +50,9 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: The type of the first argument of a curried function.
+  summary: Bir curried işlevinin ilk bağımsız değişkeninin türü.
 - uid: "'U"
-  summary: The type of the second argument of a curried function.
+  summary: Bir curried işlevinin ikinci bağımsız değişkeninin türü.
 seeAlso:
 - microsoft.quantum.canon.uncurryop
 metadata:

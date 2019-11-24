@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Arithmetic
 summary: >-
   , Yazmaçların bir sonraki qubit ' i üzerinde işlem gören iki qubit kayıt 'nin karşılık gelen bitleri üzerinde denetlenen CCNOT kapıları basamaklandırmasını uygular.
 
-  Her iki kasada de 0 konumundaki qubits 'lerden başlayarak, CCNOT hedef yazmacın 1. konumunda ve ardından hedef kayıttaki qubitlere göre kontrol edilir ve bu durumda, bir eylem ile biten, konumdaki hedef qubit `Length(nQubits)-1`.
+  Her iki kasada de 0 konumundaki qubits 'lerden başlayarak, CCNOT, hedef kaydın 1. konumunda bir değer olarak uygulanır ve ardından hedef kayıttaki qubits 'e, vb. konumdaki qubitlere göre kontrol edilir ve bu da hedef kasada bir eylem ile sona eriyor `Length(nQubits)-1`.
 remarks: Hedef qubit kayıt, diğer kayıt özelliğinden daha fazla bir qubit olmalıdır.
 syntax: 'operation CascadeCCNOT (register : Qubit[], targets : Qubit[]) : Unit'
 input:

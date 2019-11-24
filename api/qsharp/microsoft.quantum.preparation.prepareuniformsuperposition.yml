@@ -7,11 +7,11 @@ summary: >-
   0 ile `nIndices`kodlayan durumlar üzerinde Tekdüzen üst konumu oluşturur.
 
 
-  Diğer bir deyişle, bu Unitary $U $, $0 $ ile $M-$1 arasında tek bir üst konum oluşturarak bir giriş durumu $ \ket{0\cnoktalar 0} $ olarak sunulur. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket{0}= \frac{1}{\sqrt{M}}\sum_{j = 0} ^ {M-1} \ket{j}.
+  Diğer bir deyişle, bu Unitary $U $, $0 $ ile $M-$1 arasında tek bir üst konum oluşturarak bir giriş durumu $ \ket{0\cnoktalar 0} $ olarak sunulur. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket{0}= \frac{1}{\sqrt{M}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
   \end{hizalaması} $ $.
 examples: >-
-  Aşağıdaki örnek, $3 $ qubits üzerinde $ \frac{1}{\sqrt{6}} \sum_{j = 0} ^{5}\ket{j} $ durumunu hazırlar.
+  Aşağıdaki örnek, $3 $ qubits üzerinde $ \frac{1}{\sqrt{6}} \ sum_ {j = 0} ^{5}\ket{j} $ durumunu hazırlar.
 
 
   ```Q#

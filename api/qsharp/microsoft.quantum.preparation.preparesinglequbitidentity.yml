@@ -7,7 +7,7 @@ summary: >-
   Yüksek ölçüde karışık durumda bir qubit hazırlar.
 
 
-  $/Boldone/$2 durumunda verilen qubit $ $ \begin{hizalaması} \Omega (\rho) \mathrel{: =} \frac{1}{4} \sum_{\mu \in \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \ Sigma\_{\mu} ^ {\ dağılım}, \end{hizalaması} $ $; $ \sigma\_i $ $i $ TH Pauli operatörü ve $ \rho $, karma durumu temsil eden bir yoğunluk operatörü.
+  $/Boldo/$2 durumunda verilen qubit $ $ \begin{hizalaması} \Omega (\rho) \mathrel{: =} \frac{1}{4} \ sum_ {\mu \in \{0 ' ı uygulayarak verilen qubit 'i hazırlar. 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\leger}, \end{hizalaması} $ $; $ \sigma\_i $ $i $ TH Pauli operatörü ve $ \rho $, karışık bir durumu temsil eden bir yoğunluk operatöründür.
 remarks: >-
   Bu işlemi bir duruma uygulamanın sonucunu açıklayan karışık durum $ \ cıvadone/$2, bu işlemde yapılan rastgele seçimler üzerinde bir beklentideğeri örtülü olarak tanımlar.
 

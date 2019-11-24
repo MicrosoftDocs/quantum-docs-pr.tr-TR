@@ -7,7 +7,7 @@ summary: >-
   Bir ilgilendiğiniz bir işleci bir `BlockEncoding`olarak kodlar.
 
 
-  Bu, bazı işleci kodlayan bir `BlockEncoding` Unitary $U = P\cdot V\cdot P ^ \leger $ oluşturur $H = \sum_{j} | \harflerden _j | U_j $ ilgi çekici bir şekilde oluşturulur. Genellikle $P $, $P \tus{0}\_a = \ sum_j\sqrt {\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ ve $V = \sum_{j}\ket{j}\bra{j}\_a\otimes u_ olan bir durum hazırlama birimiyiyiyiydir j $.
+  Bu, bazı işleci kodlayan bir `BlockEncoding` Unitary $U = P\cdot V\cdot P ^ \leger $ oluşturur $H = \ sum_ {j} | \ alpha_j | U_j $ ilgi çekici bir şekilde oluşturulur. Genellikle $P $, $P \tus{0}\_a = \ sum_j \sqrt{\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ ve $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $ gibi bir durum hazırlama birimiyıdır.
 remarks: Bu `BlockEncoding` uygulama, `BlockEncodingReflection`özellikleri sağlar.
 syntax: "function BlockEncodingByLCU (statePreparation : ('T => Unit is Adj + Ctl), selector : (('T, 'S) => Unit is Adj + Ctl)) : (('T, 'S) => Unit is Adj + Ctl)"
 input:

@@ -7,17 +7,17 @@ summary: >-
   Bir qubits dizisine bağlı bir Pauli dönüşü uygular.
 
 
-  Bu, $n $-qubit numarası State $ \ket{j} $ tarafından denetlendiğinde, "$ \theta_j $ hakkında tek-qubit Pauli işleci $P $ ile birlikte döndürmeler gerçekleştiren çarpma özellikli Unitary işlemini uygular $U $.
+  Bu, $n $-qubit numarası $ \ket{j} $ $P $ \ theta_j $ hakkında tek-qubit Pauli işleci hakkında $ \ $ adlı çarpma tarafından denetlenen Unitary işlemini uygular $U $.
 
 
-  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \theta_j} $.
-remarks: $2 ^ n $ değerinden azı belirtilmişse, `coefficients` $ \theta_j = $0,0 öğeleriyle doldurulur.
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \ theta_j} $.
+remarks: '`coefficients` $ \ theta_j = $0,0 öğelerinden daha az $2 ^ n $ belirtilirse, bu öğelerle doldurulur.'
 syntax: 'operation MultiplexPauli (coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
 input:
   content: '(coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
   types:
   - name: coefficients
-    summary: Dizi $2 ^ n $ katsayısı $ \theta_j $. $J $ TH katsayısı, küçük endian biçiminde $ \ket{j} $ kodlu durum sayısını dizine ekler.
+    summary: Dizi $2 ^ n $ katsayısı $ \ theta_j $. $J $ TH katsayısı, küçük endian biçiminde $ \ket{j} $ kodlu durum sayısını dizine ekler.
     isArray: true
     isPrimitive: true
     uid: Double
@@ -29,7 +29,7 @@ input:
     summary: $n $-qubit denetim kaydı, az endian biçimindeki $ \ket{j} $ sayı durumlarını kodluyor.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: $E ^ {i P \theta_j} $ tarafından döndürülen tek qubit kaydı.
+    summary: $E ^ {i P \ theta_j} $ tarafından döndürülen tek qubit kaydı.
     isPrimitive: true
     uid: Qubit
 output:

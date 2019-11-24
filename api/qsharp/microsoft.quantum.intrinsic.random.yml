@@ -21,7 +21,7 @@ input:
 output:
   content: Int
   types:
-  - summary: Olasılık $ \Pr (i) = p_i/\sum_i p_i $ olan bir tamsayı $i $, burada $p _i $ `probs`$i $ TH öğesidir.
+  - summary: Olasılık $ \Pr (i) = p_i/\ sum_i p_i $ olan bir tamsayı $i $, burada $p _i $ $i `probs`$ TH öğesidir.
     isPrimitive: true
     uid: Int
 metadata:

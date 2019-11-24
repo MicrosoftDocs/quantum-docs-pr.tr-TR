@@ -3,7 +3,7 @@ uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
 name: OptimizedBEXY
 type: operation
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: $ (X ^ {z + 1}\_Kopyala ^ {z}\_p) Z\_{p-1} üzerinde Pauli dizesini uygulayan bir Unitary $U $... Z_0 $, & 0, 1\}$ ve $p $ '\{deki bir dizin $z dizininde bulunan qubits $0.. Yani, $ $ \begin{hizalaması} U\ket {z} \ ayraç {p} \ Tus{\ PSI} = \ket{z}\ket{p} (X ^ {z + 1}\_Kopyala ^ {z}\_p) Z\_{p-1}... Z_0\ket {\ PSI} \end{hizalaması} $ $
+summary: $ (X ^ {z + 1}\_Kopyala ^ {z}\_p) Z\_{p-1} üzerinde Pauli dizesini uygulayan bir Unitary $U $... Z_0 $,\{0, 1\}$ ve $p $ içindeki bir dizin $z \ Yani, $ $ \begin{hizalaması} U\ket {z} \ ayraç {p} \ Tus{\ PSI} = \ket{z}\ket{p} (X ^ {z + 1}\_Kopyala ^ {z}\_p) Z\_{p-1}... Z_0 \ket{\psı} \end{hizalaması} $ $
 syntax: 'operation OptimizedBEXY (pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
 references: "- Doğrusal T karmaşıklığı ile elektronik Spectra 'yi, doğrusal T karmaşıklığı Ryan Bemarh, Craig Gidney, Dominic W. Braz, Nathan Wiebe, Jarrod McClean, Alexandru paler, Austin Fowler, Hartmut Neven https://arxiv.org/abs/1805.03662 kodlaması"
 input:
