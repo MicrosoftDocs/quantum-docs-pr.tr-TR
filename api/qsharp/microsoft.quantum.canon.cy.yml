@@ -7,7 +7,7 @@ summary: >-
   Denetimli-Y (CY) kapısını bir qubit çiftiyle uygular.
 
 
-  $ $ \begin{hizalaması} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-ı \\\\ 0 & 0 & ı & 0 \ End{hizalaması} , $ $, satırlar ve sütunlar hisse kavramları kılavuzunda olduğu gibi düzenlenir.
+  $ $ \begin{hizalaması} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-ı \\\\ 0 & 0 & ı & 0 \end{hizalaması}, $ $ burada satır ve sütun, hisse kavramları kılavuzunda olduğu gibi düzenlenir.
 remarks: >-
   Eşdeğer:
 

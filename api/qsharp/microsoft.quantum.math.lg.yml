@@ -15,7 +15,7 @@ input:
 output:
   content: Double
   types:
-  - summary: Base-2 logaritmasını $y = \log_2 (x) $, $x = 2 ^ y $.
+  - summary: Taban-2 $y = \ log_2 (x) $ $x = 2 ^ y $.
     isPrimitive: true
     uid: Double
 metadata:

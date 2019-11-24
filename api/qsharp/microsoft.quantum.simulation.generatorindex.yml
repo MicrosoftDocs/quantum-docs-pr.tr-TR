@@ -16,7 +16,7 @@ remarks: >-
 
   ### <a name="examples"></a>Örnekler
 
-  <xref:microsoft.quantum.simulation.paulievolutionset>kullanarak $ \pı X_2 X_5 Y_9 $ işleci şu şekilde gösterilir:
+  <xref:microsoft.quantum.simulation.paulievolutionset>kullanarak $ \pı X_2 X_5 Y_9 $ işleci şöyle temsil edilir:
 
 
   ```qsharp

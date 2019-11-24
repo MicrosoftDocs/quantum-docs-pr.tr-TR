@@ -7,11 +7,11 @@ summary: >-
   , Belirli bir yoğunluk matrisini göstermek için hisse ROM tekniğini kullanır.
 
 
-  $N $ katsayıları $ \harflerden _j $ olan bir liste verildiğinde bu, bir yaklaşık $ \tilde\rho\sum_$U {j = 0} ^ {N-1} p_j\ket {j} \ köşeli {j} $ yoğunluğu matrisini belirleme $ \rho = \sum_{j = 0} ^ {N-1} \frac{| alpha_j |} {\sum_k | \harfler _K |} \ket{j}\bra{j} $. Bu yaklaşık olarak $ \epsilon $ hatası $ | p_j-\frac{| alpha_j |} şeklindedir {\sum_k | \ harfler _K |} | \le \ Epsilon/N $ ve $\|\tilde\rho-\rho\| \le \epsilon $. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket{0}^ {\lceil\log_2 N\rceıl} \ demet{0}^ {d} = \sum_{j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{Garbage}_j}.
+  $N $ katsayısı $ \ alpha_j $ olan bir liste verildiğinde bu işlem, yoğunluk matrisini $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| için bir yaklaşık $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ ' u kullanan bir Unitary $U $ döndürür alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. Bu nedenle, $ \epsilon $ hatası $ | p_j-\frac{| alpha_j |} şeklindedir {\ sum_k | \ alpha_k |} | \le \ Epsilon/N $ ve $\|\tilde\rho-\rho\| \le \epsilon $. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket{0}^ {\lceil\ log_2 N\rceıl} \ demet{0}^ {d} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{Garbage} _j}.
 
   \end{hizalaması} $ $
 examples: >-
-  Aşağıdaki kod parçacığı $3 $-qubit durumu $ \rho = \sum_{j = 0} ^{4}\frac{| alpha_j |} için bir yol hazırlar {\sum_k | \harfler _K |} \ket{j}\bra{j} $, burada $ \vec\alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $, ve hata `1e-3`;
+  Aşağıdaki kod parçacığı $3 $-qubit State $ \rho = \ sum_ {j = 0} ^{4}\frac{| alpha_j |} için bir yol hazırlar {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $, burada $ \vec\alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $, ve hata `1e-3`;
 
 
   ```qsharp
@@ -42,7 +42,7 @@ input:
     summary: >-
       Taban durumlarının olasılığını belirten $N $ katsayıları dizisi.
 
-      Negatif sayılar $-\harflerden _j $ pozitif $ | \harflerden _j | $ olarak kabul edilir.
+      Negatif sayılar $-\ alpha_j $ pozitif $ | \ alpha_j | $ olarak kabul edilir.
     isArray: true
     isPrimitive: true
     uid: Double
@@ -59,7 +59,7 @@ output:
       ## <a name="second-parameter"></a>İkinci parametre
 
 
-      Katsayı dizisinin tek norm $ \sum_j | \harflerden _j | $.
+      Katsayı dizisinin tek norm $ \ sum_j | \ alpha_j | $.
 
 
       ## <a name="third-parameter"></a>Üçüncü parametre

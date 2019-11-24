@@ -4,16 +4,16 @@ name: ExpModI
 type: function
 namespace: Microsoft.Quantum.Math
 summary: >-
-  Returns an integer raised to a given power, with respect to a given modulus.
+  Belirli bir mod için verilen bir kuvvete verilen bir tamsayıyı döndürür.
 
 
-  Let us denote expBase by $x$, power by $p$ and modulus by $N$.
+  $X $, Power by $p $ ve mod $N $ ile karşılaştırarak expBase 'i belirlememize izin verin.
 
-  The function returns $x^p \operatorname{mod} N$.
+  İşlev, $x ^ p \operatorname{mod} N $ döndürür.
 
 
-  We assume that $N$, $x$ are positive and power is non-negative.
-remarks: Takes time proportional to the number of bits in `power`, not the `power` itself.
+  $N $, $x $ öğesinin olumlu ve gücün negatif olmadığı varsayılır.
+remarks: '`power`, `power` kendisini değil, bit sayısıyla orantılı bir zaman alır.'
 syntax: 'function ExpModI (expBase : Int, power : Int, modulus : Int) : Int'
 input:
   content: '(expBase : Int, power : Int, modulus : Int)'

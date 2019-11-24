@@ -9,7 +9,7 @@ summary: >-
   > Kullanım Dışı
 
 
-  Please use @"Microsoft.Quantum.Arrays.MappedByIndex" instead.
+  Lütfen bunun yerine @"Microsoft.Quantum.Arrays.MappedByIndex" kullanın.
 syntax: "function MapIndex (mapper : ((Int, 'T) -> 'U), array : 'T[]) : 'U[]"
 input:
   content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"

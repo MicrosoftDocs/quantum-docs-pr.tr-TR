@@ -9,7 +9,7 @@ summary: >-
   > Kullanım Dışı
 
 
-  Please use @"microsoft.quantum.intrinsic.exp".
+  Lütfen @"microsoft.quantum.intrinsic.exp"kullanın.
 syntax: 'operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : Unit'
 input:
   content: '(paulis : Pauli[], theta : Double, qubits : Qubit[])'

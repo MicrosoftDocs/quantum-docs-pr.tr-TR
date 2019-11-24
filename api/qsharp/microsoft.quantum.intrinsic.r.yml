@@ -7,7 +7,7 @@ summary: >-
   Verilen Pauli ekseni hakkında bir döndürme uygular.
 
 
-  \begin{hizalaması} R_ {\mu} (\teta) \mathrel{: =} e ^ {-i \teta \sigma_{\mu}/2}, \end{hizalaması}; burada $ \mu \in \{I, X, Y, Z\}$.
+  \begin{hizalaması} R_ {\mu} (\teta) \mathrel{: =} e ^ {-i \teta \ sigma_ {\mu}/2}, \end{hizalaması}; burada $ \mu \in \{I, X, Y, Z\}$.
 remarks: '`pauli = PauliI`ile çağrıldığında, bu işlem *genel bir aşama*uygular. Bu aşama `Controlled` functor ile kullanıldığında önemli olabilir.'
 syntax: 'operation R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit'
 input:

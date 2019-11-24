@@ -9,7 +9,7 @@ input:
   content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: coefficients
-    summary: Çift bir dizi olarak çift bir dizi olarak bile, dizi $ [a_0, A_1,..., a_k] $, Çift polinom $P (x) = a_0 + A_1 x ^ 2 + \cnoktalar + a_k x ^ {2k} $.
+    summary: Çift bir dizi olarak eşit polinom 'un katsayısı; Yani, Çift polinom $P (x) = a_0 + a_1 x ^ 2 + \cnoktalar + a_k x ^ {2k} $ için dizi $ [a_0, a_1,..., a_k] $.
     isArray: true
     isPrimitive: true
     uid: Double

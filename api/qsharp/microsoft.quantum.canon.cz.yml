@@ -7,7 +7,7 @@ summary: >-
   Denetlenen-Z (CZ) kapısını bir qubit çiftiyle uygular.
 
 
-  $ $ \begin{hizalaması} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{hizalaması} , $ $, satırlar ve sütunlar hisse kavramları kılavuzunda olduğu gibi düzenlenir.
+  $ $ \begin{hizalaması} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{hizalaması}, $ $ burada satırlar ve sütunlar hisse kavramları kılavuzunda olduğu gibi düzenlenir.
 remarks: >-
   Eşdeğer:
 

@@ -4,9 +4,9 @@ name: Complex
 type: newtype
 namespace: Microsoft.Quantum.Math
 summary: >-
-  Represents a complex number by its real and imaginary components.
+  Gerçek ve sanal bileşenleriyle karmaşık bir sayıyı temsil eder.
 
-  The first element of the tuple is the real component, the second one - the imaginary component.
+  Kayıt düzeninin ilk öğesi, ikinci bir-sanal bileşen olan gerçek bileşendir.
 syntax: newtype Complex = (Double, Double);
 metadata:
   ms.openlocfilehash: c8e60a824b10d21d793898bdeb3bc6c4dfa843cb

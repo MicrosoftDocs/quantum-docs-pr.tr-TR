@@ -7,7 +7,7 @@ summary: >-
   Benzersiz olarak bayrak qubit tarafından işaretlenen hedef durumu hakkında bir `ReflectionOracle` oluşturur.
 
 
-  Hedef durumu 1 olarak ayarlanmış tek bir qubit ve diğerleri 0: $ \ demet{1}_F $ şeklindedir.
+  Hedef durumu 1 olarak ayarlanmış tek bir qubit ve tüm diğerleri 0: $ \demet{1}_f $.
 syntax: 'function TargetStateReflectionOracle (idxFlagQubit : Int) : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
   content: '(idxFlagQubit : Int)'
@@ -19,7 +19,7 @@ input:
 output:
   content: Microsoft.Quantum.Oracles.ReflectionOracle
   types:
-  - summary: $ \Ket{1}_F $ tarafından işaretlenen durum hakkında yansıtan bir `ReflectionOracle`.
+  - summary: $ \Ket{1}_f $ tarafından işaretlenen durum hakkında yansıtan bir `ReflectionOracle`.
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
 - microsoft.quantum.canon.reflectionoracle

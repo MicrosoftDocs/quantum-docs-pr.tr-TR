@@ -37,7 +37,7 @@ remarks: >-
   ```
 
 
-  Tolerans, $ \langta\psı | \psı\rangle = x\_1 I + x\_2 X + x\_3 Y + x\_4 Z $ ve gerçek vektör (Y ₂) tarafından tanımlanan 3 boyutlu gerçek vektör (x ₂, x ₃, x ₄) arasında bulunan $L\_{\infty} $ uzaklığı. , y ₃, y ₄) ρ = y ₁ I + y ₂ X + y ₃ Y + y ₄ Z
+  Tolerans, $ \langta\psı | \psı\rangle = x\_1 I + x\_2 X + x\_3 Y + x\_4 Z $ ve gerçek vektör (Y ₂) tarafından tanımlanan 3 boyutlu gerçek vektör (x ₂, x ₃, x ₄) arasında bulunan $L\_{\infty} $ uzaklığı. y ₃, y ₄), ρ = Y ₁ I + y ₂ X + y ₃ Y + y ₄ Z tarafından tanımlanır. burada ρ, kaydın durumuna karşılık gelen yoğunluk matrisi.
 
   Bu yalnızca, tr (ρ) ve tr (| ψ ⟩ ⟨ ψ |) öğelerinin hem 1 hem de (örn. x ₁ = 1/2, y ₁ = 1/2) olduğu varsayımıyla geçerlidir.
 
