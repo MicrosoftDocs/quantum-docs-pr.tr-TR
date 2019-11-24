@@ -7,13 +7,13 @@ summary: >-
   Verilen hisse cıya durumunu hazırlayan bir işlem döndürür.
 
 
-  Döndürülen işlem $U $, $n $-qubit hesaplama tabanlı durumu $ \ket{0...0} $ öğesinden pozitif bir hisse maçini $ \ket{\psı} $ öğesini pozitif katlara $ \harflerden _j\ge $0 vererek hazırlar.
+  Döndürülen $U $ $-qubit hesaplama tabanlı durumu $ \ket{0...0} $ $n $ \ alpha_j \ge $0 pozitif katlarla rastgele bir hisse alma $ \ket{\psı} $ hazırlar.
 
 
-  Yeni ayrılmış bir kayıttaki U eylemi $ $ \begin{hizalaması} U \ket{0\cnoktalar 0} = \ket{\psı} = \frac{\sum_{j = 0} ^ tarafından verilir {2 ^ n-1} \harfler _j \ ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | \ harfler _j | ^ 2}}.
+  Yeni ayrılmış bir kayıttaki U eylemi $ $ \begin{hizalaması} U \ket{0\cnoktalar 0} = \ket{\psı} = \frac{\ sum_ {j = 0 tarafından verilir} ^ {2 ^ n-1} \ alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ alpha_j | ^ 2}}.
 
   \end{hizalaması} $ $
-remarks: Negatif giriş katsayıları $ \harflerden _j < $0 değeri $ | \harflerden _j | $ değeriyle pozitif olarak değerlendirilir. $2 ^ n $ değerinden azı belirtilmişse `coefficients` $ \harflerden _j = $0,0 öğeleriyle doldurulur.
+remarks: Negatif giriş katsayıları $ \ alpha_j < $0, $ | \ alpha_j | $ değeri ile pozitif olarak değerlendirilir. `coefficients` $ \ alpha_j = $0,0 öğelerinden daha az $2 ^ n $ belirtilirse, bu öğelerle doldurulur.
 examples: >-
   Aşağıdaki kod parçacığı, qubit yazmaç `qubitsLE`hisse durumu $ \ket{\psı} = \ sqrt {1/8} \ tus{0}+ \ sqrt {7/8} \ tus{2}$ ' i hazırlar.
 
@@ -35,7 +35,7 @@ input:
   content: '(coefficients : Double[])'
   types:
   - name: coefficients
-    summary: En fazla $2 ^ n $ katsayısıdır $ \ harflerden _j $. $J $ TH katsayısı, küçük endian biçiminde $ \ket{j} $ kodlu durum sayısını dizine ekler.
+    summary: Dizi $2 ^ n $ katsayısı $ \ alpha_j $. $J $ TH katsayısı, küçük endian biçiminde $ \ket{j} $ kodlu durum sayısını dizine ekler.
     isArray: true
     isPrimitive: true
     uid: Double

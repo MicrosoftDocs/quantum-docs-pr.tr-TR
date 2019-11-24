@@ -3,13 +3,13 @@ uid: microsoft.quantum.canon.decomposeintotimestepsca
 name: DecomposeIntoTimeStepsCA
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Returns an operation implementing the Trotter–Suzuki integrator for a given operation.
+summary: Belirli bir işlem için Trour – Suzuki tümleştirici uygulayan bir işlem döndürür.
 syntax: "function DecomposeIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
 references: >-
-  We use the implementation in
+  Uygulamasında uygulama kullanıyoruz
 
 
-  - [ *D. W. Berry, G. Ahokas, R. Cleve, B. C. Sanders* ](https://arxiv.org/abs/quant-ph/0508139)
+  - [*D. W. Braz, G. Ahokas, R. Cleve, B. C. Sanders*](https://arxiv.org/abs/quant-ph/0508139)
 input:
   content: "((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int)"
   types:
@@ -35,15 +35,15 @@ input:
     - Controlled
   - name: trotterOrder
     summary: >-
-      Selects the order of the Trotter–Suzuki integrator to be used.
+      Kullanılacak Trour – Suzuki tümleştirici sırasını seçer.
 
-      Order 1 and 2 are currently supported.
+      1 ve 2. sipariş şu anda destekleniyor.
     isPrimitive: true
     uid: Int
 output:
   content: ((Double, 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Returns a unitary implementing the Trotter–Suzuki integrator, where the first parameter `Double` is the integration step size, and the second parameter is the target acted upon.
+  - summary: Birinci parametrenin `Double` tümleştirme adımı boyutu olduğu ve ikinci parametrenin ise hedefin üzerinde çalıştığı, Haur – Suzuki tümleştirmesini uygulayan bir Unitary döndürür.
     isOperation: true
     input:
       types:
@@ -60,7 +60,7 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: The type which each time step should act upon; typically, either `Qubit[]` or `Qubit`.
+  summary: Her zaman adımının üzerinde işlem yapması gereken tür; genellikle `Qubit[]` ya da `Qubit`.
 metadata:
   ms.openlocfilehash: 328db9b314320c724cf03adb19ee59d63a33e56e
   ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0

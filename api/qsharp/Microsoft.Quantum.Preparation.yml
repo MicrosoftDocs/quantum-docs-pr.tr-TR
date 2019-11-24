@@ -14,7 +14,7 @@ functions:
     , Belirli bir yoğunluk matrisini göstermek için hisse ROM tekniğini kullanır.
 
 
-    $N $ katsayıları $ \harflerden _j $ olan bir liste verildiğinde bu, bir yaklaşık $ \tilde\rho\sum_$U {j = 0} ^ {N-1} p_j\ket {j} \ köşeli {j} $ yoğunluğu matrisini belirleme $ \rho = \sum_{j = 0} ^ {N-1} \frac{| alpha_j |} {\sum_k | \harfler _K |} \ket{j}\bra{j} $. Bu yaklaşık olarak $ \epsilon $ hatası $ | p_j-\frac{| alpha_j |} şeklindedir {\sum_k | \ harfler _K |} | \le \ Epsilon/N $ ve $\|\tilde\rho-\rho\| \le \epsilon $. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket{0}^ {\lceil\log_2 N\rceıl} \ demet{0}^ {d} = \sum_{j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{Garbage}_j}.
+    $N $ katsayısı $ \ alpha_j $ olan bir liste verildiğinde bu işlem, yoğunluk matrisini $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| için bir yaklaşık $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ ' u kullanan bir Unitary $U $ döndürür alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. Bu nedenle, $ \epsilon $ hatası $ | p_j-\frac{| alpha_j |} şeklindedir {\ sum_k | \ alpha_k |} | \le \ Epsilon/N $ ve $\|\tilde\rho-\rho\| \le \epsilon $. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket{0}^ {\lceil\ log_2 N\rceıl} \ demet{0}^ {d} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{Garbage} _j}.
 
     \end{hizalaması} $ $
 - uid: microsoft.quantum.preparation.quantumromqubitcount
@@ -24,10 +24,10 @@ functions:
     Belirli bir hisse durumu hazırlayan bir işlem döndürür.
 
 
-    Döndürülen $U $, $n $-qubit hesaplama tabanlı durumu $ \ket{0...0} $ öğesinden $r _j e ^ {i T_J} $ karmaşık katlarla rastgele bir hisse TI $ \ket{\psı} $ hazırlar.
+    Döndürülen $U $, $n $-qubit hesaplama tabanlı durum $ \ket{0...0} $ t_j _j $r karmaşık katlara sahip, rastgele bir hisse
 
 
-    Yeni ayrılmış bir kayıttaki U eylemi $ $ \begin{hizalaması} U\ket {0... tarafından verilir. 0} = \ket{\psı} = \frac{\sum_{j = 0} ^ {2 ^ n-1} r_j e ^ {i T_J} \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
+    Yeni ayrılmış bir kayıttaki U eylemi $ $ \begin{hizalaması} U\ket {0... tarafından verilir. 0} = \ket{\psı} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
 
     \end{hizalaması} $ $
 - uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
@@ -35,10 +35,10 @@ functions:
     Verilen hisse cıya durumunu hazırlayan bir işlem döndürür.
 
 
-    Döndürülen işlem $U $, $n $-qubit hesaplama tabanlı durumu $ \ket{0...0} $ öğesinden pozitif bir hisse maçini $ \ket{\psı} $ öğesini pozitif katlara $ \harflerden _j\ge $0 vererek hazırlar.
+    Döndürülen $U $ $-qubit hesaplama tabanlı durumu $ \ket{0...0} $ $n $ \ alpha_j \ge $0 pozitif katlarla rastgele bir hisse alma $ \ket{\psı} $ hazırlar.
 
 
-    Yeni ayrılmış bir kayıttaki U eylemi $ $ \begin{hizalaması} U \ket{0\cnoktalar 0} = \ket{\psı} = \frac{\sum_{j = 0} ^ tarafından verilir {2 ^ n-1} \harfler _j \ ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | \ harfler _j | ^ 2}}.
+    Yeni ayrılmış bir kayıttaki U eylemi $ $ \begin{hizalaması} U \ket{0\cnoktalar 0} = \ket{\psı} = \frac{\ sum_ {j = 0 tarafından verilir} ^ {2 ^ n-1} \ alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ alpha_j | ^ 2}}.
 
     \end{hizalaması} $ $
 operations:
@@ -47,10 +47,10 @@ operations:
     Belirli bir hisse cıya durumunu hazırlayan bir işlem döndürür.
 
 
-    Döndürülen $U $, $n $-qubit hesaplama tabanlı durumu $ \ket{0...0} $ öğesinden $r _j e ^ {i T_J} $ karmaşık katlarla rastgele bir hisse TI $ \ket{\psı} $ hazırlar.
+    Döndürülen $U $, $n $-qubit hesaplama tabanlı durum $ \ket{0...0} $ t_j _j $r karmaşık katlara sahip, rastgele bir hisse
 
 
-    $ $ \begin{hizalaması} U\ket {0... 0} = \ket{\psı} = \frac{\sum_{j = 0} ^ {2 ^ n-1} r_j e ^ {i T_J} \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
+    $ $ \begin{hizalaması} U\ket {0... 0} = \ket{\psı} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
 
     \end{hizalaması} $ $
 - uid: microsoft.quantum.preparation.preparechoistate
@@ -66,7 +66,7 @@ operations:
     İkili entangles iki qubit kaydı.
 
 
-    Diğer bir deyişle, iki kayıt söz konusu olduğunda, her bir kaydın $ \ket{0\ ' de başladığı varsayılarak, her bir kasadaki her bir qubit çifti arasında en büyük ölçüde entangled State $ \frac{1}{\sqrt{2}} \left (\ket{00} + \ment{11} \right) $ değerini hazırlar. cnoktalar 0} $ durum.
+    Diğer bir deyişle, iki kayıt söz konusu olduğunda, her kaydın $ \ket{0\cnoktalar 0} $ durumunda başlayacağını varsayarak, her bir kasadaki her bir qubit çifti arasında en büyük ölçüde entangled State $ \frac{1}{\sqrt{2}} \left (\ket{00} + \ment{11} \right) $ değerini hazırlar.
 - uid: microsoft.quantum.preparation.prepareidentity
   summary: >-
     Kayıt verildiğinde, bu kaydı, en yüksek düzeyde karışık durumda hazırlar.
@@ -89,13 +89,13 @@ operations:
     Yüksek ölçüde karışık durumda bir qubit hazırlar.
 
 
-    $/Boldone/$2 durumunda verilen qubit $ $ \begin{hizalaması} \Omega (\rho) \mathrel{: =} \frac{1}{4} \sum_{\mu \in \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \ Sigma\_{\mu} ^ {\ dağılım}, \end{hizalaması} $ $; $ \sigma\_i $ $i $ TH Pauli operatörü ve $ \rho $, karma durumu temsil eden bir yoğunluk operatörü.
+    $/Boldo/$2 durumunda verilen qubit $ $ \begin{hizalaması} \Omega (\rho) \mathrel{: =} \frac{1}{4} \ sum_ {\mu \in \{0 ' ı uygulayarak verilen qubit 'i hazırlar. 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\leger}, \end{hizalaması} $ $; $ \sigma\_i $ $i $ TH Pauli operatörü ve $ \rho $, karışık bir durumu temsil eden bir yoğunluk operatöründür.
 - uid: microsoft.quantum.preparation.prepareuniformsuperposition
   summary: >-
     0 ile `nIndices`kodlayan durumlar üzerinde Tekdüzen üst konumu oluşturur.
 
 
-    Diğer bir deyişle, bu Unitary $U $, $0 $ ile $M-$1 arasında tek bir üst konum oluşturarak bir giriş durumu $ \ket{0\cnoktalar 0} $ olarak sunulur. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket{0}= \frac{1}{\sqrt{M}}\sum_{j = 0} ^ {M-1} \ket{j}.
+    Diğer bir deyişle, bu Unitary $U $, $0 $ ile $M-$1 arasında tek bir üst konum oluşturarak bir giriş durumu $ \ket{0\cnoktalar 0} $ olarak sunulur. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket{0}= \frac{1}{\sqrt{M}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
     \end{hizalaması} $ $.
 metadata:

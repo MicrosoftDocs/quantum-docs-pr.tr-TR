@@ -8,7 +8,7 @@ summary: >-
 
 
   $ \Ket{f_1} $ ve $ \ket{f_2} $ durumlarında sırasıyla iki sabit noktalı kayıt verildiğinde, $ \ket{f_1} \ket{f_2} \mapsto \ket{f_1} \ket{f_1 + f_2} $ işlemini gerçekleştirir.
-remarks: Geçerli uygulama iki sabit noktalı sayının, en az önemli bitden ($n _i $ ve $p _i $ eşit olması gerekir) aynı nokta konumunun sayımını gerektirir.
+remarks: Geçerli uygulama iki sabit noktalı sayının aynı nokta konumunun, en az önemli bitden ($n _i $ ve $p _i $ eşit olması gerekir.
 syntax: 'operation AddFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint)'
