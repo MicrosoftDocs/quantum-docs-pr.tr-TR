@@ -3,6 +3,8 @@ uid: microsoft.quantum.core
 name: Microsoft.Quantum.Core
 summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı, Q # Core işlevlerini ve işlemlerini içerir.\n\n # <a name=\"remarks\"></a>Açıklamalar\n Bu ad alanı, Q # derleyicisi tarafından otomatik olarak açılır, bu nedenle bu ad alanının tüm öğeleri her zaman kullanılabilir."
 functions:
+- uid: microsoft.quantum.core.default
+  summary: Belirtilen türün varsayılan bir örneğini döndürür.
 - uid: microsoft.quantum.core.length
   summary: Dizideki öğe sayısını döndürür.
 - uid: microsoft.quantum.core.rangeend
@@ -13,10 +15,17 @@ functions:
   summary: Verilen aralığın tanımlanan başlangıç değerini döndürür.
 - uid: microsoft.quantum.core.rangestep
   summary: Bir aralığın sonraki değerinin nasıl hesaplanacağını belirten tamsayıyı döndürür.
+newtypes:
+- uid: microsoft.quantum.core.attribute
+  summary: Kullanıcı tanımlı türleri öznitelik olarak işaretlemek için kullanılan derleyicinin tanınan özniteliği.
+- uid: microsoft.quantum.core.deprecated
+  summary: Bir tür veya çağrılabilir şekilde kullanım dışı olarak işaretlemek için kullanılan derleyici tarafından tanınan öznitelik.
+- uid: microsoft.quantum.core.entrypoint
+  summary: Bir yürütülebilirin giriş noktasını işaretlemek için kullanılan derleyicinin tanınan özniteliği.
 metadata:
-  ms.openlocfilehash: 41c28f8e8e11990ec1cf9b315478996a1e0811f4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6391521907deddbf4425b927b1dec12e73f0ee5d
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056901"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858590"

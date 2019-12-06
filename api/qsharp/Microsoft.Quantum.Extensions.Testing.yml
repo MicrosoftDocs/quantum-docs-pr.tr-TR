@@ -3,55 +3,25 @@ uid: microsoft.quantum.extensions.testing
 name: Microsoft.Quantum.Extensions.Testing
 operations:
 - uid: microsoft.quantum.extensions.testing.assertallzero
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.diagnostics.assertallzero"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAssertAllZero kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.diagnostics.assertallzero\" kullanın.\nLütfen @\"microsoft.quantum.diagnostics.assertallzero\"kullanın."
 - uid: microsoft.quantum.extensions.testing.assertallzerotol
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.diagnostics.assertallzerowithintolerance"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAssertAllZeroTol kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\" kullanın.\nLütfen @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\"kullanın."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.diagnostics.assertoperationsequalinplace"kullanın.
-
-    Bu işlem için bağımsız değişkenlerin sırasının değiştiğini unutmayın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAssertOperationsEqualInPlace kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\" kullanın.\nLütfen @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\"kullanın.\nBu işlem için bağımsız değişkenlerin sırasının değiştiğini unutmayın."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis"kullanın.
-
-    Bu işlem için bağımsız değişkenlerin sırasının değiştiğini unutmayın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAssertOperationsEqualInPlaceCompBasis kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis\" kullanın.\nLütfen @\"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis\"kullanın.\nBu işlem için bağımsız değişkenlerin sırasının değiştiğini unutmayın."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.diagnostics.assertoperationsequalreferenced"kullanın.
-
-    Bu işlem için bağımsız değişkenlerin sırasının değiştiğini unutmayın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAssertOperationsEqualReferenced kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\" kullanın.\nLütfen @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\"kullanın.\nBu işlem için bağımsız değişkenlerin sırasının değiştiğini unutmayın."
 - uid: microsoft.quantum.extensions.testing.assertqubit
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.diagnostics.assertqubit"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAssertQubit kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.diagnostics.assertqubit\" kullanın.\nLütfen @\"microsoft.quantum.diagnostics.assertqubit\"kullanın."
 - uid: microsoft.quantum.extensions.testing.assertqubitstate
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAssertQubitState kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\" kullanın.\nLütfen @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\"kullanın."
 - uid: microsoft.quantum.extensions.testing.assertqubittol
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.diagnostics.assertqubitwithintolerance"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAssertQubitTol kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\" kullanın.\nLütfen @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\"kullanın."
 metadata:
-  ms.openlocfilehash: 031bbd476ac37f113f9fb692ccd6fca916612ac3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0d06129c66f13c8c5ee9158ef6be41bf447791f9
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210363"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858423"

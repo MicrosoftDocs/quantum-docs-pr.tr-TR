@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyseriesofopsc
+name: ApplySeriesOfOpsC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Bir dizi üzerinde sırayla Ops ve hedefleri listesini uygular. Tarafından
+syntax: "operation ApplySeriesOfOpsC (listOfOps : ('T[] => Unit is Ctl)[], targets : Int[][], register : 'T[]) : Unit"
+input:
+  content: "(listOfOps : ('T[] => Unit is Ctl)[], targets : Int[][], register : 'T[])"
+  types:
+  - name: listOfOps
+    summary: >-
+      Her biri bir 'T dizisi alan Ops listesi, uygulanacak. Bunlar sırasıyla, önce en düşük dizin olarak uygulanır.
+
+      Her birinin denetimli bir functor 'a sahip olması gerekir
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: targets
+    summary: Op 'ın hedeflerini tanımlayan iç içe diziler. Her dizi, kullanılacak dizinleri açıklayan bir liste içermelidir.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Int
+  - name: register
+    summary: Üzerinde işlem yapmak için qubit kaydolun.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyoprepeatedlyover
+metadata:
+  ms.openlocfilehash: 96bdcbc47483c9c7e066c0004bf41a4e21a78454
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74866623"

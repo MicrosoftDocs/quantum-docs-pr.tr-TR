@@ -3,19 +3,13 @@ uid: microsoft.quantum.extensions.diagnostics
 name: Microsoft.Quantum.Extensions.Diagnostics
 functions:
 - uid: microsoft.quantum.extensions.diagnostics.dumpmachine
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.diagnostics.dumpmachine"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nDumpMachine kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.diagnostics.dumpmachine\" kullanın.\nLütfen @\"microsoft.quantum.diagnostics.dumpmachine\"kullanın."
 - uid: microsoft.quantum.extensions.diagnostics.dumpregister
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.diagnostics.dumpregister"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nDumpRegister kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.diagnostics.dumpregister\" kullanın.\nLütfen @\"microsoft.quantum.diagnostics.dumpregister\"kullanın."
 metadata:
-  ms.openlocfilehash: 4b875e544a07377010a144fcf1653f9ed289736c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 71f997adf7dbca7e45250652032237c07f1354e5
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210369"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858301"

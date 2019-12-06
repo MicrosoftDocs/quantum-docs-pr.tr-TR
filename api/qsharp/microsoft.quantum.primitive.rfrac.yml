@@ -3,13 +3,7 @@ uid: microsoft.quantum.primitive.rfrac
 name: RFrac
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >-
-  > [!WARNING]
-
-  > Kullanım Dışı
-
-
-  Lütfen @"microsoft.quantum.intrinsic.rfrac"kullanın.
+summary: RFrac kullanım dışı bırakıldı. Lütfen bunun yerine @"microsoft.quantum.intrinsic.rfrac" kullanın.
 syntax: 'operation RFrac (pauli : Pauli, numerator : Int, power : Int, qubit : Qubit) : Unit'
 input:
   content: '(pauli : Pauli, numerator : Int, power : Int, qubit : Qubit)'
@@ -35,9 +29,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 28c83389286dffcbe750a400e7a7f37aec0e639a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f232350425e65162611e7944d1459522ce4a831f
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212013"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74864653"
