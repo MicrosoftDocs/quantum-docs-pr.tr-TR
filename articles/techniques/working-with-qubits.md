@@ -6,12 +6,12 @@ ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.qubits
-ms.openlocfilehash: d1a8ccc9423a9a04e12bc98e3783790232b2f5d8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 477b358c3eba58b62926b4e9094770c9741cac92
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183480"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864262"
 ---
 # <a name="working-with-qubits"></a>Qubits ile çalışma #
 
@@ -43,7 +43,7 @@ Bu işlemleri, [Iç işlemler ve işlevlerde](xref:microsoft.quantum.libraries.s
 
 İlk olarak, tek qubit Pauli Operators $X $, $Y $ ve $Z $, her birinin türü `Y`olan iç işlemler `X`, `Z`ve `(Qubit => Unit is Adj + Ctl)`tarafından Q # içinde temsil edilir.
 [Iç işlemler ve işlevler](xref:microsoft.quantum.libraries.standard.prelude)bölümünde açıklandığı gibi, $X $ ve bu nedenle `X` bir bit çevirme işlemi olarak veya ağ geçidi olmayan bir işlem olarak düşünebiliriz.
-Bu, bazı klasik bit dizeler için $ \ket{s_0 s_1 \noktalara S_N} $ biçimindeki durumları hazırlamanızı sağlar $s $:
+Bu, bazı klasik bit dizeler için $ \ket{s_0 s_1 \noktalara s_n} $ biçimindeki durumları hazırlamanızı sağlar $s $:
 
 ```qsharp
 operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : Unit 
@@ -72,7 +72,7 @@ operation Example() : Unit {
 > [!TIP]
 > Daha sonra, bu işlemi yazmak için el ile akış denetimi gerektirmeyen daha kompakt yollar görüyoruz.
 
-Ayrıca, Hadamard dönüşümünü kullanarak $ \ket{+} = \left (\demet{0} + \tus{1}\right)/\sqrt{2}$ ve $ \tus{-} = \left (\demet{0}-\tus{1}\right)/\sqrt{2}$ gibi durumlar da hazırlayabiliriz $H $ `H : (Qubit => Unit is Adj + Ctl)`iç işlem tarafından Q # olarak temsil edilir:
+Ayrıca, iç işlem{0} Q # içinde temsil edilen Hadamard Transform{1}$ ' i kullanarak $ \ket{+} = \left (\demet{0} + \tus{1}\right)/\sqrt{2}$ ve $ \tus{-} = \left (\ket{2}-\tus$H \right)/\sqrt `H : (Qubit => Unit is Adj + Ctl)`$ gibi durumları hazırlayabiliriz:
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -90,7 +90,7 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 
 ## <a name="measurements"></a>Ölçümler ##
 
-Yerleşik bir yerleşik olmayan sıra dışı işlem olan `Measure` işlemini kullanarak, `Qubit` türünde bir nesneden klasik bilgiler ayıklayabilir ve bir klasik değeri, ayrılmış bir tür `Result`olan sonuç olarak atayabiliriz ve bu da sonucun Hayır olduğunu belirtir daha uzun bir hisse. `Measure` girişi, Bloch Sphere üzerinde `Pauli` türünde bir nesne (örneğin, `PauliX`) ve `Qubit`türünde bir nesne tarafından temsil edilen bir Pauli eksenindedir. 
+Yerleşik bir yerleşik olmayan sıra dışı işlem olan `Measure` işlemini kullanarak, `Qubit` türünde bir nesneden klasik bilgileri ayıklayabilir ve bir klasik değeri, ayrılmış bir tür `Result`olan sonuç olarak atayabiliriz ve bu da sonucun artık hisse amamış olduğunu gösterir. `Measure` girişi, Bloch Sphere üzerinde `Pauli` türünde bir nesne (örneğin, `PauliX`) ve `Qubit`türünde bir nesne tarafından temsil edilen bir Pauli eksenindedir. 
 
 Basit bir örnek, $ \demet{0}$ durumunda bir qubit oluşturan aşağıdaki işlemdir ve sonra bir Hadamard Gate ``H`` uygular ve sonra sonucu `PauliZ` temelinde ölçer. 
 
@@ -129,7 +129,7 @@ operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {
 }
 ```
 
-Q # dili, qubits 'in ölçüm sonuçlarında klasik denetim akışının bağımlılıklarına izin verir. Bu işlem, birimlere uygulama için hesaplama maliyetini azaltabilecekleri güçlü dayalı araçları uygulamayı sağlar. Örnek olarak, dayalı devreleri olan ve alt kapılar bakımından *beklenen* düşük maliyetli olan, ancak gerçek maliyetli gerçek bir çalıştırmaya ve gerçek maliyete bağlı olan devreleri olan, aynı şekilde uygulanması kolaydır. çeşitli olası branchler araya ekleme. 
+Q # dili, qubits 'in ölçüm sonuçlarında klasik denetim akışının bağımlılıklarına izin verir. Bu işlem, birimlere uygulama için hesaplama maliyetini azaltabilecekleri güçlü dayalı araçları uygulamayı sağlar. Örnek olarak, alt ağ geçitleri bakımından *beklenen* düşük maliyetli dayalı devreleri olan, ancak gerçek maliyetten gerçek bir çalıştırmaya ve çeşitli olası içslerin gerçek bir araya *gelene* bağlı olan devreleri olan bu şekilde, bu şekilde uygulanması kolaydır. 
 
 Yinele-başarılı (RUS) desenleri kolaylaştırmak için, Q # yapıyı destekler
 ```qsharp
@@ -167,7 +167,7 @@ operation RUScircuit (qubit : Qubit) : Unit {
 
 Bu örnek, tüm yineleme-sonu-düzeltme döngüsü kapsamında olan ve düzeltme adımında yüklenmeden önce başlatılan bir kesilebilir değişken `finished` kullanımını gösterir.
 
-Son olarak, $ \ket{+} $ durumundan başlayarak bir hisse durumu $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\tus{0}+ \tus{1}\right) $ ' ı hazırlamak için bir RUS deseninin örneğini gösteririz. Ayrıca bkz. [Standart kitaplıkla birlikte sunulan birim testi örneği](https://github.com/Microsoft/Quantum/blob/master/Samples/src/UnitTesting/RepeatUntilSuccessCircuits.qs): 
+Son olarak, $ \ket{+} $ durumundan başlayarak bir hisse durumu $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\tus{0}+ \tus{1}\right) $ ' ı hazırlamak için bir RUS deseninin örneğini gösteririz. Ayrıca bkz. [Standart kitaplıkla birlikte sunulan birim testi örneği](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs): 
 
 ```qsharp
 operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
@@ -212,4 +212,4 @@ operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
 }
 ```
  
-Bu işlemde gösterilen önemli bir programlı özellikler, bu işlemin bir parçası olan `fixup` daha karmaşık bir parçasıdır ve bu işlem, her bir belirli noktada hisse durumu ölçme olasılığını belirlemek için `AssertProb` deyimlerinin kullanımı programda. Ayrıca `Assert` ve `AssertProb` deyimleri hakkında daha fazla bilgi için bkz. [test ve hata ayıklama](xref:microsoft.quantum.techniques.testing-and-debugging) . 
+Bu işlemde gösterilen önemli bir programlı özellikler, bu işlemin, hisse ve programda belirtilen belirli noktalarda hisse miktarını ölçme olasılığını belirlemek için `AssertProb` deyimlerinin kullanımı ile ilgili daha karmaşık `fixup`. Ayrıca `Assert` ve `AssertProb` deyimleri hakkında daha fazla bilgi için bkz. [test ve hata ayıklama](xref:microsoft.quantum.techniques.testing-and-debugging) . 

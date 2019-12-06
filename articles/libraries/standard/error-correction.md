@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5aac40686ba9b45a51e0274a1828f2ff7cce6fc3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: e1b78cf94ae0a043ad275d4cb06b230eafd7fc85
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184449"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863206"
 ---
 # <a name="error-correction"></a>Hata Düzeltme #
 
@@ -28,7 +28,7 @@ Hisse birimi ayarında, ölçümün sorunlu olduğunu görüyoruz. Yukarıdaki k
 Bu, hisse vaya hata düzeltmesini nasıl genelleştirmemiz gerektiğini görmek için yararlıdır.
 Bu nedenle, $ \ket{\üst çizgi{0}} = \demet{000} = \ayraç{0} \otimes \demet{0} \otimes \tus{0}$, ve Let $ \ket{\üst çizgi{1}} = \tus{111}$.
 Daha sonra, bu, tüm girişler için yineleme kodumuzu tanımladık; Örneğin, $ \ket{\overline{+}} = (\ket{\üst{0}} + \ket{\üst çizgi{1}})/\sqrt{2} = (\tus{000} + \tus{111})/\sqrt{2}$.
-Özellikle, bir bit çevirme hatasına $X _1 $ 'ın orta qubit üzerinde işlem yapmasına izin vermek için her iki dalda de gereken düzeltme tam olarak $X _1 $: $ $ \begin{hizalaması} X_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (X_1 \demet{000} + X_1 \tus@no__ t_3_ \right) \\\\ & = \frac{1}{\sqrt{2}} \left (\ayraç{010} + \tus{101} \right).
+Özellikle, bir bit Çevirme hatası $X _1 $ 'ın ortadaki qubit üzerinde işlem yapmasına izin vermek için her iki dalda de gerekli düzeltmenin tam olarak $X _1 $: $ $ \begin{hizalaması} X_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (X_1 \tus{000} + X_1 \tus{111} \right) \\\\ & = \frac{1}{\sqrt{2}} \left (\tus{010} + \tus{101} \ right).
 \end{hizalaması} $ $
 
 Bu durumun, korumaya çalışmamız gereken çok durumu ölçmeden nasıl belirleyebileceklerini öğrenmek için, her farklı bit çevirme hatasının mantıksal durumlarımızla ne kadar olduğunu belirlemek yararlı olur:
@@ -43,9 +43,9 @@ Bu durumun, korumaya çalışmamız gereken çok durumu ölçmeden nasıl belirl
 Koddığımız durumu korumak için, {\ket{\üst{0}} $ ve $ \ket{\üst çizgi{1}} $ arasında ayrım yapmadan üç hatayı birbirleriyle ve $ \cıvadone $ kimliğiyle ayırt edebilmemiz gerekir.
 Örneğin, $Z _0 $ değerini ölçyoruz, hiçbir hata durumunda $ \ket{\üst çizgi{0}} $ ve $ \ket{\üst çizgi{1}} $ için farklı bir sonuç elde ediyoruz ve bu nedenle kodlanmış durumu daraldık.
 Diğer taraftan, her bir hesaplama tabanlı durumda $Z _0 Z_1 $, ilk iki bitin eşlik düzeyini ölçmeye göz önünde bulundurun.
-Pauli işlecinin her ölçüsünün, ölçülen durumun hangi eigenvalue 'a karşılık geldiğini denetlediğini, yukarıdaki tabloda $ \ket{\psı} $ ' nin her bir durumu için, yukarıdaki tabloda yer alan her durum $ \ Z_1 \ket{\psi} $ ' ı $Z hesaplarken, $ \pm\ket{\psı} $ ' a sahip olup olmadığını görebilirsiniz.
-Bu ölçünün her iki kodlu duruma da aynı şeyi gerçekleştirmemiz için $Z _0 Z_1 \tus{000} = \tus{000}$ ve bu $Z _0 Z_1 \tus{111} = \tus{111}$ olduğunu unutmayın.
-Diğer taraftan $Z, _0 Z_1 \tus{100} =-\ket{100}$ ve $Z _0 Z_1 \ayraç{011} =-\tus{011}$, bu nedenle $Z _0 Z_1 $ ölçmesi sonucu oluşan hata oluştuğunda yararlı bilgileri ortaya çıkarır.
+Pauli işlecinin her ölçüsünün, ölçülen durumun hangi eigenvalue 'a karşılık geldiğini denetlediğini, yukarıdaki tabloda $ \ket{\psı} $ ' ın her bir durumu için, yukarıdaki tabloda yer alan her durum $ \ma{\psi} $ ' ın, $ \pm\ket{\psı} $ olup olmadığını görmek için $Z _0 Z_1 \ket
+Bu ölçümün her iki kodlanmış duruma de aynı şeyi gerçekleştirmemiz için $Z _0 Z_1 \ayraç{000} = \demet{000}$ $Z Z_1 _0{111} \tus{111}= \tus $ olduğunu unutmayın.
+Diğer taraftan, $Z _0 Z_1 \ayraç{100} =-\tus{100}$ ve $Z _0 Z_1 \ayraç{011} =-\tus{011}$, bu nedenle $Z _0 Z_1 $ ölçmesi sonucu oluşan hata oluştuğunda yararlı bilgileri ortaya çıkarır.
 
 Bunu vurgulamak için yukarıdaki tabloyu yineliyoruz, ancak her satırda $Z _0 Z_1 $ ve $Z _1 Z_2 $ ölçüm sonuçlarını eklersiniz.
 Her ölçümün sonucunu, sırasıyla, `Zero` ve `One`'nin Q # `Result` değerlerine karşılık gelen $ + $ veya $-$ şeklinde gözlemlenen eigenvalue değerinin işaretine göre gösterir.
@@ -117,6 +117,6 @@ using (scratch = Qubit[nScratch]) {
 }
 ```
 
-Bu, [bit çevirme kod örneğinde](https://github.com/Microsoft/Quantum/tree/master/Samples/src/BitFlipCode)daha ayrıntılı bir şekilde araştırıyoruz.
+Bu, [bit çevirme kod örneğinde](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code)daha ayrıntılı bir şekilde araştırıyoruz.
 
-Bit çevirme kodundan başlayarak, Q # Canon, [beş qubit kusursuz kodun](https://arxiv.org/abs/1305.08)uygulamalarıyla ve her ikisi de rastgele bir tek qubit hatayı düzeltebilen [yedi-qubit kodu](https://arxiv.org/abs/quant-ph/9705052)ile sağlanır.
+Bit çevirme kodundan başlayarak, Q # Canon, [beş qubit kusursuz kodun](https://arxiv.org/abs/quant-ph/9602019)uygulamalarıyla ve her ikisi de rastgele bir tek qubit hatayı düzeltebilen [yedi-qubit kodu](https://arxiv.org/abs/quant-ph/9705052)ile sağlanır.

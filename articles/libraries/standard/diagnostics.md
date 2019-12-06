@@ -5,12 +5,12 @@ author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: b59f91b660281167eab182529b415b6d379e3d63
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: d5889b8d5a92801b0ada65f7a17c655c959fc57f
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184500"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864347"
 ---
 # <a name="diagnostics"></a>Tanılama #
 
@@ -42,7 +42,7 @@ Karşılaştırmayla, [Toffoli simülatör](xref:microsoft.quantum.machines.toff
 
 ## <a name="facts-and-assertions"></a>Olgular ve Onaylamalar ##
 
-[Test ve hata ayıklama](xref:microsoft.quantum.techniques.testing-and-debugging)bölümünde açıklandığı gibi, sırasıyla imza `Unit -> Unit` veya `Unit => Unit`olan bir işlev veya işlem *birim testi*olarak çağrılabilir.
+[Test ve hata ayıklama](xref:microsoft.quantum.techniques.testing-and-debugging)bölümünde açıklandığı gibi, sırasıyla imza `Unit -> Unit` veya `Unit => Unit`olan bir işlev veya işlem *birim testi*olarak işaretlenebilir.
 Her birim testi genellikle küçük bir hisse programından ve bu programın doğruluğunu kontrol eden bir veya daha fazla koşuldan oluşur.
 Bu _koşullar, giriş_olarak geçirilen bir veya daha fazla qubit 'in durumlarını kontrol eden her iki _olgu_biçiminde gelebilir.
 
@@ -109,7 +109,7 @@ Ancak genel aşama nedeniyle, tek bir tek qubit durumu belirtmek için yalnızca
 Bu nedenle, beklediğimiz durumu belirlemek için birbirinden bağımsız olan üç onay belirtmemiz gerekir.
 Bu, $ \Alpha $ ve $ \beta $ verilen her bir Pauli ölçümü için `Zero` gözlemleme olasılığını bularak her birini ayrı ayrı ele aldık.
 $X $, $y $ ve $z $, Pauli $X $, $Y $ ve $Z $ ölçümleri için sırasıyla `Result` değer olmasına izin verir.
-Ardından, hisse ölçüleri için olasılık işlevi, \begin{hizalaması} \Pr (x = \Texttt{dd} | \Alpha, \beta) & = \frac12 + a\_r b\_r + a\_ı b\_ı \\\\ \Pr (y = \Texttt{dd} | \Alpha , \beta) & = \frac12 + a\_r b\_ı-a\_ı b\_r \\\\ \Pr (z = \Texttt{sıfırlaması} | \Alpha, \beta) & = \frac12\left (1 + a\_r ^ 2 + a\_i ^ 2 + b\_r ^ 2 + b\_i ^ 2 \ sağ).
+Ardından, hisse ölçüleri için olasılık işlevi, \begin{hizalaması} \Pr (x = \Texttt{dd} | \Alpha, \beta) & = \frac12 + a\_r b\_r + a\_ı b\_ı \\\\ \Pr (y = \Texttt{dd} | \Alpha, \beta) & = \frac12 + a\_r b\_ı-a\_ı b\_r \\\\ \Pr (z = \Texttt{sıfırlaması} | \Alpha, \beta) & = \frac12\left (1 + a\_r ^ 2 + b\_i ^ 2 \ doğru).
 \end{hizalaması}
 
 <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> işlemi, bu onaylamaları, $ \Alpha $ ve $ \beta $ ' nin <xref:microsoft.quantum.math.complex>türünde değerler olarak verilen gösterimleri uygular.
@@ -129,7 +129,7 @@ Bu stratejiler, sırasıyla Canon Operations <xref:microsoft.quantum.diagnostics
 
 > [!NOTE]
 > Yukarıda açıklanan başvurulan onaylama, $n $ qubits üzerindeki işlemleri $2n $ qubits 'teki bir durum ile ilişkilendiren bir matematik çerçevesi olan [CHOI – Jamiłkowski isomorphism](https://en.wikipedia.org/wiki/Channel-state_duality)temel alınarak çalışmaktadır.
-> Özellikle, $n $ qubits üzerindeki kimlik işlemi, entangled State $ \ket{\beta_{00}} \mathrel{: =} (\gre{00} + \tus{11})/\sqrt{2}$ öğesinin $n $ kopyalarından temsil edilir.
+> Özellikle, $n $ qubits üzerindeki kimlik işlemi, entangled State $ \ket{\ beta_{00}} \mathrel{: =} (\tus{00} + \tus{11})/\sqrt{2}$ $n $ kopyaları tarafından temsil edilir.
 > İşlem <xref:microsoft.quantum.preparation.preparechoistate>, belirli bir işlemi temsil eden bir durum hazırlarken bu isomorphism uygular.
 
 Kabaca, bu stratejiler bir zaman alanına göre ayırt edilir: Space zorunluluğunu getirir.
@@ -146,7 +146,7 @@ Buna karşılık, başvurulan onaylama her işlemi tam olarak bir kez çağırı
 Bu testlerin her ikisi de hisse programlarının doğruluğunu sağlamak için yararlıdır.
 
 
-## <a name="further-reading"></a>Daha fazla okuma ##
+## <a name="further-reading"></a>Daha Fazla Bilgi ##
 
 - <xref:microsoft.quantum.techniques.testing-and-debugging>
 - <xref:microsoft.quantum.diagnostics>

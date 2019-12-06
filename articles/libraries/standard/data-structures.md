@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e8b28561f1aba37cb5bf41c6176386d19bfacf06
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 6eb47de84fdfbb9d35fdfc2988883f8e1cffa332
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184517"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864364"
 ---
 # <a name="data-structures-and-modeling"></a>Veri yapıları ve modelleme #
 
@@ -20,7 +20,7 @@ ms.locfileid: "73184517"
 Diğer bir deyişle, örneğin, hisse kavramlarını temsil eden Kullanıcı tanımlı türlerin yanı sıra, Canon 'nin aynı zamanda, hisse sistemleri denetiminde kullanılan klasik verilerle çalışmaya yönelik işlemler, işlevler ve türler de sağlar.
 Örneğin, <xref:microsoft.quantum.arrays.reversed> işlevi bir diziyi girdi olarak alır ve ters sırada aynı diziyi döndürür.
 Bu daha sonra, tamsayıların hisse gösterimi arasında dönüştürme yaparken gereksiz $ \operatorname{SWAP} $ kapıları uygulamak zorunda kalmamak için `Qubit[]` türünde bir dizide kullanılabilir.
-Benzer şekilde, önceki bölümde `(Int, Int -> T)` form türlerinin rastgele erişim koleksiyonlarını temsil etmek için yararlı olduğunu gördük, bu nedenle <xref:microsoft.quantum.arrays.lookupfunction> işlevi dizi türlerinden bu tür türleri oluşturmak için kullanılabilecek bir yol sağlar.
+Benzer şekilde, önceki bölümde `(Int, Int -> T)` form türlerinin rastgele erişim koleksiyonlarını temsil etmek için yararlı olduğunu gördük, bu nedenle <xref:microsoft.quantum.arrays.lookupfunction> işlevi dizi türlerinden bu tür türleri oluşturmak için kullanışlı bir yol sağlar.
 
 ### <a name="pairs"></a>Çiftine ###
 
@@ -31,7 +31,7 @@ let pair = (PauliZ, register); // type (Pauli, Qubit[])
 ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ```
 
-### <a name="arrays"></a>Dizi ###
+### <a name="arrays"></a>Diziler ###
 
 Canon, dizileri işlemek için çeşitli işlevler sağlar.
 Bu işlevler tür parametreli parametreleridir ve bu nedenle herhangi bir Q # türündeki dizilerle birlikte kullanılabilir.
@@ -73,7 +73,7 @@ Burada Oracle terimi, bir qubits kümesi üzerinde davranan ve yanıtı bir aşa
 Bu alt yordam, genellikle Oracle 'ı kabul eden bir hisse algoritması girişi olarak düşünülebilir, diğer parametrelere ek olarak bir dizi hisse ve bir dizi işlem uygular ve bu hisse için bir çağrı, temel bir geçit gibi bir çağrı sağlar.
 Kuşkusuz, büyük algoritmayı gerçekten uygulamak için, Oracle 'ın, temel kapıların somut bir şekilde ayrıştırma sağlanması gerekir, ancak Oracle 'ı çağıran algoritmayı anlamak için bu ayrıştırma gerekmez.
 Q # içinde, bu soyutlama, işlemler ilk sınıf değerlerdir ve bu da işlemler, bir siyah kutu halinde hisse algoritmaları uygulamalarına geçirilebilirler.
-Ayrıca, Kullanıcı tanımlı türler, farklı Oracle temsillerini tür açısından güvenli bir şekilde etiketlemek için kullanılır. bu sayede, farklı türlerde siyah kutu işlemlerini yanlışlıkla yaştırır.
+Ayrıca, Kullanıcı tanımlı türler, farklı Oracle temsillerini tür açısından güvenli bir şekilde etiketlemek için kullanılır. bu sayede, farklı siyah kutu işlemlerini yanlışlıkla daha kolay hale getirmeyi zorlaştırır.
 
 Bu tür Oracles, [Grover 'in arama](https://en.wikipedia.org/wiki/Grover%27s_algorithm) ve hisse simülasyonu algoritmaları gibi çok sayıda örnek de dahil olmak üzere çeşitli bağlamlarda görünür.
 Burada yalnızca iki uygulama için gerekli olan Oracles odaklanıyoruz: genliği ve aşama tahmini.
@@ -94,7 +94,7 @@ Aşağıdaki eyleme sahip olmak üzere tanımlanan $P\_$0 ' a kadar geniz için 
 $P _1 $ olan hedef alt boşluğu işaretleyen Oracle, tam olarak aynı formu alır.
 Hedef alt alanda $ \ket{x} $ tüm durumlar için (örneğin, algoritmanın çıkışını yapmak istediğiniz tüm durumlar için) $P _1 \ ayraç {x} =-\ket{x} $.
 Benzer şekilde, hedef alt alanda olmayan tüm durumlar $ \ket{yı} $ $P _1 \ demet {y} = \ket{yı} $.
-Bu iki yansıma daha sonra, tek bir genafme adımını ($Q =-P_0 P_1 $) sunan bir operatör oluşturacak şekilde birleştirilir ve burada, genel eksi işareti yalnızca denetimli uygulamalarda göz önünde bulundurulması için önemlidir.
+Bu iki yansıma, daha sonra, genel eksi işaretinin yalnızca denetimli uygulamalarda dikkate alınması açısından önemli olduğu, $Q =-P_0 P_1 $ gibi tek bir genafme adımını sunan bir operatör oluşturacak şekilde birleştirilir.
 Genüme daha sonra ilk alt alanda bulunan bir ilk durum olan $ \ket{\psı} $, sonra da $ \ket{\psı} \mapsto Q ^ d \ket{\psı} $ yerine geçer.
 Böyle bir yineleme gerçekleştirildiğinde, bir tane, işaretlenen boşluk ile çakışan $ \sin ^ 2 (\teta) $ olan bir başlangıç durumuyla başlıyorsa, bu örtüşme $m $ \sin ^ 2 ([2m + 1] \ teta) $ olur.
 Bu nedenle genellikle $ [2m + 1] \teta = \ pi/2 $; gibi ücretsiz bir parametre olmak üzere $m $ öğesini seçmek istiyoruz. Ancak, bu tür rigıd seçimleri, sabit noktalı genlama gibi bazı genlama için önemli değildir.
@@ -145,7 +145,7 @@ is Adj + Ctl {
 }
 ```
 
-Daha sonra iki durum arasında döndürme yapmak için bu iki Oracles birlikte birleştirilebiliyoruz $ \ sqrt{2 ^ n} $ (IE $m \propto \sqrt{2 ^ n} $) ile orantılı bir dizi Hazard ağ katmanı kullanarak $ \ket{+} ^ {\otimes n} $ to $ \ket{0}$ , sonuç $0 $ gözlemlene kadar ilk durumu hazırlarken ve ölçerek $ \ket{0}$ durumunun belirleyici olmayan şekilde hazırlanması için gereken kabaca $2 ^ n $ katman karşılaştırması.
+Daha sonra iki durum arasında döndürme yapmak için bu iki Oracles birlikte birleştirebilir ve $ \ket{+} ^ {\otimes n} $ to $ \tus{0}$ $ \sqrt{2 ^ n} ile orantılı bir dizi Hadamard k katman katmanını kullanarak $ (ie $m \propto \sqrt{2 ^ n} $), sonuç $0 $ gözlemlene kadar ilk durum hazırlanarak ve ölçerek $ \ket{0}$ durumunun belirleyici olmayan şekilde hazırlanması için gereken kabaca $2 ^ n $ katman karşılaştırması.
 
 ### <a name="phase-estimation-oracles"></a>Aşama tahmini Oracles ###
 
@@ -157,8 +157,8 @@ Bu Unitary, geleneksel iki türden biri tarafından açıklanacaktır.
 
 > [!TIP]
 > Aşağıda açıklanan Oracle türlerinin her ikisi de örneklerde ele alınmıştır.
-> Sürekli sorgu Oracles hakkında daha fazla bilgi edinmek için lütfen [ **Phasetahmine** örnek](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation)bölümüne bakın.
-> Ayrık sorgu Oracles hakkında daha fazla bilgi edinmek için lütfen [ **ısingphasetahmine** örnek](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation)bölümüne bakın.
+> Sürekli sorgu Oracles hakkında daha fazla bilgi edinmek için lütfen [ **Phasetahmine** örnek](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation)bölümüne bakın.
+> Ayrık sorgu Oracles hakkında daha fazla bilgi edinmek için lütfen [ **ısingphasetahmine** örnek](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)bölümüne bakın.
 
 Oracle 'ın ayrı bir sorgusunu çağırdığımız ve Kullanıcı tanımlı tür <xref:microsoft.quantum.oracles.discreteoracle>temsil ettiğimiz Oracle 'ın ilk türü, yalnızca Unitary matrisini içerir.
 $U $, eigenvalues değerlerini tahmin etmek istediğimiz Unitary ise, Oracle for $U $, $U $ uygulayan bir altyordam için yalnızca bir stand olur.
@@ -166,8 +166,8 @@ $U $, eigenvalues değerlerini tahmin etmek istediğimiz Unitary ise, Oracle for
 Bu matrisin eigenvalues değeri, ilk ve hedef durumları arasındaki çakışmayı tahmin etmek için kullanılabilir, ancak daha az sayıda örnek kullanarak $ \sin ^ 2 (\teta) $, aksi halde bir kez daha gerekecektir.
 Bu, genal Oracle $Q $ ' i kullanarak, genlik tahmini adı giriş olarak bir aşama tahmini uygulamasını daha fazla edinir.
 Hisse Metroloji içinde yaygın olarak kullanılan başka bir ortak uygulama, küçük bir döndürme açısı tahmini içerir.
-Diğer bir deyişle, $R _Z (\teta) $ biçiminde bilinmeyen bir döndürme kapısı için $ \teta $ değerini tahmin etmek istiyoruz.
-Bu gibi durumlarda, ağ geçidi için bu sabit değer olan $ \teta $ değerini öğrenmek üzere etkileşimde yaptığımız altyordam $ $ \begin{hizalaması} U & = R_z (\teta) \\\\ & = \begin{bmatrix} e ^ {-ı \ teta/2} & 0 \\\\ 0 & e ^ {i \ Teta/2} \end{bmatrix}.
+Diğer bir deyişle, $R _z (\teta) $ biçiminde bilinmeyen bir döndürme kapısı için $ \teta $ değerini tahmin etmek istiyoruz.
+Bu gibi durumlarda, bu sabit değer olan $ \teta $ değerini öğrenmek için ile etkileşimde bulunduğumuz alt yordam $ $ \begin{hizalaması} U & = R_z (\teta) \\\\ & = \begin{bmatrix} e ^ {-i \teta/2} & 0 \\\\ 0 & e ^ {ı \ teta/2} \end{bmatrix}.
 \end{hizalaması} $ $
 
 Aşama tahmini içinde kullanılan Oracle 'ın ikinci türü, <xref:microsoft.quantum.oracles.continuousoracle> türü tarafından temsil edilen sürekli sorgu Oracle ' dır.
@@ -185,8 +185,8 @@ Hisse simülasyonu yöntemleri kısmi bir evrimi gerçekleştirme olanağı verd
 Bu, $E $; hakkında en fazla bilgi sağlayacak olan denemeyi tam olarak seçmemizi sağladığından, son derece tahmin algoritmalarının her birinin en son verimliliğini sıkıştırmanız açısından önemlidir. ayrı sorguları temel alan yöntemler, algoritmadaki sorguların en iyi tamsayı sayısını seçerek ödün vermelidir.
 
 Bunun somut bir örneği olarak, bir ağ geçidinin döndürme açısını değil, bir dönen hisse sisteminin işlem sıklığını tahmin etme sorununu göz önünde bulundurun.
-Bu tür hisse dinamikleri tanımlayan Unitary, $t $ ve bilinmeyen sıklık $ \omega $ için $U (t) = R_z (2 \ Omega t) $ şeklindedir.
-Bu bağlamda, tek bir $R _Z $ kapısı kullanarak herhangi bir $t $ için $U (t) $ benzetimi yapabiliriz ve bu nedenle kendimize yalnızca Unitary ile ayrı sorgularla sınırlandırması gerekmez.
+Bu tür hisse dinamikleri tanımlayan Unitary, evlenme süresi $t $ ve bilinmeyen sıklık $ \omega $ için $U (t) = R_z (2 \ Omega t) $ şeklindedir.
+Bu bağlamda, tek bir $R _z $ kapısı kullanarak herhangi bir $t $ için $U (t) $ benzetimi yapabiliriz ve bu nedenle kendimize yalnızca Unitary ile ayrı sorgularla sınırlandırması gerekmez.
 Bu tür bir sürekli modelde aynı zamanda $2 ' den büyük frekansların, sürekli sorgular kullanan aşama tahmin işlemlerinden öğrenilmesi gerekir çünkü bu, aksi takdirde, logaritmayla ilgili olan aşama bilgileri, diğer bir deyişle, logaritma işlevinin dal keser $t $ ' nin yorumsuz değerler üzerinde gerçekleştirilen denemeleri sonuçlarından ortaya çıkacak.
 Bu nedenle, bu sürekli sorgu modelleri gibi sorunlar için Oracle yalnızca uygun değildir ancak ayrık sorgu modeli için de tercih edilir.
 Bu nedenle, Q # her iki sorgu formu için işlevlere sahiptir ve bir aşama tahmin algoritmasıyla ilgili olarak gereksinimlerine ve mevcut Oracle türüne göre karar vermek için bunu kullanıcıya bırakır.
@@ -199,17 +199,17 @@ Dinamik simülasyonu 'nin birincil amacı, bir hisse bilgisayarının qubit duru
 
 $ $ \begin{hizalaması} H & = \sum ^ {d-1} _ {j = 0} H_j, \end{hizalaması} $ $
 
-her dönemin zaman gelişiminde, her dönem için tek bir bilgisayar için kolayca uygulanması kolaydır. Örneğin, $H _j $, qubit yazmaç `qubits`1. ve 2. öğelerinde işlem gören bir Pauli $X _1X_2 $ operatöründür; $t $, yalnızca imza `Exp([PauliX,PauliX], t, qubits[1..2])`olan işlem `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`çağırarak uygulanabilir. Hamiltonian benzetiminde daha sonra anlatıldığı gibi, bir çözüm daha basit işlemler dizisiyle $H $ ile zaman gelişmede yaklaşık olarak
+her dönemin zaman gelişiminde, her dönem için tek bir bilgisayar için kolayca uygulanması kolaydır. Örneğin, $H _j $, qubit yazmaç `qubits`1. ve 2. öğeleri üzerinde işlem yapan bir Pauli $X _1X_2 $ operatöründür, $t $, yalnızca imza `Exp([PauliX,PauliX], t, qubits[1..2])`olan işlem `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`çağırarak uygulanabilir. Hamiltonian benzetiminde daha sonra anlatıldığı gibi, bir çözüm daha basit işlemler dizisiyle $H $ ile zaman gelişmede yaklaşık olarak
 
-$ $ \begin{hizalaması} U (t) & = \left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 t/r} \cnoktalar e ^ {-iH\_{d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \max_j \\| H\_j\\| ^ 2 t ^ 2/r), \end{hizalaması} $ $
+$ $ \begin{hizalaması} U (t) & = \left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 t/r} \cnoktalar e ^ {-iH\_{d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\| H\_j\\| ^ 2 t ^ 2/r), \end{hizalaması} $ $
 
 $r > $0 tamsayısı, yaklaşık hatayı denetler.
 
 Dinamik Oluşturucu modelleme kitaplığı, karmaşık oluşturucuları daha basit bir şekilde kodlamak için bir çerçeve sağlar. Bu tür bir açıklama daha sonra, otomatik olarak ele alınan birçok ayrıntıyı içeren bir simülasyon algoritması için zaman gelişini uygulamak üzere benzetim kitaplığı 'na iletilebilir.
 
 > [!TIP]
-> Aşağıda açıklanan dinamik Oluşturucu kitaplığı, örneklerde ele alınmıştır. Şaşırtıcı modele dayalı bir örnek için lütfen [ **ııngators** 'ın örneğine](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingGenerators)bakın.
-> Bir örnek için, [**H2SimulationCmdLine**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine) ve [**H2SimulationGUI**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationGUI) örneklerine bakın.
+> Aşağıda açıklanan dinamik Oluşturucu kitaplığı, örneklerde ele alınmıştır. Şaşırtıcı modele dayalı bir örnek için lütfen [ **ııngators** 'ın örneğine](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators)bakın.
+> Bir örnek için, [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) ve [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui) örneklerine bakın.
 
 ### <a name="complete-description-of-a-generator"></a>Oluşturucunun tüm açıklaması ###
 
@@ -225,7 +225,7 @@ newtype EvolutionGenerator = (EvolutionSet, GeneratorSystem);
 newtype GeneratorSystem = (Int, (Int -> GeneratorIndex));
 ```
 
-Kayıt düzeninin ilk öğesi `Int` Hamiltonian 'daki $d $ terim sayısını depolar ve ikinci öğe `(Int -> GeneratorIndex)`, $\{0, 1,..., d-1\}$ ' de bir tamsayı dizinini her birini benzersiz bir şekilde tanımlayan `GeneratorIndex` Kullanıcı tanımlı bir türe eşleyen bir işlevdir. Hamiltonian içinde ilkel terim. Hamiltonian içindeki koşulların koleksiyonunu dizi `GeneratorIndex[]`yerine bir işlev olarak ifade ederek, bu, özellikle de çok sayıda terim içeren Hamiltonians açıklanırken yararlı olan `GeneratorIndex` bir işlem içi hesaplamasına izin verir.
+Kayıt düzeninin ilk öğesi `Int` Hamiltonian 'daki $d $ terim sayısını depolar ve ikinci öğe `(Int -> GeneratorIndex)`, $\{0, 1,..., d-1\}$ içindeki bir tamsayı dizinini, Hamiltonian içindeki her temel terimi benzersiz bir şekilde tanımlayan `GeneratorIndex` Kullanıcı tanımlı bir türe eşleyen bir işlevdir. Hamiltonian içindeki koşulların koleksiyonunu dizi `GeneratorIndex[]`yerine bir işlev olarak ifade ederek, bu, özellikle de çok sayıda terim içeren Hamiltonians açıklanırken yararlı olan `GeneratorIndex` bir işlem içi hesaplamasına izin verir.
 
 Crucially, `GeneratorIndex` tarafından tanımlanan temel koşulların kolay benzetimini yapma konusunda bir kural sunuyoruz. Örnek olarak, temel terimler yukarıda açıklanan Pauli işleçleri olabilir, ancak aynı zamanda hisse maç simülasyonu ve oluşturma işleçlerini yaygın olarak ücretçde olabilecek bir şekilde da kullanabilir. Tek başına, bir `GeneratorIndex`, işaret ettiği dönem tarafından ne zaman gelişmesinin bir hisse Devlin olarak uygulanabilir olduğunu tanımlamaz.
 
@@ -238,13 +238,13 @@ newtype EvolutionSet = (GeneratorIndex -> EvolutionUnitary);
 ### <a name="pauli-operator-generators"></a>Pauli Işleç oluşturucuları ###
 
 Somut ve yararlı bir örnek, her biri farklı bir katsayı değeri olan Pauli işleçlerinin toplamı olan Hamiltonians.
-$ $ \begin{hizalaması} H & = \sum ^ {d-1} _ {j = 0} a_j H_j, \end{hizalaması} $ $, burada her $ \hat H_j $ öğesi Pauli grubundan çizilmiştir. Bu tür sistemler için, Pauli grubu öğesinin ve bir katsayı öğesinin, aşağıdaki imzaya sahip bir `GeneratorIndex`tarafından nasıl belirlenebileceğini belirten bir kural tanımlayan `EvolutionSet` türünde `PauliEvolutionSet()` sağlıyoruz.
+$ $ \begin{hizalaması} H & = \sum ^ {d-1} _ {j = 0} a_j H_j, \end{hizalaması} $ $; burada her $ \hat H_j $, Pauli grubundan çizilmiştir. Bu tür sistemler için, Pauli grubu öğesinin ve bir katsayı öğesinin, aşağıdaki imzaya sahip bir `GeneratorIndex`tarafından nasıl belirlenebileceğini belirten bir kural tanımlayan `EvolutionSet` türünde `PauliEvolutionSet()` sağlıyoruz.
 
 ```qsharp
 newtype GeneratorIndex = ((Int[], Double[]), Int[]);
 ```
 
-Kodlarımızda, ilk parametre `Int[]`, $ \hat I\estarrow $0, $ \hat X\sağtarrow $1, $ \hat Yı\estarrow $2 ve $ \hat Z\estarrow $3 şeklinde bir Pauli String belirtiyor. İkinci parametre `Double[]` Hamiltonian içinde Pauli dizesinin katsayısını depolar. Bu dizinin yalnızca ilk öğesi kullanıldığını unutmayın. Üçüncü parametre, bu Pauli dizesinin üzerinde davranması ve yinelenen öğe olmaması gereken qubits 'in dizinini `Int[]`. Bu nedenle, Hamiltonian Term $0,4 \hat X_0 \hat Y_8\hat I_2\hat Z_1 $ şöyle gösterilebilir
+Kodlarımızda, ilk parametre `Int[]`, $ \hat I\estarrow $0, $ \hat X\sağtarrow $1, $ \hat Yı\estarrow $2 ve $ \hat Z\estarrow $3 şeklinde bir Pauli String belirtiyor. İkinci parametre `Double[]` Hamiltonian içinde Pauli dizesinin katsayısını depolar. Bu dizinin yalnızca ilk öğesi kullanıldığını unutmayın. Üçüncü parametre, bu Pauli dizesinin üzerinde davranması ve yinelenen öğe olmaması gereken qubits 'in dizinini `Int[]`. Bu nedenle, Hamiltonian Term $0,4 \hat X_0 \hat Y_8 \hat I_2 \hat Z_1 $ şöyle gösterilebilir
 
 ```qsharp
 let generatorIndexExample = GeneratorIndex(([1,2,0,3], [0.4]]), [0,8,2,1]);

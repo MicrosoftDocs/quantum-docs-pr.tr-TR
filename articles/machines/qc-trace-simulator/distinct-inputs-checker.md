@@ -1,17 +1,17 @@
 ---
 title: Farklı giriş denetleyicisi | Hisse bilgisayar izleme simülatörü | Microsoft Docs
-description: Hisse bilgisayar izleme simülatörünü genel bakış
+description: Kuantum bilgisayar izleme simülatörüne genel bakış
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 0df28f6d74279db4678c3485a23a9341680eec52
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ce3f156a84a4509781a74c9276b953c79670a756
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184704"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864313"
 ---
 # <a name="distinct-inputs-checker"></a>Ayrı girişler denetleyicisi
 
@@ -28,7 +28,7 @@ operation DoBoth(q1 : Qubit, q2 : Qubit, op1 : (Qubit => Unit), op2 : (Qubit => 
 Kullanıcı bu programa baktığı zaman, `q1` ve `q2` farklı qugeler ve farklı qubits commute üzerinde çalışan farklı qubit ve işlemler olduğundan, `op1` ve `op2` olarak çağrılan sıranın önemi yoktur. Şimdi bu işlemin kullanıldığı bir örneği düşünmemize izin verin:
 
 ```qsharp
-operation DisctinctQubitCaptured2Test () : Unit {
+operation CapturedQubits () : Unit {
 
     using (q = Qubit[3]) {
         let op1 = CNOT(_, q[1]);

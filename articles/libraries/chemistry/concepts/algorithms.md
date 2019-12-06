@@ -6,12 +6,12 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
-ms.openlocfilehash: 905b03478d453e475fc1e49ea5f88dd0cd2704bc
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 4d1924386eadb427e8f53bc0a177453a341f185f
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184075"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864466"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamiltonian Dynamics benzetimi
 
@@ -22,20 +22,20 @@ Aşağıdaki üç yaklaşımı anladık ve Hamiltonian simülasyon kitaplığın
 
 ## <a name="trottersuzuki-formulas"></a>Trour – Suzuki formülleri
 Trour – Suzuki formüllerinin arkasındaki fikir basittir: Hamiltonian 'ın, Hamiltonians benzetimi yapma ve sonra toplam evrimini bu daha basit Evolutions bir sıra olarak yaklaşık olarak ifade edin.
-Özellikle de $H = \sum_{j = 1} ^ m H_j $ 'ın Hamiltonian olmasına izin verin.
-Ardından, $ $ e ^ {-i\sum_ {j = 1} ^ m H_j t} = \prod_{j = 1} ^ m e ^ {-iH_j t} + O (m ^ 2 t ^ 2), $ $, bu değer $t \ll $1 olduğunda, bu değer altındaki hatanın yok edilebilir olduğunu varsayalım
+Özellikle de $H = \ sum_ {j = 1} ^ m H_j $ Hamiltonian olmalıdır.
+Ardından, $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \ prod_ {j = 1} ^ m e ^ {-iH_j t} + O (m ^ 2 t ^ 2), $ $, bu değer $t \ll $1 olduğunda, bu yaklaşık olarak oluşan hata gözardı edilebilir hale gelir.
 $E ^ {-i H t} $ sıradan bir üstel ise, bu her bir hatanın $O (m ^ 2 t ^ 2) $: sıfır olacağını unutmayın.
-Bu hata oluşur $e çünkü ^ {-iht} $ bir işleç üstel ve bunun sonucu olarak, $H _j $ koşullarının ulaşım (*örn.* $H _j H_k \ne H_k H_j $ genel) olması nedeniyle bu formül kullanılırken bir hata oluştu.
+Bu hata oluşur $e çünkü ^ {-iHt} $, bir işleç üstel ve bunun sonucu olarak, $H _j $ koşullarının çalışmamasından dolayı bu formül kullanılırken bir hata oluştu (*Örneğin*, $H _j H_k H_k, genel olarak).
 
 $T $ büyükse, Trour – Suzuki formülleri, bir kısa saat adımları dizisine ayırarak Dynamics 'in doğru benzetimini yapmak için yine de kullanılabilir.
 $R $ ' ın evrimde geçen adım sayısı olmasına izin verin.
-Daha sonra $ $ e ^ {-i\sum_ {j = 1} ^ m H_j t} = \left (\prod_{j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r) $ $ $r $, $m ^ 2 t ^ 2/\ Epsilon $ olarak ölçeklendirirken, hatanın herhangi bir $ \epsilon için en fazla $ \epsilon $ üzerinde yapılabilir olması anlamına gelir > 0 $.
+Daha sonra $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r), $ $ $r $, $m ^ 2 t ^ 2/\ Epsilon $ olarak ölçeklendirirken, hata herhangi bir $ \epsilon > 0 $ için en fazla $ \epsilon $ üzerinde yapılabilir.
 
 Hata koşullarının iptal edildiğini belirten bir işleç üs sırası oluşturarak daha doğru yaklaşık bir daha yakın şekilde oluşturulabilir.
-Bu tür bir en basit formül, simetrik araba formülü veya Yabang bölme, $ $ U_1 (t) = \prod_{j = 1} ^ m e ^ {-iH_j t/2} \ Prod_ {j = m} ^ 1 e ^ biçimini alır {-iH_j t} = e ^ {-iHt} + O (m ^ 3 t ^ 3), $ $ herhangi bir $ için $ \epsilon $ değerinden daha az hale getirilebilir \epsilon > 0 $ $ ' i seçerek $m ^ {3/2} t ^ {3/2}/\sqrt {\ Epsilon} $ olarak ölçeklendirmek için r $.
+Bu tür bir en basit formül olan simetrik araba formülü veya Strang bölünmesi, $ $ U_1 (t) = \ prod_ {j = 1} ^ m e ^ {-iH_j t/2} \ prod_ {j = m} ^ 1 e ^ {-iH_j t} = e ^ {-iHt} + O (m ^ 3 t ^ 3) biçimini alır. $ $ $m ^ {3/2} t ^ {3/2}/\sqrt {\ Epsilon} $ olarak ölçeklendirmek için $r $ ' i seçerek herhangi bir $ \epsilon > 0 $ değerinden daha az kullanılabilir hale getirilebilir $ $.
 
 Hatta daha yüksek sıralı bir sorun, $U _1 $ ' ye göre oluşturulabilir.
-En basit, aşağıdaki dördüncü düzen formülüdür. ilk olarak Suzuki tarafından tanıtılan: $ $ U_2 (t) = U_1 ^ 2 (s_1t) U_1 ([1-4s_1] t) U_1 ^ 2 (s_1 t) = e ^ {-iHt} + O (m ^ 5T ^ 5), $ $ burada $s _1 = (4-4 ^ {1/3}) ^{-1}$.
+En basit, aşağıdaki dördüncü düzen formülüdür. ilk olarak Suzuki tarafından tanıtılan: $ $ U_2 (t) = U_1 ^ 2 (s_1t) U_1 ([1-4s_1] t) U_1 ^ 2 (s_1 t) = e ^ {-IHV t} + O (m ^ 5T ^ 5), $ $ burada $s _1 = (4-4 ^ {1/3}) ^{-1}$.
 Genel olarak, yoğun yüksek sıralı formüller benzer şekilde oluşturulabilir; Bununla birlikte, daha karmaşık tümleştiricileri kullanmanın maliyeti genellikle pek çok pratik sorun için dördüncü sıra avantajlarının dışındadır.
 
 Yukarıdaki stratejilerin çalışmasını sağlamak için, $e ^ {-iH_j t} $ geniş bir sınıfının benzetimini yapmak için bir yönteme ihtiyacımız var.
@@ -86,7 +86,7 @@ Başlangıç noktanızda, `JordanWignerEncoding` sınıfının bir örneği olar
     var qSharpData = jordanWignerEncoding.ToQSharpFormat();
 ```
 
-Bu, Q # benzetim algoritmaları tarafından tüketilebilir olan Ürdün-Wigner reprsentation biçimi Kullanıcı tanımlı `JordanWignerEncodingData`türüdür.
+Bu, Q # benzetim algoritmaları tarafından tüketilebilir olan Ürdün-Wigner gösteriminin bu biçimi Kullanıcı tanımlı `JordanWignerEncodingData`türüdür.
 Q # içinde, bu biçim, yürütülmesi için gereken diğer parametrelere ek olarak, bir işleci (Suzuki tümleştirici) kullanarak zaman elde eden bir operatör döndüren bir kullanışlı işleve geçirilir `TrotterStepOracle`.
 
 ```qsharp
@@ -101,7 +101,7 @@ let integratorOrder = 4;
 
 // `oracle` is an operation that applies a single time-step of evolution for duration `stepSize`.
 // `rescale` is just `1.0/stepSize` -- the number of steps required to simulate unit-time evolution.
-// `nQubits` is the number of qubits that must be allocated to run the `oracle` operatrion.
+// `nQubits` is the number of qubits that must be allocated to run the `oracle` operation.
 let (nQubits, (rescale, oracle)) =  TrotterStepOracle (qSharpData, stepSize, integratorOrder);
 
 // Let us now apply a single time-step.
@@ -115,7 +115,7 @@ using(qubits = Qubit[nQubits]){
 }
 ```
 
-Bu uygulamada, bu uygulama, [hisse bilgisayarları kullanarak elektronik yapı Hamiltonians simülasyonu](https://arxiv.org/abs/1001.3855) konusunda ele alınan bazı iyileştirmeler uygular ve [hisse](https://arxiv.org/abs/1403.1539) tek qubit döndürmeler gerekli, ayrıca simülasyon hatalarını azaltır.
+Bu uygulamada, bu uygulama, [hisse bilgisayarları kullanarak elektronik yapı Hamiltonians simülasyonuna](https://arxiv.org/abs/1001.3855) [ilişkin](https://arxiv.org/abs/1403.1539) bazı iyileştirmeler uygular ve bu, gereken tek qubit döndürme sayısını en aza indirmek ve simülasyon hatalarını azaltmayı sağlar.
 
 ## <a name="qubitization"></a>Qubitişleştirme
 
@@ -124,9 +124,9 @@ Qubitişleştirme, bir defadan fazla qubits gerektirdiğinden, yöntem, evlenme 
 Bu nedenlerden dolayı, genel olarak Hamiltonian Dynamics 'in benzetimini yapmak ve özel olarak elektronik yapı sorununu çözmek için sık kırmızı bir yöntem haline gelmiştir.
 
 Yüksek bir düzeyde, bu, aşağıdaki adımlarla bu işlemleri gerçekleştirir.
-İlk olarak, Unitary ve hermitian $H _j $ ve $h _j \ ge $0 için $H = \sum_j h_j H_j $ ' ye izin verin.
-Bir dizi yansıma gerçekleştirmeyle, qubitişleştirme $ $W = e ^ {\pm i \cos ^{-1}(H/| h | _1)}, $ $ $ $ $ | h | _1 = \sum_j | h_j | $ ile eşdeğer bir işleç uygular.
-Sonraki adım, $e ^ {i\pm \cos ^{-1}(E_k/| h | _1)} $ konumundaki yürüme işlecinin ıdgenvalues değerlerini dönüştürmeyi içerir; burada $E _K $, $H $ ' in eigenvalues of ^ {-iE_k t} $ $e.
+İlk olarak, $H = \ sum_j h_j H_j $ Unitary ve hermitian $H _j $ ve $h _j \ge $0.
+Bir dizi yansıma gerçekleştirmeyle, qubitişleştirme $ $W = e ^ {\pm i \cos ^{-1}(H/| h | _1)}, $ $ $ $ $ | h | _1 = \ sum_j | h_j | $ ile eşdeğer bir işleç uygular.
+Sonraki adım, $e ^ {i\pm \ Cos ^{-1}(E_k/| h | _1)} $ öğesinden yürüme işlecinin ıdgenvalues değerlerini dönüştürmeyi içerir; burada $E _k $, $H $ ' ın eigenvalues of ^ {-$e t} $.
 Bu, [hisse sinyali işleme](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.118.010501)dahil olmak üzere çeşitli hisse ve değer dönüştürme yöntemleri kullanılarak elde edilebilir.
 
 Alternatif olarak, yalnızca statik miktarlar isteniyorsa (Hamiltonian 'nin zemin durumu enerjisi gibi), sonucun kosinüsünü alarak sonuçtan zemin durumu enerji tahminini tahmin etmek için doğrudan $W $ ' a kadar [aşama tahmini](xref:microsoft.quantum.libraries.characterization) uygulamayı da yeterli olacaktır.
@@ -135,26 +135,26 @@ Bu durum, Spectral dönüştürmesinin, bir hisse değeri dönüştürme yöntem
 Daha ayrıntılı bir düzeyde, qubitişleştirme uygulanması Hamiltonian için arabirimler sağlayan iki alt yordam gerektirir.
 Trour – Suzuki metotlarından farklı olarak, bu alt yordamlar ücretlendirilir ve uygulamaları, bir mahkeme dayalı simülasyonu için gerekli olacak şekilde, logaritmayı çok daha fazla qubit kullanmayı gerektirmeyecektir.
 
-Karşılık gelen ilk hisse alt yordam $ \operatorname{Select} $ olarak adlandırılır ve her bir $H _j $ 'nin olduğu varsayılır. Bu, her bir _j $ 'ın olduğu varsayılabileceği \begin{Equation} \operatorname{Select} \ket{j} \ket{\psı} = \ket{j} H_j \ket{\psı}, \end{Equation}. ve Unitary.
+Karşılık gelen ilk hisse alt yordamı $ \operatorname{Select} $ olarak adlandırılır ve her bir $H _j $ ' nin hermitian olduğu kabul edildiği \begin{Equation} \operatorname{Select} \ket{j} \ket{\psi} = \ket{j} H_j \ket{\psı}, \end{Equation} olarak kabul edilir ve Unitary.
 Bu durum kısıtlayıcı gibi görünse de Pauli işleçlerinin hermitian ve Unitary olduğunu ve bu nedenle hisse kamistry simülasyonu gibi uygulamaların bu çerçeveye doğal olarak düştüğünü hatırlayın.
 Büyük olasılıkla tahmin edilecek $ \operatorname{Select} $ işlemi, aslında bir yansıma işlemidir.
-Bu, her bir $H _j $ Unitary ve hermitian olduğundan ve dolayısıyla ıdgenvalues $ \pm $1 ' i içerdiğinden, $ \operatorname{Select} ^ 2 \ demet {j} \ket{\psı} = \ket{j} \ket{\psi} $ tarafından görülebilir.
+Bu, her bir $H _j $ Unitary ve hermitian olduğundan ve dolayısıyla ıdgenvalues $ \pm $1 ' i içerdiğinden, $ \operatorname{Select} ^ 2 \ demet {j} \ket{\psı} = \ket{j} \ket{\psi} $ 'ın bu şekilde görülebilir.
 
 İkinci altyordam $ \operatorname{Prepare} $ olarak adlandırılır.
-Select işlemi, her Hamiltonian terimlerinin her biri için tutarlı bir yol sağlarken $H _j $ Prepare alt yordamı, $h _j $, \begin{Equation} \operatorname{Prepare}\ket{0} = \sum_j \ sqrt{\frac{h_j}} öğesine erişmek için bir yöntem sağlar | h | _1}} \ket{j}.
+Select işlemi, her Hamiltonian terimlerinin her biri için tutarlı bir yol sağlarken $H _j $ Prepare alt yordamı $h _j $, \begin{Equation} \operatorname{Prepare}\ket{0} = \ sum_j \sqrt{\frac{h_j} {| H | _1}} \ket{j}'e erişmek için bir yöntem sunar.
 \end{Equation} sonra, çarpma kontrollü bir aşama kapısı kullanarak $ $ \Lambdad\ket{0}^ {\otimes n} = \begin{Cases} \-\ket{x} & \Text{If} x = 0 \\\
         \ket{x} & \Text{otherwise} \end{Cases}.
 $$
 
-$ \Operatorname{Prepare} $ işlemi doğrudan qubitişleştirme içinde kullanılmaz, ancak bunun yerine $ \operatorname{Prepare} $ 'ın $ $ \begin{hizalaması} R &amp; = 1-2 \ operatorname {Prepare} \tus{0}\bra @no_ oluşturduğu durum hakkında bir yansıma uygulamak için kullanılır. _t_2_ \operatorname{Prepare} ^{-1} \\\\ &amp; = \operatorname{Prepare} \Lambda \operatorname{Prepare} ^{-1}.
+$ \Operatorname{Prepare} $ işlemi doğrudan qubitişleştirme içinde kullanılmaz, ancak bunun yerine $ \operatorname{Prepare} $ 'ın $ $ \begin{hizalaması} R &amp; = 1-2 \ operatorname {Prepare} \tus{0}\bra{0} \operatorname{Prepare} ^{-1} \\\\ &amp; = \operatorname{Prepare} \Lambda \operatorname{Prepare} ^{-1}olduğunu belirten bir yansıma uygulamak için kullanılır.
 \end{hizalaması} $ $
 
 $W $, yürüme işleci, $ \operatorname{Select} $ ve $R $ işlemleri $ $ W = \operatorname{Select} R olarak ifade edilebilir. Bu, "^ {\pm i \cos ^{-1}(H/| H | _1)} $ $e için eşdeğer bir işleç (bir ıometry 'ye kadar) uygulamak için yeniden görülebilir.
 
 Bu alt yordamlar, Q # ' da kolayca ayarlanabilir.
-Örnek olarak, $H = X_1 + X_2 + Z_1 Z_2 $ olan basit qubit çapraz-şaşırtıcı Hamiltonian 'yi düşünün.
+Örnek olarak, $H = X_1 + X_2 + Z_1 Z_2 $ ' nin bulunduğu basit qubit çapraz-şaşırtıcı Hamiltonian 'yi düşünün.
 Bu durumda, $ \operatorname{Select} $ işlemini uygulayacak olan Q # kodu <xref:microsoft.quantum.canon.multiplexoperations>tarafından çağrılır, ancak $ \operatorname{Prepare} $ işlemi <xref:microsoft.quantum.preparation.preparearbitrarystate>kullanılarak uygulanabilir.
-Hubbard modelinin benzetimini yapmayı içeren bir örnek, bir [Q # örneği](https://github.com/Microsoft/Quantum/tree/master/Samples/src/HubbardSimulation)olarak bulunabilir.
+Hubbard modelinin benzetimini yapmayı içeren bir örnek, bir [Q # örneği](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)olarak bulunabilir.
 
 Rastgele Kimya sorunları için bu adımları el ile belirtmek çok çaba gerektirir, bu da Kimya kitaplığı kullanmaktan kaçınılmaz.
 Yukarıdaki Trour – Suzuki simülasyon algoritmasına benzer şekilde, `JordanWignerEncodingData`, yürütülmesi için gereken diğer parametrelere ek olarak, yürüme işlecini döndüren `QubitizationOracle` kolaylık işlevine geçirilir.
@@ -165,7 +165,7 @@ let qSharpData = ...
 
 // `oracle` is an operation that applies a single time-step of evolution for duration `stepSize`.
 // `rescale` is just `1.0/oneNorm`, where oneNorm is the sum of absolute values of all probabilities in state prepared by `Prepare`.
-// `nQubits` is the number of qubits that must be allocated to run the `oracle` operatrion.
+// `nQubits` is the number of qubits that must be allocated to run the `oracle` operation.
 let (nQubits, (rescale, oracle)) =  QubitizationOracle (qSharpData, stepSize, integratorOrder);
 
 // Let us now apply a single step of the quantum walk.

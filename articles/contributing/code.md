@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: cca50e6c63d4bb982aa5f0a59fc19d08ecbec508
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 3ff15a744bf15924564d5a8fee54f4fbce4c04ee
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73185911"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864432"
 ---
-# <a name="contributing-code"></a>Katkıda bulunan kod #
+# <a name="contributing-code"></a>Koda Katkıda Bulunma #
 
 Sorunları raporlamaya ve belgelerin geliştirilmesine ek olarak, hisse geliştirme seti 'ne katkıda bulunan kod, hisse programlama topluluğundaki eşlere yardımcı olmanın çok doğrudan bir yolu olabilir.
 Kod katkısından, sorunları gidermeye, yeni örnekler sağlamanıza, var olan kitaplıkların kullanımını daha kolay hale getirmenize veya hatta tamamen yeni özellikler eklemenize yardımcı olabilirsiniz.
@@ -30,13 +30,14 @@ Bu nedenle, bir katkı tarafından eklenen işlevlerin iyi test edildiğini ve b
 
 Canon gibi kitaplıkları oluşturan Q # işlevleri, işlemler ve Kullanıcı tanımlı türler, [**Microsoft/Histumlibraries**](https://github.com/Microsoft/QuantumLibraries/) deposunda geliştirmenin bir parçası olarak otomatik olarak test edilir.
 Örneğin, yeni bir çekme isteği açıldığında, [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) yapılandırmanızla, çekme isteğindeki değişikliklerin, hisse programlama topluluğunun bağlı olduğu mevcut işlevleri bozmadığını kontrol eder.
-Bu sınamalar, [xUnit](https://xunit.github.io/) çerçevesi için test olarak Q # işlevlerini ve işlemlerini kullanıma sunan [Microsoft. hisse. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) paketi kullanılarak yazılır.
 
-[`Standard/tests/Standard.Tests.csproj`](https://github.com/microsoft/QuantumLibraries/blob/master/Standard/tests/Standard.Tests.csproj) , `Test`biten işlevleri veya işlemleri çalıştırmak Için bu xUnit tümleştirmesini kullanır.
-Örneğin, <xref:microsoft.quantum.canon.fst> ve <xref:microsoft.quantum.canon.snd> işlevlerinin hem temsilci bir örnekteki doğru çıkışları döndürmesini sağlamak için aşağıdaki işlev kullanılır.
+En son Q # sürümü ile birim testi `@Test("QuantumSimulator")` özniteliği kullanılarak tanımlanır. Bağımsız değişken, "Histumsimülatör", "Toffzeytin", "Tracesimülatör" veya yürütme hedefini belirten tam nitelikli bir ad olabilir. Farklı yürütme hedeflerini tanımlayan birkaç öznitelik aynı çağrılabilir öğesine iliştirilebilir. Bazı testlerimizde, [xUnit](https://xunit.github.io/) çerçevesine `Test` biten tüm Q # işlevlerini ve işlemlerini kullanıma sunan kullanım dışı [Microsoft. hisse. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) paketini kullanmaya devam edersiniz. Bu paket artık birim testlerini tanımlamak için gerekli değildir. 
+
+<xref:microsoft.quantum.canon.fst> ve <xref:microsoft.quantum.canon.snd> işlevlerinin her ikisinin de bir temsilci örneğinde doğru çıkışları döndürmesini sağlamak için aşağıdaki işlev kullanılır.
 `Fst` veya `Snd` çıkışı yanlışsa, testin başarısız olmasına neden olması için `fail` deyimleri kullanılır.
 
 ```qsharp
+@Test("QuantumSimulator")
 function PairTest () : Unit {
     let pair = (12, PauliZ);
 
@@ -56,6 +57,7 @@ Standart kitaplıklar kılavuzunun [Test bölümündeki](xref:microsoft.quantum.
 Örneğin, aşağıdaki test, <xref:microsoft.quantum.canon.applywith> tarafından çağrılan `H(q); X(q); H(q);` `Z(q)`ile aynı şeyi yapar.
 
 ```qsharp
+@Test("QuantumSimulator")
 operation WithTest () : Unit {
     let actual = ApplyWith(H, X, _);
     let expected = Z;

@@ -5,18 +5,17 @@ author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 4677b0f9c4f64a9c1bc46d34e8a883dc006ba8f0
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: c079364f8808304e0132fa2a4226cd6400e81339
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183310"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863155"
 ---
 # <a name="going-further"></a>Daha fazla #
 
 Artık soru-cevap programlarının soru-cevap olarak nasıl yazılacağını gördüğünüze göre, bu bölüm ileride yararlı olması için daha fazla gelişmiş konu sunarak daha fazla bilgi edinilerek devam ediyor.
 
-<!-- Moved Debugging and Testing Quantum Programs section to a separate article -->
 
 ## <a name="generic-operations-and-functions"></a>Genel Işlemler ve Işlevler ##
 
@@ -24,7 +23,7 @@ Artık soru-cevap programlarının soru-cevap olarak nasıl yazılacağını gö
 > Bu bölümde, diğer dillerdeki [genel C#türler ](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/introduction-to-generics) [, F# ](https://docs.microsoft.com/dotnet/fsharp/language-reference/generics/) [ C++ şablonlarda, şablonlar](https://docs.microsoft.com/cpp/cpp/templates-cpp)veya diğer dillerde metaprogramlamaya benzer yaklaşımlar içeren bazı temel benzerlik varsayılmaktadır.
 
 Tanımlamak isteyebileceğiniz birçok işlev ve işlem, kendi giriş türlerine gerçekten büyük ölçüde güvenmiyor, ancak bunun yerine yalnızca başka bir işlev veya işlem aracılığıyla türlerini örtülü olarak kullanın.
-Örneğin, yaygın olarak kullanılan *harita* kavramını birçok işlevsel dilde değerlendirin. $f (x) $ işlevine ve $\{x_1, x_2, \noktalar, x_n\}$, Map bir değer koleksiyonuna verildiğinde, eşleme yeni bir koleksiyon $\{f (x_1), f (x_2), \noktalar, f (x_n)\}$ döndürür.
+Örneğin, yaygın olarak kullanılan *harita* kavramını birçok işlevsel dilde değerlendirin. $f (x) $ işlevi ve $\{x_1, x_2, \noktalar, x_n\}$, Map bir değer koleksiyonu verildiğinde, <\{f (x_1), f (x_2), \noktalar, f (x_n)\}$ gibi yeni bir koleksiyon döndürür.
 Bunu Q # ' da uygulamak için, bu işlevlerden faydalanabilir.
 İhtiyaç duyduğumuz türleri anlarken, bir yer tutucu olarak ★ kullanarak `Map`hızlı bir örneğini yazalım.
 
@@ -119,7 +118,7 @@ function Compose(outerFn : (B -> C), innerFn : (A -> B)) : (A -> C) {
 
 Burada, tam olarak hangi `A`, `B`ve `C` olduğunu belirtmemiz gerekir. bu nedenle, yeni `Compose` işlevimizin yardımcı programını ciddi ölçüde kısıtlar.
 Tüm `Compose`, yalnızca `A`, `B`ve `C` `innerFn` ve `outerFn`*aracılığıyla* bağlıdır.
-Alternatif olarak, *her* bir `A`, `B`ve `C`için çalıştığını belirten `Compose` tür parametreleri ekleyebiliyoruz, böylece bu parametreler `innerFn` ve `outerFn`tarafından beklenenlerle eşleşir. :
+Alternatif olarak *, `A`,* `B`ve `C`için çalıştığını belirten `Compose` tür parametreleri ekleyebiliyoruz, böylece bu parametreler `innerFn` ve `outerFn`tarafından beklenen olanlarla eşleşir.
 
 ```qsharp
 function ComposeImpl<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B), input : 'A) : 'C {
@@ -178,6 +177,6 @@ is Adj + Ctl {
 }
 ```
 
-Bu örnekte---`WithA`, yalnızca `With` içeren yapılara denetim ekleme gibi iyi bir programlama stili olan bu örnekte, `With` Combinator---'in kendi formundaki kapsamlı bir şekilde kullanılması gerektiğini unutmayın denetimi iç işleme yayar. İşlemin `body` ek olarak, işlemin `controlled` gövdesinin bir `controlled auto` bildirimine yeniden eklemek yerine açıkça sağlandığını daha fazla unutmayın. Bunun nedeni, her bir ve `body`her bir kapıya denetim eklemeye kıyasla yararlı olan daha fazla denetimi nasıl kolayca ekleyebileceğinizi biliyoruz. 
+`With`---Combinator ' nin, adjoint 'i destekleyen işlemler için geçerli olan `WithA`---, bu örnekte, `With` içeren yapılara denetim ekleme ve yalnızca denetimi iç işleme yayar. İşlemin `body` ek olarak, işlemin `controlled` gövdesinin bir `controlled auto` bildirimine yeniden eklemek yerine açıkça sağlandığını daha fazla unutmayın. Bunun nedeni, her bir ve `body`her bir kapıya denetim eklemeye kıyasla yararlı olan daha fazla denetimi nasıl kolayca ekleyebileceğinizi biliyoruz. 
 
 Bu kodu, `using` mekanizması kullanılarak birkaç temiz qubit kullanan, çarpma denetimli `X` işlemi uygulama amacını elde eden başka bir Canon işlevi `MultiControlledXClean` karşılaştırmak için kullanılır. 
