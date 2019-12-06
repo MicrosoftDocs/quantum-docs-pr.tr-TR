@@ -3,85 +3,37 @@ uid: microsoft.quantum.canon
 name: Microsoft.Quantum.Canon
 functions:
 - uid: microsoft.quantum.canon.asqubitarray
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakılan bu işlev kaldırılmıştır.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAsQubitArray kullanım dışı bırakıldı.\nBu işlev kaldırılmıştır."
 - uid: microsoft.quantum.canon.assertalmostequal
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Diagnostics.NearEqualityFactD" kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAssertAlmostEqual kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.diagnostics.nearequalityfactd\" kullanın.\nLütfen bunun yerine @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\" kullanın."
 - uid: microsoft.quantum.canon.assertalmostequaltol
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact" kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAssertAlmostEqualTol kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.diagnostics.equalitywithintolerancefact\" kullanın.\nLütfen bunun yerine @\"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact\" kullanın."
 - uid: microsoft.quantum.canon.assertboolarrayequal
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Diagnostics.AllEqualityFactB" kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAssertboolarrayeşittir kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.diagnostics.allequalityfactb\" kullanın.\nLütfen bunun yerine @\"Microsoft.Quantum.Diagnostics.AllEqualityFactB\" kullanın."
 - uid: microsoft.quantum.canon.assertboolequal
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Diagnostics.EqualityFactB" kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAssertBoolEqual kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.diagnostics.equalityfactb\" kullanın.\nLütfen bunun yerine @\"Microsoft.Quantum.Diagnostics.EqualityFactB\" kullanın."
 - uid: microsoft.quantum.canon.assertintequal
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Diagnostics.EqualityFactI" kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAssertIntEqual kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.diagnostics.equalityfacti\" kullanın.\nLütfen bunun yerine @\"Microsoft.Quantum.Diagnostics.EqualityFactI\" kullanın."
 - uid: microsoft.quantum.canon.assertresultequal
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Diagnostics.EqualityFactR" kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAssertResultEqual kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.diagnostics.equalityfactr\" kullanın.\nLütfen bunun yerine @\"Microsoft.Quantum.Diagnostics.EqualityFactR\" kullanın."
 - uid: microsoft.quantum.canon.bigendiantolittleendian
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nBigendiantolitttaendian kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.bigendianaslittleendian\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian\"kullanın."
 - uid: microsoft.quantum.canon.bind
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.bound"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nBağlama kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.canon.bound\" kullanın.\nLütfen @\"microsoft.quantum.canon.bound\"kullanın."
 - uid: microsoft.quantum.canon.binda
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.bounda"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nBindA kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.canon.bounda\" kullanın.\nLütfen @\"microsoft.quantum.canon.bounda\"kullanın."
 - uid: microsoft.quantum.canon.bindc
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.boundc"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nBindC kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.canon.boundc\" kullanın.\nLütfen @\"microsoft.quantum.canon.boundc\"kullanın."
 - uid: microsoft.quantum.canon.bindca
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.boundca"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nBindCA kullanım dışı bırakılmıştır. Lütfen bunun yerine @\"microsoft.quantum.canon.boundca\" kullanın.\nLütfen @\"microsoft.quantum.canon.boundca\"kullanın."
 - uid: microsoft.quantum.canon.bitsize
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.bitsizei"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nBit boyutu kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.math.bitsizei\" kullanın.\nLütfen @\"microsoft.quantum.math.bitsizei\"kullanın."
 - uid: microsoft.quantum.canon.boolarrfrompositiveint
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.intasboolarray"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nBoolArrFromPositiveInt kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.intasboolarray\" kullanın.\nLütfen @\"microsoft.quantum.convert.intasboolarray\"kullanın."
 - uid: microsoft.quantum.canon.boolarrfromresultarr
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.resultarrayasboolarray"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nBoolArrFromResultArr kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.resultarrayasboolarray\" kullanın.\nLütfen @\"microsoft.quantum.convert.resultarrayasboolarray\"kullanın."
 - uid: microsoft.quantum.canon.boolfromresult
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.resultasbool"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nBoolFromResult kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.resultasbool\" kullanın.\nLütfen @\"microsoft.quantum.convert.resultasbool\"kullanın."
 - uid: microsoft.quantum.canon.bound
   summary: Tek bir girişte çalışan bir işlem dizisi verildiğinde, belirli bir işlemi sırayla gerçekleştiren yeni bir işlem oluşturur.
 - uid: microsoft.quantum.canon.bounda
@@ -131,10 +83,7 @@ functions:
 - uid: microsoft.quantum.canon.conjugatedbyca
   summary: Verilen dış ve iç işlemler, dış işlemin iç işlemini sağlayan yeni bir işlem döndürür.
 - uid: microsoft.quantum.canon.continuedfractionconvergent
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.continuedfractionconvergenti"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nContinuedFractionConvergent kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.math.continuedfractionconvergenti\" kullanın.\nLütfen @\"microsoft.quantum.math.continuedfractionconvergenti\"kullanın."
 - uid: microsoft.quantum.canon.controlledonbitstring
   summary: Denetim yazmacı durumu belirtilen bir bit maskesine karşılık geliyorsa, hedef kayıt üzerinde bir Oracle uygulayan Unitary işlecini döndürür.
 - uid: microsoft.quantum.canon.controlledonint
@@ -146,10 +95,7 @@ functions:
 
     Diğer bir deyişle, iki girişli bir işlem söz konusu olduğunda, bu işlev bir girişin bir işlemini döndüren tek bir girdinin işlemini döndürmek için Curry 'nin isomorphism $f (x, y) \equf (x) (y) $ ' u uygular.
 - uid: microsoft.quantum.canon.curryop
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.curriedop"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nCurryOp kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.canon.curriedop\" kullanın.\nLütfen @\"microsoft.quantum.canon.curriedop\"kullanın."
 - uid: microsoft.quantum.canon.decomposeintotimestepsca
   summary: Belirli bir işlem için Trour – Suzuki tümleştirici uygulayan bir işlem döndürür.
 - uid: microsoft.quantum.canon.delayed
@@ -163,105 +109,57 @@ functions:
 - uid: microsoft.quantum.canon.embedpauli
   summary: Tek bir-qubit Pauli işleci ve bir qubit dizini verildiğinde, bu dizinde verilen tek qubit işleciyle bir multi-qubit Pauli işleci, diğer tüm dizinde `PauliI` döndürür.
 - uid: microsoft.quantum.canon.expmod
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.expmodi"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nExpMod kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.math.expmodi\" kullanın.\nLütfen @\"microsoft.quantum.math.expmodi\"kullanın."
 - uid: microsoft.quantum.canon.extendedgcd
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.extendedgreatestcommondivisori"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nExtendedGCD kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.math.extendedgreatestcommondivisori\" kullanın.\nLütfen @\"microsoft.quantum.math.extendedgreatestcommondivisori\"kullanın."
 - uid: microsoft.quantum.canon.filter
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Arrays.Filtered" kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nFiltre kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arrays.filtered\" kullanın.\nLütfen bunun yerine @\"Microsoft.Quantum.Arrays.Filtered\" kullanın."
 - uid: microsoft.quantum.canon.forall
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Arrays.All" kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nForAll kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arrays.all\" kullanın.\nLütfen bunun yerine @\"Microsoft.Quantum.Arrays.All\" kullanın."
 - uid: microsoft.quantum.canon.forany
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Arrays.Any" kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nForAny kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arrays.any\" kullanın.\nLütfen bunun yerine @\"Microsoft.Quantum.Arrays.Any\" kullanın."
 - uid: microsoft.quantum.canon.fst
   summary: Bir çift verildiğinde, ilk öğesini döndürür.
 - uid: microsoft.quantum.canon.gcd
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.greatestcommondivisori"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nGCD kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.math.greatestcommondivisori\" kullanın.\nLütfen @\"microsoft.quantum.math.greatestcommondivisori\"kullanın."
 - uid: microsoft.quantum.canon.ignore
   summary: Bir işlemin veya işlevin çıkışını yoksayar.
 - uid: microsoft.quantum.canon.intabs
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakılan bu işlev kaldırılmıştır.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nInsekmeleri kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.math.absi\" kullanın.\nBu işlev kaldırılmıştır."
 - uid: microsoft.quantum.canon.intarrayfromrange
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.rangeasintarray"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nIntarrayfromrange kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.rangeasintarray\" kullanın.\nLütfen @\"microsoft.quantum.convert.rangeasintarray\"kullanın."
 - uid: microsoft.quantum.canon.intmax
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakılan bu işlev kaldırılmıştır.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nIntMax kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.math.maxi\" kullanın.\nBu işlev kaldırılmıştır."
 - uid: microsoft.quantum.canon.inversemod
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.inversemodi"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nTers çevir devre dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.math.inversemodi\" kullanın.\nLütfen @\"microsoft.quantum.math.inversemodi\"kullanın."
 - uid: microsoft.quantum.canon.iscoprime
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.greatestcommondivisori"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nIcoprime kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.math.iscoprimei\" kullanın.\nLütfen @\"microsoft.quantum.math.greatestcommondivisori\"kullanın."
 - uid: microsoft.quantum.canon.isresultone
   summary: Belirli bir sonuç değerinin `One`eşit olup olmadığını sınar.
 - uid: microsoft.quantum.canon.isresultzero
   summary: Belirli bir sonuç değerinin `Zero`eşit olup olmadığını sınar.
 - uid: microsoft.quantum.canon.littleendiantobigendian
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nLitttabitiantobigenyen kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.littleendianasbigendian\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian\"kullanın."
 - uid: microsoft.quantum.canon.map
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Arrays.Mapped" kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nEşleme kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arrays.mapped\" kullanın.\nLütfen bunun yerine @\"Microsoft.Quantum.Arrays.Mapped\" kullanın."
 - uid: microsoft.quantum.canon.mapindex
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Arrays.MappedByIndex" kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nMapındex kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arrays.mappedbyindex\" kullanın.\nLütfen bunun yerine @\"Microsoft.Quantum.Arrays.MappedByIndex\" kullanın."
 - uid: microsoft.quantum.canon.modulus
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.modulusi"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nMod kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.math.modulusi\" kullanın.\nLütfen @\"microsoft.quantum.math.modulusi\"kullanın."
 - uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
   summary: >-
-    N-qubit numarası State $ \ket{j} $ tarafından denetleniyorsa, bir Unitary $V _j $ uygulayan, çarpma özellikli bir Unitary işlemi döndürür $U $.
+    N-qubit numarası State $ \ket{j} $ tarafından denetlenen bir Unitary $V _j $ uygulayan çarpma özellikli Unitary işlemini döndürür $U $.
 
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
 - uid: microsoft.quantum.canon.multiplexerfromgenerator
   summary: >-
-    N-qubit numarası State $ \ket{j} $ tarafından denetleniyorsa, bir Unitary $V _j $ uygulayan, çarpma özellikli bir Unitary işlemi döndürür $U $.
+    N-qubit numarası State $ \ket{j} $ tarafından denetlenen bir Unitary $V _j $ uygulayan çarpma özellikli Unitary işlemini döndürür $U $.
 
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
 - uid: microsoft.quantum.canon.nearequalityfact
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Diagnostics.NearEqualityFactD" kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nNearEqualityFact kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.diagnostics.nearequalityfactd\" kullanın.\nLütfen bunun yerine @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\" kullanın."
 - uid: microsoft.quantum.canon.operationpow
   summary: >-
     Bir işlemi bir güce yükseltir.
@@ -293,30 +191,15 @@ functions:
 
     Diğer bir deyişle, $U $ geçidini temsil eden bir işlem verildiğinde, bir Power $m $ için ^ d $ $U yeni bir işlem döndürür.
 - uid: microsoft.quantum.canon.pad
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Arrays.Padded" kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nPanel kullanım dışı bırakılmıştır. Lütfen bunun yerine @\"microsoft.quantum.arrays.padded\" kullanın.\nLütfen bunun yerine @\"Microsoft.Quantum.Arrays.Padded\" kullanın."
 - uid: microsoft.quantum.canon.paulifrombitstring
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.boolarrayaspauli"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nPauömrü Rombitstring kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.boolarrayaspauli\" kullanın.\nLütfen @\"microsoft.quantum.convert.boolarrayaspauli\"kullanın."
 - uid: microsoft.quantum.canon.pnormalize
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.math.pnormalized"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nPnormalleştir kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.math.pnormalized\" kullanın.\nLütfen @\"microsoft.quantum.math.pnormalized\"kullanın."
 - uid: microsoft.quantum.canon.positiveintfromboolarr
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.boolarrayasint"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nPositiveıntfromboolarr kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.boolarrayasint\" kullanın.\nLütfen @\"microsoft.quantum.convert.boolarrayasint\"kullanın."
 - uid: microsoft.quantum.canon.positiveintfromresultarr
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.resultarrayasint"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nPositiveıntfromresultarr kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.resultarrayasint\" kullanın.\nLütfen @\"microsoft.quantum.canon.resultarrayasint\"kullanın."
 - uid: microsoft.quantum.canon.restrictedtosubregister
   summary: Bir işlemi, bir kaydın dizin dizini (örneğin, alt kayıt) ile kısıtlar.
 - uid: microsoft.quantum.canon.restrictedtosubregistera
@@ -335,52 +218,25 @@ functions:
 
     Değiştirici `CA`, işlemin denetlenebilir ve adjointable olduğunu gösterir.
 - uid: microsoft.quantum.canon.restricttosubregister
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.restrictedtosubregister"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nKısıtttosubregister kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.canon.restrictedtosubregister\" kullanın.\nLütfen @\"microsoft.quantum.canon.restrictedtosubregister\"kullanın."
 - uid: microsoft.quantum.canon.restricttosubregistera
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.restrictedtosubregistera"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nKısıtttosubregistera kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.canon.restrictedtosubregistera\" kullanın.\nLütfen @\"microsoft.quantum.canon.restrictedtosubregistera\"kullanın."
 - uid: microsoft.quantum.canon.restricttosubregisterc
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.restrictedtosubregisterc"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nKısıtttosubregisterc kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.canon.restrictedtosubregisterc\" kullanın.\nLütfen @\"microsoft.quantum.canon.restrictedtosubregisterc\"kullanın."
 - uid: microsoft.quantum.canon.restricttosubregisterca
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.restrictedtosubregisterca"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nKısıtttosubregisterca kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.canon.restrictedtosubregisterca\" kullanın.\nLütfen @\"microsoft.quantum.canon.restrictedtosubregisterca\"kullanın."
 - uid: microsoft.quantum.canon.resultarrfromboolarr
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.resultarrayasboolarray"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nResultArrFromBoolArr kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.boolarrayasresultarray\" kullanın.\nLütfen @\"microsoft.quantum.convert.resultarrayasboolarray\"kullanın."
 - uid: microsoft.quantum.canon.resultasint
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.resultarrayasint"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nResultasınt kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.resultarrayasint\" kullanın.\nLütfen @\"microsoft.quantum.convert.resultarrayasint\"kullanın."
 - uid: microsoft.quantum.canon.resultfrombool
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.boolasresult"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nResultFromBool kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.boolasresult\" kullanın.\nLütfen @\"microsoft.quantum.convert.boolasresult\"kullanın."
 - uid: microsoft.quantum.canon.reverse
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Arrays.Reversed" kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nTers kullanım kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arrays.reversed\" kullanın.\nLütfen bunun yerine @\"Microsoft.Quantum.Arrays.Reversed\" kullanın."
 - uid: microsoft.quantum.canon.snd
   summary: Bir çift verildiğinde, ikinci öğesini döndürür.
 - uid: microsoft.quantum.canon.splitarray
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen bunun yerine @"Microsoft.Quantum.Arrays.Partitioned" kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nSptarray kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arrays.partitioned\" kullanın.\nLütfen bunun yerine @\"Microsoft.Quantum.Arrays.Partitioned\" kullanın."
 - uid: microsoft.quantum.canon.stackcapacity
   summary: Bir <xref:microsoft.quantum.canon.resultstack>kapasitesini alır.
 - uid: microsoft.quantum.canon.stacklength
@@ -394,10 +250,7 @@ functions:
 - uid: microsoft.quantum.canon.stackpush
   summary: Yeni bir öğeyi <xref:microsoft.quantum.canon.resultstack>üzerine gönderir.
 - uid: microsoft.quantum.canon.tooperation
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.convert.functionasoperation"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nToOperation kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.functionasoperation\" kullanın.\nLütfen @\"microsoft.quantum.convert.functionasoperation\"kullanın."
 - uid: microsoft.quantum.canon.transformedoperation
   summary: Bir işlev ve bir işlem verildiğinde, girişi verilen işlev tarafından dönüştürülen yeni bir işlem döndürür.
 - uid: microsoft.quantum.canon.transformedoperationa
@@ -424,50 +277,35 @@ functions:
 
     Değiştirici `CA`, işlemlerin denetlenebilir ve adjointable olduğunu gösterir.
 - uid: microsoft.quantum.canon.uncurryop
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.uncurriedop"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nUncurryOp kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.canon.uncurriedop\" kullanın.\nLütfen @\"microsoft.quantum.canon.uncurriedop\"kullanın."
 - uid: microsoft.quantum.canon.uncurryopa
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.uncurriedopa"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nUncurryOpA kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.canon.uncurriedopa\" kullanın.\nLütfen @\"microsoft.quantum.canon.uncurriedopa\"kullanın."
 - uid: microsoft.quantum.canon.uncurryopc
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.uncurriedopc"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nCurryopc kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.canon.uncurriedopc\" kullanın.\nLütfen @\"microsoft.quantum.canon.uncurriedopc\"kullanın."
 - uid: microsoft.quantum.canon.uncurryopca
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.canon.uncurriedopca"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nUncurryOpCA kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.canon.uncurriedopca\" kullanın.\nLütfen @\"microsoft.quantum.canon.uncurriedopca\"kullanın."
 - uid: microsoft.quantum.canon.weightonepaulis
   summary: Verilen sayıda qubit üzerinde tüm ağırlık-1 Pauli işleçleri dizisini döndürür.
 - uid: microsoft.quantum.canon.xor
   summary: Bu, iki bitin dışlamalı veya nasıl olduğunu hesaplar.
 operations:
 - uid: microsoft.quantum.canon.adiabaticstateenergyunitary
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"microsoft.quantum.simuilation.pnormalized"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAdiabaticStateEnergyUnitary kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.simulation.estimateenergywithadiabaticevolution\" kullanın.\nLütfen @\"microsoft.quantum.simuilation.pnormalized\"kullanın."
 - uid: microsoft.quantum.canon.andladder
   summary: >-
     Hedef qubit üzerinde denetimli bir ' ve greder ' gerçekleştirir.
 
 
-    Bu, hesaplama tabanlı vektörde aşağıdaki eşleme tarafından verilen bir Unitary uygular: $ $ \begin{hizalaması} \ket{x\_1, \noktalar, x\_n} \ket{y\_1, \noktalar, y\_{n-1}} \mapsto \ket{x\_1 , \noktalar, x\_n} \ket{y\_1 \ OPLUS (x\_1 \land x\_2), \noktalar, y\_{n-1} \oplus (x\_1 \land x\_2 \land \ cnoktalar \land x\_{n-1}} , \end{hizalaması} $ $ burada $ \ket{x\_1, \noktalar, x\_n} $ `controls`hesaplama tabanlı durumlara ve $ \ket{y\_1, \noktalar, y\_{n-1}} $ ' ın hesaplama tabanlı durumlarına başvurur.
+    Bu, hesaplama tabanlı vektörde şu eşleme tarafından verilen bir Unitary uygular: $ $ \begin{hizalaması} \ket{x\_1, \noktalar, x\_n} \ket{y\_1, \noktalar, y\_{n-1}} \mapsto \ket{x\_1, \noktalar, x\_n} \ket{y\_1 \ OPLUS (x\_1 \land x\_2), \noktalar, y\_{n-1} \oplus (x\_1 \land x\_2 \land \ cnoktalar \land x\_{n-1}} , \end{hizalaması} $ $ burada $ \ket{x\_1, \noktalar, x\_n} $ `controls`hesaplama tabanlı durumlara ve $ \ket{y\_1, \noktalar, y\_{n-1}} $ ' ın hesaplama tabanlı durumlarına başvurur.
 - uid: microsoft.quantum.canon.applydiagonalunitary
   summary: >-
     Bir qubits kaydının sayısal tabanlı durumlarına bir karmaşık aşamalar dizisi uygular.
 
 
-    Yani, bu, $n $-qubit numarası durum $ \ket{j} $ üzerinde ^ {i \theta_j} $ $e karmaşık bir aşama uygulayan köşegen Unitary işlemini uygular $U $.
+    Yani, bu, $n $-qubit numarası $ \ket{j} $ theta_j karmaşık bir $e aşamayı uygulayan $U $ adlı köşegen Unitary işlemini uygular.
 
 
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i\theta_j} \ Tus{j} \ köşeli {j} $.
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i \ theta_j} \ket{j}\bra{j} $.
 - uid: microsoft.quantum.canon.applyfermionicswap
   summary: Fermıonic SWAP 'ı uygular.
 - uid: microsoft.quantum.canon.applyif
@@ -520,6 +358,14 @@ operations:
     Listedir denetimli bir işlemin çarpma denetimli bir sürümünü uygular.
 
     Değiştirici `CA`, tek qubit işleminin denetlenebilir ve adjointable olduğunu gösterir.
+- uid: microsoft.quantum.canon.applyoprepeatedlyover
+  summary: Aynı op 'yi bir qubit kayıt için birden çok kez uygular.
+- uid: microsoft.quantum.canon.applyoprepeatedlyovera
+  summary: Aynı op 'yi bir qubit kayıt için birden çok kez uygular.
+- uid: microsoft.quantum.canon.applyoprepeatedlyoverc
+  summary: Aynı op 'yi bir qubit kayıt için birden çok kez uygular.
+- uid: microsoft.quantum.canon.applyoprepeatedlyoverca
+  summary: Aynı op 'yi bir qubit kayıt için birden çok kez uygular.
 - uid: microsoft.quantum.canon.applypauli
   summary: Multi-qubit Pauli operatörü verildiğinde, kayda karşılık gelen işlemi uygular.
 - uid: microsoft.quantum.canon.applypaulifrombitstring
@@ -527,62 +373,37 @@ operations:
 - uid: microsoft.quantum.canon.applyquantumfouriertransform
   summary: Küçük endian gösteriminde bir tamsayı içeren bir hisse kayıt üzerinde hisse Fourier dönüşümü gerçekleştirir.
 - uid: microsoft.quantum.canon.applyquantumfouriertransformbe
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakılan bu işlem kaldırılmıştır.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nApplyhistumoniertransformyıary kullanım dışı bırakıldı. Lütfen bunun yerine @ \"applynicetumekiertransform (bigendianaslittleendian (QS))\" kullanın.\nBu işlem kaldırılmıştır."
 - uid: microsoft.quantum.canon.applyquantumfouriertransformle
-  summary: ''
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nApplyhistumoniertransformle kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.canon.applyquantumfouriertransform\" kullanın.\nLütfen @\"microsoft.quantum.canon.applyquantumfouriertransform\"kullanın."
 - uid: microsoft.quantum.canon.applyreversedopbigendian
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nApplyReversedOpBigEndian kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.applyreversedopbe\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE\"kullanın."
 - uid: microsoft.quantum.canon.applyreversedopbigendiana
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nApplyReversedOpBigEndianA kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.applyreversedopbea\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA\"kullanın."
 - uid: microsoft.quantum.canon.applyreversedopbigendianc
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nApplyReversedOpBigEndianC kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.applyreversedopbec\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"kullanın."
 - uid: microsoft.quantum.canon.applyreversedopbigendianca
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nApplyReversedOpBigEndianCA kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.applyreversedopbeca\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"kullanın."
 - uid: microsoft.quantum.canon.applyreversedoplittleendian
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nApplyReversedOpLittleEndian kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.applyreversedople\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE\"kullanın."
 - uid: microsoft.quantum.canon.applyreversedoplittleendiana
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nApplyReversedOpLittleEndianA kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.applyreversedoplea\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA\"kullanın."
 - uid: microsoft.quantum.canon.applyreversedoplittleendianc
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nApplyReversedOpLittleEndianC kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.applyreversedoplec\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"kullanın."
 - uid: microsoft.quantum.canon.applyreversedoplittleendianca
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nApplyReversedOpLittleEndianCA kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.applyreversedopleca\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"kullanın."
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakılan bu işlem kaldırılmıştır.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nApplyripptacarrykarşılaştırıcı Tora kullanım dışı bırakıldı. Lütfen bunun yerine @ \"compareusingripplet (bigendianaslittleendian (x), bigendianaslittleendian (y), output)\" kullanın.\nBu işlem kaldırılmıştır."
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorle
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nApplyripptacarrykarşılaştırıcı Torle kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.compareusingripplecarry\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry\"kullanın."
+- uid: microsoft.quantum.canon.applyseriesofops
+  summary: Bir dizi üzerinde sırayla Ops ve hedefleri listesini uygular.
+- uid: microsoft.quantum.canon.applyseriesofopsa
+  summary: Bir dizi üzerinde sırayla Ops ve hedefleri listesini uygular. (Adjoint)
+- uid: microsoft.quantum.canon.applyseriesofopsc
+  summary: Bir dizi üzerinde sırayla Ops ve hedefleri listesini uygular. Tarafından
+- uid: microsoft.quantum.canon.applyseriesofopsca
+  summary: Bir dizi üzerinde sırayla Ops ve hedefleri listesini uygular. (Adjoint + denetimli)
 - uid: microsoft.quantum.canon.applytoeach
   summary: Bir kayıttaki her öğeye bir tek qubit işlemi uygular.
 - uid: microsoft.quantum.canon.applytoeacha
@@ -721,15 +542,9 @@ operations:
 - uid: microsoft.quantum.canon.approximateqft
   summary: Yaklaşık hisse Fourier dönüştürmesinin (AQFT) bir hisse kaydına uygulanmasını sağlar.
 - uid: microsoft.quantum.canon.asserthighestbit
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAssertHighestBit kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.assertmostsignificantbit\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit\"kullanın."
 - uid: microsoft.quantum.canon.assertlessthanphasele
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAssertlessıfemhasele kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.assertphaselessthan\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\"kullanın."
 - uid: microsoft.quantum.canon.assertphase
   summary: >-
     Bir eşit üst konum durumunun beklenen değere sahip olduğunu onaylar.
@@ -737,45 +552,39 @@ operations:
 
     Özellikle, bazı rastgele gerçek t için beklenen değere sahip $ \frac{e ^ {ı t}} {\sqrt{2}} (e ^ {i\phi} \ tus{0} + e ^ {-i\phi} \ tus{1}) $ olarak ifade edilebilir olan bir hisse cısının $ \phi $ aşamasının $ \ Fi $.
 - uid: microsoft.quantum.canon.assertprobintbe
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakılan bu işlem kaldırılmıştır.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAssertprobınt32 kullanım dışı bırakıldı. Lütfen bunun yerine @ \"assertprobınt (stateındex, prob, bigendianaslittleendian (qubits), toleransı)\" kullanın.\nBu işlem kaldırılmıştır."
 - uid: microsoft.quantum.canon.cnotchain
   summary: >-
     Yerinde bir qubit dizisinin eşlik sayısını hesaplar.
 
 
-    $ \Ket{q_0} \ket{q_0 \ OPLUS q_1} \ket{q_0 \oplus q_1 \oplus q_2} \cnoktalar $ düzenine uyar.
+    $ \Ket{q_0} \ket{q_0 \oplus q_1} \ket{q_0 \oplus q_1 \oplus q_2} \cnoktalar $ düzenine uyar.
 - uid: microsoft.quantum.canon.cnotchaintarget
   summary: >-
     Bir qubits dizisinin bir hedef qubit 'e eşlik durumunu hesaplar.
 
 
-    Dizi başlangıçta $ \ket{q_0} \ket{q_1} \cnoktalar \ket{Q_{\Text{Target}}} $ durumundaysa, son durum $ \ket{q_0} \ket{q_1 \oplus q_0} \cnoktalar \ket{Q_{n-1} \oplus \cnoktalar \oplus q_0 \oplus Q_ {\Text{Target}}} $ tarafından verilir.
+    Dizi başlangıçta $ \ket{q_0} \ket{q_1} \cnoktalar \ket{q_ {\Text{Target}}} $ durumunda ise, son durum $ \ket{q_0} \ket{q_1 \oplus q_0} \cnoktalar \ket{q_ {n-1} \oplus \cnoktalar \oplus q_0 \oplus q_ {\Text{Target}}} $ tarafından verilir.
 - uid: microsoft.quantum.canon.copymostsignificantbitle
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nCopyMostSignificantBitLE kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.copymostsignificantbit\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit\"kullanın."
 - uid: microsoft.quantum.canon.cx
   summary: >-
     Denetlenen X (CX) kapısını bir qubit çiftiyle uygular.
 
 
-    $ $ \begin{hizalaması} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{hizalaması} , $ $, satırlar ve sütunlar hisse kavramları kılavuzunda olduğu gibi düzenlenir.
+    $ $ \begin{hizalaması} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{hizalaması}, $ $ burada satır ve sütunların hisse kavramları kılavuzunda olduğu gibi organize edildiği.
 - uid: microsoft.quantum.canon.cy
   summary: >-
     Denetimli-Y (CY) kapısını bir qubit çiftiyle uygular.
 
 
-    $ $ \begin{hizalaması} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-ı \\\\ 0 & 0 & ı & 0 \ End{hizalaması} , $ $, satırlar ve sütunlar hisse kavramları kılavuzunda olduğu gibi düzenlenir.
+    $ $ \begin{hizalaması} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-ı \\\\ 0 & 0 & ı & 0 \end{hizalaması}, $ $ burada satır ve sütun, hisse kavramları kılavuzunda olduğu gibi düzenlenir.
 - uid: microsoft.quantum.canon.cz
   summary: >-
     Denetlenen-Z (CZ) kapısını bir qubit çiftiyle uygular.
 
 
-    $ $ \begin{hizalaması} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{hizalaması} , $ $, satırlar ve sütunlar hisse kavramları kılavuzunda olduğu gibi düzenlenir.
+    $ $ \begin{hizalaması} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{hizalaması}, $ $ burada satırlar ve sütunlar hisse kavramları kılavuzunda olduğu gibi düzenlenir.
 - uid: microsoft.quantum.canon.delay
   summary: Bir gecikmeyle belirli bir işlem uygular.
 - uid: microsoft.quantum.canon.delaya
@@ -789,72 +598,42 @@ operations:
     Z ve Y eksenlerini karşılıklı olarak değiştiren Hadamard dönüşümüne Y tabanlı analog uygular.
 
 
-    Tek bir qubit üzerinde Y Hadamard dönüştürme $H _Y = S H $:
+    Tek bir qubit üzerinde _Y = S H $ $H Y Hadamard dönüşümü:
 
 
-    \begin{hizalaması} H_Y \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ ı &-i \end{bmatrix}.
+    \begin{hizalaması} H_Y \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ ı &-ı \end{bmatrix}.
 
     \end{hizalaması}
 - uid: microsoft.quantum.canon.inplacexorbe
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakılan bu işlem kaldırılmıştır.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nInplacexorbe kullanım dışı bırakıldı. Lütfen bunun yerine @ \"applyreversedopleca (applyxorinplace (value, _), target)\" kullanın.\nBu işlem kaldırılmıştır."
 - uid: microsoft.quantum.canon.inplacexorle
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Measurement.ApplyXorInPlace"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nInplacexorle kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.measurement.applyxorinplace\" kullanın.\nLütfen @\"Microsoft.Quantum.Measurement.ApplyXorInPlace\"kullanın."
 - uid: microsoft.quantum.canon.integerincrementle
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.IncrementByInteger"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nIntegerıncrementle kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.incrementbyinteger\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.IncrementByInteger\"kullanın."
 - uid: microsoft.quantum.canon.integerincrementphasele
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nIntegerıncrementphasele kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.incrementphasebyinteger\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger\"kullanın."
 - uid: microsoft.quantum.canon.iteratethroughcartesianpower
   summary: Bir değişkeni, Kartezyen ürün [0,-1] × [0, 1.1] × [0,-1] × [0,-1] ve Kartezyen ürünün her öğesi için op (ARR) yöntemini yineler
 - uid: microsoft.quantum.canon.iteratethroughcartesianproduct
   summary: Bir değişkeni `arr`, Kartezyen bir ürün [0, sınır [0]-1] × [0, sınır [1]-1] × [0, sınır [Uzunluk (sınır)-1]-1] ve Kartezyen ürünün her öğesi için op (ARR) çağrısı yapın
 - uid: microsoft.quantum.canon.measureintegerbe
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakılan bu işlem kaldırılmıştır.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nMeasureıntegerde kullanım dışı bırakıldı. Lütfen bunun yerine @ \"measureınteger (bigendianaslittleendian (Target))\" kullanın.\nBu işlem kaldırılmıştır."
 - uid: microsoft.quantum.canon.modularaddproductle
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nModularAddProductLE kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger\"kullanın."
 - uid: microsoft.quantum.canon.modularaddproductphasele
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nModularAddProductPhaseLE kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger\"kullanın."
 - uid: microsoft.quantum.canon.modularincrementle
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nModularıncrementle kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.modularincrementbyinteger\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger\"kullanın."
 - uid: microsoft.quantum.canon.modularincrementphasele
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nModularıncrementphasele kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.incrementphasebymodularinteger\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger\"kullanın."
 - uid: microsoft.quantum.canon.modularmultiplybyconstantle
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nModularMultiplyByConstantLE kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.arithmetic.multiplybymodularinteger\" kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger\"kullanın."
 - uid: microsoft.quantum.canon.multiplexoperations
   summary: >-
     Bir sayı dizisi tarafından denetlenen bir işlem dizisi uygular.
 
 
-    Diğer bir deyişle, $n $-qubit numarası $ \ket{j} $ tarafından denetlenen bir Unitary $V _j $ uygulayan çarpma özellikli Unitary $U $ uygular.
+    Diğer bir deyişle, $n $-qubit numarası $ \ket{j} $ tarafından denetlenen bir Unitary $V _j $ uygulayan çarpma özellikli Unitary işlemini uygular $U $.
 
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
@@ -866,7 +645,7 @@ operations:
     $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
 - uid: microsoft.quantum.canon.multiplexoperationsfromgenerator
   summary: >-
-    N-qubit numarası State $ \ket{j} $ tarafından denetleniyorsa bir Unitary $V _j $ uygulayan çarpma özellikli Unitary işlemi uygular $U $.
+    N-qubit numarası State $ \ket{j} $ tarafından denetlenen bir Unitary $V _j $ uygulayan çarpma özellikli Unitary işlemi uygular $U $.
 
 
     $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
@@ -875,21 +654,23 @@ operations:
     Bir qubits dizisine bağlı bir Pauli dönüşü uygular.
 
 
-    Bu, $n $-qubit numarası State $ \ket{j} $ tarafından denetlendiğinde, "$ \theta_j $ hakkında tek-qubit Pauli işleci $P $ ile birlikte döndürmeler gerçekleştiren çarpma özellikli Unitary işlemini uygular $U $.
+    Bu, $n $-qubit numarası $ \ket{j} $ $P $ \ theta_j $ hakkında tek-qubit Pauli işleci hakkında $ \ $ adlı çarpma tarafından denetlenen Unitary işlemini uygular $U $.
 
 
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \theta_j} $.
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \ theta_j} $.
 - uid: microsoft.quantum.canon.multiplexz
   summary: >-
     Bir qubits dizisine bağlı bir Pauli Z dönüşü uygular.
 
 
-    Bu, $n $-qubit numarası State $ \ket{j} $ tarafından denetlendiğinde, "$ \theta_j $ hakkında tek-qubit Pauli işleci $Z $ ile birlikte döndürmeler gerçekleştiren çarpma özellikli Unitary işlemini uygular $U $.
+    Bu, $n $-qubit numarası $ \ket{j} $ $Z $ \ theta_j $ hakkında tek-qubit Pauli işleci hakkında $ \ $ adlı çarpma tarafından denetlenen Unitary işlemini uygular $U $.
 
 
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \theta_j} $.
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \ theta_j} $.
 - uid: microsoft.quantum.canon.noop
   summary: Bir bağımsız değişkende kimlik işlemini (No-Op) gerçekleştirir.
+- uid: microsoft.quantum.canon.permutequbits
+  summary: DEĞIŞTIRME işlemini kullanarak permütasyon qutes.
 - uid: microsoft.quantum.canon.qft
   summary: Büyük endian gösteriminde bir tamsayı içeren bir hisse kayıt üzerinde hisse Fourier dönüşümü gerçekleştirir.
 - uid: microsoft.quantum.canon.qftle
@@ -909,25 +690,13 @@ operations:
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: Bir kayıttaki qubits 'in sırasını tersine getirmek için takas kapıları kullanır.
 - uid: microsoft.quantum.canon.with
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Canon.ApplyWith"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nİle kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.canon.applywith\" kullanın.\nLütfen @\"Microsoft.Quantum.Canon.ApplyWith\"kullanın."
 - uid: microsoft.quantum.canon.witha
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Canon.ApplyWithA"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nWithA kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.canon.applywitha\" kullanın.\nLütfen @\"Microsoft.Quantum.Canon.ApplyWithA\"kullanın."
 - uid: microsoft.quantum.canon.withc
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Canon.ApplyWithC"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nWithC kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.canon.applywithc\" kullanın.\nLütfen @\"Microsoft.Quantum.Canon.ApplyWithC\"kullanın."
 - uid: microsoft.quantum.canon.withca
-  summary: >-
-    > [!WARNING]
-
-    > Kullanım dışı bırakıldı lütfen @"Microsoft.Quantum.Canon.ApplyWithCA"kullanın.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nWithCA kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.canon.applywithca\" kullanın.\nLütfen @\"Microsoft.Quantum.Canon.ApplyWithCA\"kullanın."
 newtypes:
 - uid: microsoft.quantum.canon.ccnotop
   summary: CCNOT kapısı imza türü.
@@ -937,9 +706,9 @@ newtypes:
 
     Yığın bir tamsayı kapasitesinden, yığın işaretçisinden ve `Result` dizisinden oluşur.
 metadata:
-  ms.openlocfilehash: 8767d438adcecd7ccbd539d7c123ac42cfb8c295
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 457d211ace716ddc09ebcd94c5cbc3c33b42d704
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065172"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858556"
