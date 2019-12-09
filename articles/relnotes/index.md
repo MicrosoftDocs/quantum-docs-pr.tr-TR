@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 90fd8ad455702ef4f962e1b3291c650eb0afea2e
-ms.sourcegitcommit: 87dd450cea5bcac76a42f0bdc224bfae712efdde
+ms.openlocfilehash: c709f1eb130d37f930ffc4acc4bd663b8b8ba24a
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74153312"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863172"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -20,6 +20,18 @@ Bu makale her Quantum Development Kit sürümüne ilişkin bilgileri içerir.
 Yükleme yönergeleri için bu [yükleme kılavuzuna](xref:microsoft.quantum.install) başvurun.
 
 Güncelleştirme yönergeleri için bu [güncelleştirme kılavuzuna](xref:microsoft.quantum.update) başvurun.
+
+## <a name="version-01019120501"></a>Sürüm 0.10.1912.0501
+
+*Sürüm tarihi: 5 Aralık 2019*
+
+Bu sürüm aşağıdakileri içerir:
+
+- Q# birim testi için yeni Test özniteliği. Güncelleştirilmiş API belgeleri için [buraya](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test), güncelleştirilmiş test ve hata ayıklama kılavuzu için ise [buraya](xref:microsoft.quantum.techniques.testing-and-debugging) bakın
+- Q # program yürütme hatası durumuna karşın yığın izlemesi eklendi
+- Visual Studio Code’da kesme noktaları desteğinin [OmniSharp C# Visual Studio Code uzantısında](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) güncelleştirilmesi gerekiyor
+
+[Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
 
 ## <a name="version-01019111607"></a>Sürüm 0.10.1911.1607
 
@@ -205,7 +217,7 @@ Bu sürüm aşağıdakileri içerir:
 
 - Q#’yi öğrenmek için harika bir yolu olan Jupyter Notebook’a yönelik destek eklendi.  [Yeni Jupyter Notebook örneklerine göz atın ve kendi Notebook’larınızı yazmayı öğrenin](xref:microsoft.quantum.install). 
 
-- Quantum Canon kitaplığına tamsayı ekleyici aritmetiğini ekler.  [Yeni tamsayı ekleyicilerini kullanmayı açıklayan](https://github.com/Microsoft/Quantum/blob/master/Samples/src/Arithmetic/Adder%20Example.ipynb) Jupyter Notebook’una da bakın.
+- Quantum Canon kitaplığına tamsayı ekleyici aritmetiğini ekler.  [Yeni tamsayı ekleyicilerini kullanmayı açıklayan](https://github.com/microsoft/Quantum/blob/master/samples/arithmetic/AdderExample.ipynb) Jupyter Notebook’una da bakın.
 
 - Topluluk tarafından bildirilen DumpRegister sorununa yönelik hata düzeltmesi ([#148](https://github.com/Microsoft/Quantum/issues/148)).
 
