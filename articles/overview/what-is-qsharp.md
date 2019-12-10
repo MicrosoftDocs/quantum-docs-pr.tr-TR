@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.qsharp
-ms.openlocfilehash: 3fd288439c7db7f939240b4388c9cdb114b6535c
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: e04d72bafe390ff5c79af408db1d9400754b06ce
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73529981"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864296"
 ---
 # <a name="what-is-q"></a>Q# nedir?
 
@@ -25,12 +25,11 @@ Q# bilgisayar dili, kuantum bilgisayarın iç mantığı hakkında kafa yormak z
 
 Kuantum bilgisayarların ilk dönemlerinde algoritmalar, klasik bilgi işlem devre şemalarına benzer şekilde görselleştiriliyordu.  Devre modeli Microsoft'ta kuantum bilişimi araştırmasında yıllardır yararlı olsa da, biz geliştiricilerin Q# kullanarak kuantum devrelerinin ötesine geçip kuantum algoritmaları ve uygulamaları geliştirebileceğine inanıyoruz. Q# dili, on yıllardır klasik yazılım geliştirme çalışmalarından çıkardığımız derslerden yararlanmak ve kuantum geliştiricilerini kuantum bilişimini hedefleyen üst düzey dil işlevselliğiyle güçlendirmek için oluşturulmuştur.
 
-
 ## <a name="how-does-q-work"></a>Q# nasıl çalışır?
 
 Q# dilinin temel yapı taşlarından biri, aynı gerçek kubit gibi kopyalanamayan veya doğrudan erişilemeyen `Qubit` türüdür. Bunun yerine bu türü ölçebilir ve ölçümün sonucunu, iki olası değer alabilen (`Zero` ve `One`) bir Q# türü olan `Result` değişkeninde depolarız. Bunun gibi yapılar algoritmaların her zaman kuantum fiziğinin yasalarına uymasını garanti eder ve kuantum bilgisayarlarda veya simülatörlerde doğru bir şekilde çalıştırılabilir.
 
-Q# ayrıca tüm kuantum kurallarına uyulduğundan emin olmak için bazı inceliklerle koşullular ve döngüler gibi klasik mantık özelliklerini de içerir. Örneğin, kuantum işlemlerinin yürütüldüğünden emin olmak için döngülerin yürütülme şeklini kısıtlayabilir.
+Q# ayrıca tüm kuantum kurallarına uyulduğundan emin olmak için bazı inceliklerle koşullular ve döngüler gibi klasik mantık özelliklerini de içerir. Örneğin, kuantum işlemlerinin yalnızca belirlenimci klasik alt yordamlar içerebilen işlevlerin içinde çağrılmamasını sağlamak için döngülerin yürütüldüğü yolları kısıtlama.
 
 Q# programları çoğunlukla C# veya Python dilinde yazılmış bir konak programıyla eşlenir ve bu da klasik kodla kuantum kodunun kullanışlı bir düzenlemesini sağlayabilir. C# ve Python gibi dillerin desteklemesinin yanı sıra, QDK IQ# Jupyter çekirdeğiyle Jupyter Notebook desteği de sağlar.
 
