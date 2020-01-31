@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyand
+name: ApplyAnd
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Yalnızca her iki denetim qubit de 1 durumundaysa, adjoint işlemini gerçekleştirmek için ölçüm kullanarak, belirli bir hedef qubit 'i tersine çevirir.
+
+
+  `target` ters çevir yalnızca her iki denetim de 1 ise, ancak `target` 0 durumunda olduğunu varsaymaktadır.  İşlem T-Count 4, T-Depth 2 ' dir ve yardımcı qubit gerektirmez ve bu nedenle `target` 0 olarak bilindiğinde CCNOT işlem için tercih edilebilir.  Bu işlemin adekçi, ölçüm tabanlıdır ve T kapısı gerektirmez.
+
+
+  Bu işlemin denetlenen uygulaması, hiçbir yardımcı qubit, `2^c` `Rz` kapısı gerektirmez ve `c`, `ApplyAnd` işleminden iki denetim dahil olmak üzere genel denetim qubit sayısı olan derinlik için en iyi duruma getirilmemiştir.  Adjoint kontrollü uygulama `2^c - 1` `Rz` kapıları (adjoint olmayan işlemin boyutunun iki katına sahip olan), yardımcı qubit olmadan ve derinlemesine en iyi şekilde iyileştirilmeyeceğini gerektirir.
+syntax: 'operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
+references: >-
+  - Cody Jones: "hata toleranslı Toffoli kapısı için önemli kurulumlarını", fiziksel. Rev. A 87, 022328, 2013 [Arxıv: 1212.5069](https://arxiv.org/abs/1212.5069) DOI: 10.1103/PhysRevA. 87.022328
+
+  - Craig Gidney: "hisse alma maliyetini durdurma", hisse 2, sayfa 74, 2018 [Arxıv: 1709.06648](https://arxiv.org/abs/1709.06648) DOI: 10.1103/PhysRevA. 85.044302
+
+  - Mathias Soeken: "hisse senedi Oracle devreleri ve Noel ağacı kalıbı", [Blog makalesi Decemer 19, 2019](https://msoeken.github.io/blog_qac.html) (Note: birden çok kontrollü oluşturma açıklanır)
+input:
+  content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
+  types:
+  - name: control1
+    summary: İlk denetim qubit
+    isPrimitive: true
+    uid: Qubit
+  - name: control2
+    summary: İkinci denetim qubit
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: Hedef yardımcı quılcal; 0 durumunda olmalıdır
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 7cde3dbbd33ff482609bbaaccb15e4c7b1bc536e
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872997"

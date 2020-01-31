@@ -43,19 +43,9 @@ operations:
 - uid: microsoft.quantum.errorcorrection.fivequbitcodeencoder
   summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nFiveQubitCodeEncoder kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\" kullanın.\nLütfen @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\"kullanın."
 - uid: microsoft.quantum.errorcorrection.injectpi4yrotation
-  summary: >-
-    `Y`hakkında bir π/4 döndürmesi gerçekleştirir.
-
-
-    Döndürme, bir sihirli durum tüketerek gerçekleştirilir; diğer bir deyişle, $ $ \begin{hizalaması} \cos\frac{\pi}{8} \demet{0} + \sin \ FRAC{\pi}{8} \tus{1}bir kopyasıdır.
-
-    \end{hizalaması} $ $
+  summary: Y ekseni hakkında π/4 ile tek bir qubit döndürür.
 - uid: microsoft.quantum.errorcorrection.knilldistill
-  summary: >-
-    Knill Magic State deneyimlerinin algoritmasını uygular.
-
-
-    Bir sihirli durum $ $ \begin{hizalaması} \cos\frac{\pi}{8} \tus{0} + \sin \frac{\pi}{8} \tus{1} \end{hizalaması}, $ $ bir yüksek kaliteli kopya verir.
+  summary: Knill Magic State deneyimlerinin algoritmasını uygular.
 - uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
   summary: Bir sabitleyici grubun verilen Oluşturucu kümesini ölçer.
 - uid: microsoft.quantum.errorcorrection.recover
@@ -92,9 +82,9 @@ newtypes:
 - uid: microsoft.quantum.errorcorrection.syndromemeasop
   summary: Hata düzeltme kod bloğunun eşitleniyor işlemini ölçmek için kullanılan bir işlemi temsil eder.
 metadata:
-  ms.openlocfilehash: 2f72286018b39e2d51d6e0ffa6babf7ce350d976
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 0a149810314453e816c7754dd535b2f3bb7d8e58
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858371"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870797"

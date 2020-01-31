@@ -6,58 +6,57 @@ ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: ae0c0ec2e677be03dc8dc1497dc62ad9034295a4
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 9c3601e74eec17bd6b463e90f8f3085c959d6f95
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442411"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820377"
 ---
-# <a name="width-counter"></a><span data-ttu-id="df6df-103">Genişlik sayacı</span><span class="sxs-lookup"><span data-stu-id="df6df-103">Width Counter</span></span>
+# <a name="width-counter"></a><span data-ttu-id="03ba8-103">Genişlik sayacı</span><span class="sxs-lookup"><span data-stu-id="03ba8-103">Width Counter</span></span>
 
-<span data-ttu-id="df6df-104">`Width Counter`, her bir işlem tarafından ayrılan ve ödünç alınan qubits sayısını sayar.</span><span class="sxs-lookup"><span data-stu-id="df6df-104">The `Width Counter` counts the number of qubits allocated and borrowed by each operation.</span></span>
-<span data-ttu-id="df6df-105">`Microsoft.Quantum.Primitive` ad alanındaki tüm işlemler, tek qubit ifade, T kapıları, tek qubit Clienfford kapıları, CNOT kapıları ve Multi-qubitpauli gözlemlenenler ölçümleri bakımından ifade edilir.</span><span class="sxs-lookup"><span data-stu-id="df6df-105">All operations from the `Microsoft.Quantum.Primitive` namespace are expressed in terms of single qubit rotations, T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit Pauli observables.</span></span> <span data-ttu-id="df6df-106">Temel işlemlerden bazıları ek qubit ayırabilirler.</span><span class="sxs-lookup"><span data-stu-id="df6df-106">Some of the primitive operations can allocate extra qubits.</span></span> <span data-ttu-id="df6df-107">Örneğin, denetlenen `X` kapıları veya denetimli `T` kapıları çarpın.</span><span class="sxs-lookup"><span data-stu-id="df6df-107">For example, multiply controlled `X` gates or controlled `T` gates.</span></span> <span data-ttu-id="df6df-108">Çarpma denetimli bir `X` kapısı uygulamasına göre ayrılan ekstra qubits sayısını hesaplamıza izin verin:</span><span class="sxs-lookup"><span data-stu-id="df6df-108">Let us compute the number of extra qubits allocated by the implementation of a multiply controlled `X` gate:</span></span>
+<span data-ttu-id="03ba8-104">`Width Counter`, her bir işlem tarafından ayrılan ve ödünç alınan qubits sayısını sayar.</span><span class="sxs-lookup"><span data-stu-id="03ba8-104">The `Width Counter` counts the number of qubits allocated and borrowed by each operation.</span></span>
+<span data-ttu-id="03ba8-105">`Microsoft.Quantum.Intrinsic` ad alanındaki tüm işlemler, tek qubit ifade, T kapıları, tek qubit Clienfford kapıları, CNOT kapıları ve Multi-qubitpauli gözlemlenenler ölçümleri bakımından ifade edilir.</span><span class="sxs-lookup"><span data-stu-id="03ba8-105">All operations from the `Microsoft.Quantum.Intrinsic` namespace are expressed in terms of single qubit rotations, T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit Pauli observables.</span></span> <span data-ttu-id="03ba8-106">Temel işlemlerden bazıları ek qubit ayırabilirler.</span><span class="sxs-lookup"><span data-stu-id="03ba8-106">Some of the primitive operations can allocate extra qubits.</span></span> <span data-ttu-id="03ba8-107">Örneğin, denetlenen `X` kapıları veya denetimli `T` kapıları çarpın.</span><span class="sxs-lookup"><span data-stu-id="03ba8-107">For example, multiply controlled `X` gates or controlled `T` gates.</span></span> <span data-ttu-id="03ba8-108">Çarpma denetimli bir `X` kapısı uygulamasına göre ayrılan ekstra qubits sayısını hesaplamıza izin verin:</span><span class="sxs-lookup"><span data-stu-id="03ba8-108">Let us compute the number of extra qubits allocated by the implementation of a multiply controlled `X` gate:</span></span>
 
 ```qsharp
-open Microsoft.Quantum.Primitive;
+open Microsoft.Quantum.Intrinsic;
 open Microsoft.Quantum.Arrays;
-operation MultiControlledXDriver( numberOfQubits : Int ) : Unit {
-
+operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
     using(qubits = Qubit[numberOfQubits]) {
         Controlled X (Rest(qubits), Head(qubits));
     } 
 }
 ```
 
-## <a name="using-width-counter-within-a-c-program"></a><span data-ttu-id="df6df-109">Bir C# program Içinde Width sayacını kullanma</span><span class="sxs-lookup"><span data-stu-id="df6df-109">Using Width Counter within a C# Program</span></span>
+## <a name="using-width-counter-within-a-c-program"></a><span data-ttu-id="03ba8-109">Bir C# program Içinde Width sayacını kullanma</span><span class="sxs-lookup"><span data-stu-id="03ba8-109">Using Width Counter within a C# Program</span></span>
 
-<span data-ttu-id="df6df-110">Toplam 5 qubit üzerinde çalışan denetlenen `X` çarpıp 2 anyacal ve giriş genişliği 5 olur.</span><span class="sxs-lookup"><span data-stu-id="df6df-110">Multiply controlled `X` acting on a total of 5 qubits will allocate 2 ancillary qubits and its input width will be 5.</span></span> <span data-ttu-id="df6df-111">Bu durumun bu olduğunu denetlemek için aşağıdaki C# programı kullanabiliriz:</span><span class="sxs-lookup"><span data-stu-id="df6df-111">To check that this is the case, we can use the following C# program:</span></span>
+<span data-ttu-id="03ba8-110">Toplam 5 qubit üzerinde çalışan denetlenen `X` çarpıp 2 anyacal ve giriş genişliği 5 olur.</span><span class="sxs-lookup"><span data-stu-id="03ba8-110">Multiply controlled `X` acting on a total of 5 qubits will allocate 2 ancillary qubits and its input width will be 5.</span></span> <span data-ttu-id="03ba8-111">Bu durumun bu olduğunu denetlemek için aşağıdaki C# programı kullanabiliriz:</span><span class="sxs-lookup"><span data-stu-id="03ba8-111">To check that this is the case, we can use the following C# program:</span></span>
 
 ```csharp 
 var config = new QCTraceSimulatorConfiguration();
 config.useWidthCounter = true;
 var sim = new QCTraceSimulator(config);
 int totalNumberOfQubits = 5;
-var res = MultiControlledXDriver.Run(sim, totalNumberOfQubits).Result;
+var res = ApplyMultiControlledX.Run(sim, totalNumberOfQubits).Result;
 
 double allocatedQubits = 
-    sim.GetMetric<Primitive.X, MultiControlledXDriver>(
+    sim.GetMetric<Primitive.X, ApplyMultiControlledX>(
         WidthCounter.Metrics.ExtraWidth,
         functor: OperationFunctor.Controlled); 
 
 double inputWidth =
-    sim.GetMetric<Primitive.X, MultiControlledXDriver>(
+    sim.GetMetric<Primitive.X, ApplyMultiControlledX>(
         WidthCounter.Metrics.InputWidth,
         functor: OperationFunctor.Controlled);
 ```
 
-<span data-ttu-id="df6df-112">Programın ilk kısmı `MultiControlledXDriver`yürütür.</span><span class="sxs-lookup"><span data-stu-id="df6df-112">The first part of the program executes `MultiControlledXDriver`.</span></span> <span data-ttu-id="df6df-113">İkinci bölümde, ayrılan qubits sayısını ve denetlenen `X` girdi olarak aldığı qubits sayısını almak için yöntemini `QCTraceSimulator.GetMetric` kullanırız.</span><span class="sxs-lookup"><span data-stu-id="df6df-113">In the second part we use the method `QCTraceSimulator.GetMetric` to get the number of allocated qubits as well as the number of qubits that Controlled `X` received as input.</span></span> 
+<span data-ttu-id="03ba8-112">Programın ilk kısmı `ApplyMultiControlledX`yürütür.</span><span class="sxs-lookup"><span data-stu-id="03ba8-112">The first part of the program executes `ApplyMultiControlledX`.</span></span> <span data-ttu-id="03ba8-113">İkinci bölümde, ayrılan qubits sayısını ve denetlenen `X` girdi olarak aldığı qubits sayısını almak için yöntemini `QCTraceSimulator.GetMetric` kullanırız.</span><span class="sxs-lookup"><span data-stu-id="03ba8-113">In the second part we use the method `QCTraceSimulator.GetMetric` to get the number of allocated qubits as well as the number of qubits that Controlled `X` received as input.</span></span> 
 
-<span data-ttu-id="df6df-114">Son olarak, Width sayacı tarafından toplanan tüm istatistikleri CSV biçiminde çıkarmak için aşağıdakileri kullanabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="df6df-114">Finally, to output all the statistics collected by width counter in CSV format we can use the following:</span></span>
+<span data-ttu-id="03ba8-114">Son olarak, Width sayacı tarafından toplanan tüm istatistikleri CSV biçiminde çıkarmak için aşağıdakileri kullanabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="03ba8-114">Finally, to output all the statistics collected by width counter in CSV format we can use the following:</span></span>
 ```csharp
 string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
-## <a name="see-also"></a><span data-ttu-id="df6df-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="df6df-115">See also</span></span> ##
+## <a name="see-also"></a><span data-ttu-id="03ba8-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="03ba8-115">See also</span></span> ##
 
-- <span data-ttu-id="df6df-116">Hisse bilgisayar [Izleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro) genel bakış.</span><span class="sxs-lookup"><span data-stu-id="df6df-116">The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="03ba8-116">Hisse bilgisayar [Izleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro) genel bakış.</span><span class="sxs-lookup"><span data-stu-id="03ba8-116">The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>

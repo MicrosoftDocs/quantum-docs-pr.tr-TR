@@ -1,0 +1,78 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.decomposedintotimestepsca
+name: DecomposedIntoTimeStepsCA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Belirli bir işlem için Trour – Suzuki tümleştirici uygulayan bir işlem döndürür.
+remarks: >-
+  `1`eşit `order` ile çağrıldığında, bu işlev en düşük sıra, Suzuki tümleştirici $ $ \begin{hizalaması} S_1 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda} tarafından benzetilen bir işlem döndürür. \end{hizalaması} $ $; [Quant-pH/0508139](https://arxiv.org/abs/quant-ph/0508139) gösterimini izlediğimiz ve $ \lambda $ 'ın evlen zamanı olduğu (döndürülen işlemin ilk girişi ile temsil edildiği) ve izin ver $\{H_j\}_ {j = 1} ^ {m} $, bu tür tümleştirilmiştir Bu `op(j, lambda, _)`, $e ^ {H_j \lambda} $ Unitary işleci tarafından benzetilir.
+
+
+  Benzer şekilde, `2` `order` ikinci sıra simetrik Trour – Suzuki tümleştirici $ $ \begin{hizalaması} S_2 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda/2} \ prod_ {j ' = m} ^{1} e ^ {H_ {j '} \lambda/2} döndürür.
+
+  \end{hizalaması} $ $
+
+
+  Daha yüksek `order` değerleri, [Quant-pH/0508139](https://arxiv.org/abs/quant-ph/0508139)özyinelemeli yapımı kullanılarak uygulanır.
+syntax: "function DecomposedIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
+references: '- [*D. W. Braz, G. Ahokas, R. Cleve, B. C. Sanders*](https://arxiv.org/abs/quant-ph/0508139)'
+input:
+  content: "((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int)"
+  types:
+  - name: nSteps
+    summary: Zaman adımlarında kaldırılacak işlem sayısı.
+    isPrimitive: true
+    uid: Int
+  - name: op
+    summary: Ayrıştırma için bir dizin girişi (tür `Int`) ve zaman girişi (tür `Double`) kabul eden bir işlem.
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Int
+      - isPrimitive: true
+        uid: Double
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: trotterOrder
+    summary: >-
+      Kullanılacak Trour – Suzuki tümleştirici sırasını seçer.
+
+      Sipariş 1 ve hatta 2, 4, 6,... Şu anda destekleniyor.
+    isPrimitive: true
+    uid: Int
+output:
+  content: ((Double, 'T) => Unit is Adj + Ctl)
+  types:
+  - summary: Birinci parametrenin `Double` tümleştirme adımı boyutu olduğu ve ikinci parametrenin ise hedefin üzerinde çalıştığı, Haur – Suzuki tümleştirmesini uygulayan bir Unitary döndürür.
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Double
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: Her zaman adımının üzerinde işlem yapması gereken tür; genellikle `Qubit[]` ya da `Qubit`.
+metadata:
+  ms.openlocfilehash: 66b2d7ca6394f525e8ec0dcb3516776bf91bd0cb
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76873031"

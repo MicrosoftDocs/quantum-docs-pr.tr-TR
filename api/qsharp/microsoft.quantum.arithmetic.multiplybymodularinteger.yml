@@ -7,7 +7,9 @@ summary: >-
   Bir qubit kaydındaki tamsayı sabiti ile modüler çarpma gerçekleştirir.
 
 
-  Bu işlem, N ve constMultiplier tarafından belirtilen bir şekilde, bu işlemi hesaplama temelinde belirten bir Unitary uygular: | y ⟩ ↦ | a ⋅ y (mod N) ⟩, 0 ile N-1 arasında tüm y için
+  `modulus` $N $ ve `constMultiplier` ile $a $ arasında olduğunu belirlememize izin verin.
+
+  Bu işlem, şu eşleme tarafından hesaplama temelinde tanımlanan bir Unitary işlemi uygular: $ $ \begin{hizalaması} \ket{y} \mapsto \ket{(a \cdot y) \operatorname{mod} N} \end{hizalaması} $ $ ile $0 $ ve $N-$1 arasında tüm $y $.
 remarks: >-
   - Devre diyagramı ve açıklama için, bkz. Şekil 7 [-Arxıv: Quant-pH/, 5095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)
 
@@ -21,14 +23,14 @@ input:
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: Çarpma işlemi, mod `modulus` gerçekleştirdi
+    summary: Çarpma işlemi, `modulus`mod gerçekleştirdi.
     isPrimitive: true
     uid: Int
   - name: multiplier
     summary: >-
       Bir sabit ile Çarpılmakta olan sayı.
 
-      Bu, küçük endian bit düzeninde tamsayıyı temsil eden bir qubits dizisidir.
+      Bu, küçük endian biçimindeki bir tamsayıyı kodlayan bir qubits dizisidir.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -39,9 +41,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 4a99aff903b22ad4edcd96f2a980bd65c740025f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 49d46d1dda5afaf4a35667ec98d24aeb51beba1f
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218762"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871388"

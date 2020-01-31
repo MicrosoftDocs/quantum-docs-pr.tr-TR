@@ -7,10 +7,10 @@ summary: >-
   Z ve Y eksenlerini karşılıklı olarak değiştiren Hadamard dönüşümüne Y tabanlı analog uygular.
 
 
-  Tek bir qubit üzerinde Y Hadamard dönüştürme $H _Y = S H $:
+  Tek bir qubit üzerinde _Y = S H $ $H Y Hadamard dönüşümü:
 
 
-  \begin{hizalaması} H_Y \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ ı &-i \end{bmatrix}.
+  \begin{hizalaması} H_Y \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ ı &-ı \end{bmatrix}.
 
   \end{hizalaması}
 syntax: 'operation HY (target : Qubit) : Unit'
@@ -18,6 +18,7 @@ input:
   content: '(target : Qubit)'
   types:
   - name: target
+    summary: Gate 'in uygulanması gereken qubit.
     isPrimitive: true
     uid: Qubit
 output:
@@ -29,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 2cbbbe29e3cef42ead1f85c01ffa15ce016e8402
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: db8d7ba2e357869e02679389c113e9dace840370
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227840"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871575"

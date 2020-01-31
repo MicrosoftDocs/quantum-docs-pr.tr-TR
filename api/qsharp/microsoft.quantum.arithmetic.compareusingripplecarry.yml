@@ -4,12 +4,14 @@ name: CompareUsingRippleCarry
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
 summary: >-
-  Bu Unitary testleri, eşit boyutlu qubit kayıtlarında depolanan `x` ve `y` depolanan iki tamsayı `x > y`karşılamadığı test. True ise, 1 çıkış qubit XORed. Aksi halde, 0 bir çıkış qubit içine XORed.
+  Bu işlem, qubits 'in bir yazmacından temsil edilen bir tamsayı başka bir tamsayıdır daha büyükse, bir çıkış qubit üzerine bir XOR sonucu uygulayarak sınar.
 
 
-  Diğer bir deyişle, bu Unitary $U $ şunları karşılar: $ $ \begin{hizalaması} U\ket {x} \ ayraç {y} \ ayraç {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)}.
+  Eşit boyutlu qubit kayıtlarında depolanan `x` ve `y` iki tamsayı verildiğinde, bu işlem `x > y`karşılayıp karşılamadığını denetler. True ise, 1 çıkış qubit XORed. Aksi halde, 0 bir çıkış qubit içine XORed.
 
-  \end{hizalaması} $ $.
+  Diğer bir deyişle, bu işlem Unitary $ $ \begin{hizalaması} U\ket {x} \ ayraç {y} \ demet {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)} tarafından temsil edilebilir.
+
+  \end{hizalaması} $ $
 syntax: 'operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
 references: '- Yeni bir hisse Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutın, David Petrie Moulton https://arxiv.org/abs/quant-ph/0410184'
 input:
@@ -34,9 +36,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: fa3db99da28f96e1cb42dd03e465440e015722fa
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1ef346a9fd33859abffe9c30b14b5ea95068169d
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221108"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871133"

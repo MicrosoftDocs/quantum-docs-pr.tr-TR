@@ -3,11 +3,11 @@ uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
 name: MultiplyAndAddPhaseByModularInteger
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Modülaraddproductle ile aynıdır, ancak summand 'in tamsayıları QFT temelinde kodluyor olduğunu varsayar
+summary: Multiplyandavddbymodularınteger ile aynıdır, ancak summve tamsayıların QFT temelinde kodladığını varsayar.
 remarks: >-
   `phaseSummand` en yüksek bit 0 olarak ayarlanmış olduğunu varsayar.
 
-  Ayrıca, `phaseSummand` değerinin N ' den küçük olduğunu varsayar.
+  Ayrıca, `phaseSummand` değerinin $N $ değerinden küçük olduğunu varsayar.
 syntax: 'operation MultiplyAndAddPhaseByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
@@ -16,11 +16,14 @@ input:
     isPrimitive: true
     uid: Int
   - name: modulus
+    summary: Mod $N $, ne kadar toplama ve çarpma işlemi yapılır.
     isPrimitive: true
     uid: Int
   - name: multiplier
+    summary: Değer, `summand`her temel durum etiketine eklenecek işaretsiz bir tamsayıyı temsil eden bir hisse kayıt.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: phaseSummand
+    summary: Bu işlem için hedef olarak kullanılacak işaretsiz bir tamsayıyı temsil eden bir hisse kaydı.
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -31,11 +34,11 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- microsoft.quantum.canon.modularaddproductle
+- microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
 metadata:
-  ms.openlocfilehash: f4dab26f55a61d0f3cbaf0b9b17fe4615f74356a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3728e95ad26768d486af79e7c4158a2a2715bbd2
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214852"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871405"

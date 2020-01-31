@@ -3,11 +3,14 @@ uid: microsoft.quantum.arithmetic.applyleoperationonphaselec
 name: ApplyLEOperationOnPhaseLEC
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
+summary: <xref:microsoft.quantum.arithmetic.littleendian>türünde bir hedef kayıt üzerinde girdi olarak <xref:microsoft.quantum.arithmetic.phaselittleendian> yazmacı alan bir işlem uygular.
+remarks: Kayıt, <xref:microsoft.quantum.canon.qftle> kullanımı tarafından `LittleEndian` dönüştürülür ve ardından `op`uygulamasından sonra özgün gösterimine döndürülür.
 syntax: 'operation ApplyLEOperationOnPhaseLEC (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Ctl), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
-  content: '(OP: (Microsoft. hisse. aritmetik. Litttaendian = > birimi CTL), hedef: Microsoft. hisse. aritmetik. Phaselittliendian)'
+  content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Ctl), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
-  - name: üs
+  - name: op
+    summary: Uygulanacak işlem.
     isOperation: true
     input:
       types:
@@ -18,10 +21,11 @@ input:
         uid: Unit
     functors:
     - Controlled
-  - name: hedef
+  - name: target
+    summary: İşlemin uygulandığı kayıt.
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
-  content: Birim
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -29,9 +33,12 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.canon.applyleoperationonphasele
-ms.openlocfilehash: 36350a09f155894c1103558d2ac49281f66f452e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73057099"
+- microsoft.quantum.canon.applyleoperationonphaselea
+- microsoft.quantum.canon.applyleoperationonphaseleca
+metadata:
+  ms.openlocfilehash: c6f15c4a58de177a00a94b3a14ecec333e27501e
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871082"

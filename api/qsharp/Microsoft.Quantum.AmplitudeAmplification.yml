@@ -4,41 +4,63 @@ name: Microsoft.Quantum.AmplitudeAmplification
 summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı, genliğini gerçekleştirmeye yönelik işlevler ve işlemler içerir.\n\n # <a name=\"description\"></a>Açıklama\n Kısmi yansıtımları ile yükümlülüğü uygulayan, burada uygulanan en genel genme biçimidir.\n\n Bu işlem AmpAmpObliviousByReflectionPhases aracılığıyla çağrılır.\n\n Bu iki kayıt içerir: `ancillaRegister` ve `systemRegister`.\n\n Bu, yalnızca `ancillaRegister` kaydına göre davranan `ReflectionOracle` türündeki bu yansımalar için iki Oracles kabul eder.\n\n Bu, her iki kasada de ortaklaşa bulunan `ObliviousOracle` türünde bir Oracle özel için Oracle özel düzeyini kabul eder.\n\n `ancillaRegister` giriş durumunun, ilk yansıma işlecinin benzersiz $-$1 eigenstate olduğu varsayılır $I-2 \\ ayraç {s} \\ köşeli {s} $.\n\n Bir hedef hisse cıya ilişkin yansıtıcılıkları genellikle bu durumu hesaplama tabanlı $ \\ket{0\\cnoktalar 0} $ ' dan hazırlayan bir Oracle erişimi varsayıldığında uygulanır.\n\n Bu Oracles için kuralımızın iki kayıt olması gerekir: tek bir-qubit `flagQubit` kaydı ve diğer her şey için bir kayıt.\n\n `StateOracle` Oracle, bazı gerçek genlerle `flagQubit` kaydındaki $ \\tus{1}$ tarafından işaretlenen hedef durumu oluşturmak için her iki kasada de birlikte yürütülür.\n\n Bu bayrak durumu hakkında yansıma `ReflectionOracle`, işlem `TargetStateReflectionOracle`tarafından oluşturulur.\n\n `ancillaRegister` giriş durumu hakkında yansıma `ReflectionOracle`, StateOracle 'ı ters çevirme ve ardından ReflectionStart () ile birlikte $ \\ket{0\\cnoktalar 0} $ hakkında bilgi yansıtır.\n\n `DeterministicStateOracle` Oracle türü, hedef durumu kesin olarak hiçbir bayrak olmadan oluşturmak için `qubitState` Yazmaçları üzerinde davranır.\n\n `AmpAmpObliviousByOraclePhases`, Oracles `StateOracle` ve `ObliviousOracle` yansımaları yerine kabul eden bir zorunluluvou genonu bir sürümüdür.\n\n Genüme 'nin, `ObliviousOracle` Identity operatörü olduğu ve hiçbir sistem qugeler olmadığı (`systemRegister` boş olduğu) özel bir zorunluluörün özel bir durumdur olduğunu unutmayın.\n\n Bu işlem `AmpAmByReflectionPhases` ve `AmpAmpByOraclePhases`aracılığıyla çağrılır.\n\n Grover aramasının standart durumunda kısmi yansıtılılıkları için aşamalar, AmpAmpPhasesStandard işlevi tarafından sağlanır.\n\n Örneğin, şu bağımlılıklara sahipsiniz: AmpAmpByOracle-> Ampampbyoracliaşamalar-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases."
 functions:
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoracle
-  summary: Standart genliği yükseltme algoritması
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAmpAmpByOracle kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\" kullanın.\nLütfen @\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\"kullanın."
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
-  summary: Kısmi yansıtımları için Oracles tarafından bir aşağı yönlü yükseltme.
-- uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionsphases
-  summary: Kısmi yansıtımları ile genliği yükseltme.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAmpampbyoracliaşamalar kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation\" kullanın.\nLütfen @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation\"kullanın."
+- uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionphases
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAmpampbyreflectionaşamaların kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections\" kullanın.\nLütfen @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections\"kullanın."
 - uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyoraclephases
-  summary: Yükümlülüğü, kısmi yansıtımları için Oracles tarafından bir şekilde geliştirilmiştir.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAmpAmpObliviousByOraclePhases kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation\" kullanın.\nLütfen @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation\"kullanın."
 - uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyreflectionphases
-  summary: Kısmi yansıtımları için belirterek, yükümlülüğü uygulayan gensliği gerçekleştiren bir Unitary döndürür.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAmpAmpObliviousByReflectionPhases kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections\" kullanın.\nLütfen @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections\"kullanın."
 - uid: microsoft.quantum.amplitudeamplification.ampampphasesfixedpoint
-  summary: Sabit nokta genliği yükseltme için kısmi yansıma aşamalarını hesaplar.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAmpAmpPhasesFixedPoint kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases\" kullanın.\nLütfen @\"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases\"kullanın."
 - uid: microsoft.quantum.amplitudeamplification.ampampphasesstandard
-  summary: Standart genliği yükseltme için kısmi yansıma aşamalarını hesaplar.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAmpAmpPhasesStandard kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.amplitudeamplification.standardreflectionphases\" kullanın.\nLütfen @\"microsoft.quantum.amplitudeamplification.standardreflectionphases\"kullanın."
 - uid: microsoft.quantum.amplitudeamplification.ampamprotationtoreflectionphases
-  summary: Tek qubit döndürmeler olarak belirtilen aşamaları kısmi yansıtılamalar olarak belirtilen aşamalara dönüştürür.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAmpamprotationtoreflectionaşamaların kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases\" kullanın.\nLütfen @\"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases\"kullanın."
+- uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections
+  summary: Kısmi yansıtımları ile genliği yükseltme.
+- uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation
+  summary: Kısmi yansıtımları için Oracles tarafından bir aşağı yönlü yükseltme.
+- uid: microsoft.quantum.amplitudeamplification.fixedpointreflectionphases
+  summary: Sabit nokta genliği yükseltme için kısmi yansıma aşamalarını hesaplar.
+- uid: microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections
+  summary: Kısmi yansıtımları için belirterek, yükümlülüğü uygulayan gensliği gerçekleştiren bir Unitary döndürür.
+- uid: microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation
+  summary: Yükümlülüğü, kısmi yansıtımları için Oracles tarafından bir şekilde geliştirilmiştir.
 - uid: microsoft.quantum.amplitudeamplification.reflectionstart
   summary: Genlik için tipik giriş durumu olan | 0... 0 〉 dize hakkında bir yansıma oluşturur.
+- uid: microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases
+  summary: Tek qubit döndürmeler olarak belirtilen aşamaları kısmi yansıtılamalar olarak belirtilen aşamalara dönüştürür.
+- uid: microsoft.quantum.amplitudeamplification.standardamplitudeamplification
+  summary: Standart genliği yükseltme algoritması
+- uid: microsoft.quantum.amplitudeamplification.standardreflectionphases
+  summary: Standart genliği yükseltme için kısmi yansıma aşamalarını hesaplar.
 - uid: microsoft.quantum.amplitudeamplification.targetstatereflectionoracle
   summary: >-
     Benzersiz olarak bayrak qubit tarafından işaretlenen hedef durumu hakkında bir `ReflectionOracle` oluşturur.
 
 
-    Hedef durumu 1 olarak ayarlanmış tek bir qubit ve diğerleri 0: $ \ demet{1}_F $ şeklindedir.
+    Hedef durumu 1 olarak ayarlanmış tek bir qubit ve tüm diğerleri 0: $ \demet{1}_f $.
 operations:
 - uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAmpAmpRUSByOracle kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\" kullanın.\nLütfen @\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\"kullanın."
+- uid: microsoft.quantum.amplitudeamplification.applyamplitudeamplification
+  summary: İlk ve son durumları yansıtmak için belirli bir aşamalar ve Oracles kümesini kullanarak belirli bir kayıt üzerinde genliği yükseltme uygular.
+- uid: microsoft.quantum.amplitudeamplification.applyfixedpointamplification
   summary: Sabit nokta Genonu yükseltme algoritması
+- uid: microsoft.quantum.amplitudeamplification.applyobliviousamplitudeamplification
+  summary: ', Kısmi yansımalar belirterek yükümlülüğü genliği bir şekilde yükseltme.'
 newtypes:
 - uid: microsoft.quantum.amplitudeamplification.reflectionphases
   summary: Genize göre kısmi yansıtımları dizisinin aşamaları.
 - uid: microsoft.quantum.amplitudeamplification.rotationphases
   summary: Tek qubit döndürmeler dizisinin bir sırası için aşamalar yükseltme.
 metadata:
-  ms.openlocfilehash: acec4d085e42811618228c8e120842dc400c50b4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7b6aec2bd2300a84550f92740e24f33ce243ea7c
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73057235"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870391"
