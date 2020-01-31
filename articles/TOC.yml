@@ -2,7 +2,7 @@
   href: index.yml
 - name: Genel Bakış
   items:
-    - name: Başlarken
+    - name: başlarken
       href: welcome.md
     - name: Kuantum bilişimi hakkında beş soru
       items:
@@ -29,7 +29,15 @@
 - name: Nasıl yapılır kılavuzları
   items:
     - name: QDK’yı yükleme
-      href: install-guide/index.md
+      items:
+        - name: Yüklemeye genel bakış
+          href: install-guide/index.md
+        - name: 'Q# + C#'
+          href: install-guide/csinstall.md
+        - name: 'Q# + Python'
+          href: install-guide/pyinstall.md
+        - name: 'Q# Jupyter Notebook’ları'
+          href: install-guide/qjupyter.md
     - name: QDK’yı güncelleştirme
       href: install-guide/update.md
     - name: 'Q# projesi oluşturma'

@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: c709f1eb130d37f930ffc4acc4bd663b8b8ba24a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: c135dacb2fc305fa97874cb4abcf4e2ac489b9e4
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863172"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871626"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -20,6 +20,19 @@ Bu makale her Quantum Development Kit sürümüne ilişkin bilgileri içerir.
 Yükleme yönergeleri için bu [yükleme kılavuzuna](xref:microsoft.quantum.install) başvurun.
 
 Güncelleştirme yönergeleri için bu [güncelleştirme kılavuzuna](xref:microsoft.quantum.update) başvurun.
+
+## <a name="version-01020012831"></a>Sürüm 0.10.2001.2831
+
+*Sürüm tarihi: 29 Ocak 2020*
+
+Bu sürüm aşağıdakileri içerir:
+
+- Yeni Microsoft.Quantum.SDK NuGet paketi, ayrıntılar için bkz. [BENİOKU](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md)
+- .NET Core 3.1 desteği eklendi, daha eski .NET Core SDK sürümleriyle derleme işlemi sorunlara neden olabileceğinden 3.1.100 sürümünü yüklemeniz önemle önerilir
+- Microsoft.Quantum.QsCompiler.Experimental altında yeni derleyici dönüşümleri kullanılabilir
+- IQ# içinde çıkış durumu vektörlerinin HTML olarak kullanıma sunulmasına yönelik yeni işlevsellik
+- Hadamard ve SWAP testleri için Microsoft.Quantum.Characterization’a EstimateFrequencyA desteği eklendi
+- AmplitudeAmplification ad alanı artık Q# stil kılavuzunu kullanıyor
 
 ## <a name="version-01019120501"></a>Sürüm 0.10.1912.0501
 
