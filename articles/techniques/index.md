@@ -7,35 +7,45 @@ ms.author: MSFT-alias-person-or-DL
 ms.date: 9/20/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.techniques.intro
-ms.openlocfilehash: 5daeeaeb2ebfb4de8d819cac7352f48eade6d8bd
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: c1263edb75f903702ab3c16cec0443857150b662
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035218"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820819"
 ---
-# <a name="quantum-development-techniques"></a><span data-ttu-id="2f380-104">Quantum Geliştirme Teknikleri</span><span class="sxs-lookup"><span data-stu-id="2f380-104">Quantum Development Techniques</span></span>
+# <a name="quantum-development-techniques"></a><span data-ttu-id="a20df-104">Quantum Geliştirme Teknikleri</span><span class="sxs-lookup"><span data-stu-id="a20df-104">Quantum Development Techniques</span></span>
+
+<span data-ttu-id="a20df-105">Belgelerimizin bu bölümünde, Q# dilinde kuantum programları oluşturmak ve klasik uygulamalardan bu programlarla etkileşimde bulunmak için kullanılan temel kavramlar ayrıntılı olarak açıklanmıştır.</span><span class="sxs-lookup"><span data-stu-id="a20df-105">This section of our documentation details the core concepts used to create quantum programs in Q#, and to interact with those programs from classical applications.</span></span>
+<span data-ttu-id="a20df-106">[Kuantum bilgi işlem kavramları](xref:microsoft.quantum.concepts.intro) bölümünde açıklananlar gibi *bazı* bilgilere sahip olduğunuz varsayılır ancak bu bölümlerden yararlanmak için bir kuantum bilgi işlem uzmanı olmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="a20df-106">We assume *some* knowledge of quantum computing concepts, like those described in [Quantum computing concepts](xref:microsoft.quantum.concepts.intro), but you need not be an expert in quantum computing to get a lot from these sections.</span></span>
+
+<span data-ttu-id="a20df-107">İçerikleri aşağıdaki gibidir.</span><span class="sxs-lookup"><span data-stu-id="a20df-107">Their contents are as follows.</span></span>
+
+- <span data-ttu-id="a20df-108">[Q# programına genel bakış](xref:microsoft.quantum.techniques.file-structure), Q# programlama dilinin amacı ve işlevlerine yönelik genel bir bakış sağlar.</span><span class="sxs-lookup"><span data-stu-id="a20df-108">[Q# program overview](xref:microsoft.quantum.techniques.file-structure) provides an overview of the purpose and functionality of the Q# programming language.</span></span> 
+    <span data-ttu-id="a20df-109">Özellikle, Q#’ın yalnızca kuantum mekaniğinin simülasyonunu yapmaya yönelik bir dil *olmadığını* açıklar. (Yine de bu işlevsellik tam durum simülatörümüz tarafından sağlanır.)</span><span class="sxs-lookup"><span data-stu-id="a20df-109">In particular, it clarifies how Q# is *not* a language for merely simulating quantum mechanics---though that functionality is of course provided by our full state simulator.</span></span> 
+    <span data-ttu-id="a20df-110">Bunun yerine, Q# geleceğe yönelik olarak tasarlanmıştır ve programları klasik bir denetim bilgisayarının qubit’lerle nasıl *etkileşime girdiğini* açıklar.</span><span class="sxs-lookup"><span data-stu-id="a20df-110">Rather, Q# was designed with an eye on the future, and its programs describe how a classical control computer *interacts* with qubits.</span></span> 
+
+- <span data-ttu-id="a20df-111">[İşlemler ve işlevler](xref:microsoft.quantum.techniques.opsandfunctions), Q# dilinin çağrılabilir iki türü hakkında ayrıntılar sağlar: *işlemler*, qubit’ler ve kuantum sistemleri üzerindeki eylemleri içerir ve *işlevler*, yalnızca klasik bilgilerle çalışır.</span><span class="sxs-lookup"><span data-stu-id="a20df-111">[Operations and functions](xref:microsoft.quantum.techniques.opsandfunctions) details the two callable types of the Q# language: *operations*, which include action on qubits and quantum systems; and *functions*, which strictly work with classical information.</span></span> 
+    <span data-ttu-id="a20df-112">Klasik ve kuantum bilgileri birlikte çalışmadan kuantum bilgi işlem gerçekleştirilemez.</span><span class="sxs-lookup"><span data-stu-id="a20df-112">Without both classical and quantum information working in tandem, quantum computing would remain out of reach.</span></span> 
+    <span data-ttu-id="a20df-113">Bu bölümde, bu çağrılabilir öğelerin bir Q# programının denetim akışı içinde nasıl tanımlanacağı ve kullanılacağı açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="a20df-113">This section describes how to define and use these callables within the control flow of a Q# program.</span></span>
+
+- <span data-ttu-id="a20df-114">[Yerel değişkenler](xref:microsoft.quantum.techniques.local-variables), Q# programlarındaki değişkenlerin rolünü ve bunların nasıl etkili bir şekilde kullanılacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="a20df-114">[Local variables](xref:microsoft.quantum.techniques.local-variables) describes the role of variables within Q# programs and how to leverage them effectively.</span></span> 
+    <span data-ttu-id="a20df-115">Özellikle, sabit/değişebilir değişkenler arasındaki farkı ve bunları nasıl atayacağınızı/yeniden atayacağınızı öğreneceksiniz.</span><span class="sxs-lookup"><span data-stu-id="a20df-115">In particular, you will learn the difference between immutable/mutable variables and how to assign/re-assign them.</span></span>
+
+- <span data-ttu-id="a20df-116">[Qubit’ler ile çalışma](xref:microsoft.quantum.techniques.qubits), tek başına qubit’lere ve qubit sistemlerine yönelik olarak kullanabileceğiniz Q# özelliklerini açıklar.</span><span class="sxs-lookup"><span data-stu-id="a20df-116">[Working with qubits](xref:microsoft.quantum.techniques.qubits) describes the features of Q# that you can use to address individual qubits and systems of qubits.</span></span> 
+    <span data-ttu-id="a20df-117">Özellikle, bunların ayrılmasını, bunlara yönelik işlemler gerçekleştirmeyi ve son olarak ölçülerini kapsar.</span><span class="sxs-lookup"><span data-stu-id="a20df-117">Specifically, that entails their allocation, performing operations on them, and ultimately their measurement.</span></span> 
+    <span data-ttu-id="a20df-118">Ayrıca, bazı faydalı denetim akışı tekniklerini öğreneceksiniz.</span><span class="sxs-lookup"><span data-stu-id="a20df-118">Additionally, you will learn some useful control flow techniques.</span></span>
+
+- <span data-ttu-id="a20df-119">[Hepsini bir araya getirme](xref:microsoft.quantum.techniques.puttingittogether) bölümünde, **kuantum teleportasyonu** (tam durumu bir qubit’ten diğerine "teleport" etmek için iki klasik bit kullanma) gerçekleştiren bir program oluşturmak üzere yukarıdaki bölümlerde öğrendiğiniz teknikleri kullanacaksınız.</span><span class="sxs-lookup"><span data-stu-id="a20df-119">In [Putting it all together](xref:microsoft.quantum.techniques.puttingittogether), you will leverage the techniques from the sections above to create a program which performs **quantum teleportation**: using two classical bits to "teleport" the full state of one qubit onto another.</span></span>
+
+- <span data-ttu-id="a20df-120">[Daha fazlası](xref:microsoft.quantum.techniques.going-further) bölümü, daha karmaşık kuantum programlamaya doğru ilerlerken yararlı olabilecek gelişmiş teknikler sunar.</span><span class="sxs-lookup"><span data-stu-id="a20df-120">[Going further](xref:microsoft.quantum.techniques.going-further) introduces advanced techniques that can prove helpful as you move toward more complex quantum programming.</span></span> 
+    <span data-ttu-id="a20df-121">Özellikle, Q# içinde, belirli giriş/çıkış türlerinden bağımsız kalarak daha yüksek düzeyli denetim akışı sağlayan ve qubit’leri *ödünç alan* *tür parametreli* işlemlerin ve işlevlerin kullanımı incelenmektedir.</span><span class="sxs-lookup"><span data-stu-id="a20df-121">In particular, we discuss the use of *type-parameterized* operations and functions in Q#, which enable higher-order control flow by remaining agnostic to the specific types of their input/output, as well as *borrowing* qubits.</span></span> 
+    <span data-ttu-id="a20df-122">İkincisi, bir Q# işleminin, hesaplamalar konusunda yardımcı olmak için bilinen bir duruma başlatılması gerekmeyen "kirli" qubit’leri kullanabildiği için temel qubit ayırmasından farklıdır.</span><span class="sxs-lookup"><span data-stu-id="a20df-122">The latter differs from basic qubit allocation in that a Q# operation may use "dirty" qubits---qubits not necessarily initialized to a known state---to assist computations.</span></span>
+
+- <span data-ttu-id="a20df-123">[Test ve hata ayıklama](xref:microsoft.quantum.techniques.testing-and-debugging) bölümünde, kodunuzun doğru şekilde çalıştığından emin olmaya yönelik bazı teknikler açıklanır.</span><span class="sxs-lookup"><span data-stu-id="a20df-123">[Testing and debugging](xref:microsoft.quantum.techniques.testing-and-debugging) details some techniques for making sure your code is doing what it is supposed to do.</span></span> 
+    <span data-ttu-id="a20df-124">Kuantum bilgilerinin genel opaklığı nedeniyle, bir kuantum programında hata ayıklamak için özel teknikler gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="a20df-124">Due to the general opacity of quantum information, debugging a quantum program can require specialized techniques.</span></span> 
+    <span data-ttu-id="a20df-125">Neyse ki, Q# kuantuma özgü tekniklerin yanı sıra klasik hata ayıklama tekniklerinin birçoğunu destekler.</span><span class="sxs-lookup"><span data-stu-id="a20df-125">Fortunately, Q# supports many of the classical debugging techniques programmers are used to, as well as those that are quantum-specific.</span></span> <span data-ttu-id="a20df-126">Bunlar Q# içinde birim testi oluşturmayı/çalıştırmayı, kodunuzda değerlere ve olasılıklara *onay deyimi* eklemeyi ve hedef makine durumunun çıkışını oluşturan `Dump` işlevlerini içerir.</span><span class="sxs-lookup"><span data-stu-id="a20df-126">These include creating/running unit tests in Q#, embedding *assertions* on values and probabilities in your code, and the `Dump` functions which output the state of target machine.</span></span> 
+    <span data-ttu-id="a20df-127">Sonuncusu, bazı kuantum sınırlamalarını (ör. kopyalamama teoremi) atlayarak işlemlerin belirli bölümlerinde hata ayıklamak için tam durum simülatörümüzle birlikte kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="a20df-127">The latter can be used alongside our full state simulator to debug certain parts of computations by skirting some quantum limitations (e.g. the no-cloning theorem).</span></span>
+
 
 ![Kuantum](~/media/mobius_strip_preview.png)
-
-<span data-ttu-id="2f380-106">Bu bölümde, Q# dilinde kuantum programları oluşturmak ve klasik .NET uygulamalarından bu programlarla etkileşimde bulunmak için kullanılan temel kavramlar ayrıntılı olarak açıklanmıştır.</span><span class="sxs-lookup"><span data-stu-id="2f380-106">This section details the core concepts used to create quantum programs in Q#, and to interact with those programs from classical .NET applications.</span></span>
-<span data-ttu-id="2f380-107">Bu bölümde, [Kuantum bilişimi kavramları](xref:microsoft.quantum.concepts.intro) bölümünde açıklananlar gibi kuantum bilişimi kavramları hakkında bilgi sahibi olunduğu varsayılmaktadır.</span><span class="sxs-lookup"><span data-stu-id="2f380-107">This section assumes some knowledge of quantum computing concepts like those described in [Quantum computing concepts](xref:microsoft.quantum.concepts.intro).</span></span>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
