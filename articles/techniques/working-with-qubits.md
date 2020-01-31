@@ -1,23 +1,23 @@
 ---
-title: Qubits ile çalışma | Microsoft Docs
-description: Qubits ile çalışma
+title: Qubits ile çalışma
+description: 'Qubits ile çalışma-Q # teknikleri'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.qubits
-ms.openlocfilehash: 477b358c3eba58b62926b4e9094770c9741cac92
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: dc6db93dadc37534aece9624fe516125d919f8cd
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864262"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820003"
 ---
-# <a name="working-with-qubits"></a>Qubits ile çalışma #
+# <a name="working-with-qubits"></a>Qubits ile çalışma
 
 Artık, Q # dilinin çeşitli farklı parçalarını gördüğünüze göre, bunun kalın olmasını sağlamamıza ve qubits 'in kendisini nasıl kullanacağınızı görelim.
 
-## <a name="allocating-qubits"></a>Qubit ayırma ##
+## <a name="allocating-qubits"></a>Qubit ayırma
 
 İlk olarak, Q # ' da kullanabilmemiz için bir qubit elde etmek üzere `using` bloğu içinde qubit *ayırdık* :
 
@@ -33,9 +33,9 @@ Bu şekilde ayrılan her türlü qubit $ \ket{0}$ State; Yukarıdaki örnekte `r
 > [!WARNING]
 > Hedef makineler, daha sonra yeniden kullanılabilmesi ve ayrılmak üzere diğer `using` bloklara sunulabilmeleri için, qubits 'in $ \ket{0}$ durumunda olmasını bekler.
 > Mümkün olduğunda, tüm ayrılmış qubitleri $ \ket{0}$ ' e döndürmek için Unitary işlemlerini kullanın.
-> Gerekirse, @"microsoft.quantum.intrinsic.reset" işlemi bir qubit ' i ölçmek için ve bu ölçüm sonucunu kullanarak ölçülen qubitin $ \tus{0}$ ' e döndürüldüğünden emin olmak için kullanılabilir. Bu tür bir ölçü, kalan qubits ile herhangi bir entanglement 'i yok eder ve bu sayede hesaplamayı etkileyebilir. 
+> Gerekirse, @"microsoft.quantum.intrinsic.reset" işlemi bir qubit ' i ölçmek için ve bu ölçüm sonucunu kullanarak ölçülen qubitin $ \tus{0}$ ' e döndürüldüğünden emin olmak için kullanılabilir. Bu tür bir ölçü, kalan qubits ile herhangi bir entanglement 'i yok eder ve bu sayede hesaplamayı etkileyebilir.
 
-## <a name="intrinsic-operations"></a>İç Işlemler ##
+## <a name="intrinsic-operations"></a>İç Işlemler
 
 Ayrıldıktan sonra, bir qubit daha sonra işlevlere ve işlemlere geçirilebilirler.
 Bazı bir deyişle, bu, bir Q # programının bir qubit ile yapamalarıdır, ancak gerçekleştirilebilecek eylemler tüm işlemler olarak tanımlanır.
@@ -43,12 +43,11 @@ Bu işlemleri, [Iç işlemler ve işlevlerde](xref:microsoft.quantum.libraries.s
 
 İlk olarak, tek qubit Pauli Operators $X $, $Y $ ve $Z $, her birinin türü `Y`olan iç işlemler `X`, `Z`ve `(Qubit => Unit is Adj + Ctl)`tarafından Q # içinde temsil edilir.
 [Iç işlemler ve işlevler](xref:microsoft.quantum.libraries.standard.prelude)bölümünde açıklandığı gibi, $X $ ve bu nedenle `X` bir bit çevirme işlemi olarak veya ağ geçidi olmayan bir işlem olarak düşünebiliriz.
-Bu, bazı klasik bit dizeler için $ \ket{s_0 s_1 \noktalara s_n} $ biçimindeki durumları hazırlamanızı sağlar $s $:
+`X` işlemi, bazı klasik bit dizeler için $ \ket{s_0 s_1 \noktalara s_n} $ biçimindeki durumları hazırlanmamızı sağlar $s $:
 
 ```qsharp
-operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : Unit 
+operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : Unit
 is Adj + Ctl {
-
     let nQubits = Length(register);
     for (idxQubit in 0..nQubits - 1) {
         if (bitstring[idxQubit]) {
@@ -57,14 +56,15 @@ is Adj + Ctl {
     }
 }
 
-operation Example() : Unit {
-
+operation RunExample() : Unit {
     using (register = Qubit[8]) {
         PrepareBitString(
             [true, true, false, false, true, false, false, true],
             register
         );
         // At this point, register now has the state |11001001〉.
+        // Resetting the qubits will allow us to deallocate them properly.
+        ResetAll(register);
     }
 }
 ```
@@ -76,7 +76,6 @@ Ayrıca, iç işlem{0} Q # içinde temsil edilen Hadamard Transform{1}$ ' i kull
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
-
     // First, get a computational basis state of the form
     // |s_0 s_1 ... s_n〉 by using PrepareBitString, above.
     PrepareBitString(bitstring, register);
@@ -88,40 +87,39 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 }
 ```
 
-## <a name="measurements"></a>Ölçümler ##
+## <a name="measurements"></a>Ölçümler
 
-Yerleşik bir yerleşik olmayan sıra dışı işlem olan `Measure` işlemini kullanarak, `Qubit` türünde bir nesneden klasik bilgileri ayıklayabilir ve bir klasik değeri, ayrılmış bir tür `Result`olan sonuç olarak atayabiliriz ve bu da sonucun artık hisse amamış olduğunu gösterir. `Measure` girişi, Bloch Sphere üzerinde `Pauli` türünde bir nesne (örneğin, `PauliX`) ve `Qubit`türünde bir nesne tarafından temsil edilen bir Pauli eksenindedir. 
+Yerleşik bir içsel Unitary işlemi olan `Measure` işlemini kullanarak, `Qubit` türünde bir nesneden klasik bilgileri ayıklayabilir ve bir klasik değeri, ayrılmış bir tür `Result`olan sonuç olarak atayabiliriz ve bu da sonucun artık hisse amadığı anlamına gelir.
+`Measure` girişi, Bloch Sphere üzerinde `Pauli` (örneğin `PauliX`) ve `Qubit`türünde bir değer ile temsil edilen Pauli eksenindedir.
 
-Basit bir örnek, $ \demet{0}$ durumunda bir qubit oluşturan aşağıdaki işlemdir ve sonra bir Hadamard Gate ``H`` uygular ve sonra sonucu `PauliZ` temelinde ölçer. 
+Basit bir örnek, $ \demet{0}$ durumunda bir qubit ayıran aşağıdaki işlemdir ve sonra bu `H` bir Hadamard işlemi uygular ve sonucu `PauliZ` temelinde ölçer.
 
 ```qsharp
-operation MeasurementOneQubit () : Result {
-
-    // The following using block creates a fresh qubit and initializes it 
+operation MeasureOneQubit() : Result {
+    // The following using block creates a fresh qubit and initializes it
     // in the |0〉 state.
     using (qubit = Qubit()) {
-        // We apply a Hadamard operation H to the state, thereby creating the 
-        // state 1/sqrt(2)(|0〉+|1〉). 
-        H(qubit); 
+        // We apply a Hadamard operation H to the state, thereby preparing the
+        // state 1 / sqrt(2) (|0〉 + |1〉).
+        H(qubit);
         // Now we measure the qubit in Z-basis.
         let result = M(qubit);
-        // As the qubit is now in an eigenstate of the measurement operator, 
-        // we reset the qubit before releasing it. 
-        if (result == One) { X(qubit); }   
-        // Finally, we return the result of the measurement. 
+        // As the qubit is now in an eigenstate of the measurement operator,
+        // we reset the qubit before releasing it.
+        if (result == One) { X(qubit); }
+        // Finally, we return the result of the measurement.
         return result;
     }
 }
 ```
 
-Aşağıdaki işlem tarafından biraz daha karmaşık bir örnek verilmiştir `true` `Qubit[]` bir kayıttaki tüm qubits 'ler, belirtilen Pauli temelinde ölçülerek sıfır durumunda ise ve aksi takdirde `false`. 
+Aşağıdaki işlem tarafından biraz daha karmaşık bir örnek verilmiştir ve bu `Qubit[]` tür bir kayıttaki tüm qubits 'ler belirtilen bir Pauli tabanında ölçülerek sıfır durumunda ise ve bu, aksi halde `false` döndüren `true` Boole değeri döndürür.
 
 ```qsharp
-operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {
-
+operation MeasureIfAllQubitsAreZero(qubits : Qubit[], pauli : Pauli) : Bool {
     mutable value = true;
-    for (q in qs) {
-        if ( Measure([pauli], [q]) == One ) {
+    for (qubit in qubits) {
+        if (Measure([pauli], [qubit]) == One) {
             set value = false;
         }
     }
@@ -129,35 +127,40 @@ operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {
 }
 ```
 
-Q # dili, qubits 'in ölçüm sonuçlarında klasik denetim akışının bağımlılıklarına izin verir. Bu işlem, birimlere uygulama için hesaplama maliyetini azaltabilecekleri güçlü dayalı araçları uygulamayı sağlar. Örnek olarak, alt ağ geçitleri bakımından *beklenen* düşük maliyetli dayalı devreleri olan, ancak gerçek maliyetten gerçek bir çalıştırmaya ve çeşitli olası içslerin gerçek bir araya *gelene* bağlı olan devreleri olan bu şekilde, bu şekilde uygulanması kolaydır. 
+Q # dili, mebitleri ölçmeye yönelik sonuçlara bağlı olarak klasik denetim akışına izin verir.
+Bu özellik sırasıyla, birimlere uygulama için hesaplama maliyetini azaltabilecekleri güçlü dayalı araçları uygulamaya olanak tanıyor.
+Örnek olarak, Q # içinde *Yinele-başarılı* (ru) desenleri uygulamak çok kolaydır.
+Bu RUS desenleri, temel kapıların bakımından *beklenen* düşük maliyetli dayalı programlarıdır, ancak gerçek maliyetten gerçek bir çalıştırmaya ve çeşitli olası branchlerin gerçek bir aramasına bağlı olarak değişir.
 
 Yinele-başarılı (RUS) desenleri kolaylaştırmak için, Q # yapıyı destekler
+
 ```qsharp
 repeat {
-    statementBlock1 
+    statementBlock1
 }
 until (expression)
 fixup {
     statementBlock2
 }
 ```
-`statementBlock1` ve `statementBlock2` sıfır veya daha fazla Q # deyimi ve `Bool`türünde bir değer değerlendirilen herhangi bir geçerli ifade `expression`. Tipik bir kullanım durumunda aşağıdaki devre, Bloch Sphere üzerinde $ (I + 2i Z)/\sqrt{5}$ bir ırrational Axis etrafında bir döndürme uygular. Bu, bilinen bir RUS kalıbı kullanılarak gerçekleştirilir: 
+
+`statementBlock1` ve `statementBlock2` sıfır veya daha fazla Q # deyimi ve `Bool`türünde bir değer değerlendirilen herhangi bir geçerli ifade `expression`.
+Tipik bir kullanım durumunda, aşağıdaki Q # işlemi Bloch Sphere üzerinde $ (I + 2i Z)/\sqrt{5}$ bir ırrational Axis etrafında bir döndürme uygular. Bu, bilinen bir RUS kalıbı kullanılarak gerçekleştirilir:
 
 ```qsharp
-operation RUScircuit (qubit : Qubit) : Unit {
-
-    using(ancillas = Qubit[2]) {
-        ApplyToEachA(H, ancillas);
+operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
+    using (controls = Qubit[2]) {
+        ApplyToEachA(H, controls);
         mutable finished = false;
         repeat {
-            Controlled X(ancillas, qubit);
+            Controlled X(controls, qubit);
             S(qubit);
-            Controlled X(ancillas, qubit);
+            Controlled X(controls, qubit);
             Z(qubit);
         }
-        until(finished)
+        until (finished)
         fixup {
-            if AllMeasurementsZero(ancillas, Xpauli) {
+            if (MeasureIfAllQubitsAreZero(controls, PauliX)) {
                 set finished = true;
             }
         }
@@ -167,49 +170,53 @@ operation RUScircuit (qubit : Qubit) : Unit {
 
 Bu örnek, tüm yineleme-sonu-düzeltme döngüsü kapsamında olan ve düzeltme adımında yüklenmeden önce başlatılan bir kesilebilir değişken `finished` kullanımını gösterir.
 
-Son olarak, $ \ket{+} $ durumundan başlayarak bir hisse durumu $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\tus{0}+ \tus{1}\right) $ ' ı hazırlamak için bir RUS deseninin örneğini gösteririz. Ayrıca bkz. [Standart kitaplıkla birlikte sunulan birim testi örneği](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs): 
+Son olarak, $ \ket{+} $ durumundan başlayarak bir hisse durumu $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\tus{0}+ \tus{1}\right) $ ' ı hazırlamak için bir RUS deseninin örneğini gösteririz.
+Ayrıca bkz. [Standart kitaplıkla birlikte sunulan birim testi örneği](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
 
 ```qsharp
-operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
-
-    using( ancilla = Qubit() ) {
-        H(ancilla);
+operation PrepareStateUsingRUS(target : Qubit) : Unit {
+    using (auxiliary = Qubit()) {
+        H(auxiliary);
         repeat {
-            // We expect target and ancilla qubit to be in |+⟩ state.
-            AssertProb( 
-                [PauliX], [target], Zero, 1.0, 
+            // We expect the target and auxiliary qubits to each be in
+            // the |+⟩ state.
+            AssertProb(
+                [PauliX], [target], Zero, 1.0,
                 "target qubit should be in the |+⟩ state", 1e-10 );
-            AssertProb( 
-                [PauliX], [ancilla], Zero, 1.0,
-                "ancilla qubit should be in the |+⟩ state", 1e-10 );
-                
-            Adjoint T(ancilla);
-            CNOT(target, ancilla);
-            T(ancilla);
+            AssertProb(
+                [PauliX], [auxiliary], Zero, 1.0,
+                "auxiliary qubit should be in the |+⟩ state", 1e-10 );
 
-            // The probability of measuring |+⟩ state on ancilla is 3/4.
-            AssertProb( 
-                [PauliX], [ancilla], Zero, 3. / 4., 
-                "Error: the probability to measure |+⟩ in the first 
-                ancilla must be 3/4",
+            Adjoint T(auxiliary);
+            CNOT(target, auxiliary);
+            T(auxiliary);
+
+            // The probability of measuring |+⟩ state on the auxiliary qubit
+            // is 3/4.
+            AssertProb(
+                [PauliX], [auxiliary], Zero, 3. / 4.,
+                "Error: the probability to measure |+⟩ in the first
+                auxiliary must be 3/4",
                 1e-10);
 
-            // If we get measurement outcome Zero, we prepare the required state 
-            let outcome = Measure([PauliX], [ancilla]);
+            // If we get the measurement outcome Zero, we prepare the
+            // required state.
+            let outcome = Measure([PauliX], [auxiliary]);
         }
-        until( outcome == Zero )
+        until (outcome == Zero)
         fixup {
-            // Bring ancilla and target back to |+⟩ state
-            if( outcome == One ) {
-                Z(ancilla);
+            // Bring the auxiliary and target qubits back to |+⟩ state.
+            if (outcome == One) {
+                Z(auxiliary);
                 X(target);
                 H(target);
             }
         }
-        // Return ancilla back to Zero state
-        H(ancilla);
+        // Return the auxiliary qubit back to the Zero state.
+        H(auxiliary);
     }
 }
 ```
- 
-Bu işlemde gösterilen önemli bir programlı özellikler, bu işlemin, hisse ve programda belirtilen belirli noktalarda hisse miktarını ölçme olasılığını belirlemek için `AssertProb` deyimlerinin kullanımı ile ilgili daha karmaşık `fixup`. Ayrıca `Assert` ve `AssertProb` deyimleri hakkında daha fazla bilgi için bkz. [test ve hata ayıklama](xref:microsoft.quantum.techniques.testing-and-debugging) . 
+
+Bu işlemde gösterilen önemli programlı özellikler, bir döngünün daha karmaşık `fixup` bir parçasıdır. Bu, hisse kullanımı ve programda belirtilen belirli noktalarda hisse TI ölçme olasılığını belirlemek için `AssertProb` deyimlerinin kullanılmasını içerir.
+Ayrıca, [`Assert`](xref:microsoft.quantum.intrinsic.assert) ve [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) işlemleri hakkında daha fazla bilgi için bkz. [test ve hata ayıklama](xref:microsoft.quantum.techniques.testing-and-debugging) .

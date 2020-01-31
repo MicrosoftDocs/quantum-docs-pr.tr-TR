@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 40b2e7ddf5def6285250dffe130b152429dce1f8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 364d353c55bda38f227456909755d13dc7e67080
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185197"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821091"
 ---
 # <a name="file-structure"></a>Dosya Yapısı
 
@@ -66,7 +66,7 @@ Temel türler özdeş olsa bile Kullanıcı tanımlı türler farklıdır.
 
 Kullanıcı tanımlı tür bildirimi, anahtar sözcüğünden `newtype`, ardından Kullanıcı tanımlı türün adı, bir `=`, geçerli bir tür belirtimi ve sonlandırma noktalı virgülünden oluşur.
 
-Örnek:
+Örneğin:
 
 ```qsharp
 newtype PairOfInts = (Int, Int);
@@ -84,7 +84,7 @@ Her Q # kaynak dosyası herhangi bir sayıda işlem tanımlayabilir.
 
 İşlem adları ad alanı içinde benzersiz olmalıdır ve tür ve işlev adlarıyla çakışmayabilir.
 
-İşlem bildirimleri, anahtar `operation`sözcüğünden oluşur, ardından işlem adı olan sembol tarafından, işlem için bağımsız değişkenleri tanımlayan türü belirlenmiş bir tanımlayıcı tanımlama grubu, iki nokta üst üste `:`, işlemin sonuç türünü açıklayan bir tür ek açıklaması, isteğe bağlı olarak, işlem özelliklerine sahip bir ek açıklama, açık bir küme ayracı `{`, işlem bildiriminin gövdesi ve bir son kapanış ayracı `}`.
+İşlem bildirimleri, anahtar `operation`sözcüğünden ve sonra işlemin adı olan sembol tarafından, işlem için bağımsız değişkenleri tanımlayan türü belirtilmiş bir tanımlayıcı tanımlama grubu, iki nokta üst üste `:`, işlemin sonuç türünü tanımlayan bir tür ek açıklaması, isteğe bağlı olarak işlem ile ilgili bir ek açıklama, bir açık ayraç `{`, işlem bildiriminin gövdesini ve son kapanış ayracı `}`içerir.
 
 İşlem bildiriminin gövdesi, varsayılan uygulamadan ya da bir uzmanlık listesinden oluşur.
 Varsayılan gövde özelleştirmesi yalnızca uygulamanın açıkça belirtilmesi gerekiyorsa, varsayılan uygulama doğrudan bildirim içinde belirtilebilir.
@@ -138,7 +138,7 @@ is Ctl + Adj {
 }
 ```
 
-Yukarıdaki örnekte, `adjoint invert;`, adjoint özelleşmesinin, gövde uygulamasını ters çeviren şekilde oluşturulacağını ve `controlled adjoint invert;`, belirtilen ' nin belirtilen uygulamasını tersine getirerek denetlenen adjoint özelleşmesinin oluşturulacağını belirtir. denetlenen özelleşme.
+Yukarıdaki örnekte, `adjoint invert;`, adjoint özelleşmesinin gövde uygulamasını tersine getirerek oluşturulacağını ve `controlled adjoint invert;` denetlenen majoint özelleşmesinin, denetlenen özelleşmenin belirtilen uygulamasını tersine ayırarak oluşturulacağını belirtir.
 
 `Adjoint` ve/veya `Controlled` functor uygulamasını desteklemeye yönelik bir işlemin, dönüş türünün `Unit`olması gerekir. 
 
@@ -187,12 +187,12 @@ Bağımsız değişken listesinde, bir bütün olarak işlem için belirtilen ba
 Varsayılan gövdenin yanı sıra bir veya daha fazla özelleştirilmiş açıkça bildirilmesi gerekiyorsa, varsayılan gövdeye yönelik uygulamanın uygun bir özelleştirme bildirimine de sarmalanması gerekir:
 
 ```qsharp
-operation CountOnes(qs: Qubit[]) : Int {
+operation CountOnes(qubits: Qubit[]) : Int {
 
     body (...) // default body specialization
     {
         mutable n = 0;
-        for (q in qs) {
+        for (qubit in qubits) {
             set n += M(q) == One ? 1 | 0;
         }
         return n;
@@ -208,7 +208,7 @@ Adjoint olmadan bir işlem belirtmek geçerlidir; Örneğin, ölçüm işlemleri
 Bir işlem, bir adjoint özelleştirmesi için örtük veya açık bir bildirim içeriyorsa, functor `Adjoint` destekler.
 Açıkça tanımlanmış denetimli bir adjoint özelleştirmesi bir adjoint özelleşmenin varlığını gösterir. 
 
-Gövdesi, yineleme-Until-başarılı döngüleri, set deyimlerini, ölçümleri, return deyimlerini veya `Adjoint` functor desteklemeyen diğer işlemlere yapılan çağrıları, `invert` veya @no__ takip eden bir adjoint uzmanlığı otomatik olarak oluşturmayı sağlayan işlem için t_2_ yönergesi mümkün değil.
+Gövdesi, yineleme-Until-başarılı döngüleri, set deyimlerini, ölçümleri, return deyimlerini veya `Adjoint` functor desteklemeyen diğer işlemlere yapılan çağrıları, `invert` veya `auto` yönergesini takip eden bir adjoint özelleşmenin otomatik olarak üretilmesine neden olan işlem için kullanılamaz.
 
 ### <a name="controlled"></a>Tarafından
 
@@ -236,7 +236,7 @@ Gövdesi denetimli bir adjoint sürümüne sahip olmayan diğer işlemlere çağ
 İşlem bildirimi, temel Pauli X işlemini tanımlayan aşağıdaki kadar basit olabilir:
 
 ```qsharp
-operation X (q : Qubit) : Unit
+operation X (qubit : Qubit) : Unit
 is Adj + Ctl {
     body intrinsic;
     adjoint self;
@@ -282,7 +282,7 @@ operation Teleport (source : Qubit, target : Qubit) : Unit {
 İşlevler, Q # içinde tamamen klasik yordamlardır.
 Her Q # kaynak dosyası herhangi bir sayıda işlev tanımlayabilir.
 
-Bir işlev bildirimi, anahtar sözcüğünden `function`, ardından işlevin adı, türü belirlenmiş bir tanımlayıcı tanımlama grubu, işlevin dönüş türünü açıklayan bir tür ek açıklaması ve uygulamanın uygulamasını açıklayan bir ifade bloğu içerir. çalışmayacaktır.
+Bir işlev bildirimi, anahtar sözcüğünden `function`, ardından işlevin adı, türü belirlenmiş bir tanımlayıcı tanımlama grubu, işlevin dönüş türünü açıklayan bir tür ek açıklaması ve işlevin uygulamasını tanımlayan bir ifade bloğu içerir.
 
 Bir işlevi tanımlayan ifade bloğunun `{` ve diğer tüm ifade blokları gibi `}` alınması gerekir.
 

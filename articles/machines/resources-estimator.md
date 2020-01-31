@@ -6,12 +6,12 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 591e306b3001934bd81342a533e3f6ca25129781
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 960fda3dade7648f9cd24496c3a49fd11d6f807a
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184993"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820870"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>ResourcesEstimator hedef makinesi
 
@@ -97,37 +97,37 @@ namespace Quantum.MyProgram
 * __Qubitclifford__: herhangi bir tek qubit Clienfford ve Pauli Gates 'in sayısı yürütüldü.
 * __Measure__: yürütülen ölçüm sayısı.
 * __R__: T, Clienfford ve Pauli Gates hariç çalıştırılan tek qubit döndürmeler sayısı.
-* __T__: t kapısı ve T_x = H. t. H ve T_y = HY. T. HY dahil olmak üzere onların ve bunların Birleşik kapıları sayısı.
+* __T__: t kapısı, T_x = H. T. H ve T_y = HY. t. HY de dahil olmak üzere, t kapıları ve bunların Birleşik kapılarının sayısı.
 * __Derinlik__: Q # işlemi tarafından yürütülen hisse devresi derinliği. Varsayılan olarak, derinlemesine yalnızca T kapıları sayılır, Ayrıntılar için bkz. [derinlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) .
 * __Width__: Q # işleminin yürütülmesi sırasında ayrılan en fazla qubit sayısı.
 * __Borrodilimlerin genişliği__: Q # işlemi içinde ödünç alınan en fazla qubits sayısı.
 
 
-## <a name="providing-the-probability-of-measurement-outcomes"></a>Ölçüm sonuçları olasılığını sağlama
+## <a name="providing-the-probability-of-measurement-outcomes"></a>Ölçüm Sonuçlarının Olasılığını Sağlama
 
-<xref:microsoft.quantum.primitive> ad alanından <xref:microsoft.quantum.primitive.assertprob>, Q # programının yürütülmesini sağlamaya yardımcı olmak üzere bir ölçünün beklenen olasılığı hakkında bilgi sağlamak için kullanılabilir. Aşağıdaki örnek şunu göstermektedir:
+<xref:microsoft.quantum.intrinsic> ad alanından <xref:microsoft.quantum.intrinsic.assertprob>, Q # programının yürütülmesini sağlamaya yardımcı olmak üzere bir ölçünün beklenen olasılığı hakkında bilgi sağlamak için kullanılabilir. Aşağıdaki örnekte bu gösterilmektedir:
 
 ```qsharp
-operation Teleportation (source : Qubit, target : Qubit) : Unit {
+operation Teleport(source : Qubit, target : Qubit) : Unit {
 
-    using (ancilla = Qubit()) {
+    using (qubit = Qubit()) {
 
-        H(ancilla);
-        CNOT(ancilla, target);
+        H(q);
+        CNOT(qubit, target);
 
-        CNOT(source, ancilla);
+        CNOT(source, qubit);
         H(source);
 
         AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [qubit], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
 
         if (M(source) == One)  { Z(target); X(source); }
-        if (M(ancilla) == One) { X(target); X(ancilla); }
+        if (M(qubit) == One) { X(target); X(qubit); }
     }
 }
 ```
 
-`ResourcesEstimator` karşılaştığında `AssertProb` `PauliZ` ölçmeye `source` ve `ancilla`, olasılık 0,5 ile `Zero` sonucunu verilmelidir. Daha sonra `M` yürüttüğünde, sonuç olasılıkların kayıtlı değerlerini bulur ve `M` olasılık 0,5 ile `Zero` veya `One` döndürür.
+`ResourcesEstimator` karşılaştığında `AssertProb` `PauliZ` ölçmeye `source` ve `q`, olasılık 0,5 ile `Zero` sonucunu verilmelidir. Daha sonra `M` yürüttüğünde, sonuç olasılıkların kayıtlı değerlerini bulur ve `M` olasılık 0,5 ile `Zero` veya `One` döndürür.
 
 
 ## <a name="see-also"></a>Ayrıca bkz.

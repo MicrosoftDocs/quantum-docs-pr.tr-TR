@@ -1,19 +1,19 @@
 ---
-title: 'S # teknikleri-test ve hata ayıklama | Microsoft Docs'
-description: 'S # teknikleri-test ve hata ayıklama'
+title: 'Test ve hata ayıklama-Q # teknikleri | Microsoft Docs'
+description: 'Test ve hata ayıklama-Q # teknikleri'
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: d352ffa315b654cfcf8991fa116465d3dad49f0a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: cfc71f08be0f190d9f5f4a48796e3d0ad06d6107
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864279"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820122"
 ---
-# <a name="testing-and-debugging"></a>Test ve Hata Ayıklama
+# <a name="testing-and-debugging"></a>Test ve hata ayıklama
 
 Klasik programlamada olduğu gibi, hisse anlık programlarının amaçlanan gibi davranmasına ve yanlış bir hisse veya hatalı bir program tanılamasına olanak tanımak önemlidir.
 Bu bölümde, test ve hata ayıklama için Q # tarafından sunulan araçlar ele alınmaktadır.
@@ -50,8 +50,8 @@ Başlangıçta bu dosya, yeni ayrılmış bir qubitin $ \ket{0}$ durumunda oldu�
     @Test("QuantumSimulator")
     operation AllocateQubit () : Unit {
 
-        using (q = Qubit()) {
-            Assert([PauliZ], [q], Zero, "Newly allocated qubit must be in the |0⟩ state.");
+        using (qubit = Qubit()) {
+            Assert([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
         
         Message("Test passed");
@@ -136,7 +136,7 @@ Başarısız testler için çıktılar, hatanın tanılanmasına yardımcı olma
 
 ***
 
-## <a name="assertions"></a>Onaylamalar
+## <a name="assertions"></a>Onaylama
 
 Q # içindeki işlevlerin _mantıksal_ yan etkileri olmadığından, çıkış türü boş olan bir işlevi yürütmenin _diğer_ etkileri, `()` hiçbir zaman bir Q # programı içinden gözlemlenemez.
 Diğer bir deyişle, bir hedef makine, bu atlama 'nin aşağıdaki Q # kodunun davranışını değiştirmeyeceği garantisi ile `()` döndüren herhangi bir işlevi yürütmemelidir.
@@ -360,7 +360,7 @@ namespace app
 }
 ```
 
-## <a name="debugging"></a>Hata ayıklama
+## <a name="debugging"></a>Hata Ayıklama
 
 `Assert` ve `Dump` işlevlerinin ve işlemlerinin üstünde, Q #, standart Visual Studio hata ayıklama özellikleri alt kümesini destekler: [satır kesme noktaları ayarlama](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [F10 kullanarak kod üzerinden atlama](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) ve [Klasik değişkenlerin değerlerini inceleme](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) işlemi, simülatör üzerinde kod yürütme sırasında mümkün değildir.
 

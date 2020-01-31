@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5bcbee868c76aaf53d0b7969e6e634da62689aaa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9157cf3336ce0894816dbfbaf13ce0e712a6b096
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184874"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821074"
 ---
 # <a name="statements-and-other-constructs"></a>Deyimler ve diğer yapılar
 
@@ -29,7 +29,7 @@ Bu durumda, içeriği diğer .NET dilleri gibi tanımlanmış çağrılabilir ve
 Markı 'nin bir uzantısı olarak, Q # içindeki işlemlere, işlevlere ve Kullanıcı tanımlı türlere çapraz başvurular `@"<ref target>"`kullanılarak dahil edilebilir. burada `<ref target>`, başvurulan kod nesnesinin tam adı ile değiştirilmiştir.
 İsteğe bağlı olarak, bir belge altyapısı ek markı uzantılarını da destekleyebilir.
 
-Örnek:
+Örneğin:
 
 ```qsharp
 /// # Summary
@@ -54,8 +54,7 @@ Markı 'nin bir uzantısı olarak, Q # içindeki işlemlere, işlevlere ve Kulla
 ///
 /// # See Also
 /// - Microsoft.Quantum.Intrinsic.H
-operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit
-{
+operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit {
     op(target);
     op(target);
 }
@@ -90,7 +89,6 @@ Geçerli ad alanında açılmamış başka bir ad alanında tanımlanan bir tür
 
 ```qsharp
 namespace NS {
-
     open Microsoft.Quantum.Intrinsic; // opens the namespace
     open Microsoft.Quantum.Math as Math; // defines a short name for the namespace
 }
@@ -181,7 +179,7 @@ for (i in 1 .. 2 .. 10) {
 Benzer deyimler, sol taraftaki türün ifade türüyle eşleştiği tüm ikili işleçler için kullanılabilir. Bu, örneğin değerleri biriktirmek için kullanışlı bir yol sağlar:
 ```qsharp
 mutable results = new Result[0];
-for (q in qubits) {
+for (qubit in qubits) {
     set results += [M(q)];
     // ...
 }
@@ -193,7 +191,7 @@ Sağ taraftaki kopyalama ve güncelleştirme ifadeleri için benzer bir birleşt
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function AddAll (reals : Double[], ims : Double[]) : Complex[] {
+function ElementwisePlus(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {
@@ -209,19 +207,17 @@ function AddAll (reals : Double[], ims : Double[]) : Complex[] {
 Diziler söz konusu olduğunda standart kitaplıklarımız birçok yaygın dizi başlatma ve işleme ihtiyacı için gerekli araçları içerir ve bu nedenle dizi öğelerini ilk yerde güncelleştirmek zorunda kalmamak için yardımcı olur. Update-ve-yeniden ata deyimleri gerekirse bir alternatif sağlar:
 
 ```qsharp
-operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
-
+operation GenerateRandomInts(max : Int, nSamples : Int) : Int[] {
     mutable samples = new Double[0];
-    for (i in 1 .. nrSamples) {
-        set samples += [RandomInt(maxInt)];
+    for (i in 1 .. nSamples) {
+        set samples += [RandomInt(max)];
     }
     return samples;
 }
 
-operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
-
-    let normalization = 1. / IntAsDouble(prec);
-    mutable samples = RandomInts(prec, nrSamples);
+operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
+    let normalization = 1. / IntAsDouble(nSteps);
+    mutable samples = GenerateRandomInts(nSteps, nSamples);
     
     for (i in IndexRange(samples) {
         let value = IntAsDouble(samples[i]);
@@ -236,10 +232,9 @@ operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
 
 İşlevi
 ```qsharp
-function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
-{
-    mutable pauliArray = new Pauli[n];
-    for (index in 0 .. n - 1) {
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    mutable pauliArray = new Pauli[length];
+    for (index in 0 .. length - 1) {
         set pauliArray w/= index <- 
             index == location ? pauli | PauliI;
     }    
@@ -249,8 +244,8 @@ function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
 Örneğin, `Microsoft.Quantum.Arrays``ConstantArray` işlevini kullanarak basit bir şekilde basitleştirilebilir ve bir kopya ve güncelleştirme ifadesi getirebilirsiniz:
 
 ```qsharp
-function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {
-    return ConstantArray(n, PauliI) w/ i <- pauli;
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    return ConstantArray(length, PauliI) w/ location <- pauli;
 }
 ```
 
@@ -330,8 +325,8 @@ Belirtilen sembol (ler) in bağlaması sabittir ve diğer değişken bağlamalar
 
 ```qsharp
 // ...
-for (qb in qubits) { // qubits contains a Qubit[]
-    H(qb);
+for (qubit in qubits) { // qubits contains a Qubit[]
+    H(qubit);
 }
 
 mutable results = new (Int, Results)[Length(qubits)];
@@ -359,13 +354,13 @@ Döngü gövdesi, koşulu ve düzeltme tek bir kapsam olarak kabul edilir, bu ne
 ```qsharp
 mutable iter = 1;
 repeat {
-    ProbabilisticCircuit(qs);
-    let success = ComputeSuccessIndicator(qs);
+    ProbabilisticCircuit(qubits);
+    let success = ComputeSuccessIndicator(qubits);
 }
 until (success || iter > maxIter)
 fixup {
     iter += 1;
-    ComputeCorrection(qs);
+    ComputeCorrection(qubits);
 }
 ```
 
@@ -374,25 +369,25 @@ Koşul doğru ise, ifade tamamlanır; Aksi takdirde, düzeltme yürütülür ve 
 Düzeltme yürütme işlemini tamamlamak deyimin kapsamını sonlandırır, böylece gövde veya Düzeltme sırasında yapılan simge bağlamaları sonraki oturumlarda kullanılamaz.
 
 Örneğin, aşağıdaki kod, Hadamard ve T kapılarını kullanarak önemli bir dönüş geçidi $V _3 = (\cıvalation+ 2 ı Z)/\sqrt{5}$ uygulayan bir dayalı devresi.
-Döngü, ortalama 8/5 tekrarda sona erer.
+Döngü, ortalama $ \frac{8}{5}$ tekrarları içinde sonlanır.
 Ayrıntılar için bkz. [*yineleme-Until-başarılı: tek qubit unityalarının belirleyici olmayan ayrıştırma*](https://arxiv.org/abs/1311.1074) (paetznick ve svore, 2014).
 
 ```qsharp
-using (anc = Qubit()) {
+using (qubit = Qubit()) {
     repeat {
-        H(anc);
-        T(anc);
-        CNOT(target,anc);
-        H(anc);
-        Adjoint T(anc);
-        H(anc);
-        T(anc);
-        H(anc);
-        CNOT(target,anc);
-        T(anc);
+        H(qubit);
+        T(qubit);
+        CNOT(target, qubit);
+        H(qubit);
+        Adjoint T(qubit);
+        H(qubit);
+        T(qubit);
+        H(qubit);
+        CNOT(target, qubit);
+        T(qubit);
         Z(target);
-        H(anc);
-        let result = M(anc);
+        H(qubit);
+        let result = M(qubit);
     } until (result == Zero);
 }
 ```
@@ -438,7 +433,7 @@ if (result == One) {
 } 
 ```
 
-or
+veya
 
 ```qsharp
 if (i == 1) {
@@ -450,7 +445,7 @@ if (i == 1) {
 }
 ```
 
-### <a name="return"></a>döndürülmesini
+### <a name="return"></a>Döndürülmesini
 
 Return deyimleri bir işlemin veya işlevin yürütmesini sonlandırır ve çağırana bir değer döndürür.
 Anahtar sözcüğünden `return`, ardından uygun türdeki bir ifade ve sonlandırma noktalı virgülünden oluşur.
@@ -468,19 +463,19 @@ Deyimler bir blok içindeki Return deyimini izif ise derleyici bir uyarı verebi
 return 1;
 ```
 
-or
+veya
 
 ```qsharp
 return ();
 ```
 
-or
+veya
 
 ```qsharp
 return (results, qubits);
 ```
 
-### <a name="fail"></a>Neden
+### <a name="fail"></a>Başarısız
 
 Fail deyimleri bir işlemin yürütülmesini sonlandırır ve çağırana bir hata değeri döndürür.
 Anahtar sözcüğünden `fail`, ardından bir dize ve Sonlandırıcı noktalı virgülden oluşur.
@@ -495,7 +490,7 @@ Deyimler bir blok içindeki bir fail deyimini izif ise derleyici bir uyarı vere
 fail $"Impossible state reached";
 ```
 
-or
+veya
 
 ```qsharp
 fail $"Syndrome {syn} is incorrect";
@@ -519,15 +514,15 @@ Başlatıcılar, `Qubit()`olarak belirtilen tek bir qubit için veya `Qubit[`, `
 Örneğin,
 
 ```qsharp
-using (q = Qubit()) {
+using (qubit = Qubit()) {
     // ...
 }
-using ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+using ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
 
-### <a name="dirty-qubits"></a>Kirli qubits
+### <a name="borrowed-qubits"></a>Ödünç alınan qubits
 
 `borrowing` deyimleri, geçici kullanım için qubits almak için kullanılır. İfade, anahtar sözcüğünden `borrowing`, ardından bir açık parantez `(`, bir bağlama, bir kapatma parantezi `)`ve qubits 'in kullanılabileceği bildiri bloğunu içerir.
 Bağlama, bir `using` bildirimiyle aynı model ve kurallara uyar.
@@ -535,10 +530,10 @@ Bağlama, bir `using` bildirimiyle aynı model ve kurallara uyar.
 Örneğin,
 
 ```qsharp
-borrowing (q = Qubit()) {
+borrowing (qubit = Qubit()) {
     // ...
 }
-borrowing ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+borrowing ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
@@ -547,8 +542,7 @@ borrowing ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
 Ödünç alma, qubits 'i ödünç aldıkları aynı durumda bırakır, yani deyimin başındaki ve sonundaki durumları aynı olmalıdır. bu durum, ifade bloğunun başındaki ve sonundaki durumunun aynı olması beklenir.
 Özellikle bu durum klasik bir durum değildir; çoğu durumda, ödünç alınan kapsamlar ölçüm içermemelidir. 
 
-Bu tür qugeler genellikle "kirli anyenla" olarak bilinir.
-Düzenleme, bir kirli kullanımı örneği için Toffoli tabanlı modüler çarpma (haner, Roetteler ve Svore 2017) [*ile 2n + 2 qubit kullanarak*](https://arxiv.org/abs/1611.07995) bkz.
+Ödünç alınan qubit kullanım örneği için bkz. Toffoli tabanlı modüler çarpma (haner, Roetteler ve Svore 2017) [*ile 2n + 2 qubit kullanarak düzenleme*](https://arxiv.org/abs/1611.07995) .
 
 Qubits 'i ödünç alırken, sistem önce kullanımda olan ancak `borrowing` ifadesinin gövdesi sırasında erişilemeyen qubits 'ten gelen isteği doldurmaya çalışacaktır.
 Bu tür qubit yoksa, isteği tamamlayacak yeni qubit ayırabilirsiniz.

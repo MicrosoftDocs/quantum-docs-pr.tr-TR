@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: 10b1048501c2de055f5711fc0fdbc4bac76e8f77
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 5fa32f14291fa2070b49e4bb3b720cbf31ee614b
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864415"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819901"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Geliştirme ortamınızda bir Q # projesi oluşturma
 
@@ -23,7 +23,7 @@ Bir Q # projesi, hisse cinsi içeren Q # dosyalarını ve hisse programını ça
 Aşağıdaki bölümlerde geliştirme ortamınızı ve dilinizi seçin:
 
 * [Python](#create-a-python-project)
-* [Jupyter Not Defterleri](#create-a-jupyter-notebook-project)
+* [S # jupi Not defterleri](#create-a-q-jupyter-notebook-project)
 * [C#Visual Studio ile](#create-a-c-project-on-windows-using-visual-studio)
 * [C#VS Code ile](#create-a-c-project-using-vs-code)
 * [C#komut satırı ile](#create-a-c-project-using-the-dotnet-command-line-tool)
@@ -32,11 +32,11 @@ Aşağıdaki bölümlerde geliştirme ortamınızı ve dilinizi seçin:
 
 1. Önkoşullar
 
-     * [Python Için hisse geliştirme seti](xref:microsoft.quantum.install#develop-with-python)
+     * [Python Için hisse geliştirme seti 'ni](xref:microsoft.quantum.install.python) yükler
 
 1. Projeniz için bir klasör oluşturun ve bu klasöre gidin
 
-1. `Operation.qs`adlı bir Q # dosyası oluşturun ve buna Q # kodunuzu ekleyin. Örnek:
+1. `Operation.qs`adlı bir Q # dosyası oluşturun ve buna Q # kodunuzu ekleyin. Örneğin:
 
     ```qsharp
     namespace HelloWorld {
@@ -50,7 +50,7 @@ Aşağıdaki bölümlerde geliştirme ortamınızı ve dilinizi seçin:
     }
     ```
 
-1. Q # işleminizi çağırmak için `host.py` adlı bir Python ana bilgisayar dosyası oluşturun. Örnek:
+1. Q # işleminizi çağırmak için `host.py` adlı bir Python ana bilgisayar dosyası oluşturun. Örneğin:
 
     ```python
     import qsharp
@@ -75,11 +75,11 @@ Aşağıdaki bölümlerde geliştirme ortamınızı ve dilinizi seçin:
 
 Artık hisse programınızı geliştirmeye devam edebilirsiniz.
 
-## <a name="create-a-jupyter-notebook-project"></a>Jupyter Notebook projesi oluşturma
+## <a name="create-a-q-jupyter-notebook-project"></a>Bir Q # Jupyter Notebook projesi oluşturma
 
 1. Önkoşullar
 
-    * [Jupyıter Not defterleri Için hisse geliştirme seti](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
+    * [Jupyıter Not defterleri Için hisse geliştirme setini](xref:microsoft.quantum.install.jupyter) yükler
 
 1. Not defteri sunucusunu başlatmak için aşağıdaki komutu çalıştırın:
 
@@ -115,7 +115,7 @@ Artık, hisse geliştirme işlemlerinizi sürdürmek için diğer Q # işlemleri
 
 1. Önkoşullar
 
-    * [Visual Studio Için hisse geliştirme seti](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
+    * [Visual Studio Için hisse geliştirme seti uzantısını](xref:microsoft.quantum.install.cs) yükler
 
 1. Yeni bir Q# uygulaması oluşturun
 
@@ -144,7 +144,7 @@ Artık Visual Studio 'Yu kullanarak hisse geliştirmeye devam edebilirsiniz
 
 1. Önkoşullar
 
-    * [Vs Code Için hisse geliştirme seti](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)
+    * [Vs Code Için hisse geliştirme seti uzantısını](xref:microsoft.quantum.install.cs) yükler
 
 1. Yeni bir proje oluşturun:
 
@@ -169,7 +169,7 @@ Artık Visual Studio Code kullanarak hisse geliştirmeye devam edebilirsiniz.
 
 1. Önkoşullar
 
-    * [Komut satırı Için hisse geliştirme seti](xref:microsoft.quantum.install#develop-with-c-using-the-dotnet-command-line-tool)
+    * [Komut satırı Için hisse geliştirme setini](xref:microsoft.quantum.install.cs) yükler
 
 1. Yeni uygulama oluşturma
 

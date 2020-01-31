@@ -1,17 +1,17 @@
 ---
 title: 'Q # tür modeli | Microsoft Docs'
-description: 'Q # tür modeli'
+description: Q# türü model
 author: QuantumWriter
 uid: microsoft.quantum.language.type-model
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 4e251053d1b8306bf8956314d8099e95c56bce55
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 0aabb144779da301b71ad215c8e975cc29b4dcce
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184755"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871643"
 ---
 # <a name="the-type-model"></a>Tür modeli
 
@@ -120,7 +120,7 @@ Bu özelliğe, _tek demet denklik_olarak başvurduk.
 
 Bir Q # dosyası, geçerli bir türden tek bir değer içeren yeni bir adlandırılmış tür tanımlayabilir.
 `T`tanımlama grubu türü için, `newtype` ifadesiyle `T` alt türü olan yeni bir Kullanıcı tanımlı tür bildirebiliriz.
-@"microsoft.quantum.canon" ad alanında, örneğin, karmaşık sayılar Kullanıcı tanımlı bir tür olarak tanımlanmıştır:
+@"microsoft.quantum.math" ad alanında, örneğin, karmaşık sayılar Kullanıcı tanımlı bir tür olarak tanımlanmıştır:
 
 ```qsharp
 newtype Complex = (Double, Double);
@@ -141,7 +141,7 @@ newtype Nested = (Double, (ItemName : Int, String));
 Adlandırılmış öğeler, erişim operatörü `::`aracılığıyla doğrudan erişilebilecekleri avantajına sahiptir. 
 
 ```qsharp
-function Addition (c1 : Complex, c2 : Complex) : Complex {
+function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
     return Complex(c1::Re + c2::Re, c1::Im + c2::Im);
 }
 ```
@@ -151,7 +151,7 @@ Diğer yandan anonim öğelere erişmek için, sarmalanmış değerin ilk olarak
 Böyle bir "sarmalama" ifadesinin türü, Kullanıcı tanımlı türün temel türüdür. 
 
 ```qsharp
-function PrintMsg (value : Nested) : Unit {
+function PrintedMessage(value : Nested) : Unit {
     let (d, (_, str)) = value!;
     Message ($"{str}, value: {d}");
 }
@@ -227,7 +227,7 @@ Bu şekilde, Kullanıcı tanımlı türlerin, örneğin kayıtları F# olarak be
 ## <a name="operation-and-function-types"></a>İşlem ve Işlev türleri
 
 Bir Q # _işlemi_ bir hisse alt yordamı.
-Diğer bir deyişle, bu, hisse işleme içeren çağrılabilir bir yordamdır.
+Başka bir deyişle kuantum işlemlerini içeren çağrılabilir bir yordamdır.
 
 Bir Q # _işlevi_ , bir hisse algoritması içinde kullanılan klasik bir alt yordam.
 Klasik kod içerebilir, ancak hisse işlem işlemleri yoktur.
@@ -286,27 +286,28 @@ S #, giriş türlerine göre değişken karşıtı: giriş, aynı sonuç türü 
 Diğer bir deyişle, aşağıdaki tanımlar verilir:
 
 ```qsharp
-operation Invertible (qs : Qubit[]) : Unit 
+operation Invert(qubits : Qubit[]) : Unit 
 is Adj {...} 
-operation Unitary (qs : Qubit[]) : Unit 
+
+operation ApplyUnitary(qubits : Qubit[]) : Unit 
 is Adj + Ctl {...} 
 
-function ConjugateInvertibleWith (
-   inner: (Qubit[] => Unit is Adj),
-   outer : (Qubit[] => Unit is Adj))
+function ConjugateInvertWith(
+    inner : (Qubit[] => Unit is Adj),
+    outer : (Qubit[] => Unit is Adj))
 : (Qubit[] => Unit is Adj) {...}
 
-function ConjugateUnitaryWith (
-   inner: (Qubit[] => Unit is Adj + Ctl),
-   outer : (Qubit[] => Unit is Adj))
+function ConjugateUnitaryWith(
+    inner : (Qubit[] => Unit is Adj + Ctl),
+    outer : (Qubit[] => Unit is Adj))
 : (Qubit[] => Unit is Adj + Ctl) {...}
 ```
 
 aşağıdakiler doğrudur:
 
-- İşlem `ConjugateInvertibleWith`, `Invertible` veya `Unitary`bir `inner` bağımsız değişkeniyle çağrılabilir.
-- İşlem `ConjugateUnitaryWith`, `Unitary``inner` bağımsız değişkeniyle çağrılabilir, ancak `Invertible`.
-- `(Qubit[] => Unit is Adj + Ctl)` türünde bir değer `ConjugateInvertibleWith`döndürebilir.
+- `ConjugateInvertWith` işlevi, `Invert` veya `ApplyUnitary``inner` bağımsız değişkeniyle çağrılabilir.
+- İşlev `ConjugateUnitaryWith`, `ApplyUnitary``inner` bağımsız değişkeniyle çağrılabilir, ancak `Invert`.
+- `(Qubit[] => Unit is Adj + Ctl)` türünde bir değer `ConjugateInvertWith`döndürebilir.
 
 > [!IMPORTANT]
 > Q # 0,3, Kullanıcı tanımlı türlerin davranışında önemli bir farklılık sunar.
@@ -377,14 +378,12 @@ Bir Q # işleminin bu örneği, [ölçüm](https://github.com/microsoft/Quantum/
 ```qsharp
 /// # Summary
 /// Prepares a state and measures it in the Pauli-Z basis.
-operation MeasureOneQubit () : Result {
+operation MeasureOneQubit() : Result {
         mutable result = Zero;
 
         using (qubit = Qubit()) { // Allocate a qubit
             H(qubit);               // Use a quantum operation on that qubit
-
             set result = M(qubit);      // Measure the qubit
-
             if (result == One) {    // Reset the qubit so that it can be released
                 X(qubit);
             }
@@ -396,12 +395,11 @@ operation MeasureOneQubit () : Result {
 
 Bir işlevin bu örneği, [Phasetahmin](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) örneğinden gelir. Yalnızca klasik kod içerir. Yukarıdaki örneğin aksine, qubits ayrılmadığından ve hisse alma işlemleri kullanılmamış olduğunu görebilirsiniz.
 
-
 ```qsharp
 /// # Summary
 /// Given two arrays, returns a new array that is the pointwise product
 /// of each of the given arrays.
-function MultiplyPointwise (left : Double[], right : Double[]) : Double[] {
+function PointwiseProduct(left : Double[], right : Double[]) : Double[] {
     mutable product = new Double[Length(left)];
 
     for (idxElement in IndexRange(left)) {
@@ -417,7 +415,10 @@ Ayrıca, [Reversıblelogicsensıs](https://github.com/microsoft/Quantum/tree/mas
 /// # Summary
 /// Translate MCT masks into multiple-controlled Toffoli gates (with single
 /// targets).
-function GateMasksToToffoliGates (qubits : Qubit[], masks : MCMTMask[]) : MCTGate[] {
+function GateMasksToToffoliGates(
+    qubits : Qubit[], 
+    masks : MCMTMask[]) 
+: MCTGate[] {
 
     mutable result = new MCTGate[0];
     let n = Length(qubits);

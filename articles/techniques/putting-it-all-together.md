@@ -1,23 +1,23 @@
 ---
-title: 'S # teknik-tümünü bir araya getirme | Microsoft Docs'
-description: 'S # teknik-tümünü bir araya getirme'
+title: 'Tümünü birlikte yerleştirme-Q # teknikleri | Microsoft Docs'
+description: 'Tümünü birlikte yerleştirme-Q # teknikleri'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f65b3e260f98a7a90da13b62edd6cc63d200f5af
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183276"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820173"
 ---
 # <a name="putting-it-all-together-teleportation"></a>Hepsini birlikte yerleştirme: Teleporsyon #
 Şimdi, [hisse devrelerin](xref:microsoft.quantum.concepts.circuits)içinde tanımlanan teleporsyon devresi örneğine dönelim. Şimdiye kadar öğrendiğimiz kavramları göstermek için bunu kullanacağız. Aşağıda, teorik ve Q # içindeki kod uygulamasına yönelik bir adım adım yol açan bir işlem için aşağıda verilmiştir. 
 
 ## <a name="quantum-teleportation-theory"></a>Hisse ve Teleporsyon: teorisi
-Hisse atım, bir konumdaki qubitden başka bir konumdaki qubit 'e ('__ileti__' olarak adlandırılıyoruz) bilinmeyen bir hisse durumu göndermeye yönelik bir tekniktir (Bu qubits 'e '__buraya__ __' ve ' burada__' olarak başvuracağız) sırasıyla). Dirac gösterimini kullanarak __iletinizi__ bir vektör olarak temsil edebilirsiniz: 
+Hisse atısyon, bir konumdaki qubitden başka bir konumdaki qubit 'e ('__ileti__' olarak adlandırılıyoruz) bilinmeyen bir hisse durumu göndermeye yönelik bir tekniktir (sırasıyla ' buraya ' ve '__burada__ __',__ bu qubits 'e başvuracağız). Dirac gösterimini kullanarak __iletinizi__ bir vektör olarak temsil edebilirsiniz: 
 
 $ $ \ket{\psı} = \harfler \ ayraç{0} + \beta\ayraç{1} $ $
 
@@ -56,15 +56,15 @@ $ \demet{1}$  | $ \frac{1}{\sqrt{2}} (\ayraç{0}-\demet{1}) $
 
 Yukarıdaki çıktımızın her bir teriminin ilk qubit ' i için Hadamard geçidini uygulıyoruz, aşağıdaki sonucu elde ediyoruz:
 
-$ $ \frac{\harflerden}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \tus{1})) \ayraç{00} + \frac{\harfler} {\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \tus{1})) \tus{11} + \frac{\beta}{ \sqrt{2}} (\frac{1}{\sqrt{2}} (\demet{0}-\ayraç{1})) \ayraç{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\demet{0}-\tus{1})) \tus{01} $ $
+$ $ \frac{\harflerden}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\demet{0} + \tus{1})) \ayraç{00} + \frac{\harflerden}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\tus{0} + \tus{1})) \tus{11} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\demet{0}-\ayraç{1})) \ayraç{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\demet{0}-\demet{1})) \tus{01} $ $
 
 Her dönemde $2 \frac{1}{\sqrt{2}} $ faktörlerinin olduğunu unutmayın. Aşağıdaki sonucu vererek bunları çarpıyoruz:
 
-$ $ \frac{\harflerden}{2}(\demet{0} + \ ayraç{1}) \ayraç{00} + \frac{\harflerden}{2}(\demet{0} + \ayraç{1}) \ayraç{11} + \frac{\beta}{2}12_ (\demet{0}-\ayraç{1}) \ayraç{01} $ $
+$ $ \frac{\harflerden}{2}(\demet{0} + \ ayraç{1}) \ayraç{00} + \frac{\harflerden}{2}(\demet{0} + \tus{1}) \tus{11} + \frac{\beta}{2}(\demet{0}-\ayraç{1}) \ayraç{10} + \frac{\beta}{2}(\demet{0}-\ayraç{1}) \ayraç{01} $ $
 
 $ \Frac{1}{2}$ faktörü her bir terim için ortaktır, bu sayede artık köşeli ayracın dışına götürebiliriz:
 
-$ $ \frac{1}{2}\big [\Alpha (\demet{0} + \ket{1}) \ayraç{00} + \alfa (\ayraç{0} + \ayraç{1}) \ayraç{11} + \beta (\demet{0}-\ayraç{1}) \demet{10} + \beta (\demet{0} 12_) \demet{01}\big] $ $
+$ $ \frac{1}{2}\big [\Alpha (\demet{0} + \ket{1}) \ayraç{00} + \alfa (\ayraç{0} + \ayraç{1}) \ayraç{11} + \beta (\demet{0}-\ayraç{1}) \demet{10} + \beta (\demet{0}
 
 Böylece, her dönem için köşeli ayraçları derecelebiliriz:
 
@@ -125,7 +125,7 @@ Ayrıca, bir `using` bloğuyla elde ettiğimiz bir qubit `here` de ayırmanız g
 ```
 
 ### <a name="step-1-create-an-entangled-state"></a>1\. Adım: bir entangled durumu oluşturma
-Daha sonra, @"microsoft.quantum.primitive.h" ve @"microsoft.quantum.primitive.cnot" işlemlerini kullanarak `here` ve `there` arasında entangled çiftini oluşturarız:
+Daha sonra, @"microsoft.quantum.intrinsic.h" ve @"microsoft.quantum.intrinsic.cnot" işlemlerini kullanarak `here` ve `there` arasında entangled çiftini oluşturarız:
 
 ```qsharp
         H(here);
@@ -141,7 +141,7 @@ Daha sonra, ileti qubit bitini taşımak için sonraki $ \operatorname{CNOT} $ v
 ```
 
 ### <a name="step-3--4-measuring-and-interpreting-the-result"></a>3\. adım & 4: sonucu ölçme ve yorumlama
-Son olarak, ölçümleri gerçekleştirmek ve `if` deyimleriyle gösterildiği gibi istenen durumu almak için gerekli olan geçit işlemlerini gerçekleştirmek üzere @"microsoft.quantum.primitive.m" kullanırız:
+Son olarak, ölçümleri gerçekleştirmek ve `if` deyimleriyle gösterildiği gibi istenen durumu almak için gerekli olan geçit işlemlerini gerçekleştirmek üzere @"microsoft.quantum.intrinsic.m" kullanırız:
 
 ```qsharp
         // Measure out the entanglement

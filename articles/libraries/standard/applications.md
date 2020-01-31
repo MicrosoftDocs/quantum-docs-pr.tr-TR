@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: ef22460a5bca63ebaf32c0ba21984e103ec8ebdd
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864398"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868977"
 ---
 # <a name="applications"></a>Uygulamalar #
 
@@ -69,15 +69,16 @@ newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[])
 
 ```qsharp
 function TrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : SimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: SimulationAlgorithm {
     ...
 }
+
 function TimeDependentTrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : TimeDependentSimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: TimeDependentSimulationAlgorithm {
     ...
 }
 ```
@@ -99,11 +100,11 @@ Bu nedenle uygun işlevi tanımladık
 
 ```qsharp
 function InterpolatedEvolution(
-        interpolationTime: Double, 
-        evolutionGeneratorStart: EvolutionGenerator,
-        evolutionGeneratorEnd: EvolutionGenerator,
-        timeDependentSimulationAlgorithm: TimeDependentSimulationAlgorithm)
-        : (Qubit[] => Unit is Adj + Ctl) {
+        interpolationTime : Double, 
+        evolutionGeneratorStart : EvolutionGenerator,
+        evolutionGeneratorEnd : EvolutionGenerator,
+        timeDependentSimulationAlgorithm : TimeDependentSimulationAlgorithm)
+: (Qubit[] => Unit is Adj + Ctl) {
         ...
 }
  
@@ -114,13 +115,13 @@ Bu, Adiabatik durum hazırlığının tüm adımlarını uygulayan bir Unitary i
 Ayrıca tipik bir hisse ansız deneme denemesinin tüm adımlarını otomatik olarak gerçekleştiren yararlı bir işlem de tanımladık. Örneğin, Adiabatik durum hazırlığı tarafından üretilen durumun enerji tahminini döndüren aşağıda verilmiştir:
 
 ```qsharp
-operation AdiabaticStateEnergyEstimate( 
-    nQubits : Int, 
-    statePrepUnitary: (Qubit[] => Unit),
-    adiabaticUnitary: (Qubit[] => Unit),
+operation EstimateAdiabaticStateEnergy(
+    nQubits : Int,
+    statePrepUnitary : (Qubit[] => Unit),
+    adiabaticUnitary : (Qubit[] => Unit),
     qpeUnitary: (Qubit[] => Unit is Adj + Ctl),
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
-    : Double {
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
+: Double {
 ...
 }
 ```
@@ -174,7 +175,7 @@ Denetim qubit $ \tus{1}$ ise ve $ \ket{x} $ ' i $ \ket{x} $ ' e eşler $ \ket{x}
 $ (A ^ NX) \Text{mod} N $ ' ı elde etmek için, yalnızca $a ^ n \Text{mod} N $ sınıfındaki $U.  
 Bu tür Modüler aritmetik elde etme devrelerine [, özellikle](./algorithms.md#arithmetic)de denetlenen-$U\_{a ^ ı} $ işlemlerini uygulamak için modüler üs bir devreniz olması gerekir.
 
-Yukarıdaki devre, [hisse miktarı tahminine](xref:microsoft.quantum.characterization.quantumphaseestimation) karşılık gelir ve açıkça sıra bulma imkanı sağladığından, gereken qubits sayısını azaltabiliriz. Beauregard 'in [, Arxıv: Quant-pH/, 5095v3 sayfa 8](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)' de açıklandığı gibi sipariş bulma yöntemini takip edebilir veya Microsoft. hisse. Canon ' de bulunan aşama tahmini yordamlardan birini kullanabilirsiniz. Örneğin, [sağlam aşama tahmini](xref:microsoft.quantum.characterization.robustphaseestimation) de bir ek qubit kullanır.
+Yukarıdaki devre, [hisse miktarı tahminine](xref:microsoft.quantum.characterization.quantumphaseestimation) karşılık gelir ve açıkça sıra bulma imkanı sağladığından, gereken qubits sayısını azaltabiliriz. Beauregard 'in [, Arxıv: Quant-pH/, 5095v3 sayfa 8](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)' de açıklandığı gibi sipariş bulma yöntemini takip edebilir ya da Microsoft. hisse. Örneğin, [sağlam aşama tahmini](xref:microsoft.quantum.characterization.robustphaseestimation) de bir ek qubit kullanır.
  
 ### <a name="factoring"></a>Düzenleme ###
 Düzenleme 'in hedefi, $N $ tam sayı çarpanlarının belirlenmesi, burada $N $ bir $n $ bit sayıdır.  

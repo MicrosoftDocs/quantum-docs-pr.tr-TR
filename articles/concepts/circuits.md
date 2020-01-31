@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7c2afa58fd70d893529cf794ae07df480466aaec
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fe845aa0dde7c780ea6721dfe2559119e90b4aa5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210735"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820802"
 ---
 # <a name="quantum-circuits"></a>Hisse devreleri
 Şu anda Unitary dönüştürmesi $ \Text{CNOT} _{01}(H\otimes 1) $ ' i göz önünde bulundurun.
@@ -39,7 +39,7 @@ Bir veya daha fazla qubit kayıt üzerinde işlem gören kapıları kutu olarak 
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/concepts_2.png)
 
-, tek qubit kayıt üzerinde işlem gören [Hadamard](xref:microsoft.quantum.primitive.h) kapısıdır.
+, tek qubit kayıt üzerinde işlem gören [Hadamard](xref:microsoft.quantum.intrinsic.h) kapısıdır.
 
 Hisse kapıları, ilk olarak qubits 'e uygulanan kapıda en sol geçit ile kronolojik sırada sıralanır.
 Diğer bir deyişle, kapıların hisse durumunu tutan şekilde fotoğrafını yaparsanız, kablolar diyagramdaki her bir kapıdan, soldan sağa doğru hisse ma durumunu getirir.
@@ -81,7 +81,7 @@ Genel olarak, bu tür denetimli işlemleri devre diyagramlarında
 ![](~/media/concepts_5.png)
 
 Burada siyah daire, kapıın kontrol edeceği hisse bitini ve bir dikey tel, denetim qubit $1 $ değerini alırken uygulanan Unitary 'ı gösterir.
-$G = X $ ve $G = Z $ olan özel durumlar için, kapıların denetlenen sürümünü (denetlenen-X kapısı [$CNOT $ Gate](xref:microsoft.quantum.primitive.cnot)olduğunu unutmayın) anlatmak için aşağıdaki gösterimi tanıtıldık:
+$G = X $ ve $G = Z $ olan özel durumlar için, kapıların denetlenen sürümünü (denetlenen-X kapısı [$CNOT $ Gate](xref:microsoft.quantum.intrinsic.cnot)olduğunu unutmayın) anlatmak için aşağıdaki gösterimi tanıtıldık:
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -106,7 +106,7 @@ Devre diyagramlarında görselleştirilecek kalan işlem ölçümdür.
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![ölçüm devresi](~/media/concepts_7.png)
 
-Q # Bu amaçla bir [Ölçü işleci](xref:microsoft.quantum.primitive.measure) uygular.
+Q # Bu amaçla bir [Ölçü işleci](xref:microsoft.quantum.intrinsic.measure) uygular.
 Daha fazla bilgi için [ölçümlerle ilgili bölüme](xref:microsoft.quantum.libraries.standard.prelude#measurements) bakın.
 
 Benzer şekilde, subdevı

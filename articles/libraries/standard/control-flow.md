@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5e865dbb48029724b6f507ecb63b85d10d80c9a7
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ff73cef12a3b8c2a6559308dc244c7c2e865ba9f
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185656"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820462"
 ---
 # <a name="higher-order-control-flow"></a>Daha yüksek sıralı denetim akışı #
 
@@ -52,9 +52,9 @@ Q # ' da, bunu bir kayıt üzerinde `for` döngüsü olarak göstermek için <xr
 ```qsharp
 /// # Summary
 /// Applies $H$ to all qubits in a register.
-operation HAll(register : Qubit[]) : Unit 
-is Adj + Ctl {
-
+operation ApplyHadamardToAll(
+    register : Qubit[])
+: Unit is Adj + Ctl {
     for (qubit in register) {
         H(qubit);
     }
@@ -108,9 +108,9 @@ Canon tarafından sunulan denetim akışı yapıları ve işlevleri, çeşitli i
 Örneğin, $UVU ^ {\abger} $ deseninin son derece ortak olması, örneğin, Canon 'nin işlemi bu düzene yönelik bir soyutlama olarak <xref:microsoft.quantum.canon.applywith> sağlar.
 Bu soyutlama Ayrıca, `U(qubit); V(qubit); Adjoint U(qubit);` sıralı `Controlled` işlem yapmak için her `U`üzerinde işlem yapmasına gerek olmadığı için, devrelere daha verimli bir hale getirir.
 Bunu görmek için, $c (U) $ `Controlled U([control], target)` temsil eden Unitary, aynı şekilde $c (V) $ tanımlanmasına izin verin.
-Ardından, rastgele bir durum $ \ket{\psı} $, \begin{hizalaması} c (U) c (V) c (U) c (U) r (U) ^ \dağılım \demet{1} \otimes \ket{\psı} & = \ket{1} \abger} \ket{\psı}) \\\\ & = (\cıvado \otimes U) (c (V)) (\cıvadone \otimes U ^ \ dağılım) \ demet{1} \otimes \ket{\psı}.
+Daha sonra, rastgele bir durum $ \ket{\psı} $, \begin{hizalaması} c (U) c (V) c (U) ^ \hanger \demet{1} \o{1} & Times {\abger} \ket{\psı}) \\\\ & = (\cıvado \otimes U) (c (V)) (\cıvado \otimes U ^ \hanger) \tus{1} \otimes \ket{\psı}.
 `Controlled`tanımına \end{hizalaması}.
-Öte yandan, \begin{hizalaması} c (U) c (V) c (U) c (U) r (U) ^ \dağılım \{0} \otimes \ket{\psı} & = \ket{0} \psı} \\\\ & = \demet{0} \otimes (UU ^ \hanger \ket{\psı}) \\\\ & = (\cıvadone \otimes U) (c ( V)) (\cıvabitti \otimes U ^ \dağılım) \demet{0} \otimes \ket{\psı}.
+Diğer taraftan, \begin{hizalaması} c (U) c (V) c (U)% \dağılım \demet{0} \otimes \ket{\psı} & = \ket{0} \otimes \ket{\psı} \\\\ & = \tus{0} \osüreler (UU ^ \hanger \ket{\psı}) \\\\ & = (\cıvado \otimes U) (c (V)) (\cıvado \otimes U ^ \dağılım) \tus{0} \otimes \ket{\psı}.
 \* End{hizalaması} bu şekilde, tüm giriş durumları için bu şekilde $U $ devre dışı bırakabilirsiniz.
 Diğer bir deyişle, $c (UVU ^ \dağılım) = U c (V) U ^ \dağılım $.
 Denetim işlemleri genel olarak pahalı olabildiğinden, `WithC` ve `WithCA` gibi denetimli varyantlar kullanılması gereken denetim çeşitlemesinin sayısını azaltmaya yardımcı olabilir.
@@ -123,30 +123,30 @@ Denetim işlemleri genel olarak pahalı olabildiğinden, `WithC` ve `WithCA` gib
 >     ('T => Unit is Adj + Ctl), 'T) => Unit
 > ```
 
-Benzer şekilde, <xref:microsoft.quantum.canon.bind> sırayla başka işlemler uygulayan işlemler üretir.
+Benzer şekilde, <xref:microsoft.quantum.canon.bound> sırayla başka işlemler uygulayan işlemler üretir.
 Örneğin, aşağıdakiler eşdeğerdir:
 
 ```qsharp
 H(qubit); X(qubit);
-Bind([H, X], qubit);
+Bound([H, X], qubit);
 ```
 
 Yineleme desenleriyle birleştirmek, bunu özellikle yararlı hale getirir:
 
 ```qsharp
 // Bracket the quantum Fourier transform with $XH$ on each qubit.
-ApplyWith(ApplyToEach(Bind([H, X]), _), QFT, _);
+ApplyWith(ApplyToEach(Bound([H, X]), _), QFT, _);
 ```
 
 ### <a name="time-ordered-composition"></a>Zaman içinde sıralı bileşim ###
 
 Akış denetimini kısmi uygulama ve klasik işlevler açısından düşünerek yine de ilerleyebiliriz ve klasik akış denetimi açısından oldukça karmaşık bir kavram da modelleyebilir.
 Bu benzerleme vurguladı, Unitary işleçlerinin, diğer Unitary işleçleri için herhangi bir ayrışmayla ilgili olarak belirli bir yapılandırma ile karşılık gelen işlem belirli Unitary işleçleri olarak davranacak yönergeleri sunan klasik alt yordamlar için çağrı dizisi.
-Bu görünüm altında, `Bind` matris ürününün gösterimi kesin olduğundan, `Bind([A, B])(target)` `A(target); B(target);`eşdeğerdir, bu da $BA $ öğesine karşılık gelen arama sırasıdır.
+Bu görünüm altında, `Bound` matris ürününün gösterimi kesin olduğundan, `Bound([A, B])(target)` `A(target); B(target);`eşdeğerdir, bu da $BA $ öğesine karşılık gelen arama sırasıdır.
 
 Daha karmaşık bir örnek, [Trour – Suzuki genişletmesi](https://arxiv.org/abs/math-ph/0506007v1).
 [Veri yapılarının](xref:microsoft.quantum.libraries.data-structures)Dynamical Oluşturucu temsili bölümünde açıklandığı gibi, Trour – Suzuki genişletmesi, matris üslerini ifade etmenin özellikle faydalı bir yolunu sağlar.
-Örneğin, genişletmenin en düşük sırasıyla uygulanması $A $ ve $B $ $A = A ^ \dağılım $ ve $B = B ^ \dağılım $ gibi tüm işleçler için bunu verir. \begin{hizalaması} \tag{★} \label{EQ: Trour-Suzuki-0} \exp (i [A + B] t) = \lim_{n\to\infty} \left (\exp (i bir t/n) \exp (i B t/n ) \ sağ) ^ n.
+Örneğin, genişletmenin en düşük sırasıyla uygulanması $A $ ve $B $ $A = A ^ \dağılım $ ve $B = B ^ \dağılım $ gibi tüm işleçler için bunu verir. \begin{hizalaması} \tag{★} \label{EQ: Trour-Suzuki-0} \exp (i [A + B] t) = \ lim_ {n\to\infty} \left (\exp (ı/n) \exp (ı B t/n) \right) ^ n.
 \end{hizalaması} birlikte, bu durum $A + B $ altında $A $ ve $B $ tek başına kapsamında gelişen bir durumu yaklaşık olarak geliştirdiğini söyler.
 $A $ altında, ^ {i t A} $ $e uygulanan `A : (Double, Qubit[]) => Unit` bir işlem tarafından temsil ediyorsanız, arama dizilerini yeniden düzenleme açısından Trour – Suzuki genişletmesi gösterimi net hale gelir.
 `U : ((Int, Double, Qubit[]) => Unit is Adj + Ctl`, `A = U(0, _, _)` ve `B = U(1, _, _)`gibi bir işlem verildiğinde, form dizileri oluşturarak $t $ $ `U` integrali temsil eden yeni bir işlem tanımlayabiliriz
@@ -183,12 +183,11 @@ Bununla birlikte, bu işlemi doğrudan çağırmayacağız. bu nedenle, başka b
 
 ```qsharp
 operation _ControlledOnBitString(
-        bits : Bool[],
-        oracle: (Qubit[] => Unit is Adj + Ctl),
-        controlRegister : Qubit[],
-        targetRegister: Qubit[]) 
-: Unit 
-is Adj + Ctl {
+    bits : Bool[],
+    oracle: (Qubit[] => Unit is Adj + Ctl),
+    controlRegister : Qubit[],
+    targetRegister: Qubit[])
+: Unit is Adj + Ctl
 ```
 
 `Bool` dizi olarak temsil edilen bir bit dizesi sunuyoruz. Bu, sağladığımız `oracle` işlem için uygulamak istediğimiz bir uygulama belirtmek için kullanıyoruz.
@@ -201,6 +200,7 @@ Bu nedenle, $P = X ^ {s\_0} \otimes X ^ {s\_1} \otimes \cnoktalar \otimes X ^ {s
 Bu oluşturma işlemi tam olarak `ApplyWith`, bu nedenle yeni işlediğimiz gövdesini buna göre yazıyoruz:
 
 ```qsharp
+{
     ApplyWithCA(
         ApplyPauliFromBitString(PauliX, false, bits, _),
         (Controlled oracle)(_, targetRegister),
@@ -219,8 +219,8 @@ Bu şekilde, yeni `Controlled`işlevimiz, soru-cevap ve Canon 'yi kullanarak gü
 
 ```qsharp
 function ControlledOnBitString(
-        bits : Bool[],
-        oracle: (Qubit[] => Unit is Adj + Ctl)) 
+    bits : Bool[],
+    oracle: (Qubit[] => Unit is Adj + Ctl))
 : ((Qubit[], Qubit[]) => Unit is Adj + Ctl) {
     return _ControlledOnBitString(bits, oracle, _, _);
 }

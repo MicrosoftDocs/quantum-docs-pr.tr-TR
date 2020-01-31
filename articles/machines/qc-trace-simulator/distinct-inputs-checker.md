@@ -6,20 +6,24 @@ ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: ce3f156a84a4509781a74c9276b953c79670a756
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 3c21a54f5da83bf1ea0792e79cc773be5fba71e8
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864313"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820972"
 ---
 # <a name="distinct-inputs-checker"></a>Ayrı girişler denetleyicisi
 
 `Distinct Inputs Checker`, hisse bilgisayar [Izleme Benzeticisinin](xref:microsoft.quantum.machines.qc-trace-simulator.intro)bir parçasıdır. Koddaki olası hataları algılamak için tasarlanmıştır. Bu paket tarafından algılanan sorunları göstermek için aşağıdaki Q # kodu parçasını göz önünde bulundurun:
 
 ```qsharp
-operation DoBoth(q1 : Qubit, q2 : Qubit, op1 : (Qubit => Unit), op2 : (Qubit => Unit)) : Unit {
-
+operation ApplyBoth(
+    q1 : Qubit,
+    q2 : Qubit,
+    op1 : (Qubit => Unit),
+    op2 : (Qubit => Unit))
+: Unit {
     op1(q1);
     op2(q2);
 }
@@ -28,17 +32,16 @@ operation DoBoth(q1 : Qubit, q2 : Qubit, op1 : (Qubit => Unit), op2 : (Qubit => 
 Kullanıcı bu programa baktığı zaman, `q1` ve `q2` farklı qugeler ve farklı qubits commute üzerinde çalışan farklı qubit ve işlemler olduğundan, `op1` ve `op2` olarak çağrılan sıranın önemi yoktur. Şimdi bu işlemin kullanıldığı bir örneği düşünmemize izin verin:
 
 ```qsharp
-operation CapturedQubits () : Unit {
-
-    using (q = Qubit[3]) {
-        let op1 = CNOT(_, q[1]);
-        let op2 = CNOT(q[1], _);
-        DoBoth(q[0], q[2], op1, op2);
+operation ApplyWithNonDistinctInputs() : Unit {
+    using (qubits = Qubit[3]) {
+        let op1 = CNOT(_, qubits[1]);
+        let op2 = CNOT(qubits[1], _);
+        ApplyBoth(qubits[0], qubits[2], op1, op2);
     }
 }
 ```
 
-Artık `op1` ve `op2` her ikisi de kısmi uygulama kullanılarak elde edilir ve bir qubit paylaşır. Kullanıcı, yukarıdaki örnekte `DoBoth` çağırdığında, işlemin sonucu, `DoBoth`içindeki `op1` ve `op2` sırasına göre değişir. Bu, kullanıcının gerçekleşmesi beklenmez. `Distinct Inputs Checker`, etkinleştirildiğinde bu durumları tespit eder ve `DistinctInputsCheckerException`oluşturur. Daha fazla bilgi için [DistinctInputsCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException) adresindeki API belgelerine bakın.
+Artık `op1` ve `op2` her ikisi de kısmi uygulama kullanılarak elde edilir ve bir qubit paylaşır. Kullanıcı, yukarıdaki örnekte `ApplyBoth` çağırdığında, işlemin sonucu, `ApplyBoth`içindeki `op1` ve `op2` sırasına göre değişir. Bu, kullanıcının gerçekleşmesi beklenmez. `Distinct Inputs Checker`, etkinleştirildiğinde bu durumları tespit eder ve `DistinctInputsCheckerException`oluşturur. Daha fazla bilgi için [DistinctInputsCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException) adresindeki API belgelerine bakın.
 
 ## <a name="using-the-distinct-inputs-checker-in-your-c-program"></a>C# Programınızda ayrı giriş denetleyicisi 'ni kullanma
 

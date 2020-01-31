@@ -7,26 +7,26 @@ summary: >-
   Bir Oracle 'dan belirli bir durum hakkında yansıma oluşturur.
 
 
-  <xref:microsoft.quantum.oracles.deterministicstateoracle>türünde Oracle $O $ verildiğinde, bu işlevin sonucu $ \ket{\psı} $ durumunun $O \ket{0} = \ket{\psı} $ durumunda olan bir yansıdır.
+  Bir Unitary matrisi $O $ tarafından temsil edilen bir belirleyici durum hazırlama Oracle 'ı verildiğinde, bu işlevin sonucu, Oracle $O $; tarafından hazırlanan $ \ket{\psi} $ durumunun etrafında bir yansıma uygulayan bir Oracle olur. diğer bir deyişle, $ \ket{\psi} $. bu durum, $O \demet{0} = \ket{\psı} $ şeklindedir.
 syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
   content: '(oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
   types:
   - name: oracle
-    summary: "\"DeterministicStateOracle\" türünde Oracle"
+    summary: $ \Ket{\psı} $ durumunun kopyalarını hazırlayan bir Oracle.
     uid: microsoft.quantum.oracles.deterministicstateoracle
 output:
   content: Microsoft.Quantum.Oracles.ReflectionOracle
   types:
-  - summary: $ \Ket{\psı} $ durumunu yansıtan bir `ReflectionOracle`.
+  - summary: $ \Ket{\psı} $ durumunu yansıtan bir Oracle.
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
-- deterministicstateoracle
-- reflectionoracle
+- microsoft.quantum.oracles.deterministicstateoracle
+- microsoft.quantum.oracles.reflectionoracle
 metadata:
-  ms.openlocfilehash: c48c9259b4b3c122a8d7551db6d326ea523dd2a0
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 604c0dab70979e3f429b58168a969a7557e2a0de
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73050335"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76868943"

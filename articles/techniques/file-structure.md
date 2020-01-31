@@ -1,18 +1,19 @@
 ---
-title: Hisse geliştirme tekniklerini tanıtım | Microsoft Docs
-description: Hisse geliştirme tekniklerine giriş
+title: 'Q # programa genel bakış-Q # teknikleri | Microsoft Docs'
+description: 'Q # programa genel bakış-Q # Teknik'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 702d23293a1c340ddd3d7032d0e05294345469b2
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+uid: microsoft.quantum.techniques.file-structure
+ms.openlocfilehash: e8f52e6b0d4382331665a8e845ef19a3a1beabf9
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442554"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820836"
 ---
-# <a name="q-program-overview"></a>Q # programa genel bakış
+# <a name="q-program-overview"></a>Q# programına genel bakış
 
 S #, hisse kullanımı için ölçeklenebilir, çok faktörlü, etki alanına özgü bir programlama dilidir. S #, yönergelerin hisse makineleri üzerinde nasıl yürütüleceğini açıklayan bir hisse dili programlama dilidir. Simülatörleri 'ten gerçek hisse donanımına kadar hedeflenebilir makineler. S # ölçeklenebilir: birkaç qubit üzerinde çalışan teleport gibi basit tanıtım programları yazmak için kullanılabilir, ancak aynı zamanda milyonlarca qubit ile büyük makineler gerektirecek karmaşık molecules benzetimleri gibi büyük ve karmaşık programları yazmayı destekler. Büyük fiziksel makineler hala gelecekte olsa da, soru-cevap olarak bir programcının karmaşık hisse algoritmaları kullanmasına izin verir. Daha fazla nedir, Q # hata ayıklama, profil oluşturma, kaynak tahmini ve belirli özel amaçlı benzetimler gibi çeşitli görevleri ölçeklenebilir bir şekilde destekler. 
 

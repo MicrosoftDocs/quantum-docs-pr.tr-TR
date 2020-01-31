@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 1eb48da9d4ae2a730019e2707dcb2c69b998491e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864381"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870362"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Hisse ve Istatistik #
 
@@ -39,11 +39,11 @@ Yinelemeli aşama tahminlerini tartışmak için, bir siyah kutu işlemi olarak 
 [Veri yapılarında](xref:microsoft.quantum.libraries.data-structures)Oracles 'daki bölümünde açıklandığı gibi, Q # canon, <xref:microsoft.quantum.oracles.discreteoracle> tanımlama grubu türü tarafından tanımlanan Kullanıcı tanımlı türe göre bu işlemleri modelleyerek `((Int, Qubit[]) => Unit : Adjoint, Controlled)`.
 `U : DiscreteOracle`, `U(m)` $U, `m : Int`için ^ m $ uygular.
 
-Bu tanım söz konusu olduğunda, yinelemeli aşama tahmininin her adımı, $ \ket{+} $ durumunda bulunan bir avılcal qubit, $U (m) $ ' nin [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) ' i olduğunu varsaydığımız ilk durum olan $ \ket{\phi} $, ör. $U (m) \ket{\phi} = e ^ {im\phi} \ demet {\ Fi} $.  
+Bu tanım söz konusu olduğunda, yinelemeli aşama tahmininin her adımı, $ \ket{+} $ durumunda bir yardımcı qubit, $U (m) $ ' nin [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) ' i olduğunu varsaydığımız ilk durum olan $ \ket{\phi} $, ör. $U (m) \ket{\phi} = e ^ {im\phi} \ demet {\ Fi} $.  
 Daha sonra, $ \left (R\_1 (m \ Fi) \ket{+} \right) \ket{\phi} $ durumunu hazırlayan `U(m)` denetimli bir uygulaması kullanılır.
 Hisse Vada olduğu gibi, Oracle `U(m)` denetimli bir uygulamanın etkisi, $ \ket{+} $ üzerinde bilinmeyen aşama için $R _1 $ ' ı uygulamanın etkileriyle aynı şekilde (Bu daha basit bir biçimde $U $ ' nin etkilerini açıklayabilir).
 İsteğe bağlı olarak, algoritma $ \ket{\psı} = \left (R\_1 (m [\phi-\teta]) \ket{+} \ right) \ket{\phi} $ $ değerini almak için $R _1 (-m\teta) $ ' ı uygulayarak denetim qubit ' i döndürür.
-`U(m)` için denetim olarak kullanılan gıılcal, daha sonra tek bir klasik `Result`elde etmek için $X $ temelinde ölçülür.
+`U(m)` için denetim olarak kullanılan yardımcı qubit, tek bir klasik `Result`elde etmek için $X $ temelinde ölçülür.
 
 Bu noktada, yinelemeli aşama tahmini aracılığıyla elde edilen `Result` değerlerinden aşamayı yeniden oluşturmak, klasik istatistiksel bir sorundur.
 Sabit bir çıkarım yöntemi verildiğinde elde edilen bilgileri en üst düzeye çıkaran $m $ değerini bulmak, istatistikte yalnızca bir sorundur.
@@ -106,7 +106,7 @@ Bu tür bir örnek, etkin bir klasik işleme sonrası adımı, imzası ve yukar�
 
 En önemli kapsamlı aşama tahmini özelliği, diğer birçok yararlı çeşitlerle paylaşılır. $ \hat{\phi} $ öğesinin yeniden yapım kalitesi, bazı sense Heıenberg-Limited ' dir. Yani, $ \hat{\phi} $ değerinin gerçek değerden $ \sigma $ sapmasıdır, sonra $ \sigma $ ölçeklendirirken, denetlenen-$U $, yani $ \sigma = \mathcal{O} (1/Q) $ ' a yapılan toplam sorgu sayısı ile orantılı olarak $Q. Şimdi, sapma tanımı farklı tahmin algoritmaları arasında farklılık gösterir. Bazı durumlarda, en az $ \mathcal{O} (1) $ olasılık, tahmin hatası $ | \hat{\phi}-\phi | anlamına gelebilir.\_\circ\le \sigma $ on döngüsel bir ölçüde $ \circ $. Sağlam aşama tahmini için, sapma tam olarak $ \sigma ^ 2 = \mathbb{E}\_\hat{\phi} [(\mod\_{2 \ Pi} (\hat{\phi}-\phi + \pı)-\pi) ^ 2] $ fark edilir. Daha kesin olarak, güçlü aşama tahmininde standart sapma, ınekaliteleri karşılar $ $ \begin{hizalaması} 2,0 \pı/Q \ Le \ Sigma \le 2 \ pi/2 ^ {n} \le 10.7 \ Pi/Q, \end{hizalaması} $ $, asentotik büyük $Q $ sınırında alt sınıra ulaşıldığında ve üst sınır küçük örnek boyutları için de garanti edilir.  `bitsPrecision` giriş tarafından seçilen $n $ $Q $ örtülü olarak tanımlayan unutmayın.
 
-İlgili diğer ayrıntılar, yalnızca $1 $ anileri La qubit 'in küçük alan ek yükünü ya da yordamın Uyarlamalı olduğu anlamına gelir. bu da, gerekli hisse denemeleri dizisi ara ölçü sonuçlarının bağımsızdır. Bu ve daha sonra, aşama tahmin algoritması seçiminin önemli olduğu durumlarda, biri @"microsoft.quantum.canon.robustphaseestimation" gibi belgelere ve daha fazla bilgi edinmek ve bunların uygulamalarına başvurmalıdır.
+İlgili diğer ayrıntılar, yalnızca $1 $ anileri La qubit 'in küçük alan ek yükünü ya da yordamın Uyarlamalı olduğu anlamına gelir. bu da, gerekli hisse denemeleri dizisi ara ölçü sonuçlarının bağımsızdır. Bu ve daha sonra, aşama tahmin algoritması seçiminin önemli olduğu durumlarda, biri @"microsoft.quantum.characterization.robustphaseestimation" gibi belgelere ve daha fazla bilgi edinmek ve bunların uygulamalarına başvurmalıdır.
 
 > [!TIP]
 > Sağlam aşama tahmini kullanıldığı birçok örnek vardır. Çeşitli fiziksel sistemin zemin durumu enerji düzeyini çıkartarak aşama tahmini için, lütfen [ **H2 simülasyon** örneğine](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), [ **simplefon** örneğe](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)ve [ **Hubbard model** örneğine](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)bakın.
@@ -154,25 +154,27 @@ Bu nedenle, **H2Sample**' de görüldüğü gibi bir işlem, bir kullanıcının
 
 ```qsharp
 operation H2EstimateEnergy(
-    idxBondLength : Int, 
+    idxBondLength : Int,
     trotterStepSize : Double,
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
 : Double
 ```
 
-Bu sayısız aşaması tahmin algoritmaları, hedef uygulama için en iyi seçimi yapmak üzere anlaşılması gereken farklı özellikler ve giriş parametreleri için iyileştirilmiştir. Örneğin, bazı aşama tahmin algoritmaları Uyarlamalı olur. Bu, gelecekteki adımların önceki adımların ölçüm sonuçlarıyla ilgili olarak daha önce kontrol edilebileceği anlamına gelir. Bazıları, siyah kutu Unitary Oracle 'ı rastgele gerçek üslere göre üslendirir ve diğerleri yalnızca tamsayı gücüne ihtiyaç duyar, ancak yalnızca bir aşama tahmin mod $2 \ PI $ ' ı çözümleyebilir. Bazıları pek çok yardımcı qubit gerektirir ve diğeri yalnızca bir tane gerektirir.
+Bu sayısız aşaması tahmin algoritmaları, hedef uygulama için en iyi seçimi yapmak üzere anlaşılması gereken farklı özellikler ve giriş parametreleri için iyileştirilmiştir. Örneğin, bazı aşama tahmin algoritmaları Uyarlamalı olur. Bu, gelecekteki adımların önceki adımların ölçüm sonuçlarıyla ilgili olarak daha önce kontrol edilebileceği anlamına gelir. Bazıları, siyah kutu Unitary Oracle 'ı rastgele gerçek üslere göre üslendirir ve diğerleri yalnızca tamsayı gücüne ihtiyaç duyar, ancak yalnızca bir aşama tahmin mod $2 \ PI $ ' ı çözümleyebilir. Bazıları çok sayıda yardımcı qubit gerektirir ve diğerleri yalnızca bir tane gerektirir.
 
 Benzer şekilde, rastgele yürüme aşaması tahmini, Canon ile sunulan diğer algoritmalarda çok benzer şekilde devam eder:
 
 ```qsharp
-operation ExampleOracle(eigenphase : Double, time : Double, register : Qubit[]) : Unit
-is Adj + Ctl {
+operation ApplyExampleOracle(
+    eigenphase : Double,
+    time : Double,
+    register : Qubit[])
+: Unit is Adj + Ctl {
     Rz(2.0 * eigenphase * time, register[0]);
 }
 
-operation BayesianPhaseEstimationCanonSample(eigenphase : Double) : Double {
-
-    let oracle = ContinuousOracle(ExampleOracle(eigenphase, _, _));
+operation EstimateBayesianPhase(eigenphase : Double) : Double {
+    let oracle = ContinuousOracle(ApplyExampleOracle(eigenphase, _, _));
     using (eigenstate = Qubit()) {
         X(eigenstate);
         // The additional inputs here specify the mean and variance of the prior, the number of

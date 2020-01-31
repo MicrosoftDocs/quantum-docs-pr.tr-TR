@@ -1,17 +1,17 @@
 ---
-title: 'S # teknikleri-işlemler ve işlevler | Microsoft Docs'
-description: 'S # teknikleri-işlemler ve işlevler'
+title: 'İşlemler ve işlevler-Q # teknikleri | Microsoft Docs'
+description: 'İşlemler ve işlevler-Q # teknikleri'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 06da09dc9c6e0ba0331db6bc0cd3d2ddeb287113
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1fca20bb44cc42008f7d25d2fc71a39b962525c2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183463"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820785"
 ---
 # <a name="q-operations-and-functions"></a>S # Işlem ve Işlevleri
 
@@ -66,7 +66,7 @@ Bir işlem Unitary dönüştürmesi uygularsa, *adjointed* veya *denetimli*oldu�
 Bu uzmanlıklar, işlem imzasının bir parçası olarak bildirilebilecek: aşağıdaki örnekte `is Adj + Ctl`. Bu tür örtülü olarak tanımlanmış her özelleştirme için karşılık gelen uygulama derleyici tarafından oluşturulur. 
 
 ```qsharp
-operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit {
+operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit
 is Adj + Ctl { // implies the existence of an adjoint, a controlled, and a controlled adjoint specialization
     H(here);
     CNOT(here, there);
@@ -111,7 +111,7 @@ is Ctl + Adj {
     controlled adjoint invert; 
 }
 ```
-Yukarıdaki örnekte, `adjoint invert;`, adjoint özelleşmesinin, gövde uygulamasını ters çeviren şekilde oluşturulacağını ve `controlled adjoint invert;`, belirtilen ' nin belirtilen uygulamasını tersine getirerek denetlenen adjoint özelleşmesinin oluşturulacağını belirtir. denetlenen özelleşme.
+Yukarıdaki örnekte, `adjoint invert;`, adjoint özelleşmesinin gövde uygulamasını tersine getirerek oluşturulacağını ve `controlled adjoint invert;` denetlenen majoint özelleşmesinin, denetlenen özelleşmenin belirtilen uygulamasını tersine ayırarak oluşturulacağını belirtir.
 
 Daha [yüksek sıralı Denetim akışında](xref:microsoft.quantum.concepts.control-flow)buna daha fazla örnek görüyoruz.
 
@@ -163,7 +163,7 @@ operation U(target : Qubit) : Unit {
 
 `U` her çağrıldığında, `target`farklı bir eyleme sahip olur.
 Derleyici, `U`için `adjoint auto` bir özelleştirme bildirimi eklediğimiz takdirde, `U(target); Adjoint U(target);` kimlik (yani, No-Op) olarak hareket eder.
-Bu, [vektörlerin ve matrislerde](xref:microsoft.quantum.concepts.vectors)gördüğdiğimiz adjoint 'in tanımını ihlal ediyor. bu şekilde, işlemi çağırdığımız bir işlemde bir adjoint özelleşmesinin otomatik olarak oluşturmaya izin veren <xref:microsoft.quantum.math.randomreal>, derleyici tarafından verilen garantileri bozuyor ; <xref:microsoft.quantum.math.randomreal>, hiçbir adjoint veya kontrollü sürüm bulunmayan bir işlemdir.
+Bu, [vektörlerin ve matrislerde](xref:microsoft.quantum.concepts.vectors)gördüğdiğimiz adjoint 'in tanımını ihlal ediyor. bu şekilde, işlemi çağırdığımız bir işlemde bir adjoint özelleşmesinin otomatik olarak oluşturmaya izin veren <xref:microsoft.quantum.math.randomreal>, derleyici tarafından verilen garantileri bozuyor; <xref:microsoft.quantum.math.randomreal>, hiçbir adjoint veya kontrollü sürüm bulunmayan bir işlemdir.
 
 Öte yandan, `Square` gibi işlev çağrılarına izin vermek, derleyicinin çıktının kararlı kalmasını sağlamak için yalnızca `Square` girişi korumasının gerektiği konusunda emin olabilir.
 Bu nedenle, işlevlerde mümkün olduğunca klasik mantığı yalıtmak, diğer işlevlerde ve işlemlerde bu mantığı yeniden kullanmayı kolaylaştırır.
