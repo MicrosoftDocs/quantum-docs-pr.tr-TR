@@ -6,16 +6,18 @@ author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: overview
-ms.openlocfilehash: 8fb3b7181632bd6f2b562735546adbf4b461a1b6
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: 4308bf7e0e48e5735419fab836e479641455e9a5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73530012"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819936"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Quantum Development Kit'i (QDK) kullanmaya başlama
 
-Microsoft Quantum Development Kit'e hoş geldiniz!  Burada Q# ile kuantum programlamayı öğrenmek için ihtiyacınız olan tüm araçları bulacaksınız.  Q# ile kuantum bilişimini öğrenirken size yol göstermek amacıyla bu Başlangıç Kılavuzunu hazırladık. Bu kılavuz hem kuantum programları kodlamaya başlamak isteyenlere hem de henüz kodlamaya hazır olmayan ama Q# ve kuantum programlama hakkında daha fazlasını öğrenmek isteyenlere bir yolculuk kılavuzu sağlar.
+Microsoft Quantum Development Kit'e hoş geldiniz!  Burada Q# ile kuantum programlamayı öğrenmek için ihtiyacınız olan tüm araçları bulacaksınız.  Q# ile kuantum bilişimini öğrenirken size yol göstermek amacıyla bu Başlangıç Kılavuzunu hazırladık. Bu kılavuz hem kuantum programları kodlamaya başlamak isteyenlere hem de henüz kodlamaya hazır olmayan ama Q# ve kuantum programlama hakkında daha fazlasını öğrenmek isteyenlere bir kılavuz sağlar. 
+
+Kodlamaya başlamaya hazırsanız [QDK’yi hemen yükleyin](xref:microsoft.quantum.install).
 
 ## <a name="questions-about-quantum-computing"></a>Kuantum bilişimi hakkında sorulan sorular
 
@@ -54,9 +56,8 @@ Yukarıdaki Kullanmaya Başlama kılavuzlarının ve makalelerin amacı hem kod 
 * [Q# örneklerimizi](https://docs.microsoft.com/samples/browse/?languages=qsharp) gözden geçirin ve kuantum bilişimiyle çözebileceğiniz problemleri keşfedin.
 
 * Konak bilgisayar dili ve tercih ettiğiniz geliştirme ortamıyla yerel makinede geliştirme yapın:
-  * [Python](xref:microsoft.quantum.install#develop-with-python) ile geliştirme
-  * [Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio) ile geliştirme
-  * [Visual Studio Code](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code) ile geliştirme
-  * [Jupyter Notebook](xref:microsoft.quantum.install#develop-with-jupyter-notebooks) ile geliştirme
+  * [Q# ve Python](xref:microsoft.quantum.install.python) ile geliştirme
+  * [Q# ve C#](xref:microsoft.quantum.install.cs) ile geliştirme
+  * [Q# Jupyter Notebooks](xref:microsoft.quantum.install.jupyter) ile geliştirme
 
 * [QDK](xref:microsoft.quantum.contributing) açık kaynak projesine katkıda bulunarak Microsoft Quantum topluluğuna katılın.

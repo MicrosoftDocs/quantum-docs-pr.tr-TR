@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: c3039b92c4b3235a397d5cf31280ac2673706e9d
-ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
+ms.openlocfilehash: 134617455b720cc755b9ee9fb68fb59e624d3f1a
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73462844"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820952"
 ---
 # <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>Hızlı Başlangıç: Q# ile Kuantum Rastgele Sayı Oluşturucusu Oluşturma Tasarlama
 Kuantum rastgele sayı oluşturucusu, Q# dilinde yazılmış kuantum algoritmalarına örnek olarak gösterilebilir. Bu algoritma, kuantum mekaniklerinin özelliklerinden faydalanarak rastgele bir sayı üretir. 
@@ -33,10 +33,10 @@ Kuantum rastgele sayı oluşturucusu, Q# dilinde yazılmış kuantum algoritmala
         open Microsoft.Quantum.Intrinsic;
 
         operation QuantumRandomNumberGenerator() : Result {
-            using(q = Qubit())  { // Allocate a qubit.
-                H(q);             // Put the qubit to superposition. It now has a 50% chance of being 0 or 1.
-                let r = M(q);     // Measure the qubit value.
-                Reset(q);
+            using(qubit = Qubit())  { // Allocate a qubit.
+                H(qubit);             // Put the qubit to superposition. It now has a 50% chance of being 0 or 1.
+                let r = M(v);     // Measure the qubit value.
+                Reset(qubit);
                 return r;
             }
         }
@@ -55,18 +55,61 @@ Q# işlemimizde yerel bir Q# veri türü olan `Qubit` veri türünü kullanacağ
 
 ### <a name="visualizing-the-code-with-the-bloch-sphere"></a>Bloch küresi ile kodu görselleştirme
 
-Bloch küresinde kuzey kutbu klasik **0** değerini, güney kutbu ise klasik **1** değerini temsil eder. Süper konum, küredeki bir nokta ile gösterilebilir (ok simgesi kullanılır). Okun ucu kutba ne kadar akın olursa kubitin ölçüm sonrasında o kutba atanmış olan klasik değeri alma ihtimali o kadar yüksek olur. Örneğin aşağıda kırmızı ok ile gösterilen kubit durumunun ölçüldüğünde **0** değerini verme olasılığı yüksektir.
+Bloch küresinde kuzey kutbu klasik **0** değerini, güney kutbu ise klasik **1** değerini temsil eder. Süper konum, küredeki bir nokta ile gösterilebilir (ok simgesi kullanılır). Okun ucu kutba ne kadar yakın olursa kubitin ölçüm sonrasında o kutba atanmış olan klasik değeri alma ihtimali o kadar yüksek olur. Örneğin aşağıda kırmızı ok ile gösterilen kubit durumunun ölçüldüğünde **0** değerini verme olasılığı yüksektir.
 
-<img src="./Bloch.svg" width="175">
+<img src="~/media/qrng-Bloch.png" width="175">
 
 Kodun gerçekleştirdiği işlemleri görselleştirmek için şu gösterimi kullanabiliriz:
 
 * İlk olarak **0** durumunda başlatılan bir kubitle başlıyoruz ve **0** ile **1** olasılıklarının aynı olduğu bir süper konum oluşturmak için buna `H` uyguluyoruz.
 
-<img src="./H.svg" width="450">
+<img src="~/media/qrng-H.png" width="450">
 
 * Ardından kubiti ölçüp çıktıyı kaydediyoruz:
 
-<img src="./Measurement2.svg" width="450">
+<img src="~/media/qrng-meas.png" width="450">
 
 Ölçümün sonucu tamamen rastgele olduğundan rastgele bir bit elde ettik. Bu işlemi birkaç kere çağırarak farklı tamsayılar oluşturabiliriz. Örneğin üç rastgele bit elde etmek için işlemi üç kez çağırarak rastgele 3 bitlik sayılar (0 ile 7 arasında rastgele bir sayı) oluşturabiliriz.
+
+## <a name="creating-a-complete-random-number-generator-using-a-host-program"></a>Konak program kullanarak eksiksiz bir rastgele sayı oluşturucu oluşturma
+
+Artık rastgele bitler oluşturan bir Q# işlemimiz olduğuna göre, bu işlemi kullanarak konak programla eksiksiz bir kuantum rastgele sayı oluşturucu oluşturabiliriz.
+
+ ### <a name="python-with-visual-studio-code-or-the-command-linetabtabid-python"></a>[Visual Studio Code veya Komut Satırı ile Python](#tab/tabid-python)
+ 
+ Yeni Q# programınızı Python'dan çalıştırmak için aşağıdaki kodu `host.py` olarak kaydedin:
+ 
+:::code language="python" source="~/quantum/samples/getting-started/qrng/host.py" range="11-30":::
+
+ Ardından Python konak programınızı komut satırından çalıştırabilirsiniz:
+ ```bash
+ $ python host.py
+ Preparing Q# environment...
+ ..The random number generated is 42
+ ```
+ ### <a name="c-with-visual-studio-code-or-the-command-linetabtabid-csharp"></a>[Visual Studio Code veya Komut Satırı ile C#](#tab/tabid-csharp)
+ 
+ Yeni Q# programınızı C# dilinden çalıştırmak için `Driver.cs` dosyasını aşağıdaki C# kodunu içerecek şekilde değiştirin:
+ 
+ :::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
+ 
+ Ardından C# konak programınızı komut satırından çalıştırabilirsiniz:
+ 
+ ```bash
+ $ dotnet run
+ The random number generated is 42
+ ```
+
+ ### <a name="c-with-visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019 ile C#](#tab/tabid-vs2019)
+
+ Yeni Q# programınızı Visual Studio'da C# dilinde çalıştırmak için `Driver.cs` dosyasını aşağıdaki C# kodunu içerecek şekilde değiştirin:
+
+ :::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
+
+ Ardından F5 tuşuna bastığınızda program yürütülmeye başlayacak ve rastgele oluşturulan sayılar içeren yeni bir pencere açılacaktır: 
+
+ ```bash
+ $ dotnet run
+ The random number generated is 42
+ ```
+ ***

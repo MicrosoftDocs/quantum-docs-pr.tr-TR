@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/17/2019
 ms.topic: overview
 uid: microsoft.quantum.overview.katas
-ms.openlocfilehash: 7fb8dba2a10f9a983ebee52e394260bbdc0d2f9c
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: af54a2260147b8ca07919b241548aac85ed0d8a1
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444149"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821108"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Kuantum Kataları ile kuantum bilişimini öğrenin
 
@@ -19,7 +19,7 @@ ms.locfileid: "73444149"
 
 ## <a name="learning-by-doing"></a>Yaparak Öğrenme
 
-Bu projede bir araya getirilmiş olan öğreticiler ve katalar, çok basitten başlayarak artan zorluk derecelerine sahip olan belirli konu başlıklarını içeren programlama görevleri sayesinde yaparak öğrenmenin önemini vurgulamaktadır. Her görev biraz kod yazmanızı gerektirir; ilk görevler tek satır kod gerektirirken sonraki görevlerde oldukça büyük bir kod parçası gerekebilir.
+Bu projede bir araya getirilmiş olan öğreticiler ve alıştırmalar, çok basitten başlayarak artan zorluk derecelerine sahip olan belirli konu başlıklarını içeren programlama görevleri sayesinde yaparak öğrenmenin önemini vurgulamaktadır. Her görev biraz kod yazmanızı gerektirir; ilk görevler tek satır kod gerektirirken sonraki görevlerde oldukça büyük bir kod parçası gerekebilir.
 
 En önemlisi de katalar, görev çözümlerini oluşturan, çalıştıran ve doğrulayan test çerçevelerine sahiptir. Bu sayede anında çözümünüzle ilgili geri bildirim alabilir ve hatalı yaklaşımlarınızı düzeltebilirsiniz.
 
@@ -36,10 +36,12 @@ Kuantum Katalarında yer verilen ana konu başlıkları aşağıda özet halinde
 
 ### <a name="introduction-to-quantum-computing-concepts"></a>Kuantum bilişimi kavramlarına giriş
 
-* [Kompleks aritmetik](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/ComplexArithmetic)
-* [Doğrusal cebir](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/LinearAlgebra)
-* [Kubit kavramı](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/Qubit)
-* [Tek kubitli kuantum geçitleri](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/SingleQubitGates)
+* [Kompleks aritmetik](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)
+* [Doğrusal cebir](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)
+* [Kubit kavramı](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)
+* [Tek kubitli kuantum geçitleri](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)
+* [Çoklu kubit sistemleri](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)
+* [Çoklu kubit geçitleri](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)
 
 ### <a name="quantum-computing-fundamentals"></a>Kuantum bilişimi ile ilgili temel bilgiler
 
@@ -52,10 +54,10 @@ Kuantum Katalarında yer verilen ana konu başlıkları aşağıda özet halinde
 
 * [Kuantum ışınlanması](https://github.com/microsoft/QuantumKatas/tree/master/Teleportation)
 * [Süper yoğun kodlama](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding)
-* [Deutsch–Jozsa algoritması](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/DeutschJozsaAlgorithm)
+* [Deutsch–Jozsa algoritması](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringDeutschJozsaAlgorithm)
 * [Grover arama algoritmasını uygulama](https://github.com/microsoft/QuantumKatas/tree/master/GroversAlgorithm)
-* [Grover arama algoritmasının üst düzey özelliklerini keşfetme](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/ExploringGroversAlgorithm)
-* Grover algoritmasını kullanarak gerçek sorunları çözme: [SAT problemleri](https://github.com/microsoft/QuantumKatas/blob/master/SolveSATWithGrover) ve [graf renklendirme problemleri](https://github.com/microsoft/QuantumKatas/blob/master/GraphColoring)
+* [Grover arama algoritmasının üst düzey özelliklerini keşfetme](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringGroversAlgorithm)
+* Grover algoritmasını kullanarak gerçek sorunları çözme: [SAT problemleri](https://github.com/microsoft/QuantumKatas/tree/master/SolveSATWithGrover) ve [graf renklendirme problemleri](https://github.com/microsoft/QuantumKatas/tree/master/GraphColoring)
 
 ### <a name="protocols-and-libraries"></a>Protokoller ve kitaplıklar
 
@@ -66,8 +68,8 @@ Kuantum Katalarında yer verilen ana konu başlıkları aşağıda özet halinde
 
 ### <a name="entanglement-games"></a>Dolaşıklık oyunları
 
-* [CHSH oyunu](https://github.com/microsoft/QuantumKatas/blob/master/CHSHGame)
-* [GHZ oyunu](https://github.com/microsoft/QuantumKatas/blob/master/GHZGame)
+* [CHSH oyunu](https://github.com/microsoft/QuantumKatas/tree/master/CHSHGame)
+* [GHZ oyunu](https://github.com/microsoft/QuantumKatas/tree/master/GHZGame)
 * [Mermin-Peres sihirli kare oyunu](https://github.com/microsoft/QuantumKatas/tree/master/MagicSquareGame)
 
 ## <a name="resources"></a>Kaynaklar
