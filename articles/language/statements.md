@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9157cf3336ce0894816dbfbaf13ce0e712a6b096
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 9a6f5d53ec21090d0c13f4369e0270d264cd1e9b
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821074"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036500"
 ---
 # <a name="statements-and-other-constructs"></a>Deyimler ve diğer yapılar
 
@@ -29,7 +29,7 @@ Bu durumda, içeriği diğer .NET dilleri gibi tanımlanmış çağrılabilir ve
 Markı 'nin bir uzantısı olarak, Q # içindeki işlemlere, işlevlere ve Kullanıcı tanımlı türlere çapraz başvurular `@"<ref target>"`kullanılarak dahil edilebilir. burada `<ref target>`, başvurulan kod nesnesinin tam adı ile değiştirilmiştir.
 İsteğe bağlı olarak, bir belge altyapısı ek markı uzantılarını da destekleyebilir.
 
-Örneğin:
+Örnek:
 
 ```qsharp
 /// # Summary
@@ -191,7 +191,7 @@ Sağ taraftaki kopyalama ve güncelleştirme ifadeleri için benzer bir birleşt
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function ElementwisePlus(reals : Double[], ims : Double[]) : Complex[] {
+function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {
@@ -273,7 +273,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-'nı ve
+ile
 
 ```qsharp
 if (a == b) {
@@ -433,7 +433,7 @@ if (result == One) {
 } 
 ```
 
-veya
+or
 
 ```qsharp
 if (i == 1) {
@@ -463,13 +463,13 @@ Deyimler bir blok içindeki Return deyimini izif ise derleyici bir uyarı verebi
 return 1;
 ```
 
-veya
+or
 
 ```qsharp
 return ();
 ```
 
-veya
+or
 
 ```qsharp
 return (results, qubits);
@@ -490,7 +490,7 @@ Deyimler bir blok içindeki bir fail deyimini izif ise derleyici bir uyarı vere
 fail $"Impossible state reached";
 ```
 
-veya
+or
 
 ```qsharp
 fail $"Syndrome {syn} is incorrect";

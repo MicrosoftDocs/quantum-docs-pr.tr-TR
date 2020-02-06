@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 91f65b05c83367c2d2ece93212369dc448d8c2a8
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1c45808207a2020f603448eba05900cdc40b4916
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821023"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036364"
 ---
 # <a name="quantum-algorithms"></a>Hisse algoritmaları #
 
@@ -48,7 +48,8 @@ Buna ek olarak, *hisse* uygun bir şekilde bir hisse algoritması tasarımı yap
 
 QFT 'nin yaklaşık bir genelleştiri olarak, istenen algoritmik doğruluğu için kesinlikle gerekli olmayan döndürmeler ayıklanarak daha iyi iyileştirmeler sağlayan <xref:microsoft.quantum.canon.approximateqft> işlem sağlıyoruz.
 Yaklaşık QFT, dyadic $Z $-döndürme <xref:microsoft.quantum.intrinsic.rfrac> işleminin yanı sıra <xref:microsoft.quantum.intrinsic.h> işlemini de gerektirir.
-Giriş ve çıkışın big endian kodlamada kodlandığını varsayılır (en düşük bit/qubit, sol tarafta, [demet gösterimi](xref:microsoft.quantum.concepts.dirac)ile aynıdır).
+Giriş ve çıkışın big endian kodlamada kodlandığını kabul edilir---yani Dizin `0` ile qubit, ikili tamsayı gösteriminin en solundaki (en yüksek) bit olarak kodlanır.
+Bu, [ayraç](xref:microsoft.quantum.concepts.dirac)ile hizalanır. $ \demet{100}$, $ \tus{1}$q $ durumunda olan $q _0 $ durumunda olduğu ve $q _2 $ durumunun $ \tus{0}$ durumunda olduğu anlamına gelir.
 $A $ yaklaşık parametresi, $Z $-döndürmeler, yani $a \içindeki [0.. n] $) ayıklama düzeyini belirler.
 Bu durumda, tüm $Z $-Ros $2 \ pi/2 ^ k $, $k > bir $, QFT devresi öğesinden kaldırılır.
 $K \ge \ log_2 (n) + \ log_2 (1/\epsilon) + $3 için şu şekilde bilinmektedir. biri $\\bağlanabilir | \operatorname{QFT}-\operatorname{AQFT} \\| < \epsilon $.
@@ -56,7 +57,7 @@ Burada $\\| \cdot\\| $, bu örnekte $ (\operatorname{QFT}-\operatorname{AQFT}) (
 
 ## <a name="arithmetic"></a>Aritmetik ##
 
-Aritmetik olarak klasik bilgi işlem 'da merkezi bir rol oynadığında, bu da hisse indispensible.  Shor 'ın düzenleme algoritması, hisse simülasyonu yöntemleri ve birçok Oracular algoritması gibi algoritmalar, tutarlı aritmetik işlemlere dayanır.  En çok bir aritmetik derleme, hisse açık bir devreden sonra.  En basit ekleyici, klasik bir giriş $b $ alır ve değeri $ \ket{a} $ tamsayı tutan bir hisse ma durumuna ekler.  Matematiksel olarak, bir Ekleyici (klasik giriş $b $ için $ \operatorname{Add} (b) $) değerini belirten bir özelliği vardır
+Aritmetik olarak klasik bilgi işlem 'da merkezi bir rol oynadığında, bu da hisse olmazdır.  Shor 'ın düzenleme algoritması, hisse simülasyonu yöntemleri ve birçok Oracular algoritması gibi algoritmalar, tutarlı aritmetik işlemlere dayanır.  En çok bir aritmetik derleme, hisse açık bir devreden sonra.  En basit ekleyici, klasik bir giriş $b $ alır ve değeri $ \ket{a} $ tamsayı tutan bir hisse ma durumuna ekler.  Matematiksel olarak, bir Ekleyici (klasik giriş $b $ için $ \operatorname{Add} (b) $) değerini belirten bir özelliği vardır
 
 $ $ \operatorname{Add} (b) \ket{a} = \ket{a + b}.
 $ $ Bu temel Ekleyici devresi bir Ekleyici öğesinden daha fazla incrementer.

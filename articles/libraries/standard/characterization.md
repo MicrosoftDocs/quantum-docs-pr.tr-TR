@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: 0c347113339a77e9eaf63dc0967c320f8b063a0e
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76870362"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036262"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Hisse ve Istatistik #
 
@@ -88,7 +88,7 @@ Geleneksel klasik terminolojiye göre, $ \eqref{EQ: Phase-EST-olasılık} $ yine
 
 Yinelemeli aşama tahmini olma olasılığı işlevinden bir `Result` gözlemleniyorsa, bu gözlemyi takip eden aşamayı görmek için Bayes ' kuralını kullanabiliriz.
 Concreary, \begin{Equation} \Pr (\phi | d) = \frac{\Pr (d | \fi) \Pr (\fi)} {\int \Pr (d | \fi) \Pr (\fi) {\mathrm d} \phi} \Pr (\fi), \end{Equation} burada $d \\\{\Texttt{dd}, \texttt{One}\\} $ bir `Result`ve $ \Pr (\fi) $, önceki inanılmaz EFS 'yi $ \fi $ hakkında açıklar.
-Bu durumda, posterior Distribution $ \Pr (\phi | d) $, inanılmaz EFS 'yi bir sonraki `Result`gözlemmize hemen açıklayacaktır.
+Bu durumda, posterior Distribution $ \Pr (\phi | d) $, sonraki `Result`gözlemmize hemen önce inanılmaz EFS 'yi tanımlar.
 
 Bu yordam sırasında herhangi bir noktada, klasik denetleyici tarafından gösterilen $ \hat{\phi} $ aşamasını \begin{Equation} \hat{\phi} \mathrel{olarak bildirebiliriz: =} \beklenir [\phi | \Text{Data}] = \int \phi \Pr (\phi | \Text{Data}) {\mathrm d} \phi, \end{Equation}; burada $ \Text{Data} $, elde edilen tüm `Result` değerlerinin tamamına karşılık gelir.
 

@@ -6,23 +6,23 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.expressions
-ms.openlocfilehash: 09d493df4e1178fee1f7a5946cfda2f411111006
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 83fe697aa07a8ab28bd64437c8f5746bc5893b27
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185214"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036323"
 ---
 # <a name="expressions"></a>İfadeler
 
-## <a name="grouping"></a>Gruplama
+## <a name="grouping"></a>Gruplandırma
 
 Herhangi bir ifade verildiğinde, parantez içine alınmış aynı ifade aynı türde bir ifadedir.
 Örneğin, `(7)` `Int` bir ifadedir, `([1,2,3])` `Int`s dizisi türünde bir ifadedir ve `((1,2))` türü `(Int, Int)`olan bir ifadedir.
 
 [Tür modelinde](xref:microsoft.quantum.language.type-model#tuple-types) açıklanan basit değerler ve tek öğeli tanımlama grupları arasındaki denklik, grup olarak `(6)` ve tek öğeli tanımlama grubu olarak `(6)` arasındaki belirsizlik ortadan kaldırır.
 
-## <a name="symbols"></a>Symbols
+## <a name="symbols"></a>Simgeler
 
 `'T` türünde bir değere atanan veya atanan bir simgenin adı `'T`türünde bir ifadedir.
 Örneğin, sembol `count` `5`tamsayı değerine bağlıysa `count` bir tamsayı ifadesi olur.
@@ -61,7 +61,7 @@ Bu durumda, ikinci parametrenin 32 bite sığması gerekir; Aksi takdirde, bir �
 
 İki tamsayı veya büyük tamsayı ifadesi verildiğinde, yeni bir tamsayı veya büyük tamsayı ifadesi `%` (mod), `&&&` (bit düzeyinde ve), `|||` (bit düzeyinde OR) veya `^^^` (bit düzeyinde XOR) işleçleri kullanılarak oluşturulabilir.
 
-Sol tarafta bir tamsayı veya büyük tamsayı ifadesi ve sağ tarafta bir tamsayı ifadesi verildiğinde, sol taraftaki ile aynı türde yeni bir ifade oluşturmak için `<<<` (aritmetik sol SHIFT) veya `>>>` (aritmetik sağa kaydırma) işleçleri kullanılabilir ifadesini.
+Sol tarafta bir tamsayı veya büyük tamsayı ifadesi ve sağ taraftaki bir tamsayı ifadesi verildiğinde, `<<<` (aritmetik sol SHIFT) veya `>>>` (aritmetik sağa kaydırma) işleçleri, sol ifadeyle aynı türde yeni bir ifade oluşturmak için kullanılabilir.
 
 Kaydırma işleminin ikinci parametresi (SHIFT miktarı) sıfırdan büyük veya sıfıra eşit olmalıdır; negatif kaydırma miktarları için davranış tanımsızdır.
 Her iki vardiya işlemi için de SHIFT miktarı 32 bite uyum sağlamalıdır; Aksi takdirde, bir çalışma zamanı hatası oluşur.
@@ -89,14 +89,14 @@ Yeni ifade, anayent ifadesiyle aynı türde olacaktır.
 
 Herhangi bir tamsayı veya büyük tamsayı ifadesi verildiğinde, aynı türde yeni bir ifade `~~~` (bit düzeyinde tamamlayıcı) birli işleç kullanılarak oluşturulabilir.
 
-## <a name="boolean-expressions"></a>Boole Ifadeleri
+## <a name="boolean-expressions"></a>Boolean İfadeleri
 
 İki `Bool` değişmez değer `true` ve `false`.
 
 Aynı ilkel türün herhangi iki ifadesi verildiğinde, `==` ve `!=` ikili işleçleri `Bool` ifadesi oluşturmak için kullanılabilir.
-İki ifade (yanıt olarak) eşitse ifade true olur.
+İki ifade eşitse ifade true, değilse false olur.
 
-Kullanıcı tanımlı türlerin değerleri karşılaştırılamayabilir, yalnızca değerleri karşılaştırılabilir. Örneğin,
+Kullanıcı tanımlı türlerin değerleri karşılaştırılamayabilir, yalnızca sarmalanmamış değerler karşılaştırılabilir. Örneğin, "sarmalama" işlecinin `!` ( [Q # tür modeli sayfasında](xref:microsoft.quantum.language.type-model#user-defined-types)açıklanacaktır) kullanarak,
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -112,7 +112,7 @@ let t = x == y;               // This will cause a compiler error.
 `Double` değerleri için eşitlik karşılaştırması, yuvarlama etkileri nedeniyle yanıltıcı olabilir.
 Örneğin, `49.0 * (1.0/49.0) != 1.0`.
 
-İki sayısal ifade verildiğinde, `>`, `<`, `>=`ve `<=` ikili işleçleri, ilk ifade sırasıyla şundan büyükse, küçüktür, büyüktür veya eşittir olduğunda doğru olan yeni bir Boole ifadesi oluşturmak için kullanılabilir ya da ikinci ifadeye eşit veya daha az.
+İki sayısal ifade verildiğinde, `>`, `<`, `>=`ve `<=` ikili işleçleri, ilk ifade sırasıyla daha büyük, küçüktür, büyüktür veya eşittir veya ikinci ifadeden daha küçük veya eşit olduğunda doğru olan yeni bir Boole ifadesi oluşturmak için kullanılabilir.
 
 İki Boolean ifade verildiğinde `and` ve `or` ikili işleçleri, iki ifadenin her ikisi de (her ikisi de veya her ikisi de) doğru olan yeni bir Boole ifadesi oluşturmak için kullanılabilir.
 
@@ -158,7 +158,7 @@ Bunun dışında, tek `Result` ifadeleri, `Result` dizilerinin `Result` değerle
 
 ## <a name="range-expressions"></a>Aralık Ifadeleri
 
-`start`, `step`ve `stop`olmak üzere üç `Int` ifade verildiğinde `start .. step .. stop`, ilk öğesi `start`, ikinci öğe ise `start+step`, üçüncü öğe ise `start+step+step`geçirilene kadar bir Aralık deyimidir.
+`start`, `step`ve `stop`olmak üzere üç `Int` ifade verildiğinde `start .. step .. stop`, ilk öğesi `start`, ikinci öğe ise `start+step`, üçüncü öğe ise `start+step+step`geçirilene kadar bir Aralık deyimidir.`stop`
 Örneğin, `step` pozitif ve `stop < start`olduğunda bir Aralık boş olabilir.
 Aralığın son öğesi, `start` ve `stop` arasındaki fark `step`bir tam sayı `stop` olur. diğer bir deyişle, Aralık her iki uçta da dahil olur.
 
@@ -229,7 +229,7 @@ Q # derleyicisi gerçek türleri çıkardığı için bu genellikle gereksizdir.
 Bir tür parametreli bağımsız değişken belirtilmemişse, kısmi uygulama (aşağıya bakın) için gereklidir.
 Ayrıca bazen farklı functor ile işlemleri bir çağrılabilir olarak geçirirken yararlı olur.
 
-Örneğin, `Func` imza `('T1, 'T2, 'T1) -> 'T2`, `Op1` ve `Op2` imza `(Qubit[] => Unit is Adj)`varsa ve `Op3` ilk bağımsız değişken olarak `(Qubit[] => Unit)`çağırmak için `Func` imza `Op1`, ikinci olarak `Op2` ve üçüncü olarak `Op3`:
+Örneğin, `Func` imza `('T1, 'T2, 'T1) -> 'T2`, `Op1` ve `Op2` imza `(Qubit[] => Unit is Adj)`sahipse ve `Op3`, ilk bağımsız değişken olarak `(Qubit[] => Unit)``Func` ve üçüncü olarak `Op1` çağırmak için imza `Op2` vardır:`Op3`
 
 ```qsharp
 let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3);
@@ -320,7 +320,7 @@ Tüm öğeler aynı türle uyumlu olmalıdır.
 
 Ortak öğe türü bir işlem ya da işlev türü ise, tüm öğeler aynı giriş ve çıkış türlerine sahip olmalıdır.
 Dizinin öğe türü tüm öğeleri tarafından desteklenen tüm nesneleri destekleyecektir.
-Örneğin, `Op1`, `Op2`ve `Op3` tümü `Qubit[] => Unit`, ancak `Op1` destekliyorsa `Adjoint`destekler ve `Op2` ikisini de destekler:
+Örneğin, `Op1`, `Op2`ve `Op3` tümü `Qubit[] => Unit`, ancak `Op1` destekliyorsa `Adjoint`destekler ve `Op2` ikisini de destekler:`Controlled``Op3`
 
 - `[Op1, Op2]`, `(Qubit[] => Unit)` işlemlerinin bir dizisidir.
 - `[Op1, Op3]`, `(Qubit[] => Unit is Adj)` işlemlerinin bir dizisidir.
@@ -364,7 +364,7 @@ Tür | Varsayılan
 Demet türleri, öğe öğesi tarafından başlatılmış.
 
 
-### <a name="jagged-arrays"></a>Sivri diziler
+### <a name="jagged-arrays"></a>Basit Diziler
 
 Bazen "dizi dizisi" olarak adlandırılan pürüzlü bir dizi, öğeleri dizi olan bir dizidir. Pürüzlü bir dizinin öğeleri farklı boyutlarda olabilir. Aşağıdaki örnek, çarpma tablosunu temsil eden pürüzlü bir dizinin nasıl bildirilemeyeceğini ve başlatılacağını gösterir.
 
@@ -465,7 +465,7 @@ Bu örnekte, koşullu ifadenin değeri, `a==b` true ise ve false ise `d` `c` ola
 
 İki ifade, aynı girişlere ve çıkışlara sahip olan ancak farklı komik desteği olan işlemlere göre değerlendirilemez.
 Bu durumda, koşullu ifadenin türü, her iki ifade tarafından desteklenen tüm semantikleri destekleyen bu giriş ve çıkışlarla bir işlemdir.
-Örneğin, `Op1`, `Op2`ve `Op3` tümü `Qubit[]=>Unit`, ancak `Op1` destekliyorsa `Adjoint`destekler ve `Op2` ikisini de destekler:
+Örneğin, `Op1`, `Op2`ve `Op3` tümü `Qubit[]=>Unit`, ancak `Op1` destekliyorsa `Adjoint`destekler ve `Op2` ikisini de destekler:`Controlled``Op3`
 
 - `flag ? Op1 | Op2` `(Qubit[] => Unit)` bir işlemdir.
 - `flag ? Op1 | Op3` `(Qubit[] => Unit is Adj)` bir işlemdir.
@@ -492,17 +492,17 @@ En yüksekten en düşüğe göre öncelik sırasına göre işleçler:
 ---------|----------|---------|---------------
  Sondaki `!` | Li | Unwrap | Kullanıcı tanımlı herhangi bir tür
  `-`, `~~~`, `not` | Li | Sayısal negatif, bit düzeyinde tamamlama, mantıksal değilleme | `Int` için `BigInt` `-`, `~~~`veya `Bool` için `Int`, `BigInt` veya `Double` `not`
- `^` | ý | Tamsayı güç | Taban için `Int` veya `BigInt` üs için `Int`
- `/`, `*`, `%` | ý | Bölme, çarpma, tamsayı mod | `*`için `/` ve `Int`, `BigInt` veya `%` için `Int`, `BigInt` veya `Double`
- `+`, `-` | ý | Ekleme veya dize ve dizi birleştirme, çıkarma | `Int`, `BigInt` veya `Double`, ayrıca `+` için `String` veya herhangi bir dizi türü
- `<<<`, `>>>` | ý | Sol SHIFT, sağa kaydırma | `Int` veya `BigInt`
- `<`, `<=`, `>`, `>=` | ý | Küçüktür, küçüktür veya eşittir, büyüktür, büyüktür veya eşittir karşılaştırmaları | `Int`, `BigInt` veya `Double`
- `==`, `!=` | ý | eşit, eşit olmayan karşılaştırmalar | herhangi bir ilkel tür
- `&&&` | ý | Bit düzeyinde AND | `Int` veya `BigInt`
- `^^^` | ý | Bit düzeyinde XOR | `Int` veya `BigInt`
- <code>\|\|\|</code> | ý | Bit düzeyinde OR | `Int` veya `BigInt`
- `and` | ý | Mantıksal AND | `Bool`
- `or` | ý | Mantıksal OR | `Bool`
+ `^` | İkili | Tamsayı güç | Taban için `Int` veya `BigInt` üs için `Int`
+ `/`, `*`, `%` | İkili | Bölme, çarpma, tamsayı mod | `*`için `/` ve `Int`, `BigInt` veya `%` için `Int`, `BigInt` veya `Double`
+ `+`, `-` | İkili | Ekleme veya dize ve dizi birleştirme, çıkarma | `Int`, `BigInt` veya `Double`, ayrıca `+` için `String` veya herhangi bir dizi türü
+ `<<<`, `>>>` | İkili | Sol SHIFT, sağa kaydırma | `Int` veya `BigInt`
+ `<`, `<=`, `>`, `>=` | İkili | Küçüktür, küçüktür veya eşittir, büyüktür, büyüktür veya eşittir karşılaştırmaları | `Int`, `BigInt` veya `Double`
+ `==`, `!=` | İkili | eşit, eşit olmayan karşılaştırmalar | herhangi bir ilkel tür
+ `&&&` | İkili | Bit düzeyinde AND | `Int` veya `BigInt`
+ `^^^` | İkili | Bit düzeyinde XOR | `Int` veya `BigInt`
+ <code>\|\|\|</code> | İkili | Bit düzeyinde OR | `Int` veya `BigInt`
+ `and` | İkili | Mantıksal AND | `Bool`
+ `or` | İkili | Mantıksal OR | `Bool`
  `..` | İkili/üçlü | Range işleci | `Int`
  `?` `|` | Üçlü | Koşullu | Sol taraftaki `Bool`
 `w/` `<-` | Üçlü | Kopyala ve Güncelleştir | bkz. [kopyalama ve güncelleştirme ifadeleri](#copy-and-update-expressions)
