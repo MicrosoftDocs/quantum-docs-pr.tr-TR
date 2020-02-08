@@ -1,122 +1,96 @@
 ### YamlMime:Landing
-title: Microsoft Quantum Development Kit
-summary: Microsoft Quantum Development Kit'i ve kuantum algoritmaları programlamaya yönelik Q# dilini kullanmayı öğrenin.
+title: Microsoft Quantum Belgeleri
+summary: Microsoft Quantum Developer Kit'i ve kuantum algoritmalarına yönelik Q# dilini kullanmayı öğrenin. Önemli kavramları öğrenin ve ilk kuantum programınızı yazın.
 metadata:
-  title: Microsoft Quantum Development Kit - Q# API Başvurusu
-  description: Microsoft Quantum Development Kit'i ve kuantum algoritmaları programlamaya yönelik Q# dilini kullanmayı öğrenin. Önemli kavramları öğrenin ve ilk kuantum programınızı yazın.  QDK'nin zengin araçlarını ve kitaplıklarını inceleyin.
+  title: Microsoft Quantum Belgeleri - Q# API Başvurusu
+  description: Microsoft Kuantum Geliştirme Seti'ni ve kuantum programlamaya yönelik Q# dilini kullanmayı öğrenin. Önemli kavramları öğrenin ve ilk kuantum programınızı yazın.  QDK'nin zengin araçlarını ve kitaplıklarını inceleyin.
   ms.prod: quantum
   ms.topic: landing-page
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
   ms.date: 10/21/2019
-  ms.openlocfilehash: 53ee7b0a1ba7a83fb943f18afd27b5c699f848b2
-  ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+  ms.openlocfilehash: a39b230bc3b740afd23f0050b9c45df6094bea4e
+  ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76820734"
+  ms.lasthandoff: 02/06/2020
+  ms.locfileid: "77036585"
 landingContent:
 - title: Microsoft Quantum’u kullanmaya başlama
   linkLists:
   - linkListType: overview
     links:
-    - text: Kuantum bilişimi hakkında beş soru
+    - text: Kuantum Geliştirme Seti
       url: welcome.md
-  - linkListType: get-started
+  - linkListType: learn
+    links:
+    - text: Kuantum bilişimi nedir?
+      url: overview/what-is-quantum-computing.md
+    - text: Bir kuantum bilgisayar ne yapabilir?
+      url: overview/quantum-computers.md
+    - text: Kuantum bilişimini neden öğrenmeliyim?
+      url: overview/why-learn-quantum-computing.md
+    - text: Q# nedir?
+      url: overview/what-is-qsharp.md
+    - text: Kuantum bilişim hakkında nasıl bilgi edinebilirim?
+      url: overview/how-to-learn-quantum-computing.md
+- title: Kuantum Geliştirme Seti’ni edinin
+  linkLists:
+  - linkListType: download
+    links:
+    - text: QDK’yı yükleme
+      url: install-guide/index.md
+    - text: QDK’yı güncelleştirme
+      url: install-guide/update.md
+- title: Hızlı Başlangıçlar
+  linkLists:
+  - linkListType: quickstart
     links:
     - text: Kuantum rastgele sayı oluşturucusu oluşturma
       url: quickstarts/qrng.md
     - text: Q# ile kuantumun temelleri
       url: quickstart.md
-    - text: Q# ile etkili kuantum programları hakkında bilgi edinme
+    - text: 'Kuantum hızlandırma: Grover’ın arama algoritması'
       url: quickstarts/search.md
-    - text: Kimya alanındaki en büyük güçlükleri çözmeyi öğrenme
-      url: https://cloudblogs.microsoft.com/quantum/2018/12/04/simulating-nature-with-the-new-microsoft-quantum-development-kit-chemistry-library/
-  - linkListType: learn
-    links:
-    - text: Kuantum Katalarıyla öğrenme
-      url: intro-to-katas.md
-    - text: Q# örneklerine göz atma
-      url: https://docs.microsoft.com/samples/browse/?languages=qsharp
-- title: Q# ve Python'la veya Jupyter Notebook ile geliştirme
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Python yüklemesi
-      url: install-guide/pyinstall.md
-    - text: Jupyter yüklemesi
-      url: install-guide/qjupyter.md
-  - linkListType: how-to-guide
-    links:
-    - text: Python ile Q# Örnekleri
-      url: https://docs.microsoft.com/samples/browse/?languages=python&products=qdk
-    - text: Q# Jupyter not defterini ışınlama
-      url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
-    - text: Q# Jupyter not defterleri oluşturma
-      url: https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/
-- title: Q# geliştirme ortamları
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Visual Studio yüklemesi
-      url: install-guide/csinstall.md
-    - text: Visual Studio Code yüklemesi
-      url: install-guide/csinstall.md
-- title: Q# örnekleri
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Üç basit algoritma
-      url: https://docs.microsoft.com/samples/microsoft/quantum/simple-quantum-algorithms
-    - text: Grover algoritmasıyla arama yapma
-      url: https://docs.microsoft.com/samples/microsoft/quantum/searching-with-grovers-algorithm
-    - text: Kuantum Işınlanması
-      url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
-    - text: Tüm Örnekler
-      url: https://docs.microsoft.com/samples/browse/?languages=qsharp
-- title: Q# dili ve geliştirme teknikleri
-  linkLists:
-  - linkListType: learn
-    links:
-    - text: Q# diline giriş
-      url: language/index.md
-  - linkListType: how-to-guide
-    links:
-    - text: Kuantum simülatörleri ve konak uygulamaları
-      url: machines/index.md
-  - linkListType: how-to-guide
-    links:
-    - text: Q# programına genel bakış
-      url: techniques/file-structure.md
-    - text: İşlemler ve işlevler
-      url: techniques/operations-and-functions.md
-    - text: Yerel değişkenler
-      url: techniques/local-variables.md
-    - text: Kubitlerle çalışma
-      url: techniques/working-with-qubits.md
-    - text: 'Hepsini bir araya getirme: Işınlanma'
-      url: techniques/putting-it-all-together.md
 - title: Kuantum bilişimi kavramları
   linkLists:
   - linkListType: concept
     links:
     - text: Kuantum bilişimi kavramları
       url: concepts/index.md
-    - text: Sözlük
-      url: Glossary.md
-- title: Q# algoritmaları ve uygulamaları
+- title: Q# programlama dili
   linkLists:
-  - linkListType: reference
+  - linkListType: learn
     links:
-    - text: Genliğini Yükseltme
-      url: libraries/standard/algorithms.md
-    - text: Kuantum Aşama Tahmini
-      url: libraries/standard/algorithms.md#quantum-phase-estimation
-    - text: Shor Algoritması
-      url: libraries/standard/applications.md#shors-algorithm
-    - text: Hamilton Benzetimi
-      url: libraries/standard/applications.md
+    - text: Q# diline giriş
+      url: language/index.md
+    - text: Q# geliştirme teknikleri
+      url: techniques/index.md
+- title: Hedef makineler
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Kuantum simülatörleri ve konak uygulamaları
+      url: machines/index.md
+  - linkListType: architecture
+    links:
+    - text: Tam durum simülatörü
+      url: machines/full-state-simulator.md
+    - text: Kaynak tahmin aracı
+      url: machines/resources-estimator.md
+    - text: İzleme simülatörü
+      url: machines/qc-trace-simulator/index.md
+    - text: Toffoli simülatörü
+      url: machines/toffoli-simulator.md
+- title: Q# öğrenme kaynakları
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: Kuantum Katalarıyla öğrenme
+      url: intro-to-katas.md
+    - text: Q# kod örneklerine gözatın
+      url: https://docs.microsoft.com/samples/browse/?languages=qsharp
 - title: Q# kitaplıkları
   linkLists:
   - linkListType: reference
@@ -129,14 +103,18 @@ landingContent:
       url: libraries/chemistry/index.md
     - text: Kimya kavramları
       url: libraries/chemistry/concepts/quantum-dynamics.md
-  - linkListType: how-to-guide
+- title: Q# algoritmaları ve uygulamaları (standart kitaplıklardan)
+  linkLists:
+  - linkListType: reference
     links:
-    - text: Sayısal Q# Örnekleri
-      url: libraries/numerics/numerics.md
-    - text: Kimya Q# Örnekleri
-      url: libraries/chemistry/samples/index.md
-    - text: NWChem ile Uçtan Uca
-      url: libraries/chemistry/samples/end-to-end.md
+    - text: Genliğini Yükseltme
+      url: libraries/standard/algorithms.md
+    - text: Kuantum Aşama Tahmini
+      url: libraries/standard/algorithms.md#quantum-phase-estimation
+    - text: Shor Algoritması
+      url: libraries/standard/applications.md#shors-algorithm
+    - text: Hamilton Benzetimi
+      url: libraries/standard/applications.md
 - title: Topluluk ve katkıda bulunma
   linkLists:
   - linkListType: how-to-guide

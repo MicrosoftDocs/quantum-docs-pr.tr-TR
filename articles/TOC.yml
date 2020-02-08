@@ -16,17 +16,7 @@
           href: overview/what-is-qsharp.md
         - name: Kuantum bilişimi öğrenme
           href: overview/how-to-learn-quantum-computing.md
-    - name: Kuantum Katalarıyla öğrenme
-      href: intro-to-katas.md
-- name: Hızlı Başlangıçlar
-  items:
-    - name: Kuantum rastgele sayı oluşturucusu
-      href: quickstarts/qrng.md
-    - name: 'Q# ile kuantumun temelleri'
-      href: quickstart.md
-    - name: Grover’ın arama algoritmasını uygulama
-      href: quickstarts/search.md
-- name: Nasıl yapılır kılavuzları
+- name: Yükleme ve güncelleştirme
   items:
     - name: QDK’yı yükleme
       items:
@@ -40,8 +30,14 @@
           href: install-guide/qjupyter.md
     - name: QDK’yı güncelleştirme
       href: install-guide/update.md
-    - name: 'Q# projesi oluşturma'
-      href: how-to-guides/create-qsharp-project.md
+- name: Hızlı Başlangıçlar
+  items:
+    - name: Kuantum rastgele sayı oluşturucusu
+      href: quickstarts/qrng.md
+    - name: 'Q# ile kuantumun temelleri'
+      href: quickstart.md
+    - name: Grover’ın arama algoritmasını uygulama
+      href: quickstarts/search.md
 - name: Kavramlar
   items:
     - name: Quantum geliştirme teknikleri
@@ -52,21 +48,31 @@
       href: language/toc.yml
     - name: 'Q# kitaplıkları'
       href: libraries/toc.yml
-    - name: Kuantum bilişimi kavramları
-      href: concepts/toc.yml
     - name: Kuantum simülatörleri ve kaynak tahmin araçları
       href: machines/toc.yml
+    - name: Kuantum bilişimi kavramları
+      href: concepts/toc.yml
+- name: Nasıl yapılır kılavuzları
+  items:
+    - name: 'Q# projesi oluşturma'
+      href: how-to-guides/create-qsharp-project.md
+- name: 'Q# Öğrenme Kaynakları'
+  items:
+    - name: Kuantum Katalarıyla öğrenme
+      href: intro-to-katas.md
+    - name: 'Q# Örnekleri'
+      href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
 - name: Kaynaklar
   items:
+    - name: Sözlük
+      href: Glossary.md
+    - name: Daha fazla bilgi
+      href: for-more-info.md
     - name: QDK Sürüm Notları
       topicHref: relnotes/index.md
       href: relnotes/toc.yml
     - name: QDK'ye katkıda bulunma
       href: contributing/toc.yml
       topicHref: contributing/index.md
-    - name: Sözlük
-      href: Glossary.md
-    - name: Daha fazla bilgi edinmek için
-      href: for-more-info.md
     - name: Lisans
       href: license.md
