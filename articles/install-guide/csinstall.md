@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 1fd829c684502092bb7491b0f46b5f690320c941
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 7803846279f230f5fc0ee8424bd39be735a650ca
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831027"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036298"
 ---
 # <a name="develop-with-q--c"></a>Q # + ile geliştirinC#
 
@@ -23,12 +23,12 @@ S #, .NET dilleri ile birlikte çalışmak için geliştirilmiştir--özellikle 
 - [Q # + C# Visual Studio Code (Windows, Linux ve Mac) kullanma](#VSC)
 - [`dotnet` komut satırı C# aracını kullanarak Q # +](#command)
 
-## Visual Studio 'Yu kullanarak Q C# # + ile geliştirme<a name="VS"></a>
+## Visual Studio 'Yu kullanarak Q C# # + ile geliştirme <a name="VS"></a>
 
 Visual Studio, Q # programları geliştirmek için zengin bir ortam sunar. Q # Visual Studio uzantısı, Q # dosyaları ve projeleri için şablonlar ve sözdizimi vurgulaması, kod tamamlama ve IntelliSense desteği içerir.
 
 
-1. Önkoşullar
+1. Ön koşullar
 
     - .NET Core platformlar arası geliştirme iş yükü etkin olan [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3
 
@@ -59,11 +59,11 @@ Visual Studio, Q # programları geliştirmek için zengin bir ortam sunar. Q # V
 > [!NOTE]
 > * Bir Visual Studio çözümünde birden fazla projeniz varsa, çözümde yer alan tüm projelerin çözüm ile aynı klasörde veya bunun bir alt klasöründe olması gerekir.  
 
-## Visual Studio Code kullanarak Q # + C# ile geliştirin<a name="VSC"></a>
+## Visual Studio Code kullanarak Q # + C# ile geliştirin <a name="VSC"></a>
 
 Visual Studio Code (VS Code) Windows, Linux ve Mac 'te Q # programları geliştirmek için zengin bir ortam sunar.  Q # VS Code uzantısı, Q # sözdizimi vurgulama, kod tamamlama ve Q # kod parçacıkları için destek içerir.
 
-1. Önkoşullar
+1. Ön koşullar
 
    - [VS Code](https://code.visualstudio.com/download)
    - [.NET Core SDK 3,1 veya üzeri](https://www.microsoft.com/net/download)
@@ -105,13 +105,13 @@ Visual Studio Code (VS Code) Windows, Linux ve Mac 'te Q # programları gelişti
 
 Kuşkusuz yalnızca .NET Core SDK'sını ve QDK proje şablonlarını yükleyerek Q# programlarını komut satırından da oluşturup çalıştırabilirsiniz. 
 
-1. Önkoşullar
+1. Ön koşullar
 
     - [.NET Core SDK 3,1 veya üzeri](https://www.microsoft.com/net/download)
 
 1. .NET için Kuantum proje şablonlarını yükleme
 
-    ```bash
+    ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
@@ -121,8 +121,8 @@ Kuşkusuz yalnızca .NET Core SDK'sını ve QDK proje şablonlarını yükleyere
 
     - Yeni uygulama oluşturma
 
-       ```bash
-       dotnet new console -lang Q# -o runSayHello
+       ```dotnetcli
+       dotnet new console -lang "Q#" -o runSayHello
        ```
 
     - Yeni uygulama dizinine gidin
@@ -135,7 +135,7 @@ Kuşkusuz yalnızca .NET Core SDK'sını ve QDK proje şablonlarını yükleyere
 
     - Uygulamayı çalıştırma
 
-        ```bash
+        ```dotnetcli
         dotnet run
         ```
 
