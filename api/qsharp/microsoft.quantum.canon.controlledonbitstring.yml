@@ -3,18 +3,73 @@ uid: microsoft.quantum.canon.controlledonbitstring
 name: ControlledOnBitString
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Denetim yazmacı durumu belirtilen bir bit maskesine karşılık geliyorsa, hedef kayıt üzerinde bir Oracle uygulayan Unitary işlecini döndürür.
+summary: >-
+  Denetim yazmacı durumu belirtilen bir bit maskesine karşılık geliyorsa, hedef kayıt üzerinde bir Oracle uygulayan Unitary işlecini döndürür.
+
+
+  Bu işlevin çıktısı, bir Unitary dönüşümle temsil edilebilir $U $ \ Begin{hizalaması} U \ket{b_0 b_1 \cnoktalar b_ {n-1}} \ket{\psı} = \ket{b_0 b_1 \cnoktalar b_ {n-1}} \otimes \begin{Cases} V \ket{\psı} & \textrm{if} (b_0 b_1 \cnoktalar b_ {n-1}) = \texttt{bits} \\\\ \ket{\psı} & \textrm{otherwise} \end{Cases}, \end{hizalaması}; burada $V $, `oracle` işleminin eylemini temsil eden bir Unitary dönüşümtür.
+remarks: >-
+  `bits` ve `controlRegister` uzunluğu eşit olmalıdır.
+
+
+  Boolean dizi `bits` ve Unitary işlemi `oracle`verildiğinde, bu işlevin çıktısı aşağıdaki adımları gerçekleştiren bir işlemdir:
+
+
+  * `bits``false` öğesine karşılık gelen denetim yazmacın her bir qubit 'e `X` işlem uygulayın;
+
+  * Denetim ve hedef yazmaçlara `Controlled oracle` uygulayın;
+
+  * Denetim yazmacın özgün duruma döndürülmesi için, `bits` `false` öğesine karşılık gelen denetim yazmacın her bir qubit 'e `X` işlem uygulayın.
+
+
+  `Controlled` functor çıkışı, `bits` `[true, ..., true]`eşit olduğu `ControlledOnBitString` özel bir durumdur.
+examples: >-
+  Aşağıdaki kod parçacıkları eşdeğerdir:
+
+
+  ```qsharp
+
+  (ControlledOnBitString(bits, oracle))(controlRegister, targetRegister);
+
+  ```
+
+
+  ile
+
+
+  ```qsharp
+
+  within {
+      ApplyPauliFromBitString(PauliX, false, bits, controlRegister);
+  } apply {
+      Controlled oracle(controlRegister, targetRegister);
+  }
+
+  ```
+
+
+  Aşağıdaki kod bir durum $ \frac{1}{2}(\ayraç{00}-\ket{01} + \ ayraç{10} + \ ayraç{11}) $:
+
+
+  ```qsharp
+
+  using (register = Qubit[2]) {
+      ApplyToEach(H, register);
+      (ControlledOnBitString([false], Z))(register[0..0], register[1]);
+  }
+
+  ```
 syntax: "function ControlledOnBitString (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)"
 input:
   content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl))"
   types:
   - name: bits
-    summary: Boolean dizisi.
+    summary: Üzerinde verilen Unitary işlecini denetlemek için bit dizesi.
     isArray: true
     isPrimitive: true
     uid: Bool
   - name: oracle
-    summary: Unitary işleci.
+    summary: Hedef kaydına uygulanacak Unitary işleci.
     isOperation: true
     input:
       types:
@@ -47,9 +102,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 1abe0f1abcbab06aa9821c52878cf85b03d2c592
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: dde246a6eb0cf5e278cd079ff52c3a0b0ff71120
+  ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227398"
+  ms.lasthandoff: 02/18/2020
+  ms.locfileid: "77441046"
