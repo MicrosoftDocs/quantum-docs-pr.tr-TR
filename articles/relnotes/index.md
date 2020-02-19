@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: c135dacb2fc305fa97874cb4abcf4e2ac489b9e4
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: be1eff8127be9fb024a1dc2de3ec82952ac2dc2b
+ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76871626"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77441043"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -21,13 +21,14 @@ Yükleme yönergeleri için bu [yükleme kılavuzuna](xref:microsoft.quantum.ins
 
 Güncelleştirme yönergeleri için bu [güncelleştirme kılavuzuna](xref:microsoft.quantum.update) başvurun.
 
+
 ## <a name="version-01020012831"></a>Sürüm 0.10.2001.2831
 
 *Sürüm tarihi: 29 Ocak 2020*
 
 Bu sürüm aşağıdakileri içerir:
 
-- Yeni Microsoft.Quantum.SDK NuGet paketi, ayrıntılar için bkz. [BENİOKU](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md)
+- Yeni Microsoft.Quantum.SDK NuGet paketi
 - .NET Core 3.1 desteği eklendi, daha eski .NET Core SDK sürümleriyle derleme işlemi sorunlara neden olabileceğinden 3.1.100 sürümünü yüklemeniz önemle önerilir
 - Microsoft.Quantum.QsCompiler.Experimental altında yeni derleyici dönüşümleri kullanılabilir
 - IQ# içinde çıkış durumu vektörlerinin HTML olarak kullanıma sunulmasına yönelik yeni işlevsellik
