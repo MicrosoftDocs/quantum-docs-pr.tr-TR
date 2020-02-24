@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: 134617455b720cc755b9ee9fb68fb59e624d3f1a
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: d1ad2c1153814e2fa19a38307b2c668c77eae4e3
+ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820952"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77441068"
 ---
 # <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>Hızlı Başlangıç: Q# ile Kuantum Rastgele Sayı Oluşturucusu Oluşturma Tasarlama
 Kuantum rastgele sayı oluşturucusu, Q# dilinde yazılmış kuantum algoritmalarına örnek olarak gösterilebilir. Bu algoritma, kuantum mekaniklerinin özelliklerinden faydalanarak rastgele bir sayı üretir. 
@@ -28,20 +28,7 @@ Kuantum rastgele sayı oluşturucusu, Q# dilinde yazılmış kuantum algoritmala
 
 1. Operation.qs dosyasının içeriğini aşağıdaki kodla değiştirin:
 
-    ```qsharp
-    namespace Quantum {
-        open Microsoft.Quantum.Intrinsic;
-
-        operation QuantumRandomNumberGenerator() : Result {
-            using(qubit = Qubit())  { // Allocate a qubit.
-                H(qubit);             // Put the qubit to superposition. It now has a 50% chance of being 0 or 1.
-                let r = M(v);     // Measure the qubit value.
-                Reset(qubit);
-                return r;
-            }
-        }
-    }
-    ```
+ :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-14":::
 
 [Kuantum Bilişimi nedir?](xref:microsoft.quantum.overview.what) makalesinde de belirttiğimiz gibi kubit, süper konumda olabilen bir kuantum bilgi birimidir. Bir kubit ölçüldüğünde yalnızca 0 veya 1 olabilir. Ancak yürütme sırasında kubitin durumu bir ölçümle 0 veya 1 değerini elde etme olasılığını temsil eder. Olasılığa dayalı olan bu durum, süper konum olarak adlandırılır. Bu olasılığı kullanarak rastgele sayı oluşturabiliriz.
 
@@ -75,7 +62,7 @@ Kodun gerçekleştirdiği işlemleri görselleştirmek için şu gösterimi kull
 
 Artık rastgele bitler oluşturan bir Q# işlemimiz olduğuna göre, bu işlemi kullanarak konak programla eksiksiz bir kuantum rastgele sayı oluşturucu oluşturabiliriz.
 
- ### <a name="python-with-visual-studio-code-or-the-command-linetabtabid-python"></a>[Visual Studio Code veya Komut Satırı ile Python](#tab/tabid-python)
+ ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Visual Studio Code veya Komut Satırı ile Python](#tab/tabid-python)
  
  Yeni Q# programınızı Python'dan çalıştırmak için aşağıdaki kodu `host.py` olarak kaydedin:
  
@@ -87,7 +74,7 @@ Artık rastgele bitler oluşturan bir Q# işlemimiz olduğuna göre, bu işlemi 
  Preparing Q# environment...
  ..The random number generated is 42
  ```
- ### <a name="c-with-visual-studio-code-or-the-command-linetabtabid-csharp"></a>[Visual Studio Code veya Komut Satırı ile C#](#tab/tabid-csharp)
+ ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[Visual Studio Code veya Komut Satırı ile C#](#tab/tabid-csharp)
  
  Yeni Q# programınızı C# dilinden çalıştırmak için `Driver.cs` dosyasını aşağıdaki C# kodunu içerecek şekilde değiştirin:
  
@@ -100,7 +87,7 @@ Artık rastgele bitler oluşturan bir Q# işlemimiz olduğuna göre, bu işlemi 
  The random number generated is 42
  ```
 
- ### <a name="c-with-visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019 ile C#](#tab/tabid-vs2019)
+ ### <a name="c-with-visual-studio-2019"></a>[Visual Studio 2019 ile C#](#tab/tabid-vs2019)
 
  Yeni Q# programınızı Visual Studio'da C# dilinde çalıştırmak için `Driver.cs` dosyasını aşağıdaki C# kodunu içerecek şekilde değiştirin:
 
