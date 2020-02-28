@@ -1,4 +1,4 @@
-- name: Başvuru
+- name: API başvurusu
   items:
     - name: 'Q# kitaplıkları'
       href: qsharp/toc.yml
