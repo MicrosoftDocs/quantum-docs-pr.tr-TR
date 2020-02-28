@@ -4,10 +4,10 @@ name: ControlledOnBitString
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Denetim yazmacı durumu belirtilen bir bit maskesine karşılık geliyorsa, hedef kayıt üzerinde bir Oracle uygulayan Unitary işlecini döndürür.
+  Denetim yazmacı durumu belirtilen bir bit maskesine karşılık geliyorsa, hedef kayıt üzerinde Oracle uygulayan Unitary işlemini döndürür.
 
 
-  Bu işlevin çıktısı, bir Unitary dönüşümle temsil edilebilir $U $ \ Begin{hizalaması} U \ket{b_0 b_1 \cnoktalar b_ {n-1}} \ket{\psı} = \ket{b_0 b_1 \cnoktalar b_ {n-1}} \otimes \begin{Cases} V \ket{\psı} & \textrm{if} (b_0 b_1 \cnoktalar b_ {n-1}) = \texttt{bits} \\\\ \ket{\psı} & \textrm{otherwise} \end{Cases}, \end{hizalaması}; burada $V $, `oracle` işleminin eylemini temsil eden bir Unitary dönüşümtür.
+  Bu işlevin çıktısı, \begin{hizalaması} U \ket{b_0 b_1 \cnoktalar b_ {n-1} gibi bir Unitary dönüşümle temsil edilebilir bir işlemdir $U} \ket{\psı} = \ket{b_0 b_1 \cnoktalar b_ {n-1}} \otimes \begin{Cases} V \ket{\psı} & \textrm{if} (b_0 b_1 \cnoktalar b_ {n-1}) = \texttt{bits} \\\\ \ket{\psı} & \textrm{otherwise} \end{Cases}, \end{hizalaması}; burada $V $, `oracle` işleminin eylemini temsil eden bir Unitary dönüşümtür.
 remarks: >-
   `bits` ve `controlRegister` uzunluğu eşit olmalıdır.
 
@@ -64,12 +64,12 @@ input:
   content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl))"
   types:
   - name: bits
-    summary: Üzerinde verilen Unitary işlecini denetlemek için bit dizesi.
+    summary: Üzerinde verilen Unitary işleminin kontrol edilecek bit dizesi.
     isArray: true
     isPrimitive: true
     uid: Bool
   - name: oracle
-    summary: Hedef kaydına uygulanacak Unitary işleci.
+    summary: Hedef kaydına uygulanacak Unitary işlemi.
     isOperation: true
     input:
       types:
@@ -85,7 +85,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Denetim kayıt durumu bit maskesi `bits`karşılık geliyorsa, hedef kayıt üzerinde `oracle` uygulayan bir Unitary işleci.
+  - summary: Denetim kayıt durumu bit maskesi `bits`karşılık geliyorsa, hedef kayıt üzerinde `oracle` uygulayan bir Unitary işlemi.
     isOperation: true
     input:
       types:
@@ -102,9 +102,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: dde246a6eb0cf5e278cd079ff52c3a0b0ff71120
-  ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
+  ms.openlocfilehash: e6f7f8980b2b9b8305df12da41e30fc563e54ad1
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 02/18/2020
-  ms.locfileid: "77441046"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77906534"
