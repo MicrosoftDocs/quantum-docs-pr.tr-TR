@@ -139,20 +139,22 @@ operations:
   summary: İmzalanan tamsayı `xs` `ys` imzalanmış tamsayı ile çarpın ve sonucu başlangıçta sıfır olması gereken `result`olarak depolayın.
 - uid: microsoft.quantum.arithmetic.preparefxp
   summary: Bir hisse ansız sabit noktalı sayıyı klasik bir sabit olarak başlatın.
+- uid: microsoft.quantum.arithmetic.reflectaboutinteger
+  summary: Belirli bir klasik tamsayı hakkında hisse bir kayıt yansıtır.
 - uid: microsoft.quantum.arithmetic.ripplecarryaddercdkm
   summary: Tersine çevrilebilir, yerinde Ripple-iki tamsayının eklenmesini taşır.
 - uid: microsoft.quantum.arithmetic.ripplecarryadderd
   summary: >-
     Tersine çevrilebilir, yerinde Ripple-iki tamsayının eklenmesini taşır.
 
-    Littkaendian Yazmaçları `xs` ve `ys`ve bir qubit ile kodlanmış iki $n $-bit tam sayı verildiğinde, işlem, sonucun $n $ en az önemli bitlerinin `ys` tutulmakta olduğu iki tam sayının toplamını hesaplar.
+    Littkaendian Yazmaçları `xs` ve `ys`ve bir qubit ile kodlanmış iki $n $-bit tam sayı verildiğinde, işlem, sonucun $n $ en az önemli bitlerinin `ys` tutulmakta olduğu iki tam sayının toplamını hesaplar.`carry`
 - uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
   summary: Tersine çevrilebilir, yerinde Ripple-çıkış yapmadan iki tamsayının eklenmesini yerine getirme.
 - uid: microsoft.quantum.arithmetic.ripplecarryadderttk
   summary: >-
     Tersine çevrilebilir, yerinde Ripple-iki tamsayının eklenmesini taşır.
 
-    Littkaendian Yazmaçları `xs` ve `ys`ve bir qubit ile kodlanmış iki $n $-bit tam sayı verildiğinde, işlem, sonucun $n $ en az önemli bitlerinin `ys` tutulmakta olduğu iki tam sayının toplamını hesaplar.
+    Littkaendian Yazmaçları `xs` ve `ys`ve bir qubit ile kodlanmış iki $n $-bit tam sayı verildiğinde, işlem, sonucun $n $ en az önemli bitlerinin `ys` tutulmakta olduğu iki tam sayının toplamını hesaplar.`carry`
 - uid: microsoft.quantum.arithmetic.squarefxp
   summary: Sabit noktalı bir sayı için kareler.
 - uid: microsoft.quantum.arithmetic.squarei
@@ -177,9 +179,9 @@ newtypes:
 - uid: microsoft.quantum.arithmetic.signedlittleendian
   summary: Little endian depolanan bir işaretli tamsayı türü (bkz. Litttaendian).
 metadata:
-  ms.openlocfilehash: f4bdca1f7b6339079cd1e13cfafc2de4e592901a
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 905bac104c15881be6b2e600bd090ff650d63e0e
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870451"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77904562"

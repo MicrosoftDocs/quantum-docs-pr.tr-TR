@@ -42,17 +42,10 @@ functions:
 
     \end{hizalaması} $ $
 operations:
+- uid: microsoft.quantum.preparation.approximatelypreparearbitrarystate
+  summary: Bir ölçü kümesi ve az endian kodlu bir hisse kayıt verildiğinde, verilen katsayıların belirli bir kabul toleransına göre tanımlanan bir durumu hazırlar.
 - uid: microsoft.quantum.preparation.preparearbitrarystate
-  summary: >-
-    Belirli bir hisse cıya durumunu hazırlayan bir işlem döndürür.
-
-
-    Döndürülen $U $, $n $-qubit hesaplama tabanlı durum $ \ket{0...0} $ t_j _j $r karmaşık katlara sahip, rastgele bir hisse
-
-
-    $ $ \begin{hizalaması} U\ket {0... 0} = \ket{\psı} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
-
-    \end{hizalaması} $ $
+  summary: Bir ölçü kümesi ve az endian kodlu bir hisse kayıt verildiğinde, söz konusu kayıt üzerinde verilen katsayıların açıklandığı bir durum hazırlar.
 - uid: microsoft.quantum.preparation.preparechoistate
   summary: Belirli bir işlem için CHOI – Jamiłkowski durumunu verilen başvuru ve hedef Yazmaçları üzerine hazırlar.
 - uid: microsoft.quantum.preparation.preparechoistatea
@@ -99,9 +92,9 @@ operations:
 
     \end{hizalaması} $ $.
 metadata:
-  ms.openlocfilehash: 2b9e3b89a29eb73b9b7417210628fce046c91209
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: dd28a9a066fabd5afab7114d78cc2aca79254e18
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216025"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905684"

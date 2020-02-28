@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.optimization.localunivariateminimum
+name: LocalUnivariateMinimum
+type: function
+namespace: Microsoft.Quantum.Optimization
+summary: Bir tek değişkenli işlev için, altın Aralık araması kullanarak, bir ayırt eden değer için yerel minimum değeri döndürür.
+syntax: 'function LocalUnivariateMinimum (fn : (Double -> Double), bounds : (Double, Double), tolerance : Double) : Microsoft.Quantum.Optimization.UnivariateOptimizationResult'
+input:
+  content: '(fn : (Double -> Double), bounds : (Double, Double), tolerance : Double)'
+  types:
+  - name: fn
+    summary: Tek bir işlevin simge durumuna küçültülmesini sağlar.
+    isFunction: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Double
+    output:
+      types:
+      - isPrimitive: true
+        uid: Double
+  - name: bounds
+    summary: Yerel minimumın bulunduğu Aralık.
+    types:
+    - isPrimitive: true
+      uid: Double
+    - isPrimitive: true
+      uid: Double
+  - name: tolerance
+    summary: >-
+      İşlev girişi toleranslı olarak kullanılacak doğruluk.
+
+      Yerel opzma araması, aralığın genişliği bu toleranstan daha küçük olana kadar devam edecektir.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Microsoft.Quantum.Optimization.UnivariateOptimizationResult
+  types:
+  - summary: Verilen sınırlar içinde bulunan, belirtilen işlevin yerel bir optimizasyonu.
+    uid: microsoft.quantum.optimization.univariateoptimizationresult
+metadata:
+  ms.openlocfilehash: a93eed007d3720b38529b56d6b9b235869a37eee
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909016"

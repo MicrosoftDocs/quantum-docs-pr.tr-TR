@@ -1,10 +1,10 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.preparation.preparearbitrarystate
-name: PrepareArbitraryState
+uid: microsoft.quantum.preparation.approximatelypreparearbitrarystate
+name: ApproximatelyPrepareArbitraryState
 type: operation
 namespace: Microsoft.Quantum.Preparation
 summary: >-
-  Bir ölçü kümesi ve az endian kodlu bir hisse kayıt verildiğinde, söz konusu kayıt üzerinde verilen katsayıların açıklandığı bir durum hazırlar.
+  Bir ölçü kümesi ve az endian kodlu bir hisse kayıt verildiğinde, verilen katsayıların belirli bir kabul toleransına göre tanımlanan bir durumu hazırlar.
 
 
   Bu işlem, $n $-qubit hesaplama tabanlı durumu $ \ket{0 \cnoktalar 0} $ T_J _j e ^ {i} $ $r karmaşık katlarla rastgele bir hisse ma(Fe{\psi} $ hazırlar.
@@ -16,11 +16,15 @@ summary: >-
 
   \end{hizalaması} $ $
 remarks: _J < $0 $r negatif giriş katsayılarını $ | r_j | $ değeri ile pozitif kabul edilir. `coefficients` $ (r_j, t_j) = (0,0, 0,0) $ öğesinden daha az $2 ^ n $ belirtilirse, bu öğe ile doldurulur.
-syntax: 'operation PrepareArbitraryState (coefficients : Microsoft.Quantum.Math.ComplexPolar[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation ApproximatelyPrepareArbitraryState (tolerance : Double, coefficients : Microsoft.Quantum.Math.ComplexPolar[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: '- Senişce Logic devreleri Vivek V. ShENdE, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176'
 input:
-  content: '(coefficients : Microsoft.Quantum.Math.ComplexPolar[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  content: '(tolerance : Double, coefficients : Microsoft.Quantum.Math.ComplexPolar[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
+  - name: tolerance
+    summary: Verilen durum hazırlanırken kullanılacak yaklaşık tolerans.
+    isPrimitive: true
+    uid: Double
   - name: coefficients
     summary: Mutlak değerleri ve aşama $ (r_j, t_j) ile temsil edilen en fazla $2 ^ n $ karmaşık katsayılar dizisi. $J $ TH katsayısı, küçük endian biçiminde $ \ket{j} $ kodlu durum sayısını dizine ekler.
     isArray: true
@@ -39,9 +43,9 @@ functors:
 seeAlso:
 - microsoft.quantum.preparation.approximatelypreparearbitrarystate
 metadata:
-  ms.openlocfilehash: 2567df40b04c25e1cc579bf97787b2d8bbed6793
+  ms.openlocfilehash: 1d815ef49cef3355d6b7109bc58e444f673ec681
   ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: tr-TR
   ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77907622"
+  ms.locfileid: "77908404"
