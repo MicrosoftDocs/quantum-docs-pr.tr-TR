@@ -1,17 +1,17 @@
 ---
-title: 'Q # standart kitaplıkları-algoritmalar | Microsoft Docs'
-description: Q# standart kitaplıkları
+title: "Q 'da hisse algoritmaları #"
+description: Genliği yükseltme, Fourier dönüşümü, Draper ve Beauregard adders ve aşama tahmini dahil olmak üzere temel hisse bilgi işlem algoritmaları hakkında bilgi edinin.
 author: QuantumWriter
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 1c45808207a2020f603448eba05900cdc40b4916
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: aaa9ddf47e5ea35e7e57b9828db082889d0e6adf
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036364"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907248"
 ---
 # <a name="quantum-algorithms"></a>Hisse algoritmaları #
 
