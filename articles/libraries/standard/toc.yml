@@ -1,5 +1,3 @@
-- name: OSS lisanslama
-  href: licensing.md
 - name: Giriş
   href: prelude.md
 - name: Klasik matematik
@@ -20,3 +18,5 @@
   href: error-correction.md
 - name: Uygulamalar
   href: applications.md
+- name: OSS lisanslama
+  href: licensing.md
