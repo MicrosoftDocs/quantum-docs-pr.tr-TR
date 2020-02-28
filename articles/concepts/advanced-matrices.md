@@ -1,17 +1,17 @@
 ---
-title: Gelişmiş matris kavramları | Microsoft Docs
-description: Gelişmiş matris kavramları
+title: Gelişmiş matris kavramları
+description: Hisse algoritmaları anlatmak ve benzetimini yapmak için kullanılan temel araçlar olan eigenvektörler, eigenvalues ve matris üsleri hakkında bilgi edinin.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.matrix-advanced
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f87b3bcd19d2f98fea2a9724a280781a78c4cbb9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a83911e01ad758bbcb7f701000fd58b4f1c91cd2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183769"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907588"
 ---
 # <a name="advanced-matrix-concepts"></a>Gelişmiş matris kavramları #
 
@@ -27,7 +27,7 @@ $V [ *$, bazı*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) say
 
 Diğer bir örnek olarak, köşegen üzerinde yalnızca sıfır olmayan girişler içeren $D bir [*diyagonal matris*](https://en.wikipedia.org/wiki/Diagonal_matrix) düşünün:
 
-$ $ \begin{bmatrix} D_1 & 0 & 0 \\\\ 0 & d_2 & 0 \\\\ 0 & 0 & D_3 \end{bmatrix}.
+$ $ \begin{bmatrix} d_1 & 0 & 0 \\\\ 0 & d_2 & 0 \\\\ 0 & 0 & d_3 \end{bmatrix}.
 $$
 
 Vektörler
@@ -36,10 +36,10 @@ $ $ \begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix}0 \\\\ 1 \\\\ 0
 
 Bu matrisin eigenvalues $d _1 $, $d _2 $ ve $d _3 $, sırasıyla. $D _1 $, $d _2 $ ve $d _3 $ farklı sayılardır, bu vektörler (ve bunların katları), matris $D $ olan tek eigenvektörlerdir. Genel olarak, çapraz matris için, eigenvalues ve eigenvektörleri okumak kolaydır. Eigenvalues, köşegen üzerinde görünen tüm numaralardır ve ilgili eigenvektörlerini $1 $ değerine eşit bir girişi olan birim vektörleridir ve kalan girişler $0 $ ' e eşittir.
 
-Yukarıdaki örnekte, $D $ öğesinin eigenvektörler $3 $ boyutlu vektörler için temel bir baz olduğunu unutmayın. Bu, herhangi bir Vector öğesinin doğrusal bir birleşimi olarak yazılabilmesini sağlayan bir vektör kümesidir. Daha açık, $v _1 $, $v _2 $ ve $v _3 $ bir vektör $v $ $v = A_1 v_1 + a_2 v_2 + a_3 v_3 $ $a _1 $, $a _2 $ ve $a _3 $ gibi bir sayı olarak yazılabilir.
+Yukarıdaki örnekte, $D $ öğesinin eigenvektörler $3 $ boyutlu vektörler için temel bir baz olduğunu unutmayın. Bu, herhangi bir Vector öğesinin doğrusal bir birleşimi olarak yazılabilmesini sağlayan bir vektör kümesidir. Daha açık, $v _1 $, $v _2 $ ve $v _3 $ $v herhangi bir sayı $v _1 $, a_1 _2 $ ve v_1 _3 $ a_2 bazı sayılar için v_2 = a_3 v_3 + $a $a + $a $ olarak yazılabilir.
 
 Bir hermitian matrisinin (kendi kendine adjoint olarak da adlandırılır), kendi karmaşık eşlenimiyle eşit olan karmaşık bir kare matrisi olduğunu hatırlayın, ancak Unitary matrisi ters bir değer olan karmaşık eşleniği olan karmaşık bir kare matrisi olur.
-Yalnızca hisse bilgi işlem sırasında karşılaşılan tek matrisler olan hermitian ve Unitary matrisleri için, aşağıdakileri göz atmak için [*Spectral teoreminin*](https://en.wikipedia.org/wiki/Spectral_theorem)olarak bilinen genel bir sonuç vardır: herhangi bir hermitian veya Unitary $M $, Unitary $U $, bazı köşegen matris $D $ için $M = U ^ \linger D U $. Ayrıca, $D $ ' ın köşegen girdileri $M $ öğesinin eigenvalues olur.
+Yalnızca hisse hesaplamasından kaynaklanan tek matrisler olan hermitian ve Unitary matrisleri için, şunları göz atmak gereken [*Spectral teoreminin*](https://en.wikipedia.org/wiki/Spectral_theorem)olarak bilinen genel bir sonuç vardır: herhangi bir hermitian veya Unitary matris $M $, bazı çapraz matris $D $ için $M = U ^ \hanger D U $ gibi bir Unitary $U $ vardır. Ayrıca, $D $ ' ın köşegen girdileri $M $ öğesinin eigenvalues olur.
 
 Bir diyagonal matris $D $ ' nin eigenvalues ve eigenvektörlerini nasıl hesapladığımimizi zaten biliyoruz. Bu işlemi kullanarak, $v $ 'in eigenvalue $c $, yani $Dv = CV $ olan $D $ öğesinin bir eigenvector olduğunu, daha sonra $U ^ \hanger v $, eigenvalue $M $ olan $c $ öğesinin eigenvector olduğunu biliyoruz. Bunun nedeni
 
@@ -55,7 +55,7 @@ Klasik bir bilgisayarda matris üstel değerini hesaplamak için uygulamada bir�
 
 Bir matrisin üstel değerini nasıl hesapladığınızı anlamanın en kolay yolu, bu matrisin eigenvalues ve eigenvektörlerinden oluşur.  Özellikle, yukarıda açıklanan Spectral, her hermitian veya Unitary matrisi için $A $ bir Unitary $U $ ve $A = U ^ \linger D U $ gibi bir diyagonal matris $D $ olduğunu söyler.  UnitID özellikleri nedeniyle $A ^ 2 = U ^ \dağılım D ^ 2 U $ ve benzer tüm güç $p $ $A ^ p = U ^ \dağılım D ^ p U $ için benzer.  Bunu, elde ettiğimiz işleç üstel işlecinin işleç tanımına değiştirir:
 
-$ $ e ^ A = U ^ \dağılım \left (\ cıvabitti + D + \frac{D ^ 2} {2!} + \cnoktalar \right) U = U ^ \hanger \begin{bmatrix}\exp (D_{11}) & 0 & \cnoktalar & 0\\\\ 0 & \exp (D_{22}) & \cnoktalar & 0\\\\ \vnoktalar & \vnoktalar & \dnoktalar & \vnoktalar\\\\ 0 & 0 & \cnoktalar & \exp (D_ {NN}) \end{bmatrix} U. $ $
+$ $ e ^ A = U ^ \dağılım \left (\ cıvabitti + D + \frac{D ^ 2} {2!} + \cnoktalar \right) U = U ^ \hanger \begin{bmatrix}\exp (D_{11}) & 0 & \cnoktalar & 0\\\\ 0 & \exp (D_{22}) & \cnoktalar & 0\\\\ \vnoktalara & \vnoktalara & \dnoktalar & \vnoktalar\\\\ 0 & 0 & \cnoktalar & \exp (D_ {NN}) \end{bmatrix} U. $ $
 
 Diğer bir deyişle, matrisin eigenine dönüştürmeniz halinde $A $ daha sonra matris üstel değeri, matrisin eigenlerin normal üstel değerini hesaplama ile eşdeğerdir.  Hisse hesaplamalarındaki çok sayıda işlem matris üslerinin gerçekleştirilmesini içerir. Bu işlem, işlecin üstel düzeyini gerçekleştirmeyi kolaylaştırmak için bir matrisin eigenliğine dönüştürme süreciyle sık görünür ve Trour – bu kılavuzun ilerleyen kısımlarında açıklanan Suzuki stili hisse simülasyonu yöntemleri.
 

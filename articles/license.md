@@ -1,15 +1,15 @@
 ---
 title: Microsoft Quantum Development Kit lisansı
-description: Microsoft Quantum Development Kit lisansı
+description: Microsoft Quantum Development Kit için lisans koşulları, bildirimler ve Kullanıcı hakları.
 author: QuantumWriter
 ms.author: cpalmer
 ms.date: 11/04/2019
-ms.openlocfilehash: d864c3e4ecefa6f998b9a893ecc4a3995d67dac4
-ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.openlocfilehash: 0d3aa9ae9e4f232ba2403512ff6e2394ecedeb22
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73463373"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907129"
 ---
 # <a name="microsoft-software-license-terms"></a>MICROSOFT YAZILIMI LİSANS KOŞULLARI 
 ## <a name="microsoft-quantum-development-kit-preview"></a>MICROSOFT HISSE GELIŞTIRME SETI (ÖNIZLEME)

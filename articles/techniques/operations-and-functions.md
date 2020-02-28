@@ -1,17 +1,17 @@
 ---
-title: 'İşlemler ve işlevler-Q # teknikleri | Microsoft Docs'
-description: 'İşlemler ve işlevler-Q # teknikleri'
+title: 'S # Işlem ve Işlevleri'
+description: 'S # işlemleri ve işlevleri hakkında bilgi edinin ve bunların bir hisse bir program olarak nasıl uygulandığını öğrenin.'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 1fca20bb44cc42008f7d25d2fc71a39b962525c2
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 43f0cf2da192a607e514d0c7de57a9bdd067faf7
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820785"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907673"
 ---
 # <a name="q-operations-and-functions"></a>S # Işlem ve Işlevleri
 
@@ -231,7 +231,7 @@ operation ApplyTwice(op : (Qubit => Unit), target : Qubit) : Unit {
 
 Bu örnekte, tür `(Qubit => Unit)` görüntülenen `=>` ok, giriş `op` alanının, türü `Qubit` giriş olarak alan ve çıktısı olarak boş bir tanımlama grubu üreten bir işlem olduğunu gösterir.
 Ayrıca, bu işlem türünün özelliklerini belirttik ve bu, hangi funın desteklendiği hakkındaki bilgileri içerir.
-`(Qubit => Unit)` bir işlem `Adjoint` veya `Controlled` functor desteklemiyor. Bu tür bir işlemin, örneğin `Adjoint` functor desteğine sahip olduğunu belirtmek istiyoruz, bunu adjointable olarak bildirmemiz gerekir. Bu, türü `is Adj` ek açıklama kullanılarak yapılır. Benzer şekilde, `(Qubit => Unit is Ctl)` bu tür bir işlemin `Controlled` functor 'ı desteklediğini gösterir. Bu konuda [Q # ' daki türler (XREF: Microsoft. hisse. Language. Type-model) daha genel olarak tartışıyoruz.
+`(Qubit => Unit)` bir işlem `Adjoint` veya `Controlled` functor desteklemiyor. Bu tür bir işlemin, örneğin `Adjoint` functor desteğine sahip olduğunu belirtmek istiyoruz, bunu adjointable olarak bildirmemiz gerekir. Bu, türü `is Adj` ek açıklama kullanılarak yapılır. Benzer şekilde, `(Qubit => Unit is Ctl)` bu tür bir işlemin `Controlled` functor 'ı desteklediğini gösterir. Daha fazla bilgi için bkz. soru- [cevap](xref:microsoft.quantum.language.type-model) , daha genel.
 
 Şimdilik, işlem biçiminde bir hisse programının açıklamasını döndüren klasik bir işlev olarak bazı klasik koşullu mantığı ayırabilmemiz gibi, işlemleri çıkışların bir parçası olarak de döndürebiliriz.
 Basit bir örnek olarak, iki bitlik bir klasik ileti alan tarafın, bu iletiyi kullanarak doğru bir teleporm durumuna ulaşmasını sağlamak için ileti kullanması gereken teleporsyon örneğini düşünün.

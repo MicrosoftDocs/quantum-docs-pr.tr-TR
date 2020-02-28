@@ -1,24 +1,24 @@
 ---
-title: Hisse Oracles | Microsoft Docs
-description: Hisse Oracles
+title: Kuantum oracle’ları
+description: İle nasıl çalışacağınızı ve başka bir algoritmaya girdi olarak kullanılan hisse Oracles, kara Box işlemlerini tanımlama hakkında bilgi edinin.
 author: cgranade
 uid: microsoft.quantum.concepts.oracles
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 07/11/2018
 ms.topic: article
-ms.openlocfilehash: 96949b371a3a5a1135d624690933a48ea0214a2e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1d1d0b0903db8e994166c3e8a5798f70742a1c7e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184721"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904936"
 ---
 # <a name="quantum-oracles"></a>Hisse Oracles
 
 Oracle $O $, başka bir algoritmaya girdi olarak kullanılan "kara kutu" işlemidir.
 Genellikle, bu gibi işlemler klasik bir işlev kullanılarak tanımlanır $f: \\{0, 1\\} ^ n \ \\{0, 1\\} ^ d $ $n $-bit ikili girişi alan ve bir $m $-bit ikili çıktısı üreten.
-Bunu yapmak için belirli bir ikili girişi $x = (X_{0}, X_{1}, \noktalar, X_ {n-1}) $ kullanın.
-Qubit durumları $ \ket{\vec{x}} = \ket{X_{0}} \otimes \ket{X_{1}} \otimes \cnoktalar \otimes \ket{X_{n-1}} $ olarak etiketliyoruz.
+Bunu yapmak için belirli bir ikili girişi $x = (x_{0}, x_{1}, \noktalar, x_ {n-1}) $ değerini düşünün.
+Qubit durumları $ \ket{\vec{x}} = \ket{x_{0}} \otimes \ket{x_{1}} \otimes \cnoktalar \otimes \ket{x_ {n-1}} $ olarak etiketliyoruz.
 
 İlk olarak, \ket{x} = \ket{f (x)} $ $O için $O $ tanımlamalısınız, ancak bu birkaç soruna neden olabilir.
 İlk olarak, $f $, kayıttaki qubits sayısını değiştirecek $O şekilde farklı bir giriş ve çıkış boyutuna sahip olabilir ($n \ne m $).
@@ -43,16 +43,16 @@ Bu, tüm hisse işlemleri gibi $O $ ' nin, üzerinde çalıştığı durumda do�
 Örneğin, $H \demet{0} = \ket{+} $ ve $H \ket{1} = \tus{-}$ tarafından tanımlanan Hadamard işlemini göz önünde bulundurun.
 $ \Ket{+} $ üzerinde $H $ ' nin nasıl çalıştığını öğrenmek istiyorsanız, bu $H $ ' nin doğrusal olduğunu,
 
-$ $ \begin{hizalaması} H\ket {+} & = \frac{1}{\sqrt{2}} H (\ket{0} + \ayraç{1}) = \frac{1}{\sqrt{2}} (H\demet{0} + H\demet{1}) \\\\ & = \frac{1}{\sqrt{2}} (\ ayraç {+} + \ ayraç{-}) = \frac12 (\demet{0} + \ ayraç{1} + \ ayraç{0}-\ayraç{1}) = \demet{0}.
+$ $ \begin{hizalaması} H\ket {+} & = \frac{1}{\sqrt{2}} H (\demet{0} + \ayraç{1}) = \frac{1}{\sqrt{2}} (H\demet{0} + H\demet{1}) \\\\ & = \frac{1}{\sqrt{2}} (\ket{+} + \ket{-}) = \frac12 (\ayraç{0} + \ ayraç{1} + \ ayraç{0}-\ayraç{1}) = \demet{0}.
 \end{hizalaması} $ $
 
 Oracle $O $ ' mimizin tanımlanması durumunda benzer bir şekilde $ \ket{\psı} $ $n + m $ qubits olarak yazılabilir
 
-$ $ \begin{hizalaması} \ket{\psı} & = \sum_{x \\\{0, 1\\} ^ n, y \in \\{0, 1\\} ^ ı} \Alpha (x, y) \ket{x} \ket{i} \end{hizalaması} $ $
+$ $ \begin{hizalaması} \ket{\psı} & = \ sum_ {x \in \\{0, 1\\} ^ n, y \/\\{0, 1\\} ^ e} \Alpha (x, y) \ket{x} \ket{i} \end{hizalaması} $ $
 
 $ \Alpha: \\{0, 1\\} ^ n \times \\{0, 1\\} ^ d \ to \mathbb{C} $, $ \ket{\psı} $ durumunun katsayılarını temsil eder. Yani
 
-$ $ \begin{hizalaması} O \ket{\psı} & = O \sum_{x \\\{0, 1\\} ^ n, y \ \\{0, 1\\} ^ ı} \Alpha (x, y) \ket{x} \ket{yı} \\\\ & = \sum_{x \\\{0 , 1\\} ^ n, y \ \\{0, 1\\} ^ m} \Alpha (x, y) O \ket{x} \ket{yı} \\\\ & = \sum_{x \In \\{0, 1\\} ^ n, y \ ın \\{0 , 1\\} ^ e} \alfa (x, y) \ket{x} \ket{y \ OPLUS f (x)}.
+$ $ \begin{hizalaması} O \ket{\psı} & = O \ sum_ {x \in \\{0, 1\\} ^ n, y \ in \\{0, 1\\} ^ m} \Alpha (x, y) \ket{x} \\x{yı} \\\\ & = \ sum_ {x \in \\{0, 1\\} ^ n, y \ \\{0, 1\\} ^ m} \Alpha (x, y) O \ket{x} \ket{yı} \\\\ & = \ sum_ {x \\\{0, 1\\} ^ n , y \ \\{0, 1\\} ^ d} \Alpha (x, y) \ket{x} \ket{y \oplus f (x)}.
 \end{hizalaması} $ $
 
 ## <a name="phase-oracles"></a>Phase Oracles
@@ -60,8 +60,8 @@ Alternatif olarak, $O $ girişine göre bir _aşama_ uygulayarak bir Oracle $O $
 Örneğin, $ $ \begin{hizalaması} O \ket{x} = (-1) ^ {f (x)} \ket{x} gibi $O $ tanımlayabiliriz.
 \end{hizalaması} $ $ bir evre, başlangıçta hesaplama tabanlı bir durum $ \ket{x} $ içinde bir yazmaç üzerinde işlem yaparken, bu aşama genel bir aşamadır ve bu nedenle observable değildir.
 Ancak bu tür bir Oracle, bir üst konuma veya denetimli bir işleme uygulandığında çok güçlü bir kaynak olabilir.
-Örneğin, $f $ bir tek qubit işlevi için bir Phase Orcale $O _F $ düşünün.
-Ardından, $ $ \begin{hizalaması} O_f \ket{+} & = O_f (\demet{0} + \ayraç{1})/\sqrt{2} \\\\ & = ((-1) ^ {f (0)} \demet{0} + (-1) ^ {f (1)} \ayraç{1})/\sqrt{2} \\\\ & = (-1) ^ {f ( 0)} (\ket{0} + (-1) ^ {f (1)-f (0)} \ayraç{1})/\sqrt{2} \\\\ & = (-1) ^ {f (0)} Z ^ {f (0)-f (1)} \ket{+}.
+Örneğin, $f $ bir tek qubit işlevi için _f $ $O bir aşamayı veya bir aşamayı düşünün.
+Ardından, $ $ \begin{hizalaması} O_f \ket{+} & = O_f (\ket{0} + \tus{1})/\sqrt{2} \\\\ & = ((-1) ^ {f (0)} \ayraç{0} + (-1) ^ {f (1)} \demet{1})/\sqrt{2} \\\\ & = (-1) ^ {f (0)} (\demet{0} + (-1) ^ {f (1)-f (0)} \ayraç{1})/\sqrt{2} \\\\ & = (-1) ^ {f (0)} Z ^ {f (0)-f (1)} \ket{+}.
 \end{hizalaması} $ $
 
 Daha genel olarak, Oracles görünümlerinin her ikisi de yalnızca tek bir bit yerine gerçek sayılar döndüren klasik işlevleri temsil edecek şekilde ayarlanabilir.

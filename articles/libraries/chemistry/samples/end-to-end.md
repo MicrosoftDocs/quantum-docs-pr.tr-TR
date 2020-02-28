@@ -1,16 +1,16 @@
 ---
-title: NWChem ile uçtan uca | Microsoft Docs
-description: NWChem docs ile uçtan uca
+title: Örnek NWChem hisse programı
+description: Bir NWChem giriş destesi kullanarak, hisse kualem simülasyonu için geçit sayısı alma örneği üzerinden ilerleyin.
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 8f727ea4599e06b41ced561c624c4e773b9887d9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 545ade99859f2a9939477fb18604921f70a5d9aa
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73185826"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906517"
 ---
 # <a name="end-to-end-with-nwchem"></a>NWChem ile uçtan uca #
 
@@ -25,7 +25,7 @@ Daha fazla bilgi için:
 
 > [!NOTE]
 > Bu örnek için Windows PowerShell Core 'un çalıştırılması gerekir.
-> https://github.com/PowerShell/PowerShell adresinden Windows, macOS veya Linux için PowerShell Core 'u indirin.
+> https://github.com/PowerShell/PowerShelladresinden Windows, macOS veya Linux için PowerShell Core 'u indirin.
 
 ## <a name="importing-required-powershell-modules"></a>Gerekli PowerShell modülleri içeri aktarılıyor ##
 

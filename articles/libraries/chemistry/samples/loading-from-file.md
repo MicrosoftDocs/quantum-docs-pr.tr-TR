@@ -1,22 +1,22 @@
 ---
-title: Dosyadan Hamiltonian yükleme | Microsoft Docs
-description: Dosya belgelerinden Hamiltonian yükleme
+title: Dosyadan Hamiltonian yükleme
+description: Broombridge şemasını kullanarak, büyük bir Hamiltonian 'ın otomatik olarak nasıl oluşturulacağını öğrenin.
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian
-ms.openlocfilehash: 18f257efe8d53d2a22af4840bd8d17ab6b80a503
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 715dbcefc10ecc5af45f2bdd228890f1cb28886b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442344"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907299"
 ---
 # <a name="loading-a-hamiltonian-from-file"></a>Dosyadan Hamiltonian yükleme
 Daha önce, kendisine ayrı koşullar ekleyerek Hamiltonians oluşturduk. Bu küçük örnekler için çok iyi olsa da, ölçek at ölçeğinde hisse Hamiltonians, milyonlarca veya milyarlarca şart gerektirir. Nwchem gibi kimya paketleri tarafından oluşturulan Hamiltonians, el ile içeri aktarmak için çok büyük. Bu örnekte, bir `FermionHamiltonian` örneğinin [Broombridge şeması](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)tarafından temsil edilen bir moleule tarafından otomatik olarak nasıl oluşturulacağını anladık. Başvuru için, bir tane, belirtilen `LithiumHydrideGUI` örneğini veya `RunSimulation` örneğini inceleyebilir. Sınırlı destek, [LIQUi | >](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/)tarafından tüketilen biçimden içeri aktarılmak için de kullanılabilir.
 
-Örnek deposunun `IntegralData/YAML` klasöründe sağlanan Nitrogen moleule örneğini görmemize izin verin. `Broombridge` düzeni yükleme yöntemi basittir.
+Örnek deposunun `IntegralData/YAML` klasöründe sağlanan Nitrogen moleule örneğini görmemize izin verin. `Broombridge` şeması yükleme yöntemi basittir.
 
 ```csharp
 // This is the name of the file we want to load

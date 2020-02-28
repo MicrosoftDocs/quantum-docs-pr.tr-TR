@@ -1,18 +1,18 @@
 ---
-title: Üçüncü taraf yazılımları Microsoft Quantum Development Kit | Microsoft Docs
-description: Üçüncü taraf yazılımları Microsoft Quantum Development Kit
+title: Üçüncü taraf yazılımları Microsoft Quantum Development Kit
+description: Üçüncü taraf yazılım bildirimlerini ve bilgilerini Microsoft Quantum Development Kit.
 services: service-name-with-dashes-AZURE-ONLY
-keywords: SEO uzmanınıza danışmadan anahtar sözcükler eklemeyin veya anahtar sözcükleri düzenlemeyin.
+keywords: SEO uzmanınıza danışmadan anahtar sözcük eklemeyin veya anahtar sözcükleri düzenlemeyin.
 author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
-ms.openlocfilehash: 85bade791c0744d6636d60fe4f7c9b8f7749c7c6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 84d83bf65b3c01a630d98210a5ac3fe322fa501f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184381"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906823"
 ---
 # <a name="third-party-software-notices-and-information"></a>ÜÇÜNCÜ TARAF YAZıLıM BILDIRIMLERI VE BILGILERI
 
@@ -20,7 +20,7 @@ Bu dosya, aşağıda listelenen projelerden (üçüncü taraf IP) malzemeleri te
 
 1. YamlDotNet. signed sürüm 4.2.2 (https://www.nuget.org/packages/YamlDotNet.Signed/4.2.2)
 2. xUnit. Runner. VisualStudio 2.3.1 (https://www.nuget.org/packages/xunit.runner.visualstudio/2.3.1)
-3. xUnit. Çalıştırıcısı. Console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1 )
+3. xUnit. Çalıştırıcısı. Console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1)
 4. xUnit. Extensibility. Execution 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
 5. xUnit. Extensibility. Core 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.core/2.3.1)
 6. xUnit. Core 2.3.1 (https://www.nuget.org/packages/xunit.core/2.3.1)
@@ -39,7 +39,7 @@ Bu dosya, aşağıda listelenen projelerden (üçüncü taraf IP) malzemeleri te
 ---------------------------------------
 Telif hakkı (c) 2008, 2009, 2010, 2011, 2012, 2013, 2014 Antoine ve katkıda bulunanlar
 
-Bu durumda, bu yazılımın bir kopyasını ("yazılım") kullanan herhangi bir kişiye, bu yazılımın ve ilgili belge dosyalarının ("yazılım"), kullanma haklarını kısıtlama, kopyalama, değiştirme, birleştirme, Yazılım kopyalarını yayımlayın, dağıtın, alt lisanslayın ve/veya yazılımın kopyalarını oluşturup, yazılımın bu şekilde olduğu kişilere, aşağıdaki koşullara bağlı olarak izin ver:
+Bu yazılımın ve ilişkili belge dosyalarının ("yazılım") bir kopyasını elde eden herhangi bir kişiye izin verildiğinde, bu, ücretsiz olarak kabul edilir. Yazılım kopyalarını kısıtlama olmadan, kopyalama, değiştirme, birleştirme, yayımlama, dağıtma, alt lisans verme, yeniden lisanslama ve/ya da yazılımın kopyalarını, yazılımın hangi kişilere suntığlarına izin verecek şekilde, aşağıdaki koşullara tabi olacak şekilde sınırlama olmaksızın kullanmak için:
 
 Yukarıdaki telif hakkı bildirimi ve bu izin bildirimi, yazılımın tüm kopyalarına veya önemli bölümlerine dahil edilir.
 
@@ -166,7 +166,7 @@ Microsoft Genel Lisansı (MS-PL)
 
 Bu lisans, eşlik eden yazılımın kullanımını yönetir. Yazılımı kullanıyorsanız, bu lisansı kabul etmiş olursunuz. Lisansı kabul etmeyin yazılımı kullanmayın.
 
-1. Açıklamalar
+1. Tanımlar
 
 "Yeniden oluşturma," "üretilmesi," "türev işler," ve "dağıtım" terimleri, ABD telif hakkı yasaları kapsamında olduğu gibi, burada da aynı anlama sahiptir.
 
@@ -180,7 +180,7 @@ Bu lisans, eşlik eden yazılımın kullanımını yönetir. Yazılımı kullan�
 
 (A) telif hakkı verme-bu lisansın koşullarına tabi, Bölüm 3 ' teki lisans koşulları ve sınırlamaları da dahil olmak üzere her katılımcısı, katkılarını yeniden oluşturmak için size özel, dünya çapında, ücretsiz bir telif hakkı lisansı verir, türeme hazırlığı yapın katkılarından ve katkılarından birini ya da oluşturduğunuz tüm türev çalışmaları dağıtır.
 
-(B) patent verme-bu lisansın koşullarına tabidir, Bölüm 3 ' teki lisans koşulları ve sınırlamaları da dahil olmak üzere her katılımcısı, lisanslı patentlerin altında özel olarak, dünya çapında ve ücretsiz lisansa sahip bir lisans verir yazılımda katkıdaki katkı veya türev iş, yazılımın katkısında veya türevi olarak elden atın.
+(B) patent verme-bu lisansın koşullarına tabidir, Bölüm 3 ' teki Lisans koşullarını ve kısıtlamalarını dahil olmak üzere, her katkıda bulunan, lisanslı patentlerde özel olarak, dünya çapında ve ücretsiz olarak lisanslanan bir lisans verir, bu, satışa sunma, kullanma, satma, satışa sunma, satın alma
 
 3. Koşullar ve sınırlamalar
 
@@ -192,7 +192,7 @@ Bu lisans, eşlik eden yazılımın kullanımını yönetir. Yazılımı kullan�
 
 (D) yazılımın herhangi bir bölümünü kaynak kodu biçiminde dağıtırsanız, bu lisansın yalnızca, dağıtıma sahip olduğu tüm bir kopyasını ekleyerek bu lisans altında bunu yapabilirsiniz. Yazılımın herhangi bir bölümünü derlenen veya nesne kodu biçiminde dağıtırsanız, bunu yalnızca bu lisansla uyumlu bir lisans altında yapabilirsiniz.
 
-(E) yazılım, "olduğu gibi" lisanslanır. Kullanım riski size aittir. Katkıda bulunanlar hiçbir açık teminat, garanti veya koşul vermez. Yerel yasalarınız altında bu lisansın değiştiremeyebileceği ek tüketici haklarına sahip olabilirsiniz. Yerel yasalarınız kapsamında izin verilen ölçüde, katkıda bulunanlar, SATILABİLİRLİK, belirli bir amaca uygunluk ve ihlal edilmemesi dahil olmak üzere zımni garantileri hariç tutar.
+(E) yazılım, "olduğu gibi" lisanslanır. Bunların kullanım riski size aittir. Katkıda bulunanlar hiçbir açık teminat, garanti veya koşul vermez. Yerel yasalarınız altında bu lisansın değiştiremeyebileceği ek tüketici haklarına sahip olabilirsiniz. Yerel yasalarınız kapsamında izin verilen ölçüde, katkıda bulunanlar, SATILABİLİRLİK, belirli bir amaca uygunluk ve ihlal edilmemesi dahil olmak üzere zımni garantileri hariç tutar.
 
 ## <a name="fsharpcore-notices-and-information"></a>FSharp. Core BILDIRIMLERI ve BILGILERI
 ---------------------------------------
@@ -201,7 +201,7 @@ MıT lisansı (MıT)
 Telif hakkı (c) Microsoft Corporation.
 Tüm hakları saklıdır.
 
-Bu durumda, bu yazılımın bir kopyasını ("yazılım") kullanan herhangi bir kişiye, bu yazılımın ve ilgili belge dosyalarının ("yazılım"), kullanma haklarını kısıtlama, kopyalama, değiştirme, birleştirme, Yazılım kopyalarını yayımlayın, dağıtın, alt lisanslayın ve/veya yazılımın kopyalarını oluşturup, yazılımın bu şekilde olduğu kişilere, aşağıdaki koşullara bağlı olarak izin ver:
+Bu yazılımın ve ilişkili belge dosyalarının ("yazılım") bir kopyasını elde eden herhangi bir kişiye izin verildiğinde, bu, ücretsiz olarak kabul edilir. Yazılım kopyalarını kısıtlama olmadan, kopyalama, değiştirme, birleştirme, yayımlama, dağıtma, alt lisans verme, yeniden lisanslama ve/ya da yazılımın kopyalarını, yazılımın hangi kişilere suntığlarına izin verecek şekilde, aşağıdaki koşullara tabi olacak şekilde sınırlama olmaksızın kullanmak için:
 
 Yukarıdaki telif hakkı bildirimi ve bu izin bildirimi, yazılımın tüm kopyalarına veya önemli bölümlerine dahil edilir.
 
@@ -213,7 +213,7 @@ MıT lisansı (MıT)
 
 Telif hakkı (c) 2013 Tomas Petricek
 
-Bu durumda, bu yazılımın bir kopyasını ("yazılım") kullanan herhangi bir kişiye, bu yazılımın ve ilgili belge dosyalarının ("yazılım"), kullanma haklarını kısıtlama, kopyalama, değiştirme, birleştirme, Yazılım kopyalarını yayımlayın, dağıtın, alt lisanslayın ve/veya yazılımın kopyalarını oluşturup, yazılımın bu şekilde olduğu kişilere, aşağıdaki koşullara bağlı olarak izin ver:
+Bu yazılımın ve ilişkili belge dosyalarının ("yazılım") bir kopyasını elde eden herhangi bir kişiye izin verildiğinde, bu, ücretsiz olarak kabul edilir. Yazılım kopyalarını kısıtlama olmadan, kopyalama, değiştirme, birleştirme, yayımlama, dağıtma, alt lisans verme, yeniden lisanslama ve/ya da yazılımın kopyalarını, yazılımın hangi kişilere suntığlarına izin verecek şekilde, aşağıdaki koşullara tabi olacak şekilde sınırlama olmaksızın kullanmak için:
 
 Yukarıdaki telif hakkı bildirimi ve bu izin bildirimi, yazılımın tüm kopyalarına veya önemli bölümlerine dahil edilir.
 
@@ -226,7 +226,7 @@ MıT lisansı (MıT)
 
 Telif hakkı (c) 2012 Oystein Bjorke
 
-Bu durumda, bu yazılımın bir kopyasını ("yazılım") kullanan herhangi bir kişiye, bu yazılımın ve ilgili belge dosyalarının ("yazılım"), kullanma haklarını kısıtlama, kopyalama, değiştirme, birleştirme, Yazılım kopyalarını yayımlayın, dağıtın, alt lisanslayın ve/veya yazılımın kopyalarını oluşturup, yazılımın bu şekilde olduğu kişilere, aşağıdaki koşullara bağlı olarak izin ver:
+Bu yazılımın ve ilişkili belge dosyalarının ("yazılım") bir kopyasını elde eden herhangi bir kişiye izin verildiğinde, bu, ücretsiz olarak kabul edilir. Yazılım kopyalarını kısıtlama olmadan, kopyalama, değiştirme, birleştirme, yayımlama, dağıtma, alt lisans verme, yeniden lisanslama ve/ya da yazılımın kopyalarını, yazılımın hangi kişilere suntığlarına izin verecek şekilde, aşağıdaki koşullara tabi olacak şekilde sınırlama olmaksızın kullanmak için:
 
 Yukarıdaki telif hakkı bildirimi ve bu izin bildirimi, yazılımın tüm kopyalarına veya önemli bölümlerine dahil edilir.
 
@@ -244,7 +244,7 @@ Kaynak ve ikili formlarda, değişiklik yapılmadan veya olmadan yeniden dağıt
 * Redistributions ikili biçimde, yukarıdaki telif hakkı bildirimi, bu koşullar listesi ve belgelerde ve/veya diğer malzemelerde dağıtım ile birlikte verilen aşağıdaki vazgeçme belgesi yeniden oluşturulmalıdır.
 * FsCheck 'in adı ve katkıda bulunanın adları, bu yazılımın önceki yazılı izni olmadan türetilmiş ürünleri onaylama veya yükseltme için de kullanılabilir.
 
-BU YAZıLıM, TELIF HAKKı SAHIPLERI VE KATKıDA BULUNANLAR "OLDUĞU GIBI" VE BUNLARLA SıNıRLı OLMAMAK KAYDıYLA, SATıLABILIRLIK VE BELIRLI BIR AMACA UYGUNLUK DAHIL OLMAK ÜZERE TÜM AÇıK VEYA ZıMNI GARANTILER TARAFıNDAN SAĞLANıR. HIÇBIR OLAY OLMAMASı DURUMUNDA, TELIF HAKKı SAHIBI VEYA KATKıDA BULUNANLAR, TÜM DOĞRUDAN, DOLAYLı, ARıZANıN, ÖZEL, MUAF VEYA BELIRLI BIR ZARARDAN SORUMLU YA DA BUNLARLA SıNıRLı OLMAMAK ÜZERE, DAHIL EDILEN MAL VEYA HIZMETLERI TEMIN ETMEK IÇIN SORUMLU DEĞILDIR. KULLANıM, VERI YA DA KAR KAYBı; YA DA IŞ KESINTISI), BU TÜR BIR HASAR OLUŞMASı OLASıLıKSA BILE BU YAZıLıMıN KULLANıMıNDAN BAĞıMSıZ OLARAK, SÖZLEŞME, KESIN YÜKÜMLÜLÜK VEYA TORT (IHMAL EDILEN YA DA BAŞKA BIR ŞEKILDE) MEYDANA GELEN HERHANGI BIR YÜKÜMLÜLÜĞÜNDEN KAYNAKLANıP KAYNAKLANMADıĞıNı BELIRTIR.
+BU YAZILIM, TELİF HAKKI SAHİPLERİ VE KATKIDA BULUNANLAR TARAFINDAN "OLDUĞU GİBİ" SAĞLANMIŞTIR VE TİCARİ OLARAK ELVERİŞLİLİK VE BELİRLİ BİR AMACA UYGUNLUK GİBİ ZIMNİ GARANTİLER DAHİL OLMAK ANCAK BUNLARLA SINIRLI KALMAMAK ÜZERE AÇIK VEYA ZIMNİ HİÇBİR GARANTİ VERİLMEMEKTEDİR. HIÇBIR OLAY OLMAMASı DURUMUNDA, TELIF HAKKı SAHIBI VEYA KATKıDA BULUNANLAR, TÜM DOĞRUDAN, DOLAYLı, ARıZANıN, ÖZEL, MUAF VEYA BELIRLI BIR ZARARDAN SORUMLU YA DA BUNLARLA SıNıRLı OLMAMAK ÜZERE, DAHIL EDILEN MAL VEYA HIZMETLERI TEMIN ETMEK IÇIN SORUMLU DEĞILDIR. KULLANıM, VERI YA DA KAR KAYBı; YA DA IŞ KESINTISI), BU TÜR BIR HASAR OLUŞMASı OLASıLıKSA BILE BU YAZıLıMıN KULLANıMıNDAN BAĞıMSıZ OLARAK, SÖZLEŞME, KESIN YÜKÜMLÜLÜK VEYA TORT (IHMAL EDILEN YA DA BAŞKA BIR ŞEKILDE) MEYDANA GELEN HERHANGI BIR YÜKÜMLÜLÜĞÜNDEN KAYNAKLANıP KAYNAKLANMADıĞıNı BELIRTIR.
 
 ## <a name="argu-notices-and-information"></a>Argu BILDIRIMLERI ve BILGILERI
 ---------------------------------------
@@ -252,7 +252,7 @@ MıT lisansı (MıT)
 
 Telif hakkı (c) 2016 Eirik Tsarpalis
 
-Bu durumda, bu yazılımın bir kopyasını ("yazılım") kullanan herhangi bir kişiye, bu yazılımın ve ilgili belge dosyalarının ("yazılım"), kullanma haklarını kısıtlama, kopyalama, değiştirme, birleştirme, Yazılım kopyalarını yayımlayın, dağıtın, alt lisanslayın ve/veya yazılımın kopyalarını oluşturup, yazılımın bu şekilde olduğu kişilere, aşağıdaki koşullara bağlı olarak izin ver:
+Bu yazılımın ve ilişkili belge dosyalarının ("yazılım") bir kopyasını elde eden herhangi bir kişiye izin verildiğinde, bu, ücretsiz olarak kabul edilir. Yazılım kopyalarını kısıtlama olmadan, kopyalama, değiştirme, birleştirme, yayımlama, dağıtma, alt lisans verme, yeniden lisanslama ve/ya da yazılımın kopyalarını, yazılımın hangi kişilere suntığlarına izin verecek şekilde, aşağıdaki koşullara tabi olacak şekilde sınırlama olmaksızın kullanmak için:
 
 Yukarıdaki telif hakkı bildirimi ve bu izin bildirimi, yazılımın tüm kopyalarına veya önemli bölümlerine dahil edilir.
 

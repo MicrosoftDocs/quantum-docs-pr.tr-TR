@@ -1,17 +1,17 @@
 ---
-title: Dirac gösterimi | Microsoft Docs
-description: Dirac gösterimi
+title: Dirac gösterimi
+description: Hisse durumlarını göstermek ve hisse alma işlemlerinin benzetimini yapmak için Dirac gösterimini kullanma hakkında bilgi edinin.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.dirac
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 33d964d079c94bd947e35d2c09516b29df1bba11
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 204e56cc97fe28f9c52dcfb882aadec7e09bb2dc
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184772"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907571"
 ---
 # <a name="dirac-notation"></a>Dirac gösterimi
 
@@ -62,7 +62,7 @@ $ $ \big | \braket{1 | \psi}\big | ^ 2 = \left | \frac{3}{5}\braket{1 | 1} + \fr
 ### <a name="tensor-product-notation"></a>Tensor ürün gösterimi
 Dirac gösterimi Ayrıca, içindeki örtük bir Tensor ürün yapısını da içerir.  Bu, hisse alma sırasında iki ilişkili hisse al kaydı tarafından tanımlanan eyalet vektörünün, iki durumlu vektörün tencursor ürünleri olduğundan önemlidir.  Bir hisse veya daha fazla öneme sahip olmak isterseniz, öz, Tensor ürün yapısını açıklayan veya önem taşıyan bir hesaplama açıklanmıştır.  Tensor ürün yapısı, her iki hisse alım vektörü $ \phi $ ve $ \psı $ $ \ket{\psı} \ket{\phi} $ olarak $ \psı \otimes \phi $ yazabildiğimiz anlamına gelir. bazen $ \ket{\psı} \otimes \ket{\phi} $ olarak açıkça yazılmış, ancak $ \otimes $ kuralına göre kurala göre vektörde bulunan vektörde gereksizdir.  Örneğin, sıfır duruma göre başlatılan iki qubits ile durum şu şekilde verilir
 
-$ $ \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} = \tus{0} \ otimes \ket{0}= \tus{0} \ayraç{0}.
+$ $ \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} = \ket{0} \ demet{0}.{0}{0}
 $$
 
 Benzer şekilde, $p $ tamsayısı için $ \ket{p} $ durumu, ikili gösterimde $p $ tamsayı olarak kodlayan bir hisse durumu temsil eder.  Örneğin, $5 $ sayısını işaretsiz bir ikili kodlama kullanarak ifade etmek istiyoruz.
@@ -78,7 +78,7 @@ $$
 ### <a name="example-describing-superposition-with-dirac-notation"></a>Örnek: Dirac gösterimi ile süper konumu açıklama
 Bir hisse yerini anlatmak için Dirac gösterimini nasıl kullanabileceğinizi gösteren başka bir örnek olarak, her bir olası bit $n dizesi için eşit üst konum olan bir hisse
 
-$ $ H ^ {\otimes n} \demet{0} = \frac{1}{2 ^ {n/2}} \sum_{j = 0} ^ {2 ^ n-1} \ket{j} = \ket{+} ^ {\otimes n}.
+$ $ H ^ {\otimes n} \demet{0} = \frac{1}{2 ^ {n/2}} \ sum_ {j = 0} ^ {2 ^ n-1} \ket{j} = \ket{+} ^ {\otimes n}.
 $$
 
 Burada, toplamın neden $0 $ ' den $2 ^ {n}-$1 ' e kadar $ bit $n olduğunu merak edebilirsiniz.  İlk olarak, $ bit $n $ bitler 'nin gerçekleştirebileceğine yönelik $2 ^ {n} $ farklı yapılandırma olduğunu unutmayın.  Bu, bir bitin $2 $ değer alıp belirleyebilmesini, ancak iki bitin $4 $ değer ve benzeri bir işlem yapabilmesi gerektiğini belirterek görebilirsiniz. Bu, genel olarak, $2 ^ n $ farklı olası bit dizeleri olduğu, ancak bunların hiçbirinde en büyük değer olan $1 \ cnoktalar 1 = 2 ^ n-$1 olduğu anlamına gelir ve bu nedenle toplamın üst sınırı budur.
@@ -93,16 +93,16 @@ Yani, durum vektörleri arasında tencursor ürünlerinin alınması normal çar
 
 Köşeli vektörler, demet vektörlerine benzer bir kural izler.  Örneğin, $ \bra{\psi}\bra{\phi} $ vektörü $ \psı ^ \hanger \otimes \phi ^ \dağılım = (\psı\otimes \fi) ^ \hanger $. Demet vektörü $ \ket{\psı} $ $ \Alpha \ket{0} + \ Beta \ demet{1}$ ise, vector öğesinin köşeli vektör sürümü $ \bra{\psı} = \ket{\psı} ^ \hanger = (\bra{0}\Alpha ^ * + \bra{1}\beta ^ *) $ şeklindedir.
 
-Örnek olarak, durumları $ \ket{\psi} = \frac{3}{5} \ket{1} + \frac{4}{5} \tus{0}$ ' nın $ \ket{+} $ veya $ \ demet olması için bir hisse kullanımı olduğunu varsayalım.{-}$. Daha sonra, cihazın durumun $ \demet{-}$ olduğunu gösteren bir olasılık 
+Örnek olarak, $ \ket{\psi} = \frac{3}{5} \ket{1} + \frac{4}{5} \tus{0}$ durumunun $ \ket{+} $ veya $ \ket{-}$ olarak ölçülmesini ölçmek için bir hisse programı kullanarak, bu durumu hesaplamak istiyoruz. Daha sonra, cihazın durumun $ \demet{-}$ olduğunu gösteren bir olasılık 
 
-$ $ | \braket{-| \psı} | ^ 2 = \left | \frac{1}{\sqrt{2}} (\bra{0}-\bra{1}) (\frac{3}{5} \ayraç{1} + \frac{4}{5} \ayraç{0}) \ Right | ^ 2 = \left |-\frac{3}{5 \ sqrt{2}} + \frac{4}{5 \ sqrt{2}} \ Right | ^ 2 = \frac{1}{50}. $ $
+$ $ | \braket{-| \psı} | ^ 2 = \left | \frac{1}{\sqrt{2}} (\bra{0}-\bra{1}) (\frac{3}{5} \tus{1} + \frac{4}{5} \demet{0}) \ Right | ^ 2 = \left |-\frac{3}{5 \ sqrt{2}} + \frac{4}{5 \ sqrt{2}} \ Right | ^ 2 = \frac{1}{50}. $ $
 
 Negatif işaretin olasılık hesaplamasında görünmesi, hisse alma 'nın klasik bilgi işlem üzerinden daha fazla avantaj elde eden mekanizmalardan biridir.
 
 ## <a name="ketbra-or-outer-product"></a>ketya veya dış ürün
 Dirac gösterimi ile tartışmak için en son öğe, *ketya* veya dış üründür.  Dış ürün, $ \ket{\psı} \bra{\phi} $ olarak Dirac gösterimlerine ve bazen Bras ve kets brakets olarak ters sırada gerçekleştiğinden, bazı durumlarda ketbras olarak adlandırılır.  Dış ürün, hisse ve ABD devleti $ \psı $ ve $ \fi $ için $ \ket{\psı} \bra{\phi} = \psı \ Fi ^ \gger $ olarak matris çarpma aracılığıyla tanımlanır.  Bu gösterimi en basit ve en sık kullanılan örnek,
 
-$ $ \ket{0} \bra{0} = \begin{bmatrix}1\\\\ 0 \end{bmatrix}\begin{bmatrix}1 & 0 \end{bmatrix} = \begin{bmatrix}1 & 0\\\\ 0 & 0 \ End {bmatrix} \qquad \ demet{1} \bra{1} = \begin{bmatrix}0\\\\ 1 \end{bmatrix}\begin{bmatrix}0 & 1 \end{bmatrix} = \begin{bmatrix}0 & 0\\\\ 0 & 1 \ End {bmatrix}.
+$ $ \demet{0} \bra{0} = \begin{bmatrix}1\\\\ 0 \end{bmatrix}\begin{bmatrix}1 & 0 \end{bmatrix} = \begin{bmatrix}1 & 0\\\\ 0 & 0 \ End {bmatrix} \qdört \ ayraç{1} \bra{1} = \begin{bmatrix}0\\\\ 1 \end{bmatrix}\begin{bmatrix}0 & 1 \end{bmatrix} = \begin{bmatrix}0 & 0\\\\ 0 & 1 \ End {bmatrix}.
 $$
 
 Ketbras, her zaman sabit bir değere bir hisse durumu yansıdığından Projektör olarak adlandırılır.  Bu işlemler Unitary olmadığından (ve bir vektör 'nin norm de korumadığından), bir hisse bilgisayarının bir projektörün bir projektörü kesin bir şekilde uygulayamaması halinde gelmelidir.  Ancak, bir hisse başında ölçüm durumundaki eylemi açıklayan güzel bir iş vardır.  Örneğin, $ \ket{\psı} $ değerini $0 $ olarak ölçyoruz, bu durumda durum deneyimlerinin sonucu olarak ortaya çıkan dönüştürme
@@ -132,7 +132,7 @@ $$
 
 Daha sonra bunun, sütun vektörü gösterimi kullanılarak multiqubit durumları için ölçüm likelihoods hakkındaki tartışmaya tutarlı olduğunu görebiliriz:
 
-$ $ P (\Text{First qubit = 1}) = \psi ^ \dağılım (e\_{10}e\_{10}^ \dağılım + e\_{11}e\_{11}^ \dağılım) \psi = | e\_{10}^ \dağılım \ psi | ^ 2 + | e\_{11}^ \ dağılım \ PSI | ^ 2, $ $
+$ $ P (\Text{First qubit = 1}) = \psi ^ \dağılım (e\_{10}e\_{10}^ \dağılım + e\_{11}e\_{11}^ \dağılım) \psi = | e\_{10}^ \kama ger \ psi | ^ 2 + | e\_{11}^ \ dağılım \ PSI | ^ 2, $ $
 
 Multi-qubit ölçüm tartışmayla eşleşir.  Ancak, bu sonucun Multi-qubit örneğine genelleştirmeye yönelik Genelleştirme, sütun vektörü gösteriminden daha basit olan Dirac gösterimi kullanılarak hızlı bir şekilde daha basittir ve önceki işleme tamamen eşdeğerdir.
 
@@ -146,4 +146,3 @@ Vektörlerden farklı olarak genel hisse alım işleçleri, bazı hisse bilgi i�
 
 ## <a name="q-gate-sequences-equivalent-to-quantum-states"></a>S # ağ geçidi dizileri hisse durumlarıyla eşdeğer
 Aylık gösterimi ve Q # programlama dili hakkında en son bir nokta: Bu belgenin onkümesinde, hisse Eyaleti 'nin hisse bilgi işlem ortamında temel nesne olduğunu belirttik.  Daha sonra, soru-cevap durumu kavramı olmadığı için soru-cevap olarak gelebilir.  Bunun yerine, tüm durumlar yalnızca bunları hazırlamak için kullanılan işlemler tarafından açıklanmıştır.  Önceki örnek bunun mükemmel bir çizimidir.  Bir kayıttaki her hisse bit dizesi için Tekdüzen üst konumunu ifade etmek yerine, sonucu $H ^ {\otimes n} \tus{0}$ olarak temsil edebiliriz.  Bu durumun katlanarak daha kısa olan bu açıklaması yalnızca, bununla ilgili olarak neden olabilecek avantaja sahip olmakla kalmaz, Ayrıca öz, algoritmayı uygulamak için yazılım yığınında yayılması gereken işlemleri tanımlar.  Bu nedenle, Q #, hisse durumlarından değil, kapı dizilerini göstermek için tasarlanmıştır; Ancak, teorik düzeyinde iki perspektif eşdeğerdir.
-

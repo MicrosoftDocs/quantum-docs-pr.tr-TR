@@ -1,17 +1,17 @@
 ---
-title: 'Q # standart kitaplıklar-Prelude | Microsoft Docs'
-description: 'Q # standart kitaplıklar-Prelude'
+title: QDK 'deki iç işlemler ve işlevler
+description: Klasik işlevler ve Unitary, döndürme ve ölçüm işlemleri dahil olmak üzere QDK 'deki iç işlemler ve işlevler hakkında bilgi edinin.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: dddb3d4a5ebcdca16da41a5ae5520d98ea900a7f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: b1c26c632f36b6c254d940a89b13638f7592ab80
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73183242"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907214"
 ---
 # <a name="the-prelude"></a>Prelude dili #
 
@@ -27,7 +27,7 @@ Standart kitaplıkta tanımlanan iç işlemler kabaca birkaç kategoriden birine
 - Ölçümleri uygulayan işlemler.
 
 Clienfford + $T $ Gate kümesi, hisse bilgi işlem için [evrensel](xref:microsoft.quantum.concepts.multiple-qubits) olduğundan, bu işlemler, eksik küçük bir hata içinde yaklaşık bir hisse algoritması uygulamak için yeterli olacaktır.
-Q #, tek qubit Unitary ve CNOT Gate kitaplığı içinde çalışmasına izin verir. Bu kitaplık, programcının Clienfford + $T $ ayrıştırma 'yı doğrudan Express 'i gerektirdiğinden ve tek qubit unittileri 'yi Clienfford ve $T $ Gates 'e derlemek için yüksek verimli yöntemler bulunduğundan, bu kitaplığın daha kolay olduğunu düşündüler. [buraya](xref:microsoft.quantum.more-information) bakın daha fazla bilgi için).
+Q #, tek qubit Unitary ve CNOT Gate kitaplığı içinde çalışmasına izin verir. Bu kitaplık, programcının Clienfford + $T $ ayrıştırma 'yı doğrudan hızlı bir şekilde ifade ettiğinden ve tek qubit birimlere Clienfford ve $T $ Gates 'e (daha fazla bilgi için bkz. [buraya](xref:microsoft.quantum.more-information) bakın) yönelik yüksek verimli yöntemler içerdiğinden düşünmek çok daha kolay.
 
 Mümkün olduğunda, daha önce, qubitlerdeki, hedef makinenin uygun Ayrıştırma işlemini gerçekleştirmesini sağlayan, `Controlled` türevini uygulamaya izin veren bir işlem.
 
@@ -101,12 +101,12 @@ Yani, $S ^ 2 = Z $.
 Yukarıdaki Pauli ve Clifford işlemlerine ek olarak, Q # Prelude, döndürmeler ifade etmenin çeşitli yollarını sunmaktadır.
 [Tek qubit işlemlerinde](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)açıklandığı gibi, döndürme özelliği, hisse algoritması için kritik öneme sahiptir.
 
-$H $ ve $T $ kapıları kullanarak herhangi bir tek qubit işlemi hızlı bir şekilde ifade edebiliyoruz; $H burada \begin{Equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\% FIXME: Bu şu anda dörtlü geri 'yi kullanıyor Whack Hack.
+$H $ ve $T $ kapıları kullanarak herhangi bir tek qubit işlemi hızlı bir şekilde ifade edebiliyoruz; $H burada \begin{Equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\% FIXME: Bu şu anda dörtlü geri Whack Hack 'ı kullanıyor.
 0 & e ^ {i \ Pi/4} \end{bmatrix} \end{Equation} bu, <xref:microsoft.quantum.intrinsic.s> işleminin (^ 2 = S $ $T) kare köküdür.
 $T $ Gate <xref:microsoft.quantum.intrinsic.t> işlemi tarafından uygulanır ve tek bir-qubit üzerinde bir Unitary işlemi olduğunu belirten imzaya `(Qubit => Unit is Adj + Ctl)`.
 
 Bu, herhangi bir rastgele tek qubit işlemi açıklamaya yetecek olsa da, farklı hedef makineler Pauli işleçleri hakkında daha verimli temsiller olabilir. bu nedenle, Prelude 'un yarışmasını sağlamanın çeşitli yollarını içerir. Bu tür döndürmeler.
-Bunların en temel <xref:microsoft.quantum.intrinsic.r> işlem, belirtilen bir Pauli ekseninin bir döndürmesini uygulayan, \begin{Equation} R (\sigma, \fi) \mathrel{: =} \exp (-i \phi \ Sigma/2), \end{Equation}; burada $ \sigma $ bir Pauli işleci, $ \phi $ bir açı ve burada $ \exp $, matris üstel değerini temsil eder.
+Bunların en temel değeri, belirtilen Pauli ekseninin etrafında bir döndürme uygulayan <xref:microsoft.quantum.intrinsic.r> işlemidir. \begin{Equation} R (\sigma, \fi) \mathrel{: =} \exp (-i \phi \ Sigma/2), \end{Equation}; burada $ \sigma $ bir Pauli işleci, $ \phi $ bir açı ve $ \exp $, matris üstel değerini temsil eder.
 Girişin ilk iki bölümünün, Unitary işleci $R (\sigma, \fi) belirtmek için gereken klasik bağımsız değişkenleri $ \sigma $ ve $ \phi $ ' ı gösterdiği imzaya `((Pauli, Double, Qubit) => Unit is Adj + Ctl)`.
 Türü tek qubit Unitary olan bir işlem elde etmek için $ \sigma $ ve $ \phi $ öğesini kısmen uygulayabiliriz.
 Örneğin, `R(PauliZ, PI() / 4, _)` `(Qubit => Unit is Adj + Ctl)`türü vardır.
@@ -155,7 +155,7 @@ Bloch sphere üzerine eşlenmiş bir döndürme işlemi (Bu örnekteki Pauli $Z 
 
 Yukarıdaki tek qubit işlemlerine ek olarak, Prelude birçok multi-qubit işlemini de tanımlar.
 
-İlk olarak, <xref:microsoft.quantum.intrinsic.cnot> işlemi standart kontrollü bir`NOT` kapısı gerçekleştirir, \begin{Equation} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix}.
+İlk olarak, <xref:microsoft.quantum.intrinsic.cnot> işlemi standart denetlenen-`NOT` kapısı, \begin{Equation} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\1 \\ 0 & End{bmatrix} gerçekleştirir.
 \end{Equation}, iki bireysel qubit üzerinde $ \operatorname{CNOT} $ davranır unitarily öğesini temsil eden imzaya `((Qubit, Qubit) => Unit is Adj + Ctl)`sahiptir.
 `CNOT(q1, q2)`, `(Controlled X)([q1], q2)`ile aynıdır.
 `Controlled` functor, bir yazmaç üzerinde denetim için izin verdiğinden, yalnızca bir denetim isteytiğimiz olduğunu göstermek için `[q1]` dizi değişmez değeri kullanırız.
@@ -165,7 +165,7 @@ Yukarıdaki tek qubit işlemlerine ek olarak, Prelude birçok multi-qubit işlem
 `CCNOT(q1, q2, q3)`, `(Controlled X)([q1, q2], q3)`ile aynıdır.
 
 <xref:microsoft.quantum.intrinsic.swap> işlemi, iki qubit 'in hisse durumlarının sayısını değiştirir.
-Yani, Unitary matrisi \begin{Equation} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \ End{bmatrix}.
+Diğer bir deyişle, Unitary matrisi \begin{Equation} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix} uygular.
 \end{Equation} `((Qubit, Qubit) => Unit is Adj + Ctl)`imza içeriyor.
 `SWAP(q1,q2)`, `CNOT(q1, q2)` ardından `CNOT(q2, q1)` ve ardından `CNOT(q1, q2)`eşdeğerdir.
 
@@ -176,7 +176,7 @@ Yani, Unitary matrisi \begin{Equation} \operatorname{SWAP} \mathrel{: =} \begin{
 > Fredkabağı kapısı olarak da bilinen denetimli-takas kapısı, tüm klasik hesaplamayı dahil etmek için yeterince güçlüdür.
 
 Son olarak, Prelude, Multi-qubit Pauli işleçlerinin üslerini temsil eden iki işlem sağlar.
-<xref:microsoft.quantum.intrinsic.exp> işlemi, çok-qubit Unitary \begin{Equation} \operatorname{Exp} (\vec{\sigma}, \fi) \mathrel{: =} \exp\left (i \fi \sigma_0 \otimes \sigma_1 \otimes \ cnoktalar \otimes \sigma_n \ right), \end{Equation}; burada $ \vec{\sigma} = (\sigma_0, \sigma_1, \noktalara, \sigma_n) $ bir tek qubit Pauli işleçleri dizisi ve $ \phi $ bir açı.
+<xref:microsoft.quantum.intrinsic.exp> işlemi, Multi-qubit Unitary \begin{Equation} \operatorname{Exp} (\vec{\sigma}, \fi) \mathrel{: =} \exp\left (i \fi \ sigma_0 \otimes \ sigma_1 \otimes \cnoktalar \otimes \ sigma_n \right), \end{Equation}; burada $ \vec{\sigma} = (\ sigma_0, \ sigma_1, \noktalar, \ sigma_n) $ bir tek qubit Pauli işleçleri dizisi ve $ \phi $ bir açı.
 `Exp` döndürme $ \vec{\sigma} $ öğesini, imza `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`olması gibi `Pauli` öğelerinin bir dizisi olarak temsil eder.
 
 <xref:microsoft.quantum.intrinsic.expfrac> işlemi, yukarıda açıklanan dyadic kesir gösterimini kullanarak aynı dönüşü gerçekleştirir.
@@ -204,8 +204,8 @@ Pauli Array ve qubit dizisi farklı uzunluklardır, işlem başarısız olur.
 Bir eklem ölçüsünün her bir qubit ayrı ayrı ölçüyle aynı olmadığına unutmayın.
 Örneğin, $ \ket{11} = \ayraç{1} \otimes \ayraç{1} = X\otimes X \tus{00}$ durumunu göz önünde bulundurun.
 $Z _0 $ ve $Z _1 $ her biri ayrı ayrı, $r _0 = $1 ve $r _1 = $1 sonucunu elde ediyoruz.
-$Z _0 Z_1 $ ölçmesi ancak, $ \tus{11}$ pairity 'ın pozitif olduğunu gösteren _ {\textrm{Joint}} = $0 tek $r sonucunu elde ediyoruz.
-Farklı, $ (-1) ^ {r_0 + r_1} = (-1) ^ R_ {\textrm{Joint}}) $ değerini yerleştirin.
+$Z _0 Z_1 $, ancak $ \ket{11}$ değerinin pozitif olduğunu belirten _ {\textrm{Joint}} = $0 adlı tek bir $r sonuç elde ediyoruz.
+Farklı, $ (-1) ^ {r_0 + r_1} = (-1) ^ r_ {\textrm{Joint}}) $.
 Kritik olarak, *yalnızca* bu ölçüden eşlik öğrendiğimiz için, pozitif eşlik 'nın 2 2-qubit durumları, $ \ket{00}$ ve $ \tus{11}$ arasındaki üst konumda temsil edilen tüm hisse bilgileri korunur.
 Hata düzeltmesini tartıştığımız için bu özellik daha sonra temel alınacaktır.
 

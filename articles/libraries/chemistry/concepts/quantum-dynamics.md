@@ -1,17 +1,17 @@
 ---
-title: Hisse dinamikleri | Microsoft Docs
-description: Hisse Dynamics kavramsal belgeleri
+title: Hisse dinamikleri
+description: Hisse ve klasik Dynamics arasındaki benzerlikleri ve farkları öğrenin.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.quantumdynamics
-ms.openlocfilehash: 0fd27e59921fdf8429bf164c4c64cfa3b8e44160
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9cb74ccd4b7806a90c0701300860d777fa8e5d75
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185350"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904494"
 ---
 # <a name="quantum-dynamics"></a>Hisse dinamikleri
 
@@ -22,7 +22,7 @@ Hisse ve Dynamics 'i açıklamaya geçmeden önce, bir adım adım geri dönüp 
 Klasik Dynamics 'te bir parçacığın konumunun $F (x, t) = ma = m\frac {\ gg ^ 2} {\dd t ^ 2} {x} (t) $ ' e (x, t) $, $m $ $F ' in kütle ve $a $ ' in hızlandırılıdır.
 Ardından, bir ilk konum $x (0) $, evlenme saati $t $ ve parçacık üzerinde işlem yapan güçlerin açıklaması verildiğinde, $x (t) $ için Newton 'in denklemleri tarafından verilen fark denklemini çözerek $x (t) $ bulabilirsiniz.
 Güçleri bu şekilde belirtmek sorunun biraz bir yoludur.
-Bu nedenle, her zaman sistemin olası enerjisi açısından, ABD $-\partial_x V (x, t) = d \frac{\gg ^ 2} {\dd t ^ 2} {x} (t) $ ' i sağlayan potansiyel enerji koşullarına göre geliştirdik.
+Bu nedenle, genellikle, System 'in olası enerji tasarrufu açısından, bize $-\ partial_x V (x, t) = d \frac{\gg ^ 2} {\dd t ^ 2} {x} (t) $ değerini veren bir işlem sağlar.
 Bu nedenle, bir parçacık için sistemin dinamiki yalnızca olası enerji işlevi, parçacık kütle ve evrimsel süre tarafından belirtilir.
 
 Daha geniş bir dil genellikle $F = Ma $ ' dan fazla olan klasik Dynamics için sunulmuştur.
@@ -30,7 +30,7 @@ Daha önce hisse kutları açısından yararlı olan bir formül, Hamiltonian me
 Hamiltonian mekanizması içinde, bir sistem ve (Genelleştirilmiş) konumların toplam enerjisi ve momenta, rastgele bir klasik nesnenin hareketini anlatmak için gereken tüm bilgileri verir.
 Özellikle, $f (x, p, t) $ öğesinin Genelleştirilmiş konumların bazı işlevleri $x $ ve momenta $p $ olmasına izin verebilir ve $H (x, p, t) $ 'nin Hamiltonian işlevi olmasına izin verin.
 Örneğin, $f (x, p, t) = x (t) $ ve $H (x, p, t) = p ^ 2 (t)/2m-V (x, t) $ olursa, Newtonian Dynamics 'in yukarıdaki durumunu kurtarırız.
-Bu durumda, \begin{hizalaması} \frac{d}{DT} f & = \partial_t f-(\partial_x H\partial_p f + \partial_p H\partial_x f)\\\\ & \defeq \partial_t f + \\{f, H\\}.
+Bu durumda, \begin{hizalaması} \frac{d}{DT} f & = \ partial_t f-(\ partial_x H \ partial_p f + \ partial_p H \ partial_x f)\\\\ & \defeq \ partial_t f + \\{f, H\\}.
 \end{hizalaması} burada $\\{f, H\\} $, [Pofer ayracı](https://en.wikipedia.org/wiki/Poisson_bracket) olarak adlandırılır ve bir klasik rol nedeniyle, Dynamics 'in tanımlanmakta olduğu merkezi rol nedeniyle klasik olarak görünür.
 
 Hisse dinamikleri, tam olarak aynı dil kullanılarak açıklanabilir.
@@ -47,13 +47,13 @@ Bu, matrislerin eigendeğerlerinin gerçek değerli olmasını güvence altına 
 Hisse macılarındaki konum ve itici güç 'nin işleçlere göre değişmesi gerektiğinde, Hamiltonian işlevinin benzer şekilde bir işleçle değiştirilmeleri gerekir.
 Örneğin, boş alandaki bir parçacık için $H (x, p) = p ^ 2/2m $ iken, hisse MACS 'nin $ \hat{H} $, $ \hat{H} = \hat{p} ^ 2/2m $, burada $ \hat{p} $, itici güç işlecinin olduğu Hamiltonian işleci.
 Bu perspektiften itibaren, klasik 'dan hisse ya da yalnızca işleçlere sahip normal Dynamics 'te kullanılan değişkenlerin yerini değiştirmeyi içerir.
-Sıradan klasik Hamiltonian 'yi hisse dilinde çevirerek Hamiltonian işlecini oluşturduktan sonra, bir rastgele hisse mekanik miktarı (örn. hisse mekanik operatör) $ \hat{f} (t) $ değerini \begin{ile ifade edebiliriz align} \frac{d}{DT} \hat{f} = \partial_t \hat{f} + [\hat{f}, \hat{H}], \end{hizalaması}; burada $ [f, H] = fH-HF $, Commutator olarak bilinir.
+Sıradan klasik Hamiltonian 'yi hisse dilinde çevirerek Hamiltonian işlecini oluşturduktan sonra, bir rastgele hisse mekanik miktarı (örn. hisse mekanik operatör) $ \hat{f} (t) $ değerini \begin{ile ifade edebiliriz align} \frac{d}{DT} \hat{f} = \ partial_t \hat{f} + [\hat{f}, \hat{H}], \end{hizalaması}; burada $ [f, H] = fH-HF $, Commutator olarak bilinir.
 Bu ifade, yukarıda verilen klasik ifadeye benzer şekilde, $f $ ile $H $ arasında Commutator ile değiştirilen Pofer $\\{f, H\\} $ arasındaki fark ile değiştirilmiştir.
 Bu, klasik bir Hamiltonian alma ve bunu bir hisse Hamilton bulmak için kullanma süreci, standart bir ölçü olarak on hisse
 
 En çok hangi işleçleri $f $ ilgilentik?  Bunun yanıtı çözmek istediğimiz soruna bağlıdır.
 Bulmanın en faydalı miktarı, Dynamics hakkında öğrendiğimiz her şeyi ayıklamak için daha önceki kavramsal belgelerde ele alındığı gibi hisse maç işleçtir.
-Bunu yaptıktan sonra (ve bunun saf bir duruma sahip olduğu durum için sonucu basitleştirerek), hisse Schrödinger denklemi, \begin{hizalaması} ı\partial_t \ket{\psı (t)} = \hat{H} (t) \ket{\psı (t)} bulunur.
+Bunu yaptıktan sonra (ve bunun saf bir duruma sahip olduğu durum için sonucu basitleştirecek), hisse için Schrödinger denklemi \begin{hizalaması} ı \ partial_t \ket{\psı (t)} = \hat{H} (t) \ket{\psı (t)} bulunur.
 \end{hizalaması}
 
 Bu denklem, yukarıda verilen sayıdan daha az sezgisel olsa da, hisse veya klasik bir bilgisayarda hisse veya Klasik bilgisayar üzerinde hisse nasıl benzediğini anlamak için belki de en basit ifade verir.

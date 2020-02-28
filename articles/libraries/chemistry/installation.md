@@ -1,17 +1,17 @@
 ---
-title: Chemistry kitaplığı yükleme ve doğrulama | Microsoft Docs
-description: Chemistry kitaplığı yükleme ve doğrulama
+title: 'Microsoft Q # Chemistry kitaplığı yükleme ve doğrulama'
+description: Microsoft hisse Kimya kitaplığını yüklemeyi ve nwchem hesaplama Kimya platformuyla kullanmayı öğrenin.
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation
-ms.openlocfilehash: de13d1814821c612ed74a347dc8ffb5881063576
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 48bf7bc980e238e622053f5c2bdd09604c572596
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036483"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907367"
 ---
 # <a name="chemistry-library-installation-and-validation"></a>Chemistry kitaplığı yükleme ve doğrulama
 
@@ -21,25 +21,25 @@ Diğer NuGet paketlerinde olduğu gibi, bu, kimya kitaplığını projenize ekle
 **Visual Studio 2019:** Visual Studio 2019 kullanıyorsanız, NuGet Paket Yöneticisi 'Ni kullanarak hisse kamistry paketleri ekleyebilirsiniz.
 Paket yöneticisini açmak için, aşağıdaki ekran görüntüsünde gösterildiği gibi, kimya kitaplığını eklemek istediğiniz projeye sağ tıklayın ve "NuGet Paketlerini Yönet..." öğesini seçin.
 
-![](~/media/vs2017-nuget-manage-packages.png)
+![Visual Studio 2019 ' de NuGet paket yöneticisini kullanma](~/media/vs2017-nuget-manage-packages.png)
 
 Araştır sekmesinden "Microsoft. hisse. Chemistry" paket adını arayın.
 
 > [!NOTE]
 > "Ön sürümü dahil et" onay ettiğinizden emin olun.
 
-![](~/media/vs2017-nuget-package-search.png)
+![Yayın öncesi onay kutusu Ekle](~/media/vs2017-nuget-package-search.png)
 
 Bu, karşıdan yüklenebilecek paketleri listeler.
 Sol taraftaki bölmede "Microsoft. hisse. Chemistry" düğmesine tıklayın, sağ bölmedeki en son yayın öncesi sürümü seçin ve "Install" a tıklayın:
 
-![](~/media/vs2017-nuget-select-chem.png)
+![En son Microsoft. hisse. Chemistry paketini yükler](~/media/vs2017-nuget-select-chem.png)
 
 Daha ayrıntılı bilgi için bkz. [Paket Yöneticisi Kullanıcı Arabirimi Kılavuzu](https://docs.microsoft.com/nuget/tools/package-manager-ui).
 
 Alternatif olarak, bir komut satırı arabirimi ile, hisse anlıdeneme kitaplığını projenize eklemek için Package Manager konsolunu kullanabilirsiniz.
 
-![](~/media/vs2017-nuget-console-menu.png)
+![Paket Yöneticisi konsolunu komut satırından kullanma](~/media/vs2017-nuget-console-menu.png)
 
 Paket Yöneticisi konsolundan aşağıdakileri çalıştırın:
 

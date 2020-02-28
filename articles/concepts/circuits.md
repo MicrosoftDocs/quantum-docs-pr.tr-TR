@@ -1,17 +1,17 @@
 ---
-title: Hisse devreleri | Microsoft Docs
-description: Hisse devreleri
+title: Hisse devreleri
+description: Hisse bağlantı diyagramlarında basit ve karmaşık hisse işlemlerini görsel olarak nasıl temsil ettiğini öğrenin.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: fe845aa0dde7c780ea6721dfe2559119e90b4aa5
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 8ba4648f1837065d15957a01ab4ca8dd2d490a42
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820802"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77905157"
 ---
 # <a name="quantum-circuits"></a>Hisse devreleri
 Şu anda Unitary dönüştürmesi $ \Text{CNOT} _{01}(H\otimes 1) $ ' i göz önünde bulundurun.
@@ -24,7 +24,7 @@ Bu en yüksek düzeyde değerlendirme için devre diyagramı şu şekilde hazır
 
 <!--- ![](.\media\1.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/Concepts1.png)
+en yüksek düzeyde bir entangled bit durumu için ![devre diyagramı](~/media/Concepts1.png)
 
 ## <a name="quantum-circuit-diagram-conventions"></a>Hisse devre diyagramı kuralları
 Hisse için bu görsel dil, bir hisse devresini ifade eden kuralları anladıktan sonra eşdeğer matrisinin yazılmasından daha kolay digestible olabilir.
@@ -37,9 +37,9 @@ Bir veya daha fazla qubit kayıt üzerinde işlem gören kapıları kutu olarak 
 
 <!--- ![](.\media\2.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_2.png)
+tek qubit kayıt üzerinde işlem gören Hadamard işlemi için ![sembol](~/media/concepts_2.png)
 
-, tek qubit kayıt üzerinde işlem gören [Hadamard](xref:microsoft.quantum.intrinsic.h) kapısıdır.
+, tek qubit kayıt üzerinde işlem gören bir [Hadamard](xref:microsoft.quantum.intrinsic.h) işlemidir.
 
 Hisse kapıları, ilk olarak qubits 'e uygulanan kapıda en sol geçit ile kronolojik sırada sıralanır.
 Diğer bir deyişle, kapıların hisse durumunu tutan şekilde fotoğrafını yaparsanız, kablolar diyagramdaki her bir kapıdan, soldan sağa doğru hisse ma durumunu getirir.
@@ -47,7 +47,7 @@ Yani
 
 <!--- ![](.\media\3.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_3.png)
+soldan sağa uygulanan hisse kapıların diyagramı ![](~/media/concepts_3.png)
 
 Unitary matris $CBA $ ' dir.
 Matris çarpıtına ters kural: en sağdaki matris önce uygulanır. Ancak, bu arada en sol kapı, en sol kapı için uygulanır.
@@ -65,7 +65,7 @@ Bir açıklığa kavuşturan örnek olarak, $ (H \ saat X) $ $ $ $ (H \ saat X) 
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_4.png)
+iki-qubit Unitary işleminin devre diyagramı ![](~/media/concepts_4.png)
 
 Ayrıca, devre dışı bırakıldığına bağlı olarak 2 1-qubit kayıtları yerine tek bir iki-qubit kayıt üzerinde eyleme sahip $B $ ' i de görüntüleyebiliriz. Bu tür soyut devre diyagramlarından en yararlı özellik, karmaşık hisse algoritmalarının, bunları temel kapıları derlemek zorunda kalmadan yüksek düzeyde açıklanmasına izin vermesidir.
 Bu, algoritmadaki her bir alt yordamların nasıl çalıştığı hakkında tüm ayrıntıları anlamak zorunda kalmadan, büyük bir hisse algoritması için veri akışı hakkında bir bilgi edinebilirsiniz.
@@ -78,14 +78,14 @@ Genel olarak, bu tür denetimli işlemleri devre diyagramlarında
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_5.png)
+listedir kontrollü bir kapı ![devre diyagramı](~/media/concepts_5.png)
 
 Burada siyah daire, kapıın kontrol edeceği hisse bitini ve bir dikey tel, denetim qubit $1 $ değerini alırken uygulanan Unitary 'ı gösterir.
 $G = X $ ve $G = Z $ olan özel durumlar için, kapıların denetlenen sürümünü (denetlenen-X kapısı [$CNOT $ Gate](xref:microsoft.quantum.intrinsic.cnot)olduğunu unutmayın) anlatmak için aşağıdaki gösterimi tanıtıldık:
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_6.png)
+denetlenen kapıların özel durumları için devre diyagramı ![](~/media/concepts_6.png)
 
 Q #, bir işlemin denetlenen sürümünü otomatik olarak oluşturmak için yöntemler sağlar. Bu işlem, programcının bu işlemleri ele almak zorunda kalmadan kaydeder. Buna bir örnek aşağıda verilmiştir:
 
@@ -104,7 +104,7 @@ Devre diyagramlarında görselleştirilecek kalan işlem ölçümdür.
 
 <!--- ![](.\media\7.svg) ---->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![ölçüm devresi](~/media/concepts_7.png)
+ölçüm işlemini temsil eden ![sembol](~/media/concepts_7.png)
 
 Q # Bu amaçla bir [Ölçü işleci](xref:microsoft.quantum.intrinsic.measure) uygular.
 Daha fazla bilgi için [ölçümlerle ilgili bölüme](xref:microsoft.quantum.libraries.standard.prelude#measurements) bakın.
@@ -113,7 +113,7 @@ Benzer şekilde, subdevı
 
 <!--- ![](.\media\8.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_8.png)
+denetlenen işlemi temsil eden ![devre diyagramı](~/media/concepts_8.png)
 
 $G $ değerinin klasik denetim bit değeri $1 $ değerine göre uygulandığı, bir sınıf denetimli geçit sağlar.
 
@@ -125,4 +125,4 @@ Bu, protokol için hisse uzayı yasaları uyarınca çalışması için gereklid
 Hisse ve teleporsyon devresi aşağıda verilmiştir; Ayrıca, hisse öğesinin nasıl okunacağını göstermek için devresinin açıklamalı bir sürümünü sunuyoruz.
 
 <!--- ![](.\media\tp2.svg){ width=50% } --->
-![](~/media/concepts_tp2.png)
+![hisse teleporsyon devresi](~/media/concepts_tp2.png)

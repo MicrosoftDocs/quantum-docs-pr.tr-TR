@@ -1,17 +1,17 @@
 ---
-title: İfadeler | Microsoft Docs
-description: İfadeler
+title: 'S # Ifadeleri'
+description: Sabitleri, değişkenleri, işleçleri, işlemleri ve işlevleri soru-cevap olarak ifade olarak belirtme, başvurma ve birleştirme hakkında bilgi edinin.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.expressions
-ms.openlocfilehash: 83fe697aa07a8ab28bd64437c8f5746bc5893b27
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: fbde873f220d737db17f889d00be33541e3eb59b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036323"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907418"
 ---
 # <a name="expressions"></a>İfadeler
 
@@ -22,7 +22,7 @@ Herhangi bir ifade verildiğinde, parantez içine alınmış aynı ifade aynı t
 
 [Tür modelinde](xref:microsoft.quantum.language.type-model#tuple-types) açıklanan basit değerler ve tek öğeli tanımlama grupları arasındaki denklik, grup olarak `(6)` ve tek öğeli tanımlama grubu olarak `(6)` arasındaki belirsizlik ortadan kaldırır.
 
-## <a name="symbols"></a>Simgeler
+## <a name="symbols"></a>Simgeleri
 
 `'T` türünde bir değere atanan veya atanan bir simgenin adı `'T`türünde bir ifadedir.
 Örneğin, sembol `count` `5`tamsayı değerine bağlıysa `count` bir tamsayı ifadesi olur.

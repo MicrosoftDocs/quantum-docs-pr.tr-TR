@@ -1,16 +1,17 @@
 ---
 title: Broombridge-hisse dili yanlış deneme şeması
+description: Microsoft Quantum Development Kit ile gerçek dünya Kimya sorunlarını modellemek için kullanılan broombridge hisse Kimya şemasına genel bakış.
 author: martinro
 ms.author: martinro@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.broombridge
-ms.openlocfilehash: c2a7636d0b3f07419e3312e04da5d811229ad854
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a746b63055bb1b2c1168b89993a7459ca9597f86
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185333"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907826"
 ---
 # <a name="broombridge-quantum-chemistry-schema"></a>Broombridge hisse Chemistry şeması # 
 
@@ -23,9 +24,8 @@ YAML tabanlı, Broombridge, elektronik yapı sorunlarını temsil eden yapıland
 - Zemin ve heyecanlı durumlar, oluşturma dizileri kullanılarak sunulabilir.
 - Enerji düzeylerinin üst ve alt sınırları belirtilebilir.
 
-Veri biçimi, daha kolay bir şekilde NWChem 'ten oluşturulabilir: Bu, [burada](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests) sağlananları ve çalıştırmanın parçası olarak çıkış Broombridge 'yi bir Docker üzerinden çalıştırmak Için nwchem 'nin tam yüklemesinden farklı yöntemler sunulmaktadır Kimya Decks 'ten brombridge oluşturmak için de kullanılabilecek nwchem görüntüsü. Son olarak, herhangi bir kimya yazılımı yüklemeye gerek kalmadan hızla hesaplama kimya ile çalışmaya başlamak için bir görsel Yöntem nwchem için [emsl okları](https://arrows.emsl.pnnl.gov/api/qsharp_chem) arabirimi tarafından sağlanır. 
+Veri biçimi, NWChem 'ten daha kolay kolay bir şekilde oluşturulabilir: NWChem 'nin tam yüklemesinden, [burada](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests) sağlananlara ve çalıştırmanın parçası olarak çıktı Brombridge 'e kadar çeşitli yöntemler ve bu da pmistry Decks 'Ten brombridge 'i oluşturmak için de kullanılabilecek bir Docker görüntüsü üzerinden kullanılabilir. Son olarak, herhangi bir kimya yazılımı yüklemeye gerek kalmadan hızla hesaplama kimya ile çalışmaya başlamak için bir görsel Yöntem nwchem için [emsl okları](https://arrows.emsl.pnnl.gov/api/qsharp_chem) arabirimi tarafından sağlanır. 
 
-Yüksek düzeyde, NWChem ve Microsoft Quantum Development Kit arasındaki karşılıklı yürütme şu şekilde görselleştirilir: ![Chemistry yığını](~/media/broombridge.png) mavi gölgeli kutu Brocimbridge şemasını temsil ediyorsa, çeşitli gri gölgeli kutular diğer iç ilişkileri temsil eder Gerçek Dünya Kimya sorunlarına dayalı olarak hesaplama Kimya için hisse algoritmaları temsil etmek ve işlemek üzere seçilmiş veri gösterimleri. 
+Yüksek düzeyde, nwchem ve Microsoft Quantum Development Kit arasında karşılıklı yürütme şu şekilde görselleştirilir: ![Kimya Stack](~/media/broombridge.png) mavi gölgeli kutu brocimbridge şemasını temsil ediyorsa, çeşitli gri gölgeli kutular, gerçek dünya Kimya sorunlarını temel alan hesaplama Kimya için, ücretlerini temsil etmek ve işlemek üzere seçilen diğer iç veri sunumlarını temsil eder. 
 
 Broombridge şeması kullanılarak tanımlanan birden çok kimyasal temsili [burada](https://github.com/microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML)verilmiştir.
-

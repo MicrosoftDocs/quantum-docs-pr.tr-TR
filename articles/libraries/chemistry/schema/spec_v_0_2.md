@@ -1,16 +1,17 @@
 ---
-title: Broombridge şema belirtimi
+title: Broombridge şema belirtimi (ver 0,2)
+description: Microsoft hisse dili Mistry kitaplığı için broombridge hisse Kimya şeması v
 author: guanghaolow
 ms.author: gulow@microsoft.com
 ms.date: 05/28/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
-ms.openlocfilehash: 2f4be96bc6f1e8e6fe21b93bc0d9ab2aa367fd53
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: df7e651b7d32e672c6e83346ff603132bd55c1a2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185316"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907282"
 ---
 # <a name="broombridge-specification-v02"></a>Broombridge belirtimi v 0.2 #
 
@@ -18,7 +19,7 @@ ms.locfileid: "73185316"
 
 "NOTE", "ıNFORMATION" veya "WARNING" başlıklı tüm kenar çubuğu bilgilendirici.
 
-## <a name="introduction"></a>Tanıtım ##
+## <a name="introduction"></a>Giriş ##
 
 Bu bölüm bilgilendirme.
 
@@ -35,7 +36,7 @@ Bu belirtimin geri kalanı için, "Broombridge nesnesi", bir Brombridge YAML bel
 
 Aksi belirtilmedikçe, nesneler bu belgede açıkça belirtilenlerin ötesinde ek özelliklere sahip olmamalıdır.
 
-## <a name="additional-definitions"></a>Ek Tanımlar ##
+## <a name="additional-definitions"></a>Ek tanımlar ##
 
 Bu bölüm normatıve 'dir.
 
@@ -136,7 +137,7 @@ Bu bölüm bilgilendirme.
 Her bir sorun açıklama nesnesinin `hamiltonian` özelliği, belirli bir hisse dili yanılma sorunu için Hamiltonian 'yi, tek ve iki gövdedeki terimleri gerçek sayıların seyrek dizileri olarak listeleyerek açıklar.
 Her sorun açıklaması nesnesi tarafından tanımlanan Hamiltonian işleçleri formu alır
 
-$ $ H = \sum\_\{ı, j\}\sum\_{\sigma\in\\{\upok, \downok\\}} H\_\{ij\} a ^\{\dağılım\}\_{ı , \sigma} a\_{j, \sigma} + \frac{1}{2}\sum\_\{i, j, k, l\}\sum\_{\sigma, \rho\in\\{\upok, \downok\\}} h\_{ı , \sigma} a ^ \dağılım\_{k, \rho} a\_{l, \rho} a\_{j, \sigma}, $ $
+$ $ H = \sum\_\{ı, j\}\sum\_{\sigma\in\\{\upok, \downok\\}} H\_\{ij\} a ^\{\dağılım\}\_{i, \sigma} a\_{j, \sigma} + \frac{1}{2}\sum\_\{i, j, k, l\}\sum\_{\sigma, \rho\in\\{\upok, \downok\\}} H\_{ı , \sigma} a ^ \dağılım\_{k, \rho} a\_{l, \rho} a\_{j, \sigma}, $ $\_
 
 Burada _ {ijkl} = (ij | KL) $ Mullikliksiz kuralına göre $h.
 
@@ -146,13 +147,13 @@ $ $ h_ {ij} = \int {\mathrm d} x \psi ^ *\_ı (x) \left (\frac{1}{2}\nabla ^ 2 +
 
 ve iki elektron terimi
 
-$ $ h\_\{ijkl\} = \iint \{\mathrm d\}x ^ 2 \psı ^\{\*\}\_ı (x\_1) \psi\_j (x\_1) \frac\{1\}\{\|x\_1-x\_2\|\}\psı\_k ^\{\*\}(x\_2) \psı\_l (x\_2).
+$ $ h\_\{ijkl\} = \iint \{\mathrm d\}x ^ 2 \psı ^\{\*\}\_ı (x\_1) \psi\_j (x\_1) \frac\{1\}\{\|x\_1-x\_2\|\}\psi\_k ^\{\*\}(x\_2) \psı\_l (x\_2).
 $$
 
 `integral_sets` özelliğinin her bir öğesinin [`basis_set` özelliğinin](#basis-set-object) açıklamamız bölümünde belirtildiği gibi, kullanılan temel işlevlerin gerçek değerli olduğunu açıkça varsaydık.
 Bu, Hamiltonian 'ın gösterimini sıkıştırmak için terimler arasında aşağıdaki symmetries kullanmamızı sağlar.
 
-$ $ h_ {ijkl} = h_ {ijlk} = h_ {JIKL} = h_ {jıld} = h_ {klij} = h_ {klji} = h_ {lkij} = h_ {lkji}.
+$ $ h_ {ijkl} = h_ {ijlk} = h_ {JIKL} = h_ {jılb} = h_ {klij} = h_ {klji} = h_ {lkij} = h_ {lkji}.
 $$
 
 
@@ -174,14 +175,14 @@ Bu bölüm normatıve 'dir.
 Hamiltonian nesnesinin `one_electron_integrals` özelliği, dizinleri iki tamsayı olan ve değerleri sayı olan bir seyrek dizi miktarı olmalıdır.
 Her dönemde `i >= j``[i, j]` dizinler OLMALıDıR.
 
-> NOTUN Bu, Hamiltonian 'nin hermitian olduğu olgunun bir sonucu olan $h _ {ij} = h_ {Ji} $ olan simetriyi yansıtır.
+> NOTUN Bu, Hamiltonian 'ın hermitian olduğu olgunun bir sonucu olan $h _ {ij} = h_ {Ji} $ olan simetriyi yansıtır.
 
 
 ###### <a name="example"></a>Örnek ######
 
 Bu bölüm bilgilendirme.
 
-Şu seyrek dizi miktarı Hamiltonian $ $ H = \left (-5,0 (a ^\{\alger\}\_{1, \upoklu} bir\_{1, \upoklu} + bir ^\{\dağılım\}\_{1, \downok} a\_{1) temsil eder , \downok}) + 0,17 (bir ^\{\dağılım\}\_{2, \upoklu} bir\_{1, \upoklu} + bir ^\{\dağılım\}\_{1, \upoklu} +\_{2, \upoklu} + bir ^\{\dağılım\}\_{2 , \downok} bir\_{1, \downok} + bir ^\{\dağılım\}\_{1, \down\mathrm{ha}.} a\_{2, \downok}) \right)\\,
+Şu seyrek dizi miktarı Hamiltonian $ $ H = \left (-5,0 (bir ^\{\dağılım\}\_{1, \upoklu} bir\_{1, \upoklu} + bir ^\{\dağılım\}\_{1, \downok} a\_{1, \downok}) + 0,17 (bir ^\{\hanger\}\_{2, \upoklu} +\_{1, \upoklu} + bir ^\{\dağılım\}\_{1, \upoklu} +\_{2, \upoklu} + a ^\{\dağılım\}\_{2 , \downok} bir\_{1, \downok} + bir ^\{\dağılım\}\_{1, \down\mathrm{ha}.} a\_{2, \downok}) \right)\\,
 $$
 
 ```yaml
@@ -206,7 +207,7 @@ Hamiltonian nesnesinin `two_electron_integrals` özelliği, `index_convention`ad
 
 Her `two_electron_integrals` özelliği bir `index_convention` özelliğine sahip OLMALıDıR.
 `index_convention` özelliğinin değeri tablo 1 ' de listelenen izin verilen değerlerden biri OLMALıDıR.
-`index_convention` değeri `mulliken`, sonra da `two_electron_integrals` seyrek dizi miktarının her öğesi için, bir Broombridge belgesi yükleyen bir Ayrıştırıcı, iki elektron işlecine eşit bir Hamiltonian terimi oluşturmalıdır $h _ {i, j, k, l} a ^ \abger_i a ^ \leger_j a_k a_l $ Burada $i $, $j $, $k $ ve $l $ değeri en az 1 tamsayı olmalıdır ve burada $h _ {i, j, k, l} $, seyrek dizi miktarının öğe `[i, j, k, l, h(i, j, k, l)]` öğesidir.
+`index_convention` değeri `mulliken`, sonra da `two_electron_integrals` seyrek dizi miktarının her bir öğesi için, bir Broombridge belgesi yükleyen bir ayrıştırıcıda bir Hamiltonian teriminin iki elektron işlecine eşit olması gerekir $h _ {i, j, k, l} a ^ \ dagger_i bir ^ \ dagger_j a_k a_l $, burada $i $, $j $, $k $ ve $l $ değeri en az 1 tamsayı olmalıdır ve $h _ {i, j, k, l} $, seyrek dizi miktarının öğe `[i, j, k, l, h(i, j, k, l)]`.
 
 ###### <a name="symmetries"></a>Symmetries ######
 
@@ -234,7 +235,7 @@ Bu bölüm bilgilendirme.
 
 Aşağıdaki nesne Hamiltonian 'yi belirtir
 
-$ $ H = \frac12 \sum\_{\sigma, \rho\in\\{\upok, \downarrow\\}} \Biggr (1,6 a ^ {\abger}\_{1, \sigma} a ^ {\abger}\_{1, \rho} a\_{1, \rho} a\_{1, \sigma}-0,1 a ^ {\abger}\_{6 , \sigma} a ^ {\hanger}\_{1, \rho} a\_{3, \rho} a\_{2, \sigma}-0,1 a ^ {\abger}\_{6, \sigma} a ^ {\dağılım}\_{1, \rho} a\_{2, \rho} a\_{3 , \sigma}-0,1 a ^ {\hanger}\_{1, \sigma} a ^ {\abger}\_{6, \rho} a\_{3, \rho} a\_{2, \sigma}-0,1 a ^ {\abger}\_{1, \sigma} a ^ {\dağılım ger}\_{6, \rho} a\_{2 , \rho} a\_{3, \sigma} $ $ $ $-0,1 a ^ {\hanger}\_{3, \sigma} a ^ {\abger}\_{2, \rho} a\_{6, \rho} a\_{1, \sigma}-0,1 a ^ {\dağılım}\_{3, \sigma} a ^ {\gesger}\_{2 , \rho} a\_{1, \rho} a\_{6, \sigma}-0,1 a ^ {\abger}\_{2, \sigma} a ^ {\abger}\_{3, \rho} a\_{6, \rho} a\_{1, \sigma}-0,1 a ^ {\hanger}\_{2 , \sigma} a ^ {\hanger}\_{3, \rho} a\_{1, \rho} a\_{6, \sigma}\Biggr)\\, \textrm{Ha}.
+$ $ H = \frac12 \sum\_{\sigma, \rho\in\\{\upok, \downarrow\\}} \Biggr (1,6 a ^ {\abger}\_{1, \sigma} a ^ {\abger}\_{1, \rho} a\_{1, \rho} a\_{1, \sigma}-0,1 a ^ {\abger}\_{6, \sigma} a ^ {\abger}\_{1, \rho} a\_{3, \rho} a\_{2, \sigma}-0,1 a ^ {\abger}\_{6, \sigma} a ^ {\dağılım ger}\_{1, \rho} a\_{2 , \rho} a\_{3, \sigma}-0,1 a ^ {\hanger}\_{1, \sigma} a ^ {\abger}\_{6, \rho} a\_{3, \rho} a\_{2, \sigma}-0,1 a ^ {\abger}\_{1, \sigma} a ^ {\dağılım}\_{6, \rho} a\_{2, \rho} a\_{3, \sigma} $ $ $ $-0,1 a ^ {\hanger}\_{3, \sigma} a ^ {\dağılım}\_{2, \rho} a\_{6, \rho} a\_{1, \sigma}-0,1 a ^ {\hanger}\_{3 , \sigma} a ^ {\abger}\_{2, \rho} a\_{1, \rho} a\_{6, \sigma}-0,1 a ^ {\abger}\_{2, \sigma} a ^ {\dağılım}\_{3, \rho} a\_{6, \rho} a\_{1, \sigma}-0,1 a ^ {\abger}\_{2, \sigma} a ^ {\dağılım}\_{3, \rho} a\_{1, \rho} a\_{6, \sigma}\Biggr)\\, \Textrm{ha}.
 $$
 
 ```yaml
@@ -263,7 +264,7 @@ Her durum nesnesi, değeri bir basit miktar nesnesi olması gereken bir özellik
 
 `method` özelliğinin değeri `sparse_multi_configurational`ise, State nesnesinin bir temel durum dizisi ve bunların Normalleştirilmemiş yükseltilmiş tudes dizisini içeren bir `superposition` özelliğine sahip olması gerekır.
 
-Örneğin, ilk durumlar $ $ \ket{G0} = \ket{G1} = \ket{G2} = (a ^ {\gger}\_{1) \upok} a ^ {\abger}\_{2, \upoklu} a ^ {\abger}\_{2, \downok}) \demet{0} $ $ $ $ \ket{E} = \frac{0.exe} (a ^ {\dağılım}\_{1 , \upoklu}a ^ {\hanger}\_{2, \upoklu}\_{2, \downok}) + 0.2 (a ^ {\abger}\_{1, \upoklu} a ^ {\gesger}\_{3, \upoklu} bir ^ {\dağılım}\_{2, \downoklu})} {\sqrt{| 0.1 | ^ 2 + | 0.2 | ^ 2}} \ demet{0}$ $ Burada $ \ket{E} $ enerji $0,987 \textrm{Ha} $, tarafından temsil edilir
+Örneğin, ilk durumlar $ $ \ket{G0} = \ket{G1} = \ket{G2} = (a ^ {\abger}\_{1, \upoklu} a ^ {\gger}\_{2, \upok} a ^ {\abger}\_{2, \downok}) \ayraç{0} $ $ $ $ \ket{E} = \frac{0.exe} (bir ^ {\gesger}\_{1, \upoklu} a ^ {\abger}\_{2, \upoklu} a ^ {\gesger}\_{2, \downok}) + 0.2 (a ^ {\dağılım}\_{1, \upoklu}a ^ {\abger}\_{3, \upoklu}\_{2, \downok})} {\sqrt{| 0.1 | ^ 2 + | 0.2 | ^ 2}} \demet{0}$ $ Burada $ \ket{E} $ enerji $0,987 \textrm{Ha} $, tarafından temsil edilir
 ```yaml
 initial_state_suggestions: # optional. If not provided, spin-orbitals will be filled to minimize one-body diagonal term energies.
   - label: "|G0>"
@@ -296,7 +297,7 @@ temel durumlardan oluşan bir dizi ve bunların Normalleştirilmemiş yükseltil
 
 $ $ \ket{\text{UCCSD}} = e ^ {T-T ^ \dagger}\ket{\Text{Reference}}, $ $
 
-$ $ T = 0,1 a ^ {\hanger}\_{3, \upok} a\_{2, \downok} + 0,2 a ^ {\abger}\_{2, \upok} a\_{2, \downok}-0,3 a ^ {\abger}\_{1, \upoklu} a ^ {\gesger}\_{3, \downoklu} a\_{3 , \upoklu} bir\_{2, \downoklu} $ $ tarafından temsil edilir
+$ $ T = 0,1 a ^ {\dağılım}\_{3, \upoklu} a\_{2, \downok} + 0,2 a ^ {\hanger}\_{2, \upok} a\_{2, \downok}-0,3 a ^ {\dağılım}\_{1, \upoklu} a ^ {\abger}\_{3, \downoklu} bir\_{3, \upoklu} $ $ tarafından temsil edilir\_
 ```yaml
 initial_state_suggestions: # optional. If not provided, spin-orbitals will be filled to minimize one-body diagonal term energies.
   - label: "UCCSD"

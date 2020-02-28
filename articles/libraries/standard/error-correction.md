@@ -1,21 +1,21 @@
 ---
-title: 'Q # standart kitaplıkları-hata düzeltme | Microsoft Docs'
-description: 'Q # standart kitaplıkları-hata düzeltme'
+title: 'Q # standart kitaplıklarında hata düzeltme'
+description: "Qubits 'in durumunu korurken, Q # programlarınızda hata düzeltme kodlarını nasıl kullanacağınızı öğrenin."
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e1b78cf94ae0a043ad275d4cb06b230eafd7fc85
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 514fe68f603b9a3a0b4607390719b08a43fe4967
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863206"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907775"
 ---
 # <a name="error-correction"></a>Hata Düzeltme #
 
-## <a name="introduction"></a>Tanıtım ##
+## <a name="introduction"></a>Giriş ##
 
 Klasik bilgi işlem 'da, bir bit hataları hatalara karşı korumak istiyorsa, veri bitini tekrarlayarak bu bit, *mantıksal bir bite* göre temsil etmek için genellikle yeterli olur.
 Örneğin, 0 durumundaki bir bit kodlama olduğunu göstermek için 0 etiketinin üzerindeki bir satırı kullandığımızda $ \üstünü{0} = $0, veri biti 0 kodlaması olmalıdır.

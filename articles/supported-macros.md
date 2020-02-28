@@ -1,17 +1,17 @@
 ---
-title: Yazma için desteklenen Latex makroları
-description: Desteklenen Latex makroları listesi
+title: Yazma için desteklenen LaTeX makroları
+description: Microsoft Quantum Development Kit belgeleri için desteklenen LaTeX makroları listesi.
 author: natke
 ms.author: nakersha
 ms.date: 09/04/2019
 ms.topic: article
 uid: microsoft.quantum.contribute.macros
-ms.openlocfilehash: 7a86cd5c24af50981e37fc7c8ecde414b746d277
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 2866ae3de43280914ffe51739d76ac10d28e9124
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183429"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906925"
 ---
 # <a name="supported-macros"></a>Desteklenen makrolar
 
@@ -23,5 +23,5 @@ ms.locfileid: "73183429"
 <tr><td>id</td><td>\ID</td><td>$ \Kimlik $</td></tr>
 <tr><td>cıvabitti</td><td>\ cıvabitti</td><td>$ \ cıvabitti $</td></tr>
 <tr><td>Beklemelisiniz</td><td>\ beklenen</td><td>$ \ beklenen $</td></tr>
-<tr><td>Denetlemesini</td><td>\ varyans (x)</td><td>$ \ varyans (x) $</td></tr>
+<tr><td>varyans</td><td>\ varyans (x)</td><td>$ \ varyans (x) $</td></tr>
 </table>

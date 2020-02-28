@@ -1,17 +1,17 @@
 ---
-title: Enerji düzeyi tahminleri alma | Microsoft Docs
-description: Enerji düzeyi tahminleri belgelerini alma
+title: Enerji düzeyi tahminleri edinme
+description: "Molesel Hydrogen 'ın enerji düzeyi değerlerini tahmin eden örnek bir Q # programını gözden geçir."
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: 0fd457b152083af364d924502c18bc0813e34b83
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 3242d8c6dc6fad2bd99055027dd7ce4ec3510ff4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442578"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907316"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Enerji düzeyi tahminleri edinme
 Enerji seviyelerinin değerlerini tahmin etmek, hisse Chemistry 'ın asıl uygulamalarından biridir. Burada, bu, molesel Hydrogen 'nin kurallı örneği için nasıl gerçekleştirilebileceğini özetler. Bu bölümde başvurulan örnek, kimya örnekleri deposunda `MolecularHydrogen`. Çıktıyı çizbir görsel örnek `MolecularHydrogenGUI` tanıtım örneğidir.

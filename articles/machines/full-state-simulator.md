@@ -1,17 +1,17 @@
 ---
-title: Hisse geliştirme seti tam durum simülatörü | Microsoft Docs
-description: Microsoft 'un hisse geliştirme seti tam durum simülatörünü genel bakış
+title: Tam durum simülatör
+description: 'Q # programlarınızı Microsoft Quantum Development Kit tam durum Benzeticisinde çalıştırmayı öğrenin.'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 12/7/2017
 ms.topic: article
 uid: microsoft.quantum.machines.full-state-simulator
-ms.openlocfilehash: ab0e65765d27e301a59948d7c02105a523022e68
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: f73abbc4366b003e4b22366ed83ca9c897737307
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184687"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906126"
 ---
 # <a name="quantum-development-kit-full-state-simulator"></a>Hisse geliştirme seti tam durum simülatörü
 
@@ -32,7 +32,7 @@ Bu hisse Benzetici, `QuantumSimulator` sınıfı aracılığıyla sunulur. Simü
 
 `QuantumSimulator` sınıfı <xref:System.IDisposable>uygular, bu nedenle simülatör örneği artık kullanılmıyordu `Dispose` yöntemi çağrılmalıdır. Bunu yapmanın en iyi yolu, simülatörü Yukarıdaki örnekte olduğu gibi bir `using` ifadesine sarmalıdır.
 
-## <a name="seed"></a>Çekirdek
+## <a name="seed"></a>çekirdek
 
 `QuantumSimulator`, hisse rastlılığını taklit etmek için rastgele bir sayı Oluşturucu kullanır. Sınama amacıyla, bazen belirleyici sonuçlar elde etmek yararlı olur. Bu, `randomNumberGeneratorSeed` parametresi aracılığıyla `QuantumSimulator`oluşturucusunda rastgele numara Oluşturucu için bir çekirdek sağlanarak gerçekleştirilebilir:
 
@@ -44,7 +44,7 @@ Bu hisse Benzetici, `QuantumSimulator` sınıfı aracılığıyla sunulur. Simü
     }
 ```
 
-## <a name="threads"></a>Akışları
+## <a name="threads"></a>İş Parçacıkları
 
-`QuantumSimulator`, gereken doğrusal algeköşeli paralel hale getirmek için [OpenMP](http://www.openmp.org/) kullanır. Varsayılan olarak OpenMP, tüm kullanılabilir donanım iş parçacıklarını kullanır, bu da az sayıda qubit içeren programların, gerçek işi dyacağı için gereken koordinasyonuna yavaş çalışacağı anlamına gelir. Bu, ortam değişkeni `OMP_NUM_THREADS` küçük bir sayı ayarlanarak düzeltilebilir. En çok kaba bir kural olarak, 1 iş parçacığı yaklaşık 4 qubit 'e kadar iyidir ve daha sonra, bu, algoritmanız için büyük ölçüde bağımlı olsa da, qubit başına ek bir iş parçacığı iyidir.
+`QuantumSimulator`, gereken doğrusal algeköşeli paralel hale getirmek için [OpenMP](http://www.openmp.org/) kullanır. Varsayılan olarak, OpenMP kullanılabilir olan tüm donanım iş parçacıklarını kullanır. Böylelikle, gereken koordinasyon asıl işi küçülteceği için az sayıda qubit’i olan programlar sıkça yavaş çalışır. Bu, ortam değişkeni `OMP_NUM_THREADS` küçük bir sayı ayarlanarak düzeltilebilir. Üstünkörü bir temel kural olarak, 1 iş parçacığı yaklaşık 4 qubit için uygundur ve her qubit başına bir tane ek iş parçacığı iyi bir sonuç verir. Ancak, bu kullandığınız algoritmaya yüksek oranda bağlıdır.
 

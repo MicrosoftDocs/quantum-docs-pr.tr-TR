@@ -1,24 +1,24 @@
 ---
-title: Symmetries of Molesel Integrals | Microsoft Docs
-description: Symmetries of Molesel Integralleri kavramsal docs
+title: Symmetries of Molesel Integrals
+description: 'Molesel symmetries numaralandırmak için Q # OrbitalIntegral türünü kullanma hakkında bilgi edinin.'
 author: nathanwiebe2
 ms.author: nawiebe
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.symmetries
-ms.openlocfilehash: 041d600bc8d65e7d67f5fe7d61a69426fb42ffbc
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: b7e7b79af17af544c4a784eff08500498afc9f67
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442385"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904477"
 ---
 # <a name="symmetries-of-molecular-integrals"></a>Symmetries of Molesel Integrals
 
-[Elektronik sistemler Için hisse](xref:microsoft.quantum.chemistry.concepts.quantummodels)anlarca ve nuclei ile karşı elektrikle etkileşim kuran ve nuclei ile birlikte çalışan elektriksel 'In bulunduğu Coulomb Hamiltonian 'ın devralınan sifreu, bir dizi symmetries Hamiltonian 'daki terimleri sıkıştırmak için bu açıktan yararlanılabilir.
-Genel olarak, $ \psı_j $ işlevleri hakkında daha fazla varsayım yapılmamadığımızda, yalnızca bu \begin{Equation} h_ {pqrs} = h_ {qpsr}, \tag{★} \label{EQ: hpqrs} \end{Equation} [olduğundan, ](xref:microsoft.quantum.chemistry.concepts.quantummodels)$P, q $ ve $r, s $ ' den Anti-commutation ' d a ınterdeğiştiyse,, değerlerinin özdeş kalacağını belirten elektronik sistemler.
+[Elektronik sistemler Için hisse](xref:microsoft.quantum.chemistry.concepts.quantummodels)anlarca ve nuclei ile karşı elektrikle etkileşim kuran ve nuclei ile ve nuclei ile birlikte çalışan elektriksel 'In bulunduğu Coulomb Hamiltonian 'ın devralınan simetri, Hamiltonian 'in hükümlerini sıkıştırmak için yararlanılabilecek bir dizi symmetries 'e neden olur.
+Genel olarak, $ \ psi_j $ işlevleri hakkında daha fazla varsayım yapılmadığımızda yalnızca \begin{Equation} h_ {pqrs} = h_ {qpsr}, \tag{★} \label{EQ: hpqrs} \end{Equation}, $p, q $ ve $r, s $, [' ın anti](xref:microsoft.quantum.chemistry.concepts.quantummodels) -commutation ' d i r.
 
-Döndürme-yörünge 'lerin gerçek değerli olduğunu varsaydığımızda (Gauss orbisi tabanlarında olduğu gibi), \ Begin{Equation} h_ {pqrs} = h_ {qpsr} = h_ {srqp} = h_ {rspq} = h_ {rqps} = h_ {psrq} = h_ {SPQR} = h_ {qrsp} .\tag {★} \label{EQ: hpqrsreal} \end{ Denklem} bu tür varsayımlar yaparken, Hamiltonian 'ın matris öğelerini $8 $; faktörü ile depolamak için gereken verileri azaltmak için yukarıdaki symmetries kullanabiliriz. Bunu yapmak, verilerin tutarlı bir şekilde daha zorlayıcı bir şekilde aktarılmasını sağlar.
+Döndürme/bitlerin gerçek değerli olduğunu varsaydığımızda (Gauss orbisi esaları için olduğu gibi), \ Begin{Equation} h_ {pqrs} = h_ {qpsr} = h_ {srqp} = h_ {rspq} = h_ {rqps} = h_ {psrq} = h_ {SPQR} = h_ {qrsp} .\tag {★} \label{EQ: hpqrsreal} \end{ Denklem} bu tür varsayımlar yaparken, Hamiltonian 'ın matris öğelerini $8 $; faktörü ile depolamak için gereken verileri azaltmak için yukarıdaki symmetries kullanabiliriz. Bunu yapmak, verilerin tutarlı bir şekilde daha zorlayıcı bir şekilde aktarılmasını sağlar.
 Neyse ki Hamiltonian simülasyon kitaplığı, tamsayı dosyalarını [LIQUI $ | \rangle $](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/) öğesinden veya doğrudan [nwchem](http://www.nwchem-sw.org/index.php/Main_Page)'den içe aktarmak için kullanılabilecek alt yordamlar içerir.
 
 Molesel orbte integrals (örneğin, $h\_{PQ} $ ve $h\_{pqrs} $ terimleri), Bu simetriyi ifade etmek için bir dizi yararlı işlev sağlayan `OrbitalIntegral` türü kullanılarak temsil edilir.

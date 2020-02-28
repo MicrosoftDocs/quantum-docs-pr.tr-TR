@@ -1,17 +1,17 @@
 ---
-title: Hartree-Fock teorisi | Microsoft Docs
-description: Hartree-Fock teorik belgeleri
+title: Hartree-Fock teorisi
+description: Hisse sistemleri için ilk durumu oluşturmanın basit bir yolu olan Hartree – Fock teorisi hakkında bilgi edinin.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.hartreefock
-ms.openlocfilehash: e73111ae710e11ca6730581b8be711cf32783677
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 6fa63cbe13fe98565ffb42b56f3ade86720cedb3
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184109"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904460"
 ---
 # <a name="hartreefock-theory"></a>Hartree – Fock teorisi
 
@@ -22,10 +22,10 @@ Zemin eyalet enerji gibi miktarlar öğrenilebilir.
 Örneğin, $ \ket{\psı} $ herhangi bir saf hisse durumundaysa, \begin{Equation} E = \bra{\psı} \hat{H} \ket{\psı} \end{Equation}, sistemin o durumda sahip olduğu ortalama enerji sağlar.
 Bu durumda, bu değer en küçük değeri veren durumdur. Sonuç olarak, doğru zemin durumu için mümkün olduğunca yakın olan bir durumun seçilmesi, doğrudan enerjiyi tahmin etmek için (değişen bir sanal bölge kapsamında olduğu gibi) ya da aşama tahmini aracılığıyla önemli bir durum seçmektir.
 
-Hartree – Fock teorik, hisse sistemleri için ilk durumu oluşturmak için basit bir yol sağlar. Bir hisse sisteminin zemin durumu için tek bir sdaha daha sonra determinantı verir. Bu uçta, boşluk enerji alanını en aza indiren, Fock-Space içinde bir döndürme bulur. Özellikle, $N $ Elektriklerde bir sistem için yöntem, döndürme \begin{Equation} \prod_{j = 0} ^ {N-1} a ^ \abger_j \tus{0} \mapsto \prod_{j = 0} ^ gerçekleştirir {N-1} e ^ {u} a ^ \abger_j e ^ {-u} \tus{0}\defeq\prod_{j = 0} ^ {N-1} \widetilde{a} ^ \kama ger _j \ket{0}, \end{Equation} bir anti-hermitian (yani $u =-u ^ \linger $) matrisi $u = \sum_{PQ} u_ {PQ} a ^ \linger_p A_Q $. $U $ matrisinin orbilaçlerini ve $ \widetilde{a} ^ \linger_j $ ve $ \widetilde{a}_j $ ' i temsil ettiğinden, elektriksel molesel döndürme-Orbitals için oluşturma ve annimilasyon işleçlerini temsil etmelidir.
+Hartree – Fock teorik, hisse sistemleri için ilk durumu oluşturmak için basit bir yol sağlar. Bir hisse sisteminin zemin durumu için tek bir sdaha daha sonra determinantı verir. Bu uçta, boşluk enerji alanını en aza indiren, Fock-Space içinde bir döndürme bulur. Özellikle, $N $ Elektriklerde bir sistem için yöntem, < Begin{Equation} \ prod_ {j = 0} ^ {N-1} a ^ \ dagger_j \tus{0} \mapsto \ prod_ {j = 0} ^ {değerini gerçekleştirir N-1} e ^ {u} a ^ \ dagger_j e ^ {-u} \ayraç{0}\defeq\ prod_ {j = 0} ^ {N-1} \widetilde{a} ^ \ dagger_j \tus{0}, \end{Equation} bir anti-hermitian (ör. $u =-u ^ \hanger $) matris $u = \ sum_ {PQ} u_ {PQ} a ^ \ dagger_p a_q $. $U $ matrisinin orbilaçlerini ve $ \widetilde{a} ^ \ dagger_j $ ve $ \widetilde{a} _j $ ' ın oluşturma ve annimilasyon işleçlerini temsil ettiğinden, mumların yarsalları, deniz CK molesel döndürme-Orbitals gibi bir değere dikkat edilmelidir.
 
 
-$U $ matrisi, daha sonra beklenen enerji $ \bra{0} \prod_{j = 0} ^ {N-1} \widetilde{a}\_j H \prod\_{k = 0} ^ {N-1} \widetilde{a} ^ \dagger_k\ket{0}$ değerini en iyi duruma getirdi. Bu iyileştirme sorunları genel olarak oldukça zor olabilir; böylece, Hartree – Fock algoritması en iyi duruma getirme sorununa hızlı bir şekilde yakınsama eğilimi yaparak, özellikle de eşitlenmiş-Shell molecuları için daha yakın bir çözüm sağlar. Bu durumları `FermionWavefunction` nesnesinin bir örneği olarak belirteceğiz. Örneğin, $a ^ \abger_{1}a ^ \abger_{2}bir ^ \abger_{6}\demet{0}$, aşağıdaki gibi kimya kitaplığında örneği oluşturulur.
+$U $ matrisi, daha sonra beklenen enerji $ \bra{0} \ prod_ {j = 0} ^ {N-1} \widetilde{a}\_j H \prod\_{k = 0} ^ {N-1} \widetilde{a} ^ \ dagger_k \tus{0}$ değerini en iyi duruma getirdi. Bu iyileştirme sorunları genel olarak oldukça zor olabilir; böylece, Hartree – Fock algoritması en iyi duruma getirme sorununa hızlı bir şekilde yakınsama eğilimi yaparak, özellikle de eşitlenmiş-Shell molecuları için daha yakın bir çözüm sağlar. Bu durumları `FermionWavefunction` nesnesinin bir örneği olarak belirteceğiz. Örneğin, $a ^ \ dagger_{1}bir ^ \ dagger_{2}bir ^ \ dagger_{6}\ayraç{0}$, aşağıdaki gibi kimya kitaplığında örneği oluşturulur.
 ```csharp
 // Create a list of integer indices of the creation operators
 var indices = new[] { 1, 2, 6 };

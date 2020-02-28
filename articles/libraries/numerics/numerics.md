@@ -1,17 +1,17 @@
 ---
-title: Numerics kitaplığını kullanma | Microsoft Docs
-description: Numerics kitaplığını kullanma
+title: 'Microsoft Q # Numerics kitaplığını kullanma'
+description: Microsoft hisse türü kitaplığı 'nda bulunan türler ve işlemler hakkında bilgi edinin.
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: ca24ff60cd9ae5077c7f4bae0012fe1180d7e6d4
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ad9f529efd06fdf13bab4467b091aafacf1d5b09
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821040"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907265"
 ---
 # <a name="using-the-numerics-library"></a>Numerics kitaplığını kullanma
 
@@ -36,7 +36,7 @@ Numerics kitaplığı aşağıdaki türleri destekler
 1. **`SignedLittleEndian`** : iki öğenin tamamlayıcısı içinde depolanan işaretli bir tamsayıyı temsil ettiğinden, `LittleEndian` aynı.
 1. **`FixedPoint`** : bir qubit dizi `qArr2 : Qubit[]` ve ikili nokta `pos`konumundan oluşan gerçek bir sayıyı temsil eder. Bu, ikili noktanın solundaki ikili basamak sayısını sayar. `qArr2`, `SignedLittleEndian`ile aynı şekilde depolanır.
 
-## <a name="operations"></a>Operations
+## <a name="operations"></a>İşlemler
 
 Yukarıdaki üç türden her biri için çeşitli işlemler mevcuttur:
 

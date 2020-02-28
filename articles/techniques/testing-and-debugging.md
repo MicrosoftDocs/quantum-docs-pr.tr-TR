@@ -1,17 +1,17 @@
 ---
-title: 'Test ve hata ayıklama-Q # teknikleri | Microsoft Docs'
-description: 'Test ve hata ayıklama-Q # teknikleri'
+title: 'Q # programlarını test etme ve hata ayıklama'
+description: Birim testlerini, olguları ve onayları ve döküm işlevlerini kullanarak hisse programlarını test etme ve hata ayıklama hakkında bilgi edinin.
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: cfc71f08be0f190d9f5f4a48796e3d0ad06d6107
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 3df8df8defabcc9cc87d59f543f425c882b001e0
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820122"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907690"
 ---
 # <a name="testing-and-debugging"></a>Test ve hata ayıklama
 
@@ -27,12 +27,12 @@ S #, hisse programları için birim testleri oluşturmayı destekler ve bu, [xUn
 
 ### <a name="creating-a-test-project"></a>Test projesi oluşturma
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 Visual Studio 2019 ' i açın. `File` menüsüne gidin ve `New` > `Project...`' yı seçin.
 Sağ üst köşede `Q#`arayın ve `Q# Test Project` şablonunu seçin.
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Komut Satırı / Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[Komut Satırı / Visual Studio Code](#tab/tabid-vscode)
 
 En sevdiğiniz komut satırınızdan aşağıdaki komutu çalıştırın:
 ```bash
@@ -71,7 +71,7 @@ Q # derleyicisi yerleşik hedefleri "niceleyici simülatörü", "Toffkaysimülat
 
 ### <a name="running-q-unit-tests"></a>Q # birim testlerini çalıştırma
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 Tek seferlik çözüm başına kurulum olarak `Test` menüsüne gidin ve `Test Settings` > `Default Processor Architecture` > `X64`' nı seçin.
 
@@ -81,7 +81,7 @@ Tek seferlik çözüm başına kurulum olarak `Test` menüsüne gidin ve `Test S
 
 Projeyi derleyin, `Test` menüsüne gidin ve `Windows` > `Test Explorer`' yı seçin. `AllocateQubit`, `Not Run Tests` grubundaki testlerin listesinde görünür. `Run All` seçin veya bu testi çalıştırın ve başarılı olur!
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Komut Satırı / Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[Komut Satırı / Visual Studio Code](#tab/tabid-vscode)
 
 Testleri çalıştırmak için proje klasörüne (`Tests.csproj`içeren klasör) gidin ve komutu yürütün:
 
@@ -123,29 +123,29 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 <xref:microsoft.quantum.intrinsic.message> iç işlev `(String -> Unit)` türüne sahiptir ve tanılama iletilerinin oluşturulmasına izin vermez.
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 Test Gezgini 'nde bir testi yürütmeden ve teste tıkladığınızda, test yürütmesi hakkında bilgi içeren bir panel görüntülenir: başarılı/başarısız durum, geçen süre ve "çıktı" bağlantısı. "Çıkış" bağlantısına tıklarsanız, test çıktısı yeni bir pencerede açılır.
 
 ![test çıktısı](~/media/unit-test-output.png)
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Komut Satırı / Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[Komut Satırı / Visual Studio Code](#tab/tabid-vscode)
 
 Her bir testin geçiş/başarısızlık durumu konsola `dotnet test`göre yazdırılır.
 Başarısız testler için çıktılar, hatanın tanılanmasına yardımcı olmak üzere konsola da yazdırılır.
 
 ***
 
-## <a name="assertions"></a>Onaylama
+## <a name="facts-and-assertions"></a>Olgular ve Onaylamalar
 
 Q # içindeki işlevlerin _mantıksal_ yan etkileri olmadığından, çıkış türü boş olan bir işlevi yürütmenin _diğer_ etkileri, `()` hiçbir zaman bir Q # programı içinden gözlemlenemez.
 Diğer bir deyişle, bir hedef makine, bu atlama 'nin aşağıdaki Q # kodunun davranışını değiştirmeyeceği garantisi ile `()` döndüren herhangi bir işlevi yürütmemelidir.
-Bu işlem, soru-cevap ve hata ayıklama mantığını Q # programlarına eklemek için kullanışlı bir araç `()` döndüren işlevleri yapar. 
+Bu işlem, soru-cevap ve hata ayıklama mantığını Q # programlarına eklemek için `()` (yani `Unit`) işlevlerini döndüren işlevlerin yararlı bir araç olmasını sağlar. 
 
-Onayları uygulamak için aynı Logic de uygulanabilir. Basit bir örnek ele alalım:
+Basit bir örnek ele alalım:
 
 ```qsharp
-function AssertPositive(value : Double) : Unit 
+function PositivityFact(value : Double) : Unit 
 {
     if (value <= 0) 
     {
@@ -156,11 +156,31 @@ function AssertPositive(value : Double) : Unit
 
 Burada, anahtar sözcüğü `fail` hesaplamanın devam etmesi gerektiğini belirtir ve Q # programını çalıştıran hedef makinede bir özel durum ortaya koyar.
 Tanım olarak, bu tür bir hata, `fail` deyiminden sonra başka bir Q # kodu çalıştırılıncaya kadar, Q # içinden gözlemlenemez.
-Bu nedenle, `AssertPositive`bir çağrıyı aşdığımızda, girişi pozitif olduğundan emin olabilir.
+Bu nedenle, `PositivityFact`bir çağrıyı aşdığımızda, girişi pozitif olduğundan emin olabilir.
+
+<xref:microsoft.quantum.diagnostics> ad alanından [`Fact`](xref:microsoft.quantum.diagnostics.fact) işlevini kullanarak `PositivityFact` aynı davranışı uygulayabileceğinizi unutmayın:
+
+```qsharp
+    Fact(value <= 0, "Expected a positive number.");
+```
+
+Diğer yandan *onaylar,* olgulara benzer şekilde kullanılır, ancak hedef makinenin durumuna bağlı olabilir. Bunlar işlem olarak tanımlandıklarında, olgular işlev olarak tanımlanır (yukarıdaki gibi).
+Ayrımı anlamak için, bir onaylama içinde aşağıdaki olgunun kullanımını göz önünde bulundurun:
+
+```qsharp
+operation AssertQubitsAreAvailable() : Unit
+{
+     Fact(GetQubitsAvailableToUse() > 0, "No qubits were actually available");
+}
+```
+
+Burada, kullanılabilecek qubits sayısını döndürmek için <xref:microsoft.quantum.environment.getqubitsavailabletouse> işlemini kullanıyoruz.
+Bu açıkça programın ve yürütme ortamının genel durumuna bağlı olduğundan `AssertQubitsAreAvailable` tanımımız da bir işlem olmalıdır.
+Ancak, bu genel durumu, `Fact` işlevine giriş olarak basit bir `Bool` değeri sunacak şekilde kullanabiliriz.
 
 Bu fikirlere yönelik olarak, [Prelude](xref:microsoft.quantum.libraries.standard.prelude) , <xref:microsoft.quantum.intrinsic.assert> ve <xref:microsoft.quantum.intrinsic.assertprob> her ikisi de `()`üzerinde işlem olarak modellenen iki daha kullanışlı onaylama sağlar. Bu onayların her biri, belirli bir ölçümü, ölçümün gerçekleştirileceği bir hisse izini ve kuramsal bir sonucu açıklayan bir Pauli işleci alır.
 Simülasyonu tarafından çalışan hedef makinelerde, [hiçbir kopyalama işlemi yapılmaz](https://en.wikipedia.org/wiki/No-cloning_theorem)ve bu tür ölçümlere, bu tür onayları geçen kaydı etkilemeden bu ölçümleri gerçekleştirebilir.
-Daha sonra bir simülatör, yukarıdaki `AssertPositive` işleve benzer şekilde, kuramsal sonuç uygulamada gözlemlenmese hesaplamayı iptal edebilir:
+Daha sonra bir simülatör, yukarıdaki `PositivityFact` işleve benzer şekilde, kuramsal sonuç uygulamada gözlemlenmese hesaplamayı iptal edebilir:
 
 ```qsharp
 using (register = Qubit()) 
@@ -265,7 +285,7 @@ Aşağıdaki örneklerde bazı yaygın durumlar için `DumpMachine` gösterilmek
   > Bir qubit kimliği çalışma zamanında atanır ve qubitin ayrıldığı sıra veya bir qubit yazmaç içindeki konumu ile hizalı değildir.
 
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
   > [!TIP]
   > Kodunuzda bir kesme noktası yerleştirerek ve bir qubit değişkeninin değerini inceleyerek, Visual Studio 'da bir qubit kimliği belirleyebilirsiniz, örneğin:
@@ -274,7 +294,7 @@ Aşağıdaki örneklerde bazı yaygın durumlar için `DumpMachine` gösterilmek
   >
   > `register2` üzerindeki Dizin `0` olan qubit, ID =`3`, Index `1` ile qubit, ID =`2`içerir.
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Komut Satırı / Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[Komut Satırı / Visual Studio Code](#tab/tabid-vscode)
 
   > [!TIP]
   > <xref:microsoft.quantum.intrinsic.message> işlevini kullanarak bir qubit Kimliği belirleyebilir ve qubit değişkenini iletiye geçirerek, örneğin:
@@ -360,7 +380,7 @@ namespace app
 }
 ```
 
-## <a name="debugging"></a>Hata Ayıklama
+## <a name="debugging"></a>Hata ayıklama
 
 `Assert` ve `Dump` işlevlerinin ve işlemlerinin üstünde, Q #, standart Visual Studio hata ayıklama özellikleri alt kümesini destekler: [satır kesme noktaları ayarlama](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [F10 kullanarak kod üzerinden atlama](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) ve [Klasik değişkenlerin değerlerini inceleme](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) işlemi, simülatör üzerinde kod yürütme sırasında mümkün değildir.
 

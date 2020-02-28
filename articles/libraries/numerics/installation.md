@@ -1,17 +1,17 @@
 ---
-title: Numerics kitaplığı yükleme ve doğrulama | Microsoft Docs
-description: Numerics kitaplığı yükleme ve doğrulama
+title: Microsoft hisse sayılıcs kitaplığı-yükleme ve doğrulama
+description: Microsoft hisse biçimi kitaplığı 'nı Visual Studio 2019 veya sonraki yüklemenize eklemeyi öğrenin.
 author: thomashaener
 ms.author: thhaner
 ms.date: 05/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.installation
-ms.openlocfilehash: c41bb73ea484271689eea2ca1b59ce6639dc15a7
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: cb0d00a509b3986b605dd7f15f9bccc0661bb894
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036466"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906347"
 ---
 # <a name="numerics-library-installation-and-validation"></a>Numerics kitaplığı yükleme ve doğrulama
 
@@ -33,7 +33,7 @@ Daha ayrıntılı bilgi için bkz. [Paket Yöneticisi Kullanıcı Arabirimi Kıl
 
 Alternatif olarak, komut satırı arabirimi aracılığıyla, sayılıcs kitaplığını projenize eklemek için Package Manager konsolunu kullanabilirsiniz.
 
-![](../../media/vs2017-nuget-console-menu.png)
+![Paket Yöneticisi konsolunu komut satırından kullanma](../../media/vs2017-nuget-console-menu.png)
 
 Paket Yöneticisi konsolundan aşağıdakileri çalıştırın:
 

@@ -1,19 +1,19 @@
 ---
-title: Bağıntılı wavefunctions | Microsoft Docs
-description: Hisse Dynamics kavramsal belgeleri
+title: Bağıntılı dalga fonksiyonları
+description: Microsoft hisse Kimya kitaplığı 'nı kullanarak dalga işlevlerinde dinamik ve dinamik olmayan bağıntılar hakkında bilgi edinin.
 author: guanghaolow
 ms.author: gulow@microsoft.com
 ms.date: 05/28/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.multireference
-ms.openlocfilehash: 0b14f373d31c5b63e313e07810daf62d9195b1d3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 005ef86382ca72969b06a4206cab01f3845718e2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184041"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904443"
 ---
-# <a name="correlated-wavefunctions"></a>Bağıntılı wavefunctions
+# <a name="correlated-wavefunctions"></a>Bağıntılı dalga fonksiyonları
 
 Birçok sistem için, özellikle de equlebrium geometrisi, [Hartree – Fock](xref:microsoft.quantum.chemistry.concepts.hartreefock) teorisi, tek bir determinkasel başvuru durumu aracılığıyla molesel Özellikler 'in bir nitel açıklaması sağlar. Ancak, nicel doğruluğunu sağlamak için bir diğeri de bağıntı efektlerini dikkate almalıdır. 
 
@@ -24,9 +24,9 @@ Bu, belirleyici bir üst konuma sahiptir ve multireference wavefunction örneği
 Kimya kitaplığı, çok başvurulu bir sıra wavefunction 'ı belirleyici bir üst konum olarak belirtmek için bir yol sağlar. Seyrek multireference dalga işlevlerini çağırdığımız bu yaklaşım, yalnızca birkaç bileşen üst konumu belirlemek için yeterli olduğunda etkilidir. Kitaplık Ayrıca, genelleştirilmiş Unitary ile bağlanmış küme ANSATZ aracılığıyla tek bir temelinde başvurunun üzerine dinamik bağıntılar dahil etmek için bir yöntem sağlar. Ayrıca, bu durumlar için bir hisse bilgisayarında bu durumları oluşturan hisse devreleri de oluşturur. Bu durumlar [broombridge şemasında](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)belirlenebilir ve ayrıca bu durumları Kimya kitaplığı aracılığıyla el ile belirtme işlevlerini de sağlarız.
 
 ## <a name="sparse-multi-reference-wavefunction"></a>Seyrek Multi-Reference wavefunction
-Çok başvurulu bir durum $ \ket{\psı_{\rm {MCSCF}}} $, açıkça $N $-elektron sdaha kesin olarak belirtilen doğrusal bir birleşimi olarak belirtilebilir.
-\begin{hizalaması} \ket{\psı_{\rm {MCSCF}}} \propto \sum_{İ_1 < i_2 < \cnoktalar < i_N} \lambda_{İ_1, i_2, \cnoktalar, i_N} a ^ \dagger_{İ_1}a ^ \dagger_{i_2}\cdots a ^ \dagger_{i_N}\ket{0}.
-\end{hizalaması} Örneğin, State $ \propto (0,1 a ^ \abger_1a ^ \abger_2a ^ \abger_6-0,2 a ^ \abger_2a ^ \abger_1a ^ \abger_5) \tus{0}$ aşağıdaki gibi kimya kitaplığında belirtilebilir.
+Çok başvurulu bir durum $ \ket{\ psi_ {\rm {MCSCF}}} $ açıkça $N $-elektron sdaha belirleyici bir şekilde doğrusal bir bileşim olarak belirtilebilir.
+\begin{hizalaması} \ket{\ psi_ {\rm {MCSCF}}} \propto \ sum_ {i_1 < i_2 < \cnoktalar < i_N} \ lambda_ {i_1, i_2, \cnoktalar, i_N} a ^ \ dagger_ {İ_1} a ^ \ dagger_ {i_2} \tıas dagger_.{0}
+\end{hizalaması} Örneğin, $ \propto (0,1 a ^ \ dagger_1a ^ \ dagger_2a ^ \ dagger_6-0,2 a ^ \ dagger_2a ^ \ dagger_1a ^ \ dagger_5) \demet{0}$, aşağıdaki gibi kimya kitaplığında belirtilebilir.
 ```csharp
 // Create a list of tuples where the first item of each 
 // tuple are indices to the creation operators acting on the
@@ -42,18 +42,18 @@ var wavefunction = new FermionWavefunction<int>(superposition);
 Üst konum bileşenlerinin bu açık gösterimi yalnızca birkaç bileşenin belirtilmesi gerektiğinde etkilidir. İstenen durumu doğru bir şekilde yakalamak için birçok bileşen gerektiğinde bu gösterimi kullanmaktan kaçının. Bunun nedeni, bu durumu bir hisse bilgisayar üzerinde hazırlayan, en az üst konum bileşenleri ile en az doğrusal bir şekilde ölçeklendirilen ve üst konum güçlerinin tek bir norm ile en fazla çeyrek bir şekilde ölçeklendirilebilen, hisse başında bu durumu sağlayan geçit 'in bulunduğu kapı maliyetidir.
 
 ## <a name="unitary-coupled-cluster-wavefunction"></a>Unitary ile bağlanmış küme wavefunction
-Ayrıca, chemistery kitaplığını kullanarak bir Unitary ile bağlanmış küme wavefunction $ \ket{\psı_{\rm {UCC}}} belirtebilirsiniz. Bu durumda, tek bir determinsizelik başvuru durumuna sahip olduğumuz, $ \Ket{\psı_{\rm{SCF}}} $. Unitary ile bağlanmış küme dalga işlevinin bileşenleri, bir başvuru durumunda işlem gören Unitary operatörü aracılığıyla implicity belirtilir.
-Bu Unitary işleci genellikle $e ^ {T-T ^ \abger} $ olarak yazılmıştır; burada $T-T ^ \dağılım $, Anti-hermitian küme operatöründür. Bu nedenle \begin{hizalaması} \ket{\psı_{\rm {UCC}}} = e ^ {T-T ^ \dagger}\ket{\psi_{\rm{SCF}}}.
+Ayrıca, bir Unitary ile bağlanmış küme wavefunction $ \ket{\ psi_ {\rm {UCC}}} $, chemistery kitaplığını kullanarak belirtilebilir. Bu durumda, tek bir determinantik başvuru durumuna sahip olduğumuz $ \ket{\ psi_ {\rm{SCF}}} $. Unitary ile bağlanmış küme dalga işlevinin bileşenleri, bir başvuru durumunda işlem gören Unitary operatörü aracılığıyla implicity belirtilir.
+Bu Unitary işleci genellikle $e ^ {T-T ^ \abger} $ olarak yazılmıştır; burada $T-T ^ \dağılım $, Anti-hermitian küme operatöründür. Bu nedenle \begin{hizalaması} \ket{\ psi_ {\rm {UCC}}} = e ^ {T-T ^ \dagger}\ket{\ psi_ {\Rm{SCF}}}.
 \end{hizalaması}
 
-Küme işlecinin $T = T_1 + T_2 + \cnoktalara $ ' i parçalara bölünmesi, her parça $T _j $ $j $-Body koşullarını içermesi durumunda da yaygındır. Genelleştirilmiş bağlanmış küme teorik bölümünde, tek gövde küme operatörü (Singles), \begin{hizalaması} T_1 = \sum_{PQ}t ^ {p} _ {q} a ^ \leger_p A_Q, \end{hizalaması} biçimindedir
+Ayrıca, $T = T_1 + T_2 + \cnoktalar $ Cluster işlecinin parçalara bölünmesi, her parça $T _j $ gövde terimlerini $j. Genelleştirilmiş bağlanmış küme teorik 'inde, tek gövde küme operatörü (Singles), \begin{hizalaması} T_1 = \ sum_ {PQ} T ^ {p} _ {q} a ^ \ dagger_p a_q, \end{hizalaması} biçiminde
 
-ve iki gövdede küme işleci (Double 'lar), \begin{hizalaması} T_2 = \sum_{pqrs}t ^ {PQ} _ {RS} a ^ \leger_p a ^ \leger_q a_r a_s biçiminde.
+ve iki gövdede küme işleci (Double 'lar), \begin{hizalaması} T_2 = \ sum_ {pqrs} T ^ {PQ} _ {RS}. dagger_p bir ^ \ dagger_q a_r a_s.
 \end{hizalaması}
 
 Daha yüksek sıralı terimler (üçlü ve çeyrek Rupisi, vb.) mümkündür, ancak şu anda Kimya kitaplığı tarafından desteklenmiyor.
 
-Örneğin, Let $ \Ket{\psı_{\rm{SCF}}} = a ^ \abger_1 a ^ \abger_2\tus{0}$, ve Let $T = 0,123 a ^ \abger_0 A_1 + 0,456 a ^ \abger_0a ^ \gesger_3 A_1 a_2-0,789 a ^ \gesger_3a ^ \dagger_2 A_1 a_0 $. Bu durum, aşağıdaki gibi kimya kitaplığı 'nda oluşturulur.
+Örneğin, $ \ket{\ psi_ {\rm{SCF}}} = a ^ \ dagger_1 a ^ \ dagger_2 \tus{0}$ ve $T = 0,123 a ^ \ dagger_0 a_1 + 0,456 a ^ \ dagger_0a ^ \ dagger_3 0,789 a_1 a_2 dagger_3a $. Bu durum, aşağıdaki gibi kimya kitaplığı 'nda oluşturulur.
 ```csharp
 // Create a list of indices of the creation operators
 // for the single-reference state
@@ -77,7 +77,7 @@ var clusterOperator = new[]
 var wavefunction = new FermionWavefunction<int>(reference, clusterOperator);
 ```
 
-Dönüş dönüştürmesi, tamsayı dizinleri yerine `SpinOrbital` dizinleri belirtilerek açıkça yapılabilir. Örneğin, Let $ \Ket{\psı_{\rm{SCF}}} = a ^ \gesger_{1, \upoklu} a ^ \hanger_{2, \downarrow}\ket{0}$, ve Let $T = 0,123 a ^ \abger_{0, \upoklu} a_ {1, \upoklu} + 0,456 a ^ \abger_{0, \upoklu} a ^ \abger_{3, \downoklu} a_ {1, \upoklu} a_ {2, \ DownArrow}-0,789 a ^ \abger_{3, \upok} a ^ \abger_{2, \upok} a_ {1, \uparrow} a_ {0, \upok} $, döndürme convserving. Bu durum, aşağıdaki gibi kimya kitaplığı 'nda oluşturulur.
+Dönüş dönüştürmesi, tamsayı dizinleri yerine `SpinOrbital` dizinleri belirtilerek açıkça yapılabilir. Örneğin psi_, < \ dagger_ {1, \upoklu} bir ^ \ dagger_ {2, \downarrow}\ket{0}$ ve Let $T = 0,123 a ^ \ dagger_ {0, \upoklu} a_ {1, \upoklu} + 0,456 a ^ \ dagger_ {0, \upoklu} a ^ \ dagger_ {3, \downok} a_ {1, \upoklu} a_ {2, \downconvserving}-0,789 a ^ \ dagger_ {3, \upoklu} dagger_ {1, \upoklu} a_,. Bu durum, aşağıdaki gibi kimya kitaplığı 'nda oluşturulur.
 ```csharp
 // Create a list of indices of the creation operators
 // for the single-reference state

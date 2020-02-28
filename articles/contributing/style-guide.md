@@ -1,24 +1,24 @@
 ---
-title: 'S # stil kılavuzu | Microsoft Docs'
-description: 'S # stil kılavuzu'
+title: 'Microsoft Q # Stil Kılavuzu'
+description: 'Q # programları ve kitaplıkları için adlandırma, giriş, belge ve biçimlendirme kurallarını öğrenin.'
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 4050e2ee9e516aed7a8ba1398792562926808ee0
-ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.openlocfilehash: 3c8e432378ec563a197a5b87000c3e90cadb8e18
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73463312"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907452"
 ---
 # <a name="q-style-guide"></a>S # stil kılavuzu #
 ## <a name="general-conventions"></a>Genel kurallar ##
 
 Bu kılavuzda önerilen kurallar, Q # dilinde yazılmış program ve kitaplıkların okunmasını ve anlaşılması daha kolay hale getirmeye yardımcı olmak için tasarlanmıştır.
 
-## <a name="guidance"></a>Kılavuz
+## <a name="guidance"></a>Rehber
 
 Şunları öneririz:
 
@@ -60,13 +60,13 @@ Bu gibi durumlarda, giriş işlemi tarafından gerçekleştirilen eylem, dış i
 `ApplyIf`, `ApplyToEach`ve `ApplyToFirst`gibi fiil `Apply`önerilir.
 Bu örnekte olduğu gibi diğer fiiller da yararlı olabilir `IterateThroughCartesianPower`.
 
-| Ü | Beklenen efekt |
+| Fiil | Beklenen efekt |
 | ---- | ------ |
-| Başvurun | Giriş olarak verilen bir işlem çağrılır |
+| Uygula | Giriş olarak verilen bir işlem çağrılır |
 | Assert | Olası bir hisse ölçüsünün sonucu hakkında bir varsayım simülatör tarafından denetlenir |
 | Tahmin | Bir veya daha fazla ölçüden çizilen bir tahmini temsil eden klasik bir değer döndürüldü |
 | Measure | Bir hisse ölçümü gerçekleştirilir ve sonucu kullanıcıya döndürülür |
-| Hazırlanın | Belirli bir qubits kaydı belirli bir duruma başlatılır |
+| Hazırlama | Belirli bir qubits kaydı belirli bir duruma başlatılır |
 | Örnek | Klasik bir değer, bazı dağılılardan rasgele döndürülür |
 
 İşlevler için, fiillerin ortak isimler yerine kullanılmasını önletireceğiz (aşağıdaki doğru isimler üzerinde rehberlik) veya sıfatlar:
@@ -80,7 +80,7 @@ Bu örnekte olduğu gibi diğer fiiller da yararlı olabilir `IterateThroughCart
 Bu ad, aşağıda açıklandığı gibi, yerleşik `Controlled` functor semantiğini eşleştirmesinin ek avantajına sahiptir.
 Benzer şekilde, `Encode`ile ilişkili bir UDT için ad `Encoder` durumda olduğu gibi, işlem adlarından işlev ve UDT adları oluşturmak için _Aracı isimleri_ de kullanılabilir.
 
-# <a name="guidancetabguidance"></a>[Rehber](#tab/guidance)
+# <a name="guidance"></a>[Rehber](#tab/guidance)
 
 Şunları öneririz:
 
@@ -91,7 +91,7 @@ Benzer şekilde, `Encode`ile ilişkili bir UDT için ad `Encoder` durumda olduğ
 - Tüm yerel değişkenler için, `CamelCase`, `snake_case`veya `ANGRY_CASE`için güçlü bir tercih `pascalCase` kullanın. Özellikle, yerel değişkenlerin küçük harfle başlayıp başlamadiğinden emin olun.
 - İşlev ve işlem adlarında alt çizgi `_` kullanmaktan kaçının; ek hiyerarşi düzeyleri gerekli olduğunda, ad alanları ve ad alanı diğer adları kullanın.
 
-# <a name="examplestabexamples"></a>[Örnekler](#tab/examples)
+# <a name="examples"></a>[Örnekler](#tab/examples)
 
 |   | Adı | Açıklama |
 |---|------|-------------|
@@ -132,7 +132,7 @@ is Adj + Ctl {
 }
 ```
 
-# <a name="guidancetabguidance"></a>[Rehber](#tab/guidance)
+# <a name="guidance"></a>[Rehber](#tab/guidance)
 
 Şunları öneririz:
 
@@ -141,7 +141,7 @@ is Adj + Ctl {
 - Kısa (iki harfli) kısaltmalar ve ınitialisms için büyük harf kullanın.
 - Daha uzun (üç veya daha fazla harf) kısaltmalar ve ınitialisms için `CamelCase` kullanın.
 
-# <a name="examplestabexamples"></a>[Örnekler](#tab/examples)
+# <a name="examples"></a>[Örnekler](#tab/examples)
 
 |   | Adı | Açıklama |
 |---|------|-------------|
@@ -168,17 +168,17 @@ Bu nedenle, bir kavramı tanımlayan makul, yaygın isimler kavramı, bir kavram
 Belirli bir örnek olarak, listedir kontrollü DEĞIŞTIRME ve buna uygun olmayan işlemler, genellikle akademik belgelerinde "Fredkaş" ve "Toffoli" işlemleri olarak adlandırılır, ancak `CSWAP` ve `CCNOT`olarak Q # içinde tanımlanır.
 Her iki durumda da, API belgesi açıklamaları uygun adlara göre eş anlamlı adlar sağlar ve tüm uygun alıntıları birlikte kapsar.
 
-Bu tercih, bazı uygun isimler kullanımının her zaman gerekli olacağı bir şekilde önemlidir. Q #, örneğin birçok klasik dile göre gelenek kümesini izler ve daha sonra değer olarak adlandırılan Boolean mantığına başvuru `Bool` türlerine başvurur. George Boole.
+Bu tercih, bazı uygun isimler kullanımının her zaman gerekli olacağı bir şekilde önemlidir. Q #, örneğin çok sayıda klasik dile göre gelenek kümesini izler ve daha sonra George Boole 'in içinde adı verilen Boolean mantığına başvuru `Bool` türler anlamına gelir.
 Benzer şekilde, örneğin, Q # diline yerleşik `Pauli` türü de dahil olmak üzere, benzer bir şekilde adlandırılmış birkaç hisse kavramdır.
 Bu kullanım açısından gerekli olan doğru isimler kullanımını en aza indirerek, doğru isimleri kabul etmeyeceğinden etkiyi azalttık.
 
-# <a name="guidancetabguidance"></a>[Rehber](#tab/guidance) 
+# <a name="guidance"></a>[Rehber](#tab/guidance) 
 
 Şunları öneririz:
 
 - Adlarda doğru isimler kullanmaktan kaçının.
 
-# <a name="examplestabexamples"></a>[Örnekler](#tab/examples)
+# <a name="examples"></a>[Örnekler](#tab/examples)
 
 ***
 
@@ -188,17 +188,17 @@ Q #, kesin ve statik olarak yazılmış bir dil olduğundan, bir tür değeri ya
 Bu, değerlerin örtük olarak (ör. tür promosyonu) veya atama yoluyla türlerin değiştirilmesini sağlayan dillere karşılık gelir.
 Sonuç olarak, tür dönüştürme işlevleri Q # kitaplığı geliştirme bölümünde önemli bir rol oynar ve adlandırma hakkında yaygın olarak karşılaşılan kararlardan birini içerir.
 Ancak, tür dönüştürmeleri her zaman _belirleyici_olduğundan, bunlar işlev olarak yazılabilecekleri ve bu nedenle yukarıdaki önerinin altına düşecek.
-Özellikle, tür dönüştürme işlevlerinin fiiller (ör.: `ConvertToX`) veya duyurusu b önceden konumsal ifadeler (`ToX`) olarak adlandırılmaması, ancak kaynak ve hedef türlerini belirten sıfatıcı önceden konumsal ifadeler olarak adlandırılması (`XAsY`).
+Özellikle, tür dönüştürme işlevlerinin fiiller (ör.: `ConvertToX`) veya duyurusu b önceden konumsal ifadeler (`ToX`) olarak adlandırılmaması, ancak kaynak ve hedef türlerini belirten sıfatıcı önceden konumsal ifadeler olarak adlandırılması (`XAsY`) tavsiye ederiz.
 Tür dönüştürme işlevi adlarında dizi türleri listelenirken, toplu `Arr`önerilir.
 Tüm tür dönüştürme işlevlerinin hızla tanımlanabilmesi için `As` kullanılarak adlandırılması önerilir.
 
-# <a name="guidancetabguidance"></a>[Rehber](#tab/guidance)
+# <a name="guidance"></a>[Rehber](#tab/guidance)
 
 Şunları öneririz:
 
 - Bir işlev `X` türündeki bir değeri `Y`türünde bir değere dönüştürdüğünde, `AsY` ya da `XAsY`adını kullanın.
 
-# <a name="examplestabexamples"></a>[Örnekler](#tab/examples)
+# <a name="examples"></a>[Örnekler](#tab/examples)
 
 |   | Adı | Açıklama |
 |---|------|-------------|
@@ -215,13 +215,13 @@ Tüm tür dönüştürme işlevlerinin hızla tanımlanabilmesi için `As` kulla
 Yalnızca iç kodda yanlışlıkla bağımlılıklara açık hale getirilmeleri için işlevleri ve işlemleri adlandırırken bu durumun büyük bir zaman olduğunu açıkça belirtmek faydalı olur.
 Bir işlem veya işlev doğrudan kullanılmak üzere tasarlanmamıştır, ancak kısmi uygulama tarafından davranan, eşleşen bir çağrılabilir tarafından kullanılması gerekiyorsa, kısmen uygulanmış çağrılabilir için `_` başlayarak bir ad kullanmayı düşünün.
 
-# <a name="guidancetabguidance"></a>[Rehber](#tab/guidance)
+# <a name="guidance"></a>[Rehber](#tab/guidance)
 
 Şunları öneririz:
 
 - Bir işlev, işlem veya Kullanıcı tanımlı tür, bir Q # kitaplığı veya programı için ortak API 'nin bir parçası olmadığında, adının öndeki alt çizgiyle (`_`) başladığından emin olun.
 
-# <a name="examplestabexamples"></a>[Örnekler](#tab/examples)
+# <a name="examples"></a>[Örnekler](#tab/examples)
 
 |   | Adı | Açıklama |
 |---|------|-------------|
@@ -244,14 +244,14 @@ Bu gruplar, kendisini belirten bir veya iki harften sonra aynı kök adı kullan
 | `D` | Giriş veya girişler `Double` türündedir |
 | `L` | Giriş veya girişler `BigInt` türündedir |
 
-# <a name="guidancetabguidance"></a>[Rehber](#tab/guidance)
+# <a name="guidance"></a>[Rehber](#tab/guidance)
 
 Şunları öneririz:
 
 - Bir işlev veya işlem, girişlerinin türleri ve functor desteğiyle benzer işlevlerle veya işlemlerle ilişkili değilse, bir sonek kullanmayın.
 - Bir işlev veya işlem, girişlerinin türleri ve functor desteğiyle benzer işlevlerle veya işlemlerle ilişkiliyse, sapmaları ayırt etmek için yukarıdaki tabloda olduğu gibi sonekleri kullanın.
 
-# <a name="examplestabexamples"></a>[Örnekler](#tab/examples)
+# <a name="examples"></a>[Örnekler](#tab/examples)
 
 ***
 
@@ -261,7 +261,7 @@ Bir işlev veya işlem için Q # kodunun anahtar hedefi kolayca okunabilme ve an
 Benzer şekilde, giriş ve tür bağımsız değişkenlerinin adları, bir işlev veya bağımsız değişkenin sağlandığı bir şekilde nasıl kullanılacağını iletmelidir.
 
 
-# <a name="guidancetabguidance"></a>[Rehber](#tab/guidance)
+# <a name="guidance"></a>[Rehber](#tab/guidance)
 
 Şunları öneririz:
 
@@ -276,7 +276,7 @@ Benzer şekilde, giriş ve tür bağımsız değişkenlerinin adları, bir işle
   Özellikle, tek harfli değişken adlarını dizin olarak kullanmaktan kesinlikle kaçının; en az `idx` kullanmayı göz önünde bulundurun.
 - Dizi uzunluklarını tutmak için kullanılan değişkenler `n` ile başlamalı ve plurar olmalıdır (ör.: `nThings`).
 
-# <a name="examplestabexamples"></a>[Örnekler](#tab/examples)
+# <a name="examples"></a>[Örnekler](#tab/examples)
 
 ***
 
@@ -285,7 +285,7 @@ Benzer şekilde, giriş ve tür bağımsız değişkenlerinin adları, bir işle
 Kullanıcı tanımlı türlerdeki adlandırılmış öğeler, UDT oluşturucularının girişinde bile `CamelCase`olarak adlandırılmalıdır.
 Bu, erişimci gösterimini (ör.: `callable::Apply`) veya kopyalama ve güncelleştirme gösterimini (`set arr w/= Data <- newData`) kullanırken, adlandırılmış öğeleri yerel kapsamlı değişkenlere başvuruların açıkça ayrılması için yardımcı olur.
 
-# <a name="guidancetabguidance"></a>[Rehber](#tab/guidance)
+# <a name="guidance"></a>[Rehber](#tab/guidance)
 
 Şunları öneririz:
 
@@ -294,9 +294,9 @@ Bu, erişimci gösterimini (ör.: `callable::Apply`) veya kopyalama ve güncelle
 - İşlemlere çözümlenmez adlandırılmış öğeler, ad ifadeleri olarak adlandırılmalıdır.
 - Sarmalı işlemler için `Apply` adlı tek bir adlandırılmış öğe tanımlanmalıdır.
 
-# <a name="examplestabexamples"></a>[Örnekler](#tab/examples)
+# <a name="examples"></a>[Örnekler](#tab/examples)
 
-|   | Gösterildiği | Açıklama |
+|   | Kod parçacığı | Açıklama |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | `Apply` adı, adlandırılmış öğenin bir işlem olmasını öneren `CamelCase`biçimli bir fiil tümceciktir. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Adlandırılmış öğeler ilk büyük harfle başlamalıdır. |
@@ -342,7 +342,7 @@ Bazı işlevler ve işlemler aniden en aza indirmeden, bazı işlevler ve işlem
 Örneğin, `ControlledOnInt<'T>`, `ControlledOnInt<Qubit[]>(5, _)` `Controlled` functor gibi davranan, ancak denetim kaydının $ \demet{5} = \ayraç{101}$ durumunu temsil ettiği koşulda tür `(Int, ('T => Unit is Adj + Ctl)) => ((Qubit[], 'T) => Unit is Adj + Ctl)`sahiptir.
 Bu nedenle, bir geliştirici `ControlledOnInt` girişlerinin en son dönüştürdüğünü ve sonuçta elde edilen işlemin, `Controlled` functor çıkışının ardından gelen giriş `(Qubit[], 'T)` olarak---olmasını bekler.
 
-# <a name="guidancetabguidance"></a>[Rehber](#tab/guidance)
+# <a name="guidance"></a>[Rehber](#tab/guidance)
 
 Şunları öneririz:
 
@@ -350,15 +350,15 @@ Bu nedenle, bir geliştirici `ControlledOnInt` girişlerinin en son dönüştür
 - Yerleşik komik ile tutarlı giriş sırası kullanın.
 - Tüm klasik girişleri, tüm hisse girişlerinden önce yerleştirin.
 
-# <a name="examplestabexamples"></a>[Örnekler](#tab/examples)
+# <a name="examples"></a>[Örnekler](#tab/examples)
 
 ***
 
-## <a name="documentation-conventions"></a>Belge kuralları ##
+## <a name="documentation-conventions"></a>Belge Kuralları ##
 
 Q # dili, özel olarak biçimlendirilmiş belge açıklamalarını kullanarak işlemlere, işlevlere ve Kullanıcı tanımlı türlere belge iliştirmeye olanak tanır.
 Üçlü eğik çizgi (`///`) ile belirtilen bu belge açıklamaları, her bir işlemin, işlevin ve Kullanıcı tanımlı türün amacını açıklamak için kullanılabilen küçük [Docfx-flavored markı](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) belgeleriyle, her birinin hangi girişlerin beklediklerini açıklamak için kullanılabilir.
-Hisse geliştirme seti ile sağlanan derleyici, bu açıklamaları ayıklar ve bu yorumları, https://docs.microsoft.com/quantum ' de olduğu gibi, karakterlik alan kaplamaları belgelerinin yardım 'ını kullanır.
+Hisse geliştirme seti ile sağlanan derleyici, bu açıklamaları ayıklar ve bu yorumları, https://docs.microsoft.com/quantum' de olduğu gibi, karakterlik alan kaplamaları belgelerinin yardım 'ını kullanır.
 Benzer şekilde, hisse geliştirme kiti ile birlikte sağlanan dil sunucusu, kullanıcılar için Q # kodundaki sembolleri üzerine getirdiğinde yardım sağlamak üzere bu açıklamaları kullanır.
 Belge açıklamalarının kullanımı, bu belgedeki diğer kurallara göre kolayca ifade olmayan Ayrıntılar için yararlı bir başvuru sunarak kullanıcıların kod anlamlı olmasına yardımcı olabilir.
 
@@ -368,7 +368,7 @@ Belge açıklamalarının kullanımı, bu belgedeki diğer kurallara göre kolay
 
 Kullanıcılara yardımcı olmak üzere bu işlevselliği etkili bir şekilde kullanabilmek için, belge açıklamalarını yazarken göz önünde bulundurmanız önerilir.
 
-# <a name="guidancetabguidance"></a>[Rehber](#tab/guidance)
+# <a name="guidance"></a>[Rehber](#tab/guidance)
 
 Şunları öneririz:
 
@@ -388,7 +388,7 @@ Kullanıcılara yardımcı olmak üzere bu işlevselliği etkili bir şekilde ku
 - Bir işlem veya işlev, functor türevlerine göre diğer işlemlerle veya işlevlerle ilişkiliyse, `# See Also` bölümünde diğer çeşitleri madde işaretleri olarak listeleyin.
 - Düzey 1 (`/// #`) bölümleri arasında boş bir yorum çizgisi bırakın, ancak düzey 2 (`/// ##`) bölümleri arasında boş bir satır bırakmayın.
 
-# <a name="examplestabexamples"></a>[Örnekler](#tab/examples)
+# <a name="examples"></a>[Örnekler](#tab/examples)
 
 #### <a name=""></a>☑ ####
 
@@ -434,7 +434,7 @@ Doğası gereği bu tür biçimlendirme kuralları, kişisel aesmerkler için bi
 Nonetheless, bir ortak grup içinde tutarlı bir biçimlendirme kuralları kümesi ve özellikle de hisse geliştirme seti gibi büyük Q # projeleri için bakım yapmanızı öneririz.
 Bu kurallar, Q # derleyicisi ile tümleştirilmiş biçimlendirme Aracı kullanılarak otomatik olarak uygulanabilir.
 
-# <a name="guidancetabguidance"></a>[Rehber](#tab/guidance) 
+# <a name="guidance"></a>[Rehber](#tab/guidance) 
 
 Şunları öneririz:
 
@@ -451,9 +451,9 @@ Bu kurallar, Q # derleyicisi ile tümleştirilmiş biçimlendirme Aracı kullan�
 - İşlev, işlem veya UDT adlarından sonra veya öznitelik bildirimlerinde `@` sonra boşluk kullanmayın.
 - Her öznitelik bildirimi kendi satırında olmalıdır.
 
-# <a name="examplestabexamples"></a>[Örnekler](#tab/examples)
+# <a name="examples"></a>[Örnekler](#tab/examples)
 
-|   | Gösterildiği | Açıklama |
+|   | Kod parçacığı | Açıklama |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | İkili işleçler etrafında boşluklar kullanın. |
 | ☒ | <s>`target:Qubit`</s> | Tür ek açıklaması etrafında boşluklar kullanın. |

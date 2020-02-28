@@ -1,19 +1,19 @@
 ---
-title: Çekme istekleri açılıyor | Microsoft Docs
-description: Çekme istekleri açılıyor
+title: Çekme istekleri açılıyor
+description: Microsoft Quantum Development Kit kod veya belge katkıda bulunmak için hazırsanız GitHub çekme isteği göndermeyi öğrenin.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: d70a0a0319d14cfdae4910b897733d77b236f2f9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183735"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907469"
 ---
-# <a name="opening-pull-requests"></a>Çekme Istekleri açılıyor #
+# <a name="opening-pull-requests"></a>Çekme İsteklerini Açma #
 
 Hisse geliştirme kiti için tüm belgeler, GitHub 'da barındırılan birkaç depo kullanılarak git sürüm denetim sistemi kullanılarak yönetilir.
 Git ve GitHub 'ın birlikte kullanılması, hisse geliştirme setinde büyük ölçüde işbirliği yapmayı kolaylaştırır.
@@ -42,19 +42,19 @@ Genellikle yürütmelerin, önceki işlemelerden oklarla daireler olarak çizild
 `feature`adlı _dalda_ bir katkı başladığınızı varsayalım.
 Bundan sonra **Microsoft/hisse** 'ın çatalınız şuna benzeyebilir:
 
-![](~/media/git-workflow-step0.png)
+![GitHub 'da çalışma dalı](~/media/git-workflow-step0.png)
 
 Değişikliklerinizi yerel deponuzda yaparsanız, yukarı akış meydana gelen değişikliklere göre yakalamak için başka bir depodan yaptığınız değişiklikleri sizinkilerle _çekebilirsiniz_ .
 
-![](~/media/git-workflow-step1.png)
+![Yukarı akış deposundan değişiklikleri çekme ve birleştirme](~/media/git-workflow-step1.png)
 
 Çekme istekleri aynı şekilde çalışır, ancak ters: bir çekme isteği açtığınızda, yukarı akış deposunun katkılarınızı çekmesini isteyebilirsiniz.
 
-![](~/media/git-workflow-step2.png)
+![Değişikliklerinizi özgün depoya geri çekmek istiyor](~/media/git-workflow-step2.png)
 
 Depolarımızdan birine bir çekme isteği açtığınızda, GitHub, topluluklardaki başkalarının değişikliklerinizin bir özetini görmesini, bunlara yorum yapmasını ve daha da iyi bir katkı sunmanın yanı sıra yardımcı olma önerileri yapmasını sağlar.
 
-![](~/media/pull-request-header.png)
+![GitHub 'da çekme isteğinin ekran görüntüsü](~/media/pull-request-header.png)
 
 Bu işlemi kullanmak, katkılarını geliştirmek ve hisse programlama topluluğu için yüksek kaliteli bir ürünü sürdürmek amacıyla GitHub işlevlerini kullanmamıza yardımcı olur.
 

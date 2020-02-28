@@ -1,16 +1,16 @@
 ---
-title: 'Q # standart kitaplıklar-tanılama | Microsoft Docs'
-description: 'Q # standart kitaplıkları-Tanılamalar'
+title: 'Q # standart kitaplıklarında tanılama'
+description: 'Hisse ve hata hatalarını yakalamak için kullanılan Q # standart kitaplıklarında Tanılama işlevleri ve işlemler hakkında bilgi edinin.'
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 67ec6780d8cbbda7223d46026a9df97cebc92b33
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ba2f248327bb3db4ee895f8e65ea31c17e42b5f4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820989"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906245"
 ---
 # <a name="diagnostics"></a>Tanılama #
 
@@ -109,7 +109,7 @@ Ancak genel aşama nedeniyle, tek bir tek qubit durumu belirtmek için yalnızca
 Bu nedenle, beklediğimiz durumu belirlemek için birbirinden bağımsız olan üç onay belirtmemiz gerekir.
 Bu, $ \Alpha $ ve $ \beta $ verilen her bir Pauli ölçümü için `Zero` gözlemleme olasılığını bularak her birini ayrı ayrı ele aldık.
 $X $, $y $ ve $z $, Pauli $X $, $Y $ ve $Z $ ölçümleri için sırasıyla `Result` değer olmasına izin verir.
-Ardından, hisse ölçüleri için olasılık işlevi, \begin{hizalaması} \Pr (x = \Texttt{dd} | \Alpha, \beta) & = \frac12 + a\_r b\_r + a\_ı b\_ı \\\\ \Pr (y = \Texttt{dd} | \Alpha, \beta) & = \frac12 + a\_r b\_ı-a\_ı b\_r \\\\ \Pr (z = \Texttt{sıfırlaması} | \Alpha, \beta) & = \frac12\left (1 + a\_r ^ 2 + b\_i ^ 2 \ doğru).
+Ardından, hisse ölçüleri için olasılık işlevi, \begin{hizalaması} \Pr (x = \Texttt{dd} | \Alpha, \beta) & = \frac12 + a\_r b\_r + a\_ı b\_ı \\\\ \Pr (y = \Texttt{dd} | \Alpha, \beta) & = \frac12 + a\_r b\_ı-a\_ı b\_r \\\\ \Pr (z = \Texttt{sıfırlaması} | \Alpha, \beta) & = \frac12\left (1 + a\_r ^ 2 + b\_i ^ 2 \ doğru).\_\_
 \end{hizalaması}
 
 <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> işlemi, bu onaylamaları, $ \Alpha $ ve $ \beta $ ' nin <xref:microsoft.quantum.math.complex>türünde değerler olarak verilen gösterimleri uygular.

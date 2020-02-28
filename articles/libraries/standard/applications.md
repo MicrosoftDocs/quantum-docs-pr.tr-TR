@@ -1,17 +1,17 @@
 ---
-title: 'Q # standart kitaplıklar-uygulamalar | Microsoft Docs'
-description: Q# standart kitaplıkları
+title: 'Q # standart kitaplıklardaki uygulamalar'
+description: Hisse bilgi işlem-Hamiltonian simülasyonu ve Shor 'ın arama algoritmasındaki iki temel uygulama hakkında bilgi edinin.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: b7c46b634c6d691c067c0dd995301395408c85ca
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868977"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907231"
 ---
 # <a name="applications"></a>Uygulamalar #
 
@@ -159,7 +159,7 @@ Bu nedenle, aşama tahmini, $s/r $ ' den [devam eden kesirleri](https://en.wikip
 
 Hisse dönemi bulma için devre diyagramı:
 
-![](./../../media/QPE.svg)
+![Hisse dönemi bulma için devre diyagramı](./../../media/QPE.svg)
 
 Burada $2n $ qubit $ \tus{0}$ olarak başlatılır $n ve $ qubits, $ \gre{1}$ olarak başlatılır.
 Okuyucu yeniden, eigenstates 'i tutmak üzere hisse kayıt 'nın $ \tus{1}$ olarak başlatıldığını merak edebilir.

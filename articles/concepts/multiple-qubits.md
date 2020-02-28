@@ -1,17 +1,17 @@
 ---
-title: Birden çok qubit | Microsoft Docs
-description: Birden çok kubit
+title: Birden çok kubit
+description: İki veya daha fazla qubit üzerinde işlem gerçekleştirmeyi öğrenin.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e9c043f4ee41a878b9544a27d5ea052fce29f06e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 2fa227c823cd87df9c799c043c699e4ce818b8e3
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863225"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907554"
 ---
 # <a name="multiple-qubits"></a>Birden çok qubit
 
@@ -27,7 +27,7 @@ Bu araçların, Q # kodunda yaygın olarak kullanılan kapı kümelerini anlamas
 
 ## <a name="representing-two-qubits"></a>Iki qubit 'i temsil etme
 Bir-ve iki-qubit durumu arasındaki temel fark, iki-qubit durumlarının iki boyut yerine dört boyutlu olması gerektiğidir.
-Bunun nedeni, iki-qubit durumlarının hesaplama temelinin, tek qubit durumlarının tencursor ürünleri tarafından oluşturulmuş olmasından kaynaklanır.  Örneğin, \begin{hizalaması} 00 \ EQUIV \ Begin{bmatrix}1 \\var \\ 0 \ End{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qdörtlü 01 \equk\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equk\begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \ End{bmatrix}, \qdörtlü 11 \equıv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \ End{bmatrix}.
+Bunun nedeni, iki-qubit durumlarının hesaplama temelinin, tek qubit durumlarının tencursor ürünleri tarafından oluşturulmuş olmasından kaynaklanır.  Örneğin, \begin{hizalaması} 00 \ EQUIV \ Begin{bmatrix}1 \\var \\ 0 \ End{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qdörtlü 01 \equk\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equk\begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \ End{bmatrix}, \qdörtlü 11 \equıv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \ End{bmatrix}.\\
 \end{hizalaması}
 
 Bu oluşturma kullanılarak, $n $ qubits 'in hisse boyutunun, $2 ^ n $ boyutundaki bir birim vektörü ile temsil edildiği kolayca görüyordu.  Vektör
@@ -103,7 +103,7 @@ Ayrıca, her iki qubit üzerinde tek qubit kapıları uygulayarak iki-qubit geç
 
 $ $ \begin{bmatrix} a \ b\\\\ c \ d \end{bmatrix} $ $
 
-'nı ve
+ile
 
 $ $ \begin{bmatrix} e \ f\\\\ g \ h \ End{bmatrix} $ $
 

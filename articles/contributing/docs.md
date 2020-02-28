@@ -1,17 +1,17 @@
 ---
-title: Katkıda bulunan belgeler | Microsoft Docs
-description: Katkıda bulunan belgeler
+title: Microsoft QDK 'ye katkıda bulunan belgeler
+description: Kavramsal veya API içeriğinin Microsoft hisse belgesi kümesine nasıl katkıda bulunabileceğinizi öğrenin.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: 1e24dd859c0b75a161f4f3c7151e2eec227075a2
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: d244a7841b4093031d6225230a6cbefb22cc6a39
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183684"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904902"
 ---
 # <a name="improving-documentation"></a>Belgeleri geliştirme #
 
@@ -24,8 +24,8 @@ Benzer şekilde, aşağıda açıklandığı gibi LaTeX dilini kullanarak belgel
 
 Bu şekilde, her belge formu ayrıntılarda biraz farklılık gösterir:
 
-- **Kavramsal belgeler** https://docs.microsoft.com/quantum yayımlanan bir makale grubundan oluşur ve hisse bilgi işlem esaslarından değişim biçimleri için teknik belirtimlere kadar her şeyi anlatmaktadır. Bu makaleler, zengin belge kümeleri oluşturmak için kullanılan bir Markaşağı varyantı olan [Docfx-flavored markaşağı (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)dilinde yazılmıştır.
-- **API başvurusu** , https://docs.microsoft.com/qsharp/api/ yayımlanan her Q # işlevi, işlem ve Kullanıcı tanımlı tür için bir sayfa kümesidir. Bu sayfalar, her çağrılabilir girdi ve işlemi örneklerle birlikte ve daha fazla bilgi için bağlantıları belgeleyin. API başvurusu, her yayının bir parçası olarak Q # kaynak kodundaki küçük DFM belgelerinden otomatik olarak ayıklanır.
+- **Kavramsal belgeler** https://docs.microsoft.com/quantumyayımlanan bir makale grubundan oluşur ve hisse bilgi işlem esaslarından değişim biçimleri için teknik belirtimlere kadar her şeyi anlatmaktadır. Bu makaleler, zengin belge kümeleri oluşturmak için kullanılan bir Markaşağı varyantı olan [Docfx-flavored markaşağı (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)dilinde yazılmıştır.
+- **API başvurusu** , https://docs.microsoft.com/qsharp/api/yayımlanan her Q # işlevi, işlem ve Kullanıcı tanımlı tür için bir sayfa kümesidir. Bu sayfalar, her çağrılabilir girdi ve işlemi örneklerle birlikte ve daha fazla bilgi için bağlantıları belgeleyin. API başvurusu, her yayının bir parçası olarak Q # kaynak kodundaki küçük DFM belgelerinden otomatik olarak ayıklanır.
 - Her örnekle birlikte bulunan **README<!---->. MD** dosyaları ve küta, bu örnek veya Kütin nasıl kullanıldığını, ne kapsadığını ve bu dosyanın hisse geliştirme setinin geri kalanı ile ilişkisini açıklamaktadır. Bu dosyalar [GitHub flavored Markaşağı (GFM)](https://github.github.com/gfm/)kullanılarak yazılır. Bu, DFM 'in doğrudan kod depolarına belge iliştirmek için popüler bir alternatiftir.
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>Kavramsal belgelere katkıda bulunma ##
@@ -45,48 +45,85 @@ Aşağıdaki çekme istekleri hakkında daha fazla bilgi edineceksiniz, ancak ş
 
 API başvurularına bir iyileştirmeden katkıda bulunmak için, bir çekme isteğini doğrudan belgelenmiş kodda açmak çok faydalı olur.
 Her işlev, işlem veya Kullanıcı tanımlı tür bir belge açıklamasını destekler (`//`yerine `///` gösterilir).
-Her bir bilgi işlem geliştirme setinin her sürümünü derliyoruz, bu yorumlar, her çağrılabilir giriş ve çıkışları, her çağrılabilir şekilde yaptığı varsayımlar ve bunların nasıl kullanılacağına ilişkin ayrıntılar dahil olmak üzere https://docs.microsoft.com/qsharp/api/ ' de API başvurusunu oluşturmak için kullanılır.
+Her bir bilgi işlem geliştirme setinin her sürümünü derliyoruz, bu yorumlar, her çağrılabilir giriş ve çıkışları, her çağrılabilir şekilde yaptığı varsayımlar ve bunların nasıl kullanılacağına ilişkin ayrıntılar dahil olmak üzere https://docs.microsoft.com/qsharp/api/' de API başvurusunu oluşturmak için kullanılır.
 
 > [!IMPORTANT]
 > Lütfen oluşturulan API belgelerini el ile düzenlemediğinizden emin olun. Bu dosyalar her yeni sürümde üzerine yazılır.
 > Topluluğa katkılarınız için değer veriyoruz ve kullanıcıların sürümden sonra serbest olmasına yardımcı olmaya devam etmesini sağlamak istiyorsunuz.
 
-Örneğin, `PrepareTrialState(angles : Double[], register : Qubit[]) : Unit`bir işlem düşünün.
-Bir belge yorumu, bir kullanıcının `angles`nasıl yorumlayacağını, `register`başlangıç durumu hakkında ne olduğunu, `register` ne tür etkileri olduğunu ve bu şekilde olduğunu öğrenmelidir.
+Örneğin, `ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)`fonksiyonunu düşünün.
+Bir belge yorumu, kullanıcının `bits` ve `oracle` ve işlevin ne olduğunu nasıl yorumlayacağını öğrenmelidir.
 Bu farklı bilgi parçalarının her biri, belge açıklamasında özel olarak adlandırılmış bir Markaşağı bölümü tarafından Q # derleyicisine temin edilebilir.
-`PrepareTrialState`örneği için aşağıdakine benzer bir şey yazabiliriz:
+`ControlledOnBitString`örneği için aşağıdakine benzer bir şey yazabiliriz:
 
 ```qsharp
-/// # Summary
-/// Given a register of qubits, prepares them in a trial state by rotating each
-/// independently.
-///
-/// # Description
-/// This operation prepares the input register by performing a
-/// $Y$ rotation on each qubit by an angle given in `angles`.
-///
-/// # Input
-/// ## angles
-/// An array of parameters
-/// ## register
-/// A register of qubits initially in the $\ket{00\cdots0}$ state.
-///
-/// # Example
-/// To prepare an equal superposition $\ket{++\cdots+}$ over all input qubits:
-/// ```qsharp
-/// PrepareTrialState(ConstantArray(Length(register), PI() / 2.0), register);
-/// ```
-///
-/// # Remarks
-/// This operation is generally useful in the inner loop of an optimization
-/// algorithm.
-///
-/// # See Also
-/// - Microsoft.Quantum.Intrinsic.Ry
-operation PrepareTrialState(angles : Double[], register : Qubit[]) : Unit {
-    // ...
-}
+ /// # Summary
+ /// Returns a unitary operation that applies an oracle on the target register if the 
+ /// control register state corresponds to a specified bit mask.
+ ///
+ /// # Description
+ /// The output of this function is an operation that can be represented by a
+ /// unitary transformation $U$ such that
+ /// \begin{align}
+ ///     U \ket{b_0 b_1 \cdots b_{n - 1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_{n-1}} \otimes
+ ///     \begin{cases}
+ ///         V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_{n - 1}) = \texttt{bits} \\\\
+ ///         \ket{\psi} & \textrm{otherwise}
+ ///     \end{cases},
+ /// \end{align}
+ /// where $V$ is a unitary transformation that represents the action of the
+ /// `oracle` operation.
+ ///
+ /// # Input
+ /// ## bits
+ /// The bit string to control the given unitary operation on.
+ /// ## oracle
+ /// The unitary operation to be applied on the target register.
+ ///
+ /// # Output
+ /// A unitary operation that applies `oracle` on the target register if the control 
+ /// register state corresponds to the bit mask `bits`.
+ ///
+ /// # Remarks
+ /// The length of `bits` and `controlRegister` must be equal.
+ ///
+ /// Given a Boolean array `bits` and a unitary operation `oracle`, the output of this function
+ /// is an operation that performs the following steps:
+ /// * apply an `X` operation to each qubit of the control register that corresponds to `false` 
+ /// element of the `bits`;
+ /// * apply `Controlled oracle` to the control and target registers;
+ /// * apply an `X` operation to each qubit of the control register that corresponds to `false` 
+ /// element of the `bits` again to return the control register to the original state.
+ ///
+ /// The output of the `Controlled` functor is a special case of `ControlledOnBitString` where `bits` is equal to `[true, ..., true]`.
+ ///
+ /// # Example
+ /// The following code snippets are equivalent:
+ /// ```qsharp
+ /// (ControlledOnBitString(bits, oracle))(controlRegister, targetRegister);
+ /// ```
+ /// and
+ /// ```qsharp
+ /// within {
+ ///     ApplyPauliFromBitString(PauliX, false, bits, controlRegister);
+ /// } apply {
+ ///     Controlled oracle(controlRegister, targetRegister);
+ /// }
+ /// ```
+ ///
+ /// The following code prepares a state $\frac{1}{2}(\ket{00} - \ket{01} + \ket{10} + \ket{11})$:
+ /// ```qsharp
+ /// using (register = Qubit[2]) {
+ ///     ApplyToEach(H, register);
+ ///     (ControlledOnBitString([false], Z))(register[0..0], register[1]);
+ /// }
+ /// ```
+ function ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)
+ {
+     return ControlledOnBitStringImpl(bits, oracle, _, _);
+ }
 ```
+[`ControlledOnBitString` işlevi Için API belgelerinde](xref:microsoft.quantum.canon.controlledonbitstring)Yukarıdaki kodun işlenmiş sürümünü görebilirsiniz.
 
 Belge yazma hakkında genel olarak, API belge açıklamalarını yazma bölümünde birkaç şeyi aklınızda tutmaya yardımcı olur:
 

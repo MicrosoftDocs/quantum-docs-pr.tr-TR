@@ -1,22 +1,22 @@
 ---
-title: OSS lisanslama
-description: 'Q # standart kitaplıklar-lisanslama ve katkıda bulunma'
+title: QDK için açık kaynak lisanslama
+description: 'Microsoft Q # standart kitaplıklarını kullanma ve katkıda bulunma hakkında bilgi edinin-lisanslama ve katkıda bulunan.'
 author: martinro
 ms.author: martinro@microsoft.com
 ms.date: 2/16/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.licensing
-ms.openlocfilehash: 35e55f6741e5dcc79724f80f31d89937696d8554
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 4bc0fb7fbeb4a71b891619218905d509e50911c9
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184398"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906211"
 ---
 # <a name="licensing"></a>Lisanslama #
 
 Hisse geliştirme kiti, [MIT Lisansı](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt)kapsamında lisanslanan kapsamlı bir açık kaynaklı işlevler ve işlemler koleksiyonuyla sağlanır.
-Standart kitaplığın hedef makineler arasında taşınabilir bölümleri, GitHub 'daki [Microsoft/Histumlibraries](https://github.com/Microsoft/QuantumLibraries) deposundan ve Örneğin hisse anortry kitaplığı gibi diğer kitaplıklarla birlikte elde edilebilir. [ ](xref:microsoft.quantum.chemistry.concepts.intro).
+Standart kitaplığın hedef makineler arasında taşınabilir bölümleri, GitHub 'daki [Microsoft/miktarı](https://github.com/Microsoft/QuantumLibraries) ve diğer kitaplıklarla birlikte [hisse kuchemistry kitaplığı](xref:microsoft.quantum.chemistry.concepts.intro)gibi diğer kitaplıklardan elde edilebilir.
 
 Microsoft 'un hisse geliştirme seti, [Microsoft Research lisansı](https://github.com/Microsoft/Quantum-NC/blob/master/LICENSE)kapsamında lisanslanan özel kitaplık işlevleri ve işlemler de sağlar.
 Bunlar GitHub 'daki [Microsoft/hisse-NC](https://github.com/microsoft/quantum-nc) deposundan elde edilebilir.

@@ -1,17 +1,18 @@
 ---
 title: Microsoft Quantum Development Kit güncelleştirme hakkında bilgi edinin (QDK)
+description: 'Q # projelerinizi ve Microsoft Quantum Development Kit güncel sürüme nasıl güncelleşbileceğinizi açıklar.'
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: f19285ae0e008b3460d06430a236f098d716e268
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 264b5640216b2c0a468b625cdef4b9e0123d8b39
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036330"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904766"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum Development Kit güncelleştirme (QDK)
 
