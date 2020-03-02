@@ -6,12 +6,12 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: c1fd578fdb3d56a7b48972e6ccc9b1605047fe36
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 0e64fcd56929fa33397c45bf1b2e99bf687eca6f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820360"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906959"
 ---
 # <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>Hızlı Başlangıç: Q# dilinde Grover arama algoritmasını uygulama
 
@@ -43,7 +43,7 @@ Aşamalı artışların sayısı listedeki öğelerin sayısından azdır. İşt
 
 1. Yeni projenizin `Operations.qs` dosyasına aşağıdaki kodu ekleyin:
 
-    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-23" highlight="5,27":::
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-40":::
 
 1. Arama yaptığımız listeyi tanımlamak için yeni bir dosya (`Reflections.qs`) oluşturun ve aşağıdaki kodu yapıştırın:
 
@@ -53,7 +53,7 @@ Aşamalı artışların sayısı listedeki öğelerin sayısından azdır. İşt
 
 1. Ardından `ReflectAboutMarked` ile işaretlenmiş öğeyi bulmak için yeni Q# programınızı çalıştırın.
 
-    ### <a name="python-with-visual-studio-code-or-the-command-linetabtabid-python"></a>[Visual Studio Code veya Komut Satırı ile Python](#tab/tabid-python)
+    ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Visual Studio Code veya Komut Satırı ile Python](#tab/tabid-python)
 
     Yeni Q# programınızı Python'dan çalıştırmak için aşağıdaki kodu `host.py` olarak kaydedin:
 
@@ -71,7 +71,7 @@ Aşamalı artışların sayısı listedeki öğelerin sayısından azdır. İşt
     [0, 1, 0, 1, 0]
     ```
 
-    ### <a name="c-with-visual-studio-code-or-the-command-linetabtabid-csharp"></a>[Visual Studio Code veya Komut Satırı ile C#](#tab/tabid-csharp)
+    ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[Visual Studio Code veya Komut Satırı ile C#](#tab/tabid-csharp)
 
     Yeni Q# programınızı C# dilinden çalıştırmak için `Driver.cs` dosyasını aşağıdaki C# kodunu içerecek şekilde değiştirin:
 
@@ -90,7 +90,7 @@ Aşamalı artışların sayısı listedeki öğelerin sayısından azdır. İşt
     Press any key to continue...
     ```
 
-    ### <a name="c-with-visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019 ile C#](#tab/tabid-vs2019)
+    ### <a name="c-with-visual-studio-2019"></a>[Visual Studio 2019 ile C#](#tab/tabid-vs2019)
 
     Yeni Q# programınızı Visual Studio'da C# dilinde çalıştırmak için `Driver.cs` dosyasını aşağıdaki C# kodunu içerecek şekilde değiştirin:
 

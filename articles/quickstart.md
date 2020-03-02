@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 30135fa8a123e52a92b7187218f9980ba3cdbd2d
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 8d3b2d7c8da39a961f4eedcc5989ad3a1e134ade
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442197"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906738"
 ---
 # <a name="quantum-basics-with-q"></a>Q# ile kuantumun temelleri
 
@@ -30,7 +30,7 @@ Dilerseniz QDK'yı yüklemeden anlatımı takip ederek Q# programlama diline gen
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Q# ile kubit davranışını gösterme
 
-Basit [kubit tanımımızı](xref:microsoft.quantum.overview.what#the-qubit) hatırlayalım.  Klasik bitler 0 veya 1 gibi tek bir ikili değeri barındırırken, kubitin durumu aynı anda 0 ve 1 değerlerine sahip olan **süper konum** olabilir.  Kavramsal olarak bir kubit, boşluktaki bir yön (vektör olarak da bilinir) olarak düşünülebilir.  Bir kubit herhangi bir yönde olabilir. İki **klasik durum**, iki yöndür. Bu da %100 oranında 0 ölçme şansını ve %100 oranında 1 ölçme şansını gösterir.  Bu gösterim ayrıca [Bloch küresi](/quantum/concepts/the-qubit?view=qsharp-preview#visualizing-qubits-and-transformations-using-the-bloch-sphere) ile daha anlaşılır bir şekilde gösterilmiştir.
+Basit [kubit tanımımızı](xref:microsoft.quantum.overview.what#the-qubit) hatırlayalım.  Klasik bitler 0 veya 1 gibi tek bir ikili değeri barındırırken, kubitin durumu aynı anda 0 ve 1 değerlerine sahip olan **süper konum** olabilir.  Kavramsal olarak bir kubit, boşluktaki bir yön (vektör olarak da bilinir) olarak düşünülebilir.  Bir kubit herhangi bir yönde olabilir. İki **klasik durum**, iki yöndür. Bu da %100 oranında 0 ölçme şansını ve %100 oranında 1 ölçme şansını gösterir.  Bu gösterim ayrıca [Bloch küresi](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere) ile daha anlaşılır bir şekilde gösterilmiştir.
 
 
 Ölçüm işlemi ikili sonuç üretir ve bir kubit durumunu değiştirir. Ölçüm, 0 veya 1 ikili değerini verir.  Kubit, süper konumdan (herhangi bir yöne) klasik durumlardan birine geçer.  Bundan sonra aynı ölçümün başka bir işlemle müdahale edilmeden yinelenmesi durumunda aynı ikili sonuç ortaya çıkar.  
@@ -46,7 +46,7 @@ Microsoft'un Quantum Development Kit'iyle geliştirilen uygulamalar iki parçada
 1. Q# kuantum bilgisayar dili kullanılarak uygulanan bir veya birden fazla kuantum algoritması.
 1. Python veya C# gibi bir bilgisayar dilinde uygulanan, ana giriş noktası işlevi gören ve kuantum algoritmasını yürütmek üzere Q# işlemlerini çağıran bir konak programı.
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. Uygulamanız için bir konum seçin
 
@@ -54,7 +54,7 @@ Microsoft'un Quantum Development Kit'iyle geliştirilen uygulamalar iki parçada
 
 1. `host.py` adlı bir dosya oluşturun. Bu dosya Python konak kodunuzu içerecektir.
 
-#### <a name="c-command-linetabtabid-csharp"></a>[C# Komut Satırı](#tab/tabid-csharp)
+#### <a name="c-command-line"></a>[C# Komut Satırı](#tab/tabid-csharp)
 
 1. Yeni Q# projesi oluşturma:
 
@@ -71,7 +71,7 @@ Microsoft'un Quantum Development Kit'iyle geliştirilen uygulamalar iki parçada
     mv Operation.qs Bell.qs
     ```
 
-#### <a name="visual-studiotabtabid-vs2019"></a>[Visual Studio](#tab/tabid-vs2019)
+#### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs2019)
 
 1. Yeni bir proje oluşturma
 
@@ -177,7 +177,7 @@ Q# dilinde `using` deyimi de özeldir. Kubitleri bir kod bloğunda kullanım ama
 
 ## <a name="create-the-host-application-code"></a>Konak uygulama kodunu oluşturma
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. `host.py` dosyasını açın ve aşağıdaki kodu ekleyin:
 
@@ -195,7 +195,7 @@ Q# dilinde `using` deyimi de özeldir. Kubitleri bir kod bloğunda kullanım ama
       print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
     ```
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 1. `Driver.cs` dosyasının içeriğini aşağıdaki kodla değiştirin:
 
@@ -237,7 +237,7 @@ Q# dilinde `using` deyimi de özeldir. Kubitleri bir kod bloğunda kullanım ama
 
 ### <a name="about-the-host-application-code"></a>Konak uygulama kodu hakkında
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 Python konak uygulamasının üç bölümü vardır:
 
@@ -245,7 +245,7 @@ Python konak uygulamasının üç bölümü vardır:
 * İçeri aktarılan Q# işleminin `simulate()` yöntemini çağırarak kuantum algoritmasını çalıştırma.
 * İşlemin sonucunu işleme. Örnekte işlemin sonucunu `res` alır. Burada sonuç, simülatör tarafından hesaplanan sıfırların sayısından (`num_zeros`) ve birlerin sayısından (`num_ones`) oluşmuş bir tanımlama grubudur. Tanımlama grubunu ayrıştırıp iki alan elde eder ve sonuçları yazdırırız.
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 C# konak uygulamasının dört bölümü vardır:
 
@@ -260,7 +260,7 @@ C# konak uygulamasının dört bölümü vardır:
 
 ## <a name="build-and-run"></a>Derleme ve çalıştırma
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. Terminalinizde aşağıdaki komutu çalıştırın:
 
@@ -277,7 +277,7 @@ Init:0    0s=1000 1s=0
 Init:1    0s=0    1s=1000
 ```
 
-#### <a name="command-line--visual-studio-codetabtabid-csharp"></a>[Komut Satırı / Visual Studio Code](#tab/tabid-csharp)
+#### <a name="command-line--visual-studio-code"></a>[Komut Satırı / Visual Studio Code](#tab/tabid-csharp)
 
 1. Terminalinizde aşağıdaki komutu çalıştırın:
 
@@ -299,7 +299,7 @@ Init:One  0s=0    1s=1000
 Press any key to continue...
 ```
 
-#### <a name="visual-studiotabtabid-vs2019"></a>[Visual Studio](#tab/tabid-vs2019)
+#### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs2019)
 
 1. Yalnızca `F5` tuşuna basın, programınız derlenir ve çalıştırılır!
 
@@ -445,7 +445,7 @@ Bunu çalıştırırsak yine daha önce aldığımız 50-50 sonucunun aynısın�
 
 Yeni dönüş değeri (`agree`), ilk kubitten gelen ölçümün ikinci kubitin ölçümüyle her eşleşmesinin kaydını tutar. Ayrıca konak uygulamayı buna göre güncelleştirmemiz gerekir:
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 ```python
 import qsharp
@@ -461,7 +461,7 @@ for i in initials:
     print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4} agree={agree: <4}')
 ```
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 ```csharp
             using (var qsim = new QuantumSimulator())
