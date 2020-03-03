@@ -1,18 +1,18 @@
 ---
-title: Kuantum geliştirme teknikleri | Microsoft Docs
-description: Quantum geliştirme teknikleri
+title: Quantum geliştirme teknikleri
+description: Q# program geliştirmenin temellerini öğrenin, işlemlerle, işlevlerle, değişkenlerle ve qubit’lerle çalışın ve basit bir kuantum programı oluşturun.
 keywords: SEO uzmanınıza danışmadan anahtar sözcük eklemeyin veya anahtar sözcükleri düzenlemeyin.
 author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 9/20/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.techniques.intro
-ms.openlocfilehash: c1263edb75f903702ab3c16cec0443857150b662
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: e5b7fbde18afbc0333d89f70c5e4596848e30f4f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820819"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907724"
 ---
 # <a name="quantum-development-techniques"></a>Quantum Geliştirme Teknikleri
 

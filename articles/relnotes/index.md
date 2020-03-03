@@ -1,17 +1,17 @@
 ---
 title: Quantum Development Kit önizleme sürümü notları
-description: Quantum Development Kit önizleme sürümü notları
+description: Microsoft Quantum Geliştirme Seti önizlemesinde yapılan son güncelleştirmeler hakkında bilgi edinin.
 author: natke
 ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: be1eff8127be9fb024a1dc2de3ec82952ac2dc2b
-ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
+ms.openlocfilehash: f4bc69e5b14833dea0d61106a9eb368d7d7f5663
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77441043"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906942"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -22,18 +22,32 @@ Yükleme yönergeleri için bu [yükleme kılavuzuna](xref:microsoft.quantum.ins
 Güncelleştirme yönergeleri için bu [güncelleştirme kılavuzuna](xref:microsoft.quantum.update) başvurun.
 
 
+## <a name="version-01020022610"></a>Sürüm 0.10.2002.2610
+
+*Sürüm tarihi: 27 Şubat 2020*
+
+Bu sürüm aşağıdakileri içerir:
+
+- Yeni Quantum Machine Learning kitaplığı, daha fazla bilgi için [QML belgeleri sayfamıza](https://docs.microsoft.com/quantum/libraries/machine-learning/?view=qsharp-preview) gidin
+- NuGet paketlerini yüklerken 10-20 kat performans artışı sağlayan IQ# hata düzeltmeleri
+
+[Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
+
 ## <a name="version-01020012831"></a>Sürüm 0.10.2001.2831
 
 *Sürüm tarihi: 29 Ocak 2020*
 
 Bu sürüm aşağıdakileri içerir:
 
-- Yeni Microsoft.Quantum.SDK NuGet paketi
+- Yeni projeler oluştururken Microsoft.Quantum.Development.Kit NuGet paketinin yerini alacak yeni Microsoft.Quantum.SDK NuGet paketi. Microsoft.Quantum.Development.Kit NuGet paketi mevcut projeler için desteklenmeye devam edecek. 
+- Yeni Microsoft.Quantum.SDK NuGet paketi ile etkinleştirilen Q# derleyici uzantıları desteği, daha fazla bilgi için [Github’daki belgelere](https://github.com/microsoft/qsharp-compiler/tree/master/src/QuantumSdk#extending-the-q-compiler), [derleyici uzantıları örneğine](https://github.com/microsoft/qsharp-compiler/tree/master/examples/CompilerExtensions) ve [Q# Geliştirici Blogu](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/)’na bakın
 - .NET Core 3.1 desteği eklendi, daha eski .NET Core SDK sürümleriyle derleme işlemi sorunlara neden olabileceğinden 3.1.100 sürümünü yüklemeniz önemle önerilir
 - Microsoft.Quantum.QsCompiler.Experimental altında yeni derleyici dönüşümleri kullanılabilir
 - IQ# içinde çıkış durumu vektörlerinin HTML olarak kullanıma sunulmasına yönelik yeni işlevsellik
 - Hadamard ve SWAP testleri için Microsoft.Quantum.Characterization’a EstimateFrequencyA desteği eklendi
 - AmplitudeAmplification ad alanı artık Q# stil kılavuzunu kullanıyor
+
+[Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
 
 ## <a name="version-01019120501"></a>Sürüm 0.10.1912.0501
 

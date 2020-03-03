@@ -1,28 +1,24 @@
 ### YamlMime:Landing
 title: Microsoft Quantum Belgeleri
-summary: Microsoft Quantum Developer Kit'i ve kuantum algoritmalarına yönelik Q# dilini kullanmayı öğrenin. Önemli kavramları öğrenin ve ilk kuantum programınızı yazın.
+summary: Microsoft Kuantum Geliştirme Seti'ni ve kuantum programlamaya yönelik Q# dilini kullanmayı öğrenin. Önemli kavramları öğrenin ve ilk kuantum programınızı yazın. QDK'nin zengin araçlarını ve kitaplıklarını inceleyin.
 metadata:
-  title: Microsoft Quantum Belgeleri - Q# API Başvurusu
-  description: Microsoft Kuantum Geliştirme Seti'ni ve kuantum programlamaya yönelik Q# dilini kullanmayı öğrenin. Önemli kavramları öğrenin ve ilk kuantum programınızı yazın.  QDK'nin zengin araçlarını ve kitaplıklarını inceleyin.
+  title: Microsoft Quantum Belgeleri ve Q# API Başvurusu
+  description: Kuantum bilişimi kavramlarını keşfedin, Microsoft Quantum Geliştirme Seti’ni (QDK) ve açık kaynak bir kuantum programlama dili olan Q#’ı kullanmayı öğrenin.
   ms.prod: quantum
   ms.topic: landing-page
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
   ms.date: 10/21/2019
-  ms.openlocfilehash: a39b230bc3b740afd23f0050b9c45df6094bea4e
-  ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+  ms.openlocfilehash: 27f7ca535ddd846e7bae01baee3fbbb4713e0433
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 02/06/2020
-  ms.locfileid: "77036585"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77907435"
 landingContent:
-- title: Microsoft Quantum’u kullanmaya başlama
+- title: Kuantum bilişimi
   linkLists:
-  - linkListType: overview
-    links:
-    - text: Kuantum Geliştirme Seti
-      url: welcome.md
   - linkListType: learn
     links:
     - text: Kuantum bilişimi nedir?
@@ -31,66 +27,58 @@ landingContent:
       url: overview/quantum-computers.md
     - text: Kuantum bilişimini neden öğrenmeliyim?
       url: overview/why-learn-quantum-computing.md
-    - text: Q# nedir?
+    - text: Q# ve QDK nedir?
       url: overview/what-is-qsharp.md
-    - text: Kuantum bilişim hakkında nasıl bilgi edinebilirim?
+    - text: Nasıl daha fazla bilgi edinebilirim?
       url: overview/how-to-learn-quantum-computing.md
+  - linkListType: concept
+    links:
+    - text: Kuantum bilişimi kavramları
+      url: concepts/index.md
 - title: Kuantum Geliştirme Seti’ni edinin
   linkLists:
+  - linkListType: overview
+    links:
+    - text: Kuantum Geliştirme Seti
+      url: welcome.md
   - linkListType: download
     links:
     - text: QDK’yı yükleme
       url: install-guide/index.md
     - text: QDK’yı güncelleştirme
       url: install-guide/update.md
-- title: Hızlı Başlangıçlar
-  linkLists:
-  - linkListType: quickstart
-    links:
-    - text: Kuantum rastgele sayı oluşturucusu oluşturma
-      url: quickstarts/qrng.md
-    - text: Q# ile kuantumun temelleri
-      url: quickstart.md
-    - text: 'Kuantum hızlandırma: Grover’ın arama algoritması'
-      url: quickstarts/search.md
-- title: Kuantum bilişimi kavramları
-  linkLists:
-  - linkListType: concept
-    links:
-    - text: Kuantum bilişimi kavramları
-      url: concepts/index.md
 - title: Q# programlama dili
   linkLists:
-  - linkListType: learn
+  - linkListType: overview
     links:
     - text: Q# diline giriş
       url: language/index.md
     - text: Q# geliştirme teknikleri
       url: techniques/index.md
-- title: Hedef makineler
-  linkLists:
-  - linkListType: overview
-    links:
     - text: Kuantum simülatörleri ve konak uygulamaları
       url: machines/index.md
-  - linkListType: architecture
+  - linkListType: quickstart
     links:
-    - text: Tam durum simülatörü
-      url: machines/full-state-simulator.md
-    - text: Kaynak tahmin aracı
-      url: machines/resources-estimator.md
-    - text: İzleme simülatörü
-      url: machines/qc-trace-simulator/index.md
-    - text: Toffoli simülatörü
-      url: machines/toffoli-simulator.md
-- title: Q# öğrenme kaynakları
-  linkLists:
+    - text: Kuantum rastgele sayı oluşturucusu oluşturma
+      url: quickstarts/qrng.md
+    - text: Q# ile dolaşıklığı keşfetme
+      url: quickstart.md
+    - text: 'Kuantum hızlandırma: Grover’ın arama algoritması'
+      url: quickstarts/search.md
   - linkListType: learn
     links:
     - text: Kuantum Katalarıyla öğrenme
       url: intro-to-katas.md
     - text: Q# kod örneklerine gözatın
       url: https://docs.microsoft.com/samples/browse/?languages=qsharp
+- title: Topluluk ve katkıda bulunma
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: QDK'ye katkıda bulunma
+      url: contributing/index.md
+    - text: Microsoft Quantum blogunu okuyun
+      url: https://cloudblogs.microsoft.com/quantum
 - title: Q# kitaplıkları
   linkLists:
   - linkListType: reference
@@ -101,25 +89,3 @@ landingContent:
       url: libraries/numerics/index.md
     - text: Kimya kitaplığı
       url: libraries/chemistry/index.md
-    - text: Kimya kavramları
-      url: libraries/chemistry/concepts/quantum-dynamics.md
-- title: Q# algoritmaları ve uygulamaları (standart kitaplıklardan)
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Genliğini Yükseltme
-      url: libraries/standard/algorithms.md
-    - text: Kuantum Aşama Tahmini
-      url: libraries/standard/algorithms.md#quantum-phase-estimation
-    - text: Shor Algoritması
-      url: libraries/standard/applications.md#shors-algorithm
-    - text: Hamilton Benzetimi
-      url: libraries/standard/applications.md
-- title: Topluluk ve katkıda bulunma
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: QDK'ye katkıda bulunma
-      url: contributing/index.md
-    - text: Microsoft Quantum blogunu okuyun
-      url: https://cloudblogs.microsoft.com/quantum
