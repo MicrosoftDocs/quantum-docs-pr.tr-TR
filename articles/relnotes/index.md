@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: f4bc69e5b14833dea0d61106a9eb368d7d7f5663
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 53b7d226f0f9b12f47460964944f1ddb6160c357
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906942"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022831"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -57,7 +57,7 @@ Bu sürüm aşağıdakileri içerir:
 
 - Q# birim testi için yeni Test özniteliği. Güncelleştirilmiş API belgeleri için [buraya](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test), güncelleştirilmiş test ve hata ayıklama kılavuzu için ise [buraya](xref:microsoft.quantum.techniques.testing-and-debugging) bakın
 - Q # program yürütme hatası durumuna karşın yığın izlemesi eklendi
-- Visual Studio Code’da kesme noktaları desteğinin [OmniSharp C# Visual Studio Code uzantısında](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) güncelleştirilmesi gerekiyor
+- Visual Studio Code’da kesme noktaları desteğinin [OmniSharp C# Visual Studio Code uzantısında](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) güncelleştirilmesi gerekiyor
 
 [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
 

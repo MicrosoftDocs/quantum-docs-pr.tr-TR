@@ -1,9 +1,14 @@
 - name: API başvurusu
   items:
+    - name: API başvurusu
+      href: index.md
     - name: 'Q# kitaplıkları'
+      topicHref: qsharp/index.md
       href: qsharp/toc.yml
     - name: .NET kitaplıkları
       items:
+        - name: .NET kitaplıkları
+          href: dot-net-libraries.md
         - name: İzleme simülatörü
           href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators'
         - name: Kuantum kimyası

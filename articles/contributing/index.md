@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 63c6f90a511c7bd14435b2e593af0d8615c18519
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: cf913a09395f0694a51645ec8f91171e5b1555c3
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904885"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022473"
 ---
-# <a name="contributing-to-the-quantum-development-kit"></a>Quantum Development Kit’e katkı yapma #
+# <a name="contributing-to-the-quantum-development-kit"></a>Quantum Development Kit’e katkı yapma
 
 Quantum Development Kit, kuantum programları yazmaya yönelik bir araç koleksiyonundan fazlasıdır.
 Kuantum bilişimini keşfetmekte olan, kuantum algoritmalarında araştırma yapan, kuantum cihazlar için yeni uygulamalar geliştiren ve kuantum programlamadan en iyi şekilde yararlanmak için diğer şekillerde çalışan geniş bir insan topluluğunun parçasıdır.
@@ -23,7 +23,7 @@ Nazik katkılarınız ve topluluğumuzu mümkün olan en iyi seviyeye getirirken
 
 Bu kılavuzda, katkınızın kuantum programlama topluluğuna mümkün olduğunca yarar olmasıyla ilgili bazı önerilerde bulunacağız.
 
-## <a name="building-community"></a>Topluluk Oluşturma ##
+## <a name="building-community"></a>Topluluk Oluşturma
 
 Katkı yapmanın ilk adımı, katkıda bulunduğunuz topluluğu her zaman aklınızda bulundurmaktır.
 Kuantum programlama topluluğundaki akranlarınıza ve diğer kişilere karşı saygılı ve profesyonel bir şekilde davranarak, çalışmalarınızın mümkün olan en iyi ve en samimi topluluğu inşa etmesine yardımcı olabilirsiniz.
@@ -31,7 +31,7 @@ Kuantum programlama topluluğundaki akranlarınıza ve diğer kişilere karşı 
 Bu çabanın bir parçası olarak, tüm Quantum Development Kit projelerinde [Microsoft Açık Kaynak Davranış Kuralları](https://opensource.microsoft.com/codeofconduct/) benimsenmiştir.
 Daha fazla bilgi için lütfen [Davranış Kuralları Hakkında SSS](https://opensource.microsoft.com/codeofconduct/faq/) konusuna bakın veya sorularınızı ya da görüşlerinizi bildirmek için [opencode@microsoft.com](mailto:opencode@microsoft.com) ile iletişime geçin.
 
-## <a name="what-kinds-of-contributions-help-the-community"></a>Ne Tür Katkılar Topluluğa Yardımcı Olur? ##
+## <a name="what-kinds-of-contributions-help-the-community"></a>Ne Tür Katkılar Topluluğa Yardımcı Olur?
 
 Katkılarınızla kuantum programlama topluluğuna yardımcı olmanın birçok farklı yolu vardır.
 Bu kılavuzda özellikle Kuantum Geliştirme Kiti ile ilgili olan üç yönteme odaklanacağız.
@@ -45,7 +45,7 @@ Bununla birlikte, bu kesinlikle kapsamlı bir liste değildir. Topluluğun kuant
 Bu farklı türdeki katkıların tümü çok değerlidir ve çok faydalı olacaktır.
 Kılavuzun geri kalanında her bir katkı türü hakkında öneriler sunacağız.
 
-## <a name="where-do-contributions-go"></a>Katkıları Nereye Gidiyor? ##
+## <a name="where-do-contributions-go"></a>Katkıları Nereye Gidiyor?
 
 Quantum Development Kit, kuantum programları yazmaya yönelik bir platformu hayata geçirmek için hepsi birlikte çalışan birkaç farklı unsurdan oluşur.
 Bu farklı parçaların her birinin ana unsuru farklı bir depoda bulunur; bu nedenle, ilk önce her katkının nereye ait olduğunu çözmek gerekir.
@@ -66,7 +66,7 @@ Ayrıca, farklı olaylara veya Quantum Development Kit ile ilgili yardımcı iş
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): Q# söz dizimi için LaTeX biçimlendirme desteği.
 - [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019): 2019 stajyer atölyesinde berilen Deutsch–Jozsa öğreticisi için IQ# Not Defteri.
 
-## <a name="next-steps"></a>Sonraki adımlar ##
+## <a name="next-steps"></a>Sonraki adımlar
 
 Quantum Development Kit topluluğunun bir parçası olduğunuz için teşekkür ederiz. Katkılarınızı heyecanla bekliyoruz!
 Katkıda bulunma hakkında daha fazla bilgi edinmek istiyorsanız lütfen aşağıdaki kılavuzlardan biriyle devam edin.
