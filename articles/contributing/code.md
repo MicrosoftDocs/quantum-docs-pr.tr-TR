@@ -6,27 +6,27 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: 1882e640dacf3987745ed225fef18636726f70a8
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: edc52dc4434e91258bece28812fd76b66329c6f9
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907486"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022464"
 ---
-# <a name="contributing-code"></a>Koda Katkıda Bulunma #
+# <a name="contributing-code"></a>Koda Katkıda Bulunma
 
 Sorunları raporlamaya ve belgelerin geliştirilmesine ek olarak, hisse geliştirme seti 'ne katkıda bulunan kod, hisse programlama topluluğundaki eşlere yardımcı olmanın çok doğrudan bir yolu olabilir.
 Kod katkısından, sorunları gidermeye, yeni örnekler sağlamanıza, var olan kitaplıkların kullanımını daha kolay hale getirmenize veya hatta tamamen yeni özellikler eklemenize yardımcı olabilirsiniz.
 
 Bu kılavuzda, katkıınızın en iyi şekilde faydalanmaya yardımcı olmak için çekme isteklerini gözden geçirdiğimiz sırada baktığımız bir şeyi ayrıntılandırıyoruz.
 
-## <a name="what-we-look-for"></a>Şuna baktık ##
+## <a name="what-we-look-for"></a>Şuna baktık
 
 İdeal bir kod katkısı, sorunları gidermek, mevcut özellikleri genişletmek veya bir deponun kapsamı içinde olan yeni özellikler eklemek için bir hisse geliştirme seti deposundaki mevcut çalışmayı oluşturur.
 Bir kod katkısı kabul ettiğimiz zaman, bu, hisse geliştirme setinin bir parçası haline gelir. bu şekilde, yeni özellikler ücretlendirilecektir, tutulur ve, hisse geliştirme setinin geri kalanı ile aynı şekilde geliştirilir.
 Bu nedenle, bir katkı tarafından eklenen işlevlerin iyi test edildiğini ve belgelendirildiğine yardımcı olur.
 
-### <a name="unit-tests"></a>Birim testleri ###
+### <a name="unit-tests"></a>Birim testleri
 
 Canon gibi kitaplıkları oluşturan Q # işlevleri, işlemler ve Kullanıcı tanımlı türler, [**Microsoft/Histumlibraries**](https://github.com/Microsoft/QuantumLibraries/) deposunda geliştirmenin bir parçası olarak otomatik olarak test edilir.
 Örneğin, yeni bir çekme isteği açıldığında, [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) yapılandırmanızla, çekme isteğindeki değişikliklerin, hisse programlama topluluğunun bağlı olduğu mevcut işlevleri bozmadığını kontrol eder.
@@ -56,7 +56,7 @@ function PairTest () : Unit {
 Standart kitaplıklar kılavuzunun [Test bölümündeki](xref:microsoft.quantum.libraries.diagnostics) teknikler kullanılarak daha karmaşık koşullar denetlenebilir.
 Örneğin, aşağıdaki test, <xref:microsoft.quantum.canon.applywith> tarafından çağrılan `H(q); X(q); H(q);` `Z(q)`ile aynı şeyi yapar.
 
-```qsharp
+```Q#
 @Test("QuantumSimulator")
 operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);
@@ -79,7 +79,8 @@ Yerel olarak, bir çekme isteğini açmadan önce katkılarınızı kontrol edeb
 
 ### Citations and References ### -->
 
-## <a name="when-well-reject-a-pull-request"></a>Çekme Isteğini reddedeceğiz ##
+
+## <a name="when-well-reject-a-pull-request"></a>Çekme Isteğini reddedeceğiz
 
 Bazen bir katkı için çekme isteğini reddedeceğiz.
 Bu sizin için söz konusu olduğunda, belirli bir katkıyı kabul edemediğimiz bir kaç nedenden dolayı bu durum kötü olduğu anlamına gelmez.
@@ -98,10 +99,15 @@ Son olarak, [Microsoft açık kaynak kullanım kuralları](https://opensource.mi
 Katkıların tüm hisse bilgi işlem topluluğuna, hem geçerli harika çeşitliliğe hem de daha da fazla bir şekilde büyümeye devam ettiğinden emin olmak istiyoruz.
 Bu hedefi gerçekleştirme konusunda yardımımız olduğunu biliyoruz.
 
-## <a name="next-steps"></a>Sonraki adımlar ##
+## <a name="next-steps"></a>Sonraki adımlar
 
 Hisse geliştirme setini tüm hisse programlama topluluğu için harika bir kaynak haline getirmek için teşekkürler!
 Daha fazla bilgi edinmek için lütfen Q # stilinde aşağıdaki kılavuzla devam edin.
 
 > [!div class="nextstepaction"]
 > [Q # stil yönergeleri hakkında bilgi edinin](xref:microsoft.quantum.contributing.style)
+
+Katkıda bulunduğunuz kod türüne bağlı olarak, katkılarınızı mümkün olduğunca çok iyi hale getirmenize yardımcı olabilecek başka şeyler de olabilir.
+
+> [!div class="nextstepaction"]
+> [Katkıda bulunan örnekler hakkında bilgi edinin](xref:microsoft.quantum.contributing.samples)

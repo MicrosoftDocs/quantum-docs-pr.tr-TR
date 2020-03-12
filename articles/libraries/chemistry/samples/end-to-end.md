@@ -5,16 +5,16 @@ author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 545ade99859f2a9939477fb18604921f70a5d9aa
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 7605676e05ee352e47791657eeaafceef5dbb493
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906517"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022504"
 ---
 # <a name="end-to-end-with-nwchem"></a>NWChem ile uçtan uca #
 
-Bu sayfada, bir [Nwchem](http://www.nwchem-sw.org/index.php/Main_Page) giriş destesi 'nden başlayarak hisse Kualkem simülasyonu için geçit sayısı alma örneği hakkında yol göstereceğiz.
+Bu makalede, bir [Nwchem](http://www.nwchem-sw.org/index.php/Main_Page) giriş destesi 'nden başlayarak hisse Kualkem simülasyonu için geçit sayısı alma örneği hakkında yol göstereceğiz.
 Bu örneğe devam etmeden önce, [yükleme ve doğrulama kılavuzunu](xref:microsoft.quantum.chemistry.concepts.installation)Izleyerek Docker 'ı yüklediğinizden emin olun.
 
 Daha fazla bilgi için:
@@ -62,7 +62,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 Ardından, **Getgatecount** örneği ile birlikte sunulan `Get-GateCount` komutunu içeri aktaracağız.
-Tüm ayrıntılar için, [örnekle birlikte sunulan yönergelere](https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount)bakın.
+Tüm ayrıntılar için, [örnekle birlikte sunulan yönergelere](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount)bakın.
 Sonra, işletim sisteminize bağlı olarak, `<runtime>` `win10-x64`, `osx-x64`ya da `linux-x64`ile değiştirerek aşağıdakileri çalıştırın:
 
 ```powershell
@@ -112,7 +112,7 @@ set tce:qelb  9
 
 ## <a name="producing-and-consuming-broombridge-output-from-nwchem"></a>NWChem 'ten Brombridge çıkışı üretme ve kullanma ##
 
-Artık, Brombridge belgelerini oluşturmak ve kullanmak için ihtiyacımız olan her şeyi sunuyoruz.
+Artık, Brombridge belgelerini oluşturmak ve kullanmak için ihtiyacınız olan her şeye sahipsiniz.
 NWChem çalıştırmak ve `h4_sto6g_0.000.nw` giriş destesi için bir Broombridge belgesi oluşturmak için, `Convert-NWChemToBroombridge`çalıştırın:
 
 > [!NOTE]
@@ -123,7 +123,7 @@ NWChem çalıştırmak ve `h4_sto6g_0.000.nw` giriş destesi için bir Broombrid
 Convert-NWChemToBroombridge h4_sto6g_0.000.nw 
 ```
 
-Bu, `Get-GateCount`ile kullanabilmemiz `h4_sto6g_0.000.yaml` adlı bir Broombridge belgesi üretir:
+Bu, `Get-GateCount`ile kullanabileceğiniz `h4_sto6g_0.000.yaml` adlı bir Broombridge belgesi üretir:
 
 ```powershell
 Get-GateCount -Format YAML h4_sto6g_0.000.yaml
@@ -164,7 +164,7 @@ Buradan yapılacak çok sayıda şey vardır:
 - Farklı ön tanımlı giriş noktaları deneyin, örneğin, `h4_sto6g_alpha.nw``alpha` parametresi değiştirerek, 
 - NWChem Decks 'i doğrudan düzenleyerek daha fazla n, örneğin çeşitli seçenekleri için `STO-nG` modellerini inceleyerek, bu noktaları değiştirmeyi deneyin. 
 - `nwchem/qa/chem_library_tests`' de kullanılabilir olan diğer önceden tanımlı NWChem giriş çklarını deneyin,
-- NWChem 'ten oluşturulan, önceden tanımlanmış bir Brombridge YAML değerlendirmeleri paketini deneyin ve [Microsoft/hisse deposu](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML)'nun bir parçası olarak kullanılabilir. Bu kıyaslamalar şunları içerir: 
+- NWChem 'ten oluşturulan, önceden tanımlanmış bir Brombridge YAML değerlendirmeleri paketini deneyin ve [Microsoft/hisse deposu](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML)'nun bir parçası olarak kullanılabilir. Bu kıyaslamalar şunları içerir: 
     - molesel Hydrogen (H2), beryllium (be), Lityum hydride (LiH) gibi küçük molecules,
     - Ozone (O3), Beta-carotene, cytosinüs gibi daha büyük molecules ve çok daha fazlası. 
 - Microsoft Quantum Development Kit bir arabirimi sunan grafiksel ön uç [Emsl oklarını](https://arrows.emsl.pnnl.gov/api/qsharp_chem) deneyin. 

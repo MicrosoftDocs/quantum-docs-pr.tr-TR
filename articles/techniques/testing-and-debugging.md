@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3df8df8defabcc9cc87d59f543f425c882b001e0
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 8131c2ec9320b5075c37370e12ad39a4df5bd3d5
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907690"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022854"
 ---
 # <a name="testing-and-debugging"></a>Test ve hata ayıklama
 
@@ -384,4 +384,4 @@ namespace app
 
 `Assert` ve `Dump` işlevlerinin ve işlemlerinin üstünde, Q #, standart Visual Studio hata ayıklama özellikleri alt kümesini destekler: [satır kesme noktaları ayarlama](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [F10 kullanarak kod üzerinden atlama](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) ve [Klasik değişkenlerin değerlerini inceleme](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) işlemi, simülatör üzerinde kod yürütme sırasında mümkün değildir.
 
-Visual Studio Code hata ayıklaması, C# OmniSharp tarafından desteklenen Visual Studio Code uzantısı için sağlanan hata ayıklama yeteneklerini kullanır ve [en son sürümü](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)yüklemeyi gerektirir. 
+Visual Studio Code hata ayıklaması, C# OmniSharp tarafından desteklenen Visual Studio Code uzantısı için sağlanan hata ayıklama yeteneklerini kullanır ve [en son sürümü](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)yüklemeyi gerektirir. 

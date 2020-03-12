@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: d244a7841b4093031d6225230a6cbefb22cc6a39
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: ed5ab5df9de5d71ccd922cd430cf15779806dd6a
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904902"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022627"
 ---
-# <a name="improving-documentation"></a>Belgeleri geliştirme #
+# <a name="improving-documentation"></a>Belgeleri geliştirme
 
 Hisse geliştirme kiti için belgeler birçok farklı biçimde sürer. Bu bilgiler, bilgi almak için daha kolay kullanılabilir.
 
@@ -28,7 +28,7 @@ Bu şekilde, her belge formu ayrıntılarda biraz farklılık gösterir:
 - **API başvurusu** , https://docs.microsoft.com/qsharp/api/yayımlanan her Q # işlevi, işlem ve Kullanıcı tanımlı tür için bir sayfa kümesidir. Bu sayfalar, her çağrılabilir girdi ve işlemi örneklerle birlikte ve daha fazla bilgi için bağlantıları belgeleyin. API başvurusu, her yayının bir parçası olarak Q # kaynak kodundaki küçük DFM belgelerinden otomatik olarak ayıklanır.
 - Her örnekle birlikte bulunan **README<!---->. MD** dosyaları ve küta, bu örnek veya Kütin nasıl kullanıldığını, ne kapsadığını ve bu dosyanın hisse geliştirme setinin geri kalanı ile ilişkisini açıklamaktadır. Bu dosyalar [GitHub flavored Markaşağı (GFM)](https://github.github.com/gfm/)kullanılarak yazılır. Bu, DFM 'in doğrudan kod depolarına belge iliştirmek için popüler bir alternatiftir.
 
-## <a name="contributing-to-the-conceptual-documentation"></a>Kavramsal belgelere katkıda bulunma ##
+## <a name="contributing-to-the-conceptual-documentation"></a>Kavramsal belgelere katkıda bulunma
 
 Kavramsal veya BENIOKU belgelerine bir iyileştirmeden katkıda bulunmak için, uygun olduğu gibi, Microsoft [**docs/hisse-docs-PR**](https://github.com/MicrosoftDocs/quantum-docs-pr/
 ), [**Microsoft/hisse**](https://github.com/Microsoft/Quantum)ya da [**Microsoft/niceleykatas**](https://github.com/Microsoft/QuantumKatas)üzerinde bir çekme isteğiyle başlar.
@@ -41,7 +41,18 @@ Aşağıdaki çekme istekleri hakkında daha fazla bilgi edineceksiniz, ancak ş
 - Hisse programlama topluluğunun birçok üyesi akademik araştırmacılar ve temel olarak topluluk katkılarına yönelik alıntılar aracılığıyla tanınır. Okuyucuların ek malzemeler bulmasına yardımcı olmaya ek olarak, incelemeler, Talks, blog gönderileri ve yazılım araçları gibi akademik çıkışları doğru bir şekilde ayırarak, akademik katkıların topluluğu geliştirmek için en iyi işleri yapmasına yardımcı olabilir.
 - Hisse programlama topluluğu, geniş ve wonderfully farklı bir topluluktur. Üçüncü kişi örneklerinde genimli zamirler kullanımı (örn................................... Kişilerin alıntılar ve bağlantılarla ilgili adlarını bilmekte ve ASCII olmayan karakterlerin doğru eklenmesi, üyelerinin üyelerine göre, topluluk çeşitliliğine hizmet verebilir. Benzer şekilde, Ingilizce dilde pek çok sözcük genellikle bir şekilde kullanılır. bu şekilde, teknik belgelerde kullanımları hem bireysel okuyucular hem de topluluk için büyük ölçekli bir zarar oluşmasına neden olabilir.
 
-## <a name="contributing-to-the-api-references"></a>API başvurularına katkıda bulunma ##
+### <a name="referencing-sample-code-from-conceptual-articles"></a>Kavramsal makalelerden örnek koda başvurma
+
+[Örnek deposundan](https://github.com/Microsoft/Quantum)kod eklemek istiyorsanız, özel bir docfx-flavored Marku komutunu kullanarak bunu yapabilirsiniz:
+
+```markdown
+:::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
+```
+
+Bu komut [`chsh-game` örneğindeki`Game.qs` dosyanın](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)8 ' e kadar olan satırlarını, söz dizimi vurgulamanın amacı için soru-cevap olarak işaretleyerek.
+Bu komutu kullanarak, kavramsal makaleler ve örnekler deposu arasında kodu çoğaltmaktan kaçınabilirsiniz. böylece, belgelerde örnek kod her zaman mümkün olduğunca güncel olur.
+
+## <a name="contributing-to-the-api-references"></a>API başvurularına katkıda bulunma
 
 API başvurularına bir iyileştirmeden katkıda bulunmak için, bir çekme isteğini doğrudan belgelenmiş kodda açmak çok faydalı olur.
 Her işlev, işlem veya Kullanıcı tanımlı tür bir belge açıklamasını destekler (`//`yerine `///` gösterilir).
@@ -123,6 +134,7 @@ Bu farklı bilgi parçalarının her biri, belge açıklamasında özel olarak a
      return ControlledOnBitStringImpl(bits, oracle, _, _);
  }
 ```
+
 [`ControlledOnBitString` işlevi Için API belgelerinde](xref:microsoft.quantum.canon.controlledonbitstring)Yukarıdaki kodun işlenmiş sürümünü görebilirsiniz.
 
 Belge yazma hakkında genel olarak, API belge açıklamalarını yazma bölümünde birkaç şeyi aklınızda tutmaya yardımcı olur:
