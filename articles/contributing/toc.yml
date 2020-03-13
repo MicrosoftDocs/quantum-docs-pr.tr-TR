@@ -6,5 +6,9 @@
   href: pull-requests.md
 - name: Koda Katkıda Bulunma
   href: code.md
+- name: Katkıda Bulunma Örnekleri
+  href: samples.md
 - name: Stil Kılavuzu
   href: style-guide.md
+- name: API Tasarım İlkeleri
+  href: api-design-principles.md
