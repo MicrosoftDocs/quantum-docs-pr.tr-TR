@@ -6,20 +6,19 @@ author: natke
 ms.author: nakersha
 ms.date: 09/04/2019
 ms.topic: landing-page
-ms.openlocfilehash: 25a53e1cb8577761ef89cdcf2cfcddc509093f86
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 5975b0caf0fc73ad18fbd8a1e7c82a2333161da2
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056959"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022507"
 ---
-# <a name="q-standard-libraries"></a>Q# standart kitaplıkları #
+# <a name="q-api-reference"></a>Q# API başvurusu #
 
-Q#, Q# *standart kitaplığını* oluşturan çeşitli yararlı işlem, işlev ve kullanıcı tanımlı tür aralığı tarafından desteklenir.
-Q# standart kitaplığı iki ana bölüme ayrılır:
+Bu API başvurusunda Q# standart kitaplığı ve bu kitaplığın üzerine yapılandırılmış üç kitaplık olan kimya, sayısal ifade ve makine öğrenmesi kitaplıkları yer alır. Q# için ayrıca .NET ve Python kitaplıkları da mevcuttur.
 
-- **Giriş**: genellikle klasik yerel .NET kodunda hedef makinenin ve derleyicinin bir parçası olarak tanımlanan işlemler ve işlevler.
-  Genel olarak, farklı hedef makineler her bir sisteme uygun olan farklı giriş uygulamalarına sahip olabilir.
-- **Esas**: girişte tanımlanan mantık üzerinde oluşturulan Q# dilinde tanımlanmış işlemler ve işlevler.
-  Esas uygulama, hedef makinelere göre belirsizdir.
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+- [Q# kitaplıkları](xref:microsoft.quantum.qsharplibintro)
+- [.NET kitaplıkları](xref:microsoft.quantum.dotnetlibsintro)
+- [Python kitaplıkları](https://docs.microsoft.com/python/qsharp)
+
+Q# kitaplıkları hakkında daha fazla bilgi için bkz. <xref:microsoft.quantum.libraries>.
