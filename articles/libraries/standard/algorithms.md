@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: aaa9ddf47e5ea35e7e57b9828db082889d0e6adf
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 8b8a9019e8bc419f42b0c6f7558354d19a157917
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907248"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402859"
 ---
 # <a name="quantum-algorithms"></a>Hisse algoritmaları #
 
@@ -77,9 +77,9 @@ $ $ $ $ \Ket{\phi\_k (a)} = \frac{1}{\sqrt{2}} \left (\ket{0} + e ^ {i2\pi a/2 ^
 $ $ Bir Ekleyici işlemi gerçekleştirmeye yönelik yol daha sonra, girişlerin toplamının $ $ \ket{a + b} = \operatorname{QFT} ^{-1}\ket{\fi\_1 (a + b)} \otimes \cnoktalar \otimes \ket{\phi\_n (a + b)} olarak yazılabileceğini gözlemledikten sonra net bir hale gelir.
 $ $ $B $ ve $a $ tamsayısı, $b $ $ as denetimleri kullanılarak ayrıştırma içindeki her bir qubit üzerinde denetlenen aşama dönüşü gerçekleştirerek eklenebilir.
 
-Bu genişleme, her tamsayı $j $ ve gerçek sayı $x $, $e ^ {i2\pi (x + j)} = e ^ {i2\pi x} $ olduğunu belirterek daha kolay bir şekilde basitleştirilebilir.  Bunun nedeni, $360 ^ {\circ} $ derece ($ 2 \ Pi $ radyan) bir daire içinde döndürmenize neden olur.  $E ^ {i2\pi x} $ için $x $ öğesinin yalnızca önemli bir parçası bu nedenle $x $ bölümünün kesirli kısmıdır.  Özellikle, formun ikili genişletmemiz varsa $x = y +0. x\_0x\_2 \ lnoktalar x\_n $, $e ^ {i2\pi x} = e ^ {i2\pi (0). x\_0x\_2 \ lnoktalar x\_{n-1})} $ ve bu nedenle $ $ \ket{\phi\_k (a + b)} = \frac{1}{\sqrt{2}} \left (\demet{0} + e ^ {i2\pi [a/2 ^ k +0. b\_k\ldots b\_1]} \ayraç{1} \right). $ $ Bu, her birinin $ \ket{a} $ öğesinin Fourier dönüştürmesinin genişletilmesinde tencursor faktörleri, döndürmeler sayısı $k $ düşüş olarak küçülür.  Bu, Adder 'de gerekli olan hisse kapıları sayısını önemli ölçüde azaltır.  Fourier dönüşümü, aşama ekleme ve ters Fourier Dönüştürme adımlarının $ \operatorname{QFT} ^{-1} \left (\fi\\\!\operatorname{ADD}\right) \operatorname{QFT} $ olarak olduğunu belirledik. İşlemin tamamını uygulamak için bu basitleştirme kullanan bir hisse devresini aşağıda görebilirsiniz.
+Bu genişleme, her tamsayı $j $ ve gerçek sayı $x $, $e ^ {i2\pi (x + j)} = e ^ {i2\pi x} $ olduğunu belirterek daha kolay bir şekilde basitleştirilebilir.  Bunun nedeni, $360 ^ {\circ} $ derece ($ 2 \ Pi $ radyan) bir daire içinde döndürmenize neden olur.  $E ^ {i2\pi x} $ için $x $ öğesinin yalnızca önemli bir parçası bu nedenle $x $ bölümünün kesirli kısmıdır.  Özellikle, formun ikili genişletmemiz varsa $x = y +0. x\_0x\_2 \ lnoktalar x\_n $, $e ^ {i2\pi x} = e ^ {i2\pi (0). x\_0x\_2 \ lnoktalar x\_{n-1})} $ ve bu nedenle $ $ \ket{\phi\_k (a + b)} = \frac{1}{\sqrt{2}} \left (\demet{0} + e ^ {i2\pi [a/2 ^ k +0. b\_k\ldots b\_1]} \ ayraç{1} \ sağ). $ $ Bu, $ \ket{a} $ öğesinin Fourier dönüştürmesinin her birini arttırarak ekleme gerçekleştirmemiz halinde döndürmeler sayısı $k $ düşüş olarak küçülür.  Bu, Adder 'de gerekli olan hisse kapıları sayısını önemli ölçüde azaltır.  Fourier dönüşümü, aşama ekleme ve ters Fourier Dönüştürme adımlarının $ \operatorname{QFT} ^{-1} \left (\fi\\\!\operatorname{ADD}\right) \operatorname{QFT} $ olarak olduğunu belirledik. İşlemin tamamını uygulamak için bu basitleştirme kullanan bir hisse devresini aşağıda görebilirsiniz.
 
-![Devper, devre diyagramı olarak gösterilen Ekleyici](~/media/draper.png)
+![Devper, devre diyagramı olarak gösterilen Ekleyici](~/media/draper.svg)
 
 Bağlantı hattı 'ndaki her denetlenen $e ^ {I2 \ PI/k} $ kapısı, denetlenen aşama kapısı anlamına gelir.  Bu tür kapıları, $ \gre{00}\mapsto \tus{00}$ ancak $ \gre{11}\mapsto e ^ {I2 \ PI/k} \ tus{11}$ olan qubit çiftinde özelliği vardır.  Bu bağlantı hattı, giriş ve çıkışları depolamak için gerekenden başka bir qubit olmadan toplama işlemi gerçekleştirmemizi sağlar.
 
@@ -92,7 +92,7 @@ $$
 
 Beauregard ekleyici, $a $ ve $b $ aşamasına eklemek için Draper Ekleyici veya daha özel olarak $ \fi\\\!\operatorname{Add} $ kullanır.  Daha sonra, $a + b-N < 0 $ ' ı çıkararak $a + b < N $ $N $ ve test etmeyi kaldırarak aynı işlemi kullanır.  Devre, bu bilgileri bir anılususılge içinde depolar ve sonra $a + b < N $ $N $ kaydı ekler.  Daha sonra bu işlem, bu ek bitin bitmemesini sağlar (Bu adım, Adder çağrıldıktan sonra, anıllanla 'nın de ayrılabileceği emin olmak için gereklidir).  Beauregard Ekleyici için devre aşağıda verilmiştir.
 
-![Devre diyagramı olarak gösterilen Beauregard Ekleyici](~/media/beau.png)
+![Devre diyagramı olarak gösterilen Beauregard Ekleyici](~/media/beau.svg)
 
 Burada, $ \Fi\\\!\operatorname{ADD} $ kapısı $ \phi\\\!\operatorname{ADD} $ ile aynı şekilde sürer. Bu bağlamda, bu bağlamda, girişin hisse yerine  Bu, $ \Fi\\\!\operatorname{ADD} $ içindeki denetlenen aşamaların, hem qubit hem de Adder için gereken kapı sayısını azaltmak üzere daha az işlem halinde derlenebilecek aşama kapıları ile değiştirilmesini sağlar.
 
@@ -111,7 +111,7 @@ Farklı şekilde, $V $ uygulamanın etkisi, yalnızca bir Oracle olarak $V $ eri
 Bu nedenle, bu tartışmanın geri kalanı için aşama tahmini $R _1 (\phi) *$ olarak tartışıyoruz.*
 
 Denetim ve hedef kayıt bu işlemden sonra geri ılanmadan kaldığından, "_1 (2 \fi) \ket{+} $ $R durumunda ikinci bir denetim qubit hazırlamak için $U ^ $2 kontrollü bir uygulamasının hedefi olarak $ \ket{\phi} $ öğesini yeniden kullanabilirsiniz.
-Bu şekilde devam ederek, \begin{hizalaması} \ket{\psı} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j \ Fi) \ket{+} \\\\ & \propto \ bigotimes_ {j = 0} ^ {n} \left (\demet{0} + biçiminde bir kayıt edinebilirsiniz \exp (i 2 ^ {j} \fi) \gre{1}\right) \\\\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \exp (i \phi k) \ket{k} \end{hizalaması}; burada $n $, gereken duyarlık bit sayısı olan ${} \propto {}$ ile $ 'ın normalleştirme faktörünü gizliyoruz 1/\ sqrt{2 ^ n} $.
+Bu şekilde devam ederek, \begin{hizalaması} \ket{\psı} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j \ Fi) \ket{+} \\\\ & \propto \ bigotimes_ {j = 0} ^ {n} \left (\demet{0} + biçiminde bir kayıt edinebilirsiniz \exp (i 2 ^ {j} \fi) \gre{1}\right) \\\\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \exp (i \phi k) \ket{k} \end{hizalaması}; burada $n $, gereken duyarlık bit sayısı olan $1/\sqrt 'ın normalleştirme faktörünü gizlemeyeceğini göstermek için ${} \propto {}$ ' i kullandığımızda {2 ^ n} $.
 
 $ \Phi = 2 \ Pi p/2 ^ k $ ' ı bir tamsayı $p $ olarak kabul ediyorsanız, bunu $ \ket{\psı} = \operatorname{QFT} \ket{p_0 p_1 \noktalar p_n} $ olarak tanıyacağız; burada $p _j $, $j ^ {\textrm{TH}} $ bit/$2 \pi \phi $ şeklindedir.
 Bu nedenle, hisse dosyası miktarı olarak kodlanan aşamanın ikili gösterimini elde ettiğimiz için, bu nedenle hisse.
