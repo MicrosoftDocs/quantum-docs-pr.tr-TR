@@ -1,6 +1,6 @@
 - name: Hataları Raporlama
   href: reporting-bugs.md
-- name: Belge Katkısında Bulunma
+- name: İyileştirme Belgeleri
   href: docs.md
 - name: Çekme İsteklerini Açma
   href: pull-requests.md
