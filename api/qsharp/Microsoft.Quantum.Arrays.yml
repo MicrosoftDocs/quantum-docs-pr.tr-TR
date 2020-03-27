@@ -13,6 +13,8 @@ functions:
   summary: Verilen değere eşit tüm öğelerle verilen uzunlukta bir dizi oluşturur.
 - uid: microsoft.quantum.arrays.enumerated
   summary: Bir dizi verildiğinde, orijinal dizinin öğelerini içeren yeni bir dizi döndürür ve her bir öğenin indisleriyle birlikte.
+- uid: microsoft.quantum.arrays.equala
+  summary: Aynı türde iki dizi ve dizilerin öğe çiftleri için tanımlanan bir koşul verildiğinde, dizilerin eşit olup olmadığını denetler.
 - uid: microsoft.quantum.arrays.exclude
   summary: Belirli bir dizin listesindeki öğeleri dışlayarak başka bir dizinin öğelerini içeren bir dizi döndürür.
 - uid: microsoft.quantum.arrays.filtered
@@ -67,9 +69,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Dizi öğeleri için tanımlanan bir dizi ve bir işlem verildiğinde, işlem altındaki orijinal dizinin görüntülerinden oluşan yeni bir dizi döndürür.
 metadata:
-  ms.openlocfilehash: 5cbe8e172fda72d1016b407656c75457526651aa
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 422564f632efd7a6d093d78358a15ee012f918f8
+  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905599"
+  ms.lasthandoff: 03/26/2020
+  ms.locfileid: "80320729"

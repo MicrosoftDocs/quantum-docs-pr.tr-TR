@@ -5,6 +5,29 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Dizi öğeleri için tanımlanan bir dizi ve koşul verildiğinde, koşulu karşılayan öğelerden oluşan bir dizi döndürür.
 remarks: İşlevi genel türler için tanımlanmıştır, yani bir dizi `'T[]` ve bir koşul olduğunda öğeleri filtreleyebiliriz `'T -> Bool`.
+examples: >-
+  Aşağıdaki kod "filtrelenmiş" işlevini gösterir.
+
+  Bir koşul @"microsoft.quantum.logical.greaterthani" işlevi kullanılarak tanımlanır:
+
+
+  ```qsharp
+
+  open Microsoft.Quantum.Arrays;
+
+  open Microsoft.Quantum.Logical;
+
+
+  function FilteredDemo() : Unit {
+     let predicate = GreaterThanI(_, 5);
+     let filteredArray = Filtered(predicate, [2, 5, 9, 1, 8]);
+     Message($"{filteredArray}");
+  }
+
+  ```
+
+
+  Bu örnekte beklenen sonuç, 5 ' ten büyük bir sayı dizisi olacak.
 syntax: "function Filtered (predicate : ('T -> Bool), array : 'T[]) : 'T[]"
 input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
@@ -36,9 +59,9 @@ typeParameters:
 - uid: "'T"
   summary: '`array` öğelerinin türü.'
 metadata:
-  ms.openlocfilehash: f2749f204c6276a0a43ac67bdee9c4cda0de049e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8ce7f84c2243a5194b5a2223884fb68304767dbf
+  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218371"
+  ms.lasthandoff: 03/26/2020
+  ms.locfileid: "80320745"
