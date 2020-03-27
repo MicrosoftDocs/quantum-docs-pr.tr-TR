@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 2fa227c823cd87df9c799c043c699e4ce818b8e3
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 239073b7e7edafc49bc65cb60c9f45cf0af83dbe
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907554"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320890"
 ---
 # <a name="multiple-qubits"></a>Birden çok qubit
 
@@ -27,7 +27,7 @@ Bu araçların, Q # kodunda yaygın olarak kullanılan kapı kümelerini anlamas
 
 ## <a name="representing-two-qubits"></a>Iki qubit 'i temsil etme
 Bir-ve iki-qubit durumu arasındaki temel fark, iki-qubit durumlarının iki boyut yerine dört boyutlu olması gerektiğidir.
-Bunun nedeni, iki-qubit durumlarının hesaplama temelinin, tek qubit durumlarının tencursor ürünleri tarafından oluşturulmuş olmasından kaynaklanır.  Örneğin, \begin{hizalaması} 00 \ EQUIV \ Begin{bmatrix}1 \\var \\ 0 \ End{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qdörtlü 01 \equk\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equk\begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \ End{bmatrix}, \qdörtlü 11 \equıv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \ End{bmatrix}.\\
+Bunun nedeni, iki-qubit durumlarının hesaplama temelinin, tek qubit durumlarının tencursor ürünleri tarafından oluşturulmuş olmasından kaynaklanır.  Örneğin, \begin{hizalaması} 00 \ EQUIV \ Begin{bmatrix}1 \\var \\ 0 \ End{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qquad 01 \equk\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\\\\ 10 \ EQUIV \ Begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \ End{bmatrix}, \qdörtlü 11 \equıv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0\\\\ 1 \end{bmatrix}.
 \end{hizalaması}
 
 Bu oluşturma kullanılarak, $n $ qubits 'in hisse boyutunun, $2 ^ n $ boyutundaki bir birim vektörü ile temsil edildiği kolayca görüyordu.  Vektör
@@ -59,13 +59,16 @@ $$
 
 İki-qubit hisse durumunun yalnızca bir qubitinin ölçülmesi de mümkündür. Yalnızca bir alt sisteme daraltılacağından, her bir qubits 'in yalnızca bir kısmını ölçecek şekilde, ölçümün etkileri çok daha farklı bir durumdur.  Diğer bir deyişle, bu gibi durumlarda yalnızca bir qubit yalnızca bir qubit, alt sistemlerden yalnızca birini daraltır ancak bunların tümünü kullanmaz.  
 
-Bunu görmek için, ilk olarak iki qubit üzerinde $H $, başlangıçta "0" durumuna ayarlanan Hadamard Transform $ ' i uygulayarak oluşturulan aşağıdaki durumun ilk qubit 'i ölçmesini düşünün: $ $ H ^ {\otimes 2} \left (\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} \ sağ) = \frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 &-1 & 1 &-1 \\\\ 1 & 1 &-1 &-1 \\\\ 1 &- 1 &-1 & 1 \end{bmatrix}\begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ End {bmatris} = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ End {bmatrix} \mapsto \begin{Cases}\Text{Outcome} = 0 & \frac{1}{\sqrt{2}} \begin{bmatrix}1\\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\\\\ \Text{outcome} = 1 & \frac{1}{\sqrt{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{Cases}.
+Bunu görmek için, ilk olarak iki qubit üzerinde $H $, başlangıçta "0" durumuna ayarlanan Hadamard Transform $ ' i uygulayarak oluşturulan aşağıdaki durumun ilk qubit 'i ölçmesini düşünün: $ $ H ^ {\otimes 2} \left (\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \ End{bmatrix} \right) = \frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 &-1 & 1 &-1 \\\\ 1 & 1 &-1 &-1 \\\\ 1 &-1 &-1 & 1 \ End {bmatrix} \begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ End {bmatris} = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ End {bmatrix} \mapsto \begin{Cases}\Text{Outcome} = 0 & \frac{1}{\sqrt{2}} \begin{bmatrix}1\\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\\\\ \Text{outcome} = 1 & \frac{1}{\sqrt{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{Cases}.
 $ $ Her iki sonuç da %50 oranında meydana gelen bir olasılıktır.  Her ikisi için %50 olasılık olan sonuç, ilk zbit üzerinde $0 $ ile $1 $ değiştirme altında ilk hisse
 
-Birinci veya ikinci qubit ölçmeye yönelik matematik kuralı basittir.  $E _k $ $k ^ {\rm TH} $ hesaplama tabanlı vektörün olmasına izin vermemiz ve $S $ $e $ değerinin bu değeri için $1 $ değerini almasını sağlamak üzere tüm _k $k $ $ olarak izin verir.  Örneğin, ilk qubit ' i ölçmeye ilgileniyorsanız $S $ $e _2 \ equ$10 ve $e _3 \ equ$11 ' den oluşur.  Benzer şekilde, ikinci qubit ile ilgileniyorsanız $S $ $e _1 \ EQUIV $1 ve $e _3 \ equ$11 ' den oluşur.  Ardından, seçilen qubit 'i $1 $ olarak ölçmeye olasılığı, durum vektörü $ \psı $ şeklindedir
+Birinci veya ikinci qubit ölçmeye yönelik matematik kuralı basittir.  $E _k $ $k ^ {\rm TH} $ hesaplama tabanlı vektörün olmasına izin vermemiz ve $S $ $e $ değerinin bu değeri için $1 $ değerini almasını sağlamak üzere tüm _k $k $ $ olarak izin verir.  Örneğin, ilk qubit ' i ölçmeye ilgileniyorsanız $S $ $e _1 \ EQUIV $10 ve $e _3 \ equ$11 ' den oluşur.  Benzer şekilde, ikinci qubit ile ilgileniyorsanız $S $ $e _2 \ equ$1 ve $e _3 \ equ$11 ' den oluşur.  Ardından, seçilen qubit 'i $1 $ olarak ölçmeye olasılığı, durum vektörü $ \psı $ şeklindedir
 
 $ $ P (\Text{outcome} = 1) = \ sum_ {e_k \Text{set} S} \psı ^ \hanger e_k e_k ^ \gesger \ PSI.
 $$
+
+> [!NOTE]
+> Bu belgede, hesaplama temelini etiketlemek için küçük endian biçimini kullanıyoruz. Little endian biçiminde, önce en az önemli bitler gelir. Örneğin, küçük endian biçimindeki dört sayı, bit 001 dizesi tarafından temsil edilir.
 
 Her qubit ölçümü yalnızca $0 $ veya $1 $ ' i sağlayabileceğinizden, $0 $ ölçmesinin olasılığı yalnızca $1-P (\Text{outcome} = 1) $ olur.  Bu nedenle, $1 $ ölçmesinin olasılığı için yalnızca açık olarak bir formül sağlıyoruz.
 
@@ -79,7 +82,7 @@ $$
 
 Yukarıda verilen Tekdüzen durum vektörü olarak $ \psı $ ' i alırsak ve ilk qubit ' i ölçmeye ilgileniyorsa, 
 
-$ $ P (ilk qubit} = 1) = (\psı ^ \hanger e_2) (e_2 ^ \gesger \ PSI) + (\psı ^ \dağılım e_3) (e_3 ^ \dağılım \ PSI) = | e_2 ^ \dağılım \ psi | ^ 2 + | e_3 ^ \ dağılım \ PSI | ^ 2.
+$ $ P (ilk qubit} = 1) = (\psı ^ \hanger e_1) (e_1 ^ \gesger \ PSI) + (\psı ^ \dağılım e_3) (e_3 ^ \dağılım \ PSI) = | e_1 ^ \dağılım \ psi | ^ 2 + | e_3 ^ \ dağılım \ PSI | ^ 2.
 $$
 
 Bunun yalnızca, $10 $ ve $11 $ değerlerinin ölçülmesi için beklenen iki olasılıkların toplamı olduğunu unutmayın.
@@ -90,12 +93,13 @@ $$
 
 ıntuetdiğimiz anlamı bize söylerken, olasılık olması gerekir.  Benzer şekilde, durum şöyle yazılabilir
 
-$ $ \frac{\frac{e_2}{2}+ \frac{e_3}{2}} {\sqrt{\frac{1}{2}}} = \frac{1}{\sqrt{2}} \begin{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1 \ End {bmatrix} $ $
+$ $ \frac{\frac{e_1}{2}+ \frac{e_3}{2}} {\sqrt{\frac{1}{2}}} = \frac{1}{\sqrt{2}} \begin{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1 \ End {bmatrix} $ $
 
 ıntuize uygun olarak tekrar.
 
 ## <a name="two-qubit-operations"></a>İki-qubit Işlemleri
-Tek qubit durumunda olduğu gibi, herhangi bir Unitary dönüştürmesi qubits üzerinde geçerli bir işlemdir. Genel olarak, $n $ qubits üzerindeki bir Unitary dönüştürmesi, $2 ^ n \ Süre2 ^ n $ ($ 2 ^ n $ boyutundaki vektörlerde çalışır), yani $U ^{-1} = U ^ \linger $ gibi bir matris $U $. Örneğin, CNOT (denetlenen) geçidi, yaygın olarak kullanılan iki-qubit kapısı ve aşağıdaki Unitary matrisi tarafından temsil edilir:
+Tek qubit durumunda olduğu gibi, herhangi bir Unitary dönüştürmesi qubits üzerinde geçerli bir işlemdir. Genel olarak, $n $ qubits üzerindeki bir Unitary dönüştürmesi, $2 ^ n \ Süre2 ^ n $ ($ 2 ^ n $ boyutundaki vektörlerde çalışır), yani $U ^{-1} = U ^ \linger $ gibi bir matris $U $.
+Örneğin, CNOT (denetlenen) geçidi, yaygın olarak kullanılan iki-qubit kapısı ve aşağıdaki Unitary matrisi tarafından temsil edilir:
 
 $ $ \operatorname{CNOT} = \begin{bmatrix} 1 \ 0 \ 0 \ 0 \\\\ 0 \ 1 \ 0 \ 0 \\\\ 0 \ 0 \ 0 \ 1 \\\\ 0 \ 0 \ 1 \ 0 \ End{bmatrix} $ $
 

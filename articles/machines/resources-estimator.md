@@ -6,17 +6,17 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 37c901e5a861f0e8a10cdc911ad1d84ddd3e6e00
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 51186134e9279727fec212cdce84f69493aaa656
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907061"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320813"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>ResourcesEstimator hedef makinesi
 
 Adından da anlaşılacağı gibi `ResourcesEstimator`, bir hisse bilgisayar üzerinde Q # işleminin belirli bir örneğini çalıştırmak için gereken kaynakları tahmin eder.
-Bu işlemi, bir hisse bilgisayarının durumunu gerçekten taklit etmeden hisse yürütme işlemini gerçekleştirerek gerçekleştirir; Bu nedenle, binlerce qubit kullanan Q # işlemlerine yönelik kaynakları tahmin edebilir.
+Bu işlemi, bir hisse bilgisayarının durumunu gerçekten taklit etmeden hisse yürütme işlemini gerçekleştirerek gerçekleştirir; Bu nedenle, kodun klasik bölümü makul bir süre içinde çalıştırılabilecekse binlerce qubit kullanan Q # işlemlerine yönelik kaynakları tahmin edebilir.
 
 ## <a name="usage"></a>Kullanım
 

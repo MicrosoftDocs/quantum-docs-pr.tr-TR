@@ -6,12 +6,12 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
-ms.openlocfilehash: e3ce76f5ddcca497adb519eece959c9dd5dec92f
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 5dad4e4a77eea99e72eb2efac52eec61ebbdb21c
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904647"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320706"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamiltonian Dynamics benzetimi
 
@@ -28,14 +28,14 @@ $E ^ {-i H t} $ sıradan bir üstel ise, bu her bir hatanın $O (m ^ 2 t ^ 2) $:
 Bu hata oluşur $e çünkü ^ {-iHt} $, bir işleç üstel ve bunun sonucu olarak, $H _j $ koşullarının çalışmamasından dolayı bu formül kullanılırken bir hata oluştu (*Örneğin*, $H _j H_k H_k, genel olarak).
 
 $T $ büyükse, Trour – Suzuki formülleri, bir kısa saat adımları dizisine ayırarak Dynamics 'in doğru benzetimini yapmak için yine de kullanılabilir.
-$R $ ' ın evrimde geçen adım sayısı olmasına izin verin.
-Daha sonra $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r), $ $ $r $, $m ^ 2 t ^ 2/\ Epsilon $ olarak ölçeklendirirken, hata herhangi bir $ \epsilon > 0 $ için en fazla $ \epsilon $ üzerinde yapılabilir.
+$R $ ' ın evrimde geçen adım sayısı olmasına izin verin. bu nedenle, her adım $t/r $ için her seferinde çalışır. Daha sonra $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r), $ $ $r $, $m ^ 2 t ^ 2/\ Epsilon $ olarak ölçeklendirirken, hata herhangi bir $ \epsilon > 0 $ için en fazla $ \epsilon $ üzerinde yapılabilir.
 
 Hata koşullarının iptal edildiğini belirten bir işleç üs sırası oluşturarak daha doğru yaklaşık bir daha yakın şekilde oluşturulabilir.
-Bu tür bir en basit formül olan simetrik araba formülü veya Strang bölünmesi, $ $ U_1 (t) = \ prod_ {j = 1} ^ m e ^ {-iH_j t/2} \ prod_ {j = m} ^ 1 e ^ {-iH_j t} = e ^ {-iHt} + O (m ^ 3 t ^ 3) biçimini alır. $ $ $m ^ {3/2} t ^ {3/2}/\sqrt {\ Epsilon} $ olarak ölçeklendirmek için $r $ ' i seçerek herhangi bir $ \epsilon > 0 $ değerinden daha az kullanılabilir hale getirilebilir $ $.
+En basit bu formül, ikinci sıra Trour-Suzuki formülü, $ $ U_2 (t) = \left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2R} \ prod_ {j = m} biçimini alır ^ 1 e ^ {-iH_j t/2R} \ right) ^ r = e ^ {-iHt} + O (m ^ 3 t ^ 3/r ^ 2), $ $ $m ^ {3/2} t ^ {3/2}/\sqrt {\ Epsilon} $ olarak ölçeklendirmek için $r $ ' i seçerek herhangi bir $ \epsilon > 0 $ değerinden daha az bir hata olabilir.
 
-Hatta daha yüksek sıralı bir sorun, $U _1 $ ' ye göre oluşturulabilir.
-En basit, aşağıdaki dördüncü düzen formülüdür. ilk olarak Suzuki tarafından tanıtılan: $ $ U_2 (t) = U_1 ^ 2 (s_1t) U_1 ([1-4s_1] t) U_1 ^ 2 (s_1 t) = e ^ {-IHV t} + O (m ^ 5T ^ 5), $ $ burada $s _1 = (4-4 ^ {1/3}) ^{-1}$.
+Daha yüksek sıralı formüller, özellikle de ($ 2k $) $k > 0 $ için tek sıra, yinelemeli olarak oluşturulabilir: $ $ U_ {2k} (t) = [U_ {2k-2} (s_k\~ t)] ^ 2 U_ {2k-2} ([1-4s_k] t) [U_ {2k-2} (s_k\~ t)] ^ 2 = e ^ {-iHt} + O ((m t) ^ {2k + 1}/r ^ {2k}), $ $ burada $s _k = (4-4 ^ {1/(2k-1)}) ^{-1}$.
+
+En basit, Suzuki tarafından ilk olarak tanıtılan şu dördüncü sıra ($k = $2) formülüdür: $ $ U_4 (t) = [U_2 (s_2\~ t)] ^ 2 U_2 ([1-4s_2] t) [U_2 (s_2\~ t)] ^ 2 = e ^ {-iHt} + O (m ^ 5T ^ 5/r ^ 4), $ $ burada $s _2 = (4-4 ^ {1/3}) ^{-1}$.
 Genel olarak, yoğun yüksek sıralı formüller benzer şekilde oluşturulabilir; Bununla birlikte, daha karmaşık tümleştiricileri kullanmanın maliyeti genellikle pek çok pratik sorun için dördüncü sıra avantajlarının dışındadır.
 
 Yukarıdaki stratejilerin çalışmasını sağlamak için, $e ^ {-iH_j t} $ geniş bir sınıfının benzetimini yapmak için bir yönteme ihtiyacımız var.
