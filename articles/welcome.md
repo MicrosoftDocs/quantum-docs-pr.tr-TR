@@ -7,10 +7,10 @@ ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: overview
 ms.openlocfilehash: cea39e47ec5e7e2ad97adbbb39ba586274564967
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "77907639"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Quantum Development Kit'i (QDK) kullanmaya başlama
@@ -37,7 +37,7 @@ Kuantumun gücünden yararlanmaya başlamak için *hızlı başlangıçlarımız
 ### <a name="learning-further"></a>Daha fazlasını öğrenme
 * Q# programlama hakkında daha ayrıntılı bilgi edinmek istiyorsanız, Q# içinde programlama alıştırmaları aracılığıyla kuantum bilişimini tanıtan ve kendi hızınızda ilerleyebileceğiniz bir alıştırma koleksiyonu olan [Quantum Katas](https://github.com/Microsoft/QuantumKatas)’a göz atın.
     Bu kata’ların çoğu ayrıca Q# Not Defterleri olarak da sunulur. 
-* [Örnek depomuzda](https://github.com/Microsoft/Quantum), Q# kullanarak kuantum programları yazmaya yönelik çok sayıda örnek bulunur. Bu örneklerin çoğu, [standart](xref:microsoft.quantum.libraries.standard.intro) ve [kimya](xref:microsoft.quantum.chemistry.concepts.intro) kitaplıkları dahil açık kaynak [kuantum kitaplıklarımız](https://github.com/Microsoft/QuantumLibraries) kullanılarak yazılmıştır. (Aşağıda bu konu hakkında daha fazla bilgi bulabilirsiniz.)
+* [Örnek depomuzda](https://github.com/Microsoft/Quantum), Q# kullanarak kuantum programları yazmaya yönelik çok sayıda örnek bulunur. Bu örneklerin çoğu, [standart](https://github.com/Microsoft/QuantumLibraries) ve [kimya](xref:microsoft.quantum.libraries.standard.intro) kitaplıkları dahil açık kaynak [kuantum kitaplıklarımız](xref:microsoft.quantum.chemistry.concepts.intro) kullanılarak yazılmıştır. (Aşağıda bu konu hakkında daha fazla bilgi bulabilirsiniz.)
 
 ## <a name="five-questions-about-quantum-computing"></a>Kuantum bilişimi hakkında beş soru
 
