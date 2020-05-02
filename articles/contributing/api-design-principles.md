@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 3/9/2020
 ms.topic: article
 uid: microsoft.quantum.contributing.api-design
-ms.openlocfilehash: 03c32331f8988181ec6fedcfc207d752b4a880b2
-ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
+ms.openlocfilehash: a8e830e8f46ac6bd53ed5c607ca8cc2897721a20
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79024211"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82687333"
 ---
 # <a name="q-api-design-principles"></a>Q # API tasarım Ilkeleri
 
@@ -32,18 +32,18 @@ Bu makalede bu ilkeler listelenmekte ve soru-cevap API 'Leri tasarlarken nasıl 
 
 **Anahtar ilkesi:** , Odağı hisse. uygulamalara yerleştiren API 'Leri kullanıma sunun.
 
-- ✅ **,** algoritmaların ve uygulamaların üst düzey yapısını yansıtan işlem ve işlev adlarını seçin.
+- ✅Algoritmaların ve uygulamaların üst düzey yapısını yansıtan işlem ve işlev **adlarını seçin.**
 - ⛔️ birincil olarak alt düzey uygulama ayrıntılarına odaklanarak API 'Leri kullanıma **sunmayın** .
 
 **Anahtar ilkesi:** API 'Lerin kullanım için sezgisel olduğundan emin olmak için her API tasarımını örnek kullanım durumları ile başlatın.
 
-- ✅ **,** başlangıçtan itibaren tüm olası kullanımlar için tasarlamayı denemek yerine ortak bir API 'nin her bileşeninin karşılık gelen bir kullanım örneğine sahip olduğundan emin olun.
+- ✅Bir ortak API 'nin her bileşeninin, başlangıçtan itibaren olası tüm kullanımlar için tasarım denemesi yerine karşılık gelen bir kullanım örneğine sahip **olduğundan emin olun** .
     Farklı bir şekilde, yararlı olmaları durumunda ortak API 'Ler oluşturmayın, ancak bir API 'nin her bölümünün yararlı olacağı *somut* bir örneğe sahip olduğundan emin olun.
 
   *Örnekler*
-  - @"microsoft.quantum.canon.applytoeachca", çok sayıda hisse algoritmasında ortak bir görev olan tek bir üst konum durumunda Yazmaçları hazırlamak için `ApplyToEachCA(H, _)` olarak kullanılabilir. Aynı işlem, hazırlık, sayı ve Oracle tabanlı algoritmalarda birçok diğer görev için de kullanılabilir.
+  - @"microsoft.quantum.canon.applytoeachca", çok sayıda hisse `ApplyToEachCA(H, _)` algoritmasında ortak bir görev olan bir Tekdüzen üst konum durumunda Yazmaçları hazırlamak için olarak kullanılabilir. Aynı işlem, hazırlık, sayı ve Oracle tabanlı algoritmalarda birçok diğer görev için de kullanılabilir.
 
-- ✅, beyin **Fırtınmlarını** ve yeni API tasarımlarını kullanarak, sezgisel olduğunu ve önerilen kullanım durumlarını karşıladıklarından emin olun.
+- ✅Tek bir kez beyin fırtınası **yapın** ve yeni API tasarımları oluşturun ve bunları sezgisel olarak kontrol edin ve önerilen kullanım durumlarını karşılayın.
 
   *Örnekler*
   - Yeni API tasarımlarının mevcut uygulamaları nasıl basitleştireceğinizi ve açıklanmadığını görmek için geçerli Q\# kodunu inceleyin.
@@ -51,22 +51,22 @@ Bu makalede bu ilkeler listelenmekte ve soru-cevap API 'Leri tasarlarken nasıl 
 
 **Anahtar ilkesi:** Okunabilir kodu desteklemek ve teşvik etmek için API 'Ler tasarlayın.
 
-- ✅ **,** kodun etki alanı uzmanları ve uzman olmayanlar tarafından okunabilir olmasını sağlamaktır.
-- ✅, uygulama ayrıntılarını uygun şekilde Delve altına almak için belgeleri kullanarak her bir işlemin ve yüksek düzeyli algoritmadaki işlevin efektlerine **odaklanmanızı sağlar** .
-- ✅ **,** uygun olan her durumda ortak [Q\# stil kılavuzunu](xref:microsoft.quantum.contributing.style) izleyin.
+- ✅Kodun etki alanı uzmanları ve uzman olmayanlar tarafından okunabilir **olduğundan emin olun** .
+- ✅Uygulama ayrıntılarına uygun şekilde **Delve yapmak için** belgeleri kullanarak her bir işlemin ve yüksek düzeyli algoritmadaki işlevin etkilerine odaklanın.
+- ✅Uygun olan her durumda [ortak\# Q stili kılavuzunu](xref:microsoft.quantum.contributing.style) **izleyin.**
 
 **Anahtar ilkesi:** API 'Leri kararlı olacak şekilde tasarlayın ve ileriye dönük uyumluluk sağlayın.
 
-- ✅ **,** önemli değişiklikler gerektiğinde eski API 'leri sorunsuz şekilde kullanımdan kaldırır.
+- ✅Önemli değişiklikler gerektiğinde eski API 'Leri sorunsuz bir **şekilde kullanımdan kaldırır** .
 
-- ✅ **,** mevcut kullanıcı kodunun kullanımdan kaldırma sırasında doğru çalışmasına izin veren "dolgu" işlemlerini ve işlevleri sağlar.
+- ✅Kullanımdan kaldırma sırasında mevcut kullanıcı kodunun doğru çalışmasına izin veren "dolgu" işlemleri ve **işlevleri sağlar.**
 
   *Örnekler*
-  - `EstimateAverage``EstimateExpectation` adlı bir işlemi yeniden adlandırırken, var olan kodun doğru şekilde çalışmaya devam edebilmesi için yeni adında özgün işlemi çağıran `EstimateExpectation` adlı yeni bir işlem tanıtın.
+  - Öğesine adlı `EstimateExpectation` bir işlemi yeniden adlandırırken `EstimateAverage`, var olan kodun doğru şekilde `EstimateExpectation` çalışmaya devam edebilmesi için özgün işlemi yeni adında çağıran adlı yeni bir işlem tanıtın.
 
-- ✅ **, kullanıcıya kullanım dışı** Bırakıla iletmek için @"microsoft.quantum.core.deprecated" özniteliğini kullanır.
+- ✅Kullanıcı kullanım dışı @"microsoft.quantum.core.deprecated" Bırakıla iletişim kurmak için **özniteliğini kullanın.**
 
-- bir işlemi veya işlevi yeniden adlandırırken ✅, `@Deprecated`için bir dize girişi olarak yeni bir **ad sağlayın.**
+- ✅Bir işlemi veya işlevi yeniden adlandırırken, yeni adı bir dize girişi **olarak sağlayın.** `@Deprecated`
 
 - ⛔️, önizleme sürümleri için en az altı aya veya desteklenen yayınlar için en az iki yıla kadar kullanım süresi olmadan mevcut işlevleri veya **işlemleri kaldırmayın.**
 
@@ -78,23 +78,23 @@ Bu makalede bu ilkeler listelenmekte ve soru-cevap API 'Leri tasarlarken nasıl 
 
 **Anahtar ilkesi:** işlevleri ve işlemleri mümkün olduğunca yeniden kullanılabilir olacak şekilde tasarlayın ve gelecekteki ihtiyaçları tahmin edin.
 
-- aynı API 'de ve daha önce var olan kitaplıklarda, diğer işlevler ve işlemlerle birlikte oluşturmak için **, tasarım işlevleri** ve işlemler ✅.
+- ✅Aynı API 'de ve daha önce var olan kitaplıklarda diğer işlevler ve işlemlerle birlikte oluşturmak için işlevler ve **işlemler tasarlayın.**
 
   *Örnekler*
-  - @"microsoft.quantum.canon.delay" işlemi, kendi girişi hakkında en düşük varsayımlar yapar ve bu nedenle, her iki işlemin veya Kullanıcı tarafından tanımlanan uygulamaların uygulamalarını geciktirmek için kullanılabilir.
+  - @"microsoft.quantum.canon.delay" İşlem, girişi hakkında en düşük varsayımlar yapar ve bu nedenle, her iki işlemin veya Kullanıcı tarafından tanımlanan bir işlem için uygulamaları geciktirmek üzere kullanılabilir.
     <!-- TODO: define bad example. -->
 
-- ✅ **işlemler** yerine işlev olarak yalnızca belirleyici klasik mantığı kullanıma sunar.
+- ✅İşlemler yerine işlev olarak yalnızca belirleyici klasik **mantığı sergileme** .
 
   *Örnekler*
-  - Kayan nokta girişinin karelerinin ne kadar gerçekçi yazıldığını gösteren bir altyordam ve bu nedenle kullanıcıya işlem `Square : Double => Double`yerine `Squared : Double -> Double` olarak sunulmalıdır. Bu, alt yordamın daha fazla yerde (örneğin, diğer işlevlerin içinde) çağrılmasına izin verir ve derleyiciye performansı ve iyileştirmeleri etkileyebilecek yararlı iyileştirme bilgileri sağlar.
-  - `ForEach<'TInput, 'TOutput>('TInput => 'TOutput, 'TInput[]) => 'TOutput[]` ve `Mapped<'TInput, 'TOutput>('TInput -> 'TOutput, 'TInput[]) -> 'TOutput[]`, belirleyici bir şekilde yapılan garantilere göre farklılık gösterir; her ikisi de farklı koşullarda yararlı olur.
-  - Hisse alma işlemlerinin uygulamasını dönüştüren API yordamları, genellikle belirleyici bir biçimde gerçekleştirilebilir ve bu nedenle `CControlled<'T>(op : 'T => Unit) => ((Bool, 'T) => Unit)`gibi işlevler olarak kullanılabilir hale getirilebilir.
+  - Kayan nokta girişini gösteren bir alt yordam, bir işlem `Squared : Double -> Double` `Square : Double => Double`olarak değil, kullanıcıya gösterilmelidir. Bu, alt yordamın daha fazla yerde (örneğin, diğer işlevlerin içinde) çağrılmasına izin verir ve derleyiciye performansı ve iyileştirmeleri etkileyebilecek yararlı iyileştirme bilgileri sağlar.
+  - `ForEach<'TInput, 'TOutput>('TInput => 'TOutput, 'TInput[]) => 'TOutput[]`ve `Mapped<'TInput, 'TOutput>('TInput -> 'TOutput, 'TInput[]) -> 'TOutput[]` belirleyici bir şekilde yapılan garantilere göre farklılık gösterir; her ikisi de farklı koşullarda yararlı olur.
+  - Hisse alma işlemlerinin uygulamasını dönüştüren API yordamları, genellikle belirleyici bir şekilde gerçekleştirilebilir ve bu nedenle, gibi işlevler olarak kullanılabilir hale getirilebilir `CControlled<'T>(op : 'T => Unit) => ((Bool, 'T) => Unit)`.
 
-- ✅ **,** her bir işlev ve işlem için, gerektiğinde tür parametrelerini kullanarak giriş türünü genelleştirir.
+- ✅Gerektiğinde tür parametrelerini kullanarak, her bir işlev ve işlem için giriş türünü makul **şekilde genelleştirin** .
 
   *Örnekler*
-  - `ApplyToEach` en yaygın uygulaması olan `((Qubit => Unit), Qubit[]) => Unit`türü yerine tür `<'T>(('T => Unit), 'T[]) => Unit` vardır.
+  - `ApplyToEach`en yaygın `<'T>(('T => Unit), 'T[]) => Unit` uygulamasının belirli türü yerine türü vardır `((Qubit => Unit), Qubit[]) => Unit`.
 
 > [!TIP]
 > Gelecekteki ihtiyaçları tahmin etmek önemlidir, ancak kullanıcılarınız için somut sorunları çözmenin de önemlidir.
@@ -102,23 +102,23 @@ Bu makalede bu ilkeler listelenmekte ve soru-cevap API 'Leri tasarlarken nasıl 
 
 **Anahtar ilkesi:** öngörülebilir ve çağrılabilir amacını ileten işlevler ve işlemler için giriş ve çıkış türlerini seçin.
 
-- ✅ **,** yalnızca bir arada kabul edildiğinde önemli olan giriş ve çıkışları mantıksal olarak gruplamak için demet türlerini kullanır. Bu durumlarda Kullanıcı tanımlı bir tür kullanmayı düşünün.
+- ✅Yalnızca bir arada kabul edildiğinde önemli olan giriş ve çıkışları mantıksal olarak gruplamak için demet **türlerini kullanın.** Bu durumlarda Kullanıcı tanımlı bir tür kullanmayı düşünün.
 
   *Örnekler*
-  - Başka bir işlevin yerel en düşük değerleri çıktısını almak için bir işlev, `LocalMinima(fn : (Double -> Double), (left : Double, right : Double)) : Double` uygun bir imza olabileceği gibi, bir arama aralığının bir giriş olarak sınırlarını gerektirebilir.
-  - Bir makine öğrenimi sınıflandırmasının bir türevi olan parametre kaydırma tekniğinin bir türevini tahmin etmeye yönelik bir işlem, hem kaydırılan hem de geriye doğru olmayan parametre vektörlerini giriş olarak alamaz. `(unshifted : Double[], shifted : Double[])` benzer bir giriş bu durumda uygun olabilir.
+  - Başka bir işlevin yerel en düşük değerleri çıktısını almak için bir işlev, uygun bir imza `LocalMinima(fn : (Double -> Double), (left : Double, right : Double)) : Double` olabilecek bir arama aralığının bir giriş olarak sınırlarını gerektirebilir.
+  - Bir makine öğrenimi sınıflandırmasının bir türevi olan parametre kaydırma tekniğinin bir türevini tahmin etmeye yönelik bir işlem, hem kaydırılan hem de geriye doğru olmayan parametre vektörlerini giriş olarak alamaz. Şuna benzer bir giriş `(unshifted : Double[], shifted : Double[])` bu durumda uygun olabilir.
 
-- giriş ve çıkış tanımlama alanlarındaki öğeleri farklı işlevler ve işlemler arasında tutarlı bir **şekilde ✅.**
+- ✅Giriş ve çıkış tanımlama alanlarında öğeleri farklı işlevler ve işlemler arasında tutarlı bir **şekilde sıralayın.**
 
   *Örnekler*
-  - İki veya işlev ya da her biri bir döndürme açısı ve bir hedef qubit girişi olarak düşünüyorsa, bunların her giriş grubu için aynı sıralandıklarından emin olun. Diğer bir deyişle, `ApplyRotation(target : Qubit, angle : Double) : Unit is Adj + Ctl` ve `DelayedRotation(angle : Double, target : Qubit) : (Unit => Unit is Adj + Ctl)``ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl` ve `DelayedRotation(angle : Double, target : Qubit) : (Unit => Unit is Adj + Ctl)` tercih eder.
+  - İki veya işlev ya da her biri bir döndürme açısı ve bir hedef qubit girişi olarak düşünüyorsa, bunların her giriş grubu için aynı sıralandıklarından emin olun. Diğer bir deyişle, `ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl` ve `DelayedRotation(angle : Double, target : Qubit) : (Unit => Unit is Adj + Ctl)` ' `ApplyRotation(target : Qubit, angle : Double) : Unit is Adj + Ctl` yi `DelayedRotation(angle : Double, target : Qubit) : (Unit => Unit is Adj + Ctl)`tercih eder.
 
 **Anahtar ilkesi:** kısmi uygulama gibi Q\# dil özellikleriyle iyi çalışmak için işlevler ve işlemler tasarlayın.
 
-- ✅ **giriş** dizklardaki öğeleri, en yaygın olarak uygulanan girdilerin önce gerçekleşmesi (yani, kısmi uygulamanın currying 'e benzer şekilde davranması) için.
+- ✅Giriş tanımlama grupları içindeki öğeleri, en yaygın olarak uygulanan girdilerin önce gerçekleşmesi (yani, kısmi uygulamanın currying 'e benzer şekilde davranması) **için sıralayın.**
 
   *Örnekler*
-  - Kayan noktalı bir sayı ve bir qubit girişi olan bir işlem `ApplyRotation`, genellikle, `Qubit => Unit`türünde bir girişi bekleyen işlemlerle kullanım için ilk olarak kayan nokta girişi ile kısmen uygulanabilir. Bu nedenle, `operation ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl` imzası
+  - Kayan noktalı `ApplyRotation` bir sayı ve bir qubit girişi olan bir işlem, genellikle, türü `Qubit => Unit`bir girişi bekleyen işlemlerle kullanım için ilk olarak kayan nokta girişi ile kısmen uygulanabilir. Bu nedenle, bir imzası`operation ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl`
       kısmi uygulamayla en tutarlı şekilde çalışır.
   - Genellikle, bu kılavuz, tüm klasik verilerin giriş tanımlama grupları 'ndaki tüm qugeler öncesine yerleştirilmesi anlamına gelir, ancak iyi bir deneyim kullanır ve API 'nizin uygulamada nasıl çağrıldığını inceleyin.
 
@@ -126,78 +126,78 @@ Bu makalede bu ilkeler listelenmekte ve soru-cevap API 'Leri tasarlarken nasıl 
 
 **Anahtar ilkesi:** API 'leri daha açıklayıcı ve kullanımı kolay hale getirmenize yardımcı olması için Kullanıcı tanımlı türleri kullanın.
 
-- ✅ **uzun** ve/veya karmaşık türler için yararlı bir toplu değer sağlamak üzere yeni kullanıcı tanımlı türler tanıtılmaktadır.
+- ✅Uzun ve/veya karmaşık türler için yararlı bir Özet sağlamak üzere Kullanıcı tanımlı yeni türler **ortaya çıkarabilir.**
 
   *Örnekler*
-  - Üç qubit dizi girişi olan bir işlem türünün genellikle giriş olarak alındığı veya çıkış olarak döndürüldüğü durumlarda, `newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl)` gibi bir UDT sağlar
+  - Üç qubit dizi girişi olan bir işlem türünün genellikle giriş olarak alındığı veya çıkış olarak döndürüldüğü durumlarda, gibi bir UDT sağlayarak`newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl)`
       yararlı bir Özet sağlamaya yardımcı olabilir.
 
-- ✅ **,** belirli bir temel türün yalnızca belirli bir anlamda kullanılması gerektiğini belirtmek için yeni kullanıcı tanımlı türler tanıtılmalıdır.
+- ✅Belirli bir temel türün yalnızca belirli bir anlamda kullanılması gerektiğini göstermek için Kullanıcı tanımlı yeni **türler tanıtılmalıdır** .
 
   *Örnekler*
-  - Özellikle, klasik verileri bir hisse kaydına kodlayan bir işlem olarak yorumlanan bir işlem, Kullanıcı tanımlı bir tür `newtype InputEncoder = (Apply : (Qubit[] => Unit))`etiketlemek için uygun olabilir.
+  - Özellikle, klasik verileri bir hisse kaydına kodlayan bir işlem olarak yorumlanan bir işlem, Kullanıcı tanımlı bir türle `newtype InputEncoder = (Apply : (Qubit[] => Unit))`etiketlemek için uygun olabilir.
 
-- ✅ **gelecek** genişletilebilirlik için izin veren adlandırılmış öğelerle Yeni Kullanıcı tanımlı türler (örneğin, gelecekte ek adlandırılmış öğeler içerebilen bir sonuç yapısı) tanıtılmaktadır.
-
-  *Örnekler*
-  - Bir işlem `TrainModel` çok sayıda yapılandırma seçeneği ortaya çıkardığı zaman, bu seçenekleri yeni bir `TrainingOptions` UDT olarak ortaya çıkarmak ve yeni bir işlev sağlamak `DefaultTrainingOptions : Unit -> TrainingOptions` kullanıcıların, kitaplık geliştiricilerinin yeni UDT öğelerini uygun şekilde eklemesine izin verirken, bu seçenekleri bir veya daha fazla.
-
-- ✅ **,** Kullanıcı tanımlı yeni türler için adlandırılmış öğeleri, kullanıcıların doğru tanımlama grubu oluşturmayı bilmesini gerektirmek amacıyla tercih ediyor olarak bildirir.
+- ✅Sonraki genişletilebilirliğe izin veren adlandırılmış öğelerle Yeni Kullanıcı tanımlı türler (ör.: gelecekte ek adlandırılmış öğeler içerebilen bir sonuç yapısı **) tanıtılmalıdır** .
 
   *Örnekler*
-  - Kutupsal ayrıştırma sırasında karmaşık bir sayıyı temsil eden `newtype ComplexPolar = (Magnitude: Double, Argument: Double)` `newtype ComplexPolar = (Double, Double)`tercih edin.
+  - Bir işlem `TrainModel` çok sayıda yapılandırma seçeneği kullanıma sunarsa, bu seçeneklerin yeni `TrainingOptions` bir udt olarak kullanıma sunulmasına ve yeni bir işlev `DefaultTrainingOptions : Unit -> TrainingOptions` sağlamaya yönelik olarak, kitaplık geliştiricilerinin uygun şekilde yeni udt öğeleri eklemesine Izin verirken, kullanıcıların traıningoptions udt değerlerinde belirli adlandırılmış öğeleri geçersiz kılmasına izin verir.
+
+- ✅**DO** Kullanıcı tanımlı yeni türler için adlandırılmış öğeleri, kullanıcıların doğru demet oluşturmayı bilmesini gerektirmek için tercih edin.
+
+  *Örnekler*
+  - Kutupsal ayrıştırma içinde karmaşık bir sayıyı temsil ettiğinizde, tercih `newtype ComplexPolar = (Magnitude: Double, Argument: Double)` edilir. `newtype ComplexPolar = (Double, Double)`
 
 **Anahtar ilkesi:** bilişsel yükün azaltılması ve kullanıcının ek kavramlar ve terminoloji öğrenmesini gerektirmeyen yollarla Kullanıcı tanımlı türleri kullanın.
 
-- ⛔️, kullanıcının bir unsarmadan işlecini (`!`) sık kullanmasını gerektiren veya genellikle birden çok düzey sarmalama düzeyi gerektiren Kullanıcı tanımlı **türler sunmaz.** Olası risk azaltma stratejileri şunlardır:
+- ⛔️ **,** kullanıcının bir unsarmadan işlecini (`!`) sık kullanmasını gerektiren ya da genellikle birden çok düzey sarmalama düzeyi gerektiren Kullanıcı tanımlı türler sunmaz. Olası risk azaltma stratejileri şunlardır:
 
-  - Kullanıcı tanımlı bir türü tek bir öğe ile kullanıma sunmadığında, bu öğe için bir ad tanımlamayı göz önünde bulundurun. Örneğin, `newtype Encoder = (Qubit[] => Unit is Adj + Ctl)`için `newtype Encoder = (Apply : (Qubit[] => Unit is Adj + Ctl))` tercih edin.
+  - Kullanıcı tanımlı bir türü tek bir öğe ile kullanıma sunmadığında, bu öğe için bir ad tanımlamayı göz önünde bulundurun. Örneğin, tercih edin `newtype Encoder = (Apply : (Qubit[] => Unit is Adj + Ctl))` `newtype Encoder = (Qubit[] => Unit is Adj + Ctl)`.
 
   - Diğer işlevlerin ve işlemlerin "sarmalanmış" UDT örneklerini doğrudan kabul edebilmesini sağlama.
 
 - ⛔️ **,** ek ifade sağlamadan yerleşik türleri yinelenen yeni kullanıcı tanımlı türler sunmaz.
 
   *Örnekler*
-  - Bir UDT `newtype QubitRegister = Qubit[]` `Qubit[]`üzerinde ek ifade vermez ve bu nedenle, hiç bir avantaj olmadan kullanımı daha zordur.
-  - UDT `newtype LittleEndian = Qubit[]`, temel kaydın nasıl kullanılacağını ve yorumlanacağını belgeler ve bu nedenle temel türü üzerinde ek ifade sağlar.
+  - Bir UDT `newtype QubitRegister = Qubit[]` `Qubit[]`, daha fazla ifade sunmaz ve bu nedenle, hiç bir avantaj olmadan kullanımı zorlaştırır.
+  - Bir UDT `newtype LittleEndian = Qubit[]` , temel kaydın nasıl kullanılacağını ve yorumlanması gerektiğini belgelemektedir ve bu nedenle temel türü üzerinde ek ifade sağlar.
 
 - ⛔️ **,** kesinlikle gerekli olmadığı takdirde erişimci işlevleri sunmaz;   Bu durumda adlandırılmış öğeleri kesin olarak tercih edin.
 
   *Örnekler*
-  - Bir UDT `newtype Complex = (Double, Double)`oluştururken, `GetReal : Complex -> Double` ve `GetImag : Complex -> Double`işlevler sağlamak için tanımı `newtype Complex = (Real : Double, Imag : Double)` olarak değiştirmeyi tercih edin.
+  - Bir UDT `newtype Complex = (Double, Double)`'ye `newtype Complex = (Real : Double, Imag : Double)` giriş yaparken, işlevleri ve `GetReal : Complex -> Double` `GetImag : Complex -> Double`işlevlerine giriş yapmak için tanımını değiştirmeyi tercih edin.
 
 ## <a name="namespaces-and-organization"></a>Ad alanları ve kuruluş
 
 **Anahtar ilkesi:** her bir ad alanındaki işlevlerin, işlemlerin ve Kullanıcı tanımlı türlerin amacını açıkça ileten, tahmin edilen ve ad alanı adlarını seçin.
 
-- ad alanlarını `Publisher.Product.DomainArea`**olarak ✅.**
+- ✅**Ad alanlarını olarak** `Publisher.Product.DomainArea`adlandırın.
 
   *Örnekler*
-  - Hisse için Microsoft tarafından yayımlanan işlevler, işlemler ve UDTs, hisse geliştirme setinin hisse simülasyonu özelliğinin bir parçası olarak `Microsoft.Quantum.Simulation` ad alanına yerleştirilir.
-  - `Microsoft.Quantum.Math`, Microsoft tarafından, matematik etki alanı alanıyla ilgili olan hisse geliştirme setinin bir parçası olarak yayımlanan bir ad alanını temsil eder.
+  - Hisse geliştirme seti 'nin hisse bir parçası olarak Microsoft tarafından yayımlanan işlevler, işlemler ve UDTs 'ler `Microsoft.Quantum.Simulation` ad alanına yerleştirilir.
+  - `Microsoft.Quantum.Math`Microsoft tarafından, matematik etki alanı alanıyla ilgili olan hisse geliştirme setinin bir parçası olarak yayımlanan bir ad alanını temsil eder.
 
-- farklı sorun etki alanlarında kullanılması durumunda bile bu işlevselliği açıklayan bir ad alanına belirli işlevler için kullanılan işlemler, işlevler ve Kullanıcı tanımlı **türler ✅.**
+- ✅Belirli işlevler için kullanılan işlemler, işlevler ve Kullanıcı tanımlı türler, bu işlevselliği farklı sorun etki alanlarında kullanıldığında bile bu işlevselliği açıklayan bir ad **alanına yerleştirir.**
 
   *Örnekler*
-  - Hisse geliştirme setinin bir parçası olarak Microsoft tarafından yayımlanan durum hazırlama API 'Leri `Microsoft.Quantum.Preparation`içine yerleştirilir.
-  - Hisse geliştirme seti 'nin bir parçası olarak Microsoft tarafından yayımlanan hisse simülasyonu API 'Leri `Microsoft.Quantum.Simulation`içine yerleştirilir.
+  - Microsoft tarafından, hisse alım geliştirme seti 'nin bir parçası olarak yayımlanan durum hazırlama API 'Leri içine `Microsoft.Quantum.Preparation`yerleştirilir.
+  - Hisse geliştirme setinin bir parçası olarak Microsoft tarafından yayımlanan hisse simülasyonu API 'Leri içine `Microsoft.Quantum.Simulation`yerleştirilir.
 
-- ✅ **işlemleri** , işlevleri ve yalnızca belirli etki alanlarında kullanılan Kullanıcı tanımlı türler, yardımcı programları olan ad alanları için kullanılır. Gerekirse, etki alanına özgü her ad alanı içinde odaklanmış görevleri belirtmek için alt ad alanlarını kullanın.
+- ✅Yalnızca belirli etki alanlarında kullanılan işlemler, işlevler ve Kullanıcı tanımlı türler, yardımcı programı etki alanlarını gösteren ad **alanlarına yerleştirir.** Gerekirse, etki alanına özgü her ad alanı içinde odaklanmış görevleri belirtmek için alt ad alanlarını kullanın.
 
   *Örnekler*
   - Microsoft tarafından yayımlanan hisse makine öğrenimi kitaplığı, büyük ölçüde @"microsoft.quantum.machinelearning" ad alanına yerleştirildi, ancak örnek veri kümeleri @"microsoft.quantum.machinelearning.datasets" ad alanı tarafından sağlanır.
-  - Hisse uygun olarak Microsoft tarafından yayımlanan hisse uyumlu API 'Leri, hisse geliştirme seti 'nin bir parçası olarak `Microsoft.Quantum.Chemistry`yerleştirilmelidir. Ürdün--Wigner ayrıştırma işlevinin uygulamaya özgü işlevselliği `Microsoft.Quantum.Chemistry.JordanWigner`yerleştirilebilecek ve bu sayede hisse dili Mistry etki alanı alanının birincil arabiriminin uygulamalarla ilgilenmemesi sağlanır.
+  - Hisse uygun olarak Microsoft tarafından yayınlanan hisse uyumlu API 'Leri, hisse geliştirme seti 'nin bir parçası olarak içine `Microsoft.Quantum.Chemistry`yerleştirilmelidir. Ürdün--Wigner ayrıştırma işlevinin uygulamaya özgü işlevselliği ' de `Microsoft.Quantum.Chemistry.JordanWigner`yerleştirilebilecek ve bu sayede hisse dili Mistry etki alanı alanının birincil arabiriminin uygulamalarla ilgilenmemesi sağlanır.
 
 **Anahtar ilkesi:** Kullanıcılara sunulan API yüzeyine bilerek yönelik olarak ad alanlarını ve erişim değiştiricilerini kullanın ve API 'lerinizi uygulamayla ve test etme ile ilgili dahili ayrıntıları gizleyin.
 
-- Her ne kadar ✅ **, uygulanan** API ile aynı ad ALANıNA bir API uygulamak için gereken tüm işlevleri ve işlemleri, ancak bir KITAPLıĞıN ortak API yüzeyinin bir parçası olmadığını belirtmek için "özel" veya "iç" anahtar sözcükleriyle işaretlenir. Özel ve iç işlemleri ve işlevleri ortak callables 'den görsel açıdan ayırt etmek için alt çizgiyle başlayan bir ad kullanın (`_`).
+- ✅Makul her durumda **, uygulanan** API ile aynı ad ALANıNA bir API uygulamak için gereken tüm işlevleri ve işlemleri, ancak bir kitaplık IÇIN genel API yüzeyinin bir parçası olmadığını belirtmek için "özel" veya "iç" anahtar sözcükleriyle işaretlenir. Özel ve iç işlemleri ve işlevleri ortak callables 'den görsel olarak ayırt etmek için alt çizgi (`_`) ile başlayan bir ad kullanın.
 
   *Örnekler*
-  - `_Features` işlem adı, belirli bir ad alanı ve derleme için özel bir işlevi belirtir ve `internal` anahtar kelimesiyle birlikte gelmelidir.
+  - İşlem adı `_Features` , belirli bir ad alanı ve derleme için özel bir işlevi belirtir ve `internal` anahtar kelimesiyle birlikte gelmelidir.
 
-- belirli bir ad alanı için API 'YI uygulamak üzere çok sayıda özel işlev veya işlemin gerekli olduğu nadir bir durumda ✅, bunları, uygulanan ad alanıyla eşleşen ve `.Private`biten yeni bir ad **alanına yerleştirin.**
+- ✅Belirli bir ad alanı için API 'YI uygulamak üzere çok sayıda özel işlev veya işlemin gerekli olduğu nadir bir durumda, bunları uygulanan ve biten ad alanıyla eşleşen yeni bir ad **alanına yerleştirin.** `.Private`
 
-- ✅ **,** tüm birim testlerini test ve `.Tests`bitiş altındaki ad alanıyla eşleşen ad alanlarına yerleştirir.
+- ✅Tüm birim testlerini test ve bitiş altındaki ad alanıyla eşleşen ad **alanlarına yerleştirin.** `.Tests`
 
 ## <a name="naming-conventions-and-vocabulary"></a>Adlandırma kuralları ve sözlük
 
@@ -205,19 +205,19 @@ Bu makalede bu ilkeler listelenmekte ve soru-cevap API 'Leri tasarlarken nasıl 
 
 - ⛔️ Discriminatory veya exclusionary tanımlayıcı adlarını veya API belge açıklamalarındaki **terminolojiyi kullanmayın.**
 
-- ✅ **,** özellikle daha zor kavramlar için ilgili bağlam, örnek ve başvuruları sağlamak üzere API belge açıklamalarını kullanır.
+- ✅Özellikle daha zor kavramlar için ilgili bağlamı, örnekleri ve başvuruları sağlamak üzere API belge **açıklamalarını kullanın.**
 
 - ⛔️ gereksiz esoteric olan veya okumak için önemli hisse algoritmaları bilgisi gerektiren tanımlayıcı **adlarını kullanmayın.**
 
   *Örnekler*
   - "Genver yineleme" olarak "genonu yineleme" olarak tercih edin.
 
-- ✅ **,** bir çağrılabilir uygulamanın amaçlanan etkisini açıkça iletme, uygulama değil, işlem ve işlev adlarını seçin. Uygulamanın şu şekilde olabileceğini ve olması gerektiğini unutmayın
+- ✅Bir çağrılabilir uygulamanın amaçlanan etkisini açıkça iletişim kuran işlemler ve işlev adları ' **nı seçin.** Uygulamanın [API belge açıklamalarında](xref:microsoft.quantum.language.statements#documentation-comments)ve belgelendiğini unutmayın.
 
   *Örnekler*
   - "Hadamard test" için "tahmini örtüşme" yı tercih edin, ikincisi ise eski 'ın nasıl uygulandığını iletir.
 
-- ✅ **Tüm** Q\# API 'lerinde tutarlı bir şekilde sözcükleri kullanın:
+- ✅Tüm Q\# API 'lerinde tutarlı bir biçimde **sözcükler kullanın:**
 
   - **Eylemlerinin**
 
@@ -242,30 +242,30 @@ Bu makalede bu ilkeler listelenmekte ve soru-cevap API 'Leri tasarlarken nasıl 
       - @"microsoft.quantum.arithmetic.measurefxp"
       - @"microsoft.quantum.arithmetic.measureinteger"
 
-    - **Uygula**: bir veya daha fazla qubits 'e hisse veya işlem dizisi uygulayın ve bu qubits 'in durumunun tutarlı bir şekilde değişmesine neden olur. Bu fiil, Q\# terminolojinin en genel fiildir **ve daha** belirli bir fiil daha doğrudan ilgili olduğunda kullanılmamalıdır.
+    - **Uygula**: bir veya daha fazla qubits 'e hisse veya işlem dizisi uygulayın ve bu qubits 'in durumunun tutarlı bir şekilde değişmesine neden olur. Bu fiil, Q\# terminolojinin en genel fiildir ve daha belirli bir fiil daha doğrudan ilgili olduğunda kullanılmamalıdır. **SHOULD NOT BE**
 
   - **İsimler**:
 
-    - **Olgu**: bir hedef makinenin, ortamının veya makine qubits 'in durumunda değil, yalnızca kendi girdilerine bağlı olan bir Boolean koşulu. Bir onaylama işlemi aksine, olgu yalnızca söz konusu olgusuna belirtilen *değerlere* duyarlıdır. Örnek:
+    - **Olgu**: bir hedef makinenin, ortamının veya makine qubits 'in durumunda değil, yalnızca kendi girdilerine bağlı olan bir Boolean koşulu. Bir onaylama işlemi aksine, olgu yalnızca söz konusu olgusuna belirtilen *değerlere* duyarlıdır. Örneğin:
 
       *Örnekler*
       - @"microsoft.quantum.diagnostics.equalityfacti": iki tamsayı girişi hakkında bir eşitlik olgusu temsil eder; giriş olarak girilen tamsayılar birbirlerine eşittir ya da başka bir program durumundan bağımsız olarak değildir.
 
-    - **Seçenekler:** Bir işlev veya işleme "isteğe bağlı bağımsız değişkenler" gibi davranan, birkaç adlandırılmış öğe içeren bir UDT. Örnek:
+    - **Seçenekler:** Bir işlev veya işleme "isteğe bağlı bağımsız değişkenler" gibi davranan, birkaç adlandırılmış öğe içeren bir UDT. Örneğin:
 
       *Örnekler*
-      - @"microsoft.quantum.machinelearning.trainingoptions" UDT, öğrenme oranı, Mini toplu iş boyutu ve ML eğitimi için diğer yapılandırılabilir parametreler için adlandırılmış öğeler içerir.
+      - @"microsoft.quantum.machinelearning.trainingoptions" Udt, öğrenme oranı, Mini toplu iş boyutu ve ml eğitimi için diğer yapılandırılabilir parametreler için adlandırılmış öğeler içerir.
 
   - **Sıfatlar**:
 
-    - **Yeni**⛔️: Bu **sıfatıcı,** birçok programlama dilinde (ör.: C++, C#Java, TypeScript, PowerShell), kullanımıyla ilgili bir fiil olarak karışıklık oluşmasını önlemek için kullanılmamalıdır.
+    - **yeni**⛔️: Bu sıfatıcı, birçok programlama dilinde (ör.: C++, C#, Java, TypeScript, PowerShell), kullanımıyla ilgili bir fiil olarak karışıklık oluşmasını önlemek **için kullanılmamalıdır.**
 
   - **Ön pozisyonlar:** Bazı durumlarda, işlev ve işlem adlarında isimler ve fiillerin rollerini daha fazla netleştirmek veya netleştirmek için ön pozisyonlar kullanılabilir. Bununla birlikte, dikkatli ve tutarlı şekilde yapılması gerekir.
 
     - **Şöyle:** Bir işlevin giriş ve çıktısının aynı bilgileri temsil ettiğini, ancak çıktının özgün temsili yerine bu bilgileri bir *X* **olarak** temsil ettiğini temsil eder. Bu özellikle tür dönüştürme işlevleri için ortaktır.
 
       *Örnekler*
-      - `IntAsDouble(2)` hem giriş (`2`) hem de çıkışın (`2.0`) aynı bilgileri temsil ettiğini, ancak bunu yapmak için farklı Q\# veri türlerini kullandığını gösterir.
+      - `IntAsDouble(2)`hem Input (`2`) hem de Output (`2.0`) 'ın aynı bilgileri qualitatively temsil ettiğini, ancak bunu yapmak için farklı Q\# veri türlerini kullandığını gösterir.
 
     - **Kimden:** Tutarlılığı sağlamak için bu ön pozisyon, tür dönüştürme işlevlerini veya uygun **olduğu yerde başka** bir durumu belirtmek **için kullanılmamalıdır.**
 
