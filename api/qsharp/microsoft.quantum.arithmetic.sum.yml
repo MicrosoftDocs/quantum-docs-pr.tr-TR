@@ -3,8 +3,8 @@ uid: microsoft.quantum.arithmetic.sum
 name: Sum
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Ters çevrilebilir bir toplam kapısı uygular. Qubit `carryIn` ve `summand1` ve `summand2`ile kodlanmış iki summand bit olarak kodlanmış bir taşıma biti verildiğinde, qubit `summand1` bit düzeyinde xor `carryIn`, `summand2` ve `summand2`hesaplar.
-remarks: '`Carry` işleminin aksine, bu, yerine getirme bitini hesaplamaz.'
+summary: Ters çevrilebilir bir toplam kapısı uygular. `carryIn` , Qubit ve `summand1` ile kodlanmış iki summand bit ile kodlanmış bir birlikte `summand2` `carryIn` `summand1` `summand2` alma bit ve ve ' de ve, qubit `summand2`'in bit düzeyinde xor değeri hesaplar.
+remarks: '`Carry` İşlemin aksine, bu, yerine getirme bitini hesaplamaz.'
 syntax: 'operation Sum (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit) : Unit'
 input:
   content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit)'
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 125ee44b5debf5d8c83d7fb5176c4298bd702563
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d72ec97c01944b73ed459afcddbdfb3aa1cf3c49
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218405"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681046"

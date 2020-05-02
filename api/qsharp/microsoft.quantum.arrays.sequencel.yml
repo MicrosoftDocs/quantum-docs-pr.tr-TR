@@ -4,7 +4,7 @@ name: SequenceL
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Verilen bir aralıktaki tamsayıların dizisini alır.
-remarks: '`from` ve `to` arasındaki fark `Int` bir değere uymalıdır.'
+remarks: Ve `from` `to` arasındaki fark bir `Int` değere sığması gerekir.
 examples: >-
   ```qsharp
 
@@ -24,20 +24,20 @@ input:
     isPrimitive: true
     uid: BigInt
   - name: to
-    summary: '`from`değerinden küçük olmayan aralığın kapsamlı bir bitiş dizini.'
+    summary: Aralıktan küçük olmayan aralığın kapsamlı bir bitiş dizini `from`.
     isPrimitive: true
     uid: BigInt
 output:
   content: BigInt[]
   types:
-  - summary: '`from`, `from + 1`,... `to`sayı dizisini içeren bir dizi.'
+  - summary: Sayı `from`dizisini içeren bir dizi, `from + 1`,...,. `to`
     isArray: true
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 09d5798b0311285e671bc5ed1f9358c557a74946
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7271856286009cfd1651f19f69f932e79d79c2bf
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217997"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680806"

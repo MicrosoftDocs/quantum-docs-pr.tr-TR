@@ -7,10 +7,10 @@ summary: >-
   Yalnızca her iki denetim qubit de 1 durumundaysa, adjoint işlemini gerçekleştirmek için ölçüm kullanarak, belirli bir hedef qubit 'i tersine çevirir.
 
 
-  `target` ters çevir yalnızca her iki denetim de 1 ise, ancak `target` 0 durumunda olduğunu varsaymaktadır.  İşlem T-Count 4, T-Depth 2 ' dir ve yardımcı qubit gerektirmez ve bu nedenle `target` 0 olarak bilindiğinde CCNOT işlem için tercih edilebilir.  Bu işlemin adekçi, ölçüm tabanlıdır ve T kapısı gerektirmez.
+  `target` Ve yalnızca her iki denetim 1 ise, ancak 0 durumunda olduğunu varsaymaktadır `target` .  İşlem T-Count 4, T-Depth 2 ' dir ve yardımcı qubit gerektirmez ve bu nedenle, 0 olarak bilindiğinde CCNOT işlemi `target` tercih edilebilir.  Bu işlemin adekçi, ölçüm tabanlıdır ve T kapısı gerektirmez.
 
 
-  Bu işlemin denetlenen uygulaması, hiçbir yardımcı qubit, `2^c` `Rz` kapısı gerektirmez ve `c`, `ApplyAnd` işleminden iki denetim dahil olmak üzere genel denetim qubit sayısı olan derinlik için en iyi duruma getirilmemiştir.  Adjoint kontrollü uygulama `2^c - 1` `Rz` kapıları (adjoint olmayan işlemin boyutunun iki katına sahip olan), yardımcı qubit olmadan ve derinlemesine en iyi şekilde iyileştirilmeyeceğini gerektirir.
+  Bu işlemin `2^c` `Rz` denetlenen uygulaması, hiçbir yardımcı qubit, kapı gerektirmez ve bu `c` `ApplyAnd` işlem için en iyi duruma getirilmemiştir; burada işlemin iki denetimi de dahil olmak üzere genel denetim qugeler sayısıdır.  Adjoint kontrollü uygulama `2^c - 1` `Rz` , kapıları (adjoint olmayan işlemin boyutunun iki katı kadar bir açıda), yardımcı qubit olmadan ve derinlemesine en iyi duruma getirilmemelidir.
 syntax: 'operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
 references: >-
   - Cody Jones: "hata toleranslı Toffoli kapısı için önemli kurulumlarını", fiziksel. Rev. A 87, 022328, 2013 [Arxıv: 1212.5069](https://arxiv.org/abs/1212.5069) DOI: 10.1103/PhysRevA. 87.022328
@@ -42,9 +42,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7cde3dbbd33ff482609bbaaccb15e4c7b1bc536e
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 973f7f618154720396be0bb4a01b52d763ccdd1c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872997"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680534"

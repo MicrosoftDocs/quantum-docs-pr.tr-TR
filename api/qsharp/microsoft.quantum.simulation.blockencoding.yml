@@ -7,15 +7,15 @@ summary: >-
   Rastgele bir ilgilendiğiniz işlecin üst sol blokta kodlandığı bir Unitary temsil eder.
 
 
-  Diğer bir deyişle, bir `BlockEncoding`, sistem yazmacı üzerinde işlem yapan `s`, $U yardımcı durum $ \demet{0}_a $ 'a karşılık gelen sol üst blokta kodlandığı $H bir ilgi çekici operatör olan Unitary $ ' dir. Yani
+  Diğer bir deyişle, `BlockEncoding` , sistem kaydı `s` üzerinde işlem yapan, $H bir ilgi alanının rastgele işleci olan bir Unitary $U $, yardımcı durum $ \ayraç{0}_a $ ' ne karşılık gelen sol üst blokta kodlanır. Yani
 
 
-  $ $ \begin{hizalaması} (\bra{0}_a \ otimes I_s) U (\ayraç{0}_a \ otimes I_s) = H \ End{hizalaması} $ $.
+  $ $ \begin{hizalaması} (\bra{0}_a \otimes I_s) U (\ayraç{0}_a \otimes I_s) = H \end{hizalaması} $ $.
 syntax: newtype BlockEncoding = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 0991b1b54cdd8e908f60fc104edf588ae08e12e7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 400173be551747127198f8cee52390a2694dbfe4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066039"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681109"

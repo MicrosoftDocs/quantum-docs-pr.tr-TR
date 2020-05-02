@@ -4,13 +4,13 @@ name: Mapped
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Dizi öğeleri için tanımlanan bir dizi ve bir işlev verildiğinde, işlevin altındaki orijinal dizinin görüntülerinden oluşan yeni bir dizi döndürür.
-remarks: "İşlevi genel türler için tanımlanmıştır, yani bir dizi `'T[]` ve bir işlev olduğunda `mapper: 'T -> 'U` dizinin öğelerini eşleyebilir ve `'U[]`türünde yeni bir dizi üretebilir."
+remarks: "İşlevi genel türler için tanımlanmıştır, yani bir dizi `'T[]` ve bir işlev `mapper: 'T -> 'U` olduğunda dizinin öğelerini eşleyebilir ve yeni türde `'U[]`bir dizi üretebilirsiniz."
 syntax: "function Mapped (mapper : ('T -> 'U), array : 'T[]) : 'U[]"
 input:
   content: "(mapper : ('T -> 'U), array : 'T[])"
   types:
   - name: mapper
-    summary: Öğeleri eşlemek için kullanılan `'U` `'T` bir işlev.
+    summary: Öğeleri eşlemek için `'T` kullanılan `'U` öğesinden öğesine bir işlev.
     isFunction: true
     input:
       types:
@@ -21,26 +21,26 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: "`'T`bir dizi öğe."
+    summary: Öğesinden bir dizi öğe `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: "`mapper` işlevi tarafından eşlenen öğelerin dizi `'U[]`."
+  - summary: İşlev tarafından eşlenen öğelerin dizisi `'U[]` `mapper`
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: '`array` öğelerinin türü.'
+  summary: '`array` Öğelerin türü.'
 - uid: "'U"
-  summary: '`mapper` işlevinin sonuç türü.'
+  summary: '`mapper` İşlevin sonuç türü.'
 metadata:
-  ms.openlocfilehash: 3e9262d3d2b294ccfafac24b2b080b124c9e319c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 877899dad82374281090e189c727c2a662f12b7b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218133"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680942"
