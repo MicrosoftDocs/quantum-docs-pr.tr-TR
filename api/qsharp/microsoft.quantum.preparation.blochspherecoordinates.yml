@@ -7,21 +7,21 @@ summary: >-
   Tek qubit durumu için Bloch Sphere koordinatlarını hesaplar.
 
 
-  Verilen iki karmaşık sayı $a 0, qubit durumunu temsil eden a1 $, Bloch Sphere üzerinde koordinatları hesaplar $a 0 \ ayraç{0} + a1 \ ayraç{1} = r e ^ {it} (e ^ {-i \phi/2}\cos{(\ teta/2)} \tus{0}+ e ^ {ı \fi/2}\sin{(\ teta/2)} \tus{1}) $.
+  Bu iki karmaşık sayı $a, qubit durumunu temsil eden 0, a1 $, $a 0 \{0} ayraç + a1 \ Tus={1} r e ^ {it} (e ^ {-ı \phi/2}\cos{(\ teta/2)} \tus+{0}e ^ {ı \fi/2}\sin{(\ teta/2)} \ket{1}) $.
 syntax: 'function BlochSphereCoordinates (a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar) : (Microsoft.Quantum.Math.ComplexPolar, Double, Double)'
 input:
   content: '(a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar)'
   types:
   - name: a0
-    summary: Karmaşık katsayı devleti $ \demet{0}$.
+    summary: Karmaşık katsayı devleti $ \ket{0}$.
     uid: microsoft.quantum.math.complexpolar
   - name: a1
-    summary: Karmaşık katsayı devleti $ \demet{1}$.
+    summary: Karmaşık katsayı devleti $ \ket{1}$.
     uid: microsoft.quantum.math.complexpolar
 output:
   content: (Microsoft.Quantum.Math.ComplexPolar, Double, Double)
   types:
-  - summary: '`(ComplexPolar(r, t), phi, theta)`içeren bir tanımlama grubu.'
+  - summary: İçeren `(ComplexPolar(r, t), phi, theta)`bir tanımlama grubu.
     types:
     - uid: microsoft.quantum.math.complexpolar
     - isPrimitive: true
@@ -29,9 +29,9 @@ output:
     - isPrimitive: true
       uid: Double
 metadata:
-  ms.openlocfilehash: fc9dbef764c9d95de2183b9b093e00f20dfb0697
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 98d543849be177941a0c346c1de6b5b6930e783e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228146"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683235"
