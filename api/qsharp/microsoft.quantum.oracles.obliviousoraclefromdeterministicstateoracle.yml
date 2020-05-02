@@ -9,23 +9,23 @@ input:
   content: '(ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle)'
   types:
   - name: ancillaOracle
-    summary: '`DeterministicStateOracle` türündeki bir durum hazırlama Oracle $A $, kayıt $a $ üzerinde davranır.'
+    summary: Bir durum hazırlama Oracle $A $, kayıt `DeterministicStateOracle` $a $ üzerinde işlem gören tür $.
     uid: microsoft.quantum.oracles.deterministicstateoracle
   - name: signalOracle
-    summary: Kayıt $a, s $ üzerinde ortaklaşa `ObliviousOracle` bir Oracle $U $ türü.
+    summary: Kayıt $a, s $ üzerinde `ObliviousOracle` ortaklaşa çalışan bir Oracle $U $ türü.
     uid: microsoft.quantum.oracles.obliviousoracle
 output:
   content: Microsoft.Quantum.Oracles.ObliviousOracle
   types:
-  - summary: '`ObliviousOracle`türündeki bir Oracle $O = UA $.'
+  - summary: Bir Oracle $O = UA $ türü `ObliviousOracle`.
     uid: microsoft.quantum.oracles.obliviousoracle
 seeAlso:
 - microsoft.quantum.canon.deterministicstateoracle
 - microsoft.quantum.canon.obliviousoracle
 metadata:
-  ms.openlocfilehash: 2fc80a583ef8990b0a9043e4847d926f37b48b77
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 036d89ed2a9b3a0db2637964e4fabec7352a67d9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231019"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681238"

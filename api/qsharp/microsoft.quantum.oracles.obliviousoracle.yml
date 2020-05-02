@@ -12,16 +12,16 @@ summary: >-
 
   - Anyükleyen La, $O $ 'ın üzerinde davranması $a $.
 
-  - İstenen Unitary $U $ ' in uygulandığı $s $,\_$ \ket{t} durumunda $a $.
+  - İstenen Unitary $U $ ' in uygulandığı $s $, kayıt sonrasında $ \ket{t}\_a $ konumundaki $a $ konumunda seçili olan sistem kaydı.
 remarks: >-
-  Bu Oracle $ $ O\ket {s\_} tarafından tanımlanan a\ket {\ PSI}\_s = \lambdad\ket{t}\_a U \ket{\psı}\_s + \ sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cnoktalar $ $, ansınla State $ \ket{s}\_a $ to Her sistem durumunda Unitary $U $ ' i herhangi bir sistem durumu $ \ket{\psı}\_s $ ' a $ \ket{t} tarafından işaretlenen $ \lambda $ ' a bir $\_uygulayın.
+  Bu Oracle tarafından tanımlanan bu Oracle $ $ O\ket {\_s} a\ket {\\_PSI} s = \lambda\ket{t}\_a U \ket{\psı}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cnoktalara $ $, $ \ket{t}\_\_\_a $ tarafından işaretlenen temelinde her türlü sistem durumu $ \ket{\psi} s $, genlik $ \lambda $ olan herhangi bir sistem durumunda Unitary $U $ ' i uygulamak için ansınla State $ \ket{s} a $ üzerinde çalışır.
 
-  İlk parametre $ \ket{s}\_a $ 'ın qubit kayıt dizinidir. İkinci parametre $ \ket{\psı}\_s $ 'ın qubit kayıt dizinidir.
+  İlk parametre $ \ket{s}\_a $ 'ın qubit kayıt dizinidir. İkinci parametre, $ \ket{\psı}\_s $ ' nin qubit kayıt dizinidir.
 syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: f06527701dfad61843df66faca5dd265525b6aa6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9d7a799a9069e6d7eb3470d62322f803a68eb2e6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231070"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681252"
