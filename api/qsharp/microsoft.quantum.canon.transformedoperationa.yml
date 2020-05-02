@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: Bir işlev ve bir işlem verildiğinde, girişi verilen işlev tarafından dönüştürülen yeni bir işlem döndürür.
 examples: >-
-  Aşağıdaki çağrı, @"Microsoft.Quantum.Arithmetic.BigEndian" girdileri için tasarlanan bir işlemi @"Microsoft.Quantum.Arithmetic.LittleEndian"türü girdileri kabul eden bir işleme dönüştürmek için @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" kullanır:
+  Aşağıdaki çağrı, giriş @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" için @"Microsoft.Quantum.Arithmetic.BigEndian" tasarlanan bir işlemi, türü @"Microsoft.Quantum.Arithmetic.LittleEndian"girdileri kabul eden bir işleme dönüştürmek için kullanır:
 
 
   ```qsharp
@@ -44,7 +44,7 @@ input:
 output:
   content: ('U => Unit is Adj)
   types:
-  - summary: Yeni bir işlem olan tbat, girişiyle birlikte `fn` çağırır ve sonra ortaya çıkan çıktıyı `op`geçirir.
+  - summary: Yeni bir işlem olan tbat `fn` , girişiyle birlikte çağrı yapar ve sonuç çıktısını öğesine `op`geçirir.
     isOperation: true
     input:
       types:
@@ -63,9 +63,9 @@ seeAlso:
 - applywithinputtransformation
 - compose
 metadata:
-  ms.openlocfilehash: ba4c22476bb1784a42ecb049fa0470204e81fa9e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f4cb96f3dac9c540131f04cd1b24449f78a26ef2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217079"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678053"

@@ -3,18 +3,18 @@ uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
 name: AssertAllZeroWithinTolerance
 type: operation
 namespace: Microsoft.Quantum.Diagnostics
-summary: Verilen qubits 'in, belirli bir toleranstan kadar $ \gre{0}$ durumunda olduğunu onaylayın.
+summary: Verilen qubits 'in, belirli bir toleranstan kadar ${0}\gre$ durumunda olduğu onay.
 syntax: 'operation AssertAllZeroWithinTolerance (qubits : Qubit[], tolerance : Double) : Unit'
 input:
   content: '(qubits : Qubit[], tolerance : Double)'
   types:
   - name: qubits
-    summary: $ \Gre{0}$ durumunda olmak üzere onaylanan qubits.
+    summary: $ \ Ayraç{0}$ durumunda olmak üzere onaylanan qubits.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: tolerance
-    summary: Durumun $ \demet{0}$ durumunda olması gereken doğruluk
+    summary: Durumun $ \ket{0}$ durumunda olması gereken doğruluk
     isPrimitive: true
     uid: Double
 output:
@@ -28,9 +28,9 @@ functors:
 seeAlso:
 - assertqubitwithintolerance
 metadata:
-  ms.openlocfilehash: 0e3b560d08077bb353147d98a921a2c2ca3ae202
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ae55998333d6bc3a4d8b41341842147d80dcd183
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066549"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677288"
