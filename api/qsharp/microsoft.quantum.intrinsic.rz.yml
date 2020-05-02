@@ -7,7 +7,7 @@ summary: >-
   $Z $-ekseni ile verilen bir açıda bir döndürme uygular.
 
 
-  \begin{hizalaması} R_z (\teta) \mathrel{: =} e ^ {-i \teta \ sigma_z/2} = \begin{bmatrix} e ^ {-i \teta/2} & 0 \\\\ 0 & e ^ {ı \ teta/2} \end{bmatrix}.
+  \begin{hizalaması} R_z (\teta) \mathrel{: =} e ^ {-i \teta \ sigma_z/2} = \begin{bmatrix} e ^ {-i \teta/2} & 0 \\ \\ 0 & e ^ {ı \ teta/2} \end{bmatrix}.
 
   \end{hizalaması}
 remarks: >-
@@ -40,9 +40,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 3a1655e226a1f7ac9dafc2b7928de87ee2bd1173
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8ab20bd25777abfcdef4ce79b112173d7de9ba4c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216382"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674109"

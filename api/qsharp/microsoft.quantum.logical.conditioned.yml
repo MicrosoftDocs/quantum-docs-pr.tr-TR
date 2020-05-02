@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Logical
 summary: Boole koşulunun değerine bağlı olarak iki değerden birini döndürür.
 remarks: >-
-  `?|` işlecinin aksine, bu işlev kısa devre değildir, her iki giriş de tam olarak değerlendirilir.
+  `?|` İşlecin aksine, bu işlev kısa devre değildir, her iki giriş de tam olarak değerlendirilir.
 
 
   En fazla kısa devre davranýþý, şunlar eşdeğerdir:
@@ -27,23 +27,23 @@ input:
     isPrimitive: true
     uid: Bool
   - name: ifTrue
-    summary: '`condition` `true`döndürülecek değer.'
+    summary: Olduğunda `condition` döndürülecek değer `true`.
     uid: "'T"
     isLocal: true
   - name: ifFalse
-    summary: '`condition` `false`döndürülecek değer.'
+    summary: Olduğunda `condition` döndürülecek değer `false`.
     uid: "'T"
     isLocal: true
 output:
   content: "'T"
   types:
-  - summary: '`condition` `true``ifTrue` ve aksi halde `ifFalse`.'
+  - summary: '`ifTrue``condition` `ifFalse` ise ve aksi `true`durumda.'
     uid: "'T"
     isLocal: true
 metadata:
-  ms.openlocfilehash: f26e540b181ce405125dbf80cd97c3e177ad9531
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c5a255fe0434c7dfc9bf49f1a1c9c6be03cd8055
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233348"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674071"
