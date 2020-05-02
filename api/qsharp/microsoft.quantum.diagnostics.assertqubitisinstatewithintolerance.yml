@@ -7,7 +7,7 @@ summary: >-
   Beklenen durumda bir qubitin olduğunu onaylar.
 
 
-  `expected` karmaşık bir vektörü temsil eder, $ \ket{\psı} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+  `expected`karmaşık bir vektörü temsil eder, $ \ket{\psı} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
 
   $A $, $b $ her birini temsil eden başlıkların ilk öğesi, karmaşık sayının gerçek bölümüdür; ikinci tane ise sanal parçadır.
 
@@ -37,7 +37,7 @@ remarks: >-
   ```
 
 
-  Tolerans, $ \langta\psı | \psı\rangle = x\_1 I + x\_2 X + x\_3 Y + x\_4 Z $ ve gerçek vektör (Y ₂) tarafından tanımlanan 3 boyutlu gerçek vektör (x ₂, x ₃, x ₄) arasında bulunan $L\_{\infty} $ uzaklığı. y ₃, y ₄), ρ = Y ₁ I + y ₂ X + y ₃ Y + y ₄ Z tarafından tanımlanır. burada ρ, kaydın durumuna karşılık gelen yoğunluk matrisi.
+  Tolerans, $ \langta\psi |\_\psı\rangle = x\_1 I + x\_2 x + x\_3 Y + x\_4 Z $ ve gerçek vektör (Y ₂) tarafından tanımlanan 3 boyutlu gerçek vektör (x ₂, x ₃, x ₄) arasındaki {\infty} $ uzaklığın $L. y ₃, y ₄), ρ = Y ₁ I + y ₂ x + y ₃ Y + y ₄ Z tarafından tanımlanır. burada ρ, kaydın durumuna karşılık gelen yoğunluk matrisi.
 
   Bu yalnızca, tr (ρ) ve tr (| ψ ⟩ ⟨ ψ |) öğelerinin hem 1 hem de (örn. x ₁ = 1/2, y ₁ = 1/2) olduğu varsayımıyla geçerlidir.
 
@@ -60,7 +60,7 @@ input:
   content: '(expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double)'
   types:
   - name: expected
-    summary: Sırasıyla $ \tus{0}$ ve $ \tus{1}$ gibi karmaşık yükseltilmiş tudes bekleniyordu.
+    summary: Sırasıyla $ \ket{0}$ ve $ \ket{1}$ için karmaşık yükseltilmiş tudes bekleniyordu.
     types:
     - uid: microsoft.quantum.math.complex
     - uid: microsoft.quantum.math.complex
@@ -81,9 +81,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 8b43bac19173c5ae5a11ff6879a03209c32e7c76
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 77d28c122a44f39924242dedb6bd6163974e18c1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227126"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82656596"

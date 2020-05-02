@@ -7,10 +7,10 @@ summary: Geçerli hedef makinenin durumunu döker.
 remarks: >-
   Bu yöntem, hedef makinenin geçerli durumu hakkındaki bilgilerin bir dosyaya veya başka bir konuma dökümünü sağlar.
 
-  Oluşturulan gerçek bilgiler ve `location` semantiği her bir hedef makineye özeldir. Ancak, konum olarak boş bir kayıt düzeni (`()`) veya yalnızca `location` parametresini atlayarak, genellikle çıktıyı konsola oluşturma anlamına gelir.
+  Oluşturulan gerçek bilgiler ve semantiği her bir `location` hedef makineye özeldir. Ancak, bir konum (`()`) olarak boş bir tanımlama grubu sağlamak ya da yalnızca `location` parametresi atlanırsa, genellikle çıktıyı konsola oluşturma anlamına gelir.
 
 
-  Bu yöntem, hisse geliştirme seti 'nin bir parçası olarak dağıtılan yerel tam durum simülatörü için, her bir öğenin şunu gösterdiği bir tek boyutlu karmaşık sayı dizisi olarak Wave işlevini yazacağı bir dosyanın yolunu içeren bir dize bekler. karşılık gelen durumu ölçme olasılığını artırın.
+  Bu yöntem, hisse geliştirme seti 'nin bir parçası olarak dağıtılan yerel tam durum simülatörü için, her bir öğenin karşılık gelen durumu ölçme olasılığının uyumlu olduğunu gösterdiği bir dosyanın yolunu içeren bir dosyanın yolunu içeren bir dize bekler.
 syntax: "function DumpMachine (location : 'T) : Unit"
 input:
   content: "(location : 'T)"
@@ -22,13 +22,13 @@ input:
 output:
   content: Unit
   types:
-  - summary: Hiçbiri.
+  - summary: Yok.
     isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 7d268127c56dc5554e7c99494ae90b2bc14b336c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7511e0bdded689c84cb90794860dd79e48950414
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227075"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82656566"
