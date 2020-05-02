@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.carry
 name: Carry
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Ters bir taşıma geçidi uygular. Qubit `carryIn` ve `summand1` ve `summand2`ile kodlanmış iki summand bit olarak kodlanmış bir taşıma biti verildiğinde, qubit `summand1` bit düzeyinde xor `carryIn`, `summand2` ve `summand2` hesaplar ve XORed, qubit `carryOut`.
+summary: Ters bir taşıma geçidi uygular. , Qubit `carryIn` `summand1` ve ile `summand2`kodlanmış iki summand bit olarak kodlanmış bir taşıma bit değeri verildiğinden ve bit düzeyinde xor, qubit `summand1` `summand2` `summand2` ve XORed ise qubit `carryOut`ile `carryIn`birlikte kullanılır.
 syntax: 'operation Carry (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit) : Unit'
 input:
   content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit)'
@@ -33,9 +33,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 6736bc62db7d8ac1952bf74617bd8764702bd8b3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3fa18b56fb242e76a88a23af02b3ebe7e5cc57d4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221346"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679845"

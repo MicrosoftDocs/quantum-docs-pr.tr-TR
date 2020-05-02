@@ -7,10 +7,10 @@ summary: >-
   Bir klasik tamsayı ile bir qubits yazmacı ile temsil edilen bir tamsayı arasında bit düzeyinde XOR işlemi uygular.
 
 
-  Bir tamsayının 1 bite göre küçük endian kaydındaki qubits 'e `X` işlemler uygular.
+  Bir `X` tamsayının 1 bite göre küçük endian kaydındaki işlemleri qubits 'e uygular.
 
 
-  `value` bir ' a göre belirlememize ve `InPlaceXorLE` `target`bir işaretsiz tamsayı olmasına izin verin: $ \ket{y}\rightarrow \ket{y\oplus a} $, burada $ \oplus $ bit düzeyinde dışlamalı veya işleçtir.
+  Bir ' a `value` göre belirlememize ve ' de `target`bir işaretsiz tamsayı olmasına izin verin, `InPlaceXorLE` ardından şu eşleme tarafından verilen bir işlem gerçekleştirir: $ \ket{y}\rightarrow \ket{y\oplus a} $, burada $ \oplus $ bit düzeyinde dışlamalı veya işleçtir.
 syntax: 'operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -20,7 +20,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Küçük endian kodlamasıyla `value` depolamak için kullanılan bir hisse kayıt.
+    summary: Küçük endian kodlamasıyla depolamak `value` için kullanılan bir hisse kayıt.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9d3d837d92537cc5d51a80e8e1c83c230b7acc28
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 27568274d343242f3b3bd0eef8de6e48d546de1f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871184"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679907"

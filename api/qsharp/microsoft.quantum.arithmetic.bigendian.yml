@@ -3,13 +3,13 @@ uid: microsoft.quantum.arithmetic.bigendian
 name: BigEndian
 type: newtype
 namespace: Microsoft.Quantum.Arithmetic
-summary: İşaretsiz bir tamsayıyı büyük endian düzeninde kodlayan kayıt. Index `0` ile qubit, işaretsiz tamsayının en yüksek bitini kodluyor.
-remarks: Belgelerde `BE` olarak `BigEndian` kısaldık.
+summary: İşaretsiz bir tamsayıyı büyük endian düzeninde kodlayan kayıt. Index `0` ile qubit, işaretsiz bir tamsayının en yüksek bitini kodluyor.
+remarks: Belgelerde olduğu `BigEndian` gibi `BE` kısaldık.
 syntax: newtype BigEndian = Qubit[];
 metadata:
-  ms.openlocfilehash: a4d96ab9299d983583949de5ae8eebba64a189a4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9c59021955710a182a2315d4e848016f8d13d6fa
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221363"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679868"

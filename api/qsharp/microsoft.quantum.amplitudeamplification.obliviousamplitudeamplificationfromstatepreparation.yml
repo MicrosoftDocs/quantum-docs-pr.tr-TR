@@ -5,13 +5,13 @@ type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: Yükümlülüğü, kısmi yansıtımları için Oracles tarafından bir şekilde geliştirilmiştir.
 remarks: >-
-  Bu, yardımcı başlangıç ve hedef durumlarının biçimi `AmpAmpObliviousByReflectionPhases`kıyasla daha sıkı koşullar uygular.
+  Bu, yardımcı başlangıç ve hedef durumlarının biçimine kıyasla daha sıkı koşullar uygular `AmpAmpObliviousByReflectionPhases`.
 
-  $A \tus{0}\_f\ket{0}\_A = \ket{\Text{start}}\_{FA} $, işlem tabanlı $ \demet\_{0}f\tus\_$ 'ten yardımcı başlangıç durumu $ \ket{\Text{start}}{0}{FA} $ öğesini hazırlar.
+  {0}\_$A \tusf\demet{0}\_A = \ket{\Text{Start}}\_{FA} $, yardımcı başlangıç durumunu $ \ket{\Text{Start}}\_{FA} $ değerini hesaplama tabanlı $ \tusf\ket{0}\_{0}$ ' nden hazırlar.
 
-  Hedef durumunun $ \ket{1}\_f $ tarafından işaretlenmiş olduğu varsayılır.
+  Hedef durumun $ \ket{1}\_f $ tarafından işaretlenmiş olduğu varsayılır.
 
-  \Begin{hizalaması} O\ket {\ Text {start}}\_{FA} \ket{\psı}\_s = \lambdad\ket{1}\_f\ket {\ Text {þey}}\_a\ket olduğu varsayılır {\ Text {Target}}\_s U \ket{\psı}\_s + \sqrt{1-| \lambda | ^ 2} \tus{0}\_f\cnoktalar, \end{hizalaması}, bazı Unitary $U $ için.
+  \Begin{hizalaması} o\ket\_{\ Text {start}} {FA} \ket{\psı}\_s = \lambdad\tusf\tus{{1}\_\ Text {bir}}\_a\tus{\ Text {Target}}\_s U \ket{\psı}\_s + \sqrt{1-| \lambda | ^ 2} \tusf\cnoktalar{0}\_, \end{hizalaması}, bazı Unitary $U $.
 syntax: 'function ObliviousAmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int)'
@@ -23,7 +23,7 @@ input:
     summary: Yardımcı başlangıç durumunu hazırlayan Unitary Oracle $A $
     uid: microsoft.quantum.oracles.deterministicstateoracle
   - name: signalOracle
-    summary: Ortak ve sistem kaydı üzerinde birlikte çalışan `ObliviousOracle` türündeki Unitary Oracle $O $
+    summary: Ortak ve sistem kaydı üzerinde birlikte çalışan `ObliviousOracle` türdeki Unitary Oracle $O $
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: idxFlagQubit
     summary: Tek qubit bayrak kaydına yönelik Dizin
@@ -50,9 +50,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: fa44068c55a1bb92f8827095889f9c3b4d6f1011
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: adc6f48a5d335eb9dc92dcb13425de900b5c8563
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872453"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680134"

@@ -9,7 +9,7 @@ input:
   content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: coefficients
-    summary: Polinom $P (x) = a_0 + A_1 x + \ cnoktalar + a_d x ^ d $ için bir çift dizi olarak polinom 'in katsayısıdır; Yani, dizi $ [a_0, A_1,..., a_d] $.
+    summary: Polinom $P (x) = a_0 + a_1 x + \cnoktalar + a_d x ^ d $ için dizi $ [a_0, a_1,..., a_d] $ şeklinde polinom 'un katsayısıdır.
     isArray: true
     isPrimitive: true
     uid: Double
@@ -17,7 +17,7 @@ input:
     summary: Polinom 'un değerlendirileceği sabit noktalı sayı girin.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: $P (x) $ ' i barındıracak olan çıkış sabit noktası numarası. Başlangıçta $ \demet{0}$ durumunda olmalıdır.
+    summary: $P (x) $ ' i barındıracak olan çıkış sabit noktası numarası. Başlangıçta $ \ket{0}$ durumunda olmalıdır.
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 8a3531860001c09fa3dadd5ba4db276f0a20d06a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7907702d8919060c630ce410d1cfcb995b4ed37a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221006"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679636"
