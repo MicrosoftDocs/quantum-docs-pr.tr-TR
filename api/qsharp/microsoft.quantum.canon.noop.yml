@@ -11,10 +11,10 @@ summary: >-
 
   Bu, bir işlem türü girişi beklendiğinde yararlı olabilir, ancak hiçbir işlem gerçekleştirilmez.
 
-  Örneğin, belirli bir hata düzeltmesi sendromu herhangi bir hata oluşmadığını gösteriyorsa, `NoOp<Qubit[]>` doğru kurtarma yordamı olabilir.
+  Örneğin, belirli bir hata düzeltmesi sendromu hata oluştuğunu gösteriyorsa, `NoOp<Qubit[]>` doğru kurtarma yordamı olabilir.
 
-  Benzer şekilde, bir işlem giriş olarak bir durum hazırlama yordamı beklediğinde, $ \ket{0 \cnoktalar 0} $ durumunu hazırlamak için `NoOp<Qubit[]>` kullanılabilir.
-remarks: Neredeyse tüm durumlarda `NoOp` için tür parametresinin açıkça belirtilmesi gerekir. Örneğin, `NoOp<Qubit>` <xref:microsoft.quantum.intrinsic.i>aynıdır.
+  Benzer şekilde, bir işlem giriş olarak bir durum hazırlama yordamı beklediğinde `NoOp<Qubit[]>` , $ \ket{0 \cnoktalar 0} $ durumunu hazırlamak için kullanılabilir.
+remarks: Neredeyse her durumda, için `NoOp` tür parametresinin açıkça belirtilmesi gerekir. Örneğin, `NoOp<Qubit>` ile <xref:microsoft.quantum.intrinsic.i>aynıdır.
 syntax: "operation NoOp (input : 'T) : Unit"
 input:
   content: "(input : 'T)"
@@ -34,9 +34,9 @@ functors:
 seeAlso:
 - microsoft.quantum.intrinsic.i
 metadata:
-  ms.openlocfilehash: 8752eb93c1fba59065518ffd4665ea6f110ce1cc
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 74c85340e065929feabb81d7e97339f80255c0f6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73222689"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678716"
