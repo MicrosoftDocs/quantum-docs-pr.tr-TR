@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Belirli bir koşulu karşılayan dizideki ilk öğenin ilk dizinini döndürür. Böyle bir öğe yoksa-1 döndürür.
 examples: >-
-  `IsEven : Int -> Bool` `true` döndüren ve yalnızca girdisi bile olan bir işlev olduğunu varsayalım. Daha sonra, bu, bir dizideki ilk çift öğeyi bulmak için `IndexOf` ile birlikte kullanılabilir:
+  `IsEven : Int -> Bool` Öğesinin ve yalnızca girdisi çift ise, `true` döndüren bir işlev olduğunu varsayalım. Bu durumda, bir dizideki ilk çift `IndexOf` öğeyi bulmak için ile kullanılabilir:
 
 
   ```Q#
@@ -38,13 +38,13 @@ input:
 output:
   content: Int
   types:
-  - summary: En küçük Dizin `idx` `predicate(arr[idx])` true, ya da böyle bir öğe yoksa-1.
+  - summary: En küçük Dizin `idx` ya da böyle `predicate(arr[idx])` bir öğe yoksa-1.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 6f7fee40a558e7bb17b94c9dd58656c6f34ceac8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6fb95357096751e53f601a9c855ff656e2dd1b34
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218201"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680997"

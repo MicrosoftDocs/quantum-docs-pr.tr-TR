@@ -4,7 +4,7 @@ name: XBits
 type: function
 namespace: Microsoft.Quantum.Bitwise
 summary: Pauli işleçleri dizisinin X bitlerini temsil eden bir tamsayı döndürür.
-remarks: "`paulis` dizi uzunluğu 63 ' den büyükse işlev oluşturulur."
+remarks: "`paulis` Dizi uzunluğu 63 ' den büyükse işlev oluşturulur."
 syntax: 'function XBits (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -17,15 +17,15 @@ input:
 output:
   content: Int
   types:
-  - summary: İkili temsili $ (P_{62}\,P_{61}\,\noktalar\,p_0) $ olan bir tamsayı $x $, $0 burada $p `paulis[i]` veya `PauliI`, `PauliZ` ise $p _i = $1 ise `paulis[i]` veya `PauliY`.
+  - summary: "{62}\\,İkili temsili $ (P_ P_{61}\\,\\noktalar\\,p_0) $ olan bir tamsayı $x $, burada $p _i = $0 `paulis[i]` `PauliI` `PauliZ` , veya ise $p = $1 `paulis[i]` `PauliX` ' dir. `PauliY`"
     isPrimitive: true
     uid: Int
 seeAlso:
 - zbits
 metadata:
-  ms.openlocfilehash: 9319e664aaa7af3ea500bd5bee78c09a92d9573b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0dccf94d895984b3661790b44f10455fce35331d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217742"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680576"

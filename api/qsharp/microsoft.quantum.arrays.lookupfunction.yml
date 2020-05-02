@@ -4,7 +4,7 @@ name: LookupFunction
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Dizi verildiğinde, bu dizinin öğelerini döndüren bir işlev döndürür.
-remarks: Bu işlev, bağımsız değişkenleri olarak `Int -> 'T` işlevleri alan işlevler ve işlemlerle birlikte çalışmak için genellikle yararlıdır. Bu, örneğin, bir diziyi belleğin tamamına kaydetme gereksinimini ortadan kaldırmak için işlevin kullanıldığı Oluşturucu temsili kitaplığı içinde yaygın olarak kullanılır.
+remarks: Bu işlev, işlevleri bağımsız değişkenleri olarak alan `Int -> 'T` işlevler ve işlemlerle birlikte çalışmak için genellikle faydalıdır. Bu, örneğin, bir diziyi belleğin tamamına kaydetme gereksinimini ortadan kaldırmak için işlevin kullanıldığı Oluşturucu temsili kitaplığı içinde yaygın olarak kullanılır.
 syntax: "function LookupFunction (array : 'T[]) : (Int -> 'T)"
 input:
   content: "(array : 'T[])"
@@ -17,7 +17,7 @@ input:
 output:
   content: (Int -> 'T)
   types:
-  - summary: Bir işlev `f` `f(idx) == f[idx]`.
+  - summary: Bunun gibi `f` bir işlev `f(idx) == f[idx]`.
     isFunction: true
     input:
       types:
@@ -31,9 +31,9 @@ typeParameters:
 - uid: "'T"
   summary: Arama işlevi olarak temsil edilen dizinin öğelerinin türü.
 metadata:
-  ms.openlocfilehash: b4f509de7137377465f1e76e59a04abfd9a22fd1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4d911a3952c273e050c75e4d785e6812d54f5fa1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218116"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680963"

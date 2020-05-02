@@ -1,36 +1,36 @@
 ---
-title: 'Q # + Python ile geliştirme'
+title: Q# ve Python ile geliştirme
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 1e40c2dddeaf4fad41693c976493f10fffffa139
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: e1b8a0c68b3ac0c059c6de6e478593321764ff88
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831010"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82680156"
 ---
-# <a name="develop-with-q--python"></a>Q # + Python ile geliştirme
+# <a name="develop-with-q--python"></a>Q# ve Python ile geliştirme
 
 Q # işlemlerini çağırmak için Python konak programları geliştirmek üzere QDK 'yi yükler.
 
-1. Önkoşullar
+1. Ön koşullar
 
-    - [Python](https://www.python.org/downloads/) 3.6 veya üzeri
+    - [Python](https://www.python.org/downloads/) 3,6 veya üzeri
     - [PIP](https://pip.pypa.io/en/stable/installing) Python paket yöneticisi
     - [.NET Core SDK 3,1 veya üzeri](https://www.microsoft.com/net/download)
 
 
-1. Q # ve Python arasında birlikte çalışabilirliğine izin veren bir Python paketi olan `qsharp` paketini yükler.
+1. Q # `qsharp` ve Python arasında birlikte çalışabilirliğine izin veren bir Python paketi olan paketini yükler.
 
     ```bash
     pip install qsharp
     ```
 
-1. Q # işlemlerini derlemek ve yürütmek için temel işlevselliği sağlayan Jupileter ve Python tarafından kullanılan bir çekirdek `iqsharp`yükler.
+1. Q # işlemlerini derlemek ve yürütmek için temel işlevselliği sağlayan Jupileter ve Python tarafından kullanılan bir çekirdek olan IQ # öğesini yükler.
 
     ```bash
     dotnet tool install -g Microsoft.Quantum.IQSharp
