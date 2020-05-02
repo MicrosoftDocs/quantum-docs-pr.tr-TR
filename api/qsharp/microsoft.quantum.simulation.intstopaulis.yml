@@ -9,21 +9,21 @@ input:
   content: '(ints : Int[])'
   types:
   - name: ints
-    summary: Aralık içindeki tamsayılar dizisi Pauli işleçlerine dönüştürülecek `0..3`.
+    summary: Pauli işleçlerine dönüştürülecek aralıktaki `0..3` tamsayılar dizisi.
     isArray: true
     isPrimitive: true
     uid: Int
 output:
   content: Pauli[]
   types:
-  - summary: Pauli işleçlerinin dizi `paulis`, `paulis[idxPauli]` `[PauliI, PauliX, PauliY, PauliZ]` tarafından verilen `ints[idxPauli]`öğesine eşit olan `ints` aynı uzunlukta `Pauli[]`.
+  - summary: Pauli `paulis` işleçlerinin `Pauli[]` `ints` bir dizisi, tarafından `paulis[idxPauli]` `[PauliI, PauliX, PauliY, PauliZ]` `ints[idxPauli]`verilen öğesine eşit olan şekilde aynı uzunluktadır.
     isArray: true
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 407ad1481c220f390fffb5f1b59f0968d6d6570c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1159e3db02663b0588d12ea9d297e055be84ac4a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066991"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682612"

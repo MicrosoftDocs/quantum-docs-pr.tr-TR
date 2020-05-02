@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Environment
 summary: >-
   Şu anda ödünç alma için kullanılabilen qubits sayısını döndürür.
 
-  Buna kullanılmayan qubits dahildir; diğer bir deyişle, `GetQubitsAvailableToUse`tarafından döndürülen qubits 'i de içerir.
+  Buna kullanılmayan qubits dahildir; diğer bir deyişle, tarafından `GetQubitsAvailableToUse`döndürülen qubits 'i de içerir.
 syntax: 'operation GetQubitsAvailableToBorrow () : Int'
 input:
   content: ()
@@ -15,17 +15,17 @@ output:
   content: Int
   types:
   - summary: >-
-      Bir `borrowing` bildiriminde ayrılabilecek qubits sayısı.
+      Bir `borrowing` bildirimde ayrılabilen qubit sayısı.
 
-      Kullanılan hedef makine bu bilgileri sağlamıyorsa `-1` döndürülür.
+      Kullanılan hedef makine bu bilgileri sağlamıyorsa, `-1` döndürülür.
     isPrimitive: true
     uid: Int
 seeAlso:
 - getqubitsavailabletouse
 metadata:
-  ms.openlocfilehash: c0caf866ad9a8773aa11ee7c6951ca3acc60cbaa
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 99dd2afb66c334b112a2ee511b0437281da6b888
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230492"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682405"
