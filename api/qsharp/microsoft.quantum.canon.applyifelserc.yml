@@ -7,17 +7,17 @@ summary: >-
   Klasik sonucun değerine bağlı olarak, iki denetlenebilir işlemden birini uygular.
 
 
-  Bir sonuç `result`verildiğinde, `result` `Zero`ve `oneOp(oneInput)` `result == One`geçerli olduğunda `zeroOp` işlem `zeroInput` giriş olarak uygular.
+  `result`Sonuç `zeroOp` verildiğinde, öğesine `zeroInput` `result` `Zero`eşit olduğu zaman girişi olarak ile işlemi uygular ve ne zaman `oneOp(oneInput)` `result == One`geçerlidir.
 syntax: "operation ApplyIfElseRC (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U))"
   types:
   - name: result
-    summary: Ölçüm sonucu `zeroOp` veya `oneOp` uygulandığını tespit etmek için kullanılır.
+    summary: Ölçüm sonucu, veya `zeroOp` `oneOp` uygulanmış olup olmadığını tespit etmek için kullanılır.
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: '`result == Zero`olduğunda uygulanacak denetlenebilir işlem.'
+    summary: Ne zaman `result == Zero`uygulanacak denetlenebilir işlem.
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Controlled
   - name: zeroInput
-    summary: '`result == Zero``zeroOp` için sağlanacak giriş.'
+    summary: '`zeroOp` Ne zaman `result == Zero`sağlanacak giriş.'
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: '`result == One`olduğunda uygulanacak denetlenebilir işlem.'
+    summary: Ne zaman `result == One`uygulanacak denetlenebilir işlem.
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Controlled
   - name: oneInput
-    summary: '`result == One``oneOp` için sağlanacak giriş.'
+    summary: '`oneOp` Ne zaman `result == One`sağlanacak giriş.'
     uid: "'U"
     isLocal: true
 output:
@@ -57,9 +57,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: '`zeroOp`, koşullu olarak uygulanacak işlemin giriş türü.'
+  summary: Koşullu olarak uygulanacak işlemin `zeroOp` giriş türü.
 - uid: "'U"
-  summary: '`oneOp`, koşullu olarak uygulanacak işlemin giriş türü.'
+  summary: Koşullu olarak uygulanacak işlemin `oneOp` giriş türü.
 functors:
 - Controlled
 seeAlso:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: e2dd871aa42ed22ba088e6eaad9d9705dfb26254
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: aeb4c7f86ac1f41140bb14436d9dee39b4c4d98b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220938"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672734"

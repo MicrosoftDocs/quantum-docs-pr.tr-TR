@@ -4,10 +4,10 @@ name: TargetStateReflectionOracle
 type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: >-
-  Benzersiz olarak bayrak qubit tarafından işaretlenen hedef durumu hakkında bir `ReflectionOracle` oluşturur.
+  Benzersiz olarak `ReflectionOracle` bayrak qubit tarafından işaretlenen hedef durumu hakkında bir oluşturur.
 
 
-  Hedef durumu 1 olarak ayarlanmış tek bir qubit ve tüm diğerleri 0: $ \demet{1}_f $.
+  Hedef durumu 1 olarak ayarlanmış tek bir qubit ve diğerleri 0: $ \ demet{1}_F $ şeklindedir.
 syntax: 'function TargetStateReflectionOracle (idxFlagQubit : Int) : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
   content: '(idxFlagQubit : Int)'
@@ -19,14 +19,14 @@ input:
 output:
   content: Microsoft.Quantum.Oracles.ReflectionOracle
   types:
-  - summary: $ \Ket{1}_f $ tarafından işaretlenen durum hakkında yansıtan bir `ReflectionOracle`.
+  - summary: $ `ReflectionOracle` \Ket{1}_F $ tarafından işaretlenen durumu yansıtan bir.
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
 - microsoft.quantum.canon.reflectionoracle
 metadata:
-  ms.openlocfilehash: c86011664da3f59bc978641b0aefcca5a50d3b1a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6f398f2c9122769dd6f83fd002d311c0b55db158
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215447"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672916"

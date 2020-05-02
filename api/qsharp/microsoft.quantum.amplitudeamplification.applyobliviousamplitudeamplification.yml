@@ -5,12 +5,12 @@ type: operation
 namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: ', Kısmi yansımalar belirterek yükümlülüğü genliği bir şekilde yükseltme.'
 remarks: >-
-  Belirli bir yardımcı başlangıç durumu $ \ket{\Text{start}}\_bir $, belirli bir yardımcı hedef durumu $ \ket{\Text{Target}}\_bir $ ve herhangi bir sistem durumu $ \ket{\psı}\_s $, \begin{hizalaması} O\ket {\ Text {start}}\_a\ket {\ PSI}\_s = \lambdad\ket{\Text{Target}}\_a U sı}\_s + \sqrt{1-| \lambda | ^ 2} \ket{\Text{Target} ^ \perp}\_a\cnoktalar \end{hizalaması}, bazı Unitary $U $ için.
+  Belirli bir yardımcı başlangıç durumu $ \ket{\Text{Start}}\_a $, belirli bir yardımcı hedef durumu $ \ket{\Text{Target}}\_a $ ve herhangi bir sistem durumu $ \ket{\psı}\_s $ olarak verildi. \Begin{hizalaması} o\ket {\ Text {Start}}\_a\ket {\ PSI}\_s = \lambdad\ket{\Text{Target}}\_a U \ket{\psıd olduğunu\_varsayalım.} s + \sqrt{1-| \lambda | ^ 2} \ket{\Text{Target} ^ \perp}\_a\cnoktalar \end{hizalaması}, bazı Unitary $U $.
 
-  `signalOracle` ve Adjoint uygulamaları tarafından, yardımcı yazmaç içindeki başlangıç ve hedef durumlarıyla ilgili bir dizi yansıma ile, U 'nin uygulanması için başarılı olma olasılığı değiştirilmiş olabilir.
+  , Ve Adjoint 'ın `signalOracle` uygulamaları tarafından, yardımcı kayıt arasındaki başlangıç ve hedef durumları hakkında bir dizi yansıma Ile, U 'nin uygulanması için başarılı olma olasılığı da değişebilir.
 
 
-  Çoğu durumda, `auxiliaryRegister` $ \ket{\Text{start}} durumunda bir $\_başlatılır.
+  Çoğu durumda, `auxiliaryRegister` $ \ket{\Text{Start}}\_a $ durumunda başlatılır.
 syntax: 'operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit'
 references: >-
   Bkz.
@@ -32,7 +32,7 @@ input:
     summary: Yardımcı kaydın hedef durumu hakkında yansıma işleci
     uid: microsoft.quantum.oracles.reflectionoracle
   - name: signalOracle
-    summary: Ortak ve sistem kayıtlarında ortaklaşa bulunan `ObliviousOracle` türündeki Unitary Oracle $O $.
+    summary: Yardımcı ve sistem Yazmaçları üzerinde ortaklaşa çalışan `ObliviousOracle` türde Unitary Oracle $O $.
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: auxiliaryRegister
     summary: Yardımcı kayıt
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 3ed252d38ebe32900a7ac22079f46eaf04f2018d
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 7452686a76d9ff89c0eb79290e7dae23347778ac
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872555"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672954"
