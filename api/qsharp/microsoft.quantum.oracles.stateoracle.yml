@@ -14,14 +14,14 @@ summary: >-
 
   - System Register $s $, istenen hisse durumu $ \ket{\psı}\_s $ ' i depolayacak.
 remarks: >-
-  Bu Oracle, $ $ O\ket{0}\_{f} \demet{0}\_s = \lambda\tus{1}\_f\ket {\ PSI}\_s + \sqrt{1-| \lambda | ^ 2} \tus{0}\_f\cnoktalar $ $, $ \ket\_{1}f $ tarafından işaretlenen temelinde $ \ket{\psi} \_s $ hedef durumu $ \lambda ${0}\_s $ hedef durumunu oluşturmak üzere hesaplama tabanlı durum $ \ket{0}\_{f} \tus s $ üzerinde çalışır.
+  Bu Oracle tarafından tanımlanan bu Oracle $ ${0}\_o\ket {f}{0}\_\ayraç s = \lambda\tusf\ket{1}\_{\\_PSI} s + \sqrt{1-| \lambda | ^ 2}{0}\_\demet f\cnoktalar{0}\_, $ ${0}\_\_${1}\_\tusf $ tarafından işaretlenen esasına göre $ \ket{\psı} s $ hedef durumu $ \lambda $, genlik $ \lambda $ oluşturmak için hesaplama tabanlı durum $ \tus{f} \tuss $ üzerinde çalışır.
 
-  İlk parametre, $ \tus{0}\_f $ 'ın qubit kaydına yönelik bir dizindir. İkinci parametrenin her ikisi de kaydettirir.
+  İlk parametre, $ \ket{0}\_f $ ' nin qubit kaydına yönelik bir dizindir. İkinci parametrenin her ikisi de kaydettirir.
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 1faa47c21e43355ed036498adf4e823ff3f8a0e4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fe7ced83927d709bcc6fe82d8866b221446c7d73
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067229"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673477"

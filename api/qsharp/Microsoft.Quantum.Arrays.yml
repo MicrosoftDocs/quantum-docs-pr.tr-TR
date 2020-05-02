@@ -20,7 +20,7 @@ functions:
 - uid: microsoft.quantum.arrays.filtered
   summary: Dizi öğeleri için tanımlanan bir dizi ve koşul verildiğinde, koşulu karşılayan öğelerden oluşan bir dizi döndürür.
 - uid: microsoft.quantum.arrays.fold
-  summary: Bir işlevi `f` dizi `array`aracılığıyla yineler `f(f(f(initialState, array[0]), array[1]), ...)`döndürüyor.
+  summary: Bir işlevi `f` bir dizi `array`aracılığıyla yineler, döndürür `f(f(f(initialState, array[0]), array[1]), ...)`.
 - uid: microsoft.quantum.arrays.head
   summary: Dizinin ilk öğesini döndürür.
 - uid: microsoft.quantum.arrays.indexof
@@ -69,9 +69,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Dizi öğeleri için tanımlanan bir dizi ve bir işlem verildiğinde, işlem altındaki orijinal dizinin görüntülerinden oluşan yeni bir dizi döndürür.
 metadata:
-  ms.openlocfilehash: 422564f632efd7a6d093d78358a15ee012f918f8
-  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.openlocfilehash: a9088a037953f62ab7193ea525a6e71d43fe2fb2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/26/2020
-  ms.locfileid: "80320729"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673403"

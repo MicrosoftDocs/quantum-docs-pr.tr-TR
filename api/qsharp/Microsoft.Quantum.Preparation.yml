@@ -8,17 +8,17 @@ functions:
     Tek qubit durumu için Bloch Sphere koordinatlarını hesaplar.
 
 
-    Verilen iki karmaşık sayı $a 0, qubit durumunu temsil eden a1 $, Bloch Sphere üzerinde koordinatları hesaplar $a 0 \ ayraç{0} + a1 \ ayraç{1} = r e ^ {it} (e ^ {-i \phi/2}\cos{(\ teta/2)} \tus{0}+ e ^ {ı \fi/2}\sin{(\ teta/2)} \tus{1}) $.
+    Bu iki karmaşık sayı $a, qubit durumunu temsil eden 0, a1 $, $a 0 \{0} ayraç + a1 \ Tus={1} r e ^ {it} (e ^ {-ı \phi/2}\cos{(\ teta/2)} \tus+{0}e ^ {ı \fi/2}\sin{(\ teta/2)} \ket{1}) $.
 - uid: microsoft.quantum.preparation.quantumrom
   summary: >-
     , Belirli bir yoğunluk matrisini göstermek için hisse ROM tekniğini kullanır.
 
 
-    $N $ katsayısı $ \ alpha_j $ olan bir liste verildiğinde bu işlem, yoğunluk matrisini $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| için bir yaklaşık $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ ' u kullanan bir Unitary $U $ döndürür alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. Bu nedenle, $ \epsilon $ hatası $ | p_j-\frac{| alpha_j |} şeklindedir {\ sum_k | \ alpha_k |} | \le \ Epsilon/N $ ve $\|\tilde\rho-\rho\| \le \epsilon $. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket{0}^ {\lceil\ log_2 N\rceıl} \ demet{0}^ {d} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{Garbage} _j}.
+    $N $ katsayısı $ \ alpha_j $ olan bir liste verildiğinde bu işlem, $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| alpha_j |} için bir yaklaşık $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ değerini kullanan bir Unitary $U $ döndürür {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. Bu nedenle, $ \epsilon $ hatası $ | p_j-\frac{| alpha_j |} şeklindedir {\ sum_k | \ alpha_k |} | \le \ Epsilon/N $ ve $\|\tilde\rho-\rho\| \le \ Epsilon $. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket{0}^ {\lceil\ Log_2 N\rceıl} \ Tus^{0}{k} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{Garbage} _j}.
 
     \end{hizalaması} $ $
 - uid: microsoft.quantum.preparation.quantumromqubitcount
-  summary: '`QuantumROM`tarafından döndürülen işleme ayrılması gereken qubits sayısının toplam sayısını döndürür.'
+  summary: Tarafından `QuantumROM`döndürülen işleme ayrılması gereken qubits sayısının toplam sayısını döndürür.
 - uid: microsoft.quantum.preparation.statepreparationcomplexcoefficients
   summary: >-
     Belirli bir hisse durumu hazırlayan bir işlem döndürür.
@@ -59,7 +59,7 @@ operations:
     İkili entangles iki qubit kaydı.
 
 
-    Diğer bir deyişle, iki kayıt söz konusu olduğunda, her kaydın $ \ket{0\cnoktalar 0} $ durumunda başlayacağını varsayarak, her bir kasadaki her bir qubit çifti arasında en büyük ölçüde entangled State $ \frac{1}{\sqrt{2}} \left (\ket{00} + \ment{11} \right) $ değerini hazırlar.
+    Diğer bir deyişle, iki kayıt söz konusu olduğunda, her kaydın $ \ket{0\cnoktalar 0{1}} $ durumunda{2}başlayacağını varsayarak, her bir kasadaki her bir qubit çifti arasında en yüksek düzeyde entangled State $ \frac {\sqrt} \left (\ment{00} + \ket{11} \ right) $ değerini hazırlar.
 - uid: microsoft.quantum.preparation.prepareidentity
   summary: >-
     Kayıt verildiğinde, bu kaydı, en yüksek düzeyde karışık durumda hazırlar.
@@ -68,33 +68,33 @@ operations:
     Kayıt, her bir qubit 'e tüm depolarizing kanalını uygulayarak $ \ cıvadone/2 ^ N $ durumunda hazırlandı; burada $N $ kaydın uzunluğudur.
 - uid: microsoft.quantum.preparation.preparequbit
   summary: >-
-    Verilen Pauli işlecinin, + 1 (`Zero`) eigenstate ' de bir qubit hazırlar.
+    Verilen Pauli işlecinin ıdgenstate ' i`Zero`() ile bir qubit hazırlar.
 
     Identity işleci verilirse, qubit, yüksek ölçüde karışık duruma hazırlanır.
 
 
-    Qubit başlangıçta $ \ket{0}$ durumundaysa, bu işlem belirli bir Pauli işlecinin $ + $1 eigenstate veya `PauliI`için, bunun yerine en yüksek düzeyde karma durumunda (bkz. <xref:microsoft.quantum.preparation.preparesinglequbitidentity>), qubit 'i hazırlar.
+    Qubit başlangıçta $ \ket{0}$ durumundaysa, bu işlem belirli bir Pauli işlecinin $ + $1 eigenstate veya için `PauliI`(bkz.) yerine en düşük karma durumunda qubit 'i hazırlar (bkz <xref:microsoft.quantum.preparation.preparesinglequbitidentity>.).
 
 
-    Qubit $ \ket{0}$ dışında bir durumdaysa, bu işlem şu kapıları uygular: `PauliX`için $H $ $HS, `PauliY`için $I $ `PauliZ` ve <xref:microsoft.quantum.preparation.preparesinglequbitidentity> için `PauliI`$ $.
+    Qubit $ \ket{0}$ dışında bir durumdaysa, bu işlem şu kapıları uygular: $H $ for `PauliX`, $HS $ for `PauliY`, $I $ for `PauliZ` and <xref:microsoft.quantum.preparation.preparesinglequbitidentity> for. `PauliI`
 - uid: microsoft.quantum.preparation.preparesinglequbitidentity
   summary: >-
     Yüksek ölçüde karışık durumda bir qubit hazırlar.
 
 
-    $/Boldo/$2 durumunda verilen qubit $ $ \begin{hizalaması} \Omega (\rho) \mathrel{: =} \frac{1}{4} \ sum_ {\mu \in \{0 ' ı uygulayarak verilen qubit 'i hazırlar. 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\leger}, \end{hizalaması} $ $; $ \sigma\_i $ $i $ TH Pauli operatörü ve $ \rho $, karışık bir durumu temsil eden bir yoğunluk operatöründür.
+    $/Boldo/$2 durumunda verilen qubit $ $ \begin{hizalaması} \omega (\rho) \mathrel{: =} \frac{1} {4} \ sum_ {\mu \{\0 ' ı uygulayarak verilen qubit 'i hazırlar 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\leger}, \end{hizalaması} $ $; $ \sigma\_i $, $i $ TH Pauli işleci, ve $ \rho $, karışık bir durumu temsil eden bir yoğunluk operatöründür.
 - uid: microsoft.quantum.preparation.prepareuniformsuperposition
   summary: >-
     0 ile `nIndices`kodlayan durumlar üzerinde Tekdüzen üst konumu oluşturur.
 
 
-    Diğer bir deyişle, bu Unitary $U $, $0 $ ile $M-$1 arasında tek bir üst konum oluşturarak bir giriş durumu $ \ket{0\cnoktalar 0} $ olarak sunulur. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket{0}= \frac{1}{\sqrt{M}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
+    Diğer bir deyişle, bu Unitary $U $, $0 $ ile $M-$1 arasında tek bir üst konum oluşturarak bir giriş durumu $ \ket{0\cnoktalar 0} $ olarak sunulur. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket{0}= \frac{1}{\Sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
     \end{hizalaması} $ $.
 metadata:
-  ms.openlocfilehash: dd28a9a066fabd5afab7114d78cc2aca79254e18
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 25ebe80b64af0cfd50e5a32c1ef91f8a299cef04
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905684"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673097"
