@@ -7,7 +7,7 @@ summary: >-
   İkili entangles iki qubit kaydı.
 
 
-  Diğer bir deyişle, iki kayıt söz konusu olduğunda, her kaydın $ \ket{0\cnoktalar 0} $ durumunda başlayacağını varsayarak, her bir kasadaki her bir qubit çifti arasında en büyük ölçüde entangled State $ \frac{1}{\sqrt{2}} \left (\ket{00} + \ment{11} \right) $ değerini hazırlar.
+  Diğer bir deyişle, iki kayıt söz konusu olduğunda, her kaydın $ \ket{0\cnoktalar 0{1}} $ durumunda{2}başlayacağını varsayarak, her bir kasadaki her bir qubit çifti arasında en yüksek düzeyde entangled State $ \frac {\sqrt} \left (\ment{00} + \ket{11} \ right) $ değerini hazırlar.
 syntax: 'operation PrepareEntangledState (left : Qubit[], right : Qubit[]) : Unit'
 input:
   content: '(left : Qubit[], right : Qubit[])'
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 8bbd7a3a87a55a930fda18669f75dc9a98aee981
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c761362c8793e4e08e7e702b2909f0253b8723d6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226633"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686535"

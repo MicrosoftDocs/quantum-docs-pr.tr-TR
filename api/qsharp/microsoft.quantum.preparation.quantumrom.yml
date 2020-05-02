@@ -7,11 +7,11 @@ summary: >-
   , Belirli bir yoğunluk matrisini göstermek için hisse ROM tekniğini kullanır.
 
 
-  $N $ katsayısı $ \ alpha_j $ olan bir liste verildiğinde bu işlem, yoğunluk matrisini $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| için bir yaklaşık $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ ' u kullanan bir Unitary $U $ döndürür alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. Bu nedenle, $ \epsilon $ hatası $ | p_j-\frac{| alpha_j |} şeklindedir {\ sum_k | \ alpha_k |} | \le \ Epsilon/N $ ve $\|\tilde\rho-\rho\| \le \epsilon $. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket{0}^ {\lceil\ log_2 N\rceıl} \ demet{0}^ {d} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{Garbage} _j}.
+  $N $ katsayısı $ \ alpha_j $ olan bir liste verildiğinde bu işlem, $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| alpha_j |} için bir yaklaşık $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ değerini kullanan bir Unitary $U $ döndürür {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. Bu nedenle, $ \epsilon $ hatası $ | p_j-\frac{| alpha_j |} şeklindedir {\ sum_k | \ alpha_k |} | \le \ Epsilon/N $ ve $\|\tilde\rho-\rho\| \le \ Epsilon $. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket{0}^ {\lceil\ Log_2 N\rceıl} \ Tus^{0}{k} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{Garbage} _j}.
 
   \end{hizalaması} $ $
 examples: >-
-  Aşağıdaki kod parçacığı $3 $-qubit State $ \rho = \ sum_ {j = 0} ^{4}\frac{| alpha_j |} için bir yol hazırlar {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $, burada $ \vec\alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $, ve hata `1e-3`;
+  Aşağıdaki kod parçacığı $3 $-qubit durumu $ \rho = \ sum_ {j = 0} ^{4}\frac{| alpha_j |} için bir yol hazırlar {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $, burada $ \vec\alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $, ve hata `1e-3`;
 
 
   ```qsharp
@@ -30,7 +30,7 @@ examples: >-
 
   ```
 syntax: 'function QuantumROM (targetError : Double, coefficients : Double[]) : ((Int, (Int, Int)), Double, ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl))'
-references: "- Doğrusal T karmaşıklığı ile elektronik Spectra 'yi, doğrusal T karmaşıklığı Ryan Bemarh, Craig Gidney, Dominic W. Braz, Nathan Wiebe, Jarrod McClean, Alexandru paler, Austin Fowler, Hartmut Neven https://arxiv.org/abs/1805.03662 kodlaması"
+references: "- Doğrusal T karmaşıklığı olan elektronik Spectra 'yi, doğrusal T karmaşıklığı, Craig Bebush, Craig Gidney, Dominic W. Braz, Nathan Wiebe, Jarrod McClean, Alexandru paler, Austin Fowler, Hartmut Neven ile kodlamahttps://arxiv.org/abs/1805.03662"
 input:
   content: '(targetError : Double, coefficients : Double[])'
   types:
@@ -53,7 +53,7 @@ output:
       ## <a name="first-parameter"></a>İlk parametre
 
 
-      Kayıt düzeni, `x = y + z` toplam qubits sayısının ayrıldığı `(x,(y,z))`, `y` `LittleEndian` yazmacı için qubit sayısı ve `z` çöp qubit sayısının sayısıdır.
+      Ayrılan toplam `(x,(y,z))` qubit sayısı, `x = y + z` `y` `LittleEndian` yazmaç için qubit sayısı ve `z` çöp qubit sayısı olan bir kayıt düzeni.
 
 
       ## <a name="second-parameter"></a>İkinci parametre
@@ -92,9 +92,9 @@ output:
       - Adjoint
       - Controlled
 metadata:
-  ms.openlocfilehash: 33d21289b0b1ad64577677d5fa5ca622346224cc
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9bf373f0cb7c495f8c29a4426861c74fbb0ec7f6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226429"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686491"

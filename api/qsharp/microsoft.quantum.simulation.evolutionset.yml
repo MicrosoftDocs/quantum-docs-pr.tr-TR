@@ -7,12 +7,12 @@ summary: >-
   Kolay bir şekilde uygulanabilecek ve benzetim algoritmalarını uygulamak için kullanılan bir kapı kümesini temsil eder.
 
 
-  Kümesindeki öğeler bir <xref:microsoft.quantum.simulation.generatorindex>tarafından dizine alınır ve her küme, `GeneratorIndex` bir işlev tarafından, zamanı temsil eden gerçek bir sayı tarafından parametreleştirilen işlemler olan <xref:microsoft.quantum.simulation.evolutionunitary>ile açıklanmıştır.
+  Kümesindeki öğeler bir <xref:microsoft.quantum.simulation.generatorindex>tarafından dizine alınır ve her küme, zamanı temsil eden gerçek bir sayıyla parametreli işlemler `GeneratorIndex` olan <xref:microsoft.quantum.simulation.evolutionunitary>' dan ' a bir işlevi tarafından tanımlanır
 syntax: newtype EvolutionSet = (Microsoft.Quantum.Simulation.GeneratorIndex -> Microsoft.Quantum.Simulation.EvolutionUnitary);
 metadata:
-  ms.openlocfilehash: 2e3e717ca219f5e575f750a32f640215142b170c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0db782c1909c6121078f251f34bbffd5b49a4d8e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211095"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686999"
