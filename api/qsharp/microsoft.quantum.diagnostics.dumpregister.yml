@@ -7,10 +7,10 @@ summary: Geçerli hedef makinenin belirtilen qubits ile ilişkili durumunun dök
 remarks: >-
   Bu yöntem, belirtilen qubits durumuyla ilişkili bilgilerin bir dosya veya başka bir konumda dökümünü yapmanıza olanak sağlar.
 
-  Oluşturulan gerçek bilgiler ve `location` semantiği her bir hedef makineye özeldir. Ancak, konum (`()`) olarak boş bir tanımlama grubu sağlamak, genellikle çıktıyı konsola oluşturma anlamına gelir.
+  Oluşturulan gerçek bilgiler ve semantiği her bir `location` hedef makineye özeldir. Ancak, konum (`()`) olarak boş bir tanımlama grubu sağlamak, genellikle çıktıyı konsola oluşturma anlamına gelir.
 
 
-  Bu yöntem, hisse geliştirme seti 'nin bir parçası olarak dağıtılan yerel tam durum simülatörü için, belirtilen qubits 'in durumunu (örneğin, karşılık gelen alt sistemin dalga işlevi) tek boyutlu bir ar olarak yazacağı bir dosyanın yolunu içeren bir dize bekler Her öğenin karşılık gelen durumu ölçme olasılığının artırıışını temsil ettiği karmaşık sayıların Ray.
+  Bu yöntem, hisse geliştirme seti 'nin bir parçası olarak dağıtılan yerel tam durum simülatörü için, söz konusu qubits 'in durumunu (karşılık gelen alt sistemin Wave işlevi), her bir öğenin karşılık gelen durumu ölçme olasılığının uyumlu olmasını temsil ettiği bir dosyanın yolunu içeren bir dize bekler.
 
   Verilen qubits, başka bir qubitle ayrılarak ve durumları ayrılacaksa, yalnızca qubits 'in bir şekilde ayrılmış olduğunu bildirir.
 syntax: "function DumpRegister (location : 'T, qubits : Qubit[]) : Unit"
@@ -29,13 +29,13 @@ input:
 output:
   content: Unit
   types:
-  - summary: Hiçbiri.
+  - summary: Yok.
     isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 6d553a95bfa619d142b681e2830fc0375c6bcae5
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3bf5302364b37cb1ccef651935833b966ff84464
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227041"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677223"

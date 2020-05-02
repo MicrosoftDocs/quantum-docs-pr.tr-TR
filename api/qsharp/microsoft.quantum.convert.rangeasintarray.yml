@@ -3,7 +3,7 @@ uid: microsoft.quantum.convert.rangeasintarray
 name: RangeAsIntArray
 type: function
 namespace: Microsoft.Quantum.Convert
-summary: Start tarafından numaralandırılan tamsayılar `arr` dizi oluşturur. adım.. erer.
+summary: Start tarafından numaralandırılan `arr` tamsayılar dizisini oluşturur. adım.. erer.
 examples: >-
   ```qsharp
 
@@ -17,20 +17,20 @@ input:
   content: '(range : Range)'
   types:
   - name: range
-    summary: Bir diziye dönüştürülecek `start..step..end` değerlerinin `Range`.
+    summary: '`Range` Bir diziye dönüştürülecek `start..step..end` değerler.'
     isPrimitive: true
     uid: Range
 output:
   content: Int[]
   types:
-  - summary: '`range`tarafından tekrarlandırılmış değerlere karşılık gelen yeni tamsayılar dizisi.'
+  - summary: Tarafından `range`tekrarlandırılmış değerlere karşılık gelen yeni tamsayılar dizisi.
     isArray: true
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: a6765698daf8838312c1501e8bbf1e43f609b068
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f909319a624459b2453db2ac73d3ceaec38f6911
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232345"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677386"

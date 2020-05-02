@@ -32,15 +32,15 @@ output:
   content: Result
   types:
   - summary: >-
-      Sonuç, olasılık $ $ \begin{hizalaması} \Pr (\Texttt{sıfırlaması} | \Lambda; ile `Zero` P, Q) = \operatorname{Tr}\left (\frac{\cıvadone + Q}{2} \Lambalo\left [\frac{\cıvadone + P}{2} \ sağ] \ sağ).
+      Olasılığa `Zero` sahip sonuç $ $ \begin{hizalaması} \pr (\Texttt{dd} | \lambda; P, Q) = \operatorname{Tr}\left (\frac{\cıvadone + Q}{2} \Lambalo\left [\frac{\cıvadone + P}{2} \ sağ] \ sağ).
 
       \end{hizalaması} $ $
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 48da4cd4d16a3466591c0c93710eed6b27a68fab
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f554910a414666c6d61a96932a932b9320426360
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229030"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677578"

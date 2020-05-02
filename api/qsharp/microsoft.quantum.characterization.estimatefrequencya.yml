@@ -3,7 +3,7 @@ uid: microsoft.quantum.characterization.estimatefrequencya
 name: EstimateFrequencyA
 type: operation
 namespace: Microsoft.Quantum.Characterization
-summary: Adjointable ve ölçüm olan bir hazırlık verildiğinde, belirli bir deneme sayısı gerçekleştirerek, ölçümün başarılı olduğu sıklığı (`Zero`döndürür) tahmin eder.
+summary: Adjointable ve ölçüm olan bir hazırlık verildiğinde, belirli bir deneme sayısı gerçekleştirerek, ölçümün başarılı olduğu sıklığı ( `Zero`döndürür) tahmin eder.
 remarks: Adjointable işlemleri için, işlemi çağırma gibi bazı varsayımlar, hedef makinelerin bazı performans iyileştirmeleri yapmasına izin veren qubits 'i tam olarak aynı duruma hazırlar.
 syntax: 'operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
 input:
@@ -46,13 +46,13 @@ input:
 output:
   content: Double
   types:
-  - summary: $M (p (\ket{00 \ cnoktalar 0} \bra{00 \ cnoktalar 0}) $ `Zero`döndüren sıklık için tahmin $ \hat{p} $ $n\_{\upoklu} $, gözlenen `Zero` sonuçlarının sayısı olduğu\_{\upoklu}/n\_{\Text{measurements}} $ kullanılarak elde edilen untaraflı binom tahmin aracı $ \hat{p} = n.
+  - summary: $M sıklığı (p (\ket{00 \ cnoktalar 0} \bra{00 \ cnoktalar 0})) $ `Zero`işlevinin tahmini bir $ \hat{p} $ $n {\upoklu} $, gözlenen\_\_\_ `Zero` sonuçların sayısıdır ve bu, {\upoklu} $, gözlenmemiş binom tahmin aracı $ \hat{p} = n {\upoklu}/n {\Text{measurements}} $ kullanılarak elde edilir.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: cfc90cee0b98b88391ee23218489669600a97920
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 064f6d3cf9c075d635ed27ac4192b5aa4045e4d8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229183"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677699"

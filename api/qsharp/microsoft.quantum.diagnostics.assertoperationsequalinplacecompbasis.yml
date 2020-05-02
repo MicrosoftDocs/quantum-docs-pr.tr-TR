@@ -4,7 +4,7 @@ name: AssertOperationsEqualInPlaceCompBasis
 type: operation
 namespace: Microsoft.Quantum.Diagnostics
 summary: >-
-  İşlem `givenU`, yalnızca işlem temelinde vektörlerde gerçekleştirilen işlemlerin eylemini denetleyerek verilen giriş boyutundaki işleme `expectedU` eşit olup olmadığını denetler.
+  İşlemin `givenU` yalnızca işlem temelinde vektörlerdeki işlem eylemlerini denetleyerek `expectedU` verilen giriş boyutundaki işleme eşit olup olmadığını denetler.
 
   Bu, iki unitı 'nin eşitliğine yönelik gerekli, ancak yeterli olmayan bir durumdur.
 syntax: 'operation AssertOperationsEqualInPlaceCompBasis (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
@@ -12,7 +12,7 @@ input:
   content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
   types:
   - name: nQubits
-    summary: İşlemler `givenU` ve `expectedU` üzerinde çalışacağı qubits $n $ sayısı.
+    summary: İşlemler `givenU` ve `expectedU` üzerinde çalışan qubits $n $ sayısı.
     isPrimitive: true
     uid: Int
   - name: givenU
@@ -28,7 +28,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: expectedU
-    summary: $N $ qubits üzerindeki başvuru işlemi, `givenU` Karşılaştırılacak.
+    summary: İle Karşılaştırılacak $n $ qubit `givenU` üzerinde başvuru işlemi.
     isOperation: true
     input:
       types:
@@ -47,9 +47,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 5841b6dc60047c051b38305c177f54d3eb84e087
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c3a98dee80b9e41ea3c27e1e52c3046751307912
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066566"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677284"
