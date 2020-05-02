@@ -7,11 +7,11 @@ summary: >-
   Bir hisse amacının belirli bir durumunun beklenen değere sahip olma olasılığını onaylar.
 
 
-  $N $-qubit hisse durumu $ \ket{\psı} = \sum ^ {2 ^ n-1} _ {j = 0} \harflerden _j \ket{j} $, $j $ tarafından dizin oluşturulan $ \ket{j} $ öğesinin olasılık $ | \harflerden _j | ^ 2 $ değerinin beklenen değere sahip olduğunu onaylar.
+  Bir $n $-qubit hisse durumu $ \ket{\psı} = \sum ^ {2 ^ n-1} _ {j = 0} \ alpha_j \ket{j} $ olarak verildiğinde, $j $ tarafından dizini oluşturulan $ \ket{j} $ durumunun $ | \ alpha_j | ^ 2 $ değerinin beklenen değere sahip olduğunu onaylar.
 examples: >-
-  `qubits` yazmacın bir 3-qubit hisse durumu $ \ket{\psı} = \ sqrt {1/8} \ demet{0}+ \ sqrt {7/8} \ köşeli{6}$ ' i küçük endian biçiminde kodtığını varsayalım.
+  `qubits` Yazmacın bir 3-qubit hisse durumu $ \ket{\psı} = \ sqrt {1/8} \ Tus+{0}\ sqrt {7/8} \ hayvan{6}$ ' i küçük endian biçiminde kodluyor olduğunu varsayalım.
 
-  Bu, sayının $ \demet{0}\equiv\demet{0}\ayraç{0}\ket{0}$ ve $ \tus{6}\equiv\ket{0}\tus{1}\tus{1}$ olduğunu gösterir. Ardından, aşağıdaki onaylar başarılı olur:
+  Bu{0}sayı, $ \ ayraç \ equiv\ayraç{0}\ ayraç{0}\{0}ve $ \ ayraç{6}\ equiv\ayraç{0}{1}{1}\ ayraç \ Ardından, aşağıdaki onaylar başarılı olur:
 
 
   - `AssertProbInt(0,0.125,qubits,10e-10);`
@@ -26,7 +26,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: expected
-    summary: $ | \Harflerden _j | ^ 2 $ değerinin beklenen değeri.
+    summary: $ | \ Alpha_j | ^ 2 $ değerinin beklenen değeri.
     isPrimitive: true
     uid: Double
   - name: qubits
@@ -42,9 +42,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 183f1252ba555c10e7011eea98a5cc98fae4495a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 247dcb78921bfe5df96c56b74e251d0413cfab3d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221448"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675260"

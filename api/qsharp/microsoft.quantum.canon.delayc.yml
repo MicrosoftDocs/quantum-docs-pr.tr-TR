@@ -9,9 +9,9 @@ summary: >-
 
   Bir işlem ve bu işlem için bir giriş verildiğinde, ek bir giriş sağlandıktan sonra işlemi uygular.
 
-  Özellikle, `Delay(op, arg, _)` ifade, çağrıldığında `arg` `op` uygulanan bir işlemdir.
+  Özellikle, ifade `Delay(op, arg, _)` çağrıldığında için `op` `arg` geçerli olan bir işlemdir.
 
-  İfade `Delay(op,arg,_)` `op`uygulamasını gecikmeye izin verir.
+  İfade `Delay(op,arg,_)` , uygulamasını gecikmeye izin verir `op`.
 syntax: "operation DelayC (op : ('T => Unit is Ctl), arg : 'T, aux : Unit) : Unit"
 input:
   content: "(op : ('T => Unit is Ctl), arg : 'T, aux : Unit)"
@@ -51,9 +51,9 @@ seeAlso:
 - microsoft.quantum.canon.delay
 - microsoft.quantum.canon.delayed
 metadata:
-  ms.openlocfilehash: bbba9e29e35702d21f4c34a869b4cc1f0046b6ad
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 48648958e013058a14ba2bd4a6f751019cf70d61
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219680"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675738"

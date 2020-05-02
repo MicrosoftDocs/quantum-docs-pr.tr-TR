@@ -7,7 +7,7 @@ summary: >-
   Tersine çevrilebilir, yerinde Ripple-iki tamsayının eklenmesini taşır.
 
 
-  Littkaendian Yazmaçları `xs` ve `ys`ve bir qubit ile kodlanmış iki $n $-bit tam sayı verildiğinde, işlem, sonucun $n $ en az önemli bitlerinin `ys` tutulmakta olduğu iki tam sayının toplamını hesaplar.
+  Litttaendian Yazmaçları `xs` ve `ys`ile kodlanmış iki $n $-bit tamsayılar ve bir qubit,, işlem, sonucun $n $ en düşük önemli bitlerinin içinde `ys` tutulduğu iki tamsayının toplamını hesaplar. `carry`
 remarks: Bu işlem, Rippelcarryadderd ile aynı işlevselliğe sahiptir, ancak $n $ yerine yalnızca bir anliksel qubit kullanır.
 syntax: 'operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: >-
@@ -35,9 +35,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: bc5a7af8534741cab8e7b18a404b1745454a20c4
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: d75313cbc70643bc9cb96967c1b2eb928296f8d7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871371"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675130"

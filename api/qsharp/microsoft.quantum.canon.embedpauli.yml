@@ -3,9 +3,9 @@ uid: microsoft.quantum.canon.embedpauli
 name: EmbedPauli
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Tek bir-qubit Pauli işleci ve bir qubit dizini verildiğinde, bu dizinde verilen tek qubit işleciyle bir multi-qubit Pauli işleci, diğer tüm dizinde `PauliI` döndürür.
+summary: Bir tek qubit Pauli operatörü ve bir qubit dizini verildiğinde, bu dizinde ve `PauliI` diğer her dizinde verilen tek qubit işleciyle bir multi-qubit Pauli işleci döndürür.
 examples: >-
-  Dizi `[PauliI, PauliI, PauliX, PauliI]`almak için:
+  Diziyi `[PauliI, PauliI, PauliX, PauliI]`almak için:
 
 
   ```qsharp
@@ -22,7 +22,7 @@ input:
     isPrimitive: true
     uid: Pauli
   - name: location
-    summary: '`output[location] == pauli`gibi bir dizin, `output` bu işlevin çıktısından oluşur.'
+    summary: Bu işlevin çıktısı olduğu `output[location] == pauli`gibi `output` bir dizin.
     isPrimitive: true
     uid: Int
   - name: n
@@ -36,9 +36,9 @@ output:
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 1e852781f6dd85e5432f5613184f028db0e84b87
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: df9cff23b6a7255ec57e944fd1bed140ff18560a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219391"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675596"
