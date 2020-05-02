@@ -5,10 +5,10 @@ type: function
 namespace: Microsoft.Quantum.Core
 summary: Belirtilen aralığın, dizideki son öğe olması gereken tanımlı bitiş değerini döndürür.
 remarks: >-
-  Aralık ifadesinin ilk öğesi `start`, ikinci öğesi `start+step`, üçüncü öğe ise `end` geçirilmeden `start+step+step`, vb.
+  Aralık `start`ifadesinin ilk öğesi, ikinci öğesi `start+step`ise, üçüncü öğe `start+step+step`, vb. `end` olur.
 
 
-  Bir aralığın tanımlanan bitiş değerinin, Aralık tarafından belirtilen dizideki son öğeden farklı olabileceğini unutmayın; Örneğin, 0 aralığında. 2. 5 son öğe 4, ancak bitiş değeri 5 ' tir.
+  Bir aralığın tanımlanan bitiş değerinin, Aralık tarafından belirtilen dizideki son öğeden farklı olabileceğini unutmayın; Örneğin, 0 aralığında. 2.. 5 son öğe 4, ancak bitiş değeri 5 ' tir.
 syntax: 'function RangeEnd (range : Range) : Int'
 input:
   content: '(range : Range)'
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 85e9006f73cd5f7b5a78b57148cbd7ad5b764878
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066651"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657634"

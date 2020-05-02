@@ -7,17 +7,17 @@ summary: >-
   İki işlem söz konusu olduğunda, tüm giriş durumları için aynı hareket ettikleri onaylar.
 
 
-  Bu onaylama, formun tüm durumlarında işlem eylemi $V _0 \otimes... V_ {n-1} $, $V _k $ durumlardan biri $ \ket{0}$, $ \demet{1}$, $ \ket{+} $ ve $ \ket{i} $ (Pauli Y işlecinin) biridir.
+  Bu onaylama, formun tüm durumlarında işlem eylemi $V _0 \otimes... v_ {n-1} $, $V _K $ durumlardan biri $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ ve $ \ket{i} $ (Pauli Y işlecinin 1 eigenstate)
 
 
   Bu onaylama $n $ qubits kullanır ve karşılaştırılmakta olan işlemlere yönelik birden çok çağrı gerektirir.
 syntax: 'operation AssertOperationsEqualInPlace (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
-references: Eyaletler $ \ket{0}$, $ \demet{1}$, $ \ket{+} $ ve $ \ket{i} $, [ *ı. L. Chuang, M. A. Nielsen* ](https://arxiv.org/abs/quant-ph/9610001)' de açıklanan Chuang-Nielsen temelini oluşturur.
+references: $ \Ket{0}$, $ \ket{1}$, $ \ket{+} $ ve $ \ket{i} $ durumlarının temeli [ *i. L. Chuang, M. A. Nielsen* ](https://arxiv.org/abs/quant-ph/9610001)bölümünde açıklanan Chuang-Nielsen temelidir.
 input:
   content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
   types:
   - name: nQubits
-    summary: İşlemler `givenU` ve `expectedU` üzerinde çalışacağı qubits $n $ sayısı.
+    summary: İşlemler `givenU` ve `expectedU` üzerinde çalışan qubits $n $ sayısı.
     isPrimitive: true
     uid: Int
   - name: givenU
@@ -33,7 +33,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: expectedU
-    summary: $N $ qubits üzerindeki başvuru işlemi, `givenU` Karşılaştırılacak.
+    summary: İle Karşılaştırılacak $n $ qubit `givenU` üzerinde başvuru işlemi.
     isOperation: true
     input:
       types:
@@ -54,9 +54,9 @@ output:
 seeAlso:
 - assertoperationsequalreferenced
 metadata:
-  ms.openlocfilehash: a6c58f51bbc30f3917457d4137afb083533519fe
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 007bb4b3dedd5a95fc464608fe8160784b02341b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73225766"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657027"
