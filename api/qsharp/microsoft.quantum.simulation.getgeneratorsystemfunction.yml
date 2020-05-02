@@ -3,18 +3,18 @@ uid: microsoft.quantum.simulation.getgeneratorsystemfunction
 name: GetGeneratorSystemFunction
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: '`GeneratorIndex` işlevini bir `GeneratorSystem`alır.'
+summary: İçindeki `GeneratorIndex` işlevini alır `GeneratorSystem`.
 syntax: 'function GetGeneratorSystemFunction (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Int -> Microsoft.Quantum.Simulation.GeneratorIndex)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystem
-    summary: İlgilendiğiniz `GeneratorSystem`.
+    summary: '`GeneratorSystem` İlgi çekici.'
     uid: microsoft.quantum.simulation.generatorsystem
 output:
   content: (Int -> Microsoft.Quantum.Simulation.GeneratorIndex)
   types:
-  - summary: Hamiltonian içindeki her `GeneratorIndex` terimini dizine alan bir işlev.
+  - summary: Hamiltonian içindeki `GeneratorIndex` her terimi dizine alan bir işlev.
     isFunction: true
     input:
       types:
@@ -27,9 +27,9 @@ seeAlso:
 - microsoft.quantum.canon.generatorindex
 - microsoft.quantum.canon.generatorsystem
 metadata:
-  ms.openlocfilehash: e70e8f59916bf997761583a6340f1a510b6f1b01
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c33279150c3beb8736eac82a745e5bf4c69f87ec
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219918"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82654980"
