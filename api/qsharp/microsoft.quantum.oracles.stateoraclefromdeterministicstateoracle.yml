@@ -3,26 +3,26 @@ uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
 name: StateOracleFromDeterministicStateOracle
 type: function
 namespace: Microsoft.Quantum.Oracles
-summary: Bir Oracle türündeki `DeterministicStateOracle` `StateOracle`dönüştürür.
+summary: Bir Oracle türünü `DeterministicStateOracle` öğesine `StateOracle`dönüştürür.
 syntax: 'function StateOracleFromDeterministicStateOracle (deterministicStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.StateOracle'
 input:
   content: '(deterministicStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
   types:
   - name: deterministicStateOracle
-    summary: Bir durum hazırlama Oracle $A $ `DeterministicStateOracle`türü.
+    summary: Bir durum hazırlama Oracle $A $ türü `DeterministicStateOracle`.
     uid: microsoft.quantum.oracles.deterministicstateoracle
 output:
   content: Microsoft.Quantum.Oracles.StateOracle
   types:
-  - summary: Aynı durum hazırlama Oracle $A $, ancak şu anda `StateOracle`. Bu `StateOracle` içindeki bayrak dizininin bir kukla değişken olduğunu ve hiçbir etkiye sahip olmadığını unutmayın.
+  - summary: Aynı durum hazırlama Oracle $A $, ancak şimdi türü `StateOracle`. Bu `StateOracle` , içindeki bayrak dizininin bir kukla değişken olduğunu ve hiçbir etkiye sahip olmadığını unutmayın.
     uid: microsoft.quantum.oracles.stateoracle
 seeAlso:
 - microsoft.quantum.canon.deterministicstateoracle
 - microsoft.quantum.canon.stateoracle
 metadata:
-  ms.openlocfilehash: 681d5a8a132819fa1b0c1af049418123d21ecec4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9431b58659bb50de872f73890a4a055c5534b2a0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228214"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685142"

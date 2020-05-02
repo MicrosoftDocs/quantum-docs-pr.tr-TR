@@ -7,10 +7,10 @@ summary: >-
   Y ekseni hakkında π/4 ile tek bir qubit döndürür.
 
 
-  `Y`hakkında bir π/4 döndürmesi gerçekleştirir.
+  Hakkında `Y`π/4 döndürme gerçekleştirir.
 
 
-  Döndürme, bir sihirli durum tüketerek gerçekleştirilir; diğer bir deyişle, $ $ \begin{hizalaması} \cos\frac{\pi}{8} \demet{0} + \sin \ FRAC{\pi}{8} \tus{1}bir kopyasıdır.
+  Döndürme, bir sihirli durum tüketerek gerçekleştirilir; diğer bir deyişle, $ $ \begin{hizalaması}{8} \cos\frac{\pi} \tus+{0} \sin \ FRAC{\pi}{8} \tusöğesinin{1}bir kopyasıdır.
 
   \end{hizalaması} $ $
 remarks: >-
@@ -24,7 +24,7 @@ remarks: >-
   ```
 
 
-  'nı ve
+  ve
 
 
   ```qsharp
@@ -38,7 +38,7 @@ remarks: >-
   ```
 
 
-  Bu işlem, `Adjoint` functor 'ı destekler, bu durumda aynı sihirli durum tüketilecektir, ancak veri qubit üzerindeki etki bir $-\ Pi/4 $ $Y $-rotadır.
+  Bu işlem, `Adjoint` functor 'ı destekler, bu durumda aynı sihirli durum tüketilen, ancak veri qubit üzerindeki etki bir $-\ Pi/4 $ $Y $-rotadır.
 syntax: 'operation InjectPi4YRotation (data : Qubit, magic : Qubit) : Unit'
 input:
   content: '(data : Qubit, magic : Qubit)'
@@ -48,7 +48,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: magic
-    summary: Başlangıçta Magic durumunda bir qubit. Bu işlemin ardından, `magic` $ \ket{0}$ durumuna döndürülür.
+    summary: Başlangıçta Magic durumunda bir qubit. Bu işlemin `magic` aşağıdaki uygulaması $ \ket{0}$ durumuna döndürülür.
     isPrimitive: true
     uid: Qubit
 output:
@@ -59,9 +59,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: 9792980f4b8ad01ec41f1317fb574de85e2d4683
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: cb0efd896b4d8f9b4b81c061b644a1e2f7f74e96
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871660"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684875"
