@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.measureinteger
 name: MeasureInteger
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Bir hisse kayıt içeriğini ölçer ve bir tamsayıya dönüştürür. Ölçüm, standart hesaplama temeline göre, yani `PauliZ`eigenliğine göre yapılır.
+summary: Bir hisse kayıt içeriğini ölçer ve bir tamsayıya dönüştürür. Ölçüm standart hesaplama temeline göre yapılır, yani, ' nin `PauliZ`eigenliğine göre yapılır.
 remarks: Bu işlem, giriş kaydını bir hedef makineye serbest bırakmak için uygun olan $ \ket{00\cnoktalara 0} $ durumuna sıfırlar.
 syntax: 'operation MeasureInteger (target : Microsoft.Quantum.Arithmetic.LittleEndian) : Int'
 input:
@@ -15,15 +15,15 @@ input:
 output:
   content: Int
   types:
-  - summary: '`target`ölçülen değerini içeren işaretsiz bir tamsayı.'
+  - summary: Ölçülen değerini içeren işaretsiz bir tamsayı `target`.
     isPrimitive: true
     uid: Int
 seeAlso:
 - microsoft.quantum.canon.measureintegerbe
 metadata:
-  ms.openlocfilehash: 989302867cbfb6b429bf8e8d4b8a76a0c1c4e61d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cb7432ccf4c66b4f508b182e8c96bd73b13e2f08
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214886"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676767"

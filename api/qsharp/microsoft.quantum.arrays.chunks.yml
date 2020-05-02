@@ -4,7 +4,7 @@ name: Chunks
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Bir diziyi eşit uzunlukta birden çok parçaya böler.
-remarks: '`Length(arr)` `nElements`bölünemediğinden çıktının son öğesinin `nElements` daha kısa olabileceğini unutmayın.'
+remarks: Çıktının son öğesi tarafından `nElements` `Length(arr)` `nElements`bölünemediğinden daha kısa olabileceğini unutmayın.
 syntax: "function Chunks (nElements : Int, arr : 'T[]) : 'T[][]"
 input:
   content: "(nElements : Int, arr : 'T[])"
@@ -28,9 +28,9 @@ output:
       uid: "'T"
       isLocal: true
 metadata:
-  ms.openlocfilehash: 733a2a475ec8db8f603888259151b3dca29b5797
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 283141b3d6826faff9451b122dc0d602edc34500
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77908115"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676549"

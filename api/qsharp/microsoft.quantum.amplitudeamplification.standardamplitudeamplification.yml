@@ -4,7 +4,7 @@ name: StandardAmplitudeAmplification
 type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: Standart genliği yükseltme algoritması
-remarks: Bu, \begin{hizalaması} A\tus{0}\_{f} \tus{0}\_s = \ ' `AmpAmpPhasesStandard` tarafından hesaplanan bir yansıma aşamaları seçimi tarafından elde edilen standart genlik algoritmadır. lambda\ket{1}\_f\ket {\ metin {Target}}\_s + \sqrt{1-| \lambda | ^ 2} \demet{0}\_f\cnoktalar, \end{hizalaması} bu işlem \begin{hizalaması} \operatorname{AmpAmpByOracle}\ket{0}\_{f} \tus{0}\_s = \sin ((2n + 1) \sin ^{-1}(\ lambda)) \demet{1}\_f\ket {\ metin {Target}}\_s + \ cdots\tus{0}\_f \end{hizalaması} çoğu durumda, `flagQubit` ve `auxiliaryRegister` durum $ \demet{0}\_f\tus{0}\_.
+remarks: "`AmpAmpPhasesStandard` Bu,{0}\\_\\begin{hizalaması} a\\ket {f}{0}\\_\\gens = \\lambda\\tusf\\ket{1}\\_{\\ Text {Target\\_}} + \\ sqrt{1-| \\lambda | ^ 2} \\tusf\\cnoktalar{0}\\_, \\end{hizalaması} bu işlem, çoğu durumda \\begin{hizalaması} \\operatorname{AmpAmpByOracle}\\ket{0}\\_{f} \\tuss{0}\\_= \\sin ((2n + 1) \\sin ^{-1}(\\lambda)) \\tusf\\ket{1}\\_{\\ Text {Target}}\\_s + \\cdots\\tusf{0}\\_\\end{hizalaması} durumunu hazırlar. `flagQubit` ve `auxiliaryRegister` $ \\demet{0}\\_f\\tusa{0}\\_$ ' da başlatılır."
 syntax: 'function StandardAmplitudeAmplification (nIterations : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 references: '- [*G. Brassard, P. Hoyer, M. Mosca, a. Tapp*](https://arxiv.org/abs/quant-ph/0005055)'
 input:
@@ -38,9 +38,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 5779087131a60436b6c0beb4bcebc4fc802e93d7
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 0fc7ceb390a64ce6224a084147207663d96c3b75
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872725"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676922"

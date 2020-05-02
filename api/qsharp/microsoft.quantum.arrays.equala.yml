@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Aynı türde iki dizi ve dizilerin öğe çiftleri için tanımlanan bir koşul verildiğinde, dizilerin eşit olup olmadığını denetler.
 remarks: >-
-  Bu işlev genel türler için tanımlanmıştır; Yani, iki dizi `'T[]` ve bir işlev `equal: ('T, 'T) -> Bool`olduğunda, bu işlev dizilerinin eşit olup olmadığını belirten bir `Bool` değeri döndürür.
+  Bu işlev genel türler için tanımlanmıştır; Yani, iki dizimiz `'T[]` ve bir işlev `equal: ('T, 'T) -> Bool`olduğunda, bu işlev dizilerinin eşit olup olmadığını `Bool` gösteren bir değer döndürür.
 
   Eşit kabul edilmesi için iki dizinin eşit olması gerekir ve dizilerdeki aynı konumlarda bulunan öğelerin eşit olması gerekir.
 examples: >-
@@ -59,18 +59,18 @@ output:
   content: Bool
   types:
   - summary: >-
-      Değer, yalnızca `array1` ve `array2` eşitse `true`.
+      `array1` Yalnızca `array2` ve `true` eşitse değeri.
 
-      Diğer bir deyişle, her iki dizi de aynı uzunluktadır ve tüm öğeler `equal`tarafından tanımlanan şekilde eşittir.
+      Diğer bir deyişle, her iki dizi de aynı uzunluktadır ve tüm öğeler tarafından `equal`tanımlanan şekilde eşittir.
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
   summary: Her bir dizinin öğelerinin türü.
 metadata:
-  ms.openlocfilehash: 466078fa243e2f394fa42dff15845ae5f1cd73df
-  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.openlocfilehash: d2af5ff8e2d66e6162c73c3854670451a00dcf50
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/26/2020
-  ms.locfileid: "80321615"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676495"

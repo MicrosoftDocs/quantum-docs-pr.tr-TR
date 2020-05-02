@@ -7,11 +7,11 @@ summary: >-
   Klasik bir bit üzerine koşullu bir adjointable işlemi uygular.
 
 
-  Bir işlem `op` ve bir bit değer `bit`verildiğinde, `bit` `true`ise `target` `op` uygular. `false`, `target`hiçbir şey olmaz.
+  Bir işlem `op` ve bir bit değeri `bit`verildiğinde, `op` `target` if `bit` ise için geçerlidir. `true` Varsa `false`, hiçbir şey olmaz `target`.
 
-  Sonek `A` uygulanacak işlemin adjointable olduğunu gösterir.
+  Sonek `A` , uygulanacak işlemin adjointable olduğunu gösterir.
 examples: >-
-  Aşağıda, bir qubits kaydını, bir dizi `Bool` değeri olarak verilen bir klasik bit dizesiyle temsil eden bir hesaplama tabanlı duruma hazırlar:
+  Aşağıdaki, bir qubits kaydını bir `Bool` değer dizisi olarak verilen bir klasik bit dizesiyle temsil eden bir hesaplama tabanlı duruma hazırlar:
 
 
   ```Q#
@@ -65,9 +65,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: 2c62617251d7795f19fa67f7de01859679c94313
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fca10f4a39c8cdc3941d9a7d06e47e1c6dfefa74
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213883"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676348"

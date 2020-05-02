@@ -34,21 +34,21 @@ functions:
   summary: Klasik bir kayan nokta değerinin, 1e-10 ' un küçük bir toleransına kadar beklenen değere sahip olduğunu onaylar.
 operations:
 - uid: microsoft.quantum.diagnostics.assertallzero
-  summary: Verilen qubits 'in hepsi $ \gre{0}$ durumunda olan bir onaylama.
+  summary: Verilen qubits 'in hepsi $ \ket{0}$ durumunda olduğunu onaylayın.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
-  summary: Verilen qubits 'in, belirli bir toleranstan kadar $ \gre{0}$ durumunda olduğunu onaylayın.
+  summary: Verilen qubits 'in, belirli bir toleranstan kadar ${0}\gre$ durumunda olduğu onay.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     İki işlem söz konusu olduğunda, tüm giriş durumları için aynı hareket ettikleri onaylar.
 
 
-    Bu onaylama, formun tüm durumlarında işlem eylemi $V _0 \otimes... V_ {n-1} $, $V _k $ durumlardan biri $ \ket{0}$, $ \demet{1}$, $ \ket{+} $ ve $ \ket{i} $ (Pauli Y işlecinin) biridir.
+    Bu onaylama, formun tüm durumlarında işlem eylemi $V _0 \otimes... v_ {n-1} $, $V _K $ durumlardan biri $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ ve $ \ket{i} $ (Pauli Y işlecinin 1 eigenstate)
 
 
     Bu onaylama $n $ qubits kullanır ve karşılaştırılmakta olan işlemlere yönelik birden çok çağrı gerektirir.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
   summary: >-
-    İşlem `givenU`, yalnızca işlem temelinde vektörlerde gerçekleştirilen işlemlerin eylemini denetleyerek verilen giriş boyutundaki işleme `expectedU` eşit olup olmadığını denetler.
+    İşlemin `givenU` yalnızca işlem temelinde vektörlerdeki işlem eylemlerini denetleyerek `expectedU` verilen giriş boyutundaki işleme eşit olup olmadığını denetler.
 
     Bu, iki unitı 'nin eşitliğine yönelik gerekli, ancak yeterli olmayan bir durumdur.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
@@ -62,27 +62,29 @@ operations:
 
     Bu onaylama, örneğin, bir işlemin en iyi duruma getirilmiş bir sürümünün Naïve uygulamasına benzer bir şekilde davranması veya bir dizi hisse kullanım dışı girişleri üzerinde davranan bir işlemin bilinen durumları kabul ettiği bir işlem olduğundan emin olmak için kullanılabilir.
 - uid: microsoft.quantum.diagnostics.assertqubit
-  summary: Qubit `q` Pauli Z işlecinin beklenen eigenstate öğesinde olduğunu onaylar.
+  summary: Qubitin `q` Pauli Z işlecinin beklenen eigenstate öğesinde olduğunu onaylar.
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
   summary: >-
     Beklenen durumda bir qubitin olduğunu onaylar.
 
 
-    `expected` karmaşık bir vektörü temsil eder, $ \ket{\psı} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+    `expected`karmaşık bir vektörü temsil eder, $ \ket{\psı} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
 
     $A $, $b $ her birini temsil eden başlıkların ilk öğesi, karmaşık sayının gerçek bölümüdür; ikinci tane ise sanal parçadır.
 
     Son bağımsız değişken, onaylama işlemi yapılan toleransı tanımlar.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
-  summary: Qubit `q`, Pauli Z işlecinin belirli bir toleransına kadar beklenen eigenstate olduğunu onaylar.
+  summary: Qubit `q` 'In Pauli Z işlecinin, belirli bir toleransa kadar beklenen eigenstate olduğunu onaylar.
 newtypes:
+- uid: microsoft.quantum.diagnostics.enabletestingvianame
+  summary: Bir tür yüklenirken veya test amaçlı olarak çağrılabilir şekilde kullanılabilecek alternatif bir adın tanımlanabilmesi için derleyicinin tanınan özniteliği.
 - uid: microsoft.quantum.diagnostics.test
   summary: Bir birim testini işaretlemek için kullanılan derleyicinin tanınan özniteliği.
 summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı, sağlama işlemleri ve talep işlevleri dahil olmak üzere tanılama amaçları için yararlı işlevler ve işlemler içerir."
 metadata:
-  ms.openlocfilehash: 353750a6714b1cdd54ff866657a39bb825e34425
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 5e580bb50983d5c0e65d3284408bae04a5e92756
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905922"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676949"

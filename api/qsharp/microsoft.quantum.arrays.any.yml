@@ -4,7 +4,7 @@ name: Any
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Dizi öğeleri için tanımlanan bir dizi ve koşul verildiğinde, dizinin en az bir öğesinin koşulu karşılayıp karşılamadığını denetler.
-remarks: "İşlevi genel türler için tanımlanmıştır, yani bir dizi `'T[]` ve bir işlev olduğunda `predicate: 'T -> Bool` bir öğenin `predicate`karşılayıp karşılamadığını belirten bir `Bool` değeri üretebiliriz."
+remarks: "İşlevi genel `'T[]` türler için tanımlanmıştır, yani bir dizi ve işlevimiz `predicate: 'T -> Bool` olduğunda, bir öğenin karşılayıp karşılamadığını `Bool` `predicate`belirten bir değer üretebiliriz."
 examples: >-
   ```qsharp
 
@@ -30,7 +30,7 @@ input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: predicate
-    summary: Öğeleri denetlemek için kullanılan `Bool` `'T` bir işlev.
+    summary: Öğeleri denetlemek için `'T` kullanılan `Bool` öğesinden bir işlev.
     isFunction: true
     input:
       types:
@@ -41,23 +41,23 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: "`'T`bir dizi öğe."
+    summary: Öğesinden bir dizi öğe `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: Bool
   types:
-  - summary: Tüm öğelere uygulanan koşulun OR işlevinin `Bool` değeri.
+  - summary: Tüm `Bool` öğelere uygulanan koşulun OR işlevinin değeri.
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
-  summary: '`array` öğelerinin türü.'
+  summary: '`array` Öğelerin türü.'
 metadata:
-  ms.openlocfilehash: 35555080f90588bc61d70e89ea412a23209408d6
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 4e80b5c39c83bc5d5b26d4df9ca86b8cbc796aeb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905565"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676570"

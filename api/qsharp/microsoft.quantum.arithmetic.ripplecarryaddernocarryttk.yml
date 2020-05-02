@@ -7,7 +7,7 @@ summary: >-
   Tersine çevrilebilir, yerinde Ripple-çıkış yapmadan iki tamsayının eklenmesini yerine getirme.
 
 
-  Littkaendian Yazmaçları `xs` ve `ys`ile kodlanmış iki $n $ bit tamsayı verildiğinde, işlem iki tamsayı olan $2 ^ n $ sayısının toplamını hesaplar; burada $n $, girişlerin `xs` ve `ys`bit boyutudur. Bu, yerine getirme bitini hesaplamaz.
+  Litttaendian Yazmaçları `xs` içinde kodlanmış iki $n $ bit tamsayı verildiğinde `ys`, işlem, iki tamsayı olan $2 ^ n $ sayısının toplamını hesaplar; burada $n $, girişlerin `xs` bit boyutudur ve. `ys` Bu, yerine getirme bitini hesaplamaz.
 remarks: Bu işlem, Ripppercarryadderttk ile aynı işlevselliğe sahiptir, ancak taşıma bitini döndürmez.
 syntax: 'operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: >-
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 5147d6d78582ad3f45587938f1b4cf3f8a2dd506
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: cf6855325edc354d22b0324f5949a435a11ce8bb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871065"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676675"
