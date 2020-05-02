@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Math
 summary: '\Cdot a + v \cdot b = \operatorname{GCD} (a, b) $ $u bir demet $ (u, v) $, burada $ \operatorname{GCD} $, $a $ ve $b $ $a $ en büyük ortak bölenini hesaplar. GCD her zaman pozitif olur.'
 syntax: 'function ExtendedGreatestCommonDivisorL (a : BigInt, b : BigInt) : (BigInt, BigInt)'
-references: '- Bu uygulama https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm göre yapılır'
+references: '- Bu uygulama şunlara göre yapılırhttps://en.wikipedia.org/wiki/Extended_Euclidean_algorithm'
 input:
   content: '(a : BigInt, b : BigInt)'
   types:
@@ -27,9 +27,9 @@ output:
     - isPrimitive: true
       uid: BigInt
 metadata:
-  ms.openlocfilehash: 0e3c6138d5efe03603338341e37a9cf7bc07fb47
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ade2f3451a273b69bcabaeae06ef7b234816291b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233025"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673846"

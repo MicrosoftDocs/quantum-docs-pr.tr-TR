@@ -6,7 +6,7 @@ functions:
   summary: >-
     İki tamsayının bit düzeyinde ve bu değerini döndürür.
 
-    Bu, yerleşik `&&&` işleciyle aynı hesaplamayı gerçekleştirir.
+    Bu, yerleşik `&&&` işleçle aynı hesaplamayı gerçekleştirir.
 - uid: microsoft.quantum.bitwise.leftshiftedi
   summary: Bir sayının bit düzeyinde gösterimini verilen bit sayısı ile sola kaydırır.
 - uid: microsoft.quantum.bitwise.leftshiftedl
@@ -15,12 +15,12 @@ functions:
   summary: >-
     Bir tamsayı DEĞIL bit seviyesinde değer döndürür.
 
-    Bu, yerleşik `~~~` işleciyle aynı hesaplamayı gerçekleştirir.
+    Bu, yerleşik `~~~` işleçle aynı hesaplamayı gerçekleştirir.
 - uid: microsoft.quantum.bitwise.or
   summary: >-
     Bit düzeyinde veya iki tamsayının değerini döndürür.
 
-    Bu, yerleşik `|||` işleciyle aynı hesaplamayı gerçekleştirir.
+    Bu, yerleşik `|||` işleçle aynı hesaplamayı gerçekleştirir.
 - uid: microsoft.quantum.bitwise.parity
   summary: Bir tamsayı bit düzeyinde eşlık değerini döndürür (ikili temsili tek sayı içeriyorsa 1, aksi takdirde 0).
 - uid: microsoft.quantum.bitwise.rightshiftedi
@@ -33,14 +33,14 @@ functions:
   summary: >-
     İki tamsayının bit düzeyinde dışlamalı veya (XOR) döndürür.
 
-    Bu, yerleşik `^^^` işleciyle aynı hesaplamayı gerçekleştirir.
+    Bu, yerleşik `^^^` işleçle aynı hesaplamayı gerçekleştirir.
 - uid: microsoft.quantum.bitwise.zbits
   summary: Pauli işleçleri dizisinin Z bitlerini temsil eden bir tamsayı döndürür.
 summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı, klasik veri türlerinin bit düzeyinde gösterimine işlem yapmak için işlevler içerir."
 metadata:
-  ms.openlocfilehash: c474d92e7a40f5491b21d80e00294fbdff96a62a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fb52d02d38d31b96b46dfc469ee07ee62e29a9d4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210959"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673372"

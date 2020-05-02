@@ -3,13 +3,13 @@ uid: microsoft.quantum.extensions.diagnostics
 name: Microsoft.Quantum.Extensions.Diagnostics
 functions:
 - uid: microsoft.quantum.extensions.diagnostics.dumpmachine
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nDumpMachine kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.diagnostics.dumpmachine\" kullanın.\nLütfen @\"microsoft.quantum.diagnostics.dumpmachine\"kullanın."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nDumpMachine kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.diagnostics.dumpmachine\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.diagnostics.dumpmachine\"."
 - uid: microsoft.quantum.extensions.diagnostics.dumpregister
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nDumpRegister kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.diagnostics.dumpregister\" kullanın.\nLütfen @\"microsoft.quantum.diagnostics.dumpregister\"kullanın."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nDumpRegister kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.diagnostics.dumpregister\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.diagnostics.dumpregister\"."
 metadata:
-  ms.openlocfilehash: 71f997adf7dbca7e45250652032237c07f1354e5
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: dcd10bf143cd50e937cb6ad0d81f15247401c2b8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858301"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673278"

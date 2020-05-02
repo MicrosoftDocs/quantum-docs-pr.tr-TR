@@ -4,29 +4,29 @@ name: Microsoft.Quantum.Extensions.Convert
 summary: " # <a name=\"summary\"></a>Özet\n Bunlar, .NET CLR 'nin Q # tür sistemi içinde uygun olan System. Convert ad alanındaki işlevlerden bazılarıdır.\n\n # <a name=\"remarks\"></a>Açıklamalar\n Bool, Int ve Double türleri için işlevin birkaç sürümü varsa, ilgili işlevlerde B, I ve D son eki bulunur."
 functions:
 - uid: microsoft.quantum.extensions.convert.biginttobools
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nBigınttoboir kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.bigintasboolarray\" kullanın.\nLütfen @\"microsoft.quantum.convert.bigintasboolarray\"kullanın."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nBigınttoboir kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.convert.bigintasboolarray\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.convert.bigintasboolarray\"."
 - uid: microsoft.quantum.extensions.convert.boolstobigint
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nBoolsToBigInt kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.boolarrayasbigint\" kullanın.\nLütfen @\"microsoft.quantum.convert.boolarrayasbigint\"kullanın."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nBoolsToBigInt kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.convert.boolarrayasbigint\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.convert.boolarrayasbigint\"."
 - uid: microsoft.quantum.extensions.convert.pauliarraytoint
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nPauliarraytoınt kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.pauliarrayasint\" kullanın.\nLütfen @\"microsoft.quantum.convert.pauliarrayasint\"kullanın."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nPauliarraytoınt kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.convert.pauliarrayasint\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.convert.pauliarrayasint\"."
 - uid: microsoft.quantum.extensions.convert.tobigint
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nToBigInt kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.intasbigint\" kullanın.\nLütfen @\"microsoft.quantum.convert.intasbigint\"kullanın."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nToBigInt kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.convert.intasbigint\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.convert.intasbigint\"."
 - uid: microsoft.quantum.extensions.convert.todouble
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nToDouble kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.intasdouble\" kullanın.\nLütfen @\"microsoft.quantum.convert.intasdouble\"kullanın."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nToDouble kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.convert.intasdouble\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.convert.intasdouble\"."
 - uid: microsoft.quantum.extensions.convert.tostringb
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nToStringB kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.boolasstring\" kullanın.\nLütfen @\"microsoft.quantum.convert.boolasstring\"kullanın."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nToStringB kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.convert.boolasstring\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.convert.boolasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringd
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nToStringD kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.doubleasstring\" kullanın.\nLütfen @\"microsoft.quantum.convert.doubleasstring\"kullanın."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nToStringD kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.convert.doubleasstring\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.convert.doubleasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringdformat
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nToStringDFormat kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.doubleasstringwithformat\" kullanın.\nLütfen @\"microsoft.quantum.convert.doubleasstringwithformat\"kullanın."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nToStringDFormat kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.convert.doubleasstringwithformat\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.convert.doubleasstringwithformat\"."
 - uid: microsoft.quantum.extensions.convert.tostringi
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nTostringı kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.intasstring\" kullanın.\nLütfen @\"microsoft.quantum.convert.intasstring\"kullanın."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nTostringı kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.convert.intasstring\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.convert.intasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringiformat
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nTostrıngiformat kullanım dışı bırakıldı. Lütfen bunun yerine @\"microsoft.quantum.convert.intasstringwithformat\" kullanın.\nLütfen @\"microsoft.quantum.convert.intasstringwithformat\"kullanın."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nTostrıngiformat kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.convert.intasstringwithformat\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.convert.intasstringwithformat\"."
 metadata:
-  ms.openlocfilehash: 372c58096cab091560ae6d3bebc165f09e201b9c
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 8196882d8f7edf417f65bcd1651ecb770c4286f4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858318"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673300"
