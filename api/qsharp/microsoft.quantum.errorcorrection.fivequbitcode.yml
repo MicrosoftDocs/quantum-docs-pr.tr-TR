@@ -10,7 +10,7 @@ remarks: >-
 
   - C. Olsun. Bennett, D. DiVincenzo, J. A. Smolin ve W. K. Wootters, "karışık durum entanglement ve hisse hata düzeltmesi," fiziksel. Rev. A, 54 (1996) PP. 3824-3851; https://arxiv.org/abs/quant-ph/9604024 ve
 
-  - R. LaFlamme, C. Miquel, J. P. Paz ve W. H. Zurek, "kusursuz hisse hata düzeltme kodu," fiziksel. Rev. lett. 77 (1996) PP. 198-201; https://arxiv.org/abs/quant-ph/9602019
+  - Sağ. LaFlamme, C. Miquel, J. P. Paz ve W. H. Zurek, "kusursuz hisse hata düzeltme kodu," fiziksel. Rev. lett. 77 (1996) PP. 198-201;https://arxiv.org/abs/quant-ph/9602019
 syntax: 'function FiveQubitCode () : Microsoft.Quantum.ErrorCorrection.QECC'
 input:
   content: ()
@@ -18,12 +18,12 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.QECC
   types:
-  - summary: Bir `QECC` türü belirterek hisse hata düzeltme kodunun bir uygulamasını döndürür.
+  - summary: Bir `QECC` tür belirterek hisse hata düzeltme kodunun bir uygulamasını döndürür.
     uid: microsoft.quantum.errorcorrection.qecc
 metadata:
-  ms.openlocfilehash: 1865ededef3e3ada743a49ef81141aeffdcfed0a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 39bd3adacd0f8e872d682d0df0bf81a3f1e1d8f0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220411"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684936"

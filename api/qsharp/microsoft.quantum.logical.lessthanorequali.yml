@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: yalnızca `a` `b`küçük veya eşit ise `true`.
+  - summary: '`true`ve yalnızca `a` , değerinden küçükse veya eşitse `b`.'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 9c9b663eab0c88024f05bd9da245a3c49c22ac8a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f287c5cd0c43ace8fe0397bf237073b514b4b964
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235507"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684657"

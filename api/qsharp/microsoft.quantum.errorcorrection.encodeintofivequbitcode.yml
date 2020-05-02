@@ -9,7 +9,7 @@ input:
   content: '(physRegister : Qubit[], auxQubits : Qubit[])'
   types:
   - name: physRegister
-    summary: Kodlanamayan bir durumu temsil eden bir qubit. Bu dizi `Qubit[]` uzunluğu 1 ' dir.
+    summary: Kodlanamayan bir durumu temsil eden bir qubit. Bu dizi `Qubit[]` 1 uzunluktadır.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -21,14 +21,14 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.LogicalRegister
   types:
-  - summary: Kodlanmış durumu depolayan `LogicalRegister` türünde bir fiziksel qubit dizisi.
+  - summary: Kodlanmış durumu depolayan türdeki `LogicalRegister` fiziksel qubit dizisi.
     uid: microsoft.quantum.errorcorrection.logicalregister
 seeAlso:
 - logicalregister
 metadata:
-  ms.openlocfilehash: 6147098742759d72dba9c8eee0218d973320793b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f2f8c3aef8ea85691270958cf3274daa22f3ac03
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234572"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684988"

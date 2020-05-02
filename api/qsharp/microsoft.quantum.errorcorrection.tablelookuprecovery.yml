@@ -3,7 +3,7 @@ uid: microsoft.quantum.errorcorrection.tablelookuprecovery
 name: TableLookupRecovery
 type: function
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: Belirli bir qubit kaydındaki belirli bir Pauli işlemleri tablosu için, bu işlev `RecoveryFn` türünde bir nesne döndürür. Bu, tablo arama kod çözme işlemini gerçekleştirmek için gereken Pauli işlemleri dizisiyle ilgili tüm bilgileri içerir.
+summary: Belirli bir qubits kaydındaki belirli bir Pauli işlemleri tablosu için, bu işlev bir tablo arama kod çözme işlemini, verilen `RecoveryFn` Pauli işlemleri dizisiyle ilgili olarak gereken tüm bilgileri içeren türünde bir nesne döndürür.
 syntax: 'function TableLookupRecovery (table : Pauli[][]) : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
 input:
   content: '(table : Pauli[][])'
@@ -18,12 +18,12 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
   types:
-  - summary: '`RecoveryFn`türünde bir nesne, yani belirli bir sendromu dizisiyle ilişkili bir harita `Syndrome -> Pauli[]`, karşılık gelen bir Pauli düzeltme işlemi.'
+  - summary: Belirli bir sendromu dizisiyle ilişkili bir eşleme olan `Syndrome -> Pauli[]` bir eşlem olan türü `RecoveryFn`, yani, karşılık gelen bir Pauli düzeltme işlemi.
     uid: microsoft.quantum.errorcorrection.recoveryfn
 metadata:
-  ms.openlocfilehash: cd84c24f5a50574a9bc2ab189832ada6516f12a8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 20400c4afb1819225192ea695e4cc525e0b2f22b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232226"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684803"
