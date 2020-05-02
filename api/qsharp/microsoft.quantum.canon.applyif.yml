@@ -7,9 +7,9 @@ summary: >-
   Klasik bir bit üzerine koşullu bir işlem uygular.
 
 
-  Bir işlem `op` ve bir bit değer `bit`verildiğinde, `bit` `true`ise `target` `op` uygular. `false`, `target`hiçbir şey olmaz.
+  Bir işlem `op` ve bir bit değeri `bit`verildiğinde, `op` `target` if `bit` ise için geçerlidir. `true` Varsa `false`, hiçbir şey olmaz `target`.
 examples: >-
-  Aşağıda, bir qubits kaydını, bir dizi `Bool` değeri olarak verilen bir klasik bit dizesiyle temsil eden bir hesaplama tabanlı duruma hazırlar:
+  Aşağıdaki, bir qubits kaydını bir `Bool` değer dizisi olarak verilen bir klasik bit dizesiyle temsil eden bir hesaplama tabanlı duruma hazırlar:
 
 
   ```Q#
@@ -59,9 +59,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: 8493200e8c87fc423bee6754f50f0f5c6b7cdd5c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b3a573c55d461eb3c1a2af0cb7bacd0a4cfecbe5
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217657"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676355"

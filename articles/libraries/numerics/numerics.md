@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: ad9f529efd06fdf13bab4467b091aafacf1d5b09
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 10d5675e0ef182211a38db4d09347b05afe109c3
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907265"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82677103"
 ---
 # <a name="using-the-numerics-library"></a>Numerics kitaplığını kullanma
 
@@ -23,7 +23,7 @@ Numerics kitaplığı üç bileşenden oluşur
 1. Temel işlevlerin üstünde oluşturulan **üst düzey tamsayı işlevselliği** ; çarpma, bölme, Inversion vb. içerir.  işaretli ve işaretsiz tamsayılar için.
 1. Sabit noktalı başlatma, toplama, çarpma, karşılıklı, polinom değerlendirmesi ve ölçüyle **sabit noktalı aritmetik işlevsellik** .
 
-Bu bileşenlere, tek bir `open` ekstresi kullanılarak erişilebilir:
+Bu bileşenlere tek `open` bir ifade kullanılarak erişilebilir:
 ```qsharp
 open Microsoft.Quantum.Arithmetic;
 ```
@@ -32,33 +32,33 @@ open Microsoft.Quantum.Arithmetic;
 
 Numerics kitaplığı aşağıdaki türleri destekler
 
-1. **`LittleEndian`** : `qArr[0]` en az önemli biti gösterdiği bir tamsayıyı temsil eden bir qubit dizisi `qArr : Qubit[]`.
-1. **`SignedLittleEndian`** : iki öğenin tamamlayıcısı içinde depolanan işaretli bir tamsayıyı temsil ettiğinden, `LittleEndian` aynı.
-1. **`FixedPoint`** : bir qubit dizi `qArr2 : Qubit[]` ve ikili nokta `pos`konumundan oluşan gerçek bir sayıyı temsil eder. Bu, ikili noktanın solundaki ikili basamak sayısını sayar. `qArr2`, `SignedLittleEndian`ile aynı şekilde depolanır.
+1. **`LittleEndian`**: En az önemli bir `qArr : Qubit[]` bit belirten bir tamsayıyı `qArr[0]` temsil eden bir qubit dizisi.
+1. **`SignedLittleEndian`**: İki öğesinin `LittleEndian` tamamlayıcısı içinde depolanan işaretli bir tamsayıyı temsil ettiğinden olduğu gibi.
+1. **`FixedPoint`**: Bir qubit dizisi `qArr2 : Qubit[]` ve ikili nokta konumundan `pos`oluşan gerçek bir sayıyı temsil eder. Bu, ikili noktanın solundaki ikili basamak sayısını sayar. `qArr2`, ile `SignedLittleEndian`aynı şekilde depolanır.
 
 ## <a name="operations"></a>İşlemler
 
 Yukarıdaki üç türden her biri için çeşitli işlemler mevcuttur:
 
 1. **`LittleEndian`**
-    - Ek olarak
+    - Toplama
     - Karşılaştırma
-    - Anda
+    - Çarpma
     - Karelerini alıp
     - Bölme (geri kalan)
 
 1. **`SignedLittleEndian`**
-    - Ek olarak
+    - Toplama
     - Karşılaştırma
     - INVERSION modül 2 ' nin tamamlayıcı
-    - Anda
+    - Çarpma
     - Karelerini alıp
 
 1. **`FixedPoint`**
     - Klasik değerlere hazırlık/başlatma
     - Toplama (klasik sabit veya diğer hisse sabit noktası)
     - Karşılaştırma
-    - Anda
+    - Çarpma
     - Karelerini alıp
     - Çift ve tek işlevler için özelleşmede polinom değerlendirmesi
     - Karşılıklı (1/x)
@@ -75,8 +75,8 @@ Bu işlem, hisse geliştirme setini kullanarak aşağıdaki gibi uygulanabilir:
 operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
     using ((xQubits, yQubits) = (Qubit[n], Qubit[n]))
     {
-        x = LittleEndian(xQubits); // define bit order
-        y = LittleEndian(yQubits);
+        let x = LittleEndian(xQubits); // define bit order
+        let y = LittleEndian(yQubits);
         
         ApplyXorInPlace(xValue, x); // initialize values
         ApplyXorInPlace(yValue, y);
@@ -90,15 +90,15 @@ operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
 
 ## <a name="sample-evaluating-smooth-functions"></a>Örnek: Düzgünleştir işlevlerini değerlendirme
 
-$ \Sin (x) $ gibi kesintisiz işlevleri bir hisse bilgisayarında değerlendirmek için, $x $ 'nin hisse `FixedPoint` numarası olduğu, hisse geliştirme seti Numerics kitaplığı, işlemler `EvaluatePolynomialFxP` ve `Evaluate[Even/Odd]PolynomialFxP`sağlar.
+$ \Sin (x) $ gibi kesintisiz işlevleri bir hisse bilgisayarında değerlendirmek için, $x $ 'nin hisse `FixedPoint` numarası olduğu, hisse geliştirme seti Numerics kitaplığı, işlemleri `EvaluatePolynomialFxP` ve `Evaluate[Even/Odd]PolynomialFxP`sunar.
 
-Birincisi, `EvaluatePolynomialFxP`, $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cnoktalar + a_dx ^ d, $ $ biçiminde bir polinom değerini değerlendirmenize olanak tanır; burada $d $ *dereceyi*gösterir. Bunu yapmak için, gerekli olan polinom katsayıları `[a_0,..., a_d]` (`Double[]`türü), giriş `x : FixedPoint` ve çıkış `y : FixedPoint` (başlangıçta sıfır):
+Birincisi, `EvaluatePolynomialFxP`, $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cnoktalar + a_dx ^ d, $ $ ($d $ *derecesini*gösterir) biçiminde bir polinom değerini değerlendirebilmenizi sağlar. Bunu yapmak `[a_0,..., a_d]` için, gerekli olan polinom katsayıları (türü `Double[]`), giriş `x : FixedPoint` ve çıkış `y : FixedPoint` (başlangıçta sıfır):
 ```qsharp
 EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
-Sonuç, $P (x) = 1 + 2x $, `yFxP`depolanacak.
+Sonuç, $P (x) = 1 + 2x $, içinde `yFxP`depolanacak.
 
-İkinci, `EvaluateEvenPolynomialFxP`ve üçüncü `EvaluateOddPolynomialFxP`, sırasıyla, hatta ve tek işlevler için özelleştirilmiş çalışmalardır. Diğer bir deyişle, Çift/tek işlevi için $f (x) $ ve $ $ P_ {çift} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cnoktalar + a_d x ^ {2D}, $ $ $f (x) $, sırasıyla $P _ {çift} (x) $ veya $P _ {tek} (x): = x\cdot P_ {çift} (x) $.
+İkinci, `EvaluateEvenPolynomialFxP`ve üçüncü, `EvaluateOddPolynomialFxP`sırasıyla, hatta ve tek işlevler için özelleştirilmiş çalışmalardır. Diğer bir deyişle, Çift/tek işlevi için $f (x) $ ve $ $ P_ {çift} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cnoktalar + a_d x ^ {2D}, $ $ $f (x) $, sırasıyla $P _ {çift} (x) $ veya $P _ {tek} (x): = x\cdot P_ {çift} (x) $.
 Q # içinde, bu iki durum şu şekilde işlenebilir:
 ```qsharp
 EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
@@ -113,14 +113,14 @@ $P _ {tek} (x) = x + 2x ^ 3 $ öğesini değerlendirir.
 
 [Ana örnekler deposunda](https://github.com/Microsoft/Quantum)daha fazla örnek bulabilirsiniz.
 
-Başlamak için depoyu kopyalayın ve `Numerics` alt klasörünü açın:
+Başlamak için depoyu kopyalayın ve `Numerics` alt klasörü açın:
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
 cd Quantum/Numerics
 ```
 
-Ardından, örnek klasörlerden birine `cd` ve örneği kullanarak çalıştırın
+Ardından, `cd` örnek klasörlerden birine ve örneği ile çalıştırın
 
 ```bash
 dotnet run

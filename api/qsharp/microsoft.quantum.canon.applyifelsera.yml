@@ -7,17 +7,17 @@ summary: >-
   Klasik sonucun değerine bağlı olarak iki adjointable işlemlerinden birini uygular.
 
 
-  Bir sonuç `result`verildiğinde, `result` `Zero`ve `oneOp(oneInput)` `result == One`geçerli olduğunda `zeroOp` işlem `zeroInput` giriş olarak uygular.
+  `result`Sonuç `zeroOp` verildiğinde, öğesine `zeroInput` `result` `Zero`eşit olduğu zaman girişi olarak ile işlemi uygular ve ne zaman `oneOp(oneInput)` `result == One`geçerlidir.
 syntax: "operation ApplyIfElseRA (result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U))"
   types:
   - name: result
-    summary: Ölçüm sonucu `zeroOp` veya `oneOp` uygulandığını tespit etmek için kullanılır.
+    summary: Ölçüm sonucu, veya `zeroOp` `oneOp` uygulanmış olup olmadığını tespit etmek için kullanılır.
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: '`result == Zero`olduğunda uygulanacak adjointable işlemi.'
+    summary: Ne zaman `result == Zero`uygulanacak adjointable işlemi.
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Adjoint
   - name: zeroInput
-    summary: '`result == Zero``zeroOp` için sağlanacak giriş.'
+    summary: '`zeroOp` Ne zaman `result == Zero`sağlanacak giriş.'
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: '`result == One`olduğunda uygulanacak adjointable işlemi.'
+    summary: Ne zaman `result == One`uygulanacak adjointable işlemi.
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Adjoint
   - name: oneInput
-    summary: '`result == One``oneOp` için sağlanacak giriş.'
+    summary: '`oneOp` Ne zaman `result == One`sağlanacak giriş.'
     uid: "'U"
     isLocal: true
 output:
@@ -57,9 +57,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: '`zeroOp`, koşullu olarak uygulanacak işlemin giriş türü.'
+  summary: Koşullu olarak uygulanacak işlemin `zeroOp` giriş türü.
 - uid: "'U"
-  summary: '`oneOp`, koşullu olarak uygulanacak işlemin giriş türü.'
+  summary: Koşullu olarak uygulanacak işlemin `oneOp` giriş türü.
 functors:
 - Adjoint
 seeAlso:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: df838f6eda12db4710ee19cd3c0aeb334935cd22
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6168a991766f07ec5d0fd0a7685f17d02510e038
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213917"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676325"

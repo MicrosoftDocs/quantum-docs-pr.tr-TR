@@ -7,11 +7,11 @@ summary: >-
   Bir tamsayı sabiti ile bir qubit yazmacının modüler artışını gerçekleştirir.
 
 
-  `increment` $a $, `modulus` $N $ ve tamsayı kodlamalı tamsayı ile `target` $ tarafından olduğunu belirlememize izin verin.
+  $A $, `increment` `modulus` $N $ ile $y $ ' de `target` kodlanmış tamsayı olarak belirlememize izin verin.
 
   Sonra işlem şu dönüşümü gerçekleştirir: \begin{hizalaması} \ket{y} \mapsto \ket{(y + a) \operatorname{mod} N} \end{hizalaması} tamsayılar, QFT 'de küçük endian biçiminde kodlanır.
 remarks: >-
-  `target` en yüksek bit 0 olarak ayarlanmış olduğunu varsayar.
+  `target` En yüksek bit 0 olarak ayarlanmış olduğunu varsayar.
 
   Ayrıca hedefin değerinin $N $ ' den küçük olduğunu varsayar.
 
@@ -30,7 +30,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: '`increment` $a $ eklendiği, aşama ile kodlanmış küçük endian biçimindeki tamsayı $y $.'
+    summary: "`increment` $A $ ' nin eklendiği, aşamalı olarak kodlanmış küçük endian biçimindeki tamsayı $y $."
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -43,9 +43,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.incrementbymodularinteger
 metadata:
-  ms.openlocfilehash: 69240c9ecac0917f8f2a6d1f6a3554cc93269cbd
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: e97f88d64d9188d18b10ed7f67adc0225167c466
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871422"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676847"

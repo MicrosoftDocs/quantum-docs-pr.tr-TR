@@ -7,9 +7,9 @@ summary: >-
   Hedef qubitleri kaydettirmek üzerinde denetimli bir "ve" el der "gerçekleştirir.
 
 
-  Bu işlem, şu hesaplama temelini eşleştirerek açıklanan bir dönüşüm uygular, $ $ \begin{hizalaması} \ket{x\_1, \noktalar, x\_n} \ket{y\_1, \noktalar, y\_{n-1}} \mapsto \ket{x\_1, \noktalar, x\_n} \ket{y\_1 \ OPLUS (x\_1 \land x\_2), \noktalar, y\_{n-1} \oplus (x\_1 \land x\_2 \land \ cnoktalar \land x\_{n-1}} , \end{hizalaması} $ $ burada $ \ket{x\_1, \noktalar, x\_n} $ `controls`hesaplama tabanlı durumlara ve $ \ket{y\_1, \noktalar, y\_{n-1}} $ ' ın hesaplama tabanlı durumlarına başvurur.
+  Bu\_işlem, aşağıdaki hesaplama tabanlı eşleme tarafından tanımlanan bir dönüşüm uygular, $ $ \begin{hizalaması} \ket{x 1, \noktalar, x\_n} \ket{y\_1, \noktalar, y\_{n-1}} \mapsto \ket{x\_1, \noktalar, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \noktalar, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cnoktalar \land x\_{n-1}}, \end{hizalaması} $ $, $ \ket{x\_1, \noktalar, x\_n} $, ' nin `controls`hesaplama tabanlı durumlarına ve $ \ket{y\_1, \noktalar, y\_{n-1}} $ öğesinin `targets`hesaplama tabanlı durumlarına başvurur.
 remarks: >-
-  - <xref:microsoft.quantum.canon.applymulticontrolledc> ve <xref:microsoft.quantum.canon.applymulticontrolledca>bir parçası olarak kullanılır.
+  - Ve ' <xref:microsoft.quantum.canon.applymulticontrolledc> <xref:microsoft.quantum.canon.applymulticontrolledca>ın bir parçası olarak kullanılır.
 
   - Açıklama ve devre diyagramı için, bkz. Şekil 4,10, Bölüm 4,3, Nielsen & Chuang.
 syntax: 'operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
@@ -24,14 +24,14 @@ input:
     summary: >-
       Ve merdiveni için denetim olarak kullanılacak qubit kaydı.
 
-      Bu işlem, `controls` sabiti hesaplama tabanlı durumlarını bırakır.
+      Bu işlem, `controls` sabit durum hesaplama durumlarını bırakır.
 
-      `controls` uzunluğu en az 2 olmalı ve `targets`uzunluğuna eşit olmalıdır.
+      Uzunluğu `controls` en az 2 olmalı ve uzunluğu ve uzunluğuna eşit olmalıdır `targets`.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targets
-    summary: '`targets` uzunluğu en az 1, `controls` eksi bir uzunluğa eşit olmalıdır.'
+    summary: Uzunluğu en az `targets` 1, `controls` eksi bir uzunluk uzunluğuna eşit olmalıdır.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -43,9 +43,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: bf5b262ca55bea542218356918cf36eb95502967
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 4cc74315145176fd3a2258a3d92b2f2dfb4d66d3
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871048"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676386"

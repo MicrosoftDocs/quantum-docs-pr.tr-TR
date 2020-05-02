@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Canon
 summary: Bazı girişleri kabul eden bir işlem, bu işlemle uyumlu bir çıkış döndüren bir işlev ve bu işleve bir giriş verildiğinde, girişi işlemin beklenen bir biçime dönüştürmek için işlevini kullanarak işlemi uygular.
 examples: >-
-  Aşağıdaki çağrı, @"Microsoft.Quantum.Arithmetic.LittleEndian"türünde bir giriş için @"Microsoft.Quantum.Arithmetic.BigEndian" girişler için tasarlanan bir işlem uygulamak üzere @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" kullanır:
+  Aşağıdaki çağrı, türünde @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" @"Microsoft.Quantum.Arithmetic.BigEndian" @"Microsoft.Quantum.Arithmetic.LittleEndian"bir girişe giriş için tasarlanan bir işlemi uygulamak için kullanır:
 
 
   ```qsharp
@@ -60,9 +60,9 @@ seeAlso:
 - applywithinputtransformationc
 - transformedoperation
 metadata:
-  ms.openlocfilehash: 56033b5a81f87f7d4718f87cfef0fea020297547
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d49bfe512cc8460aaf9697b545b02ac2b5d96a9f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212608"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676232"

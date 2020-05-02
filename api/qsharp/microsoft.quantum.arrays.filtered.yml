@@ -4,11 +4,11 @@ name: Filtered
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Dizi öğeleri için tanımlanan bir dizi ve koşul verildiğinde, koşulu karşılayan öğelerden oluşan bir dizi döndürür.
-remarks: İşlevi genel türler için tanımlanmıştır, yani bir dizi `'T[]` ve bir koşul olduğunda öğeleri filtreleyebiliriz `'T -> Bool`.
+remarks: İşlevi genel türler için tanımlanmıştır, yani bir dizi `'T[]` ve öğeleri filtreleyebilmemiz için bir koşul. `'T -> Bool`
 examples: >-
   Aşağıdaki kod "filtrelenmiş" işlevini gösterir.
 
-  Bir koşul @"microsoft.quantum.logical.greaterthani" işlevi kullanılarak tanımlanır:
+  @"microsoft.quantum.logical.greaterthani" İşlevi kullanılarak bir koşul tanımlanmıştır:
 
 
   ```qsharp
@@ -33,7 +33,7 @@ input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: predicate
-    summary: Öğeleri filtrelemek için kullanılan Boolean 'a `'T` bir işlev.
+    summary: Öğeleri filtrelemek için `'T` kullanılan Boolean ile bir işlev.
     isFunction: true
     input:
       types:
@@ -44,24 +44,24 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: "`'T`bir dizi öğe."
+    summary: Öğesinden bir dizi öğe `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: Koşula uyan öğelerin dizi `'T[]`.
+  - summary: Koşulu karşılayan `'T[]` bir öğe dizisi.
     isArray: true
     uid: "'T"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: '`array` öğelerinin türü.'
+  summary: '`array` Öğelerin türü.'
 metadata:
-  ms.openlocfilehash: 8ce7f84c2243a5194b5a2223884fb68304767dbf
-  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.openlocfilehash: 6aa19a279425672675182f3c8098e7c47fb5cce6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/26/2020
-  ms.locfileid: "80320745"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676456"
