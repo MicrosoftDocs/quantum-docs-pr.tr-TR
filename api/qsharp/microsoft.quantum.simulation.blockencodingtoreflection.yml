@@ -4,33 +4,33 @@ name: BlockEncodingToReflection
 type: function
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  Bir `BlockEncoding` eşdeğer bir `BLockEncodingReflection`dönüştürür.
+  Bir eşdeğerini `BlockEncoding` bir eşdeğerine `BLockEncodingReflection`dönüştürür.
 
 
-  Diğer bir deyişle, bazı işleci $H `BlockEncodingReflection` bir şekilde kodlayan `BlockEncoding` Unitary $U $ verildiğinde, aynı işleci kodlayan bir $U ' $ içine dönüştürür, ancak aynı zamanda ' ^ \leger = U ' $ $U karşılar.
+  Diğer bir deyişle, bazı `BlockEncoding` işleci $H $ ' i kodlayan bir unitary $U $ verildiğinde, onu aynı işleci `BlockEncodingReflection` kodlayan $U ' $ içine dönüştürür, ancak aynı zamanda ' ^ \Leger = U ' $ $U de karşılar.
 
   Bu, $U $ öğesinin yardımcı kaydının boyutunu bir qubit artırır.
 remarks: Bu, $U $ öğesinin yardımcı kaydının boyutunu bir qubit artırır.
 syntax: 'function BlockEncodingToReflection (blockEncoding : Microsoft.Quantum.Simulation.BlockEncoding) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
-references: '- Hamiltonian benzetim, Qubitiş, Guang Hao Low, Isaac L. Chuang https://arxiv.org/abs/1610.06546'
+references: '- Hamiltonian simülasyonu, Qubitiş, Guang Hao Low, Isaac L. Chuanghttps://arxiv.org/abs/1610.06546'
 input:
   content: '(blockEncoding : Microsoft.Quantum.Simulation.BlockEncoding)'
   types:
   - name: blockEncoding
-    summary: Bir yansımaya dönüştürülecek `BlockEncoding` Unitary $U $.
+    summary: Bir `BlockEncoding` yansımaya dönüştürülecek bir unitary $U $.
     uid: microsoft.quantum.simulation.blockencoding
 output:
   content: Microsoft.Quantum.Simulation.BlockEncodingReflection
   types:
-  - summary: Bir Unitary $U ' $, yazmaçlara `a` ve `s` $H $ ' ı çözer ve bu $U ' ^ \hanger = U ' $ karşılar.
+  - summary: Bir Unitary $U ' $, Yazmaçları `a` üzerinde ortaklaşa bulunan ve `s` bu blok-kodlama $H $ $U ve ' ^ \Hanger = U ' $ karşılar.
     uid: microsoft.quantum.simulation.blockencodingreflection
 seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 47eba3c59ef30f89139830aa4d9b98d22d141d8f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e656a5ab9e187660a20420049374380ef9726647
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065631"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686914"

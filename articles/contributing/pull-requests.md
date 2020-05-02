@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 82af3b5123588cc06882f746ffcb0402ad3f0f2e
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907469"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82686847"
 ---
 # <a name="opening-pull-requests"></a>Çekme İsteklerini Açma #
 
@@ -39,7 +39,7 @@ Yukarıdakileri söylediğinizde, bir çekme isteğinin ne **olduğunu**söyleme
 Git ile çalışırken tüm değişiklikler, bu değişikliklerin, bu değişikliklerden önce deponun durumuyla nasıl ilişkili olduğunu betimleyen _işlemeler_ olarak gösterilir.
 Genellikle yürütmelerin, önceki işlemelerden oklarla daireler olarak çizildiğini gösteren diyagramlar çizeceğiz.
 
-`feature`adlı _dalda_ bir katkı başladığınızı varsayalım.
+Adlı `feature` _dalda_ bir katkı başladığınızı varsayalım.
 Bundan sonra **Microsoft/hisse** 'ın çatalınız şuna benzeyebilir:
 
 ![GitHub 'da çalışma dalı](~/media/git-workflow-step0.png)
@@ -60,9 +60,9 @@ Bu işlemi kullanmak, katkılarını geliştirmek ve hisse programlama topluluğ
 
 ## <a name="how-to-make-a-pull-request"></a>Çekme Isteği oluşturma ##
 
-Çekme isteği oluşturmak için iki ana yol vardır.
-Yalnızca tek bir dosyayı etkileyen küçük değişiklikler için GitHub Web arabirimi, çekme isteğini tamamen çevrimiçi hale getirmek için kullanılabilir.
-Daha karmaşık katkılar için, öncelikle bir çekme isteğine hazırlanmak üzere yerel bilgisayarınızı kullanmak daha kolay olur.
+Çekme isteği oluşturmak için iki ana yol vardır.  
+Yalnızca tek bir dosyayı etkileyen küçük değişiklikler için GitHub Web arabirimi, çekme isteğini tamamen çevrimiçi hale getirmek için kullanılabilir. Düzenlemek istediğiniz dosyaya gitmeniz ve düzenleme simgesini kullanmanız yeterlidir.  
+Daha karmaşık katkılar için, önce bir çekme isteğine hazırlanmak üzere depoyu yerel bilgisayarınıza klonlamak daha kolay olur.
 
 <!--
 ### Using the Web Interface ###
