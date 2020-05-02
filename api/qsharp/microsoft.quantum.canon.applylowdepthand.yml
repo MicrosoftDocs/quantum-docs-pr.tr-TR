@@ -7,7 +7,7 @@ summary: >-
   Yalnızca her iki denetim qubit de 1 durumda ise, adeklem işlemini gerçekleştirmek için ölçümü kullanarak, belirli bir hedef QUI 'yi tersine çevirir.
 
 
-  `target` ters çevir yalnızca her iki denetim de 1 ise, ancak `target` 0 durumunda olduğunu varsaymaktadır.  İşlem T-Count 4, T-Depth 1 ' dir ve bir yardımcı qubit gerektirir ve bu nedenle `target` 0 olarak bilindiğinde CCNOT işlemine tercih edilebilir.  Bu işlemin adekçine ölçüm tabanlıdır ve hiçbir T kapısı gerektirmez ve yardımcı qubit yoktur.
+  `target` Ve yalnızca her iki denetim 1 ise, ancak 0 durumunda olduğunu varsaymaktadır `target` .  İşlem T-Count 4, T-Depth 1 ve bir yardımcı qubit gerektirir ve bu nedenle, 0 olarak bilindiğinde CCNOT işlemi `target` tercih edilebilir.  Bu işlemin adekçine ölçüm tabanlıdır ve hiçbir T kapısı gerektirmez ve yardımcı qubit yoktur.
 syntax: 'operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
 references: >-
   - Cody Jones: "hata toleranslı Toffoli kapısı için önemli kurulumlarını", fiziksel. Rev. A 87, 022328, 2013 [Arxıv: 1212.5069](https://arxiv.org/abs/1212.5069) DOI: 10.1103/PhysRevA. 87.022328
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 060a4b2241f231a9d164bdcce2beb2a3315d96f9
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 14f70cf11cad542f137cee99d5d2a62cedeb4e72
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872946"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672560"
