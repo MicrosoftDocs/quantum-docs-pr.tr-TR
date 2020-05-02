@@ -7,7 +7,7 @@ summary: >-
   Bir tamsayı aralığının Kartezyen kuvveti içindeki her dizin için bir işlem uygular.
 
 
-  Yinelemeli olarak, Aralık `0..(bound - 1)`bir Kartezyen her öğe için bir işlem uygular.
+  Yinelemeli olarak, aralığın `0..(bound - 1)`Kartezyen her öğesi için bir işlem uygular.
 examples: >-
   Bir işlem `op`verildiğinde, aşağıdaki iki kod parçacığı eşdeğerdir:
 
@@ -39,7 +39,7 @@ input:
   content: '(power : Int, bound : Int, op : (Int[] => Unit))'
   types:
   - name: power
-    summary: Aralığın `0..(bound - 1)` olması gereken Kartezyen güç.
+    summary: Aralığın `0..(bound - 1)` oluşturulması gereken Kartezyen güç.
     isPrimitive: true
     uid: Int
   - name: bound
@@ -66,9 +66,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.iteratethroughcartesianproduct
 metadata:
-  ms.openlocfilehash: 4679e1b569dab167eecbb22947543ab993d7fa8d
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: a6f2d0e1f99c6cf7038803271af974a1c5fca465
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870946"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679065"
