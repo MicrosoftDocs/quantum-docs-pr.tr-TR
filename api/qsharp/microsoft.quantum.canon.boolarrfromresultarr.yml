@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.boolarrfromresultarr
 name: BoolArrFromResultArr
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: BoolArrFromResultArr kullanım dışı bırakıldı. Lütfen bunun yerine @"microsoft.quantum.convert.resultarrayasboolarray" kullanın.
+summary: BoolArrFromResultArr kullanım dışı bırakıldı. Lütfen bunun @"microsoft.quantum.convert.resultarrayasboolarray" yerine kullanın.
 syntax: 'function BoolArrFromResultArr (input : Result[]) : Bool[]'
 input:
   content: '(input : Result[])'
@@ -19,9 +19,9 @@ output:
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: f0cebcbde0e33efab779b4530f155a107a6654a6
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: e3e8875e6c65dac9812bca147f6178d21bfb9924
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74860674"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676052"
