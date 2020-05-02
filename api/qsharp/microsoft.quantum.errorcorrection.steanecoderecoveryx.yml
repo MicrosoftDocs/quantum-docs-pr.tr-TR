@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.ErrorCorrection
 summary: ⟦ 7, 1, 3 ⟧ Steane hisse kodu için bir sabitleyici grubunun X bölümü için kod çözücü.
 remarks: Seçilen kod çözücüsü, ⟦ 7, 1, 3 ⟧ Steane kodunun CSS Code özelliğini kullanır, yani X hatalarını ve Z hatalarını ayrı olarak düzeltir. Kodun bir özelliği, sırasıyla x, sırasıyla z özelliğinin, bir tamsayı kabul edildiğinde x, z sendromu 'nin 3 bitlik kodlamasıdır.
 syntax: 'function SteaneCodeRecoveryX (syndrome : Microsoft.Quantum.ErrorCorrection.Syndrome) : Pauli[]'
-references: '- D. Gottesman, "sabitleyici kodlar ve hisse hata düzeltmesi," Ph.D. sıra, Caltech, 1997; https://arxiv.org/abs/quant-ph/9705052'
+references: '- D. Gottesman, "sabitleyici kodlar ve hisse hata düzeltmesi," Ph.D. sıra, Caltech, 1997;https://arxiv.org/abs/quant-ph/9705052'
 input:
   content: '(syndrome : Microsoft.Quantum.ErrorCorrection.Syndrome)'
   types:
@@ -16,7 +16,7 @@ input:
 output:
   content: Pauli[]
   types:
-  - summary: Kodlanmış hisse sisteme uygulandığında `syndrome`karşılık gelen hatayı düzelten Pauli işlemleri dizisi.
+  - summary: Kodlanmış hisse sisteme uygulandığında öğesine `syndrome`karşılık gelen hatayı düzelten Pauli işlemleri dizisi.
     isArray: true
     isPrimitive: true
     uid: Pauli
@@ -24,9 +24,9 @@ seeAlso:
 - steanecoderecoveryx
 - steanecoderecoveryfns
 metadata:
-  ms.openlocfilehash: 7805284f29bfcbb6d4ba56f616f492b2f2126f7b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7b644842eb7ddfe9d44d5288ee5e34e097c00f7b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232294"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682968"

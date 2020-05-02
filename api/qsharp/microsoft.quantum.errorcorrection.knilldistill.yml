@@ -7,7 +7,7 @@ summary: >-
   Knill Magic State deneyimlerinin algoritmasını uygular.
 
 
-  Bir sihirli durum $ $ \begin{hizalaması} \cos\frac{\pi}{8} \tus{0} + \sin \frac{\pi}{8} \tus{1} \end{hizalaması}, $ $ bir yüksek kaliteli kopya verir.
+  Bir sihirli durum $ $ \begin{hizalaması}{8} \cos\frac{\pi} \tus+{0} \sin \ FRAC{\pi}{8} \kovaryans{1} \ End{hizalaması}, $ $ ' nin yaklaşık 15 ' i, daha yüksek kaliteli bir kopya veriyor.
 remarks: >-
   Knill algoritmasını izliyoruz.
 
@@ -20,20 +20,20 @@ input:
   content: '(roughMagic : Qubit[])'
   types:
   - name: roughMagic
-    summary: Bir sihirli durumun yaklaşık kopyalarını içeren on beş qubit kaydı. Bu geri yükleme yordamının aşağıdaki uygulaması, `roughMagic[0]` daha yüksek kaliteli bir kopya içerecektir ve kaydın geri kalanı $ \ket{00\cnoktalara 0} $ duruma sıfırlanacak.
+    summary: Bir sihirli durumun yaklaşık kopyalarını içeren on beş qubit kaydı. Bu geri yükleme yordamının aşağıdaki uygulaması, `roughMagic[0]` daha yüksek kaliteli bir kopya içerir ve kaydın geri kalanı $ \ket{00\cnoktalara 0} $ duruma sıfırlanır.
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
   content: Bool
   types:
-  - summary: '`true`, başarılı olan yordam ve daha yüksek kaliteli kopya kabul edilmelidir. `false`yordam başarısız olursa ve kaydın durumu tanımsız olarak düşünülmelidir.'
+  - summary: Daha `true`sonra, başarılı olan yordam ve daha yüksek kaliteli kopya kabul edilmelidir. Eğer `false`yordam başarısız olursa ve kaydın durumu tanımsız olarak düşünülmelidir.
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 81d87b3dcd6f669a63847e331865b1f2c389f3ce
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 5a8e4c43ff21491b35efedb8f60717979e44f0ed
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226735"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682356"

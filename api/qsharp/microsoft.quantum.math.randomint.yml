@@ -4,7 +4,7 @@ name: RandomInt
 type: operation
 namespace: Microsoft.Quantum.Math
 summary: Sıfırdan büyük veya sıfıra eşit ve belirtilen üst sınırdan küçük bir rastgele tam sayı üretir.
-remarks: Bu işlev <xref:microsoft.quantum.intrinsic.random>çağırır, bu nedenle rasgeleliği, `Random`uygulamasına bağlıdır.
+remarks: Bu işlev çağırır <xref:microsoft.quantum.intrinsic.random>, bu nedenle, rasgeleliği uygulamanın uygulamasına bağlıdır `Random`.
 syntax: 'operation RandomInt (maxInt : Int) : Int'
 input:
   content: '(maxInt : Int)'
@@ -16,13 +16,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Verilen aralıktan rastgele bir tamsayı $x. diğer bir deyişle, $ \Pr (x) = \frac{1}{\texttt{maxInt}} $.
+  - summary: Verilen aralıktan rastgele bir tamsayı $x. Yani, $ \Pr (x) = \frac{1}{\Texttt{maxint}} $ ile birlikte.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 83db1cc0e58cfbf2e3da4af4c72f59ccde4fedf9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 578761c1710484913122227fb3b37330702ea038
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220037"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682750"

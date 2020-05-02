@@ -8,13 +8,13 @@ summary: >-
 
 
   Hamiltonian $H = \ sum_ {j} \ alpha_j P_j $, her biri gerçek katsayı değeri $ \ $P $ olan Pauli terimlerinin toplamı ile açıklanmıştır _j $.
-remarks: Bu, $ \ sum_ {j} \sqrt{\ alpha_j/\Alpha}\ket{j} $ durumunun hazırlanması ve hazırlanması ve çarpma kontrollü bir Unitary <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> ve <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>oluşturmak yoluyla elde edilir.
+remarks: Bu, $ \ sum_ {j} \sqrt{\ alpha_j/\Alpha}\ket{j} $ durumunun hazırlanması ve hazırlanması ve çarpma kontrollü bir Unitary <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> ve <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>oluşturma yoluyla elde edilir.
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystem
-    summary: Pauli koşullarının toplamı olarak $H $ tanımlayan bir `GeneratorSystem`
+    summary: Pauli koşullarının toplamı olarak $H $ tanımlayan bir `GeneratorSystem` .
     uid: microsoft.quantum.simulation.generatorsystem
 output:
   content: (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)
@@ -29,15 +29,15 @@ output:
       ## <a name="second-parameter"></a>İkinci parametre
 
 
-      Hamiltonian $H $ 'ın `BlockEncodingReflection` Unitary $U $. Bu Unitary, $U ^ 2 = I $ ile aynı zamanda bir yansıdır.
+      Hamiltonian $H $ 'ın `BlockEncodingReflection` unitary $U $. Bu Unitary, $U ^ 2 = I $ ile aynı zamanda bir yansıdır.
     types:
     - isPrimitive: true
       uid: Double
     - uid: microsoft.quantum.simulation.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 352ab71457601c38b22e93f706cb59f50bf24151
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 75b614fa23f2e00a3a960224d79905106fb06070
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216144"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682555"

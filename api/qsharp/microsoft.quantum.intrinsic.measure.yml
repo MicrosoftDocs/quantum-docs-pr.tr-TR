@@ -7,9 +7,9 @@ summary: >-
   Belirtilen Pauli tabanlarında bir veya daha fazla qubits 'in Birleşik ölçüsünü gerçekleştirir.
 
 
-  Çıkış sonucu dağıtım tarafından verilir: \begin{hizalaması} \Pr (\Texttt{sıfırlaması} | \ket{\psı}) = \frac12 \braket{\psı \ Mid | \left (\cıvadone + P_0 \otimes P_1 \otimes \cnoktalar \otimes P_ {N-1} \right \end{hizalaması}; burada $P _i $ $i $ TH öğesidir @no__ t_0_ ve burada $N = \texttt{Length} (\texttt{Bases}) $.
+  Çıkış sonucu dağıtım tarafından verilir: \begin{hizalaması} \Pr (\Texttt{dd} | \ket{\psı}) = \frac12 \braket{\psı \ Mid | \left (\cıvadone + P_0 \otimes P_1 \otimes \cnoktalar \otimes P_ {N-1} \right) \mid | \psı}, \end{hizalaması}; burada $P _i $, $i $ TH öğesidir `bases`. ve burada $N = \texttt{Length} (\texttt{Bases}) $.
 
-  Diğer bir deyişle, ölçüm, gözlemlenen ölçüm efektinin eigenvalue değeri $ (-1) ^ d $ olacak şekilde bir `Result` $d $ döndürür.
+  Diğer bir deyişle, ölçüm, `Result` gözlemlenen ölçüm efektinin eigenvalue değeri $ (-1) ^ d $ olacak şekilde bir $d $ döndürür.
 remarks: Temel dizi ve qubit dizisi farklı uzunluklardır, işlem başarısız olur.
 syntax: 'operation Measure (bases : Pauli[], qubits : Qubit[]) : Result'
 input:
@@ -28,13 +28,13 @@ input:
 output:
   content: Result
   types:
-  - summary: $ + $1 eigenvalue gözlemlenmiştir ve $-$1 eigenvalue gözlemlenip `One` `Zero`.
+  - summary: '`Zero`$ + $1 eigenvalue gözlemlenmiştir ve `One` $-$1 eigenvalue gözlemleniyorsa.'
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 65390f851d82eb579d89072dc770f3ce077ce515
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a2f89d1eea48ac0a4dab7e35ef661d89a40ae84a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234113"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682848"
