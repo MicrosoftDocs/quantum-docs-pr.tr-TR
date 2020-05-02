@@ -3,7 +3,7 @@ uid: microsoft.quantum.math.continuedfractionconvergenti
 name: ContinuedFractionConvergentI
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Paydaya daha az veya eşit olan `fraction` için en yakın devam eden kesir convergent 'ı bulur `denominatorBound`
+summary: Paydadan daha az veya eşit olan en `fraction` yakın devam eden kesir convergent 'ı bulur`denominatorBound`
 syntax: 'function ContinuedFractionConvergentI (fraction : Microsoft.Quantum.Math.Fraction, denominatorBound : Int) : Microsoft.Quantum.Math.Fraction'
 input:
   content: '(fraction : Microsoft.Quantum.Math.Fraction, denominatorBound : Int)'
@@ -16,12 +16,12 @@ input:
 output:
   content: Microsoft.Quantum.Math.Fraction
   types:
-  - summary: '`denominatorBound` paydaya daha az veya eşit olan `fraction` en yakın devamlı kesir'
+  - summary: Paydaya daha az `fraction` veya eşit olan en yakın sürekli kesir`denominatorBound`
     uid: microsoft.quantum.math.fraction
 metadata:
-  ms.openlocfilehash: 9599ec6bee680274547d5d4d505cace554de83e2
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4134f4b1f53403eee1c2c87c7442b05931c40026
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229863"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685733"

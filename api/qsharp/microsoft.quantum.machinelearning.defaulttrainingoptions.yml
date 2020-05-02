@@ -23,9 +23,9 @@ output:
   - summary: Sınıflandırıcılardaki eğitim sırasında kullanılmak üzere makul bir varsayılan eğitim seçenekleri kümesi.
     uid: microsoft.quantum.machinelearning.trainingoptions
 metadata:
-  ms.openlocfilehash: 6013d4f7268cfc422eedbe7d2070adbb167ad4ea
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 87f056e336ca78881421e669b3d282af8e679353
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77909475"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685433"
