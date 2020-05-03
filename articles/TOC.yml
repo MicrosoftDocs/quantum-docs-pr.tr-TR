@@ -17,15 +17,7 @@
     - name: QDK’yı kullanmaya başlama
       href: welcome.md
     - name: QDK’yı yükleme
-      items:
-        - name: Yüklemeye genel bakış
-          href: install-guide/index.md
-        - name: 'Q# + C#'
-          href: install-guide/csinstall.md
-        - name: 'Q# + Python'
-          href: install-guide/pyinstall.md
-        - name: 'Q# Jupyter Notebook’ları'
-          href: install-guide/qjupyter.md
+      href: install-guide/toc.yml
     - name: QDK’yı güncelleştirme
       href: install-guide/update.md
     - name: 'Q# projesi oluşturma'
