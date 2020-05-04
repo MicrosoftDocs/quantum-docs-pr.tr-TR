@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 84e5db17ab8d963a75c72da38d3e4487b89abc9d
-ms.sourcegitcommit: b6b8459eb654040f1e19f66411b29fc9e48e95c9
+ms.openlocfilehash: 91f12ef6bd15e27c8920471442c66ff3b1e71122
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82030608"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82677084"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -20,6 +20,21 @@ Bu makale her Quantum Development Kit sürümüne ilişkin bilgileri içerir.
 Yükleme yönergeleri için bu [yükleme kılavuzuna](xref:microsoft.quantum.install) başvurun.
 
 Güncelleştirme yönergeleri için bu [güncelleştirme kılavuzuna](xref:microsoft.quantum.update) başvurun.
+
+## <a name="version-01120042825"></a>Sürüm 0.11.2004.2825
+
+*Sürüm tarihi: 30 Nisan 2020*
+
+Bu sürüm aşağıdakileri içerir:
+
+- Q# komut satırı uygulaması için artık C# veya Python konak dosyasına ihtiyaç duymayan yeni destek. Q# komut satırı uygulamalarını kullanmaya başlama hakkında daha fazla bilgi için [buraya](xref:microsoft.quantum.install.standalone) göz atın.
+- Kuantum rastgele sayı oluşturucusu hızlı başlangıcı, artık C# veya Python konak dosyasına ihtiyaç duymayacak şekilde güncelleştirildi. Güncelleştirilmiş [Hızlı başlangıca](xref:microsoft.quantum.quickstarts.qrng) göz atın
+- IQ# Docker görüntülerine yönelik performans iyileştirmeleri
+
+> [!NOTE]
+> Yeni [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) özniteliğini kullanan Q# komut satırı uygulamaları şu anda Python veya .NET konak programlarından çağrılamıyor.
+> Daha fazla bilgi için [Python](xref:microsoft.quantum.install.python) ve [.NET birlikte çalışabilirlik](xref:microsoft.quantum.install.cs) kılavuzlarına göz atın.
+
 
 ## <a name="version-01120033107"></a>Sürüm 0.11.2003.3107
 

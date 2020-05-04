@@ -1,0 +1,13 @@
+items:
+  - name: Yüklemeye genel bakış
+    href: index.md
+  - name: 'Q# komut satırı uygulamaları'
+    href: standalone.md
+  - name: 'Q# Jupyter Notebook’ları'
+    href: qjupyter.md
+  - name: 'Diğer dillerle Q# kullanma'
+    items:
+      - name: 'Python ile Q# kullanma'
+        href: pyinstall.md
+      - name: '.NET ile Q# kullanma'
+        href: csinstall.md
