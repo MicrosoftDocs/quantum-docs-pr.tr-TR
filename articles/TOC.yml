@@ -20,8 +20,6 @@
       href: install-guide/toc.yml
     - name: QDK’yı güncelleştirme
       href: install-guide/update.md
-    - name: 'Q# projesi oluşturma'
-      href: how-to-guides/create-qsharp-project.md
 - name: Öğreticiler
   items:
     - name: Kuantum rastgele sayı oluşturucusu
