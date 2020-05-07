@@ -7,12 +7,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 264b5640216b2c0a468b625cdef4b9e0123d8b39
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: bf6d6d3d80af485b555429f25b125bfea685bebf
+ms.sourcegitcommit: c57c271ab73f75f165401651fad2b5bc143e9c8f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904766"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82862216"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum Development Kit güncelleştirme (QDK)
 
@@ -26,7 +26,7 @@ En son QDK sürümüyle güncel tutmanız önerilir. En son QDK sürümüne yük
 
 ## <a name="updating-q-projects"></a>Q # projeleri güncelleştiriliyor 
 
-Ya da Python 'u kullanarak C# q # işlemlerini barındırmanıza bakılmaksızın, q # projelerinizi güncelleştirmek için bu yönergeleri izleyin.
+Q # işlemlerini barındırmak için C# veya Python kullanıp kullanmayacağınızı bağımsız olarak, Q # projelerinizi güncelleştirmek için bu yönergeleri izleyin.
 
 1. İlk olarak, [.NET Core SDK 3,1](https://dotnet.microsoft.com/download)' nin en son sürümüne sahip olup olmadığınızı kontrol edin. Komut isteminde aşağıdaki komutu çalıştırın:
 
@@ -40,17 +40,17 @@ Ya da Python 'u kullanarak C# q # işlemlerini barındırmanıza bakılmaksızı
  
 1. Visual Studio 2019 ' nin en son sürümüne güncelleştirin, yönergeler için [buraya](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) bakın
 2. Çözümünüzü Visual Studio 'da açın
-3. Menüden **oluştur** -> **Çözümü Temizle** ' yi seçin
-4. . Csproj dosyalarınızın her birinde, hedef çerçeveyi `netcoreapp3.0` (veya bir kitaplık projesi ise `netstandard2.1`) olarak güncelleştirin.
+3. Menüden,**temiz çözüm** **Oluştur** -> ' u seçin.
+4. . Csproj dosyalarınızın her birinde hedef Framework 'ü (veya `netcoreapp3.1` `netstandard2.1` bir kitaplık projesi ise) olarak güncelleştirin.
     Diğer bir deyişle, formun satırlarını düzenleyin:
 
     ```xml
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     ```
 
     [Burada](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)hedef çerçeveleri belirterek daha fazla ayrıntı bulabilirsiniz.
 5. Çözümünüzdeki tüm dosyaları kaydedin ve kapatın
-6. **Araçlar** -> **komut satırı** -> seçin **Geliştirici komut istemi**
+6. **Araçlar** -> **komut satırı** -> **Geliştirici komut istemi** seçin
 7. Çözümdeki her proje için aşağıdaki komutu çalıştırın:
 
     ```dotnetcli
@@ -58,7 +58,7 @@ Ya da Python 'u kullanarak C# q # işlemlerini barındırmanıza bakılmaksızı
     ```
 
    Projeleriniz başka Microsoft. hisse paketleri (ör. Microsoft. hisse. Numerics) kullanıyorsa, bu komutu da çalıştırabilirsiniz.
-8. Komut istemi ' ni kapatın ve **derleme** -> **Oluştur çözüm** ' u seçin (çözümü yeniden derle *seçeneğini seçmeyin)*
+8. Komut istemi ' ni kapatın ve **derleme** -> **Oluştur çözüm** ' ü seçin (çözümü yeniden *Derle seçeneğini seçmeyin* )
 
 Artık [Visual Studio QDK uzantınızı güncelleştirmeye](#update-visual-studio-qdk-extension)devam edebilirsiniz.
 
@@ -66,7 +66,7 @@ Artık [Visual Studio QDK uzantınızı güncelleştirmeye](#update-visual-studi
 ### <a name="update-q-projects-in-visual-studio-code"></a>Visual Studio Code Q # projelerini güncelleştirme
 
 1. Visual Studio Code, güncelleştirmek için projeyi içeren klasörü açın
-2. **Terminal** -> **yeni Terminal** ' i seçin
+2. **Terminal** -> **yeni terminali** seçin
 3. Komut satırını kullanarak güncelleştirme yönergelerini izleyin (doğrudan aşağıda)
 
 ### <a name="update-q-projects-using-the-command-line"></a>Komut satırını kullanarak Q # projelerini güncelleştirme
@@ -78,11 +78,11 @@ Artık [Visual Studio QDK uzantınızı güncelleştirmeye](#update-visual-studi
     dotnet clean [project_name].csproj
     ```
 
-3. . Csproj dosyalarınızın her birinde, hedef çerçeveyi `netcoreapp3.0` (veya bir kitaplık projesi ise `netstandard2.1`) olarak güncelleştirin.
+3. . Csproj dosyalarınızın her birinde hedef Framework 'ü (veya `netcoreapp3.1` `netstandard2.1` bir kitaplık projesi ise) olarak güncelleştirin.
     Diğer bir deyişle, formun satırlarını düzenleyin:
 
     ```xml
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     ```
 
     [Burada](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)hedef çerçeveleri belirterek daha fazla ayrıntı bulabilirsiniz.
@@ -116,14 +116,14 @@ Aşağıda geliştirme ortamınızı seçin.
 
 ### <a name="update-iq-for-python"></a>Python için IQ # güncelleştirme
 
-1. `iqsharp` çekirdeğini güncelleştirme 
+1. `iqsharp` Çekirdeği güncelleştirme 
 
     ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
-2. `iqsharp` sürümünü doğrulama
+2. `iqsharp` Sürümü doğrulama
 
     ```dotnetcli
     dotnet iqsharp --version
@@ -136,15 +136,15 @@ Aşağıda geliştirme ortamınızı seçin.
     Jupyter Core: 1.2.20112.0
     ```
 
-    `iqsharp` sürümünüz daha yüksekse endişelenmeyin, [en son sürümle](xref:microsoft.quantum.relnotes)eşleşmelidir.
+    `iqsharp` Sürümünüz daha büyükse endişelenmeyin, [en son sürümle](xref:microsoft.quantum.relnotes)eşleşmelidir.
 
-3. `qsharp` paketini güncelleştirme
+3. `qsharp` Paketi güncelleştirme
 
     ```bash
     pip install qsharp --upgrade
     ```
 
-4. `qsharp` sürümünü doğrulama
+4. `qsharp` Sürümü doğrulama
 
     ```bash
     pip show qsharp
@@ -159,7 +159,7 @@ Aşağıda geliştirme ortamınızı seçin.
     ...
     ```
 
-5. `.qs` dosyalarınızın konumundan aşağıdaki komutu çalıştırın
+5. `.qs` Dosyalarınızın konumundan aşağıdaki komutu çalıştırın
 
     ```bash
     python -c "import qsharp; qsharp.reload()"
@@ -169,14 +169,14 @@ Aşağıda geliştirme ortamınızı seçin.
 
 ### <a name="update-iq-for-jupyter-notebooks"></a>Jupyıter Not defterleri için güncelleştirme IQ #
 
-1. `iqsharp` çekirdeğini güncelleştirme
+1. `iqsharp` Çekirdeği güncelleştirme
 
     ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
-2. `iqsharp` sürümünü doğrulama
+2. `iqsharp` Sürümü doğrulama
 
     ```dotnetcli
     dotnet iqsharp --version
@@ -189,7 +189,7 @@ Aşağıda geliştirme ortamınızı seçin.
     Jupyter Core: 1.2.20112.0
     ```
 
-    `iqsharp` sürümünüz daha yüksekse endişelenmeyin, [en son sürümle](xref:microsoft.quantum.relnotes)eşleşmelidir.
+    `iqsharp` Sürümünüz daha büyükse endişelenmeyin, [en son sürümle](xref:microsoft.quantum.relnotes)eşleşmelidir.
 
 3. Jupyter Notebook bir hücreden aşağıdaki komutu çalıştırın:
 
@@ -220,11 +220,11 @@ Aşağıda geliştirme ortamınızı seçin.
 
 2. Hisse projesi şablonlarını güncelleştirin:
 
-   - **Görünüm** -> **Komut Paleti**’ne gidin
+   - **Görünüm** -> **komut paleti** 'ne git
    - **S # seçin: proje şablonlarını Install**
    - Birkaç saniye sonra, "proje şablonlarının başarıyla yüklendiğini" onaylayan bir açılan pencere almalısınız
 
-### <a name="c-using-the-dotnet-command-line-tool"></a>C#`dotnet` komut satırı aracını kullanarak
+### <a name="c-using-the-dotnet-command-line-tool"></a>C#, `dotnet` komut satırı aracını kullanarak
 
 1. .NET için hisse projesi şablonlarını güncelleştirme
 
