@@ -1,6 +1,6 @@
 - name: Microsoft Quantum Belgeleri
   href: index.yml
-- name: Kuantum bilişimiyle çalışmaya başlama
+- name: Genel Bakış
   items:
     - name: Kuantum bilişimi nedir?
       href: overview/what-is-quantum-computing.md
@@ -12,7 +12,7 @@
       href: overview/what-is-qsharp.md
     - name: Nasıl daha fazla bilgi edinebilirim?
       href: overview/how-to-learn-quantum-computing.md
-- name: Kuantum Geliştirme Seti’ni edinin
+- name: Hızlı Başlangıçlar
   items:
     - name: QDK’yı kullanmaya başlama
       href: welcome.md
@@ -22,21 +22,19 @@
       href: install-guide/update.md
     - name: 'Q# projesi oluşturma'
       href: how-to-guides/create-qsharp-project.md
-- name: 'Q# öğrenme kaynakları'
+- name: Öğreticiler
   items:
-    - name: Hızlı Başlangıçlar
-      items:
-        - name: Kuantum rastgele sayı oluşturucusu
-          href: quickstarts/qrng.md
-        - name: 'Q# ile dolaşıklığı keşfetme'
-          href: quickstart.md
-        - name: Grover’ın arama algoritmasını uygulama
-          href: quickstarts/search.md
+    - name: Kuantum rastgele sayı oluşturucusu
+      href: quickstarts/qrng.md
+    - name: 'Q# ile dolaşıklığı keşfetme'
+      href: quickstart.md
+    - name: Grover’ın arama algoritmasını uygulama
+      href: quickstarts/search.md
     - name: 'Kuantum Katalarıyla Q# öğrenme'
       href: intro-to-katas.md
     - name: 'Q# kod örnekleri'
       href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
-- name: Ayrıntılı QDK
+- name: 'Q# kullanıcı kılavuzu'
   items:
     - name: Quantum geliştirme teknikleri
       topicHref: techniques/index.md
@@ -46,15 +44,21 @@
       href: language/toc.yml
     - name: Kuantum simülatörleri ve kaynak tahmin araçları
       href: machines/toc.yml
-- name: 'Q# kitaplıkları'
-  href: libraries/toc.yml
-- name: Kuantum bilişimi kavramları
-  href: concepts/toc.yml
-- name: Daha fazla bilgi
-  href: for-more-info.md
-- name: QDK'ye katkıda bulunma
-  href: contributing/toc.yml
-  topicHref: contributing/index.md
-- name: QDK Sürüm Notları
-  topicHref: relnotes/index.md
-  href: relnotes/toc.yml
+- name: Kavramlar
+  items:
+    - name: Kuantum bilişimi kavramları
+      href: concepts/toc.yml
+    - name: 'Q# kitaplıkları'
+      href: libraries/toc.yml
+- name: Kaynaklar
+  items:
+    - name: Sözlük
+      href: concepts/Glossary.md
+    - name: QDK'ye katkıda bulunma
+      href: contributing/toc.yml
+      topicHref: contributing/index.md
+    - name: QDK Sürüm Notları
+      topicHref: relnotes/index.md
+      href: relnotes/toc.yml
+    - name: Daha fazla bilgi
+      href: for-more-info.md
