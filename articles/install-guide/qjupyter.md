@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: b7276f9b273f601f30e4938018398353b6a9102d
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 38db14ccc5f2406043ff4baee3f562385cdf47a8
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831078"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426389"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Q # Jupyıter Not defterleri ile geliştirme
 
@@ -22,11 +22,11 @@ Jupi Not defterleri yönergeler, notlar ve diğer içeriklerden sonra yerinde ko
 IQ# (ay-kü-şarp okunur) öncelikli olarak Jupyter ve Python tarafından .NET Core SDK için kullanılan ve Q# işlemlerinin derlenmesine ve benzetiminin yapılmasına yönelik temel işlevselliği sağlayan bir uzantıdır.
 
 > [!NOTE]
-> * Q # Jupileter not defterlerinde yalnızca Q # kodunu çalıştırabilir ve işlemler harici konak programlarından (ör. Python veya C# dosyalar) çağrılamaz. Amacınız, bir dış klasik ana bilgisayar programını hisse ile çevreliyorsanız, bu ortam uygun değildir.
+> * Q # Jupileter not defterlerinde yalnızca Q # kodunu çalıştırabilir ve işlemler harici konak programlarından (ör. Python veya C# dosyaları) çağrılamaz. Amacınız, bir dış klasik ana bilgisayar programını hisse ile çevreliyorsanız, bu ortam uygun değildir.
 
-1. Önkoşullar
+1. Ön koşullar
 
-    - [Python](https://www.python.org/downloads/) 3.6 veya üzeri
+    - [Python](https://www.python.org/downloads/) 3,6 veya üzeri
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
     - [.NET Core SDK 3,1 veya üzeri](https://www.microsoft.com/net/download)
 
@@ -62,12 +62,12 @@ IQ# (ay-kü-şarp okunur) öncelikli olarak Jupyter ve Python tarafından .NET C
         Hücrenin çıktısında `SayHello` görmeniz gerekir. Jupyter not defterlerinde çalışırken Q# kodu derlenir ve not defteri bulduğu işlemlerin adını çıkarır.
 
 
-    - Yeni bir hücrede, az önce oluşturduğunuz işlemi (simülatör içinde) `%simulate` komutunu kullanarak yürütün:
+    - Yeni bir hücrede, komutunu kullanarak yeni oluşturduğunuz işlemi (simülatör içinde) yürütün `%simulate` :
 
         ![%simulate magic içeren Jupyter not defteri hücresi](~/media/install-guide-jupyter-simulate.png)
 
-        İade ettiğiniz işlemin sonucuyla birlikte ekranda yazdırılmış iletiyi görmeniz gerekir (burada, işlem yalnızca bir `Unit` türü döndürdüğünden `()` boş tanımlama alanı görüyoruz.
+        İade ettiğiniz işlemin sonucuyla birlikte ekranda yazdırılmış iletiyi görmeniz gerekir (burada, `()` işlem yalnızca bir tür döndürdüğünden, boş tanımlama alanı görüyoruz `Unit` ).
 
-## <a name="whats-next"></a>Sırada ne var?
+## <a name="next-steps"></a>Sonraki adımlar
 
-Quantum Development Kit’i tercih ettiğiniz ortama yüklediğinize göre [ilk kuantum programınızı](xref:microsoft.quantum.write-program) yazıp çalıştırabilirsiniz.
+Quantum Development Kit’i tercih ettiğiniz ortama yüklediğinize göre [ilk kuantum programınızı](xref:microsoft.quantum.quickstarts.qrng) yazıp çalıştırabilirsiniz.

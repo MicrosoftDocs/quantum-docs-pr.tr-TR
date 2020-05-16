@@ -1,167 +1,167 @@
 ---
-title: Kuantum bilgi işlem sözlüğü
-description: Kuantum bilgi işlemde kullanılan ortak terimler, eylemler ve nesneler sözlüğü.
+title: Hisse bilgi işlem sözlüğü
+description: Hisse bilgi işlem için kullanılan ortak terimler, eylem ve nesnelerin bir sözlüğü.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: ee78515a0f47730b7d3df10da0853c5b8a7f6624
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: cbc473eb14d8afd255a7072475dc054e18b98e3e
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81482221"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426698"
 ---
-# <a name="quantum-computing-glossary"></a>Kuantum bilgi işlem sözlüğü
+# <a name="quantum-computing-glossary"></a>Hisse bilgi işlem sözlüğü
 
 ## <a name="adjoint"></a>Adjoint
 
-Karmaşık eşlekap bir [işlemin transktos](xref:microsoft.quantum.glossary#operation). [Üniter](xref:microsoft.quantum.glossary#unitary-operator) bir işleç uygulayan işlemler için, bitişik işlem ters ve bir hançer sembolü ile gösterilir. Örneğin, işlem `U` birimsel işleci temsil ediyorsa `Adjoint U` $U$, sonra $U^\hançer$'ı temsil eder. Daha fazla bilgi için [Adjoint'a](xref:microsoft.quantum.language.file-structure#adjoint)bakın.
+Bir [işlemin](xref:microsoft.quantum.glossary#operation)karmaşık eşleniği devrik. Bir [Unitary](xref:microsoft.quantum.glossary#unitary-operator) işleci uygulayan işlemler için, adjoint işlemin tersidir ve bir dağılım simgesiyle belirtilir. Örneğin, işlem `U` $U $ Unitary işlecini temsil ediyorsa, `Adjoint U` $U ^ \ dağılım $ öğesini temsil eder. Daha fazla bilgi için bkz. [adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).
 
-## <a name="ancilla"></a>Ancilla
+## <a name="ancilla"></a>Anek La
 
-Bir kuantum bilgisayarı için geçici bellek görevi sunan ve gerektiğinde ayrılan ve ayrılan bir [qubit.](xref:microsoft.quantum.glossary#qubit)  Daha fazla bilgi için [çoklu qubits'e](xref:microsoft.quantum.concepts.multiple-qubits)bakın.
+Bir hisse bilgisayarı için geçici bellek görevi gören ve gerektiğinde ayrılan ve ayrılmış bir [qubit](xref:microsoft.quantum.glossary#qubit) .  Daha fazla bilgi için bkz. [birden çok qubit](xref:microsoft.quantum.concepts.multiple-qubits).
 
-## <a name="bell-state"></a>Çan durumu
+## <a name="bell-state"></a>Zil durumu
 
-İki qubitin [entangled](xref:microsoft.quantum.glossary#entanglement) dört özel kuantum [eyaletinden](xref:microsoft.quantum.glossary#quantum-state) biri. Dört durum $\ket{\beta_{ij}} = (\mathbb{I} \otimes X^iZ^j){00} (\ket +{11}\ket{2}) / \sqrt $olarak tanımlanır. Bell durumu, [EPR çifti](xref:microsoft.quantum.glossary#epr-pair)olarak da bilinir.
+İki qubit için en az dört adet en yüksek düzeyde, en önemli [hisse](xref:microsoft.quantum.glossary#quantum-state) [mandan](xref:microsoft.quantum.glossary#entanglement) biri. Dört durum tanımlanmıştır $ \ket{\ beta_ {ij}} = (\mathbb{I} \otimes X ^ iZ ^ j) (\ket {00} + \ ayraç {11} )/\sqrt {2} $. Bir zil durumu, [EPR çifti](xref:microsoft.quantum.glossary#epr-pair)olarak da bilinir.
 
-## <a name="bloch-sphere"></a>Bloch küresi
+## <a name="bloch-sphere"></a>Bloch küre
 
-Üç boyutlu bir birim kürede nokta olarak tek[bir qubit](xref:microsoft.quantum.glossary#qubit) [kuantum durumunun](xref:microsoft.quantum.glossary#quantum-state) grafiksel gösterimi. Daha fazla bilgi için [Bloch Küresini kullanarak Qubits ve Transformations'ı Görselleştirme'ye](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)bakın.
+Üç boyutlu bir birim Sphere öğesinde nokta olarak tek[qubit](xref:microsoft.quantum.glossary#qubit) [hisse durumunun](xref:microsoft.quantum.glossary#quantum-state) grafik gösterimi. Daha fazla bilgi için bkz. [Bloch Sphere kullanarak qubits ve dönüşümleri görselleştirme](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
-## <a name="callable"></a>Callable
+## <a name="callable"></a>Çağrılabilir
 
-Q# dilinde bir [işlem](xref:microsoft.quantum.glossary#operation) veya [işlev.](xref:microsoft.quantum.glossary#function) Daha fazla bilgi için [Bkz. Operasyon ve işlev türleri.](xref:microsoft.quantum.language.type-model#operation-and-function-types)
+Q # dilinde bir [işlem](xref:microsoft.quantum.glossary#operation) veya [işlev](xref:microsoft.quantum.glossary#function) . Daha fazla bilgi için bkz. [işlemler ve işlevler](xref:microsoft.quantum.guide.operationsfunctions).
 
-## <a name="clifford-group"></a>Clifford grubu
+## <a name="clifford-group"></a>Clienfford grubu
 
-[Bloch küreve](xref:microsoft.quantum.glossary#bloch-sphere) [Pauli operatörlerin](xref:microsoft.quantum.glossary#pauli-operators)etkisi permütasyon octants işgal operasyonların kümesi. Bunlar [$X$](xref:microsoft.quantum.intrinsic.x), [$Y$](xref:microsoft.quantum.intrinsic.y), [$Z$](xref:microsoft.quantum.intrinsic.z), [$H$](xref:microsoft.quantum.intrinsic.h) ve [$S$](xref:microsoft.quantum.intrinsic.s)işlemlerini kapsamaktadır.
+[Şişörün](xref:microsoft.quantum.glossary#bloch-sphere) [Küçlerini ve Pauli işleçleri](xref:microsoft.quantum.glossary#pauli-operators)için efekt permütasyonları kaplayan işlem kümesi. Bunlar [$X $](xref:microsoft.quantum.intrinsic.x), [$Y $](xref:microsoft.quantum.intrinsic.y), [$Z $](xref:microsoft.quantum.intrinsic.z), [$H $](xref:microsoft.quantum.intrinsic.h) ve [$S $](xref:microsoft.quantum.intrinsic.s)işlemlerini içerir.
 
-## <a name="controlled"></a>Kontrollü
+## <a name="controlled"></a>Tarafından
 
-Hedef operasyon için bir veya daha fazla [qubit'i](xref:microsoft.quantum.glossary#qubit) etkinleştirici olarak alan bir kuantum [işlemi.](xref:microsoft.quantum.glossary#operation) Daha fazla bilgi için [Bkz. Denetimli.](xref:microsoft.quantum.language.type-model#controlled)
+Hedef işlem için bir veya daha fazla [qubit](xref:microsoft.quantum.glossary#qubit) , etkinleştiriciler [olarak alan bir hisse.](xref:microsoft.quantum.glossary#operation) Daha fazla bilgi için bkz. [denetlenen ve Adjoint işlemleri](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).
 
-## <a name="dirac-notation"></a>Dirac Gösterimi
+## <a name="dirac-notation"></a>Dirac gösterimi
 
-[Kuantum durumlarının](xref:microsoft.quantum.glossary#quantum-state)temsilini kolaylaştıran sembolik bir steno , *bra-ket* gösterimi olarak da adlandırılır.  *Sütyen* kısmı bir satır vektörü temsil eder, örneğin $\bra{A} = \begin{bmatrix} A{_1} & A{_2} \end{bmatrix}$ ve *ket* kısmı bir sütun vektörü \\ \\ temsil eder, $\ket{B} = \begin{bmatrix} B{_1} B{_1} \end{bmatrix$}. Daha fazla bilgi için [Dirac Notation'a](xref:microsoft.quantum.concepts.dirac)bakın.
+Aynı zamanda *köşeli ayraç* olarak da adlandırılan [hisse durumlarının](xref:microsoft.quantum.glossary#quantum-state)gösterimini kolaylaştıran bir sembolik kısayol.  *Köşeli* bölüm bir satır vektörünü temsil eder, örneğin $ \bra{A} = \begin{bmatrix} a {_1} & bir {_2} \end{bmatrix} $ ve *demet* kısmı bir sütun vektörünü temsil eder, $ \ket{b} = \begin{bmatrix} b {_1} \\ \\ b {_2} \end{bmatrix} $. Daha fazla bilgi için bkz. [Dirac gösterimi](xref:microsoft.quantum.concepts.dirac).
 
 ## <a name="eigenvalue"></a>Eigenvalue
 
-Belirli bir dönüşümün bir [eigenvector](xref:microsoft.quantum.glossary#eigenvector) büyüklüğünü dönüşüm uygulaması ile değiştirilir hangi faktör.  Bir kare matris $M $ ve bir eigenvector $v $ göz önüne alındığında, sonra $Mv = cv $, $c $ eigenvalue ve herhangi bir argüman karmaşık bir sayı olabilir. Daha fazla bilgi için [Gelişmiş matris kavramlarına](xref:microsoft.quantum.concepts.matrix-advanced)bakın.
+Belirli bir dönüşüme ait bir [egenvector](xref:microsoft.quantum.glossary#eigenvector) sayısının, dönüşüm uygulaması tarafından değiştirildiği faktör.  $M $ ve bir eigenvector $v $, ardından $Mv = CV $, burada $c $ eigenvalue ve karmaşık bir bağımsız değişken olabilir. Daha fazla bilgi için bkz. [Gelişmiş matris kavramları](xref:microsoft.quantum.concepts.matrix-advanced).
 
 ## <a name="eigenvector"></a>Eigenvector
 
-Yönü belirli bir dönüşümle değişmeyen ve büyüklüğü o vektörün [özdeğerine](xref:microsoft.quantum.glossary#eigenvalue)karşılık gelen bir faktörle değiştirilen bir vektör. Bir kare matris $M $ ve bir eigenvalue $c $ göz önüne alındığında, daha sonra $Mv = cv $, $v $ matris bir eigenvector ve herhangi bir argüman karmaşık bir sayı olabilir. Daha fazla bilgi için [Gelişmiş matris kavramlarına](xref:microsoft.quantum.concepts.matrix-advanced)bakın.
+Yönü, belirli bir dönüşüm tarafından değiştirilmeyen ve büyüklüğü, bu vektörün [eigenine](xref:microsoft.quantum.glossary#eigenvalue)karşılık gelen bir faktörle değiştirilmiş olan bir vektör. Bir kare matrisi $M $ ve eigenvalue $c $, sonra $v $, matrisin eigenbir vektörü ve herhangi bir bağımsız değişken karmaşık bir sayı olabilecek $Mv = CV $. Daha fazla bilgi için bkz. [Gelişmiş matris kavramları](xref:microsoft.quantum.concepts.matrix-advanced).
 
-## <a name="entanglement"></a>Dolaşıklık
+## <a name="entanglement"></a>Entanglement
 
-[Kubitler](xref:microsoft.quantum.glossary#qubit)gibi kuantum parçacıkları birbirine bağlanabilir veya *birbirine* bağlanabilir. Ölçüm sonuçları, sonsuz uzakta ayrılsalar bile ilişkilidir. Dolaşıklık bir qubit [durumunu](xref:microsoft.quantum.glossary#quantum-state) [ölçmek](xref:microsoft.quantum.glossary#measurement) için gereklidir.  Daha fazla bilgi için [Gelişmiş matris kavramlarına](xref:microsoft.quantum.concepts.matrix-advanced)bakın.
+[Qubits](xref:microsoft.quantum.glossary#qubit)gibi hisse parçacıkların birbirleriyle bağımsız olarak açıklanamazlar şekilde *bağlı veya ayrılmış* olabilir. Ölçüm sonuçları, sonsuza kadar ayrıldıklarında bile bağıntılı olur. Entanglement, bir qubit [durumunun](xref:microsoft.quantum.glossary#quantum-state) [ölçülmesi](xref:microsoft.quantum.glossary#measurement) için gereklidir.  Daha fazla bilgi için bkz. [Gelişmiş matris kavramları](xref:microsoft.quantum.concepts.matrix-advanced).
 
 ## <a name="epr-pair"></a>EPR çifti
 
-İki [qubitin](xref:microsoft.quantum.glossary#qubit)dört spesifik maksimal dolaşık [kuantum devletlerinden](xref:microsoft.quantum.glossary#quantum-state) biri. Dört{1} durum $\ket{\beta_{ij}} = (\mathbb \otimes X^iZ^j){00} (\ket +{11}\ket{2}) / \sqrt $olarak tanımlanır. EPR çifti Bell [durumu](xref:microsoft.quantum.glossary#bell-state) olarak da bilinir
+İki [qubit](xref:microsoft.quantum.glossary#qubit)için en az dört adet en yüksek düzeyde, en önemli [hisse](xref:microsoft.quantum.glossary#quantum-state) mandan biri. Dört durum tanımlanmıştır $ \ket{\ beta_ {ij}} = (\mathbb {1} \otimes X ^ iz ^ j) (\ket {00} + \ ayraç {11} )/\sqrt {2} $. Bir EPR çifti, [çan durumu](xref:microsoft.quantum.glossary#bell-state) olarak da bilinir
 
-## <a name="evolution"></a>Evrim
+## <a name="evolution"></a>Ri
 
-Kuantum [durumu](xref:microsoft.quantum.glossary#quantum-state) zaman içinde nasıl değişir. Daha fazla bilgi için [Matrix üstel bölüme](xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials)bakın.
+[Hisse](xref:microsoft.quantum.glossary#quantum-state) , zaman içinde nasıl değişir. Daha fazla bilgi için bkz. [matris üs öğeleri](xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials).
 
 ## <a name="function"></a>İşlev
-Q# dilinde tamamen klasik (kuantum olmayan) bir alt yordam türü. Fonksiyonlar kuantum algoritmaları içinde kullanılırken, qubitler veya çağrı [işlemleri](xref:microsoft.quantum.glossary#operation)üzerinde hareket [edemezler.](xref:microsoft.quantum.glossary#qubit) Daha fazla bilgi için [Bkz. Operasyon ve işlev türleri.](xref:microsoft.quantum.language.type-model#operation-and-function-types)
+Q # dilinde, tamamen klasik (hisse olmayan) bir altyordam türü. İşlevler, hisse algoritmaları içinde kullanıldığında, [qubits](xref:microsoft.quantum.glossary#qubit) veya çağrı [işlemleri](xref:microsoft.quantum.glossary#operation)üzerinde işlem yapılamaz. Daha fazla bilgi için bkz. [işlemler ve işlevler](xref:microsoft.quantum.guide.operationsfunctions).
 
-## <a name="gate"></a>Kapı
+## <a name="gate"></a>Kapısı
 
-Klasik mantık kapıları kavramına dayanan bir kuantum [operasyonu](xref:microsoft.quantum.glossary#operation)için eski bir terim. [Kuantum](xref:microsoft.quantum.glossary#quantum-circuit-diagram) devresi, klasik mantık devrelerinin benzer kavramına dayanan bir kapı (veya işlem ağı) ağıdır.
+Klasik Logic Gates kavramına bağlı olarak, hisse için bir [işlem](xref:microsoft.quantum.glossary#operation)için eski bir terim. [Hisse](xref:microsoft.quantum.glossary#quantum-circuit-diagram) bağlantı, klasik mantık devrelerinin benzer kavramına bağlı olarak, kapıların (veya işlemlerin) bir ağı olur.
 
-## <a name="global-phase"></a>Küresel faz
+## <a name="global-phase"></a>Küresel aşama
 
-İki [durum](xref:microsoft.quantum.glossary#quantum-state) karmaşık bir sayının bir katı $e^{i\phi}$'a kadar aynı olduğunda, bunların genel bir aşamaya kadar farklılık gösterirolduğu söylenir. Yerel aşamaların aksine, küresel aşamalar herhangi [bir ölçüleme](xref:microsoft.quantum.glossary#measurement)ile gözlemlenemez. Daha fazla bilgi için [Qubit'e](xref:microsoft.quantum.concepts.qubit)bakın.
+İki [durum](xref:microsoft.quantum.glossary#quantum-state) , $e ^ {i\phi} $ olan bir karmaşık sayının birden çok katı olduğunda, bunlar küresel bir aşamaya göre farklılık gösterir. Yerel aşamaların aksine, genel aşamalar herhangi bir [Measurment](xref:microsoft.quantum.glossary#measurement)üzerinden gözlemlenemez. Daha fazla bilgi için bkz. [qubit](xref:microsoft.quantum.concepts.qubit).
 
 ## <a name="hadamard"></a>Hadamard
 
-Hadamard operasyonu (hadamard kapısı veya dönüştürmek olarak da adlandırılır) tek bir [qubit](xref:microsoft.quantum.glossary#qubit) üzerinde hareket eder{0}ve qubit{1}başlangıçta $\ket{0}$ durumunda ise $\ket $ veya $\ket $ bir bile [superposition](xref:microsoft.quantum.glossary#superposition) koyar. Q#'da bu işlem önceden tanımlanmış [`H`](xref:microsoft.quantum.intrinsic.h) işlem tarafından uygulanır.
+Hadamard işlemi (Hadamard kapısı veya dönüştürme olarak da bilinir), tek bir [qubit](xref:microsoft.quantum.glossary#qubit) üzerinde çalışır ve [superposition](xref:microsoft.quantum.glossary#superposition) {0} {1} qubit başlangıçta $ \ket $ durumunda olursa, bunu $ \ket $ veya $ \ket $ ' in hatta bir üst konumuna koyar {0} . Q # içinde, bu işlem önceden tanımlı işlem tarafından uygulanır [`H`](xref:microsoft.quantum.intrinsic.h) .
 
-## <a name="immutable"></a>Sabit
+## <a name="immutable"></a>Değişmez
 
-Değeri değiştirilemeyen bir değişken. Q# kelimesi `let` nde değişmez bir değişken anahtar kelime kullanılarak oluşturulur. *Değiştirilebilen* değişkenleri bildirmek için, bildirmek için [değiştirilebilir](xref:microsoft.quantum.glossary#immutable) anahtar `set` sözcüğü ve değeri değiştirmek için anahtar kelimeyi kullanın. 
+Değeri değiştirilemeyen bir değişken. Anahtar sözcüğü kullanılarak Q # içinde sabit bir değişken oluşturulur `let` . Değiştirilebilen değişkenleri bildirmek için *can* , öğesini bildirmek için [kesilebilir](xref:microsoft.quantum.glossary#immutable) anahtar sözcüğünü ve `set` değeri değiştirmek için anahtar sözcüğünü kullanın. 
 
 ## <a name="measurement"></a>Ölçüm
 
-Bir gözlemsonucu veren bir [qubitin](xref:microsoft.quantum.glossary#qubit) (veya qubit kümesinin) manipülasyonu, klasik bir bit elde etmektir. Daha fazla bilgi için [Qubit'e](xref:microsoft.quantum.concepts.qubit#measuring-a-qubit)bakın.
+Bir gözetmenin sonucunu veren bir [qubit](xref:microsoft.quantum.glossary#qubit) (veya qubits kümesi), klasik bir bit elde eden bir düzenleme. Daha fazla bilgi için bkz. [qubit](xref:microsoft.quantum.concepts.qubit#measuring-a-qubit).
 
 ## <a name="mutable"></a>Değiştirilebilir
 
-Oluşturulduktan sonra değeri değiştirilebilecek bir değişken. Q#'da değişken bir değişken `mutable` anahtar kelime kullanılarak `set` bildirilir ve anahtar kelime kullanılarak değiştirilir. `let` Anahtar kelimeyle oluşturulan değişkenler [değişmez](xref:microsoft.quantum.glossary#immutable) ve değerleri değiştirilemez.
+Değeri oluşturulduktan sonra değiştirilmiş olan bir değişken. Q # ' da kesilebilir bir değişken anahtar sözcüğü kullanılarak, anahtar `mutable` sözcüğü kullanılarak değiştirilir `set` . Anahtar sözcükle oluşturulan değişkenler `let` [sabittir](xref:microsoft.quantum.glossary#immutable) ve değerleri değiştirilemez.
 
 ## <a name="namespace"></a>Ad Alanı
 
-İlgili adlar (yani, [işlemler,](xref:microsoft.quantum.glossary#operation) [işlevler](xref:microsoft.quantum.glossary#function)ve kullanıcı [tanımlı türler)](xref:microsoft.quantum.glossary#user-defined-type)koleksiyonu için bir etiket. Örneğin, ad alanı [Microsoft.Quantum.Preparation,](xref:microsoft.quantum.preparation) standart kitaplıkta tanımlanan ve ilk durumların hazırlanmasına yardımcı olan tüm simgeleri etiketler.
+İlgili adların (yani, [işlemler](xref:microsoft.quantum.glossary#operation), [işlevler](xref:microsoft.quantum.glossary#function)ve [Kullanıcı tanımlı türler](xref:microsoft.quantum.glossary#user-defined-type)) toplanması için bir etiket. Örneğin, [Microsoft. hisse. hazırlama](xref:microsoft.quantum.preparation) ad alanı, standart kitaplıkta tanımlanan ve ilk durumları hazırlamaya yardımcı olan tüm sembolleri Etiketler.
 
 ## <a name="operation"></a>İşlem
 
-Q#'daki kuantum infazının temel birimi. Kabaca C, C++ veya Python'daki bir işleve veya C# veya Java'daki statik bir yönteme eşdeğerdir. Daha fazla bilgi için [Bkz. Operasyon ve işlev türleri.](xref:microsoft.quantum.language.type-model#operation-and-function-types)
+Q # içinde temel hisse yürütme birimi. Bu, kabaca C, C++ veya Python içindeki bir işleve veya C# ya da Java 'daki statik bir yönteme eşdeğerdir. Daha fazla bilgi için bkz. [işlemler ve işlevler](xref:microsoft.quantum.guide.operationsfunctions).
 
-## <a name="operator-application"></a>Operatör uygulaması
+## <a name="operator-application"></a>İşleç uygulaması
 
-Kuantum operasyonu yapıyor. Bu genellikle geçerli kuantum durum vektörü için birüniter matris uygular.
+Hisse bir işlem gerçekleştiriliyor. Bu, genellikle geçerli hisse durumu vektörüne bir Unitary matrisi uygular.
 
 ## <a name="oracle"></a>Oracle
 
-Çalışma zamanında kuantum algoritmasına veriye bağlı bilgi sağlayan bir alt yordam. Genellikle, amaç, süperpozisyonda olan girdilere karşılık gelen çıktıların [üst pozisyonunu](xref:microsoft.quantum.glossary#superposition) sağlamaktır. Daha fazla bilgi için [Oracles'a](xref:microsoft.quantum.libraries.data-structures#oracles)bakın.
+Çalışma zamanında bir hisse algoritmasına veri bağımlı bilgiler sağlayan bir altyordam. Genellikle amaç, üst konumdaki girişlere karşılık gelen çıkışların [üst konumunu](xref:microsoft.quantum.glossary#superposition) sağlamaktır. Daha fazla bilgi için bkz. [Oracles](xref:microsoft.quantum.libraries.data-structures#oracles).
 
 ## <a name="partial-application"></a>Kısmi uygulama
 
-Gerekli tüm girdiler olmadan bir [işlevi](xref:microsoft.quantum.glossary#function) veya [işlemi](xref:microsoft.quantum.glossary#operation) çağırma. Bu, gelecekteki bir uygulama sırasında sağlanacak eksik parametrelerin (alt puanla gösterilir) yalnızca ihtiyaç duyduğu yeni bir [çağrılabilir](xref:microsoft.quantum.glossary#callable) döndürür. Örneğin, işlevi `MyFunc(x : int, y : int) : int {return x + y;}` göz önüne alındığında kısmen yeni bir `let NewFunc = MyFunc(_, 3)`işlev için uygulayabilirsiniz. Daha sonra *5*değerini döndüren eksik parametre `NewFunc(2)` ile daha sonra yeni işlevi arayabilirsiniz.  Daha fazla bilgi için [Kısmi uygulamaya](xref:microsoft.quantum.language.expressions#partial-application)bakın.
+Tüm gerekli girişler olmadan bir [işlev](xref:microsoft.quantum.glossary#function) veya [işlem](xref:microsoft.quantum.glossary#operation) çağrılıyor. Bu, gelecekteki bir uygulama sırasında yalnızca eksik parametrelere (alt çizgiyle belirtilir) ihtiyacı olan yeni bir [çağrılabilir](xref:microsoft.quantum.glossary#callable) döndürüyor. Örneğin, işlevi verildiğinde `MyFunc(x : int, y : int) : int {return x + y;}` onu kısmen yeni bir işleve uygulayabilirsiniz `let NewFunc = MyFunc(_, 3)` . Daha sonra yeni işlevi, `NewFunc(2)` *5*değerini döndüren eksik parametre ile daha sonra çağırabilirsiniz.  Daha fazla bilgi için bkz. [kısmi uygulama](xref:microsoft.quantum.guide.operationsfunctions#partial-application).
 
-## <a name="pauli-operators"></a>Pauli operatörleri
+## <a name="pauli-operators"></a>Pauli işleçleri
 
-Üç 2 x 2 üniter matrisler olarak `X`bilinen `Y` `Z` bir dizi , ve kuantum işlemleri. Kimlik matrisi, $I$, genellikle kümede de yer alıyor.  $I = \begin{bmatrix} \\ \\ 1 & 0 0 & 1 \end{bmatrix}$, $X \\ \\ = \begin{bmatrix} 0 & 1 1 & 0 \end{bmatrix}$, $Y = \begin{bmatrix} 0 & -i \\ \\ & 0 \end{bmatrix}$, $Z = \begin{bmatrix} 1 & 0 0 \\ \\ & -1 \end{bmatrix}$.   Daha fazla bilgi için [Tek qubit işlemlerine](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)bakın.
+`X` `Y` Ve hisse işlemleri olarak bilinen üç 2 x 2 Unitary matrisi kümesi `Z` . $I $, kimlik matrisi genellikle küme içinde de bulunur.  $I = \begin{bmatrix} 1 & 0 \\ \\ 0 & 1 \end{bmatrix} $, $X = \begin{bmatrix} 0 & 1 \\ \\ 1 & 0 \end{bmatrix} $, $Y = \begin{bmatrix} 0 &-i \\ \\ i & 0 \end{bmatrix} $, $Z = \begin{bmatrix} 1 & 0 \\ \\ 0 &-1 \end{bmatrix} $.   Daha fazla bilgi için bkz. [tek qubit işlemleri](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
 
-## <a name="quantum-circuit-diagram"></a>Kuantum devre şeması
+## <a name="quantum-circuit-diagram"></a>Hisse devre diyagramı
 
-Örnek devre diyagramı ![gibi basit kuantum programları için [işlem](xref:microsoft.quantum.glossary#operation) sırasını (veya](~/media/qpe.png) [kapıları)](xref:microsoft.quantum.glossary#gate)grafikolarak temsil eden bir yöntem. Daha fazla bilgi için [Kuantum devrelerine](xref:microsoft.quantum.concepts.circuits)bakın.
+Örnek devre diyagramı gibi basit hisse programları için [işlem](xref:microsoft.quantum.glossary#operation) (veya [kapı](xref:microsoft.quantum.glossary#gate)) dizisini grafik olarak temsil eden bir yöntem ![ ](~/media/qpe.png) . Daha fazla bilgi için bkz. [hisse devreleri](xref:microsoft.quantum.concepts.circuits).
 
-## <a name="quantum-libraries"></a>Kuantum kütüphaneleri
+## <a name="quantum-libraries"></a>Hisse kitaplıkları
 
-Q# programları oluşturmak için [işlem](xref:microsoft.quantum.glossary#operation)koleksiyonları, [işlevler](xref:microsoft.quantum.glossary#function) ve [kullanıcı tanımlı türleri.](xref:microsoft.quantum.glossary#user-defined-type) [Standart kitaplık](xref:microsoft.quantum.libraries.standard.intro) varsayılan olarak yüklenir. Diğer kütüphaneler Kimya [kütüphanesi,](xref:microsoft.quantum.chemistry.concepts.intro) [Sayısal kitaplığı](xref:microsoft.quantum.numerics.intro) ve [Makine öğrenme kütüphanesidir.](xref:microsoft.quantum.machine-learning.concepts.intro)
+Q # programları oluşturmak için [işlem](xref:microsoft.quantum.glossary#operation), [işlev](xref:microsoft.quantum.glossary#function) ve [Kullanıcı tanımlı türlerin](xref:microsoft.quantum.glossary#user-defined-type) koleksiyonları. [Standart kitaplık](xref:microsoft.quantum.libraries.standard.intro) varsayılan olarak yüklenir. Kullanılabilen diğer kitaplıklar, [Kyatry kitaplığı](xref:microsoft.quantum.chemistry.concepts.intro), [Numerics kitaplığı](xref:microsoft.quantum.numerics.intro) ve [makine öğrenme kitaplığıdır](xref:microsoft.quantum.machine-learning.concepts.intro).
 
-## <a name="quantum-state"></a>Kuantum durumu
+## <a name="quantum-state"></a>Hisse durumu
 
-Ölçü [olasılıklarının](xref:microsoft.quantum.glossary#measurement) çıkarılabildiği izole edilmiş bir kuantum sisteminin kesin durumu. Kuantum hesaplamasında, kuantum simülatörü bu bilgiyi qubitlerin operasyonlara nasıl tepki verebildiğini simüle etmek için kullanır. Daha fazla bilgi için [Qubit'e](xref:microsoft.quantum.concepts.qubit)bakın.
+Yalıtılmış bir hisse sisteminin, [Ölçü](xref:microsoft.quantum.glossary#measurement) olasılıkların ayıklanabileceği kesin durumu. Hisse benzeticisinde, hisse Benzetici, bu bilgileri kullanarak qubits 'in işlemlere nasıl yanıt verdiğini taklit ediyor. Daha fazla bilgi için bkz. [qubit](xref:microsoft.quantum.concepts.qubit).
 
 ## <a name="qubit"></a>Qubit
 
-Kuantum bilgisinin temel bir birimi, klasik bilgi işlemde *biraza* benzer. Daha fazla bilgi için [Qubit'e](xref:microsoft.quantum.concepts.qubit)bakın.
+Klasik bilgi işlem içindeki bir *bite* benzer temel bir hisse bilgisi birimi. Daha fazla bilgi için bkz. [qubit](xref:microsoft.quantum.concepts.qubit).
 
-## <a name="repeat-until-success"></a>Tekrar-kadar-başarı
+## <a name="repeat-until-success"></a>Yineleme-Until-başarılı
 
-Probabilistically başarılı bir kuantum algoritması. Başarısız olunması üzerine, yordam başarılı olana (veya bir sınıra ulaşılına) kadar yeniden dener. Daha fazla bilgi için bkz: [Başarıya Kadar Yinele (RUS)](xref:microsoft.quantum.techniques.qubits#measurements)
+Bilsel olarak başarılı olan bir hisse algoritması. Hata sonrasında, yordam başarılı olana kadar yeniden dener (veya sınıra ulaşılmış olur). Daha fazla bilgi için bkz. [başarılı olana kadar Yinele (ru)](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop)
 
 ## <a name="standard-libraries"></a>Standart kitaplıklar
 
-Yükleme sırasında Q# derleyicisi ile birlikte yüklenen [işlemler,](xref:microsoft.quantum.glossary#operation) [işlevler](xref:microsoft.quantum.glossary#function) ve [kullanıcı tanımlı türleri.](xref:microsoft.quantum.glossary#user-defined-type) Standart kitaplık uygulaması hedef makinelere göre agnostiktir. Daha fazla bilgi için [Standart kitaplıklar'a](xref:microsoft.quantum.libraries.standard.intro)bakın.
+Yükleme sırasında Q # derleyicisi ile birlikte yüklenen [işlemler](xref:microsoft.quantum.glossary#operation), [işlevler](xref:microsoft.quantum.glossary#function) ve [Kullanıcı tanımlı türler](xref:microsoft.quantum.glossary#user-defined-type) . Standart kitaplık uygulamasının hedef makinelere göre belirsiz olması. Daha fazla bilgi için bkz. [Standart kitaplıklar](xref:microsoft.quantum.libraries.standard.intro).
 
-## <a name="superposition"></a>Süperpozisyon
+## <a name="superposition"></a>Süper konum
 
-Kuantum hesaplamasında bir [qubit'in](xref:microsoft.quantum.glossary#qubit) [ölçülür.](xref:microsoft.quantum.glossary#measurement)  Daha fazla bilgi için [kuantum bilgi işlem nedir](xref:microsoft.quantum.overview.what)bakın.
+Bu, bir [qubit](xref:microsoft.quantum.glossary#qubit) 'in, ölçü [ölçene](xref:microsoft.quantum.glossary#measurement)kadar iki durumun doğrusal bir birleşimi olan $ \ket{\0} $ ve $ \ket{\1} $ olduğunu gösteren kavram.  Daha fazla bilgi için bkz. [hisse kullanımı anlama](xref:microsoft.quantum.overview.understanding).
 
 ## <a name="target-machine"></a>Hedef makine
 
-Donanım veya simülasyon doğru soyut bir kuantum programı düşürür bir derleme hedefi. Bu genellikle kapı değiştirme, hata düzeltme, geometrik düzen ve diğerleri için kodlama dahil olmak üzere birçok amaç için yeniden yazma içerir. Daha fazla bilgi için [Quantum simülatörleri ve ana bilgisayar uygulamalarına](xref:microsoft.quantum.machines)bakın.
+Soyut bir hisse programını donanım veya benzetim doğrultusunda alçalt bir derleme hedefi. Bu genellikle, geçit değiştirme, hata düzeltme için kodlama, geometrik düzen ve diğerleri gibi birçok amaç için yeniden yazma işlemlerini içerir. Daha fazla bilgi için bkz. [hisse simülatörleri ve ana bilgisayar uygulamaları](xref:microsoft.quantum.machines).
 
 ## <a name="teleportation"></a>Işınlanma
 
-Bir [qubit'in](xref:microsoft.quantum.glossary#qubit) bir yerden diğerine fiziksel olarak qubit'i hareket ettirilmeden, [dolaşıklık](xref:microsoft.quantum.glossary#entanglement) ve ölçüm kullanarak veri veya [kuantum durumunu](xref:microsoft.quantum.glossary#quantum-state)yeniden üretmek için kullanılan [bir](xref:microsoft.quantum.glossary#measurement)yöntem.  Daha fazla bilgi için [Kuantum devreleri](xref:microsoft.quantum.concepts.circuits) ve [hepsini bir araya getirin.](xref:microsoft.quantum.techniques.puttingittogether)
+[Entanglement](xref:microsoft.quantum.glossary#entanglement) ve [ölçüm](xref:microsoft.quantum.glossary#measurement)kullanarak, qubit fiziksel olarak hareket ettirmeden, bir veya daha fazla bir yerde, bir [qubit](xref:microsoft.quantum.glossary#qubit) 'e veri veya [hisse durumu](xref:microsoft.quantum.glossary#quantum-state)oluşturma yöntemi.  Daha fazla bilgi için bkz [. hisse başında hisse ve ilgili](xref:microsoft.quantum.concepts.circuits) küta [.](xref:microsoft.quantum.overview.katas)
 
-## <a name="tuple"></a>Tuple
+## <a name="tuple"></a>Le
 
-Tek bir değer olarak hareket eden virgülle ayrılmış değerler topluluğu. Bir tuple *türü* içerdiği değer türleri ile tanımlanır. Q#'da, tuples [değişmezdir](xref:microsoft.quantum.glossary#immutable) ve iç içe olabilir, diziler içerebilir veya bir dizide kullanılabilir. Daha fazla bilgi için [Tuple türlerine](xref:microsoft.quantum.language.type-model#tuple-types)bakın.
+Tek bir değer görevi gören virgülle ayrılmış değerler koleksiyonu. Tanımlama grubu *türü* , içerdiği değer türleri tarafından tanımlanır. Q # içinde, tanımlama grupları [sabittir](xref:microsoft.quantum.glossary#immutable) ve iç içe olabilir, diziler içerebilir veya bir dizide kullanılabilir. Daha fazla bilgi için bkz. [demet türleri](xref:microsoft.quantum.guide.types#tuple-types).
 
-## <a name="unitary-operator"></a>Üniter işleç
+## <a name="unitary-operator"></a>Unitary işleci
 
-Tersi [adjoint'ına](xref:microsoft.quantum.glossary#adjoint)eşit olan bir işleç , yani, $UU^{\hançer} = \id$.
+Ters, [adjoint](xref:microsoft.quantum.glossary#adjoint)değerine eşit olan bir işleç, yani $uu ^ {\leger} = \ID $.
 
 ## <a name="user-defined-type"></a>Kullanıcı tanımlı tür
 
-Tek bir birim olarak adlandırılabilecek yerleşik veya daha önce tanımlanmış türler topluluğu. Daha fazla bilgi için [Bkz. Kullanıcı tanımlı türleri.](xref:microsoft.quantum.language.type-model#user-defined-types)
+Tek bir birim olarak başvurulabilen yerleşik veya önceden tanımlanmış türlerin bir koleksiyonu. Daha fazla bilgi için bkz. [Kullanıcı tanımlı türler](xref:microsoft.quantum.guide.types#user-defined-types).

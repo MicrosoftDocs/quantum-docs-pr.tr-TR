@@ -6,23 +6,23 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 51186134e9279727fec212cdce84f69493aaa656
-ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+ms.openlocfilehash: 01d242ed405bdd326f65e534f82ff378a464ee7d
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80320813"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426871"
 ---
-# <a name="the-resourcesestimator-target-machine"></a>ResourcesEstimator hedef makinesi
+# <a name="the-resources-estimator-target-machine"></a>Kaynaklar Estimator hedef makine
 
-Adından da anlaşılacağı gibi `ResourcesEstimator`, bir hisse bilgisayar üzerinde Q # işleminin belirli bir örneğini çalıştırmak için gereken kaynakları tahmin eder.
+Adından da anlaşılacağı gibi, `ResourcesEstimator` bir hisse bilgisayarındaki Q # işleminin belirli bir örneğini çalıştırmak için gereken kaynakları tahmin eder.
 Bu işlemi, bir hisse bilgisayarının durumunu gerçekten taklit etmeden hisse yürütme işlemini gerçekleştirerek gerçekleştirir; Bu nedenle, kodun klasik bölümü makul bir süre içinde çalıştırılabilecekse binlerce qubit kullanan Q # işlemlerine yönelik kaynakları tahmin edebilir.
 
 ## <a name="usage"></a>Kullanım
 
-`ResourcesEstimator` yalnızca başka bir hedef makine türüdür, bu nedenle herhangi bir Q # işlemini çalıştırmak için kullanılabilir. 
+`ResourcesEstimator`Yalnızca başka bir hedef makine türüdür, bu nedenle herhangi bir Q # işlemini çalıştırmak için kullanılabilir. 
 
-Diğer hedef makineler olarak, bir C# konak programda kullanmak için bir örnek oluşturun ve bunu işlemin `Run` yönteminin ilk parametresi olarak geçirin:
+Diğer hedef makineler olarak, bir C# ana bilgisayar programında kullanmak için bir örnek oluşturun ve bunu işlem yönteminin ilk parametresi olarak geçirin `Run` :
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -42,7 +42,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-Örnekte gösterildiği gibi, `ResourcesEstimator`, bir dosyaya kaydedilebilecek veya analiz edilmek üzere konsola yazıtabilerek sekmeyle ayrılmış değerler (TSV) içeren bir tablo oluşturmak için bir `ToTSV()` yöntemi sağlar. Yukarıdaki programın çıktısı şuna benzemelidir:
+Örnekte gösterildiği gibi, `ResourcesEstimator` `ToTSV()` bir dosyaya kaydedilebilecek veya analiz edilmek üzere konsola yazıtabilerek sekmeyle ayrılmış değerler (TSV) içeren bir tablo oluşturmak için bir yöntem sağlar. Yukarıdaki programın çıktısı şuna benzemelidir:
 
 ```Output
 Metric          Sum
@@ -57,15 +57,15 @@ BorrowedWidth   0
 ```
 
 > [!NOTE]
-> `ResourcesEstimator`, her çalıştırmada hesaplamalarını sıfırlamaz ve aynı örnek başka bir işlem yürütmek için kullanılırsa, mevcut sonuçların üzerine toplama sayılarını saklar.
+> `ResourcesEstimator`Her çalıştırmada hesaplamalarını sıfırlamaz, başka bir işlem yürütmek için aynı örnek kullanılırsa, mevcut sonuçların üzerine toplama sayılarını saklar.
 > Çalıştırmalar arasında hesaplamaları sıfırlamanız gerekiyorsa, her yürütme için yeni bir örnek oluşturun.
 
 
 ## <a name="programmatically-retrieving-the-estimated-data"></a>Tahmini verileri program aracılığıyla alma
 
-TSV tablosuna ek olarak, tahmini kaynaklar `ResourcesEstimator``Data` özelliği aracılığıyla program aracılığıyla alınabilir. `Data`, ölçüm adlarıyla dizine alınmış `Metric` ve `Sum`olmak üzere iki sütunlu `System.DataTable` bir örnek sağlar.
+TSV tablosuna ek olarak, tahmini kaynaklar, özelliği aracılığıyla program aracılığıyla alınabilir `ResourcesEstimator` `Data` . `Data``System.DataTable`iki sütunlu bir örnek sağlar: `Metric` ve `Sum` , ölçüm adlarıyla dizine alınır.
 
-Aşağıdaki kod, bir Q # işlemi tarafından kullanılan `QubitClifford`, `T` ve `CNOT` kapıların toplam sayısını nasıl alacağınızı ve yazdırakullanacağınızı gösterir:
+Aşağıdaki kod, `QubitClifford` `T` `CNOT` bir Q # işlemi tarafından kullanılan toplam ve kapı sayısını alma ve yazdırmanın nasıl yapılacağını gösterir:
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -91,7 +91,7 @@ namespace Quantum.MyProgram
 
 ## <a name="metrics-reported"></a>Bildirilen ölçümler
 
-`ResourcesEstimator`tarafından tahmin edilen ölçümlerin listesi aşağıda verilmiştir:
+Aşağıda tarafından tahmin edilen ölçümlerin listesi verilmiştir `ResourcesEstimator` :
 
 * __Cnot__: yürütülen cnot (denetlenen Pauli X kapısı olarak da bilinir) kapıları sayısı.
 * __Qubitclifford__: herhangi bir tek qubit Clienfford ve Pauli Gates 'in sayısı yürütüldü.
@@ -105,7 +105,7 @@ namespace Quantum.MyProgram
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Ölçüm Sonuçlarının Olasılığını Sağlama
 
-<xref:microsoft.quantum.intrinsic> ad alanından <xref:microsoft.quantum.intrinsic.assertprob>, Q # programının yürütülmesini sağlamaya yardımcı olmak üzere bir ölçünün beklenen olasılığı hakkında bilgi sağlamak için kullanılabilir. Aşağıdaki örnekte bu gösterilmektedir:
+<xref:microsoft.quantum.intrinsic.assertprob>ad alanından, <xref:microsoft.quantum.intrinsic> Q # programının yürütülmesini sağlamaya yardımcı olmak üzere bir ölçünün beklenen olasılığı hakkında bilgi sağlamak için kullanılabilir. Aşağıdaki örnekte bu gösterilmektedir:
 
 ```qsharp
 operation Teleport(source : Qubit, target : Qubit) : Unit {
@@ -127,10 +127,10 @@ operation Teleport(source : Qubit, target : Qubit) : Unit {
 }
 ```
 
-`ResourcesEstimator` karşılaştığında `AssertProb` `PauliZ` ölçmeye `source` ve `q`, olasılık 0,5 ile `Zero` sonucunu verilmelidir. Daha sonra `M` yürüttüğünde, sonuç olasılıkların kayıtlı değerlerini bulur ve `M` olasılık 0,5 ile `Zero` veya `One` döndürür.
+Bu, `ResourcesEstimator` `AssertProb` `PauliZ` `source` `q` ölçmeye çalıştığı ve olasılık 0,5 ile ilgili bir sonucu verilmelidir `Zero` . `M`Daha sonra çalıştırıldığında, sonuç olasılıkların kayıtlı değerlerini bulur ve `M` 0,5 ile geri dönecektir `Zero` `One` .
 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-`ResourcesEstimator`, daha zengin bir ölçüm kümesi sunan hisse bilgisayar [izleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro)üzerine kurulmuştur. Bu, tam çağrı grafiğinde ölçümleri rapor etme özelliğini ve Q # programlarında hata bulmaya yardımcı olması için [ayrı girişler denetleyicisi](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) gibi özellikleri sağlar. Daha fazla bilgi için lütfen [izleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro) belgelerine bakın.
+, `ResourcesEstimator` Daha zengin bir ölçüm kümesi sunan hisse bilgisayar [izleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro)üzerine kurulmuştur. Bu, tam çağrı grafiğinde ölçümleri rapor etme ve Q # programlarında hata bulmaya yardımcı olması için [ayrı girişler denetleyicisi](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) gibi özellikler sağlar. Daha fazla bilgi için lütfen [izleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro) belgelerine bakın.
 

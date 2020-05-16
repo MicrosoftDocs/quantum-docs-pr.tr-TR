@@ -1,19 +1,19 @@
 ---
-title: Q# ve Python ile geliştirme
+title: 'Q # ve Python ile geliştirme'
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: e1b8a0c68b3ac0c059c6de6e478593321764ff88
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: a8c5b9c25c069f98ef8eefd6cfbc36bf3376931c
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680156"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426358"
 ---
-# <a name="develop-with-q--python"></a>Q# ve Python ile geliştirme
+# <a name="develop-with-q-and-python"></a>Q # ve Python ile geliştirme
 
 Q # işlemlerini çağırmak için Python konak programları geliştirmek üzere QDK 'yi yükler.
 
@@ -24,7 +24,7 @@ Q # işlemlerini çağırmak için Python konak programları geliştirmek üzere
     - [.NET Core SDK 3,1 veya üzeri](https://www.microsoft.com/net/download)
 
 
-1. Q # `qsharp` ve Python arasında birlikte çalışabilirliğine izin veren bir Python paketi olan paketini yükler.
+1. `qsharp`Q # ve Python arasında birlikte çalışabilirliğine izin veren bir Python paketi olan paketini yükler.
 
     ```bash
     pip install qsharp
@@ -83,6 +83,6 @@ Q # işlemlerini çağırmak için Python konak programları geliştirmek üzere
 > [!NOTE]
 > * Ayrıca, Python Jupyıter not defterlerini, klasik Python programını yazmak ve hücrelerden Q # işlemlerini çağırmak için de kullanabilirsiniz. Python kodu yalnızca normal bir Python programıdır.
 
-## <a name="whats-next"></a>Sırada ne var?
+## <a name="next-steps"></a>Sonraki adımlar
 
-Quantum Development Kit’i tercih ettiğiniz ortama yüklediğinize göre [ilk kuantum programınızı](xref:microsoft.quantum.write-program) yazıp çalıştırabilirsiniz.
+Quantum Development Kit’i tercih ettiğiniz ortama yüklediğinize göre [ilk kuantum programınızı](xref:microsoft.quantum.quickstarts.qrng) yazıp çalıştırabilirsiniz.

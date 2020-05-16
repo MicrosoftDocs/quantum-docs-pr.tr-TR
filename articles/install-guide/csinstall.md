@@ -1,24 +1,24 @@
 ---
-title: Q# ve C# ile geliştirme
+title: Q# ve .NET ile geliştirme
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 5bcb036b0b32e64d43f90e9a068d9dcc237890ba
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: 155367dbb1373f00e2b0bd732a5319b32462c9f9
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680175"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426498"
 ---
-# <a name="using-q-with-c-and-f"></a>C\# ve F ile Q # kullanma\#
+# <a name="develop-with-q-and-net"></a>Q# ve .NET ile geliştirme
 
 Q #, C# ve F # gibi .NET dilleri ile birlikte oynamak üzere geliştirilmiştir.
 Bu kılavuzda, bir .NET dilinde yazılmış bir ana bilgisayar programıyla Q # ' ı nasıl kullanacağınızı göstereceğiz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - [Q # komut satırı projeleriyle kullanılmak üzere](xref:microsoft.quantum.install.standalone)hisse geliştirme setini yükler.
 
@@ -29,7 +29,7 @@ Bu kılavuzda, bir .NET dilinde yazılmış bir ana bilgisayar programıyla Q # 
 ### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 - Yeni bir Q # kitaplığı oluşturun
-  - **Dosya** -> **New**yeni -> **Proje** 'ye git
+  - **Dosya**  ->  **Yeni**  ->  **Proje** 'ye git
   - Arama kutusuna "Q #" yazın
   - **Q # kitaplığı** Seç
   - **İleri** Seç
@@ -84,9 +84,9 @@ Q # derleyicisi her bir Q # işlemi ve bir Benzetici üzerinde hisse
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 
-Bu işlemi bir hisse Benzetici üzerinde .NET 'ten çağırmak için, Q # derleyicisi `Run` tarafından oluşturulan `RunAlgorithm` .net sınıfının yöntemini kullanabilirsiniz:
+Bu işlemi bir hisse Benzetici üzerinde .NET 'ten çağırmak için, `Run` `RunAlgorithm` Q # derleyicisi tarafından oluşturulan .net sınıfının yöntemini kullanabilirsiniz:
 
-### <a name="c"></a>[, #](#tab/tabid-csharp)
+### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 :::code language="csharp" source="~/quantum/samples/interoperability/dotnet/csharp/Host.cs" range="4-":::
 
@@ -96,6 +96,6 @@ Bu işlemi bir hisse Benzetici üzerinde .NET 'ten çağırmak için, Q # derley
 
 ***
     
-## <a name="whats-next"></a>Sırada ne var?
+## <a name="next-steps"></a>Sonraki adımlar
 
-Hem Q # komut satırı programlarında hem de .NET ile birlikte çalışabilirliğine sahip olduğunuza göre, [ilk hisse programınızı](xref:microsoft.quantum.write-program)yazabilir ve çalıştırabilirsiniz.
+Hem Q # komut satırı programlarında hem de .NET ile birlikte çalışabilirliğine sahip olduğunuza göre, [ilk hisse programınızı](xref:microsoft.quantum.quickstarts.qrng)yazabilir ve çalıştırabilirsiniz.

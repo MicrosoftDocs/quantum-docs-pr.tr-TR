@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.pauli
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 08babbcb0d6c6c4d83622489bc4ecc811e64829a
-ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+ms.openlocfilehash: 3ce9c0ea13d62bd662f3ccc450c385799ddb264b
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80320864"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426566"
 ---
 # <a name="pauli-measurements"></a>Pauli ölçümleri
 
@@ -21,8 +21,8 @@ Q # ile çalışırken, çalıştıracağınız en yaygın ölçüm türleri *Pa
 Bu gibi durumlarda, bir Pauli işlecinin, genel olarak $X, Y, Z $ veya $Z \otimes Z, X\otimes X, X\otimes Y $ gibi bir operatör ölçmesi için yaygın olarak ele alınmıştır.
 
 > [!TIP]
-> Q # içinde, Multi-qubitpauli işleçleri genellikle `Pauli[]`türündeki diziler tarafından temsil edilir.
-> Örneğin, $X \otimes Y $ 'ı göstermek için, dizi `[PauliX, PauliZ, PauliY]`kullanabilirsiniz.
+> Q # içinde, Multi-qubit Pauli işleçleri genellikle türündeki diziler tarafından temsil edilir `Pauli[]` .
+> Örneğin, $X \otimes Y $ 'ı göstermek için, diziyi kullanabilirsiniz `[PauliX, PauliZ, PauliY]` .
 
 Pauli işleçleri açısından ölçüm ele alınması, özellikle de hisse hata düzeltmesinin alt alanında ortaktır.
 Q # ' da benzer bir kuralı izliyoruz; Artık ölçümlerin bu alternatif görünümünü açıkladık.
@@ -36,12 +36,12 @@ Bu alt boşlukların öz belirlemek için, bunları açıklamak için bir dile i
 İki alt boşluğu tanımlamanın bir yolu, kural tarafından $ \pm $1 olacak şekilde yalnızca iki benzersiz eigenvalues içeren bir matris aracılığıyla belirtilerek belirlenir.
 Alt boşlukları bu şekilde açıklayan basit bir örnek için $Z $:
 
-$ $ \begin{hizalaması} Z & = \begin{bmatrix} 1 & 0 \\\\ 0 &-1 \end{bmatrix}.
+$ $ \begin{hizalaması} Z & = \begin{bmatrix} 1 & 0 \\ \\ 0 &-1 \end{bmatrix}.
 \end{hizalaması} $ $
 
-Pauli-$Z $ matrisinin köşegen öğelerini okuyarak, $Z $ 'ın, karşılık gelen eigenvalues $ \pm $1 ile iki eigenvektörün, $ \tus{0}$ ve $ \tus{1}$ olduğunu görebiliriz.
-Bu nedenle, qubit ' i ölçyoruz ve `Zero` elde ediyorsanız ($ \demet{0}$ ' e karşılık gelir), qubitin durumunun $Z $ işlecinin $ + $1 eigenstate olduğunu biliyoruz.
-Benzer şekilde, `One`elde ettiğimiz için, qubit durumunun bir $-$1 eigenstate $Z $ olduğunu biliyoruz.
+Pauli-$Z $ matrisinin köşegen öğelerini okuyarak, $Z $ 'ın, {0} {1} karşılık gelen eigenvalues $ \pm $1 ile iki eigenvektörün olduğunu, $ \ket $ ve $ \ket $ olduğunu görebiliriz.
+Bu nedenle, qubit ' i ölçyoruz ve elde ediyorsanız `Zero` ($ \ket $. durum $ \ {0} ' a karşılık gelir), qubitin durumunun $Z $ işlecinin $ + $1 eigenstate olduğunu biliyoruz.
+Benzer şekilde, elde etmemiz durumunda `One` , qubitimizin durumunun $Z $ $-$1 eigenstate olduğunu biliyoruz.
 Bu işlem, Pauli ölçümlerinin dilinde "ölçüm Pauli $Z $" olarak adlandırılır ve hesaplama tabanlı ölçüm gerçekleştirmeyle tamamen eşdeğerdir.
 
 $Z $ ' ın bir Unitary dönüştürmesi olan her $2 \ kez $2 matrisi de bu ölçütleri karşılar.
@@ -56,12 +56,12 @@ Bu ölçümler, kolaylık sağlamak için aşağıda verilmiştir.
 | $X $               | $H $                    |
 | $Y $               | $HS ^ {\hanger} $         |
 
-Diğer bir deyişle, bu dil kullanıldığında, "Measure $Y $", ^ \linger $ $HS uygulama ve daha sonra hesaplama temelinde ölçme ile eşdeğerdir; burada [`S`](xref:microsoft.quantum.intrinsic.s) , bazen "aşama kapısı" olarak adlandırılan ve Unitary matrisi tarafından benzetilen bir iç hisse dır
+Diğer bir deyişle, bu dil kullanıldığında, "Measure $Y $", ^ \linger $ $HS uygulama ve daha sonra hesaplama temelinde ölçme ile eşdeğerdir; burada, [`S`](xref:microsoft.quantum.intrinsic.s) bazen "aşama kapısı" olarak adlandırılır ve Unitary matrisi tarafından benzetilir.
 
-$ $ \begin{hizalaması} S = \begin{bmatrix} 1 & 0 \\\\ 0 & i \end{bmatrix}.
+$ $ \begin{hizalaması} S = \begin{bmatrix} 1 & 0 \\ \\ 0 & ı \end{bmatrix}.
 \end{hizalaması} $ $
 
-Ayrıca, $HS ^ \dağılım $ öğesini hisse durum vektörüne uygulamak ve sonra $Z $ ölçüsüne benzer ve aşağıdaki işlem `Measure([PauliY], [q])`eşdeğerdir:
+Ayrıca, $HS ^ \hanger $ ' ı hisse durumu vektörüne uygulamak ve sonra $Z $ öğesini ölçerek aşağıdaki işlem ile eşdeğerdir `Measure([PauliY], [q])` :
 
 ```Q#
 operation MeasureY(qubit : Qubit) : Result {
@@ -76,16 +76,16 @@ operation MeasureY(qubit : Qubit) : Result {
 }
 ```
 
-Doğru durum daha sonra hesaplama temeline geri dönüştürülmesiyle, $SH $ ' i hisse Yukarıdaki kod parçacığında, işlem temelinde dönüştürme işlemi, `within … apply` bloğunun kullanımı tarafından otomatik olarak işlenir.
+Doğru durum daha sonra hesaplama temeline geri dönüştürülmesiyle, $SH $ ' i hisse Yukarıdaki kod parçacığında, işlem temelinde dönüştürme işlemi, blok kullanılarak otomatik olarak işlenir `within … apply` .
 
-Q # ' da, sonucu---, durum---ile etkileşimde bulunarak ayıklanan klasik bilgiler `Result` bir değer $j \\\{\Texttt{dd}, \texttt{One}\\} $ değerinin Pauli işlecinin ölçülen $ (-1) ^ j $ eigenalanında olup olmadığını belirten bir değeri tarafından verilmiştir.
+Q # ' da, sonuç---, durum---ile etkileşimde bulunarak ayıklanan klasik bilgiler, `Result` \\ \\ sonucun Pauli işlecinin $ (-1) ^ j $ eigenin $ (-1) ^ j $ eigenin değerinde olup olmadığını belirten bir değer olan $j \In {\texttt{dd}, \texttt{One}} $ değeri tarafından verilir.
 
 
 ## <a name="multiple-qubit-measurements"></a>Birden çok qubit ölçümleri
 
 Multi-qubitpauli işleçlerinin ölçümleri benzer şekilde, şöyle görüldüğü gibi tanımlanmıştır:
 
-$ $ Z\otimes Z = \begin{bmatrix}1 & 0 & 0 & 0\\\\ 0 &-1 & 0 & 0\\\\ 0 & 0 &-1 & 0\\\\ 0 & 0 & 0 & 1 \ End {bmatrix}.
+$ $ Z\otimes Z = \begin{bmatrix}1 &0 &0&0 \\ \\ 0&-1&0&0 0&0& \\ \\ -1&0 \\ \\ 0&0&0&1 \ End {bmatrix}.
 $$
 
 Bu nedenle, iki Pauli-$Z $ işleçlerinin Tensor ürünleri, $ + $1 ve $-$1 eigenvalues içeren iki boşluktan oluşan bir matris oluşturur.
@@ -93,7 +93,7 @@ Tek qubit durumunda olduğu gibi, her ikisi de erişilebilir vektör alanının 
 Genel olarak, Pauli-$Z $ işleçlerinin herhangi bir Tensor ürünü ve kimliğin bu şekilde bu şekilde uyumlu olması için, Tensor ürünü tanımından kolayca bakmak kolaydır.
 Örneğin,
 
-$ $ \begin{hizalaması} Z \otimes \cıvadone = \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 &-1 ' & 0 \\\\ 0 & 0 & 0 &-1 \end{bmatrix}.
+$ $ \begin{hizalaması} Z \otimes \cıvadone = \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 0 & 0 & \\ \\ -1 & 0 0 & 0 \\ \\ & 0 &-1 \end{bmatrix}.
 \end{hizalaması} $ $
 
 Daha önce olduğu gibi, bu tür Matrislerin her türlü Unitary dönüştürmesi, $ \pm $1 eigenvalues ile etiketlenmiş iki yarı boşluğu da açıklar.
@@ -101,7 +101,7 @@ Daha önce olduğu gibi, bu tür Matrislerin her türlü Unitary dönüştürmes
 Tek qubit çalışmasına benzer şekilde, tüm iki-qubit Pauli-ölçümleri, $4 \ Times $4 Unitary $U $ için $U ^ \hanger (Z\otimes \ID) U $ olarak yazılabilir. Aşağıdaki tablodaki dönüşümleri numaralandırıyoruz.
 
 > [!NOTE]
-> Aşağıdaki tabloda, $ $ \begin{hizalaması} \operatorname{SWAP} & = \left (\begin{Matrix} 1 & 0 & 0 & 0 \\\\ 0 matrisini göstermek için $ \operatorname{SWAP} $ kullanırız. & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{Matrix}\right) \end{hizalaması} $ $, iç işlem [`SWAP`](xref:microsoft.quantum.intrinsic)benzetimini yapmak için kullanılır.
+> Aşağıdaki tabloda, $ \operatorname{SWAP} $ matrisini $ $ \begin{hizalaması} \operatorname{SWAP} & = \left (\begin{Matrix} 1 & 0 & 0 & 0 0 & 0 & \\ \\ 1 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{Matrix}\right) \end{hizalaması} $ $ kullanan iç işlemin benzetimini yapmak için kullanılır [`SWAP`](xref:microsoft.quantum.intrinsic) .
 
 |Pauli ölçümü     |Unitary dönüştürmesi  |
 |----------------------|------------------------|
@@ -112,31 +112,31 @@ Tek qubit çalışmasına benzer şekilde, tüm iki-qubit Pauli-ölçümleri, $4
 | $ \ cıvabitti \otimes Z $ | $ \operatorname{SWAP} $ |
 | $ \ cıvabitti \otimes X $ | $ (H\otimes \cıvadone) \operatorname{SWAP} $ |
 | $ \ bolbitti \otimes Y $ | $ (HS ^ \hanger\otimes \cıvadone) \operatorname{SWAP} $ |
-| $Z \otimes Z $ | $ \operatorname{CNOT}\_{10}$ |
-| $X \otimes Z $ | $ \operatorname{CNOT}\_{10}(H\otimes \ cıvabitti) $ |
-| $Y \otimes Z $ | $ \operatorname{CNOT}\_{10}(HS ^ \hanger\otimes \ cıvadone) $ |
-| $Z \otimes X $ | $ \operatorname{CNOT}\_{10}(\boldone\otimes H) $ |
-| $X \otimes X $ | $ \operatorname{CNOT}\_{10}(H\otimes H) $ |
-| $Y \otimes X $ | $ \operatorname{CNOT}\_{10}(HS ^ \hanger\otimes H) $ |
-| $Z \otimes Y $ | $ \operatorname{CNOT}\_{10}(\cıvadone \otimes HS ^ \ dağılım) $ |
-| $X \otimes Y $ | $ \operatorname{CNOT}\_{10}(H\otimes HS ^ \ dağılım) $ |
-| $Y \otimes Y $ | $ \operatorname{CNOT}\_{10}(HS ^ \hanger\otimes HS ^ \ dağılım) $ |
+| $Z \otimes Z $ | $ \operatorname{CNOT} \_ {10} $ |
+| $X \otimes Z $ | $ \operatorname{CNOT} \_ {10} (H\otimes \ cıvabitti) $ |
+| $Y \otimes Z $ | $ \operatorname{CNOT} \_ {10} (HS ^ \gesger\otimes \cıvadone) $ |
+| $Z \otimes X $ | $ \operatorname{CNOT} \_ {10} (\boldone\otimes H) $ |
+| $X \otimes X $ | $ \operatorname{CNOT} \_ {10} (H\otimes H) $ |
+| $Y \otimes X $ | $ \operatorname{CNOT} \_ {10} (HS ^ \hanger\otimes H) $ |
+| $Z \otimes Y $ | $ \operatorname{CNOT} \_ {10} (\cıvadone \OTIMES HS ^ \ dağılım) $ |
+| $X \otimes Y $ | $ \operatorname{CNOT} \_ {10} (H\otimes HS ^ \ dağılım) $ |
+| $Y \otimes Y $ | $ \operatorname{CNOT} \_ {10} (HS ^ \abger\otimes HS ^ \ dağılım) $ |
 
-Burada [`CNOT`](xref:microsoft.quantum.intrinsic.cnot) işlem aşağıdaki nedenlerden dolayı görüntülenir.
+Burada, [`CNOT`](xref:microsoft.quantum.intrinsic.cnot) işlem aşağıdaki nedenlerden dolayı görüntülenir.
 $ \Cıvadone $ matrisini içermeyen her bir Pauli ölçümü, yukarıdaki düşünene kadar \otimes Z $ $Z bir Unitary 'e eşittir.
 $Z \otimes Z $ ' nin eigenvalues değeri yalnızca her bir hesaplama tabanlı vektörü oluşturan qubits 'in eşliği üzerine bağlıdır ve denetlenen işlemler bu eşliği hesaplamak ve ilk bit içinde saklamak için işlem yapar.
 İlk bit ölçülene kadar, elde edilen yarı alanın kimliğini kurtararak Pauli işlecinin ölçülesiyle eşdeğerdir.
 
-Bir ek notta: $Z \otimes Z $ ölçüyü, $Z \otimes \mathbb{1}$ ve sonra $ \mathbb{1} \otimes Z $ gibi bir şekilde ölçerek aynı olduğunu varsaymaya karşın, bu varsayım false olur.
+Bir ek notta: $Z \otimes Z $ ölçüyü, $Z \otimes \mathbb {1} $ ve sonra $ \mathbb \Otimes z $ gibi ardışık olarak ölçmeye benzer olduğunu varsaymaya rağmen {1} Bu varsayım yanlış olur.
 Nedeni, bu işleçlerin her biri için $Z \otimes Z $ projelerini, bu işleçlerin $ + $1 veya $-$1 eigenstate.
-$Z \otimes \mathbb{1}$ ve sonra $ \mathbb{1}, ilk olarak bir $Z \otimes \mathbb{1}$ ve daha sonra da $ \mathbb{1}
+$Z \otimes \mathbb {1} $ ve sonrasında $ \mathbb {1} \Otimes z $ projeleri, ilk olarak "\otimes \mathbb $ $Z bir yarı alana {1} ve sonra da $ \Mathbb \otimes z $ ' ın bir yarı alanına kadar {1} .
 Dört hesaplama tabanlı vektör olduğu için, her iki ölçüm de durum, durumu çeyrek boşluk olarak azaltır ve bu nedenle tek bir hesaplama tabanlı vektöre düşürür.
 
 ## <a name="correlations-between-qubits"></a>Qubits arasında correlations
 $X \otimes X $ veya $Z \otimes Z $ gibi Pauli matrislerini ölçmeye yönelik başka bir yöntem de, bu ölçümlerin iki qubit arasındaki bağıntılar içinde depolanan bilgilere bakmasına olanak tanır.
 $X \otimes \ID $ ölçme, ilk qubit 'de yerel olarak saklanan bilgilere bakmanızı sağlar.
 Her iki ölçüm türü de hisse bilgi işlem ortamında eşit olmakla birlikte, önceki bir deyişle hisse bilgi işlem gücünü güçlendirin.
-Bu, bilgi işlem ortamında, genellikle öğrenmek istediğiniz bilgilerin tek bir qubit içinde depolanmadığını, ancak aynı anda tüm qubits 'de yerel olarak depolanmadığını ve bu nedenle yalnızca bir eklem ölçümü üzerinden arayarak (ör. $Z \otimes Z $) bunu yapmaz bilgi bildirim haline gelir.
+Bu, bilgi işlem ortamında, genellikle öğrenmek istediğiniz bilgilerin tek bir qubit içinde depolanmadığını, ancak aynı anda tüm qubits 'de yerel olarak depolanmadığını ve bu bilgilerin yalnızca bir eklem ölçümü aracılığıyla (örneğin, $Z \otimes Z $), bu bilgilerin bildirim haline gelmesini gösterir.
 
 Örneğin, hata düzeltilirken, korumamıza çalıştığımız durum hakkında hiçbir şey öğrenirken bir hata oluştuğunu öğrenmek istiyoruz.
 [Bit-çevir kod örneği](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code) , $Z \otimes z \otimes \ID $ ve $ \ID \otimes z \otimes z $ gibi ölçümleri kullanarak bunu nasıl yapakullanabileceğinizi gösteren bir örnek gösterir.
@@ -150,7 +150,7 @@ Q # içinde, bu ölçümler $j $ $ (-1) ^ j $ işaret egenünde bir sonuç verir
 Bu tür işleçleri ölçmek, diagonalizing $ ve $ \ID $ ' $Z nin bir Tensor ürünü olarak işlemi ifade etmek için gereken $U $ Gate ' i açıklayan, denetlenen kapıların ve temel dönüştürmelerin uzun zincirlerine ihtiyaç duyduğundan, bu tür işleçlerin bir yerleşik özelliği olarak bulunması faydalı olabilir.
 Önceden tanımlanmış Bu ölçülerden birini yapmak istediğinizi belirleyebilmeksizin, bir hesaplama tabanlı ölçüm için gerekli bilgileri sağlamak üzere temelinizi nasıl dönüştürebileceğinizi merak etmeniz gerekmez.
 S #, sizin için gerekli tüm temel dönüştürmeleri otomatik olarak işler.
-Daha fazla bilgi için [`Measure`](xref:microsoft.quantum.intrinsic.measure) ve [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) işlemlerine bakın.
+Daha fazla bilgi için bkz [`Measure`](xref:microsoft.quantum.intrinsic.measure) . ve [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) işlemleri.
 
 ## <a name="the-no-cloning-theorem"></a>Kopyalama olmayan bu Üyeler
 
@@ -162,19 +162,19 @@ Bu tür bir sınırlama, *hiçbir kopyalama olmayan kopya*tarafından verilir.
 Kopyalama yok, hiçbir şekilde adlandırılır.
 Genel hisse durumlarının bir hisse bilgisayar tarafından kopyalanmasına izin vermez.
 Bunların kanıtı, genel olarak basittir.
-Bu konu başlığı altında, hiçbir ek yardımcı qubit, bizim için çok fazla teknik olmadığı için, kapsamımızda ek bir yardımcı qubit yoktur (yardımcı qugeler, bir hesaplama sırasında karalama alanı için kullanılır ve bu durum, Q # ' da kolayca kullanılır ve yönetilir): <xref:microsoft.quantum.techniques.qubits>).
+Bu konu başlığı altındaki bir çok teknik olmadığından, bu durum, hiçbir ek yardımcı qubit, kapsamımızda (bir hesaplama sırasında boş alan için kullanılan ve kolayca kullanıldığından ve Q # ' da yönetilir, bkz. [ödünç alınan qubit](xref:microsoft.quantum.guide.qubits#borrowed-qubits)) için çok fazla teknik değildir.
 
 Bu tür bir hisse bilgisayar için kopyalama işlemi bir Unitary matrisi tarafından açıklanmalıdır.
 Klonlamamız denendiğimiz hisse TI durumunu bozduğundan ölçüme izin vermeiyoruz.
-Kopyalama işleminin benzetimini yapmak için, Unitary matrisinin $ $ U \ket{\psı} \tus{0} = \ket{\psi} \ket{\psı} $ $ öğesini herhangi bir durum $ \ket{\psı} $ için özelliği olmasını istiyoruz.
+Kopyalama işleminin benzetimini yapmak için, {0} her durum $ \ket{\psı} $ için $ $ U \ket{\psı} \tus= \ket{\psi} \ket{\psı} $ $ özelliğine sahip olmak üzere Unitary matrisini istiyoruz.
 Matris çarpıda oluşan determinity özelliği, tüm ikinci hisse için $ \ket{\phi} $ olduğunu gösterir.
 
-$ $ \begin{hizalaması} U \left [\frac{1}{\sqrt{2}} \left (\ket{\phi} + \ket{\psı} \right) \ right] \tus{0} & = \frac{1}{\sqrt{2}} U\ket {\ Fi} \ ayraç{0} + \frac{1}{\sqrt{2}} U\tus{\ PSI} \ demet{0} \\\\ & = \frac{1}{\sqrt{2}} \left (\ket{\phi} \ket{\phi} + \ket{\psı} \ket{\psı} \right) \\\\ & \ne \left (\frac{1}{\sqrt{2}} \left (\ket{\phi} + \ket{\psı} \right) \right) \otimes \ Left (\frac{1}{\sqrt{2}} \left (\ket{\phi} + \ket{\psı} \right) \ right).
+$ $ \begin{hizalaması} U \left [\frac {1} {\sqrt {2} } \left (\ket{\phi} + \ket{\psı} \right) \ right] \ket {0} & = \frac {1} {\sqrt {2} } u\ket {\ Fi} \ ayraç {0} + \frac {1} {\sqrt {2} } u\ket {\ PSI} \ demet {0} \\ \\ & = \frac {1} {\sqrt {2} } \left (\ket{\phi} \ket{\phi} + \ket{\psı} \ket{\psi} \right) \\ \\ & \ne \left (\frac {1} {\sqrt {2} } \left (\ket{\phi} + \ket{\psi} \ sağ) \ sağdan) \otimes \left (\frac {1} {\sqrt {2} } \left (\ket{\phi} + \ket{\psı} \right) \ right).
 \end{hizalaması} $ $
 
 Bu, kopya olmaması gereken temel ıntutiye sahiptir: bilinmeyen bir hisse lık durumunu kopyalayan tüm cihazlar, kopyalayan durumların en az bir kısmında yer almalıdır.
-Cloner 'ın giriş durumunda daha erken davranırken, bu durum yardımcı qubits 'in eklenmesi ve ölçümü aracılığıyla ihlal edilebilir, ancak bu tür etkileşimler Ayrıca ölçüm istatistikleri aracılığıyla sistem hakkında bilgi sızıntısına ve tam olarak engel olmasını önler Bu gibi durumlarda da kopyalama.
-Daha fazla [bilgi için](xref:microsoft.quantum.more-information), kopyalamanın olmaması için daha kapsamlı bir kanıt için bkz.
+Cloner 'ın giriş durumunda herhangi bir şekilde hareket ederken, bu durum yardımcı qubits 'in eklenmesi ve ölçümü aracılığıyla ihlal edilebilir, ancak bu tür etkileşimler Ayrıca sistem hakkında ölçüm istatistikleri üzerinden bilgi sızıntısına ve bu gibi durumlarda tam kopyalamayı önler.
+Daha fazla [bilgi için](xref:microsoft.quantum.more-information), kopyalamanın olmaması için daha kapsamlı bir kanıt için bkz..
 
 Hisse uygun olmayan bir şekilde büyük ölçüde bir şekilde klonlamanız için, parça olmayan bir bilgi işlem için önemli değildir. bu nedenle, hisse durumlarından daha fazla bilgi edinebilirsiniz.
 Aslında, Heısenberg 'nin vaunbelirsizlik ilkesini ihlal edebilirsiniz.
