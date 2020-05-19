@@ -9,35 +9,33 @@ metadata:
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
-  ms.date: 10/21/2019
-  ms.openlocfilehash: e21b191689c228fa3e7c0590ee2f79f625b3960d
-  ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
+  ms.date: 5/10/2020
+  ms.openlocfilehash: 7c0fdf596c3409f0e1db7773b079a258d14a7d9c
+  ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/13/2020
-  ms.locfileid: "80320830"
+  ms.lasthandoff: 05/15/2020
+  ms.locfileid: "83426891"
 landingContent:
 - title: Kuantum bilişimi
   linkLists:
   - linkListType: learn
     links:
-    - text: Kuantum bilişimi nedir?
-      url: overview/what-is-quantum-computing.md
-    - text: Bir kuantum bilgisayar ne yapabilir?
-      url: overview/quantum-computers.md
-    - text: Kuantum bilişimini neden öğrenmeliyim?
-      url: overview/why-learn-quantum-computing.md
+    - text: Kuantum bilişimini anlama
+      url: overview/understanding-quantum-computing.md
+    - text: Kuantum bilgisayarlar ve kuantum simülatörleri
+      url: overview/quantum-computers-and-simulators.md
     - text: Q# ve QDK nedir?
-      url: overview/what-is-qsharp.md
-    - text: Nasıl daha fazla bilgi edinebilirim?
-      url: overview/how-to-learn-quantum-computing.md
+      url: overview/what-is-qsharp-and-qdk.md
+    - text: Kuantum bilişimi için doğrusal cebir
+      url: overview/algebra-for-quantum-computing.md
   - linkListType: concept
     links:
     - text: Kuantum bilişimi kavramları
       url: concepts/index.md
-- title: Kuantum Geliştirme Seti’ni edinin
+- title: Kuantum Geliştirme Seti ile başlama
   linkLists:
-  - linkListType: overview
+  - linkListType: get-started
     links:
     - text: Kuantum Geliştirme Seti
       url: welcome.md
@@ -49,19 +47,17 @@ landingContent:
       url: install-guide/update.md
 - title: Q# programlama dili
   linkLists:
-  - linkListType: overview
+  - linkListType: how-to-guide
     links:
-    - text: Q# diline giriş
-      url: language/index.md
-    - text: Q# geliştirme teknikleri
-      url: techniques/index.md
+    - text: Q# kullanıcı kılavuzu
+      url: user-guide/index.md
     - text: Kuantum simülatörleri ve konak uygulamaları
       url: machines/index.md
-  - linkListType: quickstart
+  - linkListType: tutorial
     links:
     - text: Kuantum rastgele sayı oluşturucusu oluşturma
       url: quickstarts/qrng.md
-    - text: Q# ile dolaşıklığı keşfetme
+    - text: Q# ile dolanıklığı keşfetme
       url: quickstart.md
     - text: 'Kuantum hızlandırma: Grover’ın arama algoritması'
       url: quickstarts/search.md
