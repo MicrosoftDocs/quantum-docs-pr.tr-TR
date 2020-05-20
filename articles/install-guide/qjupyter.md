@@ -1,19 +1,19 @@
 ---
-title: 'Q # Jupyıter Not defterleri ile geliştirme'
+title: Q# Jupyter Notebooks ile geliştirme
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 3302a9bd0652b2dea86b844058bf8303ee7a4a7f
-ms.sourcegitcommit: c85c1b439807ac576d3a11aadca307d57b059673
+ms.openlocfilehash: 0c4dc856c94b0a694fb99607eda64cec4d5c221d
+ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551048"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83660764"
 ---
-# <a name="develop-with-q-jupyter-notebooks"></a>Q # Jupyıter Not defterleri ile geliştirme
+# <a name="develop-with-q-jupyter-notebooks"></a>Q# Jupyter Notebooks ile geliştirme
 
 Q # Jupyıter not defterlerinde Q # işlemleri geliştirmek için QDK 'yi yükler.
 
@@ -45,9 +45,9 @@ IQ# (ay-kü-şarp okunur) öncelikli olarak Jupyter ve Python tarafından .NET C
         jupyter notebook
         ```
 
-    - Jupyter Not defterini açmak için komut satırı tarafından belirtilen URL 'YI kopyalayıp tarayıcınıza yapıştırın.
+    - Jupyter Notebook açmak için komut satırı tarafından belirtilen URL 'YI kopyalayıp tarayıcınıza yapıştırın.
 
-    - Bir Q# çekirdeği ile Jupyter not defteri oluşturun ve aşağıdaki kodu birinci not defteri hücresine ekleyin:
+    - Bir Q # çekirdeğiyle Jupyter Notebook oluşturun ve ilk not defteri hücresine aşağıdaki kodu ekleyin:
 
         ```qsharp
         operation SayHello () : Unit {
@@ -57,17 +57,21 @@ IQ# (ay-kü-şarp okunur) öncelikli olarak Jupyter ve Python tarafından .NET C
 
     - Not defterinin şu hücresini çalıştırın:
 
-        ![Q# kodu içeren Jupyter not defteri hücresi](~/media/install-guide-jupyter.png)
+        ![Q # kodlu Jupyter Notebook hücresi](~/media/install-guide-jupyter.png)
 
-        Hücrenin çıktısında `SayHello` görmeniz gerekir. Jupyter not defterlerinde çalışırken Q# kodu derlenir ve not defteri bulduğu işlemlerin adını çıkarır.
+        Hücrenin çıktısında `SayHello` görmeniz gerekir. Jupyter Notebook 'de çalışırken, Q # kodu derlenir ve Not defteri bulduğu işlem (ler) in adını verir.
 
 
     - Yeni bir hücrede, komutunu kullanarak yeni oluşturduğunuz işlemi (simülatör içinde) yürütün `%simulate` :
 
-        ![%simulate magic içeren Jupyter not defteri hücresi](~/media/install-guide-jupyter-simulate.png)
+        ![% Benzetim Magic ile Jupyter Notebook hücresi](~/media/install-guide-jupyter-simulate.png)
 
         İade ettiğiniz işlemin sonucuyla birlikte ekranda yazdırılmış iletiyi görmeniz gerekir (burada, `()` işlem yalnızca bir tür döndürdüğünden, boş tanımlama alanı görüyoruz `Unit` ).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Quantum Development Kit’i tercih ettiğiniz ortama yüklediğinize göre [ilk kuantum programınızı](xref:microsoft.quantum.quickstarts.qrng) yazıp çalıştırabilirsiniz.
+Artık, Q # jupi Not defterleri için QDK yükleolduğunuza göre, doğrudan Jupyter Notebook ortamı içinde Q # kodunuzu yazarak [ilk hisse programınızı](xref:microsoft.quantum.quickstarts.qrng) yazabilir ve çalıştırabilirsiniz.
+
+Q # Jupyter Not defterleri ile yapabileceklerinize ilişkin daha fazla örnek için lütfen şu adresten göz atabilirsiniz:
+- [Q # ve Jupyter Notebook girişi](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/). Bu ortamda Q # kullanmayı gösteren bir Q # Jupyter Notebook bulacaksınız.
+- Hisse uyumlu öğreticilerin açık kaynaklı bir koleksiyonu olan [hisse katas](xref:microsoft.quantum.overview.katas), Q # jupi Not defterleri biçimindeki programlama alıştırmaları kümesi. [Hisse katas öğretici Not defterleri](https://github.com/microsoft/QuantumKatas#tutorial-topics) iyi bir başlangıç noktasıdır. Hisse katas, size aynı anda hisse bilgi işlem ve Q # programlama öğelerini öğretme amacıyla tasarlanmıştır. Bunlar, Q # jupi Not defterleri ile oluşturabileceğiniz içerik türü için harika bir örnektir.

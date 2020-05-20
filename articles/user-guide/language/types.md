@@ -1,19 +1,19 @@
 ---
-title: "Q 'daki türler #"
+title: Q# dilindeki türler
 description: 'Q # programlama dilinde kullanılan farklı türler hakkında bilgi edinin.'
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: 58370193bd62e306197a9e07c28f8611f043e55c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4a551ee90a0abb6e42953cf04c7f5a8ca3573f26
+ms.sourcegitcommit: 682a4a5f5dd23ca58a4addf62aea4086bb308552
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431147"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609150"
 ---
-# <a name="types-in-q"></a>Q 'daki türler #
+# <a name="types-in-q"></a>Q# dilindeki türler
 
 Bu sayfa, Q # tür modelini yerleştirir ve türleri belirtmek ve bunlarla çalışmak için sözdizimini açıklar.
 Sonraki sayfa, [tür ifadeleri](xref:microsoft.quantum.guide.expressions), bu türlerin ifadeleri oluşturma ve üzerinde işlem yapma ayrıntıları.
@@ -35,7 +35,7 @@ Q # dili, diğer türlerin oluşturulabileceği çeşitli *temel türler*sağlar
    türüyle.
 - `Double`Tür çift duyarlıklı kayan noktalı sayıyı temsil eder, örneğin: `0.0` , `-1.3` , `4e-7` .
 - `Bool`Tür ya da olabilecek bir Boolean değeri temsil eder `true` `false` .
-- `Range`Türü, ile belirtilen ve adım seçenekleri gösteren bir tamsayılar dizisini temsil eder `start..step..stop` . 
+- `Range`Türü, tarafından belirtilen, `start..step..stop` adımın isteğe bağlı olduğunu gösteren bir tamsayılar dizisini temsil eder. 
    Bu `start .. stop` öğesine karşılık gelir `start..1..stop` ve örn. `1..2..7` $ \{ 1, 3, 5, 7 $ dizisini temsil eder \} .
 - `String`Tür, bir kez oluşturulduktan sonra kullanıcıya donuk olan Unicode karakterlerinden oluşan bir dizidir.
   Bu tür, bir hata veya tanılama olayı durumunda iletileri klasik bir konağa raporlamak için kullanılır.
@@ -125,7 +125,7 @@ Bu özelliğe, _tek demet denklik_olarak başvurduk.
 
 Kullanıcı tanımlı tür bildirimi, anahtar sözcükten `newtype` , ardından Kullanıcı tanımlı türün adı, bir `=` , geçerli bir tür belirtimi ve sonlandırma noktalı virgülünden oluşur.
 
-Örneğin:
+Örnek:
 
 ```qsharp
 newtype PairOfInts = (Int, Int);

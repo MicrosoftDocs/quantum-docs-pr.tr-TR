@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: a8c5b9c25c069f98ef8eefd6cfbc36bf3376931c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 35499daae0cd0ae329e39b43b0d8dd5a00183871
+ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426358"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83660735"
 ---
 # <a name="develop-with-q-and-python"></a>Q # ve Python ile geliştirme
 
@@ -21,7 +21,7 @@ Q # işlemlerini çağırmak için Python konak programları geliştirmek üzere
 
     - [Python](https://www.python.org/downloads/) 3,6 veya üzeri
     - [PIP](https://pip.pypa.io/en/stable/installing) Python paket yöneticisi
-    - [.NET Core SDK 3,1 veya üzeri](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3,1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 
 1. `qsharp`Q # ve Python arasında birlikte çalışabilirliğine izin veren bir Python paketi olan paketini yükler.
