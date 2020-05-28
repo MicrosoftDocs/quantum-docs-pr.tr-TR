@@ -6,14 +6,14 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: 5a433606f08f4c6a4ab7b5df67a7f0c30d2b3f0d
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: 3e109553adc4d724733834e3660bfe7789052bcf
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82683001"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426830"
 ---
-# <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>Hızlı Başlangıç: Q\# dilinde Kuantum Rastgele Sayı Oluşturucusu uygulama
+# <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Öğretici: Q\# dilinde Kuantum Rastgele Sayı Oluşturucusu uygulama
 
 Kuantum rastgele sayı oluşturucusu, Q# dilinde yazılmış kuantum algoritmalarına örnek olarak gösterilebilir. Bu algoritma, kuantum mekaniklerinin özelliklerinden faydalanarak rastgele bir sayı üretir.
 
@@ -30,7 +30,7 @@ Kuantum rastgele sayı oluşturucusu, Q# dilinde yazılmış kuantum algoritmala
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-[Kuantum Bilişimi nedir?](xref:microsoft.quantum.overview.what) makalesinde de belirttiğimiz gibi kubit, süper konumda olabilen bir kuantum bilgi birimidir. Bir kubit ölçüldüğünde yalnızca 0 veya 1 olabilir. Ancak yürütme sırasında kubitin durumu bir ölçümle 0 veya 1 değerini elde etme olasılığını temsil eder. Olasılığa dayalı olan bu durum, süper konum olarak adlandırılır. Bu olasılığı kullanarak rastgele sayı oluşturabiliriz.
+[Kuantum bilişimini anlama](xref:microsoft.quantum.overview.understanding) makalemizde de belirtildiği gibi kubit, süper konumda olabilen bir kuantum bilgi birimidir. Bir kubit ölçüldüğünde yalnızca 0 veya 1 olabilir. Ancak yürütme sırasında kubitin durumu bir ölçümle 0 veya 1 değerini elde etme olasılığını temsil eder. Olasılığa dayalı olan bu durum, süper konum olarak adlandırılır. Bu olasılığı kullanarak rastgele sayı oluşturabiliriz.
 
 Q# işlemimizde yerel bir Q# veri türü olan `Qubit` veri türünü kullanacağız. `Qubit` ayırmak için `using` deyimi kullanmamız gerekir. Ayrılan kubit her zaman `Zero` durumunda olur. 
 

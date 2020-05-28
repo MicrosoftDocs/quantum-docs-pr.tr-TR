@@ -6,18 +6,18 @@ ms.author: nakersha
 ms.date: 10/17/2019
 ms.topic: overview
 uid: microsoft.quantum.overview.katas
-ms.openlocfilehash: af54a2260147b8ca07919b241548aac85ed0d8a1
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: 204033c81b1f6d05c255170ee5662ce9388c3dbf
+ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "76821108"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83660742"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Kuantum Kataları ile kuantum bilişimini öğrenin
 
 [Kuantum Kataları](https://github.com/Microsoft/QuantumKatas/), size aynı anda hem kuantum bilişiminin hem de Q# programlamanın öğelerini öğretmeyi amaçlayan, kendi hızınızda ilerleyebileceğiniz açık kaynak öğreticilerden ve programlama alıştırmalarından oluşan bir koleksiyonudur.
 
-## <a name="learning-by-doing"></a>Yaparak Öğrenme
+## <a name="learning-by-doing"></a>Yaparak öğrenme
 
 Bu projede bir araya getirilmiş olan öğreticiler ve alıştırmalar, çok basitten başlayarak artan zorluk derecelerine sahip olan belirli konu başlıklarını içeren programlama görevleri sayesinde yaparak öğrenmenin önemini vurgulamaktadır. Her görev biraz kod yazmanızı gerektirir; ilk görevler tek satır kod gerektirirken sonraki görevlerde oldukça büyük bir kod parçası gerekebilir.
 

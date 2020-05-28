@@ -1,63 +1,66 @@
 ---
 uid: microsoft.quantum.welcome
-title: Quantum Development Kit'i (QDK) kullanmaya başlama
-description: Microsoft Quantum Geliştirme Seti’yle (QDK) Q# dilinde kuantum projelerini programlamaya nasıl başlayacağınızı öğrenin.
+title: Quantum geliştirme setini kullanmaya başlama
+description: Microsoft Quantum geliştirme setiyle Q# dilinde kuantum projelerini programlamaya nasıl başlayacağınızı öğrenin.
 author: natke
 ms.author: nakersha
-ms.date: 10/23/2019
+ms.date: 5/10/2020
 ms.topic: overview
-ms.openlocfilehash: cea39e47ec5e7e2ad97adbbb39ba586274564967
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: 2356fee2333acb73f528fad6d9def68a7fe84083
+ms.sourcegitcommit: 4da99168479f96f408b984279a5a7eabcda752db
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "77907639"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83708727"
 ---
-# <a name="get-started-with-the-quantum-development-kit-qdk"></a>Quantum Development Kit'i (QDK) kullanmaya başlama
+# <a name="get-started-with-the-quantum-development-kit"></a>Quantum geliştirme setini kullanmaya başlama
 
 Microsoft Quantum Development Kit'e hoş geldiniz!  
-QDK, kuantum uygulama geliştirme için özellikle tasarlanan bir programlama dili olan Q# ile kendi kuantum programlarınızı ve denemelerinizi oluşturmak için ihtiyacınız olan tüm araçları içerir. 
 
-Hemen başlamak için [QDK yükleme kılavuzuna](xref:microsoft.quantum.install) gidebilirsiniz.
-Bu kılavuzda, kendi kuantum programlarınızı yazmak için Quantum Geliştirme Seti’ni Windows, Linux veya MacOS makinelere yükleme rehberliği alırsınız.
+Quantum geliştirme seti (QDK), özellikle kuantum uygulamaları geliştirmek için tasarlanan bir programlama dili olan Q# ile kendi kuantum programlarınızı ve denemelerinizi oluşturmak için ihtiyacınız olan tüm araçları içerir.
 
-Kodlamaya başlamak için tam olarak hazır değilseniz ancak kuantum bilişimi ile Q# hakkında daha fazla bilgi edinmek istiyorsanız, kullanabileceğiniz kaynaklar hakkında fikir edinmek için bu makaleyi yine de okumanız önerilir. [Kuantum bilişimi hakkında beş soru](#five-questions-about-quantum-computing) bölümünde, aradığınız her şey için bağlantılar bulabilirsiniz!
+[QDK yükleme kılavuzu](xref:microsoft.quantum.install) ile hemen başlayın.
+Bu kılavuzda, kendi kuantum programlarınızı yazabilmeniz için Quantum geliştirme setini Windows, Linux veya MacOS makinelere yükleme rehberliği alacaksınız.
+
+Kuantum bilişimi konusunda yeniyseniz, kuantum bilgisayarların neler yapabileceğini ve kuantum bilişimi ile ilgili temel bilgileri öğrenmek için [Genel bakış](xref:microsoft.quantum.overview.introduction) bölümünü gözden geçirin.
 
 ## <a name="get-started-programming"></a>Programlamaya başlayın
 
 Quantum Geliştirme Seti, Q# ile kuantum programı geliştirmeyi öğrenmek için birçok yol sunar.
-Kuantumun gücünden yararlanmaya başlamak için *hızlı başlangıçlarımızı* deneyebilirsiniz:
+Kuantumun gücünden yararlanmaya başlamak için öğreticilerimizi deneyebilirsiniz:
 
-* [Kuantum rastgele sayı oluşturucusu](xref:microsoft.quantum.quickstarts.qrng), "Q# Merhaba Dünya" stilinde bir uygulamadır. Kuantum kavramlarına yönelik kısa bir tanıtım sağlarken aynı zamanda birkaç dakika içinde bir kuantum uygulaması oluşturup çalıştırmanıza olanak tanır.
-* [Q# ile kuantumun temelleri](xref:microsoft.quantum.write-program), kuantum programlamanın bazı temel kavramlarını gösteren bir Q# programı yazma adımlarında size rehberlik yapar. 
+* [Kuantum rastgele sayı oluşturucusu](xref:microsoft.quantum.quickstarts.qrng): Kuantum kavramlarına yönelik kısa bir tanıtım sağlarken aynı zamanda birkaç dakika içinde bir kuantum uygulaması oluşturup çalıştırmanıza olanak tanıyan "Q# Merhaba Dünya" stilinde bir uygulama ile başlayın.
+* [Q# ile dolaşıklığı keşfetme](xref:microsoft.quantum.write-program): Bu öğretici, kuantum programlamanın bazı temel kavramlarını gösteren bir Q# programı yazma adımlarında size rehberlik eder.
     Kodlamaya başlamaya hazır değilseniz, yine de QDK'yi yüklemeden anlatımı takip ederek Q# bilgisayar diline genel bir bakış elde edebilir ve kuantum bilişiminin ilk kavramlarını öğrenebilirsiniz.
-* [Grover arama algoritması](xref:microsoft.quantum.quickstarts.search), kuantum algoritmasına düşük düzeyli kuantum işlemlerini soyutlama açısından yaklaşan ve Q# dilinin gücü hakkında bilgi sahibi olmanızı sağlayan bir Q# programı örneği sunar. 
-    Bu hızlı başlangıç, çeşitli programlama ortamlarını (Python konağıyla veya .NET dil konağıyla ve Visual Studio ya da Visual Studio Code ile) kullanarak program geliştirmeniz için size yol gösterir.
+* [Grover arama algoritması](xref:microsoft.quantum.quickstarts.search): Kuantum algoritmasına alt düzey kuantum işlemlerini soyutlama açısından yaklaşan ve Q# dilinin gücü hakkında fikir edinmenizi sağlayan bu Q# programı örneğini keşfedin.
+    Bu öğretici, Visual Studio veya Visual Studio Code kullanarak programı bir Q# komut satırı uygulaması olarak geliştirme sürecinde size rehberlik eder.
 
 ### <a name="learning-further"></a>Daha fazlasını öğrenme
+* [Kuantum bilişimi için Microsoft Learn modülleri](https://docs.microsoft.com/learn/browse/?term=quantum), temel kavramlar konusunda size uygun hızda ve zamanda ustalaşmayı öğretir. [İlk modülümüzü](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/) kullanarak QDK ile kuantum programlarının nasıl oluşturulacağı ile ilgili temel bilgileri öğrenebilirsiniz.
 * Q# programlama hakkında daha ayrıntılı bilgi edinmek istiyorsanız, Q# içinde programlama alıştırmaları aracılığıyla kuantum bilişimini tanıtan ve kendi hızınızda ilerleyebileceğiniz bir alıştırma koleksiyonu olan [Quantum Katas](https://github.com/Microsoft/QuantumKatas)’a göz atın.
     Bu kata’ların çoğu ayrıca Q# Not Defterleri olarak da sunulur. 
-* [Örnek depomuzda](https://github.com/Microsoft/Quantum), Q# kullanarak kuantum programları yazmaya yönelik çok sayıda örnek bulunur. Bu örneklerin çoğu, [standart](https://github.com/Microsoft/QuantumLibraries) ve [kimya](xref:microsoft.quantum.libraries.standard.intro) kitaplıkları dahil açık kaynak [kuantum kitaplıklarımız](xref:microsoft.quantum.chemistry.concepts.intro) kullanılarak yazılmıştır. (Aşağıda bu konu hakkında daha fazla bilgi bulabilirsiniz.)
+* [Örnek depomuzda](https://github.com/Microsoft/Quantum), Q# kullanarak kuantum programları yazmaya yönelik çok sayıda örnek bulunur. Bu örneklerin çoğu, [standart](xref:microsoft.quantum.libraries.standard.intro) ve [kimya](xref:microsoft.quantum.chemistry.concepts.intro) kitaplıkları dahil açık kaynak [kuantum kitaplıklarımız](https://github.com/Microsoft/QuantumLibraries) kullanılarak yazılmıştır. (Aşağıda bu konu hakkında daha fazla bilgi bulabilirsiniz.)
 
-## <a name="five-questions-about-quantum-computing"></a>Kuantum bilişimi hakkında beş soru
+## <a name="key-concepts-for-quantum-computing"></a>Kuantum bilişimine yönelik temel kavramlar
 
-Kuantum geliştirmeye yeni başladıysanız tüm bunların biraz kafa karıştırıcı olabileceğinin farkındayız. Kuantum bilişimi hakkında bilgi edinmeye başlamanıza yardımcı olacak kaynaklar sunuyoruz. Bu kısa makalelerin yardımıyla, kısa bir süre içinde programlamaya başlayacaksınız.
-* [Kuantum bilişimi nedir?](xref:microsoft.quantum.overview.what)
-* [Kuantum bilgisayarlar ne yapabilir?](xref:microsoft.quantum.overview.computers)
-* [Kuantum bilişimini neden öğrenmeliyim?](xref:microsoft.quantum.overview.why)
-* [Q# nedir?](xref:microsoft.quantum.overview.qsharp)
-* [Q# ile kuantum bilişimi nasıl öğrenilir?](xref:microsoft.quantum.overview.learn)
+Kuantum geliştirmeye yeni başladıysanız tüm bunların biraz kafa karıştırıcı olabileceğinin farkındayız. Bu temel kavramlar, kuantum dünyasına adım atmanıza ve kuantum bilişiminin hangi bakımlardan klasik bilişimden farklı olduğunu anlamanıza yardımcı olmak için tasarlanmıştır.
+
+* [Kuantum bilişimini anlama](xref:microsoft.quantum.overview.understanding)
+* [Kuantum bilgisayarlar ve kuantum simülatörleri](xref:microsoft.quantum.overview.simulators)
+* [Q# programlama dili ve QDK nedir?](xref:microsoft.quantum.overview.q-sharp)
+* [Kuantum bilişimi için doğrusal cebir](xref:microsoft.quantum.overview.algebra)
 
 ## <a name="quantum-development-kit-documentation"></a>Quantum Geliştirme Seti Belgeleri
 
 Geçerli belge aşağıdaki ek konuları içerir.
 
-### <a name="using-q"></a>Q# kullanma
-* [Kuantum geliştirme teknikleri](xref:microsoft.quantum.techniques.intro), Q# içinde kuantum programları oluşturmak için kullanılan temel kavramları belirtir. Konular dosya yapılarını, işlemleri ve işlevleri, qubit’lerle çalışmayı ve bazı gelişmiş konuları içerir.
-* [Q# dil başvurusu](xref:microsoft.quantum.language.intro), tür modeli, ifadeler, deyimler ve derleyici kullanımı dahil Q# dilinin ayrıntılarını içerir.
+### <a name="q-developer-guides"></a>Q# geliştirici kılavuzları
+
+* [Q# Kullanıcı Kılavuzu](xref:microsoft.quantum.guide), Q# dilinde kuantum programları oluşturmak için kullanılan temel kavramları ayrıntılı olarak açıklar.
 * [Kuantum simülatörleri ve konak uygulamaları](xref:microsoft.quantum.machines), kuantum algoritmalarının yürütülme şeklini, hangi kuantum makinelerinin kullanılabilir olduğunu ve kuantum programı için Q# dışı bir sürücü yazmayı açıklar.
 
 ### <a name="q-libraries"></a>Q# kitaplıkları
+
 * [Q# standart kitaplıkları](xref:microsoft.quantum.libraries.standard.intro), hem klasik dil denetimi gereksinimini hem de Q# kuantum algoritmasını destekleyen işlemleri ve işlevleri açıklar. 
     Denetim akışı, veri yapıları, hata düzeltme, test ve hata ayıklama konularını içerir. 
 * [Q# kimya kitaplığı](xref:microsoft.quantum.chemistry.concepts.intro), kuantum bilişiminin kritik bir uygulaması olan kuantum kimya simülasyonunu destekleyen işlemleri ve işlevleri açıklar. Hamiltonian dinamiği simülasyonu, kuantum aşama tahmini ve diğer konuları içerir.
@@ -65,16 +68,19 @@ Geçerli belge aşağıdaki ek konuları içerir.
 * [Q# kitaplık başvurusu](xref:microsoft.quantum.standardlibsintro), ad alanına göre kitaplık varlıkları hakkında başvuru bilgileri içerir.
 
 ### <a name="general-quantum-computing"></a>Genel kuantum bilişimi
+
 * [Kuantum bilişimi kavramları](xref:microsoft.quantum.concepts.intro), doğrusal cebirin kuantum bilişimindeki yeri, qubit’lerin doğası ve kullanımı, kuantum bağlantı hattını okuma ve diğer konuları içerir.
-* [Kuantum bilişimi sözlüğü](xref:microsoft.quantum.glossary), kuantum bilişimine ve program geliştirmeye özgü bazı önemli terimleri içeren bir sözlüktür. 
+* [Kuantum bilişimi sözlüğü](xref:microsoft.quantum.glossary), kuantum bilişimine ve program geliştirmeye özgü bazı önemli terimleri içeren bir sözlüktür.
     Bu alanda yeniyseniz, belgelerimizi okurken bu sözlük kullanışlı bir başvuru olabilir.
 * [Daha fazla bilgi](xref:microsoft.quantum.more-information), kuantum bilişimi konularının ayrıntılı olarak incelenmesi için özel olarak seçilen başvuruları içerir.
 
 ### <a name="additional-info"></a>Ek bilgiler
+
 * [Microsoft Quantum Geliştirme Seti sürüm notları](xref:microsoft.quantum.relnotes).
 
 
 ## <a name="be-a-part-of-the-q-open-source-community"></a>Q# Açık Kaynak Topluluğu’nun bir parçası olun
+
 Quantum Geliştirme Seti, dünyanın en önemli sorunlarını çözebilmemiz için geliştiricilerin kuantum bilişimini herkes için daha erişilebilir yapmasına yardımcı olan bir açık kaynak geliştirme setidir.  Açık kaynak yazılım gerektiren akademik kurumlar, kendi kuantum öğrenme ve geliştirme çalışmaları için Q#’ı dağıtabilir. Geliştirme setinin açık kaynak olması ayrıca geliştiricilere ve etki alanı uzmanlarına, kodları aracılığıyla iyileştirme ve fikir katkısında bulunma fırsatı sunar.
 
 Quantum Geliştirme Seti’ne yönelik geri bildiriminiz, katılımınız ve katkılarınız önemlidir.  Quantum Geliştirme Seti kaynakları hakkında daha fazla bilgi edinmek, geri bildirim sağlamak, kararlara nasıl katılabileceğinizi ve büyüyen bu kuantum geliştirme platformuna nasıl katkıda bulunabileceğinizi öğrenmek için bkz. [Quantum Geliştirme Seti’ne katkı yapma](xref:microsoft.quantum.contributing).

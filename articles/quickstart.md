@@ -1,23 +1,25 @@
 ---
-title: Q# ile kuantumun temelleri
+title: Q# ile dolanıklığı keşfetme
 description: Q# dilinde kuantum programı yazmayı öğrenin. Quantum Development Kit'i (QDK) kullanarak Bell Durumu uygulaması geliştirme
 author: natke
 ms.author: nakersha
 ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 8d3b2d7c8da39a961f4eedcc5989ad3a1e134ade
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: 7836e39227fa2282c6e2faa039f6e625103d5403
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "77906738"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426835"
 ---
-# <a name="quantum-basics-with-q"></a>Q# ile kuantumun temelleri
+# <a name="tutorial-explore-entanglement-with-q"></a>Öğretici: Q\# ile dolaşıklığı keşfetme
 
-Bu Hızlı Başlangıç’ta, kubitleri düzenleyip ölçen ve süper konum ile dolaşıklığın etkilerini gösteren bir Q# programı yazma adımları gösterilir.  Bu rehber QDK'yı yükleme, programı oluşturma ve bir kuantum simülatörü üzerinde yürütme konusunda size yol gösterecektir.  
+Bu öğreticide, kubitleri düzenleyip ölçen ve süper konum ile dolaşıklığın etkilerini gösteren bir Q# programının nasıl yazılacağı gösterilir.
+Bu rehber QDK'yı yükleme, programı oluşturma ve bir kuantum simülatörü üzerinde yürütme konusunda size yol gösterecektir.  
 
-Kuantum dolaşıklığı göstermek için Bell adında bir uygulama yazacaksınız.  Bell adı, en basit süper konum ve kuantum dolaşıklığı örneklerini göstermek için kullanılan iki kubitin belirli kuantum durumları olan Bell durumlarını ifade eder. 
+Kuantum dolaşıklığı göstermek için Bell adında bir uygulama yazacaksınız.
+Bell adı, en basit süper konum ve kuantum dolaşıklığı örneklerini göstermek için kullanılan iki kubitin belirli kuantum durumları olan Bell durumlarını ifade eder.
 
 ## <a name="pre-requisites"></a>Ön koşullar
 
@@ -30,7 +32,7 @@ Dilerseniz QDK'yı yüklemeden anlatımı takip ederek Q# programlama diline gen
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Q# ile kubit davranışını gösterme
 
-Basit [kubit tanımımızı](xref:microsoft.quantum.overview.what#the-qubit) hatırlayalım.  Klasik bitler 0 veya 1 gibi tek bir ikili değeri barındırırken, kubitin durumu aynı anda 0 ve 1 değerlerine sahip olan **süper konum** olabilir.  Kavramsal olarak bir kubit, boşluktaki bir yön (vektör olarak da bilinir) olarak düşünülebilir.  Bir kubit herhangi bir yönde olabilir. İki **klasik durum**, iki yöndür. Bu da %100 oranında 0 ölçme şansını ve %100 oranında 1 ölçme şansını gösterir.  Bu gösterim ayrıca [Bloch küresi](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere) ile daha anlaşılır bir şekilde gösterilmiştir.
+Basit [kubit tanımımızı](xref:microsoft.quantum.overview.understanding) hatırlayalım.  Klasik bitler 0 veya 1 gibi tek bir ikili değeri barındırırken, kubitin durumu aynı anda 0 ve 1 değerlerine sahip olan **süper konum** olabilir.  Kavramsal olarak bir kubit, boşluktaki bir yön (vektör olarak da bilinir) olarak düşünülebilir.  Bir kubit herhangi bir yönde olabilir. İki **klasik durum**, iki yöndür. Bu da %100 oranında 0 ölçme şansını ve %100 oranında 1 ölçme şansını gösterir.  Bu gösterim ayrıca [Bloch küresi](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere) ile daha anlaşılır bir şekilde gösterilmiştir.
 
 
 Ölçüm işlemi ikili sonuç üretir ve bir kubit durumunu değiştirir. Ölçüm, 0 veya 1 ikili değerini verir.  Kubit, süper konumdan (herhangi bir yöne) klasik durumlardan birine geçer.  Bundan sonra aynı ölçümün başka bir işlemle müdahale edilmeden yinelenmesi durumunda aynı ikili sonuç ortaya çıkar.  
@@ -498,7 +500,7 @@ Tebrikler, ilk kuantum programınızı yazdınız!
 
 ## <a name="whats-next"></a>Sırada ne var?
 
-[Grover araması](xref:microsoft.quantum.quickstarts.search) başlıklı Hızlı Başlangıç’ta kuantum bilişiminin en popüler algoritmalarından biri olan Grover aramasını derleyip çalıştırma adımları gösterilir ve kuantum bilişimle gerçek sorunları çözmek için kullanılabilecek bir Q# programı örneği verilir.  
+[Grover araması](xref:microsoft.quantum.quickstarts.search) başlıklı öğreticide kuantum bilişiminin en popüler algoritmalarından biri olan Grover aramasını oluşturup çalıştırma adımları gösterilir ve kuantum bilişimiyle gerçek sorunları çözmek için kullanılabilecek güzel bir Q# programı örneği sunulur.  
 
 [Quantum Geliştirme Seti'ni Kullanmaya Başlama](xref:microsoft.quantum.welcome) sayfasında, Q# dilini ve kuantum programlamayı öğrenmek için başvurabileceğiniz diğer yöntemlerle ilgili öneriler sunulur.
 
