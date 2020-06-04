@@ -9,19 +9,19 @@ operations:
 - uid: microsoft.quantum.measurement.measurewithscratch
   summary: Ölçüyü gerçekleştirmek için açık bir karalama qubit kullanarak verilen Pauli işlecini ölçer.
 - uid: microsoft.quantum.measurement.mresetx
-  summary: X temelinde tek bir qubit ölçer ve ölçüyü takip eden standart temel durum | 0 〉 olarak sıfırlar.
+  summary: X temelinde tek bir qubit ölçer ve ölçüyü izleyen sabit bir başlangıç durumuna sıfırlar.
 - uid: microsoft.quantum.measurement.mresety
-  summary: Y esasına göre tek bir qubit ölçer ve ölçüyü takip eden standart temel durum | 0 〉 olarak sıfırlar.
+  summary: Y temelinde tek bir qubit ölçer ve ölçüyü izleyen sabit bir başlangıç durumuna sıfırlar.
 - uid: microsoft.quantum.measurement.mresetz
-  summary: '`Z` Temelinde tek bir qubit ölçer ve ölçüyü takip eden standart temel durum | 0 〉 olarak sıfırlar.'
+  summary: Z tabanında tek bir qubit ölçer ve ölçüyü izleyen sabit bir başlangıç durumuna sıfırlar.
 - uid: microsoft.quantum.measurement.multim
   summary: Belirli bir dizide her bir qubit ' i standart temelinde ölçer.
 - uid: microsoft.quantum.measurement.settobasisstate
   summary: Qubit ' i ölçerek ve gerekirse bir bit çevirme uygulayarak belirli bir hesaplama tabanlı duruma bir qubit ayarlar.
 metadata:
-  ms.openlocfilehash: 8e0910bf53734ffe65aa12b06321ec9b3403133f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 894c0bb7f0b57e9fe04837b89cd57345745df6c5
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673138"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326634"

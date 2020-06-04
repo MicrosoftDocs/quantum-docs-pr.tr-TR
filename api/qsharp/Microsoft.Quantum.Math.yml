@@ -3,9 +3,9 @@ uid: microsoft.quantum.math
 name: Microsoft.Quantum.Math
 functions:
 - uid: microsoft.quantum.math.abscomplex
-  summary: Karmaşık bir tür `Complex`sayının mutlak değerini döndürür.
+  summary: Karmaşık bir tür sayının mutlak değerini döndürür `Complex` .
 - uid: microsoft.quantum.math.abscomplexpolar
-  summary: Karmaşık bir tür `ComplexPolar`sayının mutlak değerini döndürür.
+  summary: Karmaşık bir tür sayının mutlak değerini döndürür `ComplexPolar` .
 - uid: microsoft.quantum.math.absd
   summary: Çift duyarlıklı kayan noktalı sayının mutlak değerini döndürür.
 - uid: microsoft.quantum.math.absi
@@ -13,9 +13,9 @@ functions:
 - uid: microsoft.quantum.math.absl
   summary: Büyük bir tamsayının mutlak değerini döndürür.
 - uid: microsoft.quantum.math.abssquaredcomplex
-  summary: Karmaşık türdeki `Complex`sayının kare mutlak değerini döndürür.
+  summary: Karmaşık türdeki sayının kare mutlak değerini döndürür `Complex` .
 - uid: microsoft.quantum.math.abssquaredcomplexpolar
-  summary: Karmaşık türdeki `ComplexPolar`sayının kare mutlak değerini döndürür.
+  summary: Karmaşık türdeki sayının kare mutlak değerini döndürür `ComplexPolar` .
 - uid: microsoft.quantum.math.arccos
   summary: Kosinüsü belirtilen sayı olan açıyı döndürür.
 - uid: microsoft.quantum.math.arccosh
@@ -31,35 +31,31 @@ functions:
 - uid: microsoft.quantum.math.arctanh
   summary: Bir sayının ters hiperbolik tanjantını hesaplar.
 - uid: microsoft.quantum.math.argcomplex
-  summary: Karmaşık sayıda türden `Complex`aşamayı döndürür.
+  summary: Karmaşık sayıda türden aşamayı döndürür `Complex` .
 - uid: microsoft.quantum.math.argcomplexpolar
-  summary: Karmaşık sayıda türden `ComplexPolar`aşamayı döndürür.
+  summary: Karmaşık sayıda türden aşamayı döndürür `ComplexPolar` .
 - uid: microsoft.quantum.math.bitsizei
   summary: >-
-    Negatif olmayan bir tamsayı `a`için, temsil `a`etmesi gereken bitlerin sayısını döndürür.
+    Negatif olmayan bir tamsayı için `a` , temsil etmesi gereken bitlerin sayısını döndürür `a` .
 
 
     Diğer bir deyişle, $a < 2 ^ n $ gibi en küçük $n $ döndürür.
 - uid: microsoft.quantum.math.bitsizel
   summary: >-
-    Negatif olmayan bir tamsayı `a`için, temsil `a`etmesi gereken bitlerin sayısını döndürür.
+    Negatif olmayan bir tamsayı için `a` , temsil etmesi gereken bitlerin sayısını döndürür `a` .
 
 
     Diğer bir deyişle, $a < 2 ^ n $ gibi en küçük $n $ döndürür.
 - uid: microsoft.quantum.math.ceiling
   summary: Belirtilen sayıdan büyük veya eşit en küçük tamsayıyı döndürür.
 - uid: microsoft.quantum.math.complexascomplexpolar
-  summary: Karmaşık sayıda türü `Complex` karmaşık türde `ComplexPolar`dönüştürür.
+  summary: Karmaşık sayıda türü karmaşık türde dönüştürür `Complex` `ComplexPolar` .
 - uid: microsoft.quantum.math.complexpolarascomplex
-  summary: Karmaşık sayıda türü `ComplexPolar` karmaşık türde `Complex`dönüştürür.
-- uid: microsoft.quantum.math.complexpolartocomplex
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nComplexkutuptocomplex kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.complexpolarascomplex\" yerine kullanın."
-- uid: microsoft.quantum.math.complextocomplexpolar
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nComplextocomplexkutupsal kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.complexascomplexpolar\" yerine kullanın."
+  summary: Karmaşık sayıda türü karmaşık türde dönüştürür `ComplexPolar` `Complex` .
 - uid: microsoft.quantum.math.continuedfractionconvergenti
-  summary: Paydadan daha az veya eşit olan en `fraction` yakın devam eden kesir convergent 'ı bulur`denominatorBound`
+  summary: "`fraction`Paydadan daha az veya eşit olan en yakın devam eden kesir convergent 'ı bulur`denominatorBound`"
 - uid: microsoft.quantum.math.continuedfractionconvergentl
-  summary: Paydadan daha az veya eşit olan en `fraction` yakın devam eden kesir convergent 'ı bulur`denominatorBound`
+  summary: "`fraction`Paydadan daha az veya eşit olan en yakın devam eden kesir convergent 'ı bulur`denominatorBound`"
 - uid: microsoft.quantum.math.cos
   summary: Belirtilen açının kosinüsünü döndürür.
 - uid: microsoft.quantum.math.cosh
@@ -145,9 +141,9 @@ functions:
 - uid: microsoft.quantum.math.modpowl
   summary: Başka bir sayının gücünden kaynaklanan bir sayı üzerinde modüler bölüm gerçekleştirir.
 - uid: microsoft.quantum.math.modulusi
-  summary: Modülden `value` `modulus`kaynaklanan kurallı bir şekilde hesaplar.
+  summary: Modülden kaynaklanan kurallı bir şekilde `value` hesaplar `modulus` .
 - uid: microsoft.quantum.math.modulusl
-  summary: Modülden `value` `modulus`kaynaklanan kurallı bir şekilde hesaplar.
+  summary: Modülden kaynaklanan kurallı bir şekilde `value` hesaplar `modulus` .
 - uid: microsoft.quantum.math.negationc
   summary: Bir girişin birli olumsuzunu döndürür.
 - uid: microsoft.quantum.math.negationcp
@@ -174,16 +170,16 @@ functions:
   summary: İki giriş toplamını döndürür.
 - uid: microsoft.quantum.math.pnorm
   summary: >-
-    `L(p)` Bir vektörün vektörini `Double`döndürür.
+    `L(p)`Bir vektörün vektörini döndürür `Double` .
 
 
-    Diğer bir `Double[]`deyişle, türünde bir dizi $x olarak belirtilen bu, $-norm $\|x\|\_p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $ $p döndürür.
+    Diğer bir deyişle, türünde bir dizi $x olarak belirtilen `Double[]` Bu, $-norm $ \| x \| \_ p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $ $p döndürür.
 - uid: microsoft.quantum.math.pnormalized
   summary: >-
-    `L(p)` Norm içindeki bir vektörü `Double`normalleştirir.
+    Norm içindeki bir vektörü normalleştirir `Double` `L(p)` .
 
 
-    Diğer bir deyişle, türünde `Double[]`bir dizi $x, bu, tüm öğelerin $p $-norm $\|x\|_p $ tarafından bölündüğü bir dizi döndürür.
+    Diğer bir deyişle, türünde bir dizi $x `Double[]` , bu, tüm öğelerin $p $-norm $ \| x _p $ tarafından bölündüğü bir dizi döndürür \| .
 - uid: microsoft.quantum.math.powc
   summary: Verilen bir üsle oluşturulan bir sayı döndürür.
 - uid: microsoft.quantum.math.powcp
@@ -230,7 +226,7 @@ functions:
   summary: Bir sayının integral bölümünü hesaplar.
 newtypes:
 - uid: microsoft.quantum.math.bigfraction
-  summary: Formun `p/q`bir Rational numarasını temsil eder. Tamsayı `p` , kayıt düzeninin ilk öğesidir ve `q` kayıt düzeninin ikinci öğesidir.
+  summary: Formun bir Rational numarasını temsil eder `p/q` . Tamsayı, `p` kayıt düzeninin ilk öğesidir ve `q` kayıt düzeninin ikinci öğesidir.
 - uid: microsoft.quantum.math.complex
   summary: >-
     Gerçek ve sanal bileşenleriyle karmaşık bir sayıyı temsil eder.
@@ -243,7 +239,7 @@ newtypes:
 
     Karmaşık bir sayının kutupsal gösterimi $c = r e ^ {ı t} $.
 - uid: microsoft.quantum.math.fraction
-  summary: Formun `p/q`bir Rational numarasını temsil eder. Tamsayı `p` , kayıt düzeninin ilk öğesidir ve `q` kayıt düzeninin ikinci öğesidir.
+  summary: Formun bir Rational numarasını temsil eder `p/q` . Tamsayı, `p` kayıt düzeninin ilk öğesidir ve `q` kayıt düzeninin ikinci öğesidir.
 summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı klasik matematik işlevlerini ve veri türlerini içerir."
 operations:
 - uid: microsoft.quantum.math.randomint
@@ -255,9 +251,9 @@ operations:
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: Tek qubit Pauli işleçlerinden birini rastgele bir şekilde döndürür.
 metadata:
-  ms.openlocfilehash: 2ad787a0d29e98e25c733d1fdcf0a79fcc8c2803
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 03b75e3dbaa8be699e58fcbcd13db4fbf1c82f12
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673152"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326511"

@@ -6,6 +6,8 @@ functions:
   summary: İki dizi Boole değerinin eşit olduğunu onaylar.
 - uid: microsoft.quantum.diagnostics.allequalityfacti
   summary: İki tamsayı değeri dizilerinin eşit olduğunu onaylar.
+- uid: microsoft.quantum.diagnostics.contradiction
+  summary: Klasik koşulun yanlış olduğunu bildirir.
 - uid: microsoft.quantum.diagnostics.dumpmachine
   summary: Geçerli hedef makinenin durumunu döker.
 - uid: microsoft.quantum.diagnostics.dumpregister
@@ -34,21 +36,21 @@ functions:
   summary: Klasik bir kayan nokta değerinin, 1e-10 ' un küçük bir toleransına kadar beklenen değere sahip olduğunu onaylar.
 operations:
 - uid: microsoft.quantum.diagnostics.assertallzero
-  summary: Verilen qubits 'in hepsi $ \ket{0}$ durumunda olduğunu onaylayın.
+  summary: Verilen qubits 'in hepsi $ \ket {0} $ durumunda olduğunu onaylayın.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
-  summary: Verilen qubits 'in, belirli bir toleranstan kadar ${0}\gre$ durumunda olduğu onay.
+  summary: Verilen qubits 'in, {0} belirli bir toleranstan kadar $ \gre$ durumunda olduğu onay.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     İki işlem söz konusu olduğunda, tüm giriş durumları için aynı hareket ettikleri onaylar.
 
 
-    Bu onaylama, formun tüm durumlarında işlem eylemi $V _0 \otimes... v_ {n-1} $, $V _K $ durumlardan biri $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ ve $ \ket{i} $ (Pauli Y işlecinin 1 eigenstate)
+    Bu onaylama, formun tüm durumlarında işlem eylemi $V _0 \otimes... V_ {n-1} $, $V _k $ durumlardan biri $ \ket {0} $, $ \ket {1} $, $ \ket{+} $ ve $ \ket{i} $ (Pauli Y işlecinin 1 eigenstate)
 
 
     Bu onaylama $n $ qubits kullanır ve karşılaştırılmakta olan işlemlere yönelik birden çok çağrı gerektirir.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
   summary: >-
-    İşlemin `givenU` yalnızca işlem temelinde vektörlerdeki işlem eylemlerini denetleyerek `expectedU` verilen giriş boyutundaki işleme eşit olup olmadığını denetler.
+    İşlemin `givenU` `expectedU` yalnızca işlem temelinde vektörlerdeki işlem eylemlerini denetleyerek verilen giriş boyutundaki işleme eşit olup olmadığını denetler.
 
     Bu, iki unitı 'nin eşitliğine yönelik gerekli, ancak yeterli olmayan bir durumdur.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
@@ -74,7 +76,7 @@ operations:
 
     Son bağımsız değişken, onaylama işlemi yapılan toleransı tanımlar.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
-  summary: Qubit `q` 'In Pauli Z işlecinin, belirli bir toleransa kadar beklenen eigenstate olduğunu onaylar.
+  summary: Qubit 'in `q` Pauli Z işlecinin, belirli bir toleransa kadar beklenen eigenstate olduğunu onaylar.
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
   summary: Bir tür yüklenirken veya test amaçlı olarak çağrılabilir şekilde kullanılabilecek alternatif bir adın tanımlanabilmesi için derleyicinin tanınan özniteliği.
@@ -82,9 +84,9 @@ newtypes:
   summary: Bir birim testini işaretlemek için kullanılan derleyicinin tanınan özniteliği.
 summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı, sağlama işlemleri ve talep işlevleri dahil olmak üzere tanılama amaçları için yararlı işlevler ve işlemler içerir."
 metadata:
-  ms.openlocfilehash: 5e580bb50983d5c0e65d3284408bae04a5e92756
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2c619ac283653d87f2917d7c780ed9fe6ccfa965
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676949"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326600"
