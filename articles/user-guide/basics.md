@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
-ms.openlocfilehash: fd0ea47f00b1456ec460808ef7d451c8427677cd
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: e77b52d1a6eb7e2f62ab12dedd75d00ac8fec4be
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431164"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327331"
 ---
 # <a name="q-basics"></a>S # temel kavramları
 
@@ -106,8 +106,7 @@ Bu, `Unit` deyimin amacı örtülü hisse durumu ' nu değiştirecek olduğundan
 Bir Q # programının neredeyse her yönü, using deyimleri kullanılarak oluşturulmuştur, bu nedenle bunlarla ilgili tüm bilgileri kapsayamaz.
 Ancak, kendi sözlü yapısı ve biçimlendirmesi, q # [dosya yapısı](xref:microsoft.quantum.guide.filestructure) sayfasında, soru-cevap atama ve q [# içindeki değişkenlerde](xref:microsoft.quantum.guide.variables)kapsam ve `for` [q # içindeki denetim akışı](xref:microsoft.quantum.guide.controlflow)gibi denetim akışı döngülerinde açıklanmıştır.
 
-
-## <a name="whats-next"></a>Sırada ne var?
+## <a name="next-steps"></a>Sonraki adımlar
 Bu kılavuzun geri kalanında, işlem, işlev ve türlerin temel yapı taşları aracılığıyla karmaşık hisse programları oluşturmak için Q # ' ı nasıl kullanacağınızı göstereceğiz.
 
 Başlamak için, [Q # Içinde türler](xref:microsoft.quantum.guide.types)hakkında öğrenmeye başlayabilirsiniz.

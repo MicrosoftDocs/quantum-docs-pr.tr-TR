@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
-ms.openlocfilehash: 407b4ff3570816eb7bdc323a5c5b77dac2d951af
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 456c05d4ca66a747e0cc514a30c6bbb33610f481
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430909"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327790"
 ---
 # <a name="variables-in-q"></a>Soru-cevap #
 
@@ -161,7 +161,7 @@ Bu formun bir ataması, bu kayıt düzeninin öğelerini *parçalara ayırmayı*
 Bağlamanın sağ tarafı bir tanımlama grubu ise, bu kayıt düzeni atama sonrasında oluşturulabilir.
 Bu tür ayrıştırmaları iç içe geçmiş tanımlama gruplarını içerebilir ve sağ taraftaki tanımlama grubunun şekli sembol tanımlama grubu şekli ile uyumlu olduğu sürece herhangi bir tam veya kısmi kaldırma geçerli olur.
 
-Örneğin:
+Örnek:
 
 ```qsharp
 let (i, f) = (5, 0.1); // i is bound to 5 and f to 0.1
@@ -232,5 +232,6 @@ if (a == b) {
 ...
 ```
 
-## <a name="whats-next"></a>Sırada Ne Var?
+## <a name="next-steps"></a>Sonraki adımlar
+
 Q # içinde [qubits Ile çalışma](xref:microsoft.quantum.guide.qubits) hakkında bilgi edinin.

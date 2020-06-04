@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: bc9695b85b68807801225ccbc903a4622b450768
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 9e924b973c4f22a59dd862df3f4f0d70278a1b4e
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431079"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327807"
 ---
 # <a name="operations-and-functions-in-q"></a>Q 'daki işlemler ve Işlevler #
 
@@ -151,7 +151,7 @@ Her özelleştirmenin gerçek uygulama *örtük* veya *Açık* bir şekilde tan�
 
 ### <a name="implicitly-specifying-implementations"></a>Örtük olarak uygulamaları belirtme
 
-Bu durumda, işlem bildiriminin gövdesi yalnızca varsayılan uygulamadan oluşur. Örneğin:
+Bu durumda, işlem bildiriminin gövdesi yalnızca varsayılan uygulamadan oluşur. Örnek:
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -670,5 +670,6 @@ Ancak özyineleme kullanımı hakkında iki önemli yorum vardır:
 - Gerçek bir hisse cihazında yürütme yaparken, yığın alanı sınırlı olabilir ve bu nedenle derin özyineleme bir çalışma zamanı hatasına neden olabilir.
   Özellikle, Q # derleyicisi ve çalışma zamanı, kuyruk özyinelemeyi tanımlamaz ve iyileştirmez.
 
-## <a name="whats-next"></a>Sırada Ne Var?
+## <a name="next-steps"></a>Sonraki adımlar
+
 Q # [değişkenleri](xref:microsoft.quantum.guide.variables) hakkında bilgi edinin.

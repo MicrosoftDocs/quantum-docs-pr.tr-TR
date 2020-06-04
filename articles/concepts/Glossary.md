@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: cbc473eb14d8afd255a7072475dc054e18b98e3e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 042e4e27ef4e42cfc0c24fbb0ae2232cf1bbfe36
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426698"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327620"
 ---
 # <a name="quantum-computing-glossary"></a>Hisse bilgi işlem sözlüğü
 
@@ -55,7 +55,7 @@ Belirli bir dönüşüme ait bir [egenvector](xref:microsoft.quantum.glossary#ei
 
 Yönü, belirli bir dönüşüm tarafından değiştirilmeyen ve büyüklüğü, bu vektörün [eigenine](xref:microsoft.quantum.glossary#eigenvalue)karşılık gelen bir faktörle değiştirilmiş olan bir vektör. Bir kare matrisi $M $ ve eigenvalue $c $, sonra $v $, matrisin eigenbir vektörü ve herhangi bir bağımsız değişken karmaşık bir sayı olabilecek $Mv = CV $. Daha fazla bilgi için bkz. [Gelişmiş matris kavramları](xref:microsoft.quantum.concepts.matrix-advanced).
 
-## <a name="entanglement"></a>Entanglement
+## <a name="entanglement"></a>Dolaşıklık
 
 [Qubits](xref:microsoft.quantum.glossary#qubit)gibi hisse parçacıkların birbirleriyle bağımsız olarak açıklanamazlar şekilde *bağlı veya ayrılmış* olabilir. Ölçüm sonuçları, sonsuza kadar ayrıldıklarında bile bağıntılı olur. Entanglement, bir qubit [durumunun](xref:microsoft.quantum.glossary#quantum-state) [ölçülmesi](xref:microsoft.quantum.glossary#measurement) için gereklidir.  Daha fazla bilgi için bkz. [Gelişmiş matris kavramları](xref:microsoft.quantum.concepts.matrix-advanced).
 
@@ -98,7 +98,7 @@ Değeri oluşturulduktan sonra değiştirilmiş olan bir değişken. Q # ' da ke
 
 İlgili adların (yani, [işlemler](xref:microsoft.quantum.glossary#operation), [işlevler](xref:microsoft.quantum.glossary#function)ve [Kullanıcı tanımlı türler](xref:microsoft.quantum.glossary#user-defined-type)) toplanması için bir etiket. Örneğin, [Microsoft. hisse. hazırlama](xref:microsoft.quantum.preparation) ad alanı, standart kitaplıkta tanımlanan ve ilk durumları hazırlamaya yardımcı olan tüm sembolleri Etiketler.
 
-## <a name="operation"></a>İşlem
+## <a name="operation"></a>Çalışma
 
 Q # içinde temel hisse yürütme birimi. Bu, kabaca C, C++ veya Python içindeki bir işleve veya C# ya da Java 'daki statik bir yönteme eşdeğerdir. Daha fazla bilgi için bkz. [işlemler ve işlevler](xref:microsoft.quantum.guide.operationsfunctions).
 
@@ -120,7 +120,11 @@ Tüm gerekli girişler olmadan bir [işlev](xref:microsoft.quantum.glossary#func
 
 ## <a name="quantum-circuit-diagram"></a>Hisse devre diyagramı
 
-Örnek devre diyagramı gibi basit hisse programları için [işlem](xref:microsoft.quantum.glossary#operation) (veya [kapı](xref:microsoft.quantum.glossary#gate)) dizisini grafik olarak temsil eden bir yöntem ![ ](~/media/qpe.png) . Daha fazla bilgi için bkz. [hisse devreleri](xref:microsoft.quantum.concepts.circuits).
+Basit hisse programları için [işlem](xref:microsoft.quantum.glossary#operation) (veya [kapı](xref:microsoft.quantum.glossary#gate)) dizisini grafik olarak temsil eden bir Yöntem (örneğin, 
+
+![Örnek devre diyagramı](~/media/qpe.png). 
+
+Daha fazla bilgi için bkz. [hisse devreleri](xref:microsoft.quantum.concepts.circuits).
 
 ## <a name="quantum-libraries"></a>Hisse kitaplıkları
 
@@ -144,7 +148,7 @@ Yükleme sırasında Q # derleyicisi ile birlikte yüklenen [işlemler](xref:mic
 
 ## <a name="superposition"></a>Süper konum
 
-Bu, bir [qubit](xref:microsoft.quantum.glossary#qubit) 'in, ölçü [ölçene](xref:microsoft.quantum.glossary#measurement)kadar iki durumun doğrusal bir birleşimi olan $ \ket{\0} $ ve $ \ket{\1} $ olduğunu gösteren kavram.  Daha fazla bilgi için bkz. [hisse kullanımı anlama](xref:microsoft.quantum.overview.understanding).
+Bu, bir [qubit](xref:microsoft.quantum.glossary#qubit) 'in, ölçülene kadar iki durumun doğrusal bir birleşimi olan $ \ket {0} $ ve $ \tus$ olduğunu gösteren kavram {1} . [measured](xref:microsoft.quantum.glossary#measurement)  Daha fazla bilgi için bkz. [hisse kullanımı anlama](xref:microsoft.quantum.overview.understanding).
 
 ## <a name="target-machine"></a>Hedef makine
 

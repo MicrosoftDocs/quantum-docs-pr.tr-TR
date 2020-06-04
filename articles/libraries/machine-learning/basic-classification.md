@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: f42e3e4492f934d7a8f03d4fec6fa0de765401d7
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: ddd889fdfabb505d7118c1eff551a6fbfa757309
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77909934"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327654"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Temel sınıflandırma: verileri QDK ile sınıflandırma
 
@@ -19,10 +19,10 @@ Bu hızlı başlangıçta, QDK 'nin hisse Machine Learning kitaplığını kulla
 
 Bu kılavuzda, Q # içinde tanımlanan bir sınıflandırıcı yapısını kullanarak yarı ay veri kümesini kullanacağız.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
-- [Q# projesi oluşturma](xref:microsoft.quantum.howto.createproject)
+- Bir [Python konak programı](xref:microsoft.quantum.install.python) veya [C# ana bilgisayar programı](xref:microsoft.quantum.install.cs)için bir Q # projesi oluşturun.
 
 ## <a name="host-program"></a>Konak programı
 
@@ -34,7 +34,7 @@ Ana bilgisayar programınız üç bölümden oluşur:
 
     ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Visual Studio Code veya Komut Satırı ile Python](#tab/tabid-python)
 
-    Python 'dan gelen Q # sınıflandırıcınızı çalıştırmak için aşağıdaki kodu `host.py`olarak kaydedin. Bu öğreticinin ilerleyen kısımlarında açıklanan Q # dosyası `Training.qs` de ihtiyacınız olduğunu unutmayın.
+    Python 'dan gelen Q # sınıflandırıcınızı çalıştırmak için aşağıdaki kodu olarak kaydedin `host.py` . Bu öğreticinin ilerleyen kısımlarında açıklanan Q # dosyasına da ihtiyacınız olduğunu unutmayın `Training.qs` .
 
     :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="3-42":::
 
@@ -49,7 +49,7 @@ Ana bilgisayar programınız üç bölümden oluşur:
 
     ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[Visual Studio Code veya Komut Satırı ile C#](#tab/tabid-csharp)
 
-    Size gelen C#Q # sınıflandırıcınızı çalıştırmak için aşağıdaki kodu `Host.cs`olarak kaydedin. Bu öğreticinin ilerleyen kısımlarında açıklanan Q # dosyası `Training.qs` de ihtiyacınız olduğunu unutmayın.
+    C# ' den gelen Q # sınıflandırıcınızı çalıştırmak için aşağıdaki kodu olarak kaydedin `Host.cs` . Bu öğreticinin ilerleyen kısımlarında açıklanan Q # dosyasına da ihtiyacınız olduğunu unutmayın `Training.qs` .
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -63,7 +63,7 @@ Ana bilgisayar programınız üç bölümden oluşur:
 
     ### <a name="c-with-visual-studio-2019"></a>[Visual Studio 2019 ile C#](#tab/tabid-vs2019)
 
-    Yeni Q # programınızı Visual Studio C# 'da çalıştırmak için `Host.cs` aşağıdaki C# kodu içerecek şekilde değiştirin. Bu öğreticinin ilerleyen kısımlarında açıklanan Q # dosyası `Training.qs` de ihtiyacınız olduğunu unutmayın.
+    Visual Studio 'Da C# ' den yeni Q # programınızı çalıştırmak için `Host.cs` Aşağıdaki C# kodunu içerecek şekilde değiştirin. Bu öğreticinin ilerleyen kısımlarında açıklanan Q # dosyasına da ihtiyacınız olduğunu unutmayın `Training.qs` .
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -76,17 +76,17 @@ Ana bilgisayar programınız üç bölümden oluşur:
     ```
     ***
 
-## <a name="q-classifier-code"></a>Soru\# sınıflandırıcı kodu
+## <a name="q-classifier-code"></a>Q \# sınıflandırıcı kodu
 
 Şimdi, ana bilgisayar programı tarafından çağrılan işlemlerin Q # içinde nasıl tanımlandığını görelim.
-Aşağıdaki kodu `Training.qs`adlı bir dosyaya kaydettik.
+Aşağıdaki kodu adlı bir dosyaya kaydettik `Training.qs` .
 
 :::code language="qsharp" source="~/quantum/samples/machine-learning/half-moons/Training.qs" range="4-116":::
 
 Yukarıdaki kodda tanımlanan en önemli işlevler ve işlemler şunlardır:
 
 - `ClassifierStructure() : ControlledRotation[]`: Bu işlevde, düşüntiğimiz denetimli kapıların katmanlarını ekleyerek devre modelimizin yapısını ayarlayacağız. Bu adım, sıralı bir ayrıntılı öğrenme modelinde, neurlanlar katmanlarının bir bildirimine benzerdir.
-- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`: Bu işlem kodun temel kısmıdır ve eğitimi tanımlar. Burada, kitaplıkta yer alan veri kümesinden örnekleri yüklediğimiz için, eğitimin Hyper parametrelerini ve başlangıç parametrelerini ayarlayacağız ve kitaplığa dahil edilen işlemi `TrainSequentialClassifier` çağırarak eğitime başladık. Sınıflandırıcının belirlenmesi için parametreleri ve farkı verir.
+- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`: Bu işlem kodun temel kısmıdır ve eğitimi tanımlar. Burada, kitaplıkta yer alan veri kümesinden örnekleri yüklediğimiz için, eğitimin Hyper parametrelerini ve başlangıç parametrelerini ayarlayacağız ve kitaplığa dahil edilen işlemi çağırarak eğitime başladık `TrainSequentialClassifier` . Sınıflandırıcının belirlenmesi için parametreleri ve farkı verir.
 - `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: Bu işlem, modeli değerlendirmek için doğrulama işlemini tanımlar. Burada doğrulama için örnekleri, örnek başına ölçüm sayısını ve toleransı yükledik. Doğrulama için seçilen örnek toplu iş üzerindeki hatalı sınıflandırmaların sayısını verir.
 
 ## <a name="next-steps"></a>Sonraki adımlar

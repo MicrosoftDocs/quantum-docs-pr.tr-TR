@@ -7,12 +7,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 53f72f1d49ae32a5a8572a1cf68a66a1d9b45e4a
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 3245f587493ce12cfec15c8f932fd092d85f688e
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426901"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327586"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum Development Kit güncelleştirme (QDK)
 
@@ -21,8 +21,8 @@ Microsoft Quantum Development Kit (QDK) ' i en son sürüme güncelleştirmeyi �
 Bu makalede, zaten QDK 'nin yüklü olduğu varsayılır. Uygulamasını ilk kez yüklüyorsanız, lütfen [yükleme kılavuzuna](xref:microsoft.quantum.install)bakın.
 
 En son QDK sürümüyle güncel tutmanız önerilir. En son QDK sürümüne yükseltmek için bu güncelleştirme kılavuzunu izleyin. İşlem iki bölümden oluşur:
-1. kodunuzu güncelleştirilmiş herhangi bir sözdizimi ile hizalamak için mevcut Q # dosyalarınızı ve projelerinizi güncelleştirme
-2. seçtiğiniz geliştirme ortamınız için QDK 'yi güncelleştirme 
+1. Kodunuzu güncelleştirilmiş herhangi bir sözdizimi ile hizalamak için mevcut Q # dosyalarınız ve projelerinizi güncelleştirme.
+2. Seçtiğiniz geliştirme ortamınız için QDK 'yi güncelleştirme.
 
 ## <a name="updating-q-projects"></a>Q # projeleri güncelleştiriliyor 
 
@@ -38,9 +38,9 @@ Q # işlemlerini barındırmak için C# veya Python kullanıp kullanmayacağın�
 
 ### <a name="update-q-projects-in-visual-studio"></a>Visual Studio 'da Q # projelerini güncelleştirme
  
-1. Visual Studio 2019 ' nin en son sürümüne güncelleştirin, yönergeler için [buraya](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) bakın
-2. Çözümünüzü Visual Studio 'da açın
-3. Menüden, **Build**  ->  **temiz çözüm** oluştur ' u seçin.
+1. Visual Studio 2019 ' nin en son sürümüne güncelleştirin, yönergeler için [buraya](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) bakın.
+2. Çözümünüzü Visual Studio 'da açın.
+3. Menüden, **Build**  ->  **temiz çözüm**oluştur ' u seçin.
 4. . Csproj dosyalarınızın her birinde hedef Framework 'ü `netcoreapp3.1` (veya `netstandard2.1` bir kitaplık projesi ise) olarak güncelleştirin.
     Diğer bir deyişle, formun satırlarını düzenleyin:
 
@@ -49,52 +49,96 @@ Q # işlemlerini barındırmak için C# veya Python kullanıp kullanmayacağın�
     ```
 
     [Burada](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)hedef çerçeveleri belirterek daha fazla ayrıntı bulabilirsiniz.
-5. Çözümünüzdeki tüm dosyaları kaydedin ve kapatın
-6. **Araçlar**  ->  **komut satırı**  ->  **Geliştirici komut istemi** seçin
-7. Çözümdeki her proje için aşağıdaki komutu çalıştırın:
 
-    ```dotnetcli
-    dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
+5. . Csproj dosyalarının her birinde, `Microsoft.Quantum.Sdk` aşağıdaki satırda gösterildiği gıbı SDK 'yı olarak ayarlayın. Sürüm numarasının en son kullanılabilir olduğunu ve [sürüm notlarını](https://docs.microsoft.com/quantum/relnotes/)inceleyerek belirleyebileceğini lütfen unutmayın.
+
+    ```xml
+    <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
     ```
 
-   Projeleriniz başka Microsoft. hisse paketleri (ör. Microsoft. hisse. Numerics) kullanıyorsa, bu komutu da çalıştırabilirsiniz.
-8. Komut istemi ' ni kapatın ve **derleme**  ->  **Oluştur çözüm** ' ü *not* seçin (çözümü yeniden derle seçeneğini seçmeyin)
+6. Çözümünüzdeki tüm dosyaları kaydedin ve kapatın.
+
+7. **Araçlar**  ->  **komut satırı**  ->  **Geliştirici komut istemi**seçin. Alternatif olarak, Visual Studio 'da paket yönetim konsolunu kullanabilirsiniz.
+
+8. Çözümdeki her proje için, bu paketi **kaldırmak** için aşağıdaki komutu çalıştırın:
+
+    ```dotnetcli
+    dotnet remove [project_name].csproj package Microsoft.Quantum.Development.Kit
+    ```
+
+   Projeleriniz başka Microsoft. hisse veya Microsoft. Azure. hisse paketleri (ör. Microsoft. hisse. Numerics) kullanıyorsa, kullanılan sürümü güncelleştirmek için bunlar için **Ekle** komutunu çalıştırın.
+
+    ```dotnetcli
+    dotnet add [project_name].csproj package [package_name]
+    ```
+
+9. Komut istemi ' ni kapatın ve **derleme**  ->  **Oluştur çözüm** ' ü *not* seçin (çözümü yeniden derle seçeneğini seçmeyin).
 
 Artık [Visual Studio QDK uzantınızı güncelleştirmeye](#update-visual-studio-qdk-extension)devam edebilirsiniz.
 
 
 ### <a name="update-q-projects-in-visual-studio-code"></a>Visual Studio Code Q # projelerini güncelleştirme
 
-1. Visual Studio Code, güncelleştirmek için projeyi içeren klasörü açın
-2. **Terminal**  ->  **yeni terminali** seçin
-3. Komut satırını kullanarak güncelleştirme yönergelerini izleyin (doğrudan aşağıda)
+1. Visual Studio Code, güncelleştirmek için projeyi içeren klasörü açın.
+2. **Terminal**  ->  **yeni Terminal**' i seçin.
+3. Komut satırını kullanarak güncelleştirme yönergelerini izleyin (doğrudan aşağıda verilmiştir).
 
 ### <a name="update-q-projects-using-the-command-line"></a>Komut satırını kullanarak Q # projelerini güncelleştirme
 
-1. Proje dosyanızı içeren klasöre gidin
+1. Ana proje dosyanızı içeren klasöre gidin.
+
 2. Şu komutu çalıştırın:
 
     ```dotnetcli
     dotnet clean [project_name].csproj
     ```
 
-3. . Csproj dosyalarınızın her birinde hedef Framework 'ü `netcoreapp3.1` (veya `netstandard2.1` bir kitaplık projesi ise) olarak güncelleştirin.
-    Diğer bir deyişle, formun satırlarını düzenleyin:
+3. Geçerli QDK sürümünü saptayın. Bunu bulmak için [sürüm notlarını](https://docs.microsoft.com/quantum/relnotes/)gözden geçirebilirsiniz. Sürüm, şuna benzer bir biçimde olacaktır `0.11.2006.207` .
 
-    ```xml
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    ```
+4. Her bir `.csproj` dosya için aşağıdaki adımları izleyin:
 
-    [Burada](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)hedef çerçeveleri belirterek daha fazla ayrıntı bulabilirsiniz.
-4. Şu komutu çalıştırın:
+    - Hedef çerçeveyi `netcoreapp3.1` (veya `netstandard2.1` bir kitaplık projesi ise) olarak güncelleştirin. Diğer bir deyişle, formun satırlarını düzenleyin:
 
-    ```dotnetcli
-    dotnet add package Microsoft.Quantum.Development.Kit
-    ```
+        ```xml
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        ```
 
-    Projeniz başka Microsoft. hisse paketleri (ör. Microsoft. hisse. Numerics) kullanıyorsa, bu komutu da çalıştırabilirsiniz.
-5. Tüm dosyaları kaydedin ve kapatın.
-6. Her proje bağımlılığı için 1-4 tekrarlayın, ardından ana projenizi içeren klasöre dönün ve çalıştırın:
+        [Burada](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)hedef çerçeveleri belirterek daha fazla ayrıntı bulabilirsiniz.
+
+    - Proje tanımındaki SDK başvurusunu değiştirin. Sürüm numarasının **Adım 3**' te belirlenen değere karşılık geldiğinden emin olun.
+
+        ```xml
+        <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+        ```
+
+    - Varsa `Microsoft.Quantum.Development.Kit` , aşağıdaki girişte belirtilecektir pakete olan başvuruyu kaldırın:
+
+        ```xml
+        <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.10.1910.3107" />
+        ```
+
+    - Tüm Microsoft hisse paketlerinin sürümünü, QDK 'nin en son yayınlanan sürümüne ( **Adım 3**' te belirlenir) güncelleştirin. Bu paketler aşağıdaki desenlerle adlandırılır:
+
+        ```
+        Microsoft.Quantum.*
+        Microsoft.Azure.Quantum.*
+        ```
+    
+        Paketlere yapılan başvurular aşağıdaki biçimdedir:
+
+        ```xml
+        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.11.2006.207" />
+        ```
+
+    - Güncelleştirilen dosyayı kaydedin.
+
+    - Aşağıdaki işlemleri gerçekleştirerek projenin bağımlılıklarını geri yükleyin:
+
+        ```dotnetcli
+        dotnet restore [project_name].csproj
+        ```
+
+4. Ana projenizi içeren klasöre geri gidin ve şunu çalıştırın:
 
     ```dotnetcli
     dotnet build [project_name].csproj

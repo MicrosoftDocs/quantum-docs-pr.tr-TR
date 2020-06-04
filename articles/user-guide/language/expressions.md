@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 93432cef9711b6780192cd59e92b09647a264b5c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431215"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327314"
 ---
 # <a name="type-expressions-in-q"></a>Q içindeki tür Ifadeleri #
 
@@ -63,7 +63,7 @@ Diğer bir deyişle, bir adım sola veya sağa kaydırma, sırasıyla 2 ile çar
 
 Tamsayı bölme ve tamsayı mod, negatif sayılar için C# olarak aynı davranışı izler.
 Diğer bir deyişle, `a % b` her zaman aynı işarete sahip olur `a` ve `b * (a / b) + a % b` her zaman eşit olur `a` .
-Örneğin:
+Örnek:
 
  `A` | `B` | `A / B` | `A % B`
 ---------|----------|---------|---------
@@ -209,7 +209,7 @@ Bu nedenle, `WrappedPair` temel alınan türe sahip kullanıcı tanımlı bir t�
 
 `!`İşlecin önceliği belirgin olmayan bir etkiye sahip olabilir.
 Bir işlev veya işlem sarmalanmamış bir değer döndürürse, bağımsız değişken grubu, sarmalama yerine çağrıya bağlamak için işlev veya işlem çağrısının parantez içine alınması gerekir.
-Örneğin:
+Örnek:
 
 ```qsharp
 let f = (Foo(arg))!;    // Calls Foo(arg), then unwraps the result
@@ -221,7 +221,6 @@ let g = Foo(arg)!;      // Syntax error
 Dizi değişmez değeri, virgülle ayrılmış bir veya daha fazla öğe ifadesinin sırasıdır `[` ve `]` .
 Tüm öğeler aynı türle uyumlu olmalıdır.
 
-
 Aynı türde iki dizi verildiğinde, ikili `+` işleç iki dizinin birleşimi olan yeni bir dizi oluşturmak için kullanılabilir.
 Örneğin, `[1,2,3] + [4,5,6]` `[1,2,3,4,5,6]` .
 
@@ -229,6 +228,9 @@ Aynı türde iki dizi verildiğinde, ikili `+` işleç iki dizinin birleşimi ol
 
 Bir tür ve ifade verildiğinde `Int` , `new` işleç verilen boyutun yeni bir dizisini ayırmak için kullanılabilir.
 Örneğin, `new Int[i + 1]` `Int` öğeleri içeren yeni bir dizi ayırır `i + 1` .
+
+Boş dizi değişmez `[]` değerlerine izin verilmez.
+Bunun yerine `new ★[0]` ,, `★` uygun bir tür için yer tutucu olarak olduğu gibi, istenen sıfır uzunluklu diziyi oluşturulmasına izin verir.
 
 Yeni bir dizinin öğeleri, türe bağlı bir varsayılan değere başlatılır.
 Çoğu durumda bu bazı sıfır çeşitlerinden oluşur.
@@ -373,8 +375,7 @@ Dizinin öğe türü tüm öğeleri tarafından desteklenen tüm nesneleri deste
 - `[Op1, Op3]`, bir dizi `(Qubit[] => Unit is Adj)` işlemden oluşur.
 - `[Op2, Op3]`, bir dizi `(Qubit[] => Unit is Ctl)` işlemden oluşur.
 
-Boş dizi değişmez `[]` değerlerine izin verilmez.
-Bunun yerine `new ★[0]` ,, `★` uygun bir tür için yer tutucu olarak olduğu gibi, istenen sıfır uzunluklu diziyi oluşturulmasına izin verir.
+Ancak, `(Qubit[] => Unit is Adj)` ve `(Qubit[] => Unit is Ctl)` işlemleri ortak temel türüne sahip olsa `(Qubit[] => Unit)` da, bu işleçlerin dizilerinin ortak *of* bir temel türü paylaşmadığını unutmayın. Örneğin, `[[Op1], [Op2]]` Şu anda, uyumsuz dizi türlerinin bir dizisini oluşturmaya çalıştığı için bir hata oluşturur `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` .
 
 
 ## <a name="conditional-expressions"></a>Koşullu Ifadeler
@@ -473,10 +474,10 @@ Parantez ve `[` `]` dizi Dilimleme ve dizin oluşturma için herhangi bir işle�
 
 En yüksekten en düşüğe göre öncelik sırasına göre işleçler:
 
-Operatör | Sayısına | Açıklama | İşlenen türleri
+Operatör | Sayısına | Description | İşlenen türleri
 ---------|----------|---------|---------------
- arkasında`!` | Li | Unwrap | Kullanıcı tanımlı herhangi bir tür
- `-`, `~~~`, `not` | Li | Sayısal negatif, bit düzeyinde tamamlama, mantıksal değilleme | `Int`, için `BigInt` veya için `Double` `-` `Int` veya `BigInt` `~~~` `Bool` için`not`
+ arkasında`!` | Birli | Unwrap | Kullanıcı tanımlı herhangi bir tür
+ `-`, `~~~`, `not` | Birli | Sayısal negatif, bit düzeyinde tamamlama, mantıksal değilleme | `Int`, için `BigInt` veya için `Double` `-` `Int` veya `BigInt` `~~~` `Bool` için`not`
  `^` | İkili | Tamsayı güç | `Int`üs için veya `BigInt` taban için `Int`
  `/`, `*`, `%` | İkili | Bölme, çarpma, tamsayı mod | `Int`, `BigInt` veya `Double` için `/` `*` `Int` veya `BigInt` için`%`
  `+`, `-` | İkili | Ekleme veya dize ve dizi birleştirme, çıkarma | `Int``BigInt`veya `Double` `String` için bir dizi türü veya`+`
@@ -487,10 +488,11 @@ Operatör | Sayısına | Açıklama | İşlenen türleri
  `^^^` | İkili | Bit düzeyinde XOR | `Int` veya `BigInt`
  <code>\|\|\|</code> | İkili | Bit düzeyinde OR | `Int` veya `BigInt`
  `and` | İkili | Mantıksal VE | `Bool`
- `or` | İkili | Mantıksal VEYA | `Bool`
+ `or` | İkili | Mantıksal EĞER | `Bool`
  `..` | İkili/üçlü | Range işleci | `Int`
  `?` `|` | Üçlü | Koşullu | `Bool`Sol taraftaki
 `w/` `<-` | Üçlü | Kopyala ve Güncelleştir | bkz. [kopyalama ve güncelleştirme ifadeleri](#copy-and-update-expressions)
 
-## <a name="whats-next"></a>Sırada Ne Var?
+## <a name="next-steps"></a>Sonraki adımlar
+
 Artık Q # ' da ifadelerle çalışdığınıza göre, işlem ve işlevlerin nasıl tanımlanacağını ve çağrılacağını öğrenmek için [q # Içindeki işlemlere ve işlevlere](xref:microsoft.quantum.guide.operationsfunctions) gidebilirsiniz.

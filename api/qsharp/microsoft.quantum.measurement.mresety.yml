@@ -3,7 +3,11 @@ uid: microsoft.quantum.measurement.mresety
 name: MResetY
 type: operation
 namespace: Microsoft.Quantum.Measurement
-summary: Y esasına göre tek bir qubit ölçer ve ölçüyü takip eden standart temel durum | 0 〉 olarak sıfırlar.
+summary: >-
+  Y temelinde tek bir qubit ölçer ve ölçüyü izleyen sabit bir başlangıç durumuna sıfırlar.
+
+
+  $Y $-temelinde tek qubit ölçümü gerçekleştirir ve ölçü sonrasında qubitin $ \ket $ ' e döndürülmesini sağlar {0} .
 syntax: 'operation MResetY (target : Qubit) : Result'
 input:
   content: '(target : Qubit)'
@@ -15,13 +19,13 @@ input:
 output:
   content: Result
   types:
-  - summary: Pauli $Y $ `target` tabanında ölçüm sonucu.
+  - summary: '`target`Pauli $Y $ tabanında ölçüm sonucu.'
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 2c06d14133399c5afd7d09b67deaa6e63953f1c0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2c177d035a949e700023cf8a89ec0b5d25aac645
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682705"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84327433"

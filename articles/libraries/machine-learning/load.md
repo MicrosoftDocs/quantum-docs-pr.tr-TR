@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.load
-ms.openlocfilehash: 15e63ced6223759a332ce22a43c133a7899f482a
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: efa4a65a489446cbef48507d0b02a932da74c71c
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77909968"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327671"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>Kendi veri kümelerinizi yükleyin ve sınıflandırın
 
@@ -25,7 +25,7 @@ Bu tür biçimler, Python ve .NET ekosistemi gibi farklı çerçeveler ile yüks
 
 Her bir örneğin _i $ $x $, $x _ {I2} $ ve $x _ {i3} $ $x $N = $2 $ (x, y) $ boyutunda bir eğitim veri kümeniz olduğunu varsayalım.
 Doğrulama veri kümesi aynı yapıya sahiptir.
-Bu datsets 'ler şuna benzer bir `data.json` dosyası ile temsil edilebilir:
+Bu datsets 'ler şuna benzer bir dosya ile temsil edilebilir `data.json` :
 
 ```json
 {
@@ -79,15 +79,15 @@ Farklı kediler ve köpekler için yüksekliklerde ve ağırlıklarla küçük b
 | 0,91      | 44         | Li    |
 | 0,86      | 31          | Li    |
 | 0,32      | 5         | Kedi    |
-| 0.25      | 4          | Kedi    |
+| 0,25      | 4          | Kedi    |
 
 İşlem şu şekilde yapılır:
 
 - İlk olarak veri kümesini eğitim ve doğrulamaya ayırdık. Bu durumda, eğitim için ilk üç örneği ve doğrulama için geri kalan örnekleri ele alabiliriz. Genel olarak, eğitim verilerinde istenmeyen verileri önlemek için rastgele eğitim ve doğrulama veri kümesini örneklemek iyi bir uygulamadır.
-- İkinci olarak, her sınıfa bir sayısal etiket atamamız gerekir. Bu, şu anda QML kitaplığı 'nın yalnızca ikili sınıflandırma sorunlarını admits olduğunu unutmayın. Bu nedenle, 0 etiketini sınıfa `Dog` ve 1 numaralı sayıyı `Cat`sınıfa atayacağız.
+- İkinci olarak, her sınıfa bir sayısal etiket atamamız gerekir. Bu, şu anda QML kitaplığı 'nın yalnızca ikili sınıflandırma sorunlarını admits olduğunu unutmayın. Bu nedenle, 0 etiketini sınıfa `Dog` ve 1 numaralı numarayı sınıfa atayacağız `Cat` .
 - Son olarak, veri kümenizdeki verileri kullanarak şablonu doldurduk. Büyük veri kümeleri için, belirli bir veri kümenizdeki şablonu otomatik olarak oluşturmak üzere küçük bir betik oluşturmanız gerektiğini unutmayın. Bu betik, veri kümenizin orijinal biçimine bağlı olacaktır.
 
-Veri kümeniz için `data.json` dosyası şu şekilde olur:
+Veri kümeniz için `data.json` dosya şu şekilde olur:
 
 ```json
 {
@@ -137,24 +137,24 @@ Veri kümeniz için `data.json` dosyası şu şekilde olur:
 
 ```
 
-## <a name="loading-the-data"></a>Veriler yükleniyor
+## <a name="loading-the-data"></a>Veriyi yükleme
 
 Verileriniz bir JSON dosyası olarak serileştirildikten sonra, seçtiğiniz ana bilgisayar diliyle birlikte gelen JSON kitaplıklarını kullanarak yükleyebilirsiniz.
 
 ### <a name="python"></a>[Python](#tab/tabid-python)
 
-Python, JSON seri hale getirilmiş verilerle çalışmaya yönelik [yerleşik `json` paketini](https://docs.python.org/3.7/library/json.html) sağlar:
+Python, JSON seri hale getirilmiş verilerle çalışmaya yönelik [yerleşik `json` paketi](https://docs.python.org/3.7/library/json.html) sağlar:
 
 :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="4-5,20-22":::
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
-.NET Core platformu, JSON seri hale getirilmiş verilerle çalışmaya yönelik [`System.Text.Json` paketini](https://www.nuget.org/packages/System.Text.Json) sağlar:
+.NET Core platformu, JSON seri hale getirilmiş verilerle çalışmaya yönelik [ `System.Text.Json` paketi](https://www.nuget.org/packages/System.Text.Json) sağlar:
 
 :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="10,64-82":::
 
 ***
 
-## <a name="whats-next"></a>Sırada ne var?
+## <a name="next-steps"></a>Sonraki adımlar
 
 Artık kendi veri kümelerinizde kendi denemeleri çalıştırmaya başlamaya hazırsınız. Farklı sınıflandırıcıları ve veri kümelerini deneyin ve sonuçlarınızı paylaşan topluluğa katkıda bulunun!

@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
-ms.openlocfilehash: e89b9ccfe2a0796e01eedfc99f7ce71038d85f38
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 0deb0729a88c49798f32a22a943b935d383c570b
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430943"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327552"
 ---
 # <a name="working-with-qubits"></a>Kubitlerle çalışma
 
@@ -221,5 +221,6 @@ Bunun nedeni, bağlantı hattı yapısından, her bir ve içindeki her bir kapı
 
 Bu kodu başka bir Canon işleviyle karşılaştırmak `MultiControlledXClean` `X` , ancak mekanizmayı kullanarak birkaç temiz qubit kullanan, çarpma denetimli bir işlem uygulama amacını elde eder `using` . 
 
-## <a name="whats-next"></a>Sırada Ne Var?
+## <a name="next-steps"></a>Sonraki adımlar
+
 Q # içindeki [Denetim akışı](xref:microsoft.quantum.guide.controlflow) hakkında bilgi edinin.

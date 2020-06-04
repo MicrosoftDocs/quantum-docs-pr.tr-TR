@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: 4a551ee90a0abb6e42953cf04c7f5a8ca3573f26
-ms.sourcegitcommit: 682a4a5f5dd23ca58a4addf62aea4086bb308552
+ms.openlocfilehash: f7a3ac3813966c0ef695068297ce4d9949ead554
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609150"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327297"
 ---
 # <a name="types-in-q"></a>Q# dilindeki türler
 
@@ -63,7 +63,8 @@ Bu dizi türü olarak temsil edilir `'T[]` ; Örneğin, `Qubit[]` veya `Int[][]`
 Q #, dikdörtgen çok boyutlu diziler için destek sağlamaz.
 
 Bir dizi değeri, içinde olduğu gibi bir dizinin öğeleri etrafında köşeli parantezler kullanılarak Q # kaynak kodunda yazılabilir `[PauliI, PauliX, PauliY, PauliZ]` .
-Dizi sabit değerinin türü dizideki tüm öğelerin ortak temel türüne göre belirlenir. 
+Dizi sabit değerinin türü dizideki tüm öğelerin ortak temel türüne göre belirlenir. Bu nedenle, ortak temel türü olmayan öğelerle bir dizi oluşturmaya çalışmak bir hata oluşturur.  
+Bir örneği için bkz. [callables dizileri](xref:microsoft.quantum.guide.expressions#arrays-of-callables) .
 
 > [!WARNING]
 > Dizinin öğeleri, dizi oluşturulduktan sonra değiştirilemez.
@@ -291,7 +292,8 @@ Bir tür parametreli çağrılabilir çağrılırken, aynı tür parametresine s
 
 S #, bir tür parametresi için yerine gelebilecek olası türleri kısıtlayan bir mekanizma sağlamaz.
 
-## <a name="whats-next"></a>Sırada Ne Var?
+## <a name="next-steps"></a>Sonraki adımlar
+
 Artık, Q # dilini oluşturan tüm türleri gördüğünüze göre, bu çeşitli türlerin ifadelerini oluşturma ve değiştirme hakkında bilgi almak için, [q # Içinde Ifade türüne](xref:microsoft.quantum.guide.expressions) gidebilirsiniz.
 
 

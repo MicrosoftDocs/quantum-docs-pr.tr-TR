@@ -7,26 +7,26 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: c093284f1ea33b72d4d264992b0ba6bf6bc72782
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 8019b32a3290e2d45124ebb1eb75395f6cb758db
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036449"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327535"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Geliştirme ortamınızda bir Q # projesi oluşturma
 
 QDK ile bir Q # projesi oluşturmayı öğrenin.
 
-Bir Q # projesi, hisse cinsi içeren Q # dosyalarını ve hisse programını çalıştırmak için bir ana bilgisayar programını içerir. Ana bilgisayar programını C#, gibi .NET dillerinde veya Python 'da yazabilirsiniz. Ayrıca, IQ # çekirdeğini kullanarak bir Jupyter not defterinde Q # kodu çalıştırabilirsiniz.
+Bir Q # projesi, hisse cinsi içeren Q # dosyalarını ve hisse programını çalıştırmak için bir ana bilgisayar programını içerir. Ana bilgisayar programını C# gibi .NET dillerinde veya Python 'da yazabilirsiniz. Ayrıca, IQ # çekirdeğini kullanarak Q # kodunu bir Jupyter Notebook de çalıştırabilirsiniz.
 
 Aşağıdaki bölümlerde geliştirme ortamınızı ve dilinizi seçin:
 
 * [Python](#create-a-python-project)
-* [S # jupi Not defterleri](#create-a-q-jupyter-notebook-project)
-* [C#Visual Studio ile](#create-a-c-project-on-windows-using-visual-studio)
-* [C#VS Code ile](#create-a-c-project-using-vs-code)
-* [C#komut satırı ile](#create-a-c-project-using-the-dotnet-command-line-tool)
+* [Q# Jupyter Notebook’ları](#create-a-q-jupyter-notebook-project)
+* [Visual Studio ile C#](#create-a-c-project-on-windows-using-visual-studio)
+* [VS Code C#](#create-a-c-project-using-vs-code)
+* [Komut satırı ile C#](#create-a-c-project-using-the-dotnet-command-line-tool)
 
 ## <a name="create-a-python-project"></a>Python projesi oluşturma
 
@@ -36,7 +36,7 @@ Aşağıdaki bölümlerde geliştirme ortamınızı ve dilinizi seçin:
 
 1. Projeniz için bir klasör oluşturun ve bu klasöre gidin
 
-1. `Operation.qs`adlı bir Q # dosyası oluşturun ve buna Q # kodunuzu ekleyin. Örnek:
+1. Adlı bir Q # dosyası oluşturun `Operation.qs` ve buna q # kodunuzu ekleyin. Örnek:
 
     ```qsharp
     namespace HelloWorld {
@@ -50,7 +50,7 @@ Aşağıdaki bölümlerde geliştirme ortamınızı ve dilinizi seçin:
     }
     ```
 
-1. Q # işleminizi çağırmak için `host.py` adlı bir Python ana bilgisayar dosyası oluşturun. Örnek:
+1. Q # işleminizi çağırmak için çağrılan bir Python ana bilgisayar dosyası oluşturun `host.py` . Örnek:
 
     ```python
     import qsharp
@@ -89,7 +89,7 @@ Artık hisse programınızı geliştirmeye devam edebilirsiniz.
 
 1. Komut satırında gösterilen URL'ye gidin. Örneğin: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85]
 
-1. Tarayıcıda bir Jupyıter sayfası görüntülenir. **Dosyalar** sekmesinde, q # çekirdeğine sahip bir Jupyter Not defteri oluşturmak için **Yeni** > **q #** ' ı seçin. İlk not defteri hücresine aşağıdaki kodu ekleyin:
+1. Tarayıcıda bir Jupyıter sayfası görüntülenir. **Dosyalar** sekmesinde, bir **New**  >  q # çekirdeğiyle Jupyter Notebook oluşturmak için yeni**Q #** öğesini seçin. İlk not defteri hücresine aşağıdaki kodu ekleyin:
 
     ```qsharp
     operation SayHello() : Unit {
@@ -97,21 +97,21 @@ Artık hisse programınızı geliştirmeye devam edebilirsiniz.
     }
     ```
 
-1. Not **defteri 'ni çalıştırmak** için **hücre** > seçin. `SayHello` kısa bir süre sonra hücre çıktısında görüntülenir:
+1. **Cell**  >  Not defterini çalıştırmak için hücre**çalıştırma hücrelerini** seçin. `SayHello`kısa süre önce hücre çıktısında görünür:
 
-    ![Q# kodu içeren Jupyter not defteri hücresi](~/media/install-guide-jupyter.png)
+    ![Q # kodlu Jupyter Notebook hücresi](~/media/install-guide-jupyter.png)
 
     Jupyter not defterlerinde çalışırken, Q # kodu derlenir ve Not defteri bulduğu işlem (ler) in adını verir.
 
 1. Yeni bir hücrede `%simulate` magic kullanarak yeni oluşturduğunuz işlemin kuantum bilgisayarda yürütmesinin benzetimini yapın:
 
-    ![%simulate magic içeren Jupyter not defteri hücresi](~/media/install-guide-jupyter-simulate.png)
+    ![% Benzetim Magic ile Jupyter Notebook hücresi](~/media/install-guide-jupyter-simulate.png)
 
     Ekrana yazdırılmış bir iletiyle birlikte çağırdığınız işlemin sonucuna da (bu örnekte boş) görüyor olmalısınız.
 
 Artık, hisse geliştirme işlemlerinizi sürdürmek için diğer Q # işlemleri ekleyebilirsiniz.
 
-## <a name="create-a-c-project-on-windows-using-visual-studio"></a>Visual Studio C# 'Yu kullanarak Windows üzerinde bir proje oluşturma
+## <a name="create-a-c-project-on-windows-using-visual-studio"></a>Visual Studio 'Yu kullanarak Windows üzerinde C# projesi oluşturma
 
 1. Ön koşullar
 
@@ -119,12 +119,12 @@ Artık, hisse geliştirme işlemlerinizi sürdürmek için diğer Q # işlemleri
 
 1. Yeni bir Q# uygulaması oluşturun
 
-    * **Dosya** -> **Yeni** -> **Proje**’ye gidin
+    * **Dosya**  ->  **Yeni**  ->  **Proje** 'ye git
     * Arama kutusuna `Q#` yazın
     * **Q# Uygulaması**’nı seçin
-    * **İleri**’yi seçin
+    * **İleri** Seç
     * Uygulamanız için bir ad ve konum seçin
-    * **Oluştur**’u seçin
+    * **Oluştur** ' u seçin
 
 1. Projeyi inceleyin
 
@@ -132,7 +132,7 @@ Artık, hisse geliştirme işlemlerinizi sürdürmek için diğer Q # işlemleri
 
 1. Uygulamayı çalıştırma
 
-    * **Hata Ayıklama** -> **Hata Ayıklamadan Başlat**’ı seçin
+    * Hata **ayıklama**  ->  **olmadan Başlat** ' ı seçin
     * Bir konsol penceresinde yazdırılmış `Hello quantum world!` metni görmeniz gerekir.
 
 Artık Visual Studio 'Yu kullanarak hisse geliştirmeye devam edebilirsiniz
@@ -140,7 +140,7 @@ Artık Visual Studio 'Yu kullanarak hisse geliştirmeye devam edebilirsiniz
 > [!NOTE]
 > * Bir Visual Studio çözümünde birden fazla projeniz varsa, çözümde yer alan tüm projelerin çözüm ile aynı klasörde veya bunun bir alt klasöründe olması gerekir.  
 
-## <a name="create-a-c-project-using-vs-code"></a>VS Code kullanarak C# proje oluşturma
+## <a name="create-a-c-project-using-vs-code"></a>VS Code kullanarak bir C# projesi oluşturma
 
 1. Ön koşullar
 
@@ -148,7 +148,7 @@ Artık Visual Studio 'Yu kullanarak hisse geliştirmeye devam edebilirsiniz
 
 1. Yeni bir proje oluşturun:
 
-    * **Görünüm** -> **Komut Paleti**’ne gidin
+    * **Görünüm**  ->  **komut paleti** 'ne git
     * **Q #: yeni proje oluştur** ' u seçin
     * **Tek başına konsol uygulamasını** seçin
     * Dosya sisteminde uygulamayı oluşturmak istediğiniz konuma gidin
@@ -156,8 +156,8 @@ Artık Visual Studio 'Yu kullanarak hisse geliştirmeye devam edebilirsiniz
 
 1. Uygulamayı çalıştırın:
 
-    * **Terminal** -> **yeni Terminal** 'a git
-    * `dotnet run` girin
+    * **Terminal**  ->  **yeni Terminal** 'e git
+    * Girmesini`dotnet run`
     * Çıktı penceresinde aşağıdaki metni görürsünüz `Hello quantum world!`
 
 Artık Visual Studio Code kullanarak hisse geliştirmeye devam edebilirsiniz.
@@ -165,11 +165,11 @@ Artık Visual Studio Code kullanarak hisse geliştirmeye devam edebilirsiniz.
 > [!NOTE]
 > * Birden fazla kök klasörü olan çalışma alanları şu anda Visual Studio Code uzantısı tarafından desteklenmemektedir. Bir VS Code çalışma alanında birden çok projeniz varsa, tüm projelerin aynı kök klasörde yer alması gerekir.
 
-## <a name="create-a-c-project-using-the-dotnet-command-line-tool"></a>`dotnet` komut C# satırı aracını kullanarak bir proje oluşturun
+## <a name="create-a-c-project-using-the-dotnet-command-line-tool"></a>Komut satırı aracını kullanarak bir C# projesi oluşturma `dotnet`
 
 1. Ön koşullar
 
-    * [Komut satırı Için hisse geliştirme setini](xref:microsoft.quantum.install.cs) yükler
+    * [Komut satırı Için hisse geliştirme setini](xref:microsoft.quantum.install.standalone) yükler
 
 1. Yeni uygulama oluşturma
 
@@ -195,6 +195,6 @@ Artık Visual Studio Code kullanarak hisse geliştirmeye devam edebilirsiniz.
 
 Artık, komut satırı araçlarını kullanarak hisse geliştirmeye devam edersiniz.
 
-## <a name="whats-next"></a>Sırada ne var?
+## <a name="next-steps"></a>Sonraki adımlar
 
 Tercih ettiğiniz ortamda bir proje oluşturduğunuza göre, artık hisse geliştirme ortamınıza devam edebilirsiniz.

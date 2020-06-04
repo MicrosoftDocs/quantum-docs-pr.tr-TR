@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: c534e016fcb8b50e66c11ca29c253ba0512acc6e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 1f1b641563fe35879abeee32b4f0aeeb7001b1a0
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430960"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84326549"
 ---
 # <a name="control-flow-in-q"></a>Q içindeki denetim akışı #
 
@@ -329,5 +329,6 @@ Bu işlemde gösterilen önemli programlı özellikler, bu döngünün daha karm
 Ve işlemleri hakkında daha fazla bilgi için bkz. [test ve hata ayıklama](xref:microsoft.quantum.guide.testingdebugging) [`Assert`](xref:microsoft.quantum.intrinsic.assert) [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) .
 
 
-## <a name="whats-next"></a>Sırada Ne Var?
+## <a name="next-steps"></a>Sonraki adımlar
+
 Soru-cevap [Ile test ve hata ayıklama](xref:microsoft.quantum.guide.testingdebugging) hakkında bilgi edinin.
