@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: ddd889fdfabb505d7118c1eff551a6fbfa757309
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 1d2538fd164c4c61c2712978d3b5c57b0eb766e6
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327654"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422181"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Temel sınıflandırma: verileri QDK ile sınıflandırma
 
@@ -86,7 +86,7 @@ Aşağıdaki kodu adlı bir dosyaya kaydettik `Training.qs` .
 Yukarıdaki kodda tanımlanan en önemli işlevler ve işlemler şunlardır:
 
 - `ClassifierStructure() : ControlledRotation[]`: Bu işlevde, düşüntiğimiz denetimli kapıların katmanlarını ekleyerek devre modelimizin yapısını ayarlayacağız. Bu adım, sıralı bir ayrıntılı öğrenme modelinde, neurlanlar katmanlarının bir bildirimine benzerdir.
-- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`: Bu işlem kodun temel kısmıdır ve eğitimi tanımlar. Burada, kitaplıkta yer alan veri kümesinden örnekleri yüklediğimiz için, eğitimin Hyper parametrelerini ve başlangıç parametrelerini ayarlayacağız ve kitaplığa dahil edilen işlemi çağırarak eğitime başladık `TrainSequentialClassifier` . Sınıflandırıcının belirlenmesi için parametreleri ve farkı verir.
+- `TrainHalfMoonModel() : (Double[], Double)`: Bu işlem kodun temel kısmıdır ve eğitimi tanımlar. Burada, kitaplıkta yer alan veri kümesinden örnekleri yüklediğimiz için, eğitimin Hyper parametrelerini ve başlangıç parametrelerini ayarlayacağız ve kitaplığa dahil edilen işlemi çağırarak eğitime başladık `TrainSequentialClassifier` . Sınıflandırıcının belirlenmesi için parametreleri ve farkı verir.
 - `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: Bu işlem, modeli değerlendirmek için doğrulama işlemini tanımlar. Burada doğrulama için örnekleri, örnek başına ölçüm sayısını ve toleransı yükledik. Doğrulama için seçilen örnek toplu iş üzerindeki hatalı sınıflandırmaların sayısını verir.
 
 ## <a name="next-steps"></a>Sonraki adımlar

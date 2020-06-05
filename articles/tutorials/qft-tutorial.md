@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
-ms.openlocfilehash: f0b87936c9baf07555e76f295da58c0a6b9ecd17
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 05d3292e1c6e3c8c1163c460f2aaa51c591aa1d5
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84328604"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422249"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Öğretici: Q 'da qubit düzeyi programları yazma ve benzetimini yapma\#
 
@@ -29,7 +29,7 @@ Bu durumda, aşağıdaki gösterimi bir devre olarak bulunan tam üç qubit hiss
 <br/>
 <img src="./qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 * [Install](xref:microsoft.quantum.install) Tercih ettiğiniz dil ve geliştirme ortamınızı kullanarak hisse geliştirme setini kullanın.
 * Makinenizde QDK zaten yüklüyse en son sürüme [güncelleştirdiğinizden](xref:microsoft.quantum.update) emin olun
@@ -386,7 +386,7 @@ Giriş durumumuz ilk satırı için ayrıntılı $ \ ayraç {000} $:
 * **`    ---`**: Genin aşamasının grafik gösterimi.
 * **`[ 0.0000 rad ]`**: aşamanın sayısal değeri (radyan cinsinden).
 
-Büyüklük ve aşama bir grafik gösterimiyle birlikte görüntülenir. Büyüklük temsili basittir: bir çubuğu gösterir `*` ve olasılık arttıkça, çubuk ne kadar büyük olur. Aşama için, [burada](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions) , açı aralıklarına dayalı olabilecek sembol temsilleri Için dumpmachine bölümüne bakın.
+Büyüklük ve aşama bir grafik gösterimiyle birlikte görüntülenir. Büyüklük temsili basittir: bir çubuğu gösterir `*` ve olasılık arttıkça, çubuk ne kadar büyük olur. Aşama için bkz. [test ve hata ayıklama:](xref:microsoft.quantum.guide.testingdebugging#dump-functions) açı aralıklarına dayanan olası sembol temsilleri için döküm işlevleri.
 
 
 Bu nedenle, yazdırılan çıktı, programlanmış kapıları durumumuzu dönüştürdüğünü gösterir
