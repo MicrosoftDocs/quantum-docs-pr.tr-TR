@@ -1,3 +1,5 @@
+- href: check_kata.md
+  name: '%check_kata magic komutu'
 - href: chemistry.broombridge.md
   name: '%chemistry.broombridge magic komutu'
 - href: chemistry.encode.md
@@ -12,6 +14,8 @@
   name: '%config magic komutu'
 - href: estimate.md
   name: '%estimate magic komutu'
+- href: kata.md
+  name: '%kata magic komutu'
 - href: lsmagic.md
   name: '%lsmagic magic komutu'
 - href: package.md
