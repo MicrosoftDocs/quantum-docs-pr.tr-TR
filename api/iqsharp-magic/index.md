@@ -2,6 +2,7 @@
 
 | Magic Komutu | Özet |
 |---------------|---------|
+| [`%check_kata`](xref:microsoft.quantum.iqsharp.magic-ref.check_kata) | Tek bir kata testi için başvuru uygulamasını denetler. |
 | [`%chemistry.broombridge`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.broombridge) | Verilen bir .yaml dosyasından Broombridge elektronik yapı sorunu sunusunu yükleyip döndürür. |
 | [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode) | Bir fermion Hamilton’unu Q# tarafından kullanılabilen bir biçime dönüştürür. |
 | [`%chemistry.fh.add_terms`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.add_terms) | Bir fermion Hamilton’ına terimler ekler. |
@@ -9,6 +10,7 @@
 | [`%chemistry.inputstate.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load) | Broombridge elektronik yapı sorununu yükler ve seçili giriş durumunu döndürür. |
 | [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config) | Yapılandırma seçeneklerinin ayarlanmasına veya sorgulanmasına izin verir. |
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | Verilen bir işlevi veya işlemi ResourcesEstimator hedef makinesinde çalıştırır. |
+| [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | Tek bir test yürütür. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | Şu anda kullanılabilen tüm magic komutlarının listesini döndürür. |
 | [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | NuGet paketi yükleme özelliği sağlar. Paketin NuGet kaynakları listesinde bulunması gerekir, genellikle burada nuget.org yer alır |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | Bu çekirdek için geçerli performans ölçümlerini bildirir. |

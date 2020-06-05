@@ -31,6 +31,8 @@
       href: quickstart.md
     - name: Grover’ın arama algoritmasını uygulama
       href: quickstarts/search.md
+    - name: Qubit düzeyi programlama
+      href: tutorials/qft-tutorial.md
     - name: 'Kuantum Katalarıyla Q# öğrenme'
       href: intro-to-katas.md
     - name: 'Q# kod örnekleri'
