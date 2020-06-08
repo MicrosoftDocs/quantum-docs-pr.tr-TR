@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: 3e109553adc4d724733834e3660bfe7789052bcf
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 8fafbccfe2a94a824353221b5e7eb8bac16c42f2
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426830"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327365"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Öğretici: Q\# dilinde Kuantum Rastgele Sayı Oluşturucusu uygulama
 
@@ -20,7 +20,7 @@ Kuantum rastgele sayı oluşturucusu, Q# dilinde yazılmış kuantum algoritmala
 ## <a name="prerequisites"></a>Ön koşullar
 
 - Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
-- [Q# projesi oluşturma](xref:microsoft.quantum.howto.createproject)
+- [Komut satırından Q# kullanmak](xref:microsoft.quantum.install.standalone) veya bir [Python konak programı](xref:microsoft.quantum.install.python) ya da [C# konak programı](xref:microsoft.quantum.install.cs) ile kullanmak üzere bir Q# projesi oluşturun.
 
 ## <a name="write-a-q-operation"></a>Q# işlemi yazma
 

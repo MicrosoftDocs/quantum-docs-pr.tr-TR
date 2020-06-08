@@ -3,15 +3,15 @@ title: Q# ile dolanıklığı keşfetme
 description: Q# dilinde kuantum programı yazmayı öğrenin. Quantum Development Kit'i (QDK) kullanarak Bell Durumu uygulaması geliştirme
 author: natke
 ms.author: nakersha
-ms.date: 10/07/2019
+ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 7836e39227fa2282c6e2faa039f6e625103d5403
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 989080e7d9979bb87d14b2580d28732bb1092eb1
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426835"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327382"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Öğretici: Q\# ile dolaşıklığı keşfetme
 
@@ -25,28 +25,27 @@ Bell adı, en basit süper konum ve kuantum dolaşıklığı örneklerini göste
 
 Kodlamaya başlamaya hazırsanız devam etmeden önce şu adımları izleyin: 
 
-* Tercih ettiğiniz dili ve geliştirme ortamını kullanarak Quantum Development Kit'i [yükleyin](xref:microsoft.quantum.install)
+* [Python](xref:microsoft.quantum.install.python) veya [.NET](xref:microsoft.quantum.install.cs) için Quantum geliştirme setini yükleyin.
 * Makinenizde QDK zaten yüklüyse en son sürüme [güncelleştirdiğinizden](xref:microsoft.quantum.update) emin olun
 
 Dilerseniz QDK'yı yüklemeden anlatımı takip ederek Q# programlama diline genel bir bakış elde edebilir ve kuantum bilişiminin ilk kavramlarını öğrenebilirsiniz.
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Q# ile kubit davranışını gösterme
 
-Basit [kubit tanımımızı](xref:microsoft.quantum.overview.understanding) hatırlayalım.  Klasik bitler 0 veya 1 gibi tek bir ikili değeri barındırırken, kubitin durumu aynı anda 0 ve 1 değerlerine sahip olan **süper konum** olabilir.  Kavramsal olarak bir kubit, boşluktaki bir yön (vektör olarak da bilinir) olarak düşünülebilir.  Bir kubit herhangi bir yönde olabilir. İki **klasik durum**, iki yöndür. Bu da %100 oranında 0 ölçme şansını ve %100 oranında 1 ölçme şansını gösterir.  Bu gösterim ayrıca [Bloch küresi](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere) ile daha anlaşılır bir şekilde gösterilmiştir.
-
+Basit [kubit tanımımızı](xref:microsoft.quantum.overview.understanding) hatırlayalım.  Klasik bitler 0 veya 1 gibi tek bir ikili değeri barındırırken, [kubitin](xref:microsoft.quantum.glossary#qubit) durumu 0 ve 1’in bir **süper konumunda** olabilir.  Kavramsal olarak bir kubit, boşluktaki bir yön (vektör olarak da bilinir) olarak düşünülebilir.  Bir kubit herhangi bir yönde olabilir. İki **klasik durum**, iki yöndür. Bu da %100 oranında 0 ölçme şansını ve %100 oranında 1 ölçme şansını gösterir.  Bu gösterim ayrıca [Bloch küresi](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere) ile daha anlaşılır bir şekilde gösterilmiştir.
 
 Ölçüm işlemi ikili sonuç üretir ve bir kubit durumunu değiştirir. Ölçüm, 0 veya 1 ikili değerini verir.  Kubit, süper konumdan (herhangi bir yöne) klasik durumlardan birine geçer.  Bundan sonra aynı ölçümün başka bir işlemle müdahale edilmeden yinelenmesi durumunda aynı ikili sonuç ortaya çıkar.  
 
-Birden çok kubit **dolaşık hale getirilebilir**. Dolaşık bir kubitin ölçümünü yaptığınızda, diğerinin durumuna ilişkin bilginiz de güncelleştirilir.
+Birden çok kubit [**dolaşık hale getirilebilir**](xref:microsoft.quantum.glossary#entanglement). Dolaşık bir kubitin ölçümünü yaptığınızda, diğerinin durumuna ilişkin bilginiz de güncelleştirilir.
 
 Şimdi bu davranışın Q# ile nasıl ifade edildiğine bakalım.  Mümkün olan en basit programla başlayıp kuantum süper konumu ile kuantum dolaşıklığını göstermek için bunu geliştirirsiniz.
 
 ## <a name="setup"></a>Kurulum
 
-Microsoft'un Quantum Development Kit'iyle geliştirilen uygulamalar iki parçadan oluşur:
+Bu öğretici, bir konak program kullanır ve iki bölümden oluşur:
 
-1. Q# kuantum bilgisayar dili kullanılarak uygulanan bir veya birden fazla kuantum algoritması.
-1. Python veya C# gibi bir bilgisayar dilinde uygulanan, ana giriş noktası işlevi gören ve kuantum algoritmasını yürütmek üzere Q# işlemlerini çağıran bir konak programı.
+1. Q# kuantum programlama dili kullanılarak uygulanan bir dizi kuantum algoritması.
+1. Python veya C# gibi bir dilde uygulanan, ana giriş noktası işlevi gören ve kuantum algoritmalarını yürütmek üzere Q# işlemlerini çağıran bir konak program.
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
 
@@ -498,9 +497,8 @@ Genel bakışta belirtildiği üzere ilk kubit için istatistiklerimiz değişme
 
 Tebrikler, ilk kuantum programınızı yazdınız!
 
-## <a name="whats-next"></a>Sırada ne var?
+## <a name="next-steps"></a>Sonraki adımlar
 
 [Grover araması](xref:microsoft.quantum.quickstarts.search) başlıklı öğreticide kuantum bilişiminin en popüler algoritmalarından biri olan Grover aramasını oluşturup çalıştırma adımları gösterilir ve kuantum bilişimiyle gerçek sorunları çözmek için kullanılabilecek güzel bir Q# programı örneği sunulur.  
 
 [Quantum Geliştirme Seti'ni Kullanmaya Başlama](xref:microsoft.quantum.welcome) sayfasında, Q# dilini ve kuantum programlamayı öğrenmek için başvurabileceğiniz diğer yöntemlerle ilgili öneriler sunulur.
-

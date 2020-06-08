@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra
-ms.openlocfilehash: 9f156a3cc092e295317061dda5e8aa29e9d5ca1e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4750643d16ad8af6240df42c1b93353565561429
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430858"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327603"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Kuantum bilişimi için doğrusal cebir
 
@@ -67,7 +67,7 @@ $$
 
 Sonuç, her öğenin bir olasılığı temsil ettiği dört boyutlu bir matristir. Örneğin, $ac$, iki kubitin 0 ve 0 değerine çökmesi olasılığıdır, $ad$ ise 0 ve 1 olasılığıdır ve bu şekilde devam eder. 
 
-Tek bir $\begin{bmatrix} a \\\\  b \end{bmatrix}$ kubit durumunun bir kuantum durumunu temsil etmesi için $|a|^2 + |b|^2 = 1$ gereksinimini karşılaması gerektiği gibi, $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ iki kubitli durumunun da $|a|^2 + |b|^2 + |c|^2+ |d|^2 = 1$ gereksinimini karşılaması gerekir.
+Tek bir $\begin{bmatrix} a \\\\  b \end{bmatrix}$ kubit durumunun bir kuantum durumunu temsil etmesi için $|a|^2 + |b|^2 = 1$ gereksinimini karşılaması gerektiği gibi, $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ iki kubitli durumunun da $|ac|^2 + |ad|^2 + |bc|^2+ |bd|^2 = 1$ gereksinimini karşılaması gerekir.
 
 ## <a name="summary"></a>Özet
 
@@ -75,5 +75,4 @@ Doğrusal cebir, kuantum bilişimini ve kuantum fiziğini açıklamaya yönelik 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-> [!div class="nextstepaction"]
-> [QDK’yı yükleme](xref:microsoft.quantum.install)
+[QDK’yı yükleme](xref:microsoft.quantum.install)
