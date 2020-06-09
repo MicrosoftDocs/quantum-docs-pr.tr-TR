@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 35499daae0cd0ae329e39b43b0d8dd5a00183871
-ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
+ms.openlocfilehash: f18d005012dc1c52aab456f1c7b194d182cab786
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83660735"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578173"
 ---
 # <a name="develop-with-q-and-python"></a>Q # ve Python ile geliştirme
 
@@ -26,13 +26,13 @@ Q # işlemlerini çağırmak için Python konak programları geliştirmek üzere
 
 1. `qsharp`Q # ve Python arasında birlikte çalışabilirliğine izin veren bir Python paketi olan paketini yükler.
 
-    ```bash
+    ```
     pip install qsharp
     ```
 
 1. Q # işlemlerini derlemek ve yürütmek için temel işlevselliği sağlayan Jupileter ve Python tarafından kullanılan bir çekirdek olan IQ # öğesini yükler.
 
-    ```bash
+    ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
@@ -69,15 +69,15 @@ Q # işlemlerini çağırmak için Python konak programları geliştirmek üzere
 
     - Programı çalıştırın:
 
-        ```bash
+        ```
         python hello_world.py
         ```
 
     - Çıktıyı doğrulayın. Programınız aşağıdaki satırları çıkarmalıdır:
 
-        ```bash
+        ```
         Hello from quantum world!
-       ```
+        ```
 
 
 > [!NOTE]

@@ -7,12 +7,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 3245f587493ce12cfec15c8f932fd092d85f688e
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 89db1a671767b0cc083a251918bbeeed2b39b883
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327586"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578190"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum Development Kit güncelleştirme (QDK)
 
@@ -175,7 +175,7 @@ Aşağıda geliştirme ortamınızı seçin.
 
     Aşağıdaki çıktıyı görmeniz gerekir:
 
-    ```bash
+    ```
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```
@@ -184,19 +184,19 @@ Aşağıda geliştirme ortamınızı seçin.
 
 3. Paketi güncelleştirme `qsharp`
 
-    ```bash
+    ```
     pip install qsharp --upgrade
     ```
 
 4. Sürümü doğrulama `qsharp`
 
-    ```bash
+    ```
     pip show qsharp
     ```
 
     Aşağıdaki çıktıyı görmeniz gerekir:
 
-    ```bash
+    ```
     Name: qsharp
     Version: 0.10.1912.501
     Summary: Python client for Q#, a domain-specific quantum programming language
@@ -205,7 +205,7 @@ Aşağıda geliştirme ortamınızı seçin.
 
 5. Dosyalarınızın konumundan aşağıdaki komutu çalıştırın `.qs`
 
-    ```bash
+    ```
     python -c "import qsharp; qsharp.reload()"
     ```
 
@@ -228,7 +228,7 @@ Aşağıda geliştirme ortamınızı seçin.
 
     Çıktın aşağıdakine benzer olması gerekir:
 
-    ```bash
+    ```
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```
