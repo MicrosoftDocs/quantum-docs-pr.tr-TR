@@ -6,18 +6,89 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: 042e4e27ef4e42cfc0c24fbb0ae2232cf1bbfe36
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- $
+- $
+- '\cdots'
+- bmatrix
+- '\ddots'
+- '\equiv'
+- '\sum'
+- '\begin'
+- '\end'
+- '\sqrt'
+- '\otimes'
+- '{'
+- '}'
+- '\text'
+- '\phi'
+- '\kappa'
+- '\psi'
+- '\alpha'
+- '\beta'
+- '\gamma'
+- '\delta'
+- '\omega'
+- '\bra'
+- '\ket'
+- '\boldone'
+- '\\\\'
+- '\\'
+- =
+- '\frac'
+- '\text'
+- '\mapsto'
+- '\dagger'
+- '\to'
+- "\begin{cases}"
+- "\end{cases}"
+- '\operatorname'
+- '\braket'
+- '\id'
+- '\expect'
+- '\defeq'
+- '\variance'
+- '\dd'
+- '&'
+- "\begin{align}"
+- "\end{align}"
+- '\Lambda'
+- '\lambda'
+- '\Omega'
+- '\mathrm'
+- '\left'
+- '\right'
+- '\qquad'
+- '\times'
+- '\big'
+- '\langle'
+- '\rangle'
+- '\bigg'
+- '\Big'
+- '|'
+- '\mathbb'
+- '\vec'
+- '\in'
+- '\texttt'
+- '\ne'
+- <
+- '>'
+- '\leq'
+- '\geq'
+- ~~
+- "~"
+ms.openlocfilehash: 2a3b1fe480b9886d0c11255bb1b1e01402dce4f7
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327620"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630101"
 ---
 # <a name="quantum-computing-glossary"></a>Hisse bilgi işlem sözlüğü
 
 ## <a name="adjoint"></a>Adjoint
 
-Bir [işlemin](xref:microsoft.quantum.glossary#operation)karmaşık eşleniği devrik. Bir [Unitary](xref:microsoft.quantum.glossary#unitary-operator) işleci uygulayan işlemler için, adjoint işlemin tersidir ve bir dağılım simgesiyle belirtilir. Örneğin, işlem `U` $U $ Unitary işlecini temsil ediyorsa, `Adjoint U` $U ^ \ dağılım $ öğesini temsil eder. Daha fazla bilgi için bkz. [adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).
+Bir [işlemin](xref:microsoft.quantum.glossary#operation)karmaşık eşleniği devrik. Bir [Unitary](xref:microsoft.quantum.glossary#unitary-operator) işleci uygulayan işlemler için, adjoint işlemin tersidir ve bir dağılım simgesiyle belirtilir. Örneğin, işlem `U` Unitary işlecini $U temsil ediyorsa $ , `Adjoint U` $U ^ \ dağılım öğesini temsil eder $ . Daha fazla bilgi için bkz. [adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).
 
 ## <a name="ancilla"></a>Anek La
 
@@ -25,7 +96,7 @@ Bir hisse bilgisayarı için geçici bellek görevi gören ve gerektiğinde ayr�
 
 ## <a name="bell-state"></a>Zil durumu
 
-İki qubit için en az dört adet en yüksek düzeyde, en önemli [hisse](xref:microsoft.quantum.glossary#quantum-state) [mandan](xref:microsoft.quantum.glossary#entanglement) biri. Dört durum tanımlanmıştır $ \ket{\ beta_ {ij}} = (\mathbb{I} \otimes X ^ iZ ^ j) (\ket {00} + \ ayraç {11} )/\sqrt {2} $. Bir zil durumu, [EPR çifti](xref:microsoft.quantum.glossary#epr-pair)olarak da bilinir.
+İki qubit için en az dört adet en yüksek düzeyde, en önemli [hisse](xref:microsoft.quantum.glossary#quantum-state) [mandan](xref:microsoft.quantum.glossary#entanglement) biri. Dört durum tanımlanmıştır $ \ket { \ beta_ {ij } } = (\mathbb{I } \otimes X ^ iz ^ j) (\ket{00 } + \ket{11 } )/\sqrt{2 } $. Bir zil durumu, [EPR çifti](xref:microsoft.quantum.glossary#epr-pair)olarak da bilinir.
 
 ## <a name="bloch-sphere"></a>Bloch küre
 
@@ -37,7 +108,7 @@ Q # dilinde bir [işlem](xref:microsoft.quantum.glossary#operation) veya [işlev
 
 ## <a name="clifford-group"></a>Clienfford grubu
 
-[Şişörün](xref:microsoft.quantum.glossary#bloch-sphere) [Küçlerini ve Pauli işleçleri](xref:microsoft.quantum.glossary#pauli-operators)için efekt permütasyonları kaplayan işlem kümesi. Bunlar [$X $](xref:microsoft.quantum.intrinsic.x), [$Y $](xref:microsoft.quantum.intrinsic.y), [$Z $](xref:microsoft.quantum.intrinsic.z), [$H $](xref:microsoft.quantum.intrinsic.h) ve [$S $](xref:microsoft.quantum.intrinsic.s)işlemlerini içerir.
+[Şişörün](xref:microsoft.quantum.glossary#bloch-sphere) [Küçlerini ve Pauli işleçleri](xref:microsoft.quantum.glossary#pauli-operators)için efekt permütasyonları kaplayan işlem kümesi. Bunlar [$X $ ](xref:microsoft.quantum.intrinsic.x), [$Y $ ](xref:microsoft.quantum.intrinsic.y), [$Z $ ](xref:microsoft.quantum.intrinsic.z), [$H $ ](xref:microsoft.quantum.intrinsic.h) ve [$S $ ](xref:microsoft.quantum.intrinsic.s)işlemlerini içerir.
 
 ## <a name="controlled"></a>Tarafından
 
@@ -45,15 +116,15 @@ Hedef işlem için bir veya daha fazla [qubit](xref:microsoft.quantum.glossary#q
 
 ## <a name="dirac-notation"></a>Dirac gösterimi
 
-Aynı zamanda *köşeli ayraç* olarak da adlandırılan [hisse durumlarının](xref:microsoft.quantum.glossary#quantum-state)gösterimini kolaylaştıran bir sembolik kısayol.  *Köşeli* bölüm bir satır vektörünü temsil eder, örneğin $ \bra{A} = \begin{bmatrix} a {_1} & bir {_2} \end{bmatrix} $ ve *demet* kısmı bir sütun vektörünü temsil eder, $ \ket{b} = \begin{bmatrix} b {_1} \\ \\ b {_2} \end{bmatrix} $. Daha fazla bilgi için bkz. [Dirac gösterimi](xref:microsoft.quantum.concepts.dirac).
+Aynı zamanda *köşeli ayraç* olarak da adlandırılan [hisse durumlarının](xref:microsoft.quantum.glossary#quantum-state)gösterimini kolaylaştıran bir sembolik kısayol.  *Köşeli* bölüm bir satır vektörünü temsil eder, örneğin $ \bra{a } = \begin{ bmatrix } a {_1 } & a {_2 } \end{ bmatrix } $ ve *demet* kısmı bir sütun vektörünü temsil eder, $ \ket{b } = \begin{ bmatrix } B {_1 } \\ \\ B {_2 } \end{ bmatrix } $. Daha fazla bilgi için bkz. [Dirac gösterimi](xref:microsoft.quantum.concepts.dirac).
 
 ## <a name="eigenvalue"></a>Eigenvalue
 
-Belirli bir dönüşüme ait bir [egenvector](xref:microsoft.quantum.glossary#eigenvector) sayısının, dönüşüm uygulaması tarafından değiştirildiği faktör.  $M $ ve bir eigenvector $v $, ardından $Mv = CV $, burada $c $ eigenvalue ve karmaşık bir bağımsız değişken olabilir. Daha fazla bilgi için bkz. [Gelişmiş matris kavramları](xref:microsoft.quantum.concepts.matrix-advanced).
+Belirli bir dönüşüme ait bir [egenvector](xref:microsoft.quantum.glossary#eigenvector) sayısının, dönüşüm uygulaması tarafından değiştirildiği faktör.  $M kare matrisi ve bir $ eigenvector $v $ , $MV = CV $ , burada $c $ eigenvalue olduğu ve herhangi bir bağımsız değişken karmaşık bir sayı olabilir. Daha fazla bilgi için bkz. [Gelişmiş matris kavramları](xref:microsoft.quantum.concepts.matrix-advanced).
 
 ## <a name="eigenvector"></a>Eigenvector
 
-Yönü, belirli bir dönüşüm tarafından değiştirilmeyen ve büyüklüğü, bu vektörün [eigenine](xref:microsoft.quantum.glossary#eigenvalue)karşılık gelen bir faktörle değiştirilmiş olan bir vektör. Bir kare matrisi $M $ ve eigenvalue $c $, sonra $v $, matrisin eigenbir vektörü ve herhangi bir bağımsız değişken karmaşık bir sayı olabilecek $Mv = CV $. Daha fazla bilgi için bkz. [Gelişmiş matris kavramları](xref:microsoft.quantum.concepts.matrix-advanced).
+Yönü, belirli bir dönüşüm tarafından değiştirilmeyen ve büyüklüğü, bu vektörün [eigenine](xref:microsoft.quantum.glossary#eigenvalue)karşılık gelen bir faktörle değiştirilmiş olan bir vektör. Kare matris $M ve bir $ eigenvalue $c verildiğinde $ $MV = CV $ , burada $v $ matrisin eigenbir vektörü ve herhangi bir bağımsız değişken karmaşık bir sayı olabilir. Daha fazla bilgi için bkz. [Gelişmiş matris kavramları](xref:microsoft.quantum.concepts.matrix-advanced).
 
 ## <a name="entanglement"></a>Dolaşıklık
 
@@ -61,7 +132,7 @@ Yönü, belirli bir dönüşüm tarafından değiştirilmeyen ve büyüklüğü,
 
 ## <a name="epr-pair"></a>EPR çifti
 
-İki [qubit](xref:microsoft.quantum.glossary#qubit)için en az dört adet en yüksek düzeyde, en önemli [hisse](xref:microsoft.quantum.glossary#quantum-state) mandan biri. Dört durum tanımlanmıştır $ \ket{\ beta_ {ij}} = (\mathbb {1} \otimes X ^ iz ^ j) (\ket {00} + \ ayraç {11} )/\sqrt {2} $. Bir EPR çifti, [çan durumu](xref:microsoft.quantum.glossary#bell-state) olarak da bilinir
+İki [qubit](xref:microsoft.quantum.glossary#qubit)için en az dört adet en yüksek düzeyde, en önemli [hisse](xref:microsoft.quantum.glossary#quantum-state) mandan biri. Dört durum tanımlanmıştır $ \ket { \ beta_ {ij } } = (\mathbb{1 } \otimes X ^ iz ^ j) (\ket{00 } + \ket{11 } )/\sqrt{2 } $. Bir EPR çifti, [çan durumu](xref:microsoft.quantum.glossary#bell-state) olarak da bilinir
 
 ## <a name="evolution"></a>Ri
 
@@ -76,11 +147,11 @@ Klasik Logic Gates kavramına bağlı olarak, hisse için bir [işlem](xref:micr
 
 ## <a name="global-phase"></a>Küresel aşama
 
-İki [durum](xref:microsoft.quantum.glossary#quantum-state) , $e ^ {i\phi} $ olan bir karmaşık sayının birden çok katı olduğunda, bunlar küresel bir aşamaya göre farklılık gösterir. Yerel aşamaların aksine, genel aşamalar herhangi bir [Measurment](xref:microsoft.quantum.glossary#measurement)üzerinden gözlemlenemez. Daha fazla bilgi için bkz. [qubit](xref:microsoft.quantum.concepts.qubit).
+İki [durum](xref:microsoft.quantum.glossary#quantum-state) , bir karmaşık sayının birden çok katı kadar özdeş olduğunda $e ^ {i \phi } $, genel bir aşamaya göre farklılık gösterir. Yerel aşamaların aksine, genel aşamalar herhangi bir [Measurment](xref:microsoft.quantum.glossary#measurement)üzerinden gözlemlenemez. Daha fazla bilgi için bkz. [qubit](xref:microsoft.quantum.concepts.qubit).
 
 ## <a name="hadamard"></a>Hadamard
 
-Hadamard işlemi (Hadamard kapısı veya dönüştürme olarak da bilinir), tek bir [qubit](xref:microsoft.quantum.glossary#qubit) üzerinde çalışır ve [superposition](xref:microsoft.quantum.glossary#superposition) {0} {1} qubit başlangıçta $ \ket $ durumunda olursa, bunu $ \ket $ veya $ \ket $ ' in hatta bir üst konumuna koyar {0} . Q # içinde, bu işlem önceden tanımlı işlem tarafından uygulanır [`H`](xref:microsoft.quantum.intrinsic.h) .
+Hadamard işlemi (Hadamard kapısı veya dönüştürme olarak da bilinir), tek bir [qubit](xref:microsoft.quantum.glossary#qubit) üzerinde çalışır ve bu, [superposition](xref:microsoft.quantum.glossary#superposition) } } qubit başlangıçta $ \ket{0 $ durumunda olursa, bunu $ \ket{0 $ veya $ \ket{1 $ öğesinin hatta bir üst konumuna koyar } . Q # içinde, bu işlem önceden tanımlı işlem tarafından uygulanır [`H`](xref:microsoft.quantum.intrinsic.h) .
 
 ## <a name="immutable"></a>Değişmez
 
@@ -116,7 +187,7 @@ Tüm gerekli girişler olmadan bir [işlev](xref:microsoft.quantum.glossary#func
 
 ## <a name="pauli-operators"></a>Pauli işleçleri
 
-`X` `Y` Ve hisse işlemleri olarak bilinen üç 2 x 2 Unitary matrisi kümesi `Z` . $I $, kimlik matrisi genellikle küme içinde de bulunur.  $I = \begin{bmatrix} 1 & 0 \\ \\ 0 & 1 \end{bmatrix} $, $X = \begin{bmatrix} 0 & 1 \\ \\ 1 & 0 \end{bmatrix} $, $Y = \begin{bmatrix} 0 &-i \\ \\ i & 0 \end{bmatrix} $, $Z = \begin{bmatrix} 1 & 0 \\ \\ 0 &-1 \end{bmatrix} $.   Daha fazla bilgi için bkz. [tek qubit işlemleri](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
+`X` `Y` Ve hisse işlemleri olarak bilinen üç 2 x 2 Unitary matrisi kümesi `Z` . $I kimlik matrisi $ genellikle küme içinde de bulunur.  $I = \begin{ bmatrix } 1 & 0 \\ \\ 0 & 1 \end{ bmatrix } $, $X = \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } $, $Y = \begin{ bmatrix } 0 &-ı \\ \\ i & 0 \end{ bmatrix } $, $Z = \begin{ bmatrix } 1 & 0 \\ \\ 0 &-1 \end{ bmatrix } $.   Daha fazla bilgi için bkz. [tek qubit işlemleri](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
 
 ## <a name="quantum-circuit-diagram"></a>Hisse devre diyagramı
 
@@ -148,7 +219,7 @@ Yükleme sırasında Q # derleyicisi ile birlikte yüklenen [işlemler](xref:mic
 
 ## <a name="superposition"></a>Süper konum
 
-Bu, bir [qubit](xref:microsoft.quantum.glossary#qubit) 'in, ölçülene kadar iki durumun doğrusal bir birleşimi olan $ \ket {0} $ ve $ \tus$ olduğunu gösteren kavram {1} . [measured](xref:microsoft.quantum.glossary#measurement)  Daha fazla bilgi için bkz. [hisse kullanımı anlama](xref:microsoft.quantum.overview.understanding).
+Bu, bir [qubit](xref:microsoft.quantum.glossary#qubit) 'in, ölçülene kadar, $ \ket{0 } $ ve $ \ket{1 } $ olmak [measured](xref:microsoft.quantum.glossary#measurement)üzere iki durumun doğrusal bir birleşimi olduğunu gösteren kavram.  Daha fazla bilgi için bkz. [hisse kullanımı anlama](xref:microsoft.quantum.overview.understanding).
 
 ## <a name="target-machine"></a>Hedef makine
 
@@ -164,7 +235,7 @@ Tek bir değer görevi gören virgülle ayrılmış değerler koleksiyonu. Tanı
 
 ## <a name="unitary-operator"></a>Unitary işleci
 
-Ters, [adjoint](xref:microsoft.quantum.glossary#adjoint)değerine eşit olan bir işleç, yani $uu ^ {\leger} = \ID $.
+Ters, [adjoint](xref:microsoft.quantum.glossary#adjoint)değerine eşit olan bir işleç, yani $uu ^ {\dağılım } = \ID $ .
 
 ## <a name="user-defined-type"></a>Kullanıcı tanımlı tür
 

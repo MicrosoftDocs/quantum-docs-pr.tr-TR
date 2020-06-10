@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: b32644382bb88fb11da00d0d7d78bbd797a0eaaa
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327314"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84629991"
 ---
 # <a name="type-expressions-in-q"></a>Q içindeki tür Ifadeleri #
 
@@ -201,7 +201,7 @@ Değişmez değerler dışında, Kullanıcı tanımlı bir türün tek ifadeleri
 Q # içinde, Unwrap işleci sondaki bir ünlem işaretidir `!` .
 Örneğin, `IntPair` temel alınan türe sahip kullanıcı tanımlı bir türdür `(Int, Int)` ve `s` değeri olan bir değişkense, `IntPair(2, 3)` daha sonra `s!` olur `(2, 3)` .
 
-Diğer Kullanıcı tanımlı türler bakımından tanımlanan Kullanıcı tanımlı türler için. Unwrap işleci yinelenebilir olabilir; Örneğin, `s!!` paketlenmiş, sarmalanmamış değeri gösterir `s` .
+Diğer Kullanıcı tanımlı türler bakımından tanımlanan Kullanıcı tanımlı türler için, Unwrap işleci yinelenebilir. Örneğin, `s!!` paketlenmiş, sarmalanmamış değeri gösterir `s` .
 Bu nedenle, `WrappedPair` temel alınan türe sahip kullanıcı tanımlı bir türdür `IntPair` ve `t` değeri olan bir değişkense, `WrappedPair(IntPair(1,2))` `t!!` olur `(1,2)` .
 
 `!`İşleç, `[]` dizi dizini oluşturma ve dilimleme için dışındaki diğer işleçlerden daha yüksek önceliğe sahiptir.

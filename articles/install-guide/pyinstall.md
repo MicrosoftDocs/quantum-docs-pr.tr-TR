@@ -6,18 +6,18 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: f18d005012dc1c52aab456f1c7b194d182cab786
-ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
+ms.openlocfilehash: 1ae208e7047cb040fb44945a59c3cc6508a09723
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578173"
+ms.locfileid: "84630280"
 ---
 # <a name="develop-with-q-and-python"></a>Q # ve Python ile geliştirme
 
 Q # işlemlerini çağırmak için Python konak programları geliştirmek üzere QDK 'yi yükler.
 
-1. Ön koşullar
+1. Önkoşullar
 
     - [Python](https://www.python.org/downloads/) 3,6 veya üzeri
     - [PIP](https://pip.pypa.io/en/stable/installing) Python paket yöneticisi
@@ -36,6 +36,15 @@ Q # işlemlerini çağırmak için Python konak programları geliştirmek üzere
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
+
+    > [!NOTE]
+    > Adım sırasında bir hata alırsanız `dotnet iqsharp install` , yeni bir Terminal penceresi açın ve yeniden deneyin.
+    > Bu hala işe yaramazsa, yüklü `dotnet-iqsharp` Aracı (Windows 'da `dotnet-iqsharp.exe` ) bulup çalıştırmayı deneyin:
+    > ```
+    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+    > ```
+    > `/path/to/dotnet-iqsharp`dosya sisteminizdeki aracın mutlak yolu ile değiştirilmelidir `dotnet-iqsharp` .
+    > Genellikle bu, `.dotnet/tools` Kullanıcı profili klasörünüzde olacaktır.
   
 1. Herhangi bir IDE 'de soru-cevap özelliğini kullanarak soru-cevap için Visual Studio Code (VS Code) IDE kullanmanız önerilir. Visual Studio Code ve QDK Visual Studio Code uzantısını kullanarak daha zengin işlevselliğe erişebilirsiniz.
 

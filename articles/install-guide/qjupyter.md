@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 9117794d6cf6f05fa34e05c21fad8977d0e76505
-ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
+ms.openlocfilehash: b80d95a160b5f46c1132d3428ba32ad6dcd5656e
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/09/2020
-ms.locfileid: "84577829"
+ms.locfileid: "84630343"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Q# Jupyter Notebooks ile geliştirme
 
@@ -24,7 +24,7 @@ IQ# (ay-kü-şarp okunur) öncelikli olarak Jupyter ve Python tarafından .NET C
 > [!NOTE]
 > * Q # Jupileter not defterlerinde yalnızca Q # kodunu çalıştırabilir ve işlemler harici konak programlarından (ör. Python veya C# dosyaları) çağrılamaz. Amacınız, bir dış klasik ana bilgisayar programını hisse ile çevreliyorsanız, bu ortam uygun değildir.
 
-1. Ön koşullar
+1. Önkoşullar
 
     - [Python](https://www.python.org/downloads/) 3,6 veya üzeri
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
@@ -36,6 +36,15 @@ IQ# (ay-kü-şarp okunur) öncelikli olarak Jupyter ve Python tarafından .NET C
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
+
+    > [!NOTE]
+    > Adım sırasında bir hata alırsanız `dotnet iqsharp install` , yeni bir Terminal penceresi açın ve yeniden deneyin.
+    > Bu hala işe yaramazsa, yüklü `dotnet-iqsharp` Aracı (Windows 'da `dotnet-iqsharp.exe` ) bulup çalıştırmayı deneyin:
+    > ```
+    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+    > ```
+    > `/path/to/dotnet-iqsharp`dosya sisteminizdeki aracın mutlak yolu ile değiştirilmelidir `dotnet-iqsharp` .
+    > Genellikle bu, `.dotnet/tools` Kullanıcı profili klasörünüzde olacaktır.
 
 1. `Hello World` uygulaması oluşturarak yüklemeyi doğrulayın
 

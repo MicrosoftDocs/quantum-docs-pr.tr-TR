@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: dfb2b1779e3ddc77fc74697bc4dc2904b1a0c70f
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 948b385948f0b362e7c12500662132883959a798
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426921"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630222"
 ---
 # <a name="q-style-guide"></a>S # stil kılavuzu #
 ## <a name="general-conventions"></a>Genel kurallar ##
@@ -49,7 +49,7 @@ Bu ayrım, işlemleri fiiller olarak ve işlevler olarak işlev olarak adı vere
 > Bu perspektiften, hem türün kendisi hem de Oluşturucu işlevinin tutarlı adlara sahip olması için Kullanıcı tanımlı türlerin adlarla adlandırılması gerekir.
 
 Makul yerlerde, işlem adlarının işlem tarafından gerçekleştirilen etkiyi açıkça belirten fiiller ile başlayıp başlamadığından emin olun.
-Örneğin:
+Örnek:
 
 - `MeasureInteger`
 - `EstimateEnergy`
@@ -93,7 +93,7 @@ Benzer şekilde, _Aracı isimleri_ , işlem adlarından Işlev ve udt adlarını
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-|   | Name | Açıklama |
+|   | Name | Description |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | İşlemin etkisini göstermek için bir fiil ("yansıtma") kullanımını temizleyin. |
 | ☒ | <s>`operation XRotation`</s> | İsim ifadesi kullanımı, işlem yerine Function önerisinde bulunur. |
@@ -143,7 +143,7 @@ is Adj + Ctl {
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-|   | Name | Açıklama |
+|   | Name | Description |
 |---|------|-------------|
 | ☑ | `X` | "Bir $X $ dönüşümü Uygula" için iyi anlaşılan toplu değer |
 | ☑ | `CNOT` | "Denetimli-NOT" için iyi anlaşılan toplu değer |
@@ -200,7 +200,7 @@ Tüm tür dönüştürme işlevlerinin, `As` hızlı bir şekilde tanımlanabilm
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-|   | Name | Açıklama |
+|   | Name | Description |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | "To" ön konumu, bir işlevi değil bir işlem belirten bir fiil ifadesi içinde sonuçlanır. |
 | ☒ | <s>`AsDouble`</s> | Giriş türü, işlev adından net değildir. |
@@ -223,7 +223,7 @@ Bir işlem veya işlev doğrudan kullanım için tasarlanmamıştır, ancak kıs
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-|   | Name | Açıklama |
+|   | Name | Description |
 |---|------|-------------|
 | ☒ | <s>`ApplyDecomposedOperation_`</s> | Alt çizgi, `_` adın sonunda görünmemelidir. |
 | ☑ | `_ApplyDecomposedOperation` | Başındaki alt çizgi `_` açık bir şekilde bu işlemin yalnızca iç kullanım için olduğunu gösterir. |
@@ -280,7 +280,7 @@ Benzer şekilde, giriş ve tür bağımsız değişkenlerinin adları, bir işle
 
 ***
 
-### <a name="user-defined-type-named-items"></a>Kullanıcı tanımlı tür öğe adı ###
+### <a name="user-defined-type-named-items"></a>Kullanıcı tanımlı tür öğeleri ###
 
 Kullanıcı tanımlı türlerdeki adlandırılmış öğeler `CamelCase` , udt oluşturucularının girişinde bile olarak adlandırılmalıdır.
 Bu, erişimci gösterimini (ör.: `callable::Apply` ) veya kopyalama ve güncelleştirme gösterimini () kullanırken, adlandırılmış öğeleri yerel kapsamlı değişkenlere göre açıkça ayırmak için yardımcı olur `set arr w/= Data <- newData` .
@@ -296,7 +296,7 @@ Bu, erişimci gösterimini (ör.: `callable::Apply` ) veya kopyalama ve güncell
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-|   | Kod Parçacığı | Açıklama |
+|   | Kod Parçacığı | Description |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | Ad, `Apply` `CamelCase` adlandırılmış öğenin bir işlem olmasını öneren, biçimli bir fiil tümceciktir. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Adlandırılmış öğeler ilk büyük harfle başlamalıdır. |
@@ -453,7 +453,7 @@ Bu kurallar, Q # derleyicisi ile tümleştirilmiş biçimlendirme Aracı kullan�
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-|   | Kod Parçacığı | Açıklama |
+|   | Kod Parçacığı | Description |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | İkili işleçler etrafında boşluklar kullanın. |
 | ☒ | <s>`target:Qubit`</s> | Tür ek açıklaması etrafında boşluklar kullanın. |

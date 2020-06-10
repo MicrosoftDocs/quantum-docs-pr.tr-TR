@@ -6,18 +6,89 @@ uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 43f14d67db76dabda34bf881ccbfae0bfd1784ff
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+no-loc:
+- $
+- $
+- '\cdots'
+- bmatrix
+- '\ddots'
+- '\equiv'
+- '\sum'
+- '\begin'
+- '\end'
+- '\sqrt'
+- '\otimes'
+- '{'
+- '}'
+- '\text'
+- '\phi'
+- '\kappa'
+- '\psi'
+- '\alpha'
+- '\beta'
+- '\gamma'
+- '\delta'
+- '\omega'
+- '\bra'
+- '\ket'
+- '\boldone'
+- '\\\\'
+- '\\'
+- =
+- '\frac'
+- '\text'
+- '\mapsto'
+- '\dagger'
+- '\to'
+- "\begin{cases}"
+- "\end{cases}"
+- '\operatorname'
+- '\braket'
+- '\id'
+- '\expect'
+- '\defeq'
+- '\variance'
+- '\dd'
+- '&'
+- "\begin{align}"
+- "\end{align}"
+- '\Lambda'
+- '\lambda'
+- '\Omega'
+- '\mathrm'
+- '\left'
+- '\right'
+- '\qquad'
+- '\times'
+- '\big'
+- '\langle'
+- '\rangle'
+- '\bigg'
+- '\Big'
+- '|'
+- '\mathbb'
+- '\vec'
+- '\in'
+- '\texttt'
+- '\ne'
+- <
+- '>'
+- '\leq'
+- '\geq'
+- ~~
+- "~"
+ms.openlocfilehash: 745f0570bf62c5d98c2896cdc893ec385abd7115
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426622"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630401"
 ---
 # <a name="quantum-circuits"></a>Hisse devreleri
-Bir süre için Unitary dönüştürme $ \ Text{CNOT} _ {01} (H\otimes 1) $ ' i göz önünde bulundurun.
+Bir süre için Unitary dönüştürme $ \ metin { cnot} _ {01 } (H \otimes 1) $ değerini göz önünde bulundurun.
 Bu ağ geçidi sırası, en yüksek düzeyde bir entangled bit durumu oluşturduğundan, hisse bilgi işlem için temel öneme sahiptir:
 
-$ $ \mathrm{CNOT}_ {01} (H\otimes 1) \demet {00} = \frac {1} {\sqrt {2} } \left (\demet {00} + {11} \tus\right), $ $
+$ $ \mathrm{CNOT}_{01 } (H \otimes 1) \ket{00 } = \frac{1 } {\sqrt{2 } } \left (\ket{00 } + \ket{11 } \ right), $ $
 
 Bu ya da daha fazla karmaşıklığa sahip işlemler, hisse uygun bir şekilde bir hisse alım *Diyagramı*olarak adlandırılan görselleştirme için basit bir yöntem olduğundan harika bir sorun olması gerekir.
 Bu en yüksek düzeyde değerlendirme için devre diyagramı şu şekilde hazırlanıyor:
@@ -31,7 +102,7 @@ Hisse için bu görsel dil, bir hisse devresini ifade eden kuralları anladıkta
 Aşağıda bu kuralları gözden geçiririz.
 
 Devre diyagramında, her katı çizgi bir qubit veya daha fazla genel olarak bir qubit kaydı gösterir.
-Kurala göre, üst çizgi qubit yazmaç $0 $ ' dir ve geri kalan değerler sırayla etiketlenir. Yukarıdaki örnek bağlantı hattı iki qubit üzerinde (veya bir qubitden oluşan equivalently iki kayıt) üzerinde işlem görecek şekilde gösterilmiştir.
+Kurala göre, üst çizgi qubit kayıt $0 ' dir $ ve geri kalan değerler sırayla etiketlenir. Yukarıdaki örnek bağlantı hattı iki qubit üzerinde (veya bir qubitden oluşan equivalently iki kayıt) üzerinde işlem görecek şekilde gösterilmiştir.
 Bir veya daha fazla qubit kayıt üzerinde işlem gören kapıları kutu olarak gösterilir.
 Örneğin, simge
 
@@ -49,7 +120,7 @@ Yani
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Soldan sağa uygulanan hisse kapıları diyagramı](~/media/3.svg)
 
-Unitary matris $CBA $ ' dir.
+Unitary matrisi $CBA $ .
 Matris çarpıtına ters kural: en sağdaki matris önce uygulanır. Ancak, bu arada en sol kapı, en sol kapı için uygulanır.
 Bu fark, her zaman karışıklığa yol açabilir, bu nedenle doğrusal cebirsel gösterimi ve hisse senedi devre şemaları arasında önemli bir farklılık olduğunu fark etmek önemlidir.
 
@@ -61,27 +132,27 @@ Girişlerle aynı sayıda çıkışı yoksa, geri alınamaz ve bu nedenle bir ç
 Bu nedenle, bir devre diyagramında çizilen her kutu, tam olarak onunla aynı sayıda kabloda yer almalıdır.
 
 Multi-qubit devre şemaları, tek qubit olanlara benzer kuralları izler.
-Bir açıklığa kavuşturan örnek olarak, $ (H \ saat X) $ $ $ $ (H \ saat X) $ $ $ (H \ saat X) $ olarak $B
+Bir açıklığa kavuşturan örnek olarak, $ $ (H S X) $ olarak $B iki-qubit Unitary işlemi tanımlayabilir \otimes ve devre equivalently şu şekilde ifade edebilirsiniz
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![İki-qubit Unitary işleminin devre diyagramı](~/media/4.svg)
 
-Ayrıca, devre dışı bırakıldığına bağlı olarak 2 1-qubit kayıtları yerine tek bir iki-qubit kayıt üzerinde eyleme sahip $B $ ' i de görüntüleyebiliriz. Bu tür soyut devre diyagramlarından en yararlı özellik, karmaşık hisse algoritmalarının, bunları temel kapıları derlemek zorunda kalmadan yüksek düzeyde açıklanmasına izin vermesidir.
+$B, bağlantı hattının $ kullanıldığı içeriğe göre 2 1-qubit kayıt yerine tek bir iki-qubit kaydı üzerinde bir eyleme sahip olarak da görüntülenebilir. Bu tür soyut devre diyagramlarından en yararlı özellik, karmaşık hisse algoritmalarının, bunları temel kapıları derlemek zorunda kalmadan yüksek düzeyde açıklanmasına izin vermesidir.
 Bu, algoritmadaki her bir alt yordamların nasıl çalıştığı hakkında tüm ayrıntıları anlamak zorunda kalmadan, büyük bir hisse algoritması için veri akışı hakkında bir bilgi edinebilirsiniz.
 
 ## <a name="controlled-gates"></a>Denetlenen kapıları
 Multi-qubit hisse devresini içinde yerleşik olan diğer yapı denetimdir.
-Tek bir qubit değerinin $G $ uygulamasını denetlediğini, belirtilen $ \Lambda (G) $, bir hisse listedir kontrollü kapıdan oluşan eylem. Şu bir ürün durumu girişi olan $ \Lambda (G) (\Alpha \demet {0} + \beta \ ayraç {1} ) \ket{\psı} = \Alpha \ demet {0} \ ket{\psı} + \ Beta \ demet {1} g\tus{\ PSI} $ örnek örneğine bakarak anlaşılabiliyor.
-Yani, denetlenen kapı $ \psı $ öğesini içeren Register 'a $G $, ancak yalnızca denetim qubit $1 $ değerini alırsa bu şekilde geçerlidir.
+Bir hisse listedir kontrollü kapı eylemi, belirtilen $ \Lambda (G) $, tek bir qubitin değerinin $G uygulamasını denetliyorsa $ , bir ürün durumu girişi $ \Lambda (G) (\Alpha \ket{0 } + \beta \ket{1 } ) { \tus\psı } = \Alpha \ket{0 } \tus\psı { } + \beta \ket{1 } G \ket { \ PSI } $ şeklinde aşağıdaki örneğe bakarak anlaşılabilirler.
+Yani, denetlenen kapı $ $ \psı içeren kayda $G uygular $ ve yalnızca denetim qubit $1 değerini alırsa $ .
 Genel olarak, bu tür denetimli işlemleri devre diyagramlarında
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Listedir denetimli bir ağ geçidinin devre diyagramı](~/media/5.svg)
 
-Burada siyah daire, kapıın kontrol edeceği hisse bitini ve bir dikey tel, denetim qubit $1 $ değerini alırken uygulanan Unitary 'ı gösterir.
-$G = X $ ve $G = Z $ olan özel durumlar için, kapıların denetlenen sürümünü (denetlenen-X kapısı [$CNOT $ Gate](xref:microsoft.quantum.intrinsic.cnot)olduğunu unutmayın) anlatmak için aşağıdaki gösterimi tanıtıldık:
+Burada siyah daire, kapıdan denetlediğiniz ve dikey bir tel, denetim qubit $1 değerini alırken uygulanan Unitary 'ı gösterir $ .
+$G = X $ ve $G = Z olduğu özel durumlar için, $ kapıların denetlenen sürümünü (denetlenen-X kapısıdır [$CNOT $ kapısı](xref:microsoft.quantum.intrinsic.cnot)olduğunu unutmayın) aşağıdaki gösterimi tanıtıldık:
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -115,7 +186,7 @@ Benzer şekilde, subdevı
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Denetlenen bir işlemi temsil eden devre diyagramı](~/media/8.svg)
 
-$G $ değerinin klasik denetim bit değeri $1 $ değerine göre uygulandığı, bir sınıf denetimli geçit sağlar.
+$G, $ Klasik denetim bit $1 değeri olan ' de uygulandığı şekilde, sınıf denetimli bir geçit sağlar $ .
 
 ## <a name="teleportation-circuit-diagram"></a>Teleporsyon devre diyagramı
 Hisse teleporsyon, bu bileşenleri göstermek için büyük olasılıkla en iyi hisse algoritmadır.
