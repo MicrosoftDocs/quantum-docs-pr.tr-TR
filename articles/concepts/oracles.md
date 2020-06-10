@@ -6,68 +6,152 @@ uid: microsoft.quantum.concepts.oracles
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 07/11/2018
 ms.topic: article
-ms.openlocfilehash: 1d1d0b0903db8e994166c3e8a5798f70742a1c7e
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+no-loc:
+- $
+- $
+- '\cdots'
+- bmatrix
+- '\ddots'
+- '\equiv'
+- '\sum'
+- '\begin'
+- '\end'
+- '\sqrt'
+- '\otimes'
+- '{'
+- '}'
+- '\text'
+- '\phi'
+- '\kappa'
+- '\psi'
+- '\alpha'
+- '\beta'
+- '\gamma'
+- '\delta'
+- '\omega'
+- '\bra'
+- '\ket'
+- '\boldone'
+- '\\\\'
+- '\\'
+- =
+- '\frac'
+- '\text'
+- '\mapsto'
+- '\dagger'
+- '\to'
+- "\begin{cases}"
+- "\end{cases}"
+- '\operatorname'
+- '\braket'
+- '\id'
+- '\expect'
+- '\defeq'
+- '\variance'
+- '\dd'
+- '&'
+- "\begin{align}"
+- "\end{align}"
+- '\Lambda'
+- '\lambda'
+- '\Omega'
+- '\mathrm'
+- '\left'
+- '\right'
+- '\qquad'
+- '\times'
+- '\big'
+- '\langle'
+- '\rangle'
+- '\bigg'
+- '\Big'
+- '|'
+- '\mathbb'
+- '\vec'
+- '\in'
+- '\texttt'
+- '\ne'
+- <
+- '>'
+- '\leq'
+- '\geq'
+- ~~
+- "~"
+ms.openlocfilehash: 31e43940fc0607b15ccefcfae6be7122227b3d64
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904936"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630310"
 ---
-# <a name="quantum-oracles"></a><span data-ttu-id="b8e61-103">Hisse Oracles</span><span class="sxs-lookup"><span data-stu-id="b8e61-103">Quantum Oracles</span></span>
+# <a name="quantum-oracles"></a><span data-ttu-id="41b5d-103">Hisse Oracles</span><span class="sxs-lookup"><span data-stu-id="41b5d-103">Quantum Oracles</span></span>
 
-<span data-ttu-id="b8e61-104">Oracle $O $, başka bir algoritmaya girdi olarak kullanılan "kara kutu" işlemidir.</span><span class="sxs-lookup"><span data-stu-id="b8e61-104">An oracle $O$ is a "black box" operation that is used as input to another algorithm.</span></span>
-<span data-ttu-id="b8e61-105">Genellikle, bu gibi işlemler klasik bir işlev kullanılarak tanımlanır $f: \\{0, 1\\} ^ n \ \\{0, 1\\} ^ d $ $n $-bit ikili girişi alan ve bir $m $-bit ikili çıktısı üreten.</span><span class="sxs-lookup"><span data-stu-id="b8e61-105">Often, such operations are defined using a classical function $f : \\{0, 1\\}^n \to \\{0, 1\\}^m$ which takes an $n$-bit binary input and produces an $m$-bit binary output.</span></span>
-<span data-ttu-id="b8e61-106">Bunu yapmak için belirli bir ikili girişi $x = (x_{0}, x_{1}, \noktalar, x_ {n-1}) $ değerini düşünün.</span><span class="sxs-lookup"><span data-stu-id="b8e61-106">To do so, consider a particular binary input $x = (x_{0}, x_{1}, \dots, x_{n-1})$.</span></span>
-<span data-ttu-id="b8e61-107">Qubit durumları $ \ket{\vec{x}} = \ket{x_{0}} \otimes \ket{x_{1}} \otimes \cnoktalar \otimes \ket{x_ {n-1}} $ olarak etiketliyoruz.</span><span class="sxs-lookup"><span data-stu-id="b8e61-107">We can label qubit states as $\ket{\vec{x}} = \ket{x_{0}} \otimes \ket{x_{1}} \otimes \cdots \otimes \ket{x_{n-1}}$.</span></span>
+<span data-ttu-id="41b5d-104">Oracle $O $ , başka bir algoritmaya girdi olarak kullanılan "kara kutu" işlemidir.</span><span class="sxs-lookup"><span data-stu-id="41b5d-104">An oracle $O$ is a "black box" operation that is used as input to another algorithm.</span></span>
+<span data-ttu-id="41b5d-105">Genellikle, bu gibi işlemler klasik bir işlev kullanılarak tanımlanır $f: \\ {0, 1 \\ } ^ n \- \\ {0, 1 \\ } ^ d, $ $n $ bit ikili bir giriş alır ve bir $m $ bit ikili çıktı üretir.</span><span class="sxs-lookup"><span data-stu-id="41b5d-105">Often, such operations are defined using a classical function $f : \\{0, 1\\}^n \to \\{0, 1\\}^m$ which takes an $n$-bit binary input and produces an $m$-bit binary output.</span></span>
+<span data-ttu-id="41b5d-106">Bunu yapmak için, belirli bir ikili girişi $x = (x_ {0 } , X_ {1 } , \noktalar, X_ {n-1 } ) $) göz önünde bulundurun.</span><span class="sxs-lookup"><span data-stu-id="41b5d-106">To do so, consider a particular binary input $x = (x_{0}, x_{1}, \dots, x_{n-1})$.</span></span>
+<span data-ttu-id="41b5d-107">Qubit durumları $ \ket { \ VEC{x } } = \ket{X_ {0 } } \otimes \ket{X_ {1 } } \otimes \cnoktalar \otimes \ket{X_ {n-1 } } $ olarak etiketliyoruz.</span><span class="sxs-lookup"><span data-stu-id="41b5d-107">We can label qubit states as $\ket{\vec{x}} = \ket{x_{0}} \otimes \ket{x_{1}} \otimes \cdots \otimes \ket{x_{n-1}}$.</span></span>
 
-<span data-ttu-id="b8e61-108">İlk olarak, \ket{x} = \ket{f (x)} $ $O için $O $ tanımlamalısınız, ancak bu birkaç soruna neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="b8e61-108">We may first attempt to define $O$ so that $O\ket{x} = \ket{f(x)}$, but this has a couple problems.</span></span>
-<span data-ttu-id="b8e61-109">İlk olarak, $f $, kayıttaki qubits sayısını değiştirecek $O şekilde farklı bir giriş ve çıkış boyutuna sahip olabilir ($n \ne m $).</span><span class="sxs-lookup"><span data-stu-id="b8e61-109">First, $f$ may have a different size of input and output ($n \ne m$), such that applying $O$ would change the number of qubits in the register.</span></span>
-<span data-ttu-id="b8e61-110">İkinci olarak, $n = m $ olsa bile, işlev ters çevrilebilir olamaz: bazı $x \ne y $ için $f (x) = f (y) $, sonra $O \ket{x} = O\ket {y} $ ancak $O ^ \hanger O\ket {x} \ne O ^ \dağılım O\ket {y} $.</span><span class="sxs-lookup"><span data-stu-id="b8e61-110">Second, even if $n = m$, the function may not be invertible: if $f(x) = f(y)$ for some $x \ne y$, then $O\ket{x} = O\ket{y}$ but $O^\dagger O\ket{x} \ne O^\dagger O\ket{y}$.</span></span>
-<span data-ttu-id="b8e61-111">Bu, ^ \dağılım $ $O adjoint işlemini oluşturmayamayacağız ve Oracles için tanımlanmış bir adekin olması gerektiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="b8e61-111">This means we won't be able to construct the adjoint operation $O^\dagger$, and oracles have to have an adjoint defined for them.</span></span>
+<span data-ttu-id="41b5d-108">İlk $ \ket } olarak, {x = \ket{f (x)} $ $O bir $O tanımlamaya çalışır, ancak bu birkaç soruna neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="41b5d-108">We may first attempt to define $O$ so that $O\ket{x} = \ket{f(x)}$, but this has a couple problems.</span></span>
+<span data-ttu-id="41b5d-109">İlk olarak, $f $ farklı bir giriş ve çıkış boyutuna sahip olabilir ($n \ne m $ ), bu nedenle $O uygulamak, $ kayıttaki qubit sayısını değiştirebilir.</span><span class="sxs-lookup"><span data-stu-id="41b5d-109">First, $f$ may have a different size of input and output ($n \ne m$), such that applying $O$ would change the number of qubits in the register.</span></span>
+<span data-ttu-id="41b5d-110">İkinci olarak, $n = m olsa bile $ , işlev ters çevrilebilir olmayabilir: bazı $x \ne y için $f (x) = f (y) $ $ , sonra $O \ket {x } = O \ket {y } $, ancak $O ^ \hanger o { \ket x } \ne o ^ \hanger o \ket {y } $.</span><span class="sxs-lookup"><span data-stu-id="41b5d-110">Second, even if $n = m$, the function may not be invertible: if $f(x) = f(y)$ for some $x \ne y$, then $O\ket{x} = O\ket{y}$ but $O^\dagger O\ket{x} \ne O^\dagger O\ket{y}$.</span></span>
+<span data-ttu-id="41b5d-111">Bu, ^ \dağılım $O adjoint işlemini oluşturmayamayacağız $ ve Oracles için tanımlanmış bir adjoint 'ın olması anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="41b5d-111">This means we won't be able to construct the adjoint operation $O^\dagger$, and oracles have to have an adjoint defined for them.</span></span>
 
-## <a name="defining-an-oracle-by-its-effect-on-computational-basis-states"></a><span data-ttu-id="b8e61-112">Bir Oracle 'ı hesaplama tabanlı durumlar üzerinde etkile tanımlama</span><span class="sxs-lookup"><span data-stu-id="b8e61-112">Defining an oracle by its effect on computational basis states</span></span>
-<span data-ttu-id="b8e61-113">Yanıtınızı tutmak için $m $ qubits ikinci bir kaydına bakarak bu sorunlardan her ikisiyle de ilgilenebiliriz.</span><span class="sxs-lookup"><span data-stu-id="b8e61-113">We can deal with both of these problems by introducing a second register of $m$ qubits to hold our answer.</span></span>
-<span data-ttu-id="b8e61-114">Ardından, Oracle 'ın tüm hesaplama tabanlı durumlarında etkisini tanımlayacağız: tüm $x \ \\{0, 1\\} ^ n $ ve $y \ \\{0, 1\\} ^ d $,</span><span class="sxs-lookup"><span data-stu-id="b8e61-114">Then we will define the effect of the oracle on all computational basis states: for all $x \in \\{0, 1\\}^n$ and $y \in \\{0, 1\\}^m$,</span></span>
+## <a name="defining-an-oracle-by-its-effect-on-computational-basis-states"></a><span data-ttu-id="41b5d-112">Bir Oracle 'ı hesaplama tabanlı durumlar üzerinde etkile tanımlama</span><span class="sxs-lookup"><span data-stu-id="41b5d-112">Defining an oracle by its effect on computational basis states</span></span>
+<span data-ttu-id="41b5d-113">Bu sorunlardan her ikisi de $ cevaplarımızı tutmak için $m qubits 'in ikinci bir kaydına bakarak ilgilenebiliriz.</span><span class="sxs-lookup"><span data-stu-id="41b5d-113">We can deal with both of these problems by introducing a second register of $m$ qubits to hold our answer.</span></span>
+<span data-ttu-id="41b5d-114">Daha sonra, Oracle 'ın tüm hesaplama tabanlı durumlarında etkisini tanımlayacağız: tüm $x \< \\ 0, 1 \\ } ^ n $ ve $y \in \\ {0, 1 \\ } ^ d $ ,</span><span class="sxs-lookup"><span data-stu-id="41b5d-114">Then we will define the effect of the oracle on all computational basis states: for all $x \in \\{0, 1\\}^n$ and $y \in \\{0, 1\\}^m$,</span></span>
 
-<span data-ttu-id="b8e61-115">$ $ \begin{hizalaması} O (\ket{x} \otimes \ket{yı}) = \ket{x} \otimes \ket{y \oplus f (x)}.</span><span class="sxs-lookup"><span data-stu-id="b8e61-115">$$ \begin{align} O(\ket{x} \otimes \ket{y}) = \ket{x} \otimes \ket{y \oplus f(x)}.</span></span>
-<span data-ttu-id="b8e61-116">\end{hizalaması} $ $</span><span class="sxs-lookup"><span data-stu-id="b8e61-116">\end{align} $$</span></span>
+<span data-ttu-id="41b5d-115">$ $ \begin{align}</span><span class="sxs-lookup"><span data-stu-id="41b5d-115">$$ \begin{align}</span></span>
+    <span data-ttu-id="41b5d-116">O (\ket{x } \otimes \ket{y } ) = \ket{x } \otimes \ket{y \oplus f (x)}.</span><span class="sxs-lookup"><span data-stu-id="41b5d-116">O(\ket{x} \otimes \ket{y}) = \ket{x} \otimes \ket{y \oplus f(x)}.</span></span>
+<span data-ttu-id="41b5d-117">\end{align}</span><span class="sxs-lookup"><span data-stu-id="41b5d-117">\end{align}</span></span>
+$$
 
-<span data-ttu-id="b8e61-117">Şimdi $O = O ^ \dağılım $, bu nedenle, daha önceki sorunları çöztik.</span><span class="sxs-lookup"><span data-stu-id="b8e61-117">Now $O = O^\dagger$ by construction, thus we have resolved both of the earlier problems.</span></span>
+<span data-ttu-id="41b5d-118">Şimdi, oluşturma ile birlikte $O = O ^ \dağılım $ , bu nedenle daha önceki sorunlardan her ikisi çözümlendik.</span><span class="sxs-lookup"><span data-stu-id="41b5d-118">Now $O = O^\dagger$ by construction, thus we have resolved both of the earlier problems.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="b8e61-118">Bu $O = O ^ {\abger} $ olduğunu görmek için, $O ^ 2 = \cıvadone $ $a \oplus b \ OPG $ = a $, her $a için, b \ in \{0, 1\}$ olduğunu unutmayın.</span><span class="sxs-lookup"><span data-stu-id="b8e61-118">To see that $O = O^{\dagger}$, note that $O^2 = \boldone$ since $a \oplus b \oplus b = a$ for all $a, b \in \{0, 1\}$.</span></span>
-> <span data-ttu-id="b8e61-119">Sonuç olarak, \ket{x} \ket{y \oplus f (x)} = \ket{x} \ket{y \oplus f (x) \oplus f (x)} = \ket{x} \ket{i} $ $O.</span><span class="sxs-lookup"><span data-stu-id="b8e61-119">As a result, $O \ket{x} \ket{y \oplus f(x)} = \ket{x} \ket{y \oplus f(x) \oplus f(x)} = \ket{x} \ket{y}$.</span></span>
+> <span data-ttu-id="41b5d-119">Bu $O = O ^ {\dağılım $ olduğunu görmek için } $O, $ tüm $a < \ OPLUS b \oplus b = a $a $ , b \ in \{ 0, 1 \} $.</span><span class="sxs-lookup"><span data-stu-id="41b5d-119">To see that $O = O^{\dagger}$, note that $O^2 = \boldone$ since $a \oplus b \oplus b = a$ for all $a, b \in \{0, 1\}$.</span></span>
+> <span data-ttu-id="41b5d-120">Sonuç olarak, \ket{x } \ket{y \oplus f (x)} = \ket{x } \ket{y \oplus f (x) \oplus f (x)} = \ket{x } \ket{y $ $O } .</span><span class="sxs-lookup"><span data-stu-id="41b5d-120">As a result, $O \ket{x} \ket{y \oplus f(x)} = \ket{x} \ket{y \oplus f(x) \oplus f(x)} = \ket{x} \ket{y}$.</span></span>
 
-<span data-ttu-id="b8e61-120">Bu şekilde, her hesaplama tabanlı durum $ \ket{x}\ket{y} $ için Oracle bu şekilde tanımlanması, $O $ ' in diğer tüm durumları için nasıl davrandığını da tanımlar.</span><span class="sxs-lookup"><span data-stu-id="b8e61-120">Importantly, defining an oracle this way for each computational basis state $\ket{x}\ket{y}$ also defines how $O$ acts for any other state.</span></span>
-<span data-ttu-id="b8e61-121">Bu, tüm hisse işlemleri gibi $O $ ' nin, üzerinde çalıştığı durumda doğrusal olduğunu bulmanızdan hemen sonra takip eder.</span><span class="sxs-lookup"><span data-stu-id="b8e61-121">This follows immediately from the fact that $O$, like all quantum operations, is linear in the state that it acts on.</span></span>
-<span data-ttu-id="b8e61-122">Örneğin, $H \demet{0} = \ket{+} $ ve $H \ket{1} = \tus{-}$ tarafından tanımlanan Hadamard işlemini göz önünde bulundurun.</span><span class="sxs-lookup"><span data-stu-id="b8e61-122">Consider the Hadamard operation, for instance, which is defined by $H \ket{0} = \ket{+}$ and $H \ket{1} = \ket{-}$.</span></span>
-<span data-ttu-id="b8e61-123">$ \Ket{+} $ üzerinde $H $ ' nin nasıl çalıştığını öğrenmek istiyorsanız, bu $H $ ' nin doğrusal olduğunu,</span><span class="sxs-lookup"><span data-stu-id="b8e61-123">If we wish to know how $H$ acts on $\ket{+}$, we can use that $H$ is linear,</span></span>
+<span data-ttu-id="41b5d-121">Bu şekilde, her hesaplama tabanlı durum için Oracle bu şekilde tanımlanması, her bir } } $ durum için $O nasıl davrandığını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="41b5d-121">Importantly, defining an oracle this way for each computational basis state $\ket{x}\ket{y}$ also defines how $O$ acts for any other state.</span></span>
+<span data-ttu-id="41b5d-122">Bu, $ tüm hisse işlemleri gibi $O, üzerinde işlem yaptığı durumda doğrusal bir şekilde.</span><span class="sxs-lookup"><span data-stu-id="41b5d-122">This follows immediately from the fact that $O$, like all quantum operations, is linear in the state that it acts on.</span></span>
+<span data-ttu-id="41b5d-123">Örneğin, $H \ket{0 } = { \tus+} $ ve $H \ket{1 } = { \tus-} $ tarafından tanımlanan Hadamard işlemini göz önünde bulundurun.</span><span class="sxs-lookup"><span data-stu-id="41b5d-123">Consider the Hadamard operation, for instance, which is defined by $H \ket{0} = \ket{+}$ and $H \ket{1} = \ket{-}$.</span></span>
+<span data-ttu-id="41b5d-124">$H $ $ \ket +} $ üzerinde nasıl davranması gerektiğini öğrenmek istiyoruz, { Bu $H, $ Doğrusal olduğunu,</span><span class="sxs-lookup"><span data-stu-id="41b5d-124">If we wish to know how $H$ acts on $\ket{+}$, we can use that $H$ is linear,</span></span>
 
-<span data-ttu-id="b8e61-124">$ $ \begin{hizalaması} H\ket {+} & = \frac{1}{\sqrt{2}} H (\demet{0} + \ayraç{1}) = \frac{1}{\sqrt{2}} (H\demet{0} + H\demet{1}) \\\\ & = \frac{1}{\sqrt{2}} (\ket{+} + \ket{-}) = \frac12 (\ayraç{0} + \ ayraç{1} + \ ayraç{0}-\ayraç{1}) = \demet{0}.</span><span class="sxs-lookup"><span data-stu-id="b8e61-124">$$ \begin{align} H\ket{+} & = \frac{1}{\sqrt{2}} H(\ket{0} + \ket{1}) = \frac{1}{\sqrt{2}} (H\ket{0} + H\ket{1}) \\\\ & = \frac{1}{\sqrt{2}} (\ket{+} + \ket{-}) = \frac12 (\ket{0} + \ket{1} + \ket{0} - \ket{1}) = \ket{0}.</span></span>
-<span data-ttu-id="b8e61-125">\end{hizalaması} $ $</span><span class="sxs-lookup"><span data-stu-id="b8e61-125">\end{align} $$</span></span>
+<span data-ttu-id="41b5d-125">$ $ \begin{align}</span><span class="sxs-lookup"><span data-stu-id="41b5d-125">$$ \begin{align}</span></span>
+<span data-ttu-id="41b5d-126">H \ket { +} & = \frac{1 } {\sqrt{2 } } H (\ket{0 } + \ket{1 } ) = \frac{1 } {\sqrt{2 } } (h \ket {0 } + H \ket {1 } ) \\ \\ & = \frac{1 } {\sqrt{2 } } (\ket { +} + \ demet { -}) = \frac12 (\ket{0 } + \ket{1 } + \ket{0 } -\ket{1 } ) = \ket{0 } .</span><span class="sxs-lookup"><span data-stu-id="41b5d-126">H\ket{+} & = \frac{1}{\sqrt{2}} H(\ket{0} + \ket{1}) = \frac{1}{\sqrt{2}} (H\ket{0} + H\ket{1}) \\\\ & = \frac{1}{\sqrt{2}} (\ket{+} + \ket{-}) = \frac12 (\ket{0} + \ket{1} + \ket{0} - \ket{1}) = \ket{0}.</span></span>
+<span data-ttu-id="41b5d-127">\end{align}</span><span class="sxs-lookup"><span data-stu-id="41b5d-127">\end{align}</span></span>
+$$
 
-<span data-ttu-id="b8e61-126">Oracle $O $ ' mimizin tanımlanması durumunda benzer bir şekilde $ \ket{\psı} $ $n + m $ qubits olarak yazılabilir</span><span class="sxs-lookup"><span data-stu-id="b8e61-126">In the case of defining our oracle $O$, we can similarly use that any state $\ket{\psi}$ on $n + m$ qubits can be written as</span></span>
+<span data-ttu-id="41b5d-128">Oracle $O tanımlama durumunda $ benzer şekilde, { } $n + m qubitleri üzerinde herhangi bir durum $ \ket \ PSI $ $ şöyle yazılabilir.</span><span class="sxs-lookup"><span data-stu-id="41b5d-128">In the case of defining our oracle $O$, we can similarly use that any state $\ket{\psi}$ on $n + m$ qubits can be written as</span></span>
 
-<span data-ttu-id="b8e61-127">$ $ \begin{hizalaması} \ket{\psı} & = \ sum_ {x \in \\{0, 1\\} ^ n, y \/\\{0, 1\\} ^ e} \Alpha (x, y) \ket{x} \ket{i} \end{hizalaması} $ $</span><span class="sxs-lookup"><span data-stu-id="b8e61-127">$$ \begin{align} \ket{\psi} & = \sum_{x \in \\{0, 1\\}^n, y \in \\{0, 1\\}^m} \alpha(x, y) \ket{x} \ket{y} \end{align} $$</span></span>
+<span data-ttu-id="41b5d-129">$ $ \begin{align}</span><span class="sxs-lookup"><span data-stu-id="41b5d-129">$$ \begin{align}</span></span>
+<span data-ttu-id="41b5d-130">\ket { \ psi } & = \ sum_ {x \in \\ {0, 1 \\ } ^ n, y \ in \\ {0, 1 \\ } ^ d } \ Alpha (x, y) \ket{x } \ket{y}</span><span class="sxs-lookup"><span data-stu-id="41b5d-130">\ket{\psi} & = \sum_{x \in \\{0, 1\\}^n, y \in \\{0, 1\\}^m} \alpha(x, y) \ket{x} \ket{y}</span></span>
+<span data-ttu-id="41b5d-131">\end{align}</span><span class="sxs-lookup"><span data-stu-id="41b5d-131">\end{align}</span></span>
+$$
 
-<span data-ttu-id="b8e61-128">$ \Alpha: \\{0, 1\\} ^ n \times \\{0, 1\\} ^ d \ to \mathbb{C} $, $ \ket{\psı} $ durumunun katsayılarını temsil eder.</span><span class="sxs-lookup"><span data-stu-id="b8e61-128">where $\alpha : \\{0, 1\\}^n \times \\{0, 1\\}^m \to \mathbb{C}$ represents the coefficients of the state $\ket{\psi}$.</span></span> <span data-ttu-id="b8e61-129">Yani</span><span class="sxs-lookup"><span data-stu-id="b8e61-129">Thus,</span></span>
+<span data-ttu-id="41b5d-132">Burada $ \Alpha: \\ {0, 1 \\ } ^ n \times \\ {0, 1 \\ } ^ d \ to \mathbb{C } $, $ \tus\psı $ durumunun katsayılarını temsil eder { } .</span><span class="sxs-lookup"><span data-stu-id="41b5d-132">where $\alpha : \\{0, 1\\}^n \times \\{0, 1\\}^m \to \mathbb{C}$ represents the coefficients of the state $\ket{\psi}$.</span></span> <span data-ttu-id="41b5d-133">Bu nedenle,</span><span class="sxs-lookup"><span data-stu-id="41b5d-133">Thus,</span></span>
 
-<span data-ttu-id="b8e61-130">$ $ \begin{hizalaması} O \ket{\psı} & = O \ sum_ {x \in \\{0, 1\\} ^ n, y \ in \\{0, 1\\} ^ m} \Alpha (x, y) \ket{x} \\x{yı} \\\\ & = \ sum_ {x \in \\{0, 1\\} ^ n, y \ \\{0, 1\\} ^ m} \Alpha (x, y) O \ket{x} \ket{yı} \\\\ & = \ sum_ {x \\\{0, 1\\} ^ n , y \ \\{0, 1\\} ^ d} \Alpha (x, y) \ket{x} \ket{y \oplus f (x)}.</span><span class="sxs-lookup"><span data-stu-id="b8e61-130">$$ \begin{align} O \ket{\psi} & = O \sum_{x \in \\{0, 1\\}^n, y \in \\{0, 1\\}^m} \alpha(x, y) \ket{x} \ket{y} \\\\ & = \sum_{x \in \\{0, 1\\}^n, y \in \\{0, 1\\}^m} \alpha(x, y) O \ket{x} \ket{y} \\\\ & = \sum_{x \in \\{0, 1\\}^n, y \in \\{0, 1\\}^m} \alpha(x, y) \ket{x} \ket{y \oplus f(x)}.</span></span>
-<span data-ttu-id="b8e61-131">\end{hizalaması} $ $</span><span class="sxs-lookup"><span data-stu-id="b8e61-131">\end{align} $$</span></span>
+<span data-ttu-id="41b5d-134">$ $ \begin{align}</span><span class="sxs-lookup"><span data-stu-id="41b5d-134">$$ \begin{align}</span></span>
+<span data-ttu-id="41b5d-135">O \ket \ { psi } & = O \ sum_ {x \in \\ {0, 1 \\ } ^ n, y \ in \\ {0, 1 \\ } ^ m } \ Alpha (x, y) \ket{x } \ket{y } \\ \\ & = \ sum_ {x \in \\ {0, 1 \\ } ^ n, y \ in \\ {0, 1 \\ } ^ m } \ Alpha (x, y) O \ket{x } \ket{y } \\ \\ & = \ sum_ {x \in \\ {0, 1 \\ } ^ n, y \ içinde { \\ 0, 1 \\ } ^ m } \Alpha (x, y) \ket{x } \ket{y \oplus f (x)}.</span><span class="sxs-lookup"><span data-stu-id="41b5d-135">O \ket{\psi} & = O \sum_{x \in \\{0, 1\\}^n, y \in \\{0, 1\\}^m} \alpha(x, y) \ket{x} \ket{y} \\\\ & = \sum_{x \in \\{0, 1\\}^n, y \in \\{0, 1\\}^m} \alpha(x, y) O \ket{x} \ket{y} \\\\ & = \sum_{x \in \\{0, 1\\}^n, y \in \\{0, 1\\}^m} \alpha(x, y) \ket{x} \ket{y \oplus f(x)}.</span></span>
+<span data-ttu-id="41b5d-136">\end{align}</span><span class="sxs-lookup"><span data-stu-id="41b5d-136">\end{align}</span></span>
+$$
 
-## <a name="phase-oracles"></a><span data-ttu-id="b8e61-132">Phase Oracles</span><span class="sxs-lookup"><span data-stu-id="b8e61-132">Phase oracles</span></span>
-<span data-ttu-id="b8e61-133">Alternatif olarak, $O $ girişine göre bir _aşama_ uygulayarak bir Oracle $O $ ' a $f $ ' i kodlayabiliriz.</span><span class="sxs-lookup"><span data-stu-id="b8e61-133">Alternatively, we can encode $f$ into an oracle $O$ by applying a _phase_ based on the input to $O$.</span></span>
-<span data-ttu-id="b8e61-134">Örneğin, $ $ \begin{hizalaması} O \ket{x} = (-1) ^ {f (x)} \ket{x} gibi $O $ tanımlayabiliriz.</span><span class="sxs-lookup"><span data-stu-id="b8e61-134">For instance, we might define $O$ such that $$ \begin{align} O \ket{x} = (-1)^{f(x)} \ket{x}.</span></span>
-<span data-ttu-id="b8e61-135">\end{hizalaması} $ $ bir evre, başlangıçta hesaplama tabanlı bir durum $ \ket{x} $ içinde bir yazmaç üzerinde işlem yaparken, bu aşama genel bir aşamadır ve bu nedenle observable değildir.</span><span class="sxs-lookup"><span data-stu-id="b8e61-135">\end{align} $$ If a phase oracle acts on a register initially in a computational basis state $\ket{x}$, then this phase is a global phase and hence not observable.</span></span>
-<span data-ttu-id="b8e61-136">Ancak bu tür bir Oracle, bir üst konuma veya denetimli bir işleme uygulandığında çok güçlü bir kaynak olabilir.</span><span class="sxs-lookup"><span data-stu-id="b8e61-136">But such an oracle can be a very powerful resource if applied to a superposition or as a controlled operation.</span></span>
-<span data-ttu-id="b8e61-137">Örneğin, $f $ bir tek qubit işlevi için _f $ $O bir aşamayı veya bir aşamayı düşünün.</span><span class="sxs-lookup"><span data-stu-id="b8e61-137">For example, consider a phase orcale $O_f$ for a single-qubit function $f$.</span></span>
-<span data-ttu-id="b8e61-138">Ardından, $ $ \begin{hizalaması} O_f \ket{+} & = O_f (\ket{0} + \tus{1})/\sqrt{2} \\\\ & = ((-1) ^ {f (0)} \ayraç{0} + (-1) ^ {f (1)} \demet{1})/\sqrt{2} \\\\ & = (-1) ^ {f (0)} (\demet{0} + (-1) ^ {f (1)-f (0)} \ayraç{1})/\sqrt{2} \\\\ & = (-1) ^ {f (0)} Z ^ {f (0)-f (1)} \ket{+}.</span><span class="sxs-lookup"><span data-stu-id="b8e61-138">Then, $$ \begin{align} O_f \ket{+} & = O_f (\ket{0} + \ket{1}) / \sqrt{2} \\\\ & = ((-1)^{f(0)} \ket{0} + (-1)^{f(1)} \ket{1}) / \sqrt{2} \\\\ & = (-1)^{f(0)} (\ket{0} + (-1)^{f(1) - f(0)} \ket{1}) / \sqrt{2} \\\\ & = (-1)^{f(0)} Z^{f(0) - f(1)} \ket{+}.</span></span>
-<span data-ttu-id="b8e61-139">\end{hizalaması} $ $</span><span class="sxs-lookup"><span data-stu-id="b8e61-139">\end{align} $$</span></span>
+## <a name="phase-oracles"></a><span data-ttu-id="41b5d-137">Phase Oracles</span><span class="sxs-lookup"><span data-stu-id="41b5d-137">Phase oracles</span></span>
+<span data-ttu-id="41b5d-138">Alternatif olarak, $ $ $O girişine göre bir _aşama_ uygulayarak bir Oracle $O $f kodlayabiliriz $ .</span><span class="sxs-lookup"><span data-stu-id="41b5d-138">Alternatively, we can encode $f$ into an oracle $O$ by applying a _phase_ based on the input to $O$.</span></span>
+<span data-ttu-id="41b5d-139">Örneğin, $ $ $ \begin{align gibi $O tanımlayabiliriz}</span><span class="sxs-lookup"><span data-stu-id="41b5d-139">For instance, we might define $O$ such that $$ \begin{align}</span></span>
+    <span data-ttu-id="41b5d-140">O \ket{x } = (-1) ^ {f (x)} \ket{x } .</span><span class="sxs-lookup"><span data-stu-id="41b5d-140">O \ket{x} = (-1)^{f(x)} \ket{x}.</span></span>
+<span data-ttu-id="41b5d-141">\end{align}</span><span class="sxs-lookup"><span data-stu-id="41b5d-141">\end{align}</span></span>
+<span data-ttu-id="41b5d-142">$ $ Bir evre, başlangıçta hesaplama tabanlı bir durum $ \ket{x $ ile bir yazmaç üzerinde işlem yaptığı takdirde } Bu aşama genel bir aşamadır ve bu nedenle observable değildir.</span><span class="sxs-lookup"><span data-stu-id="41b5d-142">$$ If a phase oracle acts on a register initially in a computational basis state $\ket{x}$, then this phase is a global phase and hence not observable.</span></span>
+<span data-ttu-id="41b5d-143">Ancak bu tür bir Oracle, bir üst konuma veya denetimli bir işleme uygulandığında çok güçlü bir kaynak olabilir.</span><span class="sxs-lookup"><span data-stu-id="41b5d-143">But such an oracle can be a very powerful resource if applied to a superposition or as a controlled operation.</span></span>
+<span data-ttu-id="41b5d-144">Örneğin, $ tek bir-qubit işlevi $f _F bir aşamayı veya $O düşünün $ .</span><span class="sxs-lookup"><span data-stu-id="41b5d-144">For example, consider a phase orcale $O_f$ for a single-qubit function $f$.</span></span>
+<span data-ttu-id="41b5d-145">Sonra, $ $ \begin{align}</span><span class="sxs-lookup"><span data-stu-id="41b5d-145">Then, $$ \begin{align}</span></span>
+    <span data-ttu-id="41b5d-146">O_f \ket { +} & = O_f (\ket{0 } + \ket{1 } )/\sqrt{2 } \\ \\ & = ((-1) ^ {f (0)} \ket{0 } + (-1) ^ {f (1)} \sı{1 } )/\sqrt{2 } \\ \\ & = (-1) ^ {f (0)} (\ket{0 } + (-1) ^ {f (1)-f (0)} \ket{1 } )/\sqrt{2 } \\ \\ & = (-1) ^ {f (0)} Z ^ {f (0)-f (1)} { \tus+}.</span><span class="sxs-lookup"><span data-stu-id="41b5d-146">O_f \ket{+} & = O_f (\ket{0} + \ket{1}) / \sqrt{2} \\\\ & = ((-1)^{f(0)} \ket{0} + (-1)^{f(1)} \ket{1}) / \sqrt{2} \\\\ & = (-1)^{f(0)} (\ket{0} + (-1)^{f(1) - f(0)} \ket{1}) / \sqrt{2} \\\\ & = (-1)^{f(0)} Z^{f(0) - f(1)} \ket{+}.</span></span>
+<span data-ttu-id="41b5d-147">\end{align}</span><span class="sxs-lookup"><span data-stu-id="41b5d-147">\end{align}</span></span>
+$$
 
-<span data-ttu-id="b8e61-140">Daha genel olarak, Oracles görünümlerinin her ikisi de yalnızca tek bir bit yerine gerçek sayılar döndüren klasik işlevleri temsil edecek şekilde ayarlanabilir.</span><span class="sxs-lookup"><span data-stu-id="b8e61-140">More generally, both views of oracles can be broadened to represent classical functions which return real numbers instead of only a single bit.</span></span>
+<span data-ttu-id="41b5d-148">Daha genel olarak, Oracles görünümlerinin her ikisi de yalnızca tek bir bit yerine gerçek sayılar döndüren klasik işlevleri temsil edecek şekilde ayarlanabilir.</span><span class="sxs-lookup"><span data-stu-id="41b5d-148">More generally, both views of oracles can be broadened to represent classical functions which return real numbers instead of only a single bit.</span></span>
 
-<span data-ttu-id="b8e61-141">Oracle 'ı uygulamak için en iyi yolu seçmek, bu Oracle 'ın belirli bir algoritma içinde nasıl kullanılacağına bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="b8e61-141">Choosing the best way to implement an oracle depends heavily on how this oracle will be used within a given algorithm.</span></span>
-<span data-ttu-id="b8e61-142">Örneğin, [Deutsch-Jozsa algoritması](https://en.wikipedia.org/wiki/Deutsch%E2%80%93Jozsa_algorithm) , Oracle 'ın birinci şekilde uygulandığı, [Grover 'in algoritması](https://en.wikipedia.org/wiki/Grover's_algorithm) ikinci şekilde uygulanan Oracle 'ı temel alır.</span><span class="sxs-lookup"><span data-stu-id="b8e61-142">For example, [Deutsch-Jozsa algorithm](https://en.wikipedia.org/wiki/Deutsch%E2%80%93Jozsa_algorithm) relies on the oracle implemented in the first way, while [Grover's algorithm](https://en.wikipedia.org/wiki/Grover's_algorithm) relies on the oracle implemented in the second way.</span></span>
+<span data-ttu-id="41b5d-149">Oracle 'ı uygulamak için en iyi yolu seçmek, bu Oracle 'ın belirli bir algoritma içinde nasıl kullanılacağına bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="41b5d-149">Choosing the best way to implement an oracle depends heavily on how this oracle will be used within a given algorithm.</span></span>
+<span data-ttu-id="41b5d-150">Örneğin, [Deutsch-Jozsa algoritması](https://en.wikipedia.org/wiki/Deutsch%E2%80%93Jozsa_algorithm) , Oracle 'ın birinci şekilde uygulandığı, [Grover 'in algoritması](https://en.wikipedia.org/wiki/Grover's_algorithm) ikinci şekilde uygulanan Oracle 'ı temel alır.</span><span class="sxs-lookup"><span data-stu-id="41b5d-150">For example, [Deutsch-Jozsa algorithm](https://en.wikipedia.org/wiki/Deutsch%E2%80%93Jozsa_algorithm) relies on the oracle implemented in the first way, while [Grover's algorithm](https://en.wikipedia.org/wiki/Grover's_algorithm) relies on the oracle implemented in the second way.</span></span>
 
 
-<span data-ttu-id="b8e61-143">Daha fazla ayrıntı için [Gilyén *et al*. 1711,00465](https://arxiv.org/abs/1711.00465)' deki tartışmayı öneririz.</span><span class="sxs-lookup"><span data-stu-id="b8e61-143">For more details, we suggest the discussion in [Gilyén *et al*. 1711.00465](https://arxiv.org/abs/1711.00465).</span></span>
+<span data-ttu-id="41b5d-151">Daha fazla ayrıntı için [Gilyén *et al*. 1711,00465](https://arxiv.org/abs/1711.00465)' deki tartışmayı öneririz.</span><span class="sxs-lookup"><span data-stu-id="41b5d-151">For more details, we suggest the discussion in [Gilyén *et al*. 1711.00465](https://arxiv.org/abs/1711.00465).</span></span>
