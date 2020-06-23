@@ -1,0 +1,22 @@
+- name: Giriş
+  href: prelude.md
+- name: Klasik matematik
+  href: math.md
+- name: Tür dönüştürmeleri
+  href: convert.md
+- name: Daha yüksek sıralı denetim akışı
+  href: control-flow.md
+- name: Veri yapıları ve modelleme
+  href: data-structures.md
+- name: Kuantum algoritmaları
+  href: algorithms.md
+- name: Tanılama
+  href: diagnostics.md
+- name: Karakterizasyon
+  href: characterization.md
+- name: Hata düzeltme
+  href: error-correction.md
+- name: Uygulamalar
+  href: applications.md
+- name: OSS lisanslama
+  href: licensing.md
