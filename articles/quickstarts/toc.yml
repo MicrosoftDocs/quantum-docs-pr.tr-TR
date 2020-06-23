@@ -1,0 +1,20 @@
+expanded: true
+items:
+  - name: QDK’yı kullanmaya başlama
+    href: get-started.md
+  - name: QDK’yı yükleme
+    items:
+      - name: Yüklemeye genel bakış
+        href: index.md
+      - name: Q# komut satırı uygulamaları
+        href: install-command-line.md
+      - name: Q# Jupyter Notebook’ları
+        href: install-jupyter.md
+      - name: Diğer dillerle Q#
+        items:
+          - name: Python ile Q#
+            href: install-python.md
+          - name: .NET ile Q#
+            href: install-cs.md
+  - name: QDK’yı güncelleştirme
+    href: update.md

@@ -1,12 +1,14 @@
 - name: Genel Bakış/İçerik
   href: index.md
-- name: 'Q# temel bilgileri'
+- name: Q# temel bilgileri
   href: basics.md
-- name: 'Q# dili'
+- name: Q# dili
   href: language/toc.yml
-- name: 'Q# kullanma'
+- name: Q# kullanma
   href: using-qsharp/toc.yml
 - name: Simülatörler ve kaynak tahmin araçları
-  href: ../machines/toc.yml
+  href: machines/toc.yml
+- name: Q# kitaplıkları
+  href: libraries/toc.yml
 - name: Hızlı başvuru
   href: quickref/toc.yml
