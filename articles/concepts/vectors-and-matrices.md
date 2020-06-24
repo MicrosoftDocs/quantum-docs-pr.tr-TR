@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 6c09531cd8bee8f5efb472c95c575daed04d3040
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: f9d4e14742b7d06a6e90af0902b31fbdf17aedab
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630198"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269550"
 ---
 # <a name="vectors-and-matrices"></a>Vektörler ve matrisler
 
@@ -189,9 +196,9 @@ Bu, bazı örneklerde daha iyi gösterilmiştir:
 $ $ \begin{bmatrix}
         a \\ \\ b \end{ bmatrix } \otimes \begin{ bmatrix } c \\ \\ d \\ \\ e \ End{ bmatrix } = \begin{bmatrix}
         \begin{ bmatrix } c \\ \\ d \\ \\ e \end{bmatrix}
-        \\\\[1,5 em] b \ Begin{ bmatrix } c \\ \\ d \\ \\ e \end {bmatrix}
+        \\\\[1,5 em] b \ Begin{ bmatrix } c \\ \\ d \\ \\ e\end{bmatrix}
     ererbmatrix}
-    = \begin{ bmatrix } a c \\ \\ a d \\ \\ a \\ \\ b b c \\ \\ b d \\ \\ \endbmatrix}
+    = \begin{ bmatrix } a c \\ \\ a d \\ \\ a \\ \\ b c \\ \\ b d \\ \\ s\end{bmatrix}
 $$
 
 ve
@@ -201,21 +208,21 @@ $ $ \begin{bmatrix}
     \otimes \begin{bmatrix}
         e \ f \\ \\ g \ h \end{bmatrix}
      = \begin{bmatrix}
-    a \begin {bmatrix}
+    a\begin{bmatrix}
     e \ f \\\\ g \ h \end{bmatrix}
-    b \begin {bmatrix}
+    kenarı\begin{bmatrix}
     e \ f \\\\ g \ h \end{bmatrix}
-    \\\\[1em] c \begin {bmatrix}
+    \\\\[1em] c\begin{bmatrix}
     e \ f \\\\ g \ h \end{bmatrix}
-    d \begin {bmatrix}
+    TID\begin{bmatrix}
     e \ f \\\\ g \ h \end{bmatrix}
     ererbmatrix}
     = \begin{bmatrix}
     AE \ AF \ be \ BF \\ \\ AG \ Ah \ bg \ BH \\ \\ CE \ CF \ de \ df \\ \\ CG \ ch \ DG \ DH \ End{ bmatrix } .
 $$
 
-Tencursor ürünlerini çevreleyen son yararlı bir notational kuralı, her bir vektör $v $ veya matris $M için $ $v ^ {\otimes n } $ veya $M ^ {\otimes n $ 'ın } $n $ katlamalı bir yinelenen Tensor ürünü için kısa bir seçenektir.  Örnek:
+Tencursor ürünlerini çevreleyen son yararlı bir notational kuralı, her bir vektör $v $ veya matris $M için $ $v ^ {\otimes n } $ veya $M ^ {\otimes n $ 'ın } $n $ katlamalı bir yinelenen Tensor ürünü için kısa bir seçenektir.  Örneğin:
 
 \begin{align}
-& \begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } ^ {\otimes 1 } = \begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } , \qdörtlü \begin { bmatrix } 1 \\ \\ 0 \ End{ bmatrix } ^ {\otimes 2 } = \begin{ bmatrix } 1 \\ \\ 0 \\ \\ 0 \\ \\ 0 \end{ bmatrix } , \qdörtlü \begin { bmatrix } 1 \\ \\ -1 \end{ bmatrix } ^ {\otimes 2 } = \begin{ bmatrix } 1 \\ \\ -1 \\ \\ -1 \\ \\ 1 \end{ bmatrix } , \\ \\ & \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } ^ {\otimes 1 } = \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } , \qdörtlü \begin { bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } ^ {\otimes 2 } = \begin{ bmatrix } 0 &0&0&1 \\ \\ 0 &0&1&0 0 &1&0&\\ \\ \\\\ 1 \end bmatrix } &0&0&0 {.
+& \begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } ^ {\otimes 1 } = \begin{1 0 bmatrix } \\ \\ \end{ bmatrix } , \qdörtlü \begin{bmatrix} 1 \\ \\ 0 \end{ bmatrix } ^ {\otimes 2 } = \begin{ bmatrix } 1 \\ \\ 0 \\ \\ 0 \\ \\ 0 \end{ bmatrix } , \qdörtlü \begin{bmatrix} 1 \\ \\ -1 \end{ bmatrix } ^ {\otimes 2 } = \begin{ bmatrix } 1 \\ \\ -1 \\ \\ -1 \\ \\ 1 \end{ bmatrix } , \\ \\ & \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } ^ {\otimes 1 } = \begin{ bmatrix } 0 & 1 1 0 \\ \\ & \ End{ bmatrix } , \qdörtlü \begin{bmatrix} 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } ^ {\otimes 2 } = \begin{ bmatrix } 0 &0 \\ \\ \\ \\ \\\\ \end{bmatrix}&0&1 &0&0&1 &0&0&0 &
 \end{align}

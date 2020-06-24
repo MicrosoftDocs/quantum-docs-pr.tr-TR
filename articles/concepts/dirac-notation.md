@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 958910452109fc722999acddd70894c458e38357
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: f9dddfa25e9fd1e3d8aaf92b2e3b17c96ed8b72a
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630393"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269515"
 ---
 # <a name="dirac-notation"></a>Dirac gösterimi
 
@@ -123,7 +130,7 @@ $$
 
 Dirac gösterimine örnek olarak, } $0 ve $1 arasındaki iç ürün olan braket $ \braketi| 1 $ öğesini düşünün $ $ .  Bu, şöyle yazılabilir 
 
-$ $ \braket{0 | 1 } = \begin{ bmatrix } 1 & 0 \end{ bmatrix } \begin{ bmatrix } 0 \\\\ 1 \end { bmatrix } = 0. $ $
+$ $ \braket{0 | 1 } = \begin{ bmatrix } 1 & 0 \end{ bmatrix } \begin{ bmatrix } 0 \\\\ 1 \end{bmatrix} = 0. $ $
 
 Bu, $ \ket{0 } $ ve $ \ket{1 } $ 'ın diksel vektörler olduğunu, yani $ \braket{0 | 1 } = \braket{1 | 0 } = 0 $ olduğunu söyler.  Ayrıca, tanım $ \braket{0 | 0 } = \braket{1 | 1 } = 1 $ , bu da iki hesaplama tabanlı vektörde *orthonormal*çağrılabilir.
 Bu orthonormal özellikleri aşağıdaki örnekte yararlı olacaktır. Bir State $ \ket { \psı } = {\frac{3 } {5 } } \ket{1 } + {\frac{4 } {5 } } \ket{0 } $ olduğunda, $ \braket{1 | 0 } = 0 $ ölçmenin olasılığı $1 $  
@@ -173,7 +180,7 @@ Negatif işaretin olasılık hesaplamasında görünmesi, hisse alma 'nın klasi
 ## <a name="ketbra-or-outer-product"></a>ketya veya dış ürün
 Dirac gösterimi ile tartışmak için en son öğe, *ketya* veya dış üründür.  Dış ürün, $ { \tus\psı \bra \phi $ olarak Dirac gösterimler içinde temsil edilir } { } ve bazen Bras ve kets, brakets olarak ters sırada gerçekleştiğinden, bazı durumlarda ketbras olarak adlandırılır.  Dış ürün, t\ket { \ PSI } \bra { \phi } = \psı \ Fi ^ \linger $ $ \psi $ ve $ \fi $ olarak matris çarpma aracılığıyla tanımlanır.  Bu gösterimi en basit ve en sık kullanılan örnek,
 
-$ $ \ket{0 } \bra{0 } = \begin{ bmatrix } 1 \\\\ 0 \end{ bmatrix } \begin{ bmatrix } 1&0 \end{ bmatrix } = \begin{ bmatrix } 1 &0 \\\\ 0 &0 \end { bmatrix } \qquad \ket{1 } \bra{1 } = \begin{ bmatrix } 0 \\\\ 1 \end{ bmatrix } \begin{} 0 bmatrix&1 \end{ bmatrix } = \begin{ bmatrix } 0 &0 \\\\ 0 &1 \end { bmatrix } .
+$ $ \ket{0 } \bra{0 } = \begin{ bmatrix } 1 \\\\ 0 \end{ bmatrix } \begin{ bmatrix } 1&0 \end{ bmatrix } = \begin{ bmatrix } 1 &0 \\\\ 0 &0 \end{bmatrix} \ qquad \ket{1 } \bra{1 } = \begin{ bmatrix } 0 \\\\ 1 \end{ bmatrix } \begin{} 0 bmatrix&1 \end{ bmatrix } = \begin{ bmatrix } 0 &0 \\\\ 0 &1 \end{bmatrix} .
 $$
 
 Ketbras, her zaman sabit bir değere bir hisse durumu yansıdığından Projektör olarak adlandırılır.  Bu işlemler Unitary olmadığından (ve bir vektör 'nin norm de korumadığından), bir hisse bilgisayarının bir projektörün bir projektörü kesin bir şekilde uygulayamaması halinde gelmelidir.  Ancak, bir hisse başında ölçüm durumundaki eylemi açıklayan güzel bir iş vardır.  Örneğin, $ \ket \ PSI $ değerini $0 olarak ölçyoruz, { } $ Bu durumda durum deneyimlerinin bir sonucu olarak ortaya çıkan dönüşümdür

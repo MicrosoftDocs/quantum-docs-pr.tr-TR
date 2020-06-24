@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 224bd5165f508f6cd1fdb85fb5c14ba2e23e59ea
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 1ac235bef473efa82b096cae4159e2c724ba7c0e
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630374"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269516"
 ---
 # <a name="multiple-qubits"></a>Birden çok qubit
 
@@ -138,7 +145,7 @@ $$
 
 İki-qubit hisse durumunun yalnızca bir qubitinin ölçülmesi de mümkündür. Yalnızca bir alt sisteme daraltılacağından, her bir qubits 'in yalnızca bir kısmını ölçecek şekilde, ölçümün etkileri çok daha farklı bir durumdur.  Diğer bir deyişle, bu gibi durumlarda yalnızca bir qubit yalnızca bir qubit, alt sistemlerden yalnızca birini daraltır ancak bunların tümünü kullanmaz.  
 
-Bu durumu görmek için, başlangıçta "0" durumuna ayarlanmış iki qubit üzerinde Hadamard Transform $H uygulanarak oluşturulan aşağıdaki durumun ilk qubit 'i ölçmesini düşünün $ : $ $ H ^ {\otimes 2 } \left (\begin{ bmatrix } 1 \\ \\ 0 \ End{ bmatrix } \otimes \begin{ bmatrix } 1 \\ \\ 0 \ End{ bmatrix } \right) = \frac{1 } {2 } \begin{ bmatrix } 1 & 1 & 1 & 1 \\ \\ 1 &-1 & 1 &-1 \\ \\ 1 & 1 &-1 &-1 \\ \\ 1 &-1 &-1 & 1 \ End{ bmatrix } \begin{ bmatrix } 1 \\\\ 0 \\\\ 0 \\\\ 0 \end { bmatrix } = \frac{1 } {2 } \begin{ bmatrix } 1 \\\\ 1 \\\\ 1 \\\\ 1 \end { bmatrix } \mapsto \begin{Cases } \Text{Outcome} = 0 & \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 1 \\\\ 1 \\\\ 0 \\\\ 0 \end{ bmatrix } \\ \\ \Text{outcome} = 1 & \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1 \ End{ bmatrix } \\ \\ \end{Cases } .
+Bu durumu görmek için, başlangıçta "0" durumuna ayarlanmış iki qubit üzerinde Hadamard Transform $H uygulanarak oluşturulan aşağıdaki durumun ilk qubit 'i ölçmesini düşünün $ : $ $ H ^ {\otimes 2 } \left (\begin{ bmatrix } 1 \\ \\ 0 \ End{ bmatrix } \otimes \begin{ bmatrix } 1 \\ \\ 0 \ End{ bmatrix } \right) = \frac{1 } {2 } \begin{ bmatrix } 1 & 1 & 1 & 1 \\ \\ 1 &-1 & 1 &-1 \\ \\ 1 & 1 &-1 &-1 \\ \\ 1 &-1 &-1 & 1 \ End{ bmatrix } \begin{ bmatrix } 1 \\\\ 0 \\\\ 0 0 \\\\ \end{bmatrix} = \frac{1 } {2 } \begin{ bmatrix } 1 \\\\ 1 \\\\ 1 \\\\ 1 \end{bmatrix} \ mapsto \begin{Cases } \Text{Outcome} = 0 & \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 1 \\\\ 1 \\\\ 0 \\\\ 0 \end{ bmatrix } \\ \\ \Text{outcome} = 1 & \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1 \ End{ bmatrix } \\ \\ \end{Cases } .
 $ $ Her iki sonuç da %50 oranında meydana gelen bir olasılıktır.  Her ikisi için %50 olasılık elde edilen sonuç, ilk bir değer olan $0 $ $ ' in ilk qubit üzerinde $1 ile değiştirme altında ilk hisse
 
 Birinci veya ikinci qubit ölçmeye yönelik matematik kuralı basittir.  $E _k $ $k ^ {\rm TH } $ Hesaplama tabanlı vektörünün olmasına izin vermemiz ve $S $ tüm $e _K, $ söz konusu $k söz konusu değer için $1 değerini almasını sağlayan tüm kümesi $ olmasına izin veririz $ .  Örneğin, ilk qubit ' i ölçmeye ilgileniyorsanız, $S $ $e _1 \equiv 10 $ ve $e _3 11 ' den oluşur \equiv $ .  Benzer şekilde, ikinci qubit ile ilgileniyorsanız $S $ $e _2 \equiv 01 $ ve $e _3 \ equ11 ' den oluşur $ .  Ardından, seçilen qubit $1 olarak ölçme olasılığı $ durum vektörü $ \ PSI içindir$
@@ -167,12 +174,12 @@ $$
 Bunun yalnızca, $10 sonuçlarını ölçmek için beklenen iki olasılıkların toplamı olduğunu $ ve $11 ' nin $ ölçülecek tüm qubits olduğunu unutmayın.
 Örneğimiz için, bu değerlendirme
 
-$ $ \frac{1 } {4 } \left | \begin{ bmatrix } 0&0&1&0 \end { bmatrix } \begin{ bmatrix } 1 \\\\ 1 \\\\ 1 \\\\ 1 \end { bmatrix } \ Right | ^ 2 + \frac{1 } {4 } \ Left | \begin{ bmatrix } 0&0&0&1 \end { bmatrix } \begin{ bmatrix } 1 \\\\ 1 \\\\ 1 \\\\ 1 \end { bmatrix } \ Right | ^ 2 = \frac{1 } {2 } .
+$ $ \frac{1 } {4 } \left | \begin{ bmatrix } 0&0&1&0 \end{bmatrix} \ Begin{ bmatrix } 1 \\\\ 1 \\\\ 1 \\\\ 1 \end{bmatrix} \ doğru | ^ 2 + \frac{1 } {4 } \left | \begin{ bmatrix } 0&0&0&1 \end{bmatrix} \begin{ bmatrix } 1 \\\\ 1 \\\\ 1 \\\\ 1 \end{bmatrix} \ doğru | ^ 2 = \frac{1 } {2 } .
 $$
 
 ıntuetdiğimiz anlamı bize söylerken, olasılık olması gerekir.  Benzer şekilde, durum şöyle yazılabilir
 
-$ $ \frac { \frac{e_1 } {2 } + \frac{e_3 } {2 } } {\sqrt { \frac{1 { } 2 } }} = \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1 \end {bmatrix}
+$ $ \frac { \frac{e_1 } {2 } + \frac{e_3 } {2 } } {\sqrt { \frac{1 } {2 } }} = \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1\end{bmatrix}
 $$
 
 ıntuize uygun olarak tekrar.
