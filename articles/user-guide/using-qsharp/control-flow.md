@@ -6,43 +6,41 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: 1f1b641563fe35879abeee32b4f0aeeb7001b1a0
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 0cf62a128170bd0c28ff77f00fc23414567b1ea4
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84326549"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415312"
 ---
 # <a name="control-flow-in-q"></a>Q içindeki denetim akışı #
 
-Bir işlem veya işlev içinde her bir ifade, en sık kullanılan zorunlu klasik dillere benzer şekilde sırayla yürütülür.
-Bu denetim akışı, ancak üç farklı şekilde değiştirilebilir:
+Bir işlem veya işlev içinde, her bir ifade, diğer genel zorunlu klasik dillere benzer şekilde sırayla çalışır.
+Ancak, denetim akışını üç farklı şekilde değiştirebilirsiniz:
 
-- `if`deyimler
-- `for`lerin
-- `repeat`-`until`lerin
+* `if`deyimler
+* `for`lerin
+* `repeat-until-success`lerin
 
-Son tartışmayı [aşağıda](#repeat-until-success-loop)daha ileri erteliyoruz.
-`if` `for` Ancak denetim akışı yapıları, klasik programlama dillerinin çoğu için tanıdık bir anlata devam ediyor.
+`if`Ve `for` Denetim akışı yapıları, çoğu klasik programlama diline tanıdık bir anlamda devam ediyor. [`Repeat-until-success`](#repeat-until-success-loop)döngüler Bu makalenin ilerleyen kısımlarında ele alınmıştır.
 
-Daha önemlisi, `for` döngüler ve `if` deyimler, özelleştirilmiş oluşturmaları otomatik olarak oluşturulan işlemlerde bile kullanılabilir. Bu durumda, bir döngünün adjoint `for` yönü tersine çevirir ve her yinelemenin adeklerini alır.
-Bu, "ayakkabılar-ve-SOCKS" ilkesini izler: Socks ' yi almayı geri almak istiyorsanız, ve ardından
-Bu işlem, siz de daha az bir işlem yapmaya çalışır.
+Daha önemlisi, `for` döngüler ve `if` deyimler, [özelleştirilmiş oluşturmaları](xref:microsoft.quantum.guide.operationsfunctions) otomatik olarak oluşturulan işlemlerde kullanılabilir. Bu senaryoda, bir döngünün adjoint `for` yönü tersine çevirir ve her yinelemenin adjoint değerini alır.
+Bu eylem, "ayakkabılar-ve-SOCKS" ilkesini izler: SOCKS 'yi almayı geri almak istiyorsanız, sonra da sholer ' i ve sonra da 
 
 ## <a name="if-else-if-else"></a>If, else-if, Else
 
 `if`İfade koşullu yürütmeyi destekler.
-Anahtar sözcüğü `if` , açık parantez `(` , Boole ifadesi, kapatma parantezi `)` ve deyim bloğu ( _then_ bloğu) oluşur.
-Bu, her biri anahtar sözcüğü `elif` , bir açık parantez `(` , Boole ifadesi, kapatma parantezi `)` ve deyim bloğu ( _Else-If_ bloğu) içeren herhangi bir sayıda Else-If yan tümcesi tarafından izlenebilir.
+Anahtar sözcükten `if` , parantez içindeki bir Boole ifadesiyle ve bir deyim bloğundan ( _then_ bloğu) oluşur.
+İsteğe bağlı olarak, her biri anahtar sözcüğü `elif` , parantez içindeki bir Boole ifadesini ve bir deyim bloğunu ( _Else-If_ bloğu) içeren herhangi bir sayıda Else-If yan tümcesi izleyebilir.
 Son olarak, deyimi isteğe bağlı olarak `else` başka bir ifade bloğunun ( _Else_ bloğu) gelen anahtar sözcükten oluşan bir else yan tümcesi ile bitebileceğiniz anlamına gelir.
 
-`if`Koşul değerlendirilir ve true ise blok yürütülür.
-Koşul yanlışsa, ilk else-if koşulu değerlendirilir; true ise, Else-If bloğu yürütülür.
-Aksi takdirde, ikinci Else-If bloğu test edilir ve ardından üçüncü, vb. doğru bir koşula sahip bir yan tümce ile karşılaşılana ya da başka bir else-if yan tümcesi içermeyecek şekilde devam eder.
-Özgün If koşulu ve tüm else-if yan tümceleri yanlış olarak değerlendirilmişse, varsa Else bloğu yürütülür.
+`if`Koşul değerlendirilir ve *true*ise blok çalıştırılır. *then*
+Koşul *yanlışsa*, ilk else-if koşulu değerlendirilir; Bu doğruysa, *Else-If* bloğu çalıştırılır.
+Aksi takdirde, ikinci Else-If bloğu değerlendirilir ve ardından, doğru bir koşula sahip bir yan tümce ile karşılaşılana ya da başka bir else-if yan tümcesi bulunmadığından, üçüncü ve bu şekilde devam eder.
+*Eğer özgün If* koşulu ve tüm else-if yan tümceleri *yanlış*olarak değerlendirilmişse, varsa *Else* bloğu çalıştırılır.
 
-Hangi bloğun yürütüldüğü, kendi kapsamında yürütüleceğini unutmayın.
-Bir `if` , veya bloğunun içinde yapılan bağlamalar, `elif` `else` sonunda görünür değildir.
+Hangi bloğun çalıştığını, kendi kapsamında çalıştığını unutmayın.
+Bir, veya bloğunun içinde yapılan bağlamalar, `if` `elif` `else` blok bittikten sonra görünür değildir.
 
 Örneğin,
 
@@ -69,18 +67,18 @@ if (i == 1) {
 
 ## <a name="for-loop"></a>For döngüsü
 
-İfade, bir `for` tamsayı aralığı veya dizi üzerinde yinelemeyi destekler.
-Deyimi, anahtar sözcüğünden, bir `for` Açık parantezden `(` , ardından bir sembol veya sembol tanımlama anahtarından, anahtar sözcükten `in` , bir tür veya diziye, bir `Range` kapatma parantezine `)` ve bir deyim bloğuna sahip.
+`for`İfade, bir tamsayı aralığı veya dizi üzerinde yinelemeyi destekler.
+Deyimi, anahtar sözcüğünden `for` , ardından bir sembol veya sembol tanımlama anahtarından, anahtar sözcükten `in` ve Type `Range` ya da Array, All parantez içinde ve bir deyim bloğundan oluşur.
 
-İfade bloğu (Döngünün gövdesi), her bir değere veya dizideki her bir değere bağlantılı tanımlanmış simgeler (döngü değişkenleri) ile tekrar tekrar yürütülür.
-Aralık ifadesi boş bir aralığa veya diziye değerlendirilirse, gövdenin hiç yürütülmeyeceğini unutmayın.
-İfade, döngü girilmeden önce tam olarak değerlendirilir ve döngü yürütülürken değişmeyecektir.
+İfade bloğu (Döngünün gövdesi), Aralık veya dizideki her bir değere bağlanacak şekilde, tanımlanmış sembol (döngü değişkeni) ile tekrar tekrar çalışır.
+Aralık ifadesi boş bir aralığa veya diziye değerlendirilirse, gövdenin hiç çalıştırılmadığını unutmayın.
+İfade, döngü girilmeden önce tam olarak değerlendirilir ve döngü yürütülürken değişmez.
 
-Döngü değişkeni, her giriş gövdesine bağlanır ve gövdenin sonunda ilişkisiz olur.
-Özellikle, for döngüsü tamamlandıktan sonra döngü değişkeni bağlantılı değildir.
-Belirtilen sembol (ler) in bağlaması sabittir ve diğer değişken bağlamalarıyla aynı kurallara uyar. 
+Döngü değişkeni, döngü gövdesinin her girişinde bağlanır ve gövdenin sonunda ilişkisiz olur.
+For döngüsü tamamlandıktan sonra döngü değişkeni bağlanmadı.
+Döngü değişkeninin bağlaması sabittir ve diğer değişken bağlamalarıyla aynı kurallara uyar. 
 
-Bazı örnekler için, `qubits` qubits 'in bir yazmacı olur (örneğin `Qubit[]` , türü), 
+Bu örneklerde, `qubits` qubits 'in bir yazmacı olur (örneğin, türü `Qubit[]` ), 
 
 ```qsharp
 // ...
@@ -101,15 +99,15 @@ for ((index, measured) in results) { // iterates over the tuple values in result
     }
 }
 ```
-Sonunda, ' nin aritmetik ve sol ikili işlecini kullandığımızda, `<<<` ayrıntıları [sayısal ifadelerde](xref:microsoft.quantum.guide.expressions#numeric-expressions) nerede olabileceğini unutmayın
 
+Sonunda aritmetik-SHIFT-Left ikili işlecini kullandığımızda olduğunu unutmayın `<<<` . Daha fazla bilgi için bkz. [sayısal ifadeler](xref:microsoft.quantum.guide.expressions#numeric-expressions).
 
 ## <a name="repeat-until-success-loop"></a>Yineleme-Until-başarılı döngüsü
 
 Q # dili, mebitleri ölçmeye yönelik sonuçlara bağlı olarak klasik denetim akışına izin verir.
-Bu özellik sırasıyla, birimlere uygulama için hesaplama maliyetini azaltabilecekleri güçlü dayalı araçları uygulamaya olanak tanıyor.
-Örnek olarak, Q # içinde *Yinele-başarılı* (ru) desenleri uygulamak çok kolaydır.
-Bu RUS desenleri, temel kapıların bakımından *beklenen* düşük maliyetli dayalı programlarıdır, ancak gerçek maliyetten gerçek bir çalıştırmaya ve çeşitli olası branchlerin gerçek bir aramasına bağlı olarak değişir.
+Bu özellik, sırasıyla, birimlere uygulama için hesaplama maliyetini azaltabilecekleri güçlü dayalı araçları uygulamaya olanak tanıyor.
+Buna örnek olarak, Q # içindeki *yineleme-* yanıt (Rus) desenleri verilebilir.
+Bu RUS desenleri, temel kapıların bakımından *beklenen* düşük maliyetli dayalı programlarıdır; tahakkuk eden maliyet, gerçek çalıştırmaya ve çoklu olası Branch'in araya yerleştirmesine bağlıdır.
 
 Yinele-başarılı (RUS) desenleri kolaylaştırmak için, Q # yapıları destekler
 
@@ -124,33 +122,35 @@ fixup {
 ```
 
 `expression`, türünde bir değer değerlendirilen geçerli bir ifadedir `Bool` .
-Döngü gövdesi yürütülür ve ardından koşul değerlendirilir.
-Koşul doğru ise, ifade tamamlanır; Aksi takdirde, düzeltme yürütülür ve ifade, döngü gövdesiyle başlayarak yeniden yürütülür.
+Döngü gövdesi çalışır ve ardından koşul değerlendirilir.
+Koşul doğru ise, ifade tamamlanır; Aksi takdirde, düzeltme çalışır ve ifade, döngü gövdesiyle başlayarak yeniden çalışır.
 
-Yineleme/Until döngüsünün (gövde, test ve düzeltme) üç bölümü *her yineleme için*tek bir kapsam olarak değerlendirilir, bu nedenle gövdede bağlanan semboller testte ve düzeltmede kullanılabilir.
-Ancak, düzeltme yürütme işlemini tamamlamak deyimin kapsamını sonlandırır, böylece gövde veya Düzeltme sırasında yapılan simge bağlamaları sonraki tekrarlarda kullanılamaz.
+Bir RUS döngüsünün üç bölümü (gövde, test ve düzeltme) *her yineleme için*tek bir kapsam olarak değerlendirilir, böylece gövdede bağlanan semboller hem testte hem de düzeltmede kullanılabilir.
+Ancak, düzeltme yürütme işlemini tamamlamak, deyimin kapsamını sonlandırır, böylece gövde veya Düzeltme sırasında yapılan simge bağlamaları sonraki tekrarlarda kullanılamaz.
 
 Ayrıca, `fixup` ifade genellikle yararlı olur ancak her zaman gerekli değildir.
 Gerekli olmadığı durumlarda, yapı
+
 ```qsharp
 repeat {
     // do stuff
 }
 until (expression);
 ```
+
 aynı zamanda geçerli bir RUS örüntü.
 
-Bu sayfanın en altında, [Rus döngülerinin bazı örneklerini](#repeat-until-success-examples)sunuyoruz.
+Daha fazla örnek ve ayrıntı için, bu makaledeki [Yinele-Until-Success örneklerine](#repeat-until-success-examples) bakın.
 
 > [!TIP]   
-> İşlevler içinde yineleme-başarılı döngüleri kullanmaktan kaçının. Karşılık gelen işlevler, işlevlerde döngüler sırasında sağlanır. 
+> İşlevler içinde yineleme-başarılı döngüleri kullanmaktan kaçının. İşlevler içinde karşılık gelen işlevleri sağlamak için *while* döngüleri kullanın. 
 
 ## <a name="while-loop"></a>While döngüsü
 
-Yinele-Success desenlerinin çok hisse özgü bir connotation vardır. Bu diller, belirli hisse algoritmaları sınıflarında yaygın olarak kullanılır. bu nedenle, Q # içinde adanmış dil yapısı. Ancak, bir koşula göre kesintiye uğratır ve bu nedenle derleme sırasında yürütme uzunluğunun bilinmediği, bir hisse çalışma zamanında belirli bir ele alınabilmesi gerekir. Diğer yandan işlevleri içindeki kullanımları sorunlu değildir, çünkü bunlar yalnızca geleneksel (hisse olmayan) donanımda yürütülecek kodu içerir. 
+Yinele-Success desenlerinin çok hisse özgü bir connotation vardır. Bunlar, belirli hisse algoritmaları sınıflarında yaygın olarak kullanılır. bu nedenle, Q # dilinde adanmış dil yapısı. Bununla birlikte, bir koşula göre kesintiye uğratır ve derleme zamanında yürütme uzunluğu bilinmiyor olan döngüler, bir hisse çalışma zamanında belirli bir ilgiyle işlenir. Ancak, işlevleri içindeki kullanımları sorunlu değildir çünkü bu döngüler yalnızca geleneksel (hisse olmayan) donanımda çalışan bir kod içerir. 
 
-Q # bu nedenle, yalnızca işlevler içindeki while döngülerinin kullanımını destekler. Deyim, bir `while` `while` açık parantez `(` , bir koşul (yani Boolean ifadesi), bir kapatma parantezi `)` ve deyim bloğu oluşur.
-İfade bloğu (Döngünün gövdesi), koşulun değerlendirildiği sürece yürütülür `true` .
+Q #, bu nedenle, yalnızca işlevlerdeki while döngülerinin kullanımını destekler. Bir `while` deyim, anahtar sözcükten `while` , parantez içinde Boole ifadesiyle ve deyim bloğundan oluşur.
+Koşul bloğu (Döngünün gövdesi), koşulun değerlendirildiği sürece çalışır `true` .
 
 ```qsharp
 // ...
@@ -161,18 +161,10 @@ while (index < Length(arr) && item < 0) {
 }
 ```
 
-
 ## <a name="return-statement"></a>Return Deyimi
 
-Return deyimleri bir işlemin veya işlevin yürütmesini sonlandırır ve çağırana bir değer döndürür.
+Return ifadesinde bir işlemin veya işlevin çalışması sona erer ve çağırana bir değer döndürülür.
 Anahtar sözcüğünden `return` , ardından uygun türdeki bir ifadeye ve bir sonlandırma noktalı virgülden oluşur.
-
-Boş bir tanımlama grubu döndüren çağrılabilir, `()` Return ifadesine gerek yoktur.
-Erken çıkış istenirse `return ()` Bu durumda kullanılabilir.
-Diğer herhangi bir tür döndüren callables, son Return ifadesine gerek duyar.
-
-Bir işlem içinde en fazla dönüş deyimi sayısı yoktur.
-Deyimler bir blok içindeki Return deyimini izif ise derleyici bir uyarı verebilir.
 
 Örneğin,
 ```qsharp
@@ -180,23 +172,27 @@ return 1;
 ```
 veya
 ```qsharp
-return ();
-```
-veya
-```qsharp
 return (results, qubits);
 ```
 
+* Boş bir tanımlama grubu döndüren çağrılabilir, `()` Return ifadesine gerek yoktur.
+* İşlemden veya işlevden erken çıkış belirtmek için öğesini kullanın `return ();` .
+Diğer herhangi bir tür döndüren callables, son Return ifadesine gerek duyar.
+* Bir işlem içinde en fazla dönüş deyimi sayısı yoktur.
+Deyimler bir blok içindeki Return deyimini izif ise derleyici bir uyarı verebilir.
+
+   
 ## <a name="fail-statement"></a>Fail bildirisi
 
-Fail deyimleri bir işlemin yürütülmesini sonlandırır ve çağırana bir hata değeri döndürür.
+Fail deyimleri bir işlemin çalıştırılmasını sonlandırır ve çağırana bir hata değeri döndürür.
 Anahtar sözcüğünden `fail` ve ardından bir dize ve Sonlandırıcı noktalı virgülden oluşur.
-Dize, hata iletisi olarak klasik sürücüye döndürülür.
+İfade, hata iletisi olarak, dizeyi klasik sürücüye döndürür.
 
 İşlemdeki başarısızlık deyimlerinin sayısı üzerinde hiçbir kısıtlama yoktur.
 Deyimler bir blok içindeki bir fail deyimini izif ise derleyici bir uyarı verebilir.
 
 Örneğin,
+
 ```qsharp
 fail $"Impossible state reached";
 ```
@@ -209,7 +205,7 @@ fail $"Syndrome {syn} is incorrect";
 
 ### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a>Irrational Axis hakkında tek qubit döndürme için RUS stili 
 
-Tipik bir kullanım durumunda, aşağıdaki Q # işlemi Bloch Sphere üzerinde $ (I + 2i Z)/\sqrt $ bir ırrational Axis etrafında bir döndürme uygular {5} . Bu, bilinen bir RUS kalıbı kullanılarak gerçekleştirilir:
+Tipik bir kullanım durumunda, aşağıdaki Q # işlemi Bloch Sphere üzerinde $ (I + 2i Z)/\sqrt $ bir ırrational Axis etrafında bir döndürme uygular {5} . Uygulama, bilinen bir RUS modelini kullanır:
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -232,9 +228,9 @@ operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
 }
 ```
 
-### <a name="rus-loop-with-mutable-variable-in-scope"></a>Kapsam içinde kesilebilir değişkenle birlikte RUS döngüsü
+### <a name="rus-loop-with-a-mutable-variable-in-scope"></a>Kapsam içinde kesilebilir değişkenle birlikte RUS döngüsü
 
-Bu örnek, `finished` tüm yineleme-sonu-düzeltme döngüsü kapsamında olan ve düzeltme adımında kullanılmadan önce başlatılan bir kesilebilir değişkeninin kullanımını gösterir.
+Bu örnek, `finished` Tüm tekrarlama-Until-düzeltme döngüsünün kapsamı içinde olan ve düzeltme adımında güncelleştirildikten sonra başlatılan, kesilebilir değişken kullanımını gösterir.
 
 ```qsharp
 mutable iter = 1;
@@ -251,7 +247,7 @@ fixup {
 
 ### <a name="rus-without-fixup"></a>Şu olmadan RUS`fixup`
 
-Örneğin, aşağıdaki kod, ve kapılarını kullanarak önemli bir döndürme kapısı uygulayan bir dayalı devresi $V _3 = (\cıvalation+ 2 ı Z)/\sqrt {5} $ `H` `T` .
+Bu örnekte, düzeltme adımı olmadan bir RUS döngüsü gösterilmektedir. Kod, {5} ve kapılarını kullanarak önemli bir döndürme kapısı uygulayan $V _3 = (\cıvalation+ 2 ı Z)/\sqrt $ olan bir dayalı devresi `H` `T` .
 Döngü, ortalama $ \frac $ tekrarları içinde sona erer {8} {5} .
 Daha fazla ayrıntı için bkz. [*yineleme-Until-başarılı: tek qubit unityalarının belirleyici olmayan ayrıştırma*](https://arxiv.org/abs/1311.1074) (paetznick ve svore, 2014).
 
@@ -277,8 +273,14 @@ using (qubit = Qubit()) {
 
 ### <a name="rus-to-prepare-a-quantum-state"></a>Ru bir hisse durumu hazırlamak için
 
-Son olarak, {1} {3} {2} {0} $ \ket{+} $ durumundan başlayarak bir hisse durumu $ \frac {\sqrt} \left (\sqrt \ Tus+ {1} \tus\right) $ hazırlamak için bir Rus deseninin örneğini gösteririz.
-Ayrıca bkz. [Standart kitaplıkla birlikte sunulan birim testi örneği](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
+Son olarak, {1} {3} {2} {0} $ \ket{+} $ durumundan başlayarak bir hisse durumu $ \frac {\sqrt} \left (\sqrt \ Tus+ {1} \tus\right) $ hazırlamak için bir Rus deseninin örneği aşağıda verilmiştir.
+
+Bu işlemde gösterilen Notable programlama özellikleri şunlardır:
+
+* Döngünün daha karmaşık bir `fixup` parçası olan ve bu da hisse işlemleri içerir. 
+* `AssertProb`Programın belirtilen belirli noktalarda hisse miktarını ölçme olasılığını belirlemek için deyimlerin kullanılması.
+
+Ve işlemleri hakkında daha fazla bilgi için [`Assert`](xref:microsoft.quantum.intrinsic.assert) [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) bkz. [test ve hata ayıklama](xref:microsoft.quantum.guide.testingdebugging).
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {
@@ -325,9 +327,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-Bu işlemde gösterilen önemli programlı özellikler, bu döngünün daha karmaşık bir `fixup` parçasıdır ve bu da, hisse ve `AssertProb` programdaki belirli noktalarda hisse durumu ölçme olasılığını belirlemek için deyimleri kullanır.
-Ve işlemleri hakkında daha fazla bilgi için bkz. [test ve hata ayıklama](xref:microsoft.quantum.guide.testingdebugging) [`Assert`](xref:microsoft.quantum.intrinsic.assert) [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) .
-
+Daha fazla bilgi için bkz. [Standart kitaplıkla birlikte sunulan birim testi örneği](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

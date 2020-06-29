@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: b32644382bb88fb11da00d0d7d78bbd797a0eaaa
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+ms.openlocfilehash: 1821df6a3a51a62b44f3ccd96b127577c5db990a
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84629991"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415397"
 ---
 # <a name="type-expressions-in-q"></a>Q içindeki tür Ifadeleri #
 
@@ -20,11 +20,11 @@ ms.locfileid: "84629991"
 Sayısal ifadeler `Int` , veya türündeki ifadelerdir `BigInt` `Double` .
 Diğer bir deyişle, tamsayı veya kayan noktalı sayılardır.
 
-`Int`Q # içindeki sabit değerler yalnızca bir dizi basamakla yazılır.
-Onaltılık ve ikili tamsayılar `0x` `0b` sırasıyla ve önekiyle desteklenir.
+`Int`Q # içindeki sabit değerler, bir dizi basamak olarak yazılmıştır.
+Onaltılık ve ikili tamsayılar desteklenir ve `0x` sırasıyla bir ve önekiyle yazılır `0b` .
 
-`BigInt`Q # içindeki sabit değerler, sondaki `l` veya `L` son ek ile yazılır.
-Onaltılık büyük tamsayılar bir "0x" öneki ile desteklenir.
+`BigInt`Q # içindeki değişmez değerler sonunda `l` veya `L` soneke sahiptir.
+Onaltılık büyük tamsayılar desteklenir ve "0x" önekiyle yazılır.
 Bu nedenle, tüm geçerli sabit değer kullanımları aşağıda verilmiştir `BigInt` :
 
 ```qsharp
@@ -34,36 +34,36 @@ let bigOne = bigZero + 1L;
 ```
 
 `Double`Q # içindeki sabit değerler, ondalık basamaklar kullanılarak yazılan kayan nokta sayılarıdır.
-Bunlar, bir ondalık noktayla, `.` ve/veya ' e ' veya ' e ' ile belirtilen üstel bir bölüm (yalnızca olası bir negatif işaret ve ondalık basamakların geçerli olması) ile yazılabilir.
+Bunlar ondalık bir nokta veya ya da ya da " `.` e" ya da "e" ya da bir üstel bölüm (yalnızca olası bir negatif işaret ve ondalık basamakların geçerli olması) ile yazılmış veya olmadan yazılabilir.
 Aşağıdakiler geçerli `Double` değişmez değerler: `0.0` , `1.2e5` , `1e-5` .
 
-Herhangi bir öğe türünün dizi ifadesi verildiğinde, bir `Int` ifade [`Length`](xref:microsoft.quantum.core.length) yerleşik işlev kullanılarak, dizi ifadesi parantez içine alınmış ve ile oluşturulmuş olabilir `(` `)` .
+Herhangi bir öğe türünün dizi ifadesi verildiğinde, `Int` [`Length`](xref:microsoft.quantum.core.length) yerleşik işlevini kullanarak, dizi ifadesi parantez içine alınmış bir ifade oluşturabilirsiniz.
 Örneğin, `a` bir diziye bağlıysa, bir `Length(a)` tamsayı ifadesidir.
 , `b` Tamsayıların dizilerindeki bir diziyse, `Int[][]` `Length(b)` içindeki alt dizilerin sayısıdır `b` ve `Length(b[1])` içindeki ikinci alt dizideki tamsayıların sayısıdır `b` .
 
 Aynı türde iki sayısal ifade verildiğinde, ikili işleçler,,, `+` `-` `*` ve `/` Yeni bir sayısal ifade oluşturmak için kullanılabilir.
-Yeni ifadenin türü, bileşen ifadelerinin türleriyle aynı olacaktır.
+Yeni ifadenin türü, yapısal ifadelerin türleriyle aynıdır.
 
-İki tamsayı ifadesi verildiğinde, ikili işleç `^` (güç) yeni bir tamsayı ifadesi oluşturmak için kullanılabilir.
-Benzer şekilde, `^` Yeni bir Double ifadesi oluşturmak için iki çift ifade ile birlikte kullanılabilir.
-Son olarak, `^` solda büyük bir tamsayı ve yeni bir büyük tamsayı ifadesi oluşturmak için sağdaki bir tamsayı ile birlikte kullanılabilir.
-Bu durumda, ikinci parametrenin 32 bite sığması gerekir; Aksi takdirde, bir çalışma zamanı hatası oluşur.
+İki tamsayı ifadesi verildiğinde, `^` Yeni bir tamsayı ifadesi oluşturmak için ikili işleci (Power) kullanın.
+Benzer şekilde, `^` Yeni bir Double ifadesi oluşturmak için iki Double ifadesiyle da kullanabilirsiniz.
+Son olarak, sol taraftaki `^` büyük bir tamsayı ve sağ taraftaki bir tamsayı kullanarak yeni bir büyük tamsayı ifadesi oluşturabilirsiniz.
+Bu durumda, ikinci parametrenin 32 bite sığması gerekir; Aksi takdirde, bir çalışma zamanı hatası oluşturur.
 
-İki tamsayı veya büyük tamsayı ifadesi verildiğinde, `%` (mod), `&&&` (BIT düzeyinde and), `|||` (bit düzeyinde OR) veya `^^^` (bit düzeyinde xor) işleçleri kullanılarak yeni bir tamsayı veya büyük tamsayı ifadesi oluşturulabilir.
+İki tamsayı veya büyük tamsayı ifadesi verildiğinde, `%` (mod), `&&&` (BIT düzeyinde and), `|||` (bit düzeyinde OR) veya `^^^` (bit düzeyinde xor) işleçlerini kullanarak yeni bir tamsayı veya büyük tamsayı ifadesi oluşturur.
 
-Sol tarafta bir tamsayı veya büyük tamsayı ifadesi ve sağ taraftaki bir tamsayı ifadesi verildiğinde, `<<<` (aritmetik sol SHIFT) veya `>>>` (aritmetik sağa kaydırma) işleçleri, sol ifadeyle aynı türde yeni bir ifade oluşturmak için kullanılabilir.
+Sol tarafta bir tamsayı veya büyük tamsayı ifadesi ve sağ taraftaki bir tamsayı ifadesi verildiğinde, `<<<` `>>>` sol ifadeyle aynı türde yeni bir ifade oluşturmak için (aritmetik sol SHIFT) veya (aritmetik sağa kaydırma) işleçlerini kullanın.
 
 Kaydırma işleminin ikinci parametresi (SHIFT miktarı) sıfırdan büyük veya sıfıra eşit olmalıdır; negatif kaydırma miktarları için davranış tanımsızdır.
-Her iki vardiya işlemi için de SHIFT miktarı 32 bite uyum sağlamalıdır; Aksi takdirde, bir çalışma zamanı hatası oluşur.
-Kaydırılan sayı bir tamsayı ise, SHIFT miktarı yorumlanır `mod 64` ; Yani, 1 vardiyası ve 65 vardiyası aynı etkiye sahiptir.
+Her iki vardiya işlemi için de SHIFT miktarı 32 bite uyum sağlamalıdır; Aksi takdirde, bir çalışma zamanı hatası oluşturur.
+Kaydırılan sayı bir tamsayı ise, kaydırma miktarı yorumlanır `mod 64` ; diğer bir deyişle, 1 vardiyası ve 65 vardiyası aynı etkiye sahiptir.
 
 Hem tamsayı hem de büyük tamsayı değerleri için, vardiyalar aritmetik değerlerdir.
-Negatif bir değeri sol veya sağ kaydırma, negatif bir sayı ile sonuçlanır.
-Diğer bir deyişle, bir adım sola veya sağa kaydırma, sırasıyla 2 ile çarpılarak veya bölünerek tamamen aynıdır.
+Negatif bir değeri sol veya sağ olarak değiştirme negatif bir sayı ile sonuçlanır.
+Diğer bir deyişle, bir adım sola veya sağa kaydırma, sırasıyla 2 ile çarpılarak veya bölünerek aynıdır.
 
 Tamsayı bölme ve tamsayı mod, negatif sayılar için C# olarak aynı davranışı izler.
-Diğer bir deyişle, `a % b` her zaman aynı işarete sahip olur `a` ve `b * (a / b) + a % b` her zaman eşit olur `a` .
-Örnek:
+Yani, `a % b` her zaman aynı işarete sahiptir `a` ve `b * (a / b) + a % b` her zaman eşittir `a` .
+Örneğin:
 
  `A` | `B` | `A / B` | `A % B`
 ---------|----------|---------|---------
@@ -72,19 +72,19 @@ Diğer bir deyişle, `a % b` her zaman aynı işarete sahip olur `a` ve `b * (a 
  -5 | 2 | -2 | -1
  -5 | -2 | 2 | -1
 
-Büyük tamsayı bölme ve mod aynı şekilde çalışmaktadır.
+Büyük tamsayı bölme ve mod işlemleri aynı şekilde çalışır.
 
-Herhangi bir sayısal ifade verildiğinde, birli işleç kullanılarak yeni bir ifade oluşturulmuş olabilir `-` .
-Yeni ifade, anayent ifadesiyle aynı türde olacaktır.
+Herhangi bir sayısal ifade verildiğinde birli işlecini kullanarak yeni bir ifade oluşturabilirsiniz `-` .
+Yeni ifade, anayent ifadesiyle aynı türde.
 
-Herhangi bir tamsayı veya büyük tamsayı ifadesi verildiğinde, aynı türde yeni bir ifade `~~~` (bit düzeyinde tamamlayıcı) birli işleç kullanılarak oluşturulabilir.
+Herhangi bir tamsayı veya büyük tamsayı ifadesi verildiğinde, `~~~` (bit düzeyinde tamamlayıcı) birli işlecini kullanarak aynı türde yeni bir ifade oluşturabilirsiniz.
 
 ## <a name="boolean-expressions"></a>Boole İfadeleri
 
 İki `Bool` değişmez değer de `true` ve ' dir `false` .
 
 Aynı ilkel türdeki iki ifade verildiğinde, `==` ve `!=` ikili işleçler bir ifade oluşturmak için kullanılabilir `Bool` .
-İki ifade eşitse ifade true, değilse false olur.
+İki ifade eşitse true, değilse false şeklindedir.
 
 Kullanıcı tanımlı türlerin değerleri karşılaştırılamayabilir, yalnızca sarmalanmamış değerler karşılaştırılabilir. Örneğin, "sarmalama" işlecini kullanma `!` ( [Q # türlerinde](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)ayrıntılı olarak açıklanmıştır),
 
@@ -97,26 +97,25 @@ let t = x == y;               // This will cause a compiler error.
 ```
 
 Değerler için eşitlik karşılaştırması `Qubit` kimlik eşitlik, yani iki ifadenin aynı qubit 'i tanımlamasına bakılmaksızın.
-İki qubits 'in durumu karşılaştırılmaz, erişilmez, ölçülemez veya bu karşılaştırma tarafından değiştirilir.
+İki qubits 'in durumları karşılaştırılmaz, erişilmez, ölçülemez veya bu karşılaştırma tarafından değiştirilmez.
 
 Değerler için eşitlik karşılaştırması `Double` , yuvarlama etkileri nedeniyle yanıltıcı olabilir.
-Örneğin, `49.0 * (1.0/49.0) != 1.0` .
+Örneğin, `49.0 * (1.0/49.0) != 1.0`.
 
 Herhangi iki sayısal ifade verildiğinde,,, ve ikili işleçleri,,, `>` `<` `>=` ve `<=` ilk ifade sırasıyla sıfırdan büyük, küçüktür, büyüktür veya eşittir veya ikinci ifadeden daha küçük veya eşit olduğunda doğru olan yeni bir Boole ifadesi oluşturmak için kullanılabilir.
 
-İki Boolean ifade verildiğinde, `and` ve `or` ikili işleçler, iki ifadenin her ikisi de (her ikisi de veya her ikisi de) doğru olduğunda doğru olan yeni bir Boole ifadesi oluşturmak için kullanılabilir.
+Herhangi iki Boolean ifadesi verildiğinde, `and` iki ifadenin her ikisi de doğru olduğunda doğru olan yeni bir Boole ifadesi oluşturmak için ikili işleci kullanın. Benzer şekilde, işleci kullanıldığında, `or` iki deyimden biri true olduğunda true olan bir ifade oluşturulur.
 
 Herhangi bir Boole ifadesi verildiğinde, `not` birli işleç yanlış olduğunda, doğru olan yeni bir Boole ifadesi oluşturmak için birli işleç kullanılabilir.
 
-## <a name="string-expressions"></a>Dize Ifadeleri
+## <a name="string-expressions"></a>Dize ifadeleri
 
-Q #, `fail` deyimde ( [Denetim akışında](xref:microsoft.quantum.guide.controlflow#fail-statement)açıklanmıştır) ve standart işlevde dizelerin kullanılmasına izin verir [`Message`](xref:microsoft.quantum.intrinsic.message) .
-İkinci öğesinin belirli davranışı kullanılan simülatmaya bağlıdır, ancak genellikle bir Q # programı sırasında çağrıldığında ana bilgisayar konsoluna bir ileti yazar.
+Q #, `fail` deyimde ( [Denetim akışında](xref:microsoft.quantum.guide.controlflow#fail-statement)açıklanmıştır) ve standart işlevde dizelerin kullanılmasına izin verir [`Message`](xref:microsoft.quantum.intrinsic.message) . İkinci öğesinin belirli davranışı kullanılan simülatöre bağlıdır, ancak genellikle bir Q # programı sırasında çağrıldığında ana bilgisayar konsoluna bir ileti yazar.
 
 Q # içindeki dizeler, değişmez değer veya enterpolasyonlu dizelerdir.
 
-Dize sabit değerleri çoğu dilde basit dize sabit değerlerine benzer: çift tırnak içine alınmış bir Unicode karakter dizisi `"` .
-Bir dizenin içinde, arka eğik çizgi karakteri `\` bir çift tırnak karakteriyle çıkmak ve yeni satır `\n` , satır başı olarak `\r` ve bir sekme olarak eklemek için kullanılabilir `\t` .
+Dize sabit değerleri çoğu dilde basit dize sabit değerlerine benzer: çift tırnak içine alınmış bir Unicode karakter dizisi `" "` .
+Bir dizenin içinde, `\` çift tırnak karakterini ( `\"` ) kaçış veya New-Line ( `\n` ), bir satır başı ( `\r` ) veya Tab ( `\t` ) eklemek için ters eğik çizgi karakterini kullanın.
 Örneğin:
 
 ```qsharp
@@ -124,32 +123,32 @@ Bir dizenin içinde, arka eğik çizgi karakteri `\` bir çift tırnak karakteri
 ```
 ### <a name="interpolated-strings"></a>Ara değerli dizeler
 
-Dize enterpolasyonları için Q # sözdizimi, C# sözdiziminin bir alt kümesidir, ancak burada soru-cevap ' a ait olan anahtar noktalarını özetliyoruz.
-Ana farklılıklar aşağıda ele alınmıştır.
+Dize enterpolasyonları için Q # sözdizimi, C# sözdiziminin bir alt kümesidir. Bu, soru-cevap ' a ait olan önemli noktalardır:
 
-Bir dize sabit değerini, enterpolasyonlu bir dize olarak tanımlamak için, `$` simgeyi simgesiyle önüne ekleyin.
-`$`Ve arasında `"` bir dize sabiti Başlatan boşluk olamaz.
+* Bir dize sabit değerini, enterpolasyonlu bir dize olarak tanımlamak için, `$` simgeyi simgesiyle önüne ekleyin. `$`Ve arasında `"` bir dize sabiti Başlatan boşluk olamaz.
 
-Aşağıdaki, [`Message`](xref:microsoft.quantum.intrinsic.message) diğer Q # ifadeleriyle birlikte, bir ölçünün sonucunu konsola yazmak için işlevi kullanan temel bir örnektir.
+* Aşağıdaki, [`Message`](xref:microsoft.quantum.intrinsic.message) diğer Q # ifadeleriyle birlikte, bir ölçünün sonucunu konsola yazmak için işlevi kullanan temel bir örnektir.
 
 ```qsharp
     let num = 8;       // some Q# expression
     let res = M(q);
     Message($"Number: {num}, Result: {res}");
 ```
-Geçerli bir Q # ifadesi, enterpolasyonlu bir dizede görünebilir.
 
-C# sözdizimi hakkında daha fazla ayrıntı, [*enterpolasyonlu dizelerde*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings)bulunabilir.
-En önemli ayrım, Q # ' ın tam (çok satırlı) enterpolasyonlu dizeleri desteklemedir.
-Enterpolasyonlu dize içindeki ifadeler, C# söz dizimini değil, Q # söz dizimini izler.
+* Geçerli bir Q # ifadesi, enterpolasyonlu bir dizede görünebilir.
+
+* Enterpolasyonlu dize içindeki ifadeler, C# söz dizimini değil, Q # söz dizimini izler. En önemli ayrım, Q # ' ın tam (çok satırlı) enterpolasyonlu dizeleri desteklemedir.
+
+C# sözdizimi hakkında daha fazla bilgi için bkz. [*enterpolasyonlu dizeler*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).
 
 ## <a name="range-expressions"></a>Aralık Ifadeleri
 
-, Ve olmak üzere üç ifade verildiğinde, `Int` `start` `step` `stop` `start .. step .. stop` birinci öğesi olan bir Aralık ifadesi, `start` ikinci öğe ise, `start+step` üçüncü öğe, `start+step+step` vb. olur `stop` .
+, Ve olmak üzere üç ifade verildiğinde, `Int` `start` `step` `stop` ifadesi `start .. step .. stop` ilk öğesi olan bir Aralık ifadesi, `start` ikinci öğe ise, üçüncü öğe, vb., `start+step` `start+step+step` geçene kadar `stop` .
 Örneğin, pozitif ve olduğunda bir Aralık boş olabilir `step` `stop < start` .
-Aralığın son öğesi, `stop` ve arasındaki fark, ve arasındaki fark olur `start` `stop` `step` ; diğer bir deyişle, Aralık her iki uçta da dahil olur.
 
-Her iki ifade de verildiğinde `Int` `start` `stop` , ve `start .. stop` değerine eşit bir Aralık deyimidir `start .. 1 .. stop` .
+Aralık her iki ucu da dahil değildir. Diğer bir deyişle, ve arasındaki fark `start` `stop` bir tamsayı ise `step` , aralığın son öğesi olacaktır `stop` .
+
+Her iki `Int` ifade de `start` ve `stop` ifade verilen `start .. stop` bir Aralık ifadesi `start .. 1 .. stop` .
 Önünde ve `step` ' den küçük olsa bile, örtük ' ın + 1 olduğunu unutmayın `stop` `start` . böyle bir durumda, Aralık boş olur.
 
 Bazı örnek aralıklar şunlardır:
@@ -184,7 +183,7 @@ Aynı, ve için de `Zero` geçerlidir `0` .
 
 ## <a name="tuple-expressions"></a>Demet Ifadeleri
 
-Tanımlama grubu değişmez değeri, ve ' de bulunan, virgülle ayrılmış şekilde, uygun türdeki öğe ifadelerinin dizelerdir `(` `)` .
+Tanımlama grubu sabit değeri, virgülle ayrılmış şekilde, uygun türdeki öğe ifadelerinin dizelerdir.
 Örneğin, `(1, One)` bir `(Int, Result)` ifadedir.
 
 Değişmez değerler dışında, tek demet ifadeleri demet değerlerine, demet dizilerinin dizi öğelerine ve tanımlama grupları döndüren çağrılabilir çağırmaları olan sembollerdir.
@@ -199,17 +198,17 @@ Değişmez değerler dışında, Kullanıcı tanımlı bir türün tek ifadeleri
 ## <a name="unwrap-expressions"></a>Ifade kaydırmayı geri al
 
 Q # içinde, Unwrap işleci sondaki bir ünlem işaretidir `!` .
-Örneğin, `IntPair` temel alınan türe sahip kullanıcı tanımlı bir türdür `(Int, Int)` ve `s` değeri olan bir değişkense, `IntPair(2, 3)` daha sonra `s!` olur `(2, 3)` .
+Örneğin, `IntPair` temel alınan türe sahip kullanıcı tanımlı bir türdür `(Int, Int)` ve `s` değeri olan bir değişkense, `IntPair(2, 3)` `s!` olur `(2, 3)` .
 
-Diğer Kullanıcı tanımlı türler bakımından tanımlanan Kullanıcı tanımlı türler için, Unwrap işleci yinelenebilir. Örneğin, `s!!` paketlenmiş, sarmalanmamış değeri gösterir `s` .
+Diğer Kullanıcı tanımlı türler bakımından tanımlanan Kullanıcı tanımlı türler için, Unwrap işlecini yineleyebilirsiniz. Örneğin, `s!!` paketlenmiş ve sarmalanmamış değeri gösterir `s` .
 Bu nedenle, `WrappedPair` temel alınan türe sahip kullanıcı tanımlı bir türdür `IntPair` ve `t` değeri olan bir değişkense, `WrappedPair(IntPair(1,2))` `t!!` olur `(1,2)` .
 
 `!`İşleç, `[]` dizi dizini oluşturma ve dilimleme için dışındaki diğer işleçlerden daha yüksek önceliğe sahiptir.
-`!``[]`, pozitif bir değer; yani, `a[i]![3]` şöyle okunmalıdır `((a[i])!)[3]` : `i` ' th öğesini al `a` , sarmalama kaldır ve sonra sarmalanmamış değerin 3. öğesini (bir dizi olması gerekir) alın.
+`!`ve, `[]` pozitif bir deyişle, `a[i]![3]` şöyle okunurdur `((a[i])!)[3]` : `i` . öğesini alın `a` , sarmalayın ve sarmalanmamış değerin 3. öğesini (bir dizi olması gerekir) alın.
 
 `!`İşlecin önceliği belirgin olmayan bir etkiye sahip olabilir.
 Bir işlev veya işlem sarmalanmamış bir değer döndürürse, bağımsız değişken grubu, sarmalama yerine çağrıya bağlamak için işlev veya işlem çağrısının parantez içine alınması gerekir.
-Örnek:
+Örneğin:
 
 ```qsharp
 let f = (Foo(arg))!;    // Calls Foo(arg), then unwraps the result
@@ -218,27 +217,26 @@ let g = Foo(arg)!;      // Syntax error
 
 ## <a name="array-expressions"></a>Dizi Ifadeleri
 
-Dizi değişmez değeri, virgülle ayrılmış bir veya daha fazla öğe ifadesinin sırasıdır `[` ve `]` .
+Dizi sabit değeri, virgülle ayrılmış bir veya daha fazla öğe ifadesi dizisi parantez içine alınmıştır `[]` .
 Tüm öğeler aynı türle uyumlu olmalıdır.
 
-Aynı türde iki dizi verildiğinde, ikili `+` işleç iki dizinin birleşimi olan yeni bir dizi oluşturmak için kullanılabilir.
-Örneğin, `[1,2,3] + [4,5,6]` `[1,2,3,4,5,6]` .
+Aynı türde iki dizi verildiğinde, `+` iki dizinin birleşimi olan yeni bir dizi oluşturmak için ikili işlecini kullanın.
+Örneğin, `[1,2,3] + [4,5,6]` = `[1,2,3,4,5,6]`.
 
 ### <a name="array-creation"></a>Dizi oluşturma
 
-Bir tür ve ifade verildiğinde `Int` , `new` işleç verilen boyutun yeni bir dizisini ayırmak için kullanılabilir.
-Örneğin, `new Int[i + 1]` `Int` öğeleri içeren yeni bir dizi ayırır `i + 1` .
+Bir tür ve ifade verildiğinde `Int` , `new` verilen boyutun yeni bir dizisini ayırmak için işlecini kullanın.
+Örneğin, `new Int[i + 1]` öğeleri içeren yeni bir `Int` dizi ayırır `i + 1` .
 
-Boş dizi değişmez `[]` değerlerine izin verilmez.
-Bunun yerine `new ★[0]` ,, `★` uygun bir tür için yer tutucu olarak olduğu gibi, istenen sıfır uzunluklu diziyi oluşturulmasına izin verir.
+Boş dizi değişmez değerlerine (gibi) `[]` izin verilmez.
+Bunun yerine, `new T[0]` `T` uygun bir tür için yer tutucu olan öğesini kullanarak sıfır uzunluğunda bir dizi oluşturabilirsiniz.
 
-Yeni bir dizinin öğeleri, türe bağlı bir varsayılan değere başlatılır.
-Çoğu durumda bu bazı sıfır çeşitlerinden oluşur.
+Yeni bir dizinin öğeleri, türe bağlı bir varsayılan değere başlatırlar.
+Çoğu durumda, bu bazı sıfır çeşitlerinden oluşur.
 
 Varlıklara başvurular olan qubits ve callables için makul bir varsayılan değer yoktur.
-Bu nedenle, bu tür için varsayılan, çalışma zamanı hatasına neden olmadan kullanılamayan geçersiz bir başvurudur.
-Bu, C# veya Java gibi dillerde null başvuruya benzer.
-Qubits veya callables içeren diziler, öğeleri güvenle kullanılmadan önce varsayılan olmayan değerlerle düzgün başlatılmış olmalıdır. İçin uygun başlatma yordamları bulunabilir <xref:microsoft.quantum.arrays> .
+Bu nedenle, varsayılan olarak, bir çalışma zamanı hatasına neden olmadan, C# veya Java gibi dillerdeki bir null başvuruya benzer şekilde kullanamazsınız.
+, Öğelerini güvenli bir şekilde kullanabilmeniz için qubits veya callables içeren diziler varsayılan olmayan değerlerle başlatılmalıdır. Uygun başlatma yordamları için bkz <xref:microsoft.quantum.arrays> ..
 
 Her türün varsayılan değerleri şunlardır:
 
@@ -256,17 +254,17 @@ Tür | Varsayılan
  `Callable` | _geçersiz çağrılabilir_
  `Array['T]` | `'T[0]`
 
-Demet türleri, öğe öğesi tarafından başlatılmış.
+Demet türleri öğeyi by öğesi olarak başlatır.
 
 
 ### <a name="array-elements"></a>Dizi öğeleri
 
-Bir dizi ifadesi ve bir `Int` ifade verildiğinde, `[` ve dizi öğesi işleci kullanılarak yeni bir ifade oluşturulabilir `]` .
-Yeni ifade, dizinin öğe türüyle aynı türde olacaktır.
-Örneğin, bir `a` dizi s öğesine bağlıysa, `Double` `a[4]` bir `Double` ifadedir.
+Dizi ifadesi ve bir ifade verildiğinde `Int` , Array öğesi işlecini kullanarak yeni bir ifade oluşturur `[]` .
+Yeni ifade, dizinin öğe türüyle aynı türde.
+Örneğin, türünde bir `a` diziye bağlanmışsa `Double` , `a[4]` bir `Double` ifadedir.
 
-Dizi ifadesi basit bir tanımlayıcı değilse, bir öğe seçmek için parantez içine alınmalıdır.
-Örneğin, `a` ve `b` öğelerinin her ikisi de varsa `Int` , birleştirilmeden bir öğe şöyle ifade edilir:
+Dizi ifadesi basit bir tanımlayıcı değilse, bir öğeyi seçmek için ayraçları parantez içine almalısınız.
+Örneğin, `a` ve `b` her iki dizi dizisise `Int` , birleştirme işleminden bir öğe şöyle ifade edilir:
 
 ```qsharp
 (a + b)[13]
@@ -278,14 +276,14 @@ Diğer bir deyişle, bir dizinin ilk öğesi `a` her zaman olur `a[0]` .
 
 ### <a name="array-slices"></a>Dizi dilimleri
 
-Bir dizi ifadesi ve bir `Range` ifade verildiğinde, `[` ve dizi dilimi işleci kullanılarak yeni bir ifade oluşturulabilir `]` .
-Yeni ifade, dizisiyle aynı türde olur ve tarafından tanımlanan sırada öğesi tarafından dizin oluşturulan dizi öğelerini içerir `Range` `Range` .
-Örneğin, `a` bir dizi bir diziyle ilişkiliyse, ' ın `Double` `a[3..-1..0]` `Double[]` ilk dört öğesini, `a` ancak içinde göründükleri şekilde ters sırada içeren bir ifadedir `a` .
+Dizi ifadesi ve bir ifade verildiğinde `Range` , dizi dilimi işlecini kullanarak yeni bir ifade oluşturur `[ ]` .
+Yeni ifade, dizisiyle aynı türdür ve tarafından tanımlanan sırada öğesi tarafından dizin oluşturulan dizi öğelerini içerir `Range` `Range` .
+Örneğin, `a` türünde bir diziye bağlıysa `Double` ,, `a[3..-1..0]` `Double[]` `a` ancak içinde göründükleri şekilde ters sırada olan ilk dört öğeyi içeren bir ifadedir `a` .
 
-`Range`Boşsa, sonuçta elde edilen dizi dilimi sıfır uzunluğunda olur.
+`Range`Boşsa, sonuçta elde edilen dizi dilimi sıfır uzunluktadır.
 
-Başvuran dizi öğelerinde olduğu gibi, dizi ifadesi basit bir tanımlayıcı değilse, dilimin dilimlemek için parantez içine alınması gerekir.
-`a`Ve `b` dizilerinin her ikisi de varsa `Int` , birleştirme işleminden alınan bir dilim şöyle ifade edilir:
+Başvuran dizi öğelerinde olduğu gibi, dizi ifadesi basit bir tanımlayıcı değilse, onu dilimlemek için parantez içine almalısınız.
+Örneğin, `a` ve `b` her iki dizi dizisise `Int` , birleştirme işleminden alınan bir dilim şöyle ifade edilir:
 
 ```qsharp
 (a+b)[1..2..7]
@@ -293,15 +291,17 @@ Başvuran dizi öğelerinde olduğu gibi, dizi ifadesi basit bir tanımlayıcı 
 
 #### <a name="inferred-startend-values"></a>Çıkarılan başlangıç/bitiş değerleri
 
-0,8 sürümümüzden başlayarak, Aralık Dilimleme için bağlamsal ifadeleri destekliyoruz. Özellikle, Aralık başlangıç ve bitiş değerleri bir Aralık Dilimleme ifadesi bağlamında atlanabilir. Bu durumda, derleyici aralığa yönelik istenen sınırlayıcıları çıkarması için aşağıdaki kuralları uygular. 
+[0,8 sürümümüzden](xref:microsoft.quantum.relnotes)başlayarak, Aralık Dilimleme için bağlamsal ifadeleri destekliyoruz. Özellikle bir Aralık Dilimleme ifadesi bağlamında Aralık başlangıcı ve bitiş değerlerini atlayabilirsiniz. Bu durumda, derleyici aralığa yönelik istenen sınırlayıcıları çıkarması için aşağıdaki kuralları uygular:
 
-Örneğin, Aralık başlangıç değeri atlanırsa, çıkarılan başlangıç değeri 
-- bir adım belirtilmemişse veya belirtilen adım pozitifse sıfır ve 
-- , belirtilen adım negatifse, dilimli dizinin uzunluğu eksi bir değer. 
+* Aralık *başlangıcı* değeri atlanırsa, çıkarılan başlangıç değeri
+  * bir adım belirtilmemişse veya belirtilen adım pozitif ise sıfır olur.  
+  * , belirtilen adım negatifse, dilimli dizinin uzunluğu eksi bir değer.
 
-Aralık bitiş değeri atlanırsa, çıkarılan bitiş değeri 
-- , bir adım belirtilmediyse veya belirtilen adım pozitif ise ve 
-- , belirtilen adım negatifse sıfırdır. 
+* Aralık *bitiş* değeri atlanırsa, çıkarılan bitiş değeri
+  * , hiçbir adım belirtilmediyse veya belirtilen adım pozitifse dilimli dizinin uzunluğu eksi bir değer.
+  * , belirtilen adım negatifse sıfırdır.
+
+Bazı örnekler şunlardır:
 
 ```qsharp
 let arr = [1,2,3,4,5,6];
@@ -318,18 +318,21 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a>Kopyalama ve güncelleştirme Ifadeleri
 
-Tüm Q # türleri değer türleri olduğundan ve biraz özel bir rol alan qubits ile, bir değer bir simgeye bağlandığında veya bir sembol yeniden bağlandığında bir "kopya" oluşturulur. Yani, Q # davranışı atamadaki bir kopyanın oluşturulmasıyla aynı olur.
-Pratikte yalnızca ilgili parçalar gerektiği şekilde yeniden oluşturulur. 
+Tüm Q # türleri değer türleri olduğundan (biraz özel bir rol alan qubits ile), bir değer bir simgeye bağlandığında veya bir sembol yeniden bağlandığında bir "kopya" oluşturulur. Yani, Q # davranışı bir kopya atama işleci kullanılarak oluşturulmuş şekilde oluşturulmuştur. 
 
-Bu özellikle de diziler içerir.
-Özellikle, dizi öğelerini güncelleştirmek mümkün değildir. Var olan bir diziyi değiştirmek için bir *kopyalama ve güncelleştirme* mekanizmasının kullanılmasını gerekir.
+Tabii ki, pratikte yalnızca ilgili parçalar gerektiği şekilde yeniden oluşturulur. Bu, dizi öğelerini güncelleştirmek mümkün olmadığından dizileri kopyalamayı etkiler. Var olan bir diziyi değiştirmek için bir *kopyalama ve güncelleştirme* mekanizmasının kullanılmasını gerekir.
 
-Yeni diziler, *kopyalama ve güncelleştirme* ifadeleri aracılığıyla mevcut olanlardan oluşturulabilir.
-Bir Copy-Update ifadesi formun bir ifadesidir `expression1 w/ expression2 <- expression3` , burada bir `expression1` tür için tür olması gerekir `T[]` `T` .
-İkincisi, `expression2` içindeki diziye kıyasla değiştirilecek öğe dizinlerini tanımlar `expression1` ve türünden ya da `Int` türünde olmalıdır `Range` .
-`expression2`Türünde ise `Int` , `expression3` türünde olması gerekir `T` . `expression2`Türünde ise `Range` , `expression3` türünde olması gerekir `T[]` .
+Var olan bir diziden, işleçlerini ve işlecini kullanan *kopyalama ve güncelleştirme* ifadeleri aracılığıyla yeni bir dizi oluşturabilirsiniz `w/` `<-` .
+Bir kopya ve güncelleştirme ifadesi formun bir ifadesidir `expression1 w/ expression2 <- expression3` , burada
 
-Bir Copy-Update ifadesi, ' deki `arr w/ idx <- value` öğe (ler) i olarak ayarlanan öğeler hariç, içindeki öğesine karşılık gelen öğeye ayarlanmış olan yeni bir dizi oluşturur `arr` `idx` `value` . Örneğin, `arr` bir dizi içeriyorsa `[0,1,2,3]` , 
+* `expression1``T[]`bir tür için tür olmalıdır `T` .
+* `expression2`' de belirtilen dizide hangi dizinlerin değiştirileceğini tanımlar `expression1` . `expression2`tür `Int` ya da tür olmalıdır `Range` .
+* `expression3``expression1`, içinde belirtilen indeksler temelinde içindeki öğeleri güncelleştirmek için kullanılan değerdir `expression2` . `expression2`Tür ise `Int` , tür olmalıdır `expression3` `T` . `expression2`Tür ise `Range` , tür olmalıdır `expression3` `T[]` .
+
+Örneğin, Copy ve Update ifadesi, ' `arr w/ idx <- value` `arr` `idx` deki değer (ler) e ayarlanan tarafından belirtilen öğe (ler) hariç, içindeki karşılık gelen öğelere ayarlanmış tüm öğeleri içeren yeni bir dizi oluşturur `value` . 
+
+Verilen `arr` diziyi içeriyorsa `[0,1,2,3]` , 
+
 - `arr w/ 0 <- 10`dizi `[10,1,2,3]` .
 - `arr w/ 2 <- 10`dizi `[0,1,10,3]` .
 - `arr w/ 0..2..3 <- [10,12]`dizi `[10,1,12,3]` .
@@ -338,7 +341,7 @@ Bir Copy-Update ifadesi, ' deki `arr w/ idx <- value` öğe (ler) i olarak ayarl
 
 Kullanıcı tanımlı türlerde adlandırılmış öğeler için benzer ifadeler mevcuttur. 
 
-Örneğin türü göz önünde bulundurun 
+Örneğin, türü göz önünde bulundurun 
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
@@ -365,50 +368,46 @@ for (i in 1..N) {
 
 ### <a name="arrays-of-callables"></a>Callables dizileri 
 
-Çağrılabilir türlerle ilgili daha fazla ayrıntıyı aşağıda ve bir sonraki sayfada, [işlemler ve Q #](xref:microsoft.quantum.guide.operationsfunctions)' da işlevlerde bulabilirsiniz.
+Ayrıca, callables dizisi de oluşturabilirsiniz.
 
-Ortak öğe türü bir işlem ya da işlev türü ise, tüm öğeler aynı giriş ve çıkış türlerine sahip olmalıdır.
-Dizinin öğe türü tüm öğeleri tarafından desteklenen tüm nesneleri destekleyecektir.
-Örneğin,, ve hepsi ise,, `Op1` `Op2` ve `Op3` `Qubit[] => Unit` `Op1` `Adjoint` `Op2` `Controlled` her ikisini de destekler, destekler ve `Op3` destekler:
+* Ortak öğe türü bir işlem ya da işlev türü ise, tüm öğeler aynı giriş ve çıkış türlerine sahip olmalıdır.
+* Dizinin öğe türü tüm öğeleri tarafından [desteklenen tüm unsurları](xref:microsoft.quantum.guide.operationsfunctions) destekler.
+Örneğin,, `Op1` `Op2` ve `Op3` hepsi `Qubit[] => Unit` operasyonlardır, ancak `Op1` `Adjoint` `Op2` her ikisini de destekler, destekler `Controlled` ve `Op3` destekler:
+  * `[Op1, Op2]`, bir dizi `(Qubit[] => Unit)` işlemden oluşur.
+  * `[Op1, Op3]`, bir dizi `(Qubit[] => Unit is Adj)` işlemden oluşur.
+  * `[Op2, Op3]`, bir dizi `(Qubit[] => Unit is Ctl)` işlemden oluşur.
 
-- `[Op1, Op2]`, bir dizi `(Qubit[] => Unit)` işlemden oluşur.
-- `[Op1, Op3]`, bir dizi `(Qubit[] => Unit is Adj)` işlemden oluşur.
-- `[Op2, Op3]`, bir dizi `(Qubit[] => Unit is Ctl)` işlemden oluşur.
+Ancak, işlemler `(Qubit[] => Unit is Adj)` ve `(Qubit[] => Unit is Ctl)` ortak temel türüne sahip olmakla birlikte `(Qubit[] => Unit)` , bu işlemlerin *dizileri* ortak bir temel türü paylaşmazlar.
 
-Ancak, `(Qubit[] => Unit is Adj)` ve `(Qubit[] => Unit is Ctl)` işlemleri ortak temel türüne sahip olsa `(Qubit[] => Unit)` da, bu işleçlerin dizilerinin ortak *of* bir temel türü paylaşmadığını unutmayın. Örneğin, `[[Op1], [Op2]]` Şu anda, uyumsuz dizi türlerinin bir dizisini oluşturmaya çalıştığı için bir hata oluşturur `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` .
+Örneğin, `[[Op1], [Op2]]` Şu anda iki uyumsuz dizi türünden oluşan bir dizi oluşturmayı denediğinde bir hata oluşturur `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` .
 
+Callables hakkında daha fazla bilgi için bu sayfadaki [çağrılabilir ifadeler](#callable-expressions) veya [Q # Içindeki işlemler ve işlevler](xref:microsoft.quantum.guide.operationsfunctions)bölümüne bakın.
 
 ## <a name="conditional-expressions"></a>Koşullu Ifadeler
 
-Aynı türde ve bir Boolean ifadesinin iki diğer ifadesi verildiğinde, koşullu ifade soru işareti `?` ve dikey çubuk kullanılarak oluşturulmuş olabilir `|` .
-Örneğin, `a==b ? c | d` .
-Bu örnekte, koşullu ifadenin değeri `c` `a==b` true, ise false ise olur `d` .
+Aynı türde ve bir Boolean ifadesinin iki ifadesi verildiğinde, soru işaretini, ve dikey çubuğu kullanarak koşullu bir ifade oluşturur `?` `|` . Verildiğinde `a==b ? c | d` , koşullu ifadenin değeri `c` `a==b` true ise ve false ise `d` .
 
 ### <a name="conditional-expressions-with-callables"></a>Callables ile koşullu ifadeler
 
-İki ifade, aynı girişlere ve çıkışlara sahip olan ancak farklı komik desteği olan işlemlere göre değerlendirilemez.
-Bu durumda, koşullu ifadenin türü, her iki ifade tarafından desteklenen tüm semantikleri destekleyen bu giriş ve çıkışlarla bir işlemdir.
+Koşullu ifadeler, aynı girişlere ve çıkışlara sahip olan ancak farklı komik desteği olan işlemleri değerlendirebilir. Bu durumda, koşullu ifadenin türü, her iki ifade tarafından desteklenen tüm semantikleri destekleyen giriş ve çıkışlarla bir işlemdir.
 Örneğin,, ve hepsi ise,, `Op1` `Op2` ve `Op3` `Qubit[]=>Unit` `Op1` `Adjoint` `Op2` `Controlled` her ikisini de destekler, destekler ve `Op3` destekler:
 
 - `flag ? Op1 | Op2`bir `(Qubit[] => Unit)` işlemdir.
 - `flag ? Op1 | Op3`bir `(Qubit[] => Unit is Adj)` işlemdir.
 - `flag ? Op2 | Op3`bir `(Qubit[] => Unit is Ctl)` işlemdir.
 
-Olası iki sonuç ifadesi varsa, bir işlev veya işlem çağrısı içeriyorsa, bu çağrı yalnızca çağrının değeri olacak şekilde gerçekleşdiğinde olur.
-Örneğin, bu durumda, `a==b ? C(qs) | D(qs)` `a==b` true ise `C` işlem çağrılacaktır ve false ise yalnızca `D` çağrılacaktır.
-Bu, diğer dillerdeki kısa devre 'ya benzer.
+Olası iki sonuç ifadesinin herhangi biri bir işlev veya işlem çağrısını içeriyorsa, bu çağrı yalnızca çağrının değeri olan bir sonuç olduğunda gerçekleşir. Örneğin, bu durumda, `a==b ? C(qs) | D(qs)` `a==b` true ise `C` işlem çağrılır ve yanlış ise yalnızca `D` işlem çağrılır. Bu yaklaşım, diğer dillerdeki *kısa* devre 'ya benzer.
 
 ## <a name="callable-expressions"></a>Çağrılabilir Ifadeler
 
-Çağrılabilir sabit değer, derleme kapsamında tanımlanan bir işlemin veya işlevin adıdır.
-Örneğin, `X` standart kitaplık işlemine başvuran bir işlem sabit değeri `X` ve `Message` standart kitaplık işlevine başvuran bir işlev sabit değeri `Message` .
+Çağrılabilir sabit değer, derleme kapsamında tanımlanan bir işlemin veya işlevin adıdır. Örneğin, `X` standart kitaplık işlemine başvuran bir işlem sabit değeri `X` ve `Message` standart kitaplık işlevine başvuran bir işlev sabit değeri `Message` .
 
 Bir işlem `Adjoint` functor destekliyorsa, `Adjoint op` bir işlem ifadesi olur.
 Benzer şekilde, işlem `Controlled` functor 'ı destekliyorsa, `Controlled op` bir işlem ifadesi olur.
-Bu ifadelerin türleri [çağıran işlem özelleştirmeleri](xref:microsoft.quantum.guide.operationsfunctions#calling-operation-specializations)sırasında belirtilmiştir.
+Bu ifadelerin türleri hakkında daha fazla bilgi için bkz. [işlem uzmanlıklarını çağırma](xref:microsoft.quantum.guide.operationsfunctions#calling-operation-specializations).
 
-Funörler ( `Adjoint` ve `Controlled` ), Unwrap operatörü `!` ve [] ' ile dizi dizini oluşturma dışında diğer işleçlerden daha yakından bağlanır.
-Bu nedenle, işlemlerin kullanılan funları destekledikleri varsayılarak şunlar geçerlidir:
+Funörler ( `Adjoint` ve `Controlled` ), ile geri sarım operatörü `!` ve dizi dizini oluşturma dışında diğer işleçlerden daha yakından bağlanır `[ ]` .
+Bu nedenle, işlemlerin kullanılan funları destekledikleri varsayılarak aşağıdakiler geçerlidir:
 
 ```qsharp
 Adjoint Op(qs)
@@ -419,27 +418,25 @@ Adjoint WrappedOp!(qs)
 
 ### <a name="type-parameterized-callable-expressions"></a>Tür parametreli çağrılabilir ifadeler
 
-Çağrılabilir bir sabit değer olarak kullanılabilir, bir değişkene atamak veya başka bir çağrılabilir öğesine geçirmek için deyin.
-Bu durumda, çağrılabilir [tür parametrelerine](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)sahipse, çağrılabilir değerin bir parçası olarak sağlanması gerekir.
-Çağrılabilir bir değer belirtilmeyen tür parametrelerine sahip olamaz.
+Çağrılabilir bir sabit değeri, örneğin, bir değişkene atamak veya başka bir çağrılabilir öğesine geçirmek için değer olarak kullanabilirsiniz. Bu durumda, çağrılabilir [tür parametrelerine](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)sahipse, çağrılabilir değerin parçası olarak parametreleri sağlamanız gerekir.
 
-Örneğin, `Fun` imzasına sahip bir işlevdir `'T1->Unit` :
+Çağrılabilir bir değer belirtilmeyen tür parametrelerine sahip olamaz. Örneğin, `Fun` imzaya sahip bir işlevdir `'T1->Unit` :
 
 ```qsharp
 let f = Fun<Int>;            // f is (Int->Unit).
 let g = Fun;                 // This causes a compilation error.
-SomeOtherFun(Fun<Double>);   // A (Double->Unit) is passed to SomOtherFun.
+SomeOtherFun(Fun<Double>);   // A (Double->Unit) is passed to SomeOtherFun.
 SomeOtherFun(Fun);           // This also causes a compilation error.
 ```
 
 ## <a name="callable-invocation-expressions"></a>Çağrılabilir çağırma Ifadeleri
 
-Çağrılabilir bir (işlem veya işlev) ifadesi ve çağrılabilir öğesinin giriş türünün bir tanımlama grubu ifadesi verildiğinde, çağrılabilir ifadeye kayıt kümesi ifadesi eklenerek bir çağırma ifadesi oluşturulabilir.
+Çağrılabilir bir ifade (işlem veya işlev) ve çağrılabilir öğesinin giriş türünün bir tanımlama grubu ifadesi verildiğinde, çağrılabilir ifadeye demet ifadesini ekleyerek bir *çağırma ifadesi* oluşturabilirsiniz.
 Çağırma ifadesinin türü, çağrılabilir olan imzanın çıkış türüdür.
 
 Örneğin, `Op` imzaya sahip bir işlem ise `((Int, Qubit) => Double)` , `Op(3, qubit1)` türünde bir ifadedir `Double` .
 Benzer şekilde, `Sin` imzaya sahip bir `(Double -> Double)` `Sin(0.1)` işlevsiyse, türünde bir ifadedir `Double` .
-Son olarak, `Builder` imza içeren bir işlevdir `(Int -> (Int -> Int))` ,, `Builder(3)` öğesinden Int 'e kadar bir işlevdir.
+Son olarak, `Builder` imzaya sahip bir işlevle `(Int -> (Int -> Int))` , ' `Builder(3)` den ' a bir işlevdir `Int` `Int` .
 
 Çağrılabilir değerli bir ifadenin sonucunu çağırmak, çağrılabilir ifade etrafında fazladan bir çift parantez gerektirir.
 Bu nedenle, önceki paragraftan çağırma sonucunu çağırmak için `Builder` doğru sözdizimi şöyledir:
@@ -448,12 +445,12 @@ Bu nedenle, önceki paragraftan çağırma sonucunu çağırmak için `Builder` 
 (Builder(3))(2)
 ```
 
-Bir [tür parametreli](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) çağrılabilir çağırılırken, gerçek tür parametreleri açılı ayraç içinde `<` ve `>` çağrılabilir ifadeden sonra belirtilebilir.
-Q # derleyicisi gerçek türleri çıkardığı için bu genellikle gereksizdir.
+Bir [tür parametreli](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) çağrılabilir çağırılırken, çağrılabilir ifadeden sonra, açılı ayraç içinde gerçek tür parametrelerini belirtebilirsiniz `< >` .
+Bu eylem, Q # derleyicisi gerçek türleri olduğu için genellikle gereksizdir.
 Ancak, tür parametreli bir bağımsız değişken belirtilmemişse, [kısmi uygulama](xref:microsoft.quantum.guide.operationsfunctions#partial-application) *için gereklidir.*
-Ayrıca bazen farklı functor ile işlemleri bir çağrılabilir olarak geçirirken yararlı olur.
+Aynı zamanda farklı bir functor ile işlemleri bir çağrılabilir hale geçirilerek de yararlıdır.
 
-Örneğin, imzası varsa `Func` ve imza `('T1, 'T2, 'T1) -> 'T2` içeriyorsa `Op1` `Op2` `(Qubit[] => Unit is Adj)` ve `Op3` `(Qubit[] => Unit)` `Func` `Op1` ilk bağımsız değişken olarak, `Op2` ikinci olarak ve üçüncü olarak çağırmak için imza varsa `Op3` :
+Örneğin, imzası varsa `Func` `('T1, 'T2, 'T1) -> 'T2` `Op1` ve `Op2` imza içeriyorsa `(Qubit[] => Unit is Adj)` ve `Op3` `(Qubit[] => Unit)` `Func` `Op1` ilk bağımsız değişken olarak, `Op2` ikinci olarak ve `Op3` Üçüncü olarak çağırmak için imza varsa:
 
 ```qsharp
 let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3);
@@ -464,17 +461,17 @@ Tür belirtimi gereklidir çünkü `Op3` ve `Op1` farklı türlere sahip olur, b
 
 ## <a name="operator-precedence"></a>İşleç Önceliği
 
-Tüm ikili işleçler, hariç olmak üzere, doğru ilişkilendirilebilir `^` .
+* Tüm ikili işleçler, hariç olmak üzere, doğru ilişkilendirilebilir `^` .
 
-Parantez ve `[` `]` dizi Dilimleme ve dizin oluşturma için herhangi bir işleçten önce bağlayın.
+* Parantez, `[ ]` dizi Dilimleme ve dizin oluşturma için herhangi bir işleçten önce bağlayın.
 
-`Adjoint`Ve `Controlled` diğer tüm işleçlerden önce, dizi dizinlemesi ve sonra bağlama.
+* `Adjoint`Ve `Controlled` diğer tüm işleçlerden önce, dizi dizinlemesi ve sonra bağlama.
 
-İşlem ve işlev çağırma parantezleri aynı zamanda herhangi bir işleçten önce, ancak dizi dizinlemesi ve komik bir şekilde bağlanır.
+* İşlem ve işlev çağırma parantezleri aynı zamanda herhangi bir işleçten önce, ancak dizi dizinlemesi ve komik bir şekilde bağlanır.
 
-En yüksekten en düşüğe göre öncelik sırasına göre işleçler:
+En yüksekten en düşüğe göre, öncelik sırasına göre Q # işleçleri:
 
-Operatör | Sayısına | Description | İşlenen türleri
+Operatör | Sayısına | Açıklama | İşlenen türleri
 ---------|----------|---------|---------------
  arkasında`!` | Birli | Unwrap | Kullanıcı tanımlı herhangi bir tür
  `-`, `~~~`, `not` | Birli | Sayısal negatif, bit düzeyinde tamamlama, mantıksal değilleme | `Int`, için `BigInt` veya için `Double` `-` `Int` veya `BigInt` `~~~` `Bool` için`not`
@@ -491,8 +488,8 @@ Operatör | Sayısına | Description | İşlenen türleri
  `or` | İkili | Mantıksal EĞER | `Bool`
  `..` | İkili/üçlü | Range işleci | `Int`
  `?` `|` | Üçlü | Koşullu | `Bool`Sol taraftaki
-`w/` `<-` | Üçlü | Kopyala ve Güncelleştir | bkz. [kopyalama ve güncelleştirme ifadeleri](#copy-and-update-expressions)
+`w/` `<-` | Üçlü | Kopyala ve Güncelleştir | Bkz. [kopyalama ve güncelleştirme ifadeleri](#copy-and-update-expressions)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Artık Q # ' da ifadelerle çalışdığınıza göre, işlem ve işlevlerin nasıl tanımlanacağını ve çağrılacağını öğrenmek için [q # Içindeki işlemlere ve işlevlere](xref:microsoft.quantum.guide.operationsfunctions) gidebilirsiniz.
+Artık Q # içinde ifadelerle çalışdığınıza göre, işlem ve işlevlerin nasıl tanımlanacağını ve çağrılacağını öğrenmek için [q # Içindeki işlemlere ve işlevlere](xref:microsoft.quantum.guide.operationsfunctions) geçiş yapabilirsiniz.

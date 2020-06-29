@@ -6,12 +6,12 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: b0c800c3946d2e4ba4457127fb9495dc9dcf2934
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: cbb1c274b64738cc4b47869563d7d02eb717afbc
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275551"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415283"
 ---
 # <a name="the-resources-estimator-target-machine"></a>Kaynaklar Estimator hedef makine
 
@@ -98,8 +98,8 @@ Aşağıda tarafından tahmin edilen ölçümlerin listesi verilmiştir `Resourc
 * __Measure__: yürütülen ölçüm sayısı.
 * __R__: T, Clienfford ve Pauli Gates hariç çalıştırılan tek qubit döndürmeler sayısı.
 * __T__: t kapısı, T_x = H. T. H ve T_y = HY. t. HY de dahil olmak üzere, t kapıları ve bunların Birleşik kapılarının sayısı.
-* __Derinlik__: Q # işlemi tarafından yürütülen hisse devresi derinliği. Varsayılan olarak, derinlemesine yalnızca T kapıları sayılır, Ayrıntılar için bkz. [derinlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) .
-* __Width__: Q # işleminin yürütülmesi sırasında ayrılan en fazla qubit sayısı.
+* __Derinlik__: Q # işlemi tarafından yürütülen hisse devresi derinliğine yönelik alt sınır. Varsayılan olarak, derinlemesine yalnızca T kapıları sayılır, Ayrıntılar için bkz. [derinlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) .
+* __Width__: Q # işleminin yürütülmesi sırasında ayrılan en fazla qubit sayısı için alt sınır. Aynı anda hem __derinlik__ hem de __Genişlik__ alt sınırlarına ulaşmak mümkün olmayabilir.
 * __Borrodilimlerin genişliği__: Q # işlemi içinde ödünç alınan en fazla qubits sayısı.
 
 

@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: e48f4157438fba063877b2b79fbc7629710fc9f3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 0fcdec1a304730b593224283421539ea3ca9c913
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275391"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415465"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -344,8 +344,6 @@ Uzantıyı daha önceden yüklediyseniz, Visual Studio Market’te [Visual Studi
 
 Bu sürüm, bazı kullanıcıların Visual Studio uzantısını başarıyla yüklemesine engel olan bir hatayı düzeltir.
 
-Quantum Development Kit’in 0.2 sürümünden yükseltme yapıyorsanız, [Q# dili değişiklikleri ve Q# programınızı geçirme](xref:microsoft.quantum.relnotes.migration-0-3) hakkında daha fazla bilgi edinin.
-
 ## <a name="version-031811203"></a>Sürüm 0.3.1811.203
 
 *Sürüm tarihi: 2 Kasım 2018*
@@ -356,8 +354,6 @@ Bu sürüm, aşağıdakiler de dahil olmak üzere birkaç hata düzeltmesini iç
 * .NET Core’un 2.1.403’ten önceki sürümleri kullanıldığında proje oluşturulurken karşılaşılan derleme uyarıları kaldırıldı.
 * Belgeler, özellikle de VS Code veya Visual Studio’da imleç öğenin üzerine getirildiğinde gösterilen araç ipuçları temizlendi.
 
-Quantum Development Kit’in 0.2 sürümünden yükseltme yapıyorsanız, [Q# dili değişiklikleri ve Q# programınızı geçirme](xref:microsoft.quantum.relnotes.migration-0-3) hakkında daha fazla bilgi edinin.
-
 ## <a name="version-0318102508"></a>Sürüm 0.3.1810.2508
 
 *Sürüm tarihi: 29 Ekim 2018*
@@ -367,8 +363,6 @@ Bu sürüm, yeni dil özellikleri içerir ve geliştirici deneyimini iyileştiri
 * Bu sürüm Q# için dil sunucusunu ve Visual Studio ve Visual Studio Code için istemci tümleştirmelerini içerir. Bu, hata ve uyarıların dalgalı alt çizgileri biçiminde yazmaya yönelik canlı geri bildirimin yanı sıra yeni IntelliSense özellikleriyle yazma olanağı tanır. 
 * Bu güncelleştirme, tanılama için kolay gezinti ve hassas aralıklar ve öğenin üzerine gelindiğinde gösterilen ek ayrıntılar ile tanılama iletilerini büyük ölçüde geliştirir.
 * Q# dili, geliştiricilerin ortak işlemleri yapma şeklini birleştirip dil özelliklerinin kuantum işlemlerini güçlü bir şekilde ifade edebilmesi için bunlara yönelik yeni geliştirmeler ile genişletildi.  Bu sürümle birlikte Q# dilinde birçok hataya neden olan değişiklik uygulandı.   
-
-[Q# dili değişiklikleri ve Q# programınızı geçirme](xref:microsoft.quantum.relnotes.migration-0-3) hakkında daha fazla bilgi edinin.
 
 Bu sürüm yeni bir kuantum kimyası kitaplığını da içerir:
 
