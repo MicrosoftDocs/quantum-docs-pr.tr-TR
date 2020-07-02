@@ -4,7 +4,7 @@
   href: explore-entanglement.md
 - name: Grover’ın arama algoritmasını uygulama
   href: search.md
-- name: Kubit düzeyi programlama
+- name: Qubit düzeyi programlama
   href: qubit-level.md
 - name: Kuantum Katalarıyla Q# öğrenme
   href: intro-to-katas.md
