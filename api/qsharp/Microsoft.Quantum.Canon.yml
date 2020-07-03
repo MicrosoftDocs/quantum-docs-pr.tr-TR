@@ -198,6 +198,10 @@ operations:
   summary: Bir qubits kaydının bir yerinde olan eşlik düzeyini hesaplar.
 - uid: microsoft.quantum.canon.applycnotchainwithtarget
   summary: Bir qubits dizisinin bir hedef qubit 'e eşlik durumunu hesaplar.
+- uid: microsoft.quantum.canon.applycontrolledonbitstring
+  summary: Hedef kayıt üzerinde, belirli bir bit maskesi tarafından belirtilen bir duruma göre denetlenen bir Unitary işlemi uygular.
+- uid: microsoft.quantum.canon.applycontrolledonint
+  summary: Denetim yazmacı durumu belirtilen pozitif tamsayıya karşılık geliyorsa, hedef kayıt üzerinde bir Unitary işlemi uygular.
 - uid: microsoft.quantum.canon.applydiagonalunitary
   summary: Bir qubits kaydının sayısal tabanlı durumlarına bir karmaşık aşamalar dizisi uygular.
 - uid: microsoft.quantum.canon.applyfermionicswap
@@ -565,6 +569,14 @@ operations:
 
 
     $R = \boldone-(1-e ^ {i \ Phi}) \ket{1\cnoktalar 1} \bra{1\cnoktalar 1} $.
+- uid: microsoft.quantum.canon.repeat
+  summary: Bir işlemi verilen sayıda yineler.
+- uid: microsoft.quantum.canon.repeata
+  summary: Bir işlemi verilen sayıda yineler.
+- uid: microsoft.quantum.canon.repeatc
+  summary: Bir işlemi verilen sayıda yineler.
+- uid: microsoft.quantum.canon.repeatca
+  summary: Bir işlemi verilen sayıda yineler.
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: Bir kayıttaki qubits 'in sırasını tersine getirmek için takas kapıları kullanır.
 newtypes:
@@ -573,9 +585,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nResultStack kullanım dışı bırakıldı."
 metadata:
-  ms.openlocfilehash: 97975236f3824d63c0cc75e5be847c5eef47485b
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: ab6e8a58dd163e4a9b2ea299e544a4e487d61e23
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326685"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884672"

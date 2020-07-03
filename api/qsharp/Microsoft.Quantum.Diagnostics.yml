@@ -39,6 +39,10 @@ operations:
   summary: Verilen qubits 'in hepsi $ \ket {0} $ durumunda olduğunu onaylayın.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
   summary: Verilen qubits 'in, {0} belirli bir toleranstan kadar $ \gre$ durumunda olduğu onay.
+- uid: microsoft.quantum.diagnostics.assertmeasurement
+  summary: Verilen Pauli tabanında verilen qubits ölçmeye yönelik onaylar, her zaman verilen sonuca sahip olur.
+- uid: microsoft.quantum.diagnostics.assertmeasurementprobability
+  summary: Verilen Pabdtabanında verilen qubit 'leri ölçmeye yönelik onaylar, belirli bir tolerans dahilinde verilen olasılığa sahip olur.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     İki işlem söz konusu olduğunda, tüm giriş durumları için aynı hareket ettikleri onaylar.
@@ -79,14 +83,14 @@ operations:
   summary: Qubit 'in `q` Pauli Z işlecinin, belirli bir toleransa kadar beklenen eigenstate olduğunu onaylar.
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
-  summary: Bir tür yüklenirken veya test amaçlı olarak çağrılabilir şekilde kullanılabilecek alternatif bir adın tanımlanabilmesi için derleyicinin tanınan özniteliği.
+  summary: Bir tür yüklenirken veya test amaçlı olarak çağrılabilir şekilde kullanılabilecek alternatif bir adın tanımlanabilmesi için, derleyici tarafından tanınan öznitelik.
 - uid: microsoft.quantum.diagnostics.test
-  summary: Bir birim testini işaretlemek için kullanılan derleyicinin tanınan özniteliği.
+  summary: Derleyici tarafından tanınan öznitelik bir birim testini işaretlemek için kullanılır.
 summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı, sağlama işlemleri ve talep işlevleri dahil olmak üzere tanılama amaçları için yararlı işlevler ve işlemler içerir."
 metadata:
-  ms.openlocfilehash: 2c619ac283653d87f2917d7c780ed9fe6ccfa965
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: c8e1cd7f3458e736a47749dd057174eb4961c31d
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326600"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884567"

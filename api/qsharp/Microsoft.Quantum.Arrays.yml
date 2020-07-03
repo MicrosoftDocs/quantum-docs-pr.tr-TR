@@ -1,7 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arrays
 name: Microsoft.Quantum.Arrays
-summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı veri dizilerini oluşturmak ve işlemek için işlevler içerir."
 functions:
 - uid: microsoft.quantum.arrays.all
   summary: Dizi öğeleri için tanımlanan bir dizi ve koşul verildiğinde, dizideki tüm öğelerin koşulu karşılayıp karşılamadığını denetler.
@@ -67,13 +66,16 @@ functions:
   summary: Üç dizi verildiğinde, her bir 3 tanımlama grubu her bir orijinal diziden bir öğe içerdiği için, yeni bir 3-tanımlama dizisi döndürür.
 - uid: microsoft.quantum.arrays.zip4
   summary: Dört dizi verildiğinde, her 4 tanımlama grubu her bir orijinal diziden bir öğe içerdiği için, yeni bir 4-tanımlama dizisi dizisi döndürür.
+summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı veri dizilerini oluşturmak ve işlemek için işlevler içerir."
 operations:
+- uid: microsoft.quantum.arrays.drawmany
+  summary: Bir işlemi belirli sayıda örnek için yineler ve çıktılarını bir dizide toplar.
 - uid: microsoft.quantum.arrays.foreach
   summary: Dizi öğeleri için tanımlanan bir dizi ve bir işlem verildiğinde, işlem altındaki orijinal dizinin görüntülerinden oluşan yeni bir dizi döndürür.
 metadata:
-  ms.openlocfilehash: 92eb956a1387a9765354f45e27eb084c6d73f51b
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 32aeecb419739a89792bdf1e9761e3821abcf380
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326719"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884689"

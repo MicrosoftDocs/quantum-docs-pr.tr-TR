@@ -1,0 +1,24 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.synthesis
+name: Microsoft.Quantum.Synthesis
+summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı, permütasyon ve Boole işlevlerine dayalı olarak hisse işleme işlemlerine yönelik işlevler ve işlemler içerir."
+operations:
+- uid: microsoft.quantum.synthesis.applypermutationusingdecomposition
+  summary: Bir hisse cıklarca, ayrıştırma tabanlı senklerde bir PERMÜTASYONA göre rekabet eden bir değer sağlar.
+- uid: microsoft.quantum.synthesis.applypermutationusingdecompositionwithvariableorder
+  summary: Bir hisse cıklarca, ayrıştırma tabanlı senklerde bir PERMÜTASYONA göre rekabet eden bir değer sağlar.
+- uid: microsoft.quantum.synthesis.applypermutationusingtransformation
+  summary: ', Dönüştürme tabanlı senklik kullanarak bir PERMÜTASYONA, bir hisse cıklarca rekabet eden bir permütasyon.'
+- uid: microsoft.quantum.synthesis.applytransposition
+  summary: ''
+- uid: microsoft.quantum.synthesis.applyxcontrolledontruthtable
+  summary: '@"microsoft.quantum.intrinsic.x" `target` `func` İçindeki klasik atama için Boolean işlevi true olarak değerlendirilirse, işlemini üzerine uygular `controlRegister` .'
+- uid: microsoft.quantum.synthesis.applyxcontrolledontruthtablewithcleantarget
+  summary: '@"microsoft.quantum.intrinsic.x" `target` `func` İçindeki klasik atama için Boolean işlevi true olarak değerlendirilirse, işlemini üzerine uygular `controlRegister` .'
+metadata:
+  ms.openlocfilehash: d12a16656826134cfe8c9fb44a1c577c267a6603
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85887317"

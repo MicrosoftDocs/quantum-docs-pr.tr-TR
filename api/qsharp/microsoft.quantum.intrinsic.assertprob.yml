@@ -3,42 +3,26 @@ uid: microsoft.quantum.intrinsic.assertprob
 name: AssertProb
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: Verilen Pabdtabanında verilen qubit 'leri ölçmeye yönelik onaylar, belirli bir tolerans dahilinde verilen olasılığa sahip olur.
-remarks: Bu işlemin adjoint ve kontrollü sürümlerinin koşulu denetyacağını unutmayın.
-examples: >-
-  ```qsharp
-
-  using (register = Qubit()) {
-      H(register);
-      AssertProb([PauliZ], [register], One, 0.5,
-          "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
-  }
-
-  ```
+summary: AssertProb kullanım dışı bırakıldı. Lütfen @"microsoft.quantum.diagnostics.assertmeasurementprobability" bunun yerine kullanın.
 syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
   types:
   - name: bases
-    summary: Bir multi-qubit Pauli işleci olarak ifade edilen olasılığını onaylama için bir ölçüm etkisi.
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: qubits
-    summary: Onaylama yapılacak bir kayıt.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: result
-    summary: Beklenen sonucu `Measure(bases, qubits)`.
     isPrimitive: true
     uid: Result
   - name: prob
-    summary: Verilen sonucun beklenildiği olasılık.
     isPrimitive: true
     uid: Double
   - name: msg
-    summary: Onaylama başarısız olursa bildirilecek bir ileti.
     isPrimitive: true
     uid: String
   - name: tol
@@ -52,12 +36,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-seeAlso:
-- assert
 metadata:
-  ms.openlocfilehash: 6317476e89feb3a5fecac15afd52541859fc2f21
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: db29d52b79b1e7b5a980f3e3196c5b2547132103
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674155"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885722"

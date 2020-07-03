@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertmeasurement
+name: AssertMeasurement
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: Verilen Pauli tabanında verilen qubits ölçmeye yönelik onaylar, her zaman verilen sonuca sahip olur.
+remarks: Bu işlemin adjoint ve kontrollü sürümlerinin koşulu denetyacağını unutmayın.
+syntax: 'operation AssertMeasurement (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[], result : Result, msg : String)'
+  types:
+  - name: bases
+    summary: Bir multi-qubit Pauli işleci olarak ifade edilen olasılığını onaylama için bir ölçüm etkisi.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: qubits
+    summary: Onaylama yapılacak bir kayıt.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: result
+    summary: Beklenen sonucu `Measure(bases, qubits)` .
+    isPrimitive: true
+    uid: Result
+  - name: msg
+    summary: Onaylama başarısız olursa bildirilecek bir ileti.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.diagnostics.assertmeasurementprobability
+metadata:
+  ms.openlocfilehash: e8c74cdeb9ba196b337b56ec377a1158cd331ac7
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85887329"
