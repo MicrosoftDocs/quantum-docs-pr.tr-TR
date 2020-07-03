@@ -6,31 +6,37 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
-ms.openlocfilehash: 0deb0729a88c49798f32a22a943b935d383c570b
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 1655d18ab9d8638ad356e6fb90994b5c1fd76a25
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327552"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885299"
 ---
-# <a name="working-with-qubits"></a><span data-ttu-id="758a9-103">Kubitlerle çalışma</span><span class="sxs-lookup"><span data-stu-id="758a9-103">Working with qubits</span></span>
+# <a name="working-with-qubits"></a><span data-ttu-id="f9646-103">Kubitlerle çalışma</span><span class="sxs-lookup"><span data-stu-id="f9646-103">Working with qubits</span></span>
 
-<span data-ttu-id="758a9-104">Artık, Q # dilinin çeşitli farklı parçalarını gördüğünüze göre, bunun kalın olmasını sağlamamıza ve qubits 'in kendisini nasıl kullanacağınızı görelim.</span><span class="sxs-lookup"><span data-stu-id="758a9-104">Having now seen a variety of different parts of the Q# language, let us get into the thick of it and see how to use qubits themselves.</span></span>
+<span data-ttu-id="f9646-104">Qubits, hisse bilgi işlem ortamında temel bilgilerin temel nesnesidir.</span><span class="sxs-lookup"><span data-stu-id="f9646-104">Qubits are the fundamental object of information in quantum computing.</span></span> <span data-ttu-id="f9646-105">Qubits 'e genel bir bakış için bkz. [hisse parlaklığını anlama](xref:microsoft.quantum.overview.understanding)ve matematiksel gösterimlerine daha ayrıntılı bilgi için bkz. [qubit](xref:microsoft.quantum.concepts.qubit).</span><span class="sxs-lookup"><span data-stu-id="f9646-105">For a general introduction to qubits, see [Understanding quantum computing](xref:microsoft.quantum.overview.understanding), and to dive deeper into their mathematical representation, see [The Qubit](xref:microsoft.quantum.concepts.qubit).</span></span> 
 
-<span data-ttu-id="758a9-105">Bir işlevin gövdesinde bu deyimlerden hiçbirine izin verilmediğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="758a9-105">Note that none of these statements are allowed within the body of a function.</span></span>
-<span data-ttu-id="758a9-106">Bunlar yalnızca işlemler içinde geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="758a9-106">They are only valid within operations.</span></span>
+<span data-ttu-id="f9646-106">Bu makalede, bir Q # programında qubits 'in nasıl kullanılacağı ve bunlarla nasıl çalıştığı açıklanır.</span><span class="sxs-lookup"><span data-stu-id="f9646-106">This article explores how to use and work with qubits in a Q# program.</span></span> 
 
-## <a name="allocating-qubits"></a><span data-ttu-id="758a9-107">Qubit ayırma</span><span class="sxs-lookup"><span data-stu-id="758a9-107">Allocating Qubits</span></span>
+> [!IMPORTANT]
+><span data-ttu-id="f9646-107">Bu makalede ele alınan deyimlerden hiçbiri bir işlevin gövdesinde geçerli değildir.</span><span class="sxs-lookup"><span data-stu-id="f9646-107">None of the statements discussed in this article are valid within the body of a function.</span></span> <span data-ttu-id="f9646-108">Bunlar yalnızca işlemler içinde geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="f9646-108">They are only valid within operations.</span></span>
 
-### <a name="clean-qubits"></a><span data-ttu-id="758a9-108">Qubit Temizleme</span><span class="sxs-lookup"><span data-stu-id="758a9-108">Clean qubits</span></span>
+## <a name="allocating-qubits"></a><span data-ttu-id="f9646-109">Qubit ayırma</span><span class="sxs-lookup"><span data-stu-id="f9646-109">Allocating Qubits</span></span>
 
-<span data-ttu-id="758a9-109">`using`İfade, bir ifade bloğu sırasında kullanılmak üzere yeni qubit *ayırmak* için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="758a9-109">The `using` statement is used to *allocate* new qubits for use during a statement block.</span></span>
+<span data-ttu-id="f9646-110">Fiziksel qugeler, bir hisse bilgisayarında değerli bir kaynak olduğundan, derleyicinin işinin bir parçası mümkün olduğunca verimli şekilde kullanıldıklarından emin olmak.</span><span class="sxs-lookup"><span data-stu-id="f9646-110">Because physical qubits are a precious resource in a quantum computer, part of the compiler's job is to make sure they are being used as efficiently as possible.</span></span>
+<span data-ttu-id="f9646-111">Bu nedenle, s # ' ı belirli bir ekstre bloğunda kullanım için qubit *ayırmak* üzere söylemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="f9646-111">As such, you need to tell Q# to *allocate* qubits for use within a particular statement block.</span></span>
+<span data-ttu-id="f9646-112">Qubits 'i tek bir qubit ya da *kayıt*olarak bilinen bir qubits dizisi olarak ayırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f9646-112">You can allocate qubits as a single qubit, or as an array of qubits, known as a *register*.</span></span> 
 
-<span data-ttu-id="758a9-110">İfade, anahtar sözcüğünden `using` , ardından bir açık parantez `(` , bir bağlama, bir kapatma parantezi `)` ve qubits 'in kullanılabileceği deyimin bloğunu içerir.</span><span class="sxs-lookup"><span data-stu-id="758a9-110">The statement consists of the keyword `using`, followed by an open parenthesis `(`, a binding, a close parenthesis `)`, and the statement block within which the qubits will be available.</span></span>
-<span data-ttu-id="758a9-111">Bağlama deyimlerle aynı düzeni izler `let` : tek bir sembol veya sembol kümesi, ardından eşittir işareti `=` ve tek bir değer ya da eşleşen *Başlatıcı*grubu.</span><span class="sxs-lookup"><span data-stu-id="758a9-111">The binding follows the same pattern as `let` statements: either a single symbol or a tuple of symbols, followed by an equals sign `=`, and either a single value or a matching tuple of *initializers*.</span></span>
+### <a name="clean-qubits"></a><span data-ttu-id="f9646-113">Qubit Temizleme</span><span class="sxs-lookup"><span data-stu-id="f9646-113">Clean qubits</span></span>
 
-<span data-ttu-id="758a9-112">Başlatıcılar tek bir qubit için, `Qubit()` veya bir qubit dizisi olarak belirtilir, `Qubit[n]` burada `n` bir `Int` ifadedir.</span><span class="sxs-lookup"><span data-stu-id="758a9-112">Initializers are available either for a single qubit, indicated as `Qubit()`, or an array of qubits, `Qubit[n]`, where `n` is an `Int` expression.</span></span>
-<span data-ttu-id="758a9-113">Örneğin,</span><span class="sxs-lookup"><span data-stu-id="758a9-113">For example,</span></span>
+<span data-ttu-id="f9646-114">Bildirim `using` bloğu sırasında kullanılmak üzere yeni qubit ayırmak için ifadesini kullanın.</span><span class="sxs-lookup"><span data-stu-id="f9646-114">Use the `using` statement to allocate new qubits for use during a statement block.</span></span>
+
+<span data-ttu-id="f9646-115">İfade, anahtar sözcüğünden `using` , ardından parantez içine alınmış bir bağlama `( )` ve qubits 'in kullanılabildiği ifade bloğunun bir öğesinden oluşur.</span><span class="sxs-lookup"><span data-stu-id="f9646-115">The statement consists of the keyword `using`, followed by a binding enclosed in parentheses `( )` and the statement block within which the qubits are available.</span></span>
+<span data-ttu-id="f9646-116">Bağlama deyimlerle aynı düzeni izler `let` : tek bir sembol veya sembol kümesi, ardından eşittir işareti `=` ve tek bir değer ya da eşleşen *Başlatıcı*grubu.</span><span class="sxs-lookup"><span data-stu-id="f9646-116">The binding follows the same pattern as `let` statements: either a single symbol or a tuple of symbols, followed by an equals sign `=`, and either a single value or a matching tuple of *initializers*.</span></span>
+
+<span data-ttu-id="f9646-117">Başlatıcılar tek bir qubit için, `Qubit()` veya bir qubit dizisi olarak belirtilir, `Qubit[n]` burada `n` bir `Int` ifadedir.</span><span class="sxs-lookup"><span data-stu-id="f9646-117">Initializers are available either for a single qubit, indicated as `Qubit()`, or an array of qubits, `Qubit[n]`, where `n` is an `Int` expression.</span></span>
+<span data-ttu-id="f9646-118">Örneğin,</span><span class="sxs-lookup"><span data-stu-id="f9646-118">For example,</span></span>
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -41,25 +47,25 @@ using ((auxiliary, register) = (Qubit(), Qubit[5])) {
 }
 ```
 
-<span data-ttu-id="758a9-114">Bu şekilde ayrılan her türlü qubit, {0} Yukarıdaki örnekte $ \tus$ State; üzerinde başlatılır. bu nedenle, bu `register` durumda $ \ket {00000} = \ket {0} \otimes {0} \gre\otimes \cnoktalar \otimes \ment {0} $ şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="758a9-114">Any qubits allocated in this way start off in the $\ket{0}$ state; in the example above, `register` is thus in the state $\ket{00000} = \ket{0} \otimes \ket{0} \otimes \cdots \otimes \ket{0}$.</span></span>
-<span data-ttu-id="758a9-115">`using`Bloğun sonunda, bu blok tarafından ayrılan tüm qubitleri hemen serbest bırakılır ve daha fazla kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="758a9-115">At the end of the `using` block, any qubits allocated by that block are immediately deallocated and cannot be used further.</span></span>
+<span data-ttu-id="f9646-119">Bu şekilde ayrılan her türlü qubit $ \ket {0} $ durumunda başlatılır.</span><span class="sxs-lookup"><span data-stu-id="f9646-119">Any qubits allocated in this way start off in the $\ket{0}$ state.</span></span> <span data-ttu-id="f9646-120">Bu nedenle, önceki örnekte, `auxiliary` $ \ket $ durumunda tek bir qubit bulunur {0} ve `register` beş-qubit State $ {00000} \tus= \ket {0} \otimes \ayraç {0} \otimes \cnoktalar \otimes \ket $ ' de bulunur {0} .</span><span class="sxs-lookup"><span data-stu-id="f9646-120">Thus in the previous example, `auxiliary` is a single qubit in the state $\ket{0}$, and `register` is in the five-qubit state $\ket{00000} = \ket{0} \otimes \ket{0} \otimes \cdots \otimes \ket{0}$.</span></span>
+<span data-ttu-id="f9646-121">`using`Bloğun sonunda, bu blok tarafından ayrılan tüm qubitleri hemen serbest bırakılır ve daha fazla kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="f9646-121">At the end of the `using` block, any qubits allocated by that block are immediately deallocated and cannot be used further.</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="758a9-116">Hedef makineler, bu qubits 'in {0} yeniden kullanılabilmesi ve `using` ayırma için diğer bloklara sunulabilmeleri için $ \ket $ durumunda olmasını bekler.</span><span class="sxs-lookup"><span data-stu-id="758a9-116">Target machines expect that qubits are in the $\ket{0}$ state immediately before deallocation, so that they can be reused and offered to other `using` blocks for allocation.</span></span>
-> <span data-ttu-id="758a9-117">Mümkün olduğunda, tüm ayrılmış qubitleri $ \ket $ ' e döndürmek için Unitary işlemlerini kullanın {0} .</span><span class="sxs-lookup"><span data-stu-id="758a9-117">Whenever possible, use unitary operations to return any allocated qubits to $\ket{0}$.</span></span>
-> <span data-ttu-id="758a9-118">Gerekirse, @"microsoft.quantum.intrinsic.reset" işlem bunun yerine bir qubit ölçmek için ve bu ölçüm sonucunu kullanarak ölçülen qubit $ \ket $ ' e döndürüldüğünden emin olmak için kullanılabilir {0} .</span><span class="sxs-lookup"><span data-stu-id="758a9-118">If need be, the @"microsoft.quantum.intrinsic.reset" operation can be used to measure a qubit instead, and to use that measurement result to ensure that the measured qubit is returned to $\ket{0}$.</span></span> <span data-ttu-id="758a9-119">Bu tür bir ölçü, kalan qubits ile herhangi bir entanglement 'i yok eder ve bu sayede hesaplamayı etkileyebilir.</span><span class="sxs-lookup"><span data-stu-id="758a9-119">Such a measurement will destroy any entanglement with the remaining qubits and can thus impact the computation.</span></span>
+> <span data-ttu-id="f9646-122">Hedef makineler serbest bırakılmış qugeler kullanabilir ve bunları `using` ayırma için diğer bloklara sunabilir.</span><span class="sxs-lookup"><span data-stu-id="f9646-122">Target machines can reuse deallocated qubits and offer them to other `using` blocks for allocation.</span></span> <span data-ttu-id="f9646-123">Bu nedenle, hedef makine, bu qubits 'in {0} ayırmayı kaldırma işleminden hemen önce $ \ket $ durumunda olmasını bekler.</span><span class="sxs-lookup"><span data-stu-id="f9646-123">As such, the target machine expects that qubits are in the $\ket{0}$ state immediately before deallocation.</span></span>
+> <span data-ttu-id="f9646-124">Mümkün olduğunda, tüm ayrılmış qubitleri $ \ket $ ' e döndürmek için Unitary işlemlerini kullanın {0} .</span><span class="sxs-lookup"><span data-stu-id="f9646-124">Whenever possible, use unitary operations to return any allocated qubits to $\ket{0}$.</span></span>
+> <span data-ttu-id="f9646-125">Gerekiyorsa, @"microsoft.quantum.intrinsic.reset" {0} bunu ölçerek ve sonuca göre koşullu bir işlem gerçekleştirerek, qubit ile $ \ket $ ' i döndüren işlemi kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f9646-125">If need be, you can use the @"microsoft.quantum.intrinsic.reset" operation, which returns the qubit to $\ket{0}$ by measuring it and conditionally performing an operation based on the result.</span></span> <span data-ttu-id="f9646-126">Bu tür bir ölçü, kalan qubits ile herhangi bir entanglement 'i yok eder ve bu sayede hesaplamayı etkileyebilir.</span><span class="sxs-lookup"><span data-stu-id="f9646-126">Such a measurement destroys any entanglement with the remaining qubits and can thus impact the computation.</span></span>
 
 
-### <a name="borrowed-qubits"></a><span data-ttu-id="758a9-120">Ödünç alınan qubits</span><span class="sxs-lookup"><span data-stu-id="758a9-120">Borrowed Qubits</span></span>
+### <a name="borrowed-qubits"></a><span data-ttu-id="f9646-127">Ödünç alınan qubits</span><span class="sxs-lookup"><span data-stu-id="f9646-127">Borrowed Qubits</span></span>
 
-<span data-ttu-id="758a9-121">`borrowing`Bu ifade, qubits 'in belirli bir durumda olması gerekmeyen geçici kullanım için kullanılabilir olması için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="758a9-121">The `borrowing` statement is used to make qubits available for temporary use, which do not need be in a specific state.</span></span>
+<span data-ttu-id="f9646-128">`borrowing`Belirli bir durumda olması gerekmeyen, geçici kullanım için qubit ayırmak üzere ifadesini kullanın.</span><span class="sxs-lookup"><span data-stu-id="f9646-128">Use the `borrowing` statement to allocate qubits for temporary use, which do not need to be in a specific state.</span></span>
 
-<span data-ttu-id="758a9-122">Ödünç alma mekanizması, bir hesaplama sırasında karalama alanı olarak kullanılabilecek qubits ayrılmasına izin verir.</span><span class="sxs-lookup"><span data-stu-id="758a9-122">The borrowing mechanism allows the allocation of qubits that can be used as scratch space during a computation.</span></span>
-<span data-ttu-id="758a9-123">Bu qubits genellikle temiz bir durumda değildir, yani $ \ket $ gibi bilinen bir durumda başlatılmazlar {0} .</span><span class="sxs-lookup"><span data-stu-id="758a9-123">These qubits are generally not in a clean state, i.e., they are not necessarily initialized in a known state such as $\ket{0}$.</span></span>
-<span data-ttu-id="758a9-124">Bunlar genellikle "kirli" qubit olarak adlandırılır, çünkü durumları bilinmez ve hatta hisse bilgisayar belleğinin diğer bölümleriyle eşit bir şekilde de olabilir.</span><span class="sxs-lookup"><span data-stu-id="758a9-124">These are often referred to as "dirty" qubits because their state is unknown and can even be entangled with other parts of the quantum computer's memory.</span></span>
+<span data-ttu-id="f9646-129">Hesaplama sırasında ödünç alınan qubits 'i boş alan olarak kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f9646-129">You can use borrowed qubits as scratch space during a computation.</span></span>
+<span data-ttu-id="f9646-130">Bu qubits genellikle temiz bir durumda değildir, diğer bir deyişle, $ \ket $ gibi bilinen bir durumda başlatılmamalıdır {0} .</span><span class="sxs-lookup"><span data-stu-id="f9646-130">These qubits are generally not in a clean state, that is, they are not necessarily initialized in a known state such as $\ket{0}$.</span></span>
+<span data-ttu-id="f9646-131">Bunlar genellikle "kirli" qubit olarak adlandırılır, çünkü durumları bilinmez ve hatta hisse bilgisayar belleğinin diğer bölümleriyle eşit bir şekilde de olabilir.</span><span class="sxs-lookup"><span data-stu-id="f9646-131">These are often referred to as "dirty" qubits because their state is unknown and can even be entangled with other parts of the quantum computer's memory.</span></span>
 
-<span data-ttu-id="758a9-125">Bağlama, bir deyimdeki ile aynı model ve kurallara uyar `using` .</span><span class="sxs-lookup"><span data-stu-id="758a9-125">The binding follows the same pattern and rules as the one in a `using` statement.</span></span>
-<span data-ttu-id="758a9-126">Örneğin,</span><span class="sxs-lookup"><span data-stu-id="758a9-126">For example,</span></span>
+<span data-ttu-id="f9646-132">Bağlama, ifadesiyle aynı model ve kurallara uyar `using` .</span><span class="sxs-lookup"><span data-stu-id="f9646-132">The binding follows the same pattern and rules as the `using` statement.</span></span>
+<span data-ttu-id="f9646-133">Örneğin,</span><span class="sxs-lookup"><span data-stu-id="f9646-133">For example,</span></span>
 ```qsharp
 borrowing (qubit = Qubit()) {
     // ...
@@ -68,27 +74,28 @@ borrowing ((auxiliary, register) = (Qubit(), Qubit[5])) {
     // ...
 }
 ```
-<span data-ttu-id="758a9-127">Ödünç alınan qubits, bilinmeyen bir durumda ve bildiri bloğunun sonundaki kapsam dışına çıkar.</span><span class="sxs-lookup"><span data-stu-id="758a9-127">The borrowed qubits are in an unknown state and go out of scope at the end of the statement block.</span></span>
-<span data-ttu-id="758a9-128">Ödünç alma, qubits 'i ödünç aldıkları aynı durumda bırakır, yani deyimin başındaki ve sonundaki durumları aynı olmalıdır. bu durum, ifade bloğunun başındaki ve sonundaki durumunun aynı olması beklenir.</span><span class="sxs-lookup"><span data-stu-id="758a9-128">The borrower commits to leaving the qubits in the same state they were in when they were borrowed,  i.e. their state at the beginning and at the end of the statement block is expected to be the same.</span></span>
-<span data-ttu-id="758a9-129">Özellikle bu durum klasik bir durum değildir; çoğu durumda, ödünç alınan kapsamlar ölçüm içermemelidir.</span><span class="sxs-lookup"><span data-stu-id="758a9-129">This state in particular is not necessarily a classical state, such that in most cases, borrowing scopes should not contain measurements.</span></span> 
+<span data-ttu-id="f9646-134">Ödünç alınan qubits, bilinmeyen bir durumda ve bildiri bloğunun sonundaki kapsam dışına çıkar.</span><span class="sxs-lookup"><span data-stu-id="f9646-134">The borrowed qubits are in an unknown state and go out of scope at the end of the statement block.</span></span>
+<span data-ttu-id="f9646-135">Ödünç alma, qubits 'i ödünç aldıkları durum ile aynı durumda bırakarak, diğer bir deyişle, ekstre bloğunun başındaki ve sonundaki durum aynı olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="f9646-135">The borrower commits to leaving the qubits in the same state they were in when they borrowed them; that is, their state at the beginning and the end of the statement block should be the same.</span></span>
+<span data-ttu-id="f9646-136">Bu durum klasik bir durum olmadığı için çoğu durumda, ödünç alınan kapsamlar ölçüm içermemelidir.</span><span class="sxs-lookup"><span data-stu-id="f9646-136">Because this state is not necessarily a classical state, in most cases borrowing scopes should not contain measurements.</span></span> 
 
-<span data-ttu-id="758a9-130">Qubits 'i ödünç alırken, sistem önce kullanımda olan ancak deyimin gövdesi sırasında erişilemeyen qubits 'lerden gelen isteği doldurmaya çalışacaktır `borrowing` .</span><span class="sxs-lookup"><span data-stu-id="758a9-130">When borrowing qubits, the system will first try to fill the request from qubits that are in use but that are not accessed during the body of the `borrowing` statement.</span></span>
-<span data-ttu-id="758a9-131">Bu tür qubit yoksa, isteği tamamlayacak yeni qubit ayırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="758a9-131">If there aren't enough such qubits, then it will allocate new qubits to complete the request.</span></span>
+<span data-ttu-id="f9646-137">Qubits 'i ödünç alırken, sistem ilk olarak isteği kullanımda olan ancak deyimin gövdesinde erişilmeyen qubits 'lerden doldurmaya çalışır `borrowing` .</span><span class="sxs-lookup"><span data-stu-id="f9646-137">When borrowing qubits, the system first tries to fill the request from qubits that are in use but not accessed during the body of the `borrowing` statement.</span></span>
+<span data-ttu-id="f9646-138">Bu tür qubit yoksa, isteği tamamlaması için yeni qubit ayırır.</span><span class="sxs-lookup"><span data-stu-id="f9646-138">If there aren't enough such qubits, then it allocates new qubits to complete the request.</span></span>
 
+<span data-ttu-id="f9646-139">Kirli qubits 'in bilinen kullanım durumları arasında, yalnızca çok az sayıda qubit ve incrementers uygulaması gerektiren çok kontrollü CNOT kapıları olan uygulamalardır.</span><span class="sxs-lookup"><span data-stu-id="f9646-139">Among the known use cases of dirty qubits are implementations of multi-controlled CNOT gates that require only very few qubits and implementation of incrementers.</span></span>
+<span data-ttu-id="f9646-140">Q # içinde kullanımları örneği için, bkz. Bu makaledeki [qubits örnekleri örneği](#borrowing-qubits-example) veya düzenleme kağıt, [*Toffoli tabanlı modüler çarpma*](https://arxiv.org/abs/1611.07995) (haner, Roetteler ve svore 2017) ile birlikte, ödünç alınan qubits kullanan bir algoritma için.</span><span class="sxs-lookup"><span data-stu-id="f9646-140">For an example of their use in Q#, see [Borrowing Qubits Example](#borrowing-qubits-example) in this article, or the paper [*Factoring using 2n+2 qubits with Toffoli based modular multiplication*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler, and Svore 2017) for an algorithm which utilizes borrowed qubits.</span></span>
 
-<span data-ttu-id="758a9-132">Kirli qubits 'in bilinen kullanım durumları arasında, yalnızca çok az sayıda qubit ve incrementers uygulaması gerektiren çok kontrollü CNOT kapıları olan uygulamalardır.</span><span class="sxs-lookup"><span data-stu-id="758a9-132">Among the known use cases of dirty qubits are implementations of multi-controlled CNOT gates that require only very few qubits and implementation of incrementers.</span></span>
-<span data-ttu-id="758a9-133">[Örnek olarak](#borrowing-qubits-example) , soru-cevap veren bir algoritma için soru-cevap, düzenleme ve Toffoli tabanlı modüler çarpma (haner, Roetteler ve svore 2017) [*ile 2n + 2 qubit kullanma*](https://arxiv.org/abs/1611.07995) hakkında</span><span class="sxs-lookup"><span data-stu-id="758a9-133">See the [Borrowing Qubits Example](#borrowing-qubits-example) below to see an example of their use in Q#, or the paper [*Factoring using 2n+2 qubits with Toffoli based modular multiplication*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler, and Svore 2017) for an algorithm which utilizes borrowed qubits.</span></span>
+## <a name="intrinsic-operations"></a><span data-ttu-id="f9646-141">İç Işlemler</span><span class="sxs-lookup"><span data-stu-id="f9646-141">Intrinsic Operations</span></span>
 
+<span data-ttu-id="f9646-142">Ayrıldıktan sonra işlevlere ve işlemlere bir qubit geçirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f9646-142">Once allocated, you can pass a qubit to functions and operations.</span></span>
+<span data-ttu-id="f9646-143">Bazı bir deyişle, bu, bir Q # programının bir qubit ile yapamalarıdır, ancak gerçekleştirilebilecek eylemler tüm işlemler olarak tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="f9646-143">In some sense, this is all that a Q# program can do with a qubit, as the actions that can be taken are all defined as operations.</span></span>
 
-## <a name="intrinsic-operations"></a><span data-ttu-id="758a9-134">İç Işlemler</span><span class="sxs-lookup"><span data-stu-id="758a9-134">Intrinsic Operations</span></span>
+<span data-ttu-id="f9646-144">Bu makalede, qubits ile etkileşim kurmak için kullanabileceğiniz bazı yararlı Q # işlemleri açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="f9646-144">This article discusses a few useful Q# operations that you can use to interact with qubits.</span></span>
+<span data-ttu-id="f9646-145">Bunlar ve diğerleri hakkında daha fazla ayrıntı için bkz. [Iç işlemler ve işlevler](xref:microsoft.quantum.libraries.standard.prelude).</span><span class="sxs-lookup"><span data-stu-id="f9646-145">For more detail about these and others, see [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude).</span></span> 
 
-<span data-ttu-id="758a9-135">Ayrıldıktan sonra, bir qubit daha sonra işlevlere ve işlemlere geçirilebilirler.</span><span class="sxs-lookup"><span data-stu-id="758a9-135">Once allocated, a qubit can then be passed to functions and operations.</span></span>
-<span data-ttu-id="758a9-136">Bazı bir deyişle, bu, bir Q # programının bir qubit ile yapamalarıdır, ancak gerçekleştirilebilecek eylemler tüm işlemler olarak tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="758a9-136">In some sense, this is all that a Q# program can do with a qubit, as the actions that can be taken are all defined as operations.</span></span>
-<span data-ttu-id="758a9-137">Bu işlemleri, [Iç işlemler ve işlevlerde](xref:microsoft.quantum.libraries.standard.prelude)daha ayrıntılı bir şekilde görebiliyoruz, ancak şimdilik, qubits ile etkileşim kurmak için kullanılabilecek birkaç faydalı işlemden bahsedin.</span><span class="sxs-lookup"><span data-stu-id="758a9-137">We will see these operations in more detail in [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude), but for now, we mention a few useful operations that can be used to interact with qubits.</span></span>
+<span data-ttu-id="f9646-146">İlk olarak, tek qubit Pauli Operators $X $, $Y $ ve $Z $, [`X`](xref:microsoft.quantum.intrinsic.x) [`Y`](xref:microsoft.quantum.intrinsic.y) her birinin türüne sahip olan iç işlemler, ve, ve [`Z`](xref:microsoft.quantum.intrinsic.z) her biri için Q # içinde temsil edilir `(Qubit => Unit is Adj + Ctl)` .</span><span class="sxs-lookup"><span data-stu-id="f9646-146">First, the single-qubit Pauli operators $X$, $Y$, and $Z$ are represented in Q# by the intrinsic operations [`X`](xref:microsoft.quantum.intrinsic.x), [`Y`](xref:microsoft.quantum.intrinsic.y), and [`Z`](xref:microsoft.quantum.intrinsic.z), each of which has type `(Qubit => Unit is Adj + Ctl)`.</span></span>
 
-<span data-ttu-id="758a9-138">İlk olarak, tek qubit Pauli Operators $X $, $Y $ ve $Z $, `X` `Y` her birinin türüne sahip olan iç işlemler, ve, ve `Z` her biri için Q # içinde temsil edilir `(Qubit => Unit is Adj + Ctl)` .</span><span class="sxs-lookup"><span data-stu-id="758a9-138">First, the single-qubit Pauli operators $X$, $Y$, and $Z$ are represented in Q# by the intrinsic operations `X`, `Y`, and `Z`, each of which has type `(Qubit => Unit is Adj + Ctl)`.</span></span>
-<span data-ttu-id="758a9-139">[Iç işlemler ve işlevler](xref:microsoft.quantum.libraries.standard.prelude)bölümünde açıklandığı gibi, $X $ ve bu nedenle `X` bir bit çevirme işlemi olarak veya ağ geçidi değil, bu şekilde düşünebiliriz.</span><span class="sxs-lookup"><span data-stu-id="758a9-139">As described in [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude), we can think of $X$ and hence of `X` as a bit-flip operation or NOT gate.</span></span>
-<span data-ttu-id="758a9-140">`X`İşlem, bazı klasik bit dizeler için $ \ket{s_0 s_1 \noktalara S_N} $ biçimindeki durumları hazırlamanızı sağlar $s $:</span><span class="sxs-lookup"><span data-stu-id="758a9-140">The `X` operation lets us prepare states of the form $\ket{s_0 s_1 \dots s_n}$ for some classical bit string $s$:</span></span>
+<span data-ttu-id="f9646-147">[Iç işlemler ve işlevler](xref:microsoft.quantum.libraries.standard.prelude)bölümünde açıklandığı gibi, $X $ ve bu nedenle, `X` bir bit çevirme işlemi veya ağ geçidi değil olarak düşünün.</span><span class="sxs-lookup"><span data-stu-id="f9646-147">As described in [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude), think of $X$ and hence of `X` as a bit-flip operation or NOT gate.</span></span>
+<span data-ttu-id="f9646-148">`X`Bazı klasik bit dizeler için $ \ket{s_0 s_1 \noktalara S_N} $ biçimindeki durumları hazırlamak için bu işlemi kullanabilirsiniz $s $:</span><span class="sxs-lookup"><span data-stu-id="f9646-148">You can use the `X` operation to prepare states of the form $\ket{s_0 s_1 \dots s_n}$ for some classical bit string $s$:</span></span>
 
 ```qsharp
 operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : Unit
@@ -108,57 +115,68 @@ operation RunExample() : Unit {
             register
         );
         // At this point, register now has the state |11001001〉.
-        // Resetting the qubits will allow us to deallocate them properly.
+        // Remember to reset the qubits before deallocation:
         ResetAll(register);
     }
 }
 ```
 
 > [!TIP]
-> <span data-ttu-id="758a9-141">Daha sonra, bu işlemi yazmak için el ile akış denetimi gerektirmeyen daha kompakt yollar görüyoruz.</span><span class="sxs-lookup"><span data-stu-id="758a9-141">Later, we will see more compact ways of writing this operation that do not require manual flow control.</span></span>
+> <span data-ttu-id="f9646-149">Daha sonra, bu işlemi yazmak için el ile denetim akışı gerektirmeyen daha kompakt yollar görürsünüz.</span><span class="sxs-lookup"><span data-stu-id="f9646-149">Later, you will see more compact ways of writing this operation that do not require manual control flow.</span></span>
 
-<span data-ttu-id="758a9-142">Ayrıca, {0} {1} {2} {-} {0} {1} {2} iç Işlem tarafından Q # içinde temsil edilen Hadamard Transform $H $ ' i kullanarak $ \ket{+} = \left (\ket + \ket \ right)/\sqrt $ ve $ \ket = \left (\tus-\ket \ right)/\sqrt $ gibi durumları hazırlayabiliriz `H : (Qubit => Unit is Adj + Ctl)` :</span><span class="sxs-lookup"><span data-stu-id="758a9-142">We can also prepare states such as $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ and $\ket{-} = \left(\ket{0} - \ket{1}\right) / \sqrt{2}$ by using the Hadamard transform $H$, which is represented in Q# by the intrinsic operation `H : (Qubit => Unit is Adj + Ctl)`:</span></span>
+<span data-ttu-id="f9646-150">Ayrıca, $ \ket{+} = \left (\ket {0} + \ket {1} \ right)/\sqrt {2} $ ve $ \ket {-} = \left (\tus- {0} \ket {1} \ right)/\Sqrt $ gibi durumları, {2} Hadamard Transform $H $ kullanarak da hazırlayabilirsiniz. Iç işlem [`H`](xref:microsoft.quantum.intrinsic.h) (qubit => Unit, sıfatı + CTL) ') tarafından Q # olarak temsil edilir:</span><span class="sxs-lookup"><span data-stu-id="f9646-150">You can also prepare states such as $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ and $\ket{-} = \left(\ket{0} - \ket{1}\right) / \sqrt{2}$ by using the Hadamard transform $H$, which is represented in Q# by the intrinsic operation [`H`](xref:microsoft.quantum.intrinsic.h) (also of type (Qubit => Unit is Adj + Ctl)\`):</span></span>
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
     // First, get a computational basis state of the form
-    // |s_0 s_1 ... s_n〉 by using PrepareBitString, above.
+    // |s_0 s_1 ... s_n〉 by using PrepareBitString in the earlier example.
     PrepareBitString(bitstring, register);
-    // Next, we use that |+〉 = H|0〉 and |-〉 = H|1〉 to
-    // prepare the state we want.
+    // Next, use that |+〉 = H|0〉 and |-〉 = H|1〉 to
+    // prepare the desired state.
     for (idxQubit in IndexRange(register)) {
         H(register[idxQubit]);
     }
 }
 ```
 
-## <a name="measurements"></a><span data-ttu-id="758a9-143">Ölçümler</span><span class="sxs-lookup"><span data-stu-id="758a9-143">Measurements</span></span>
+## <a name="measurements"></a><span data-ttu-id="f9646-151">Ölçümler</span><span class="sxs-lookup"><span data-stu-id="f9646-151">Measurements</span></span>
 
-<span data-ttu-id="758a9-144">`Measure`Yerleşik bir iç sıra olmayan işlem olan işlemi kullanarak, türü bir nesneden klasik bilgileri ayıklayabilir `Qubit` ve sonuç olarak bir klasik değer atayabiliriz ve `Result` Bu da sonucun artık hisse amamış olmadığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="758a9-144">Using the `Measure` operation, which is a built-in intrinsic non-unitary operation, we can extract classical information from an object of type `Qubit` and assign a classical value as a result, which has a reserved type `Result`, indicating that the result is no longer a quantum state.</span></span>
-<span data-ttu-id="758a9-145">Girişi, `Measure` Bloch Sphere üzerinde, türü `Pauli` (örneğin, `PauliX` ) ve türünde bir değer ile temsil edilen bir Pauli ekseni `Qubit` .</span><span class="sxs-lookup"><span data-stu-id="758a9-145">The input to `Measure` is a Pauli axis on the Bloch sphere, represented by a value of type `Pauli` (for instance `PauliX`) and an value of type `Qubit`.</span></span>
+<span data-ttu-id="f9646-152">Tek tek qubit ölçümleri, her biri [Bloch Sphere](xref:microsoft.quantum.glossary#bloch-sphere)üzerinde bir Pauli ekseni tarafından temsil edilen farklı tabanlarda gerçekleştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="f9646-152">Measurements of individual qubits can be performed in different bases, each represented by a Pauli axis on the [Bloch sphere](xref:microsoft.quantum.glossary#bloch-sphere).</span></span>
+<span data-ttu-id="f9646-153">*Hesaplama temeli* temel anlamına gelir `PauliZ` ve ölçüm için en yaygın olarak kullanılan temeldir.</span><span class="sxs-lookup"><span data-stu-id="f9646-153">The *computational basis* refers to the `PauliZ` basis, and is the most common basis used for measurement.</span></span>
 
-<span data-ttu-id="758a9-146">Basit bir örnek, $ \ket $ durumunda bir qubit ayıran aşağıdaki işlemdir {0} , ardından buna bir Hadamard işlemi uygular `H` ve sonucu `PauliZ` temelde ölçer.</span><span class="sxs-lookup"><span data-stu-id="758a9-146">A simple example is the following operation, which allocates one qubit in the $\ket{0}$ state, then applies a Hadamard operation `H` to it and measures the result in the `PauliZ` basis.</span></span>
+### <a name="measure-a-single-qubit-in-the-pauliz-basis"></a><span data-ttu-id="f9646-154">Temelde tek bir qubit ölçme `PauliZ`</span><span class="sxs-lookup"><span data-stu-id="f9646-154">Measure a single qubit in the `PauliZ` basis</span></span>
+
+<span data-ttu-id="f9646-155">[`M`](xref:microsoft.quantum.intrinsic.m)Temelinde tek bir qubit ölçmek `PauliZ` ve sonuca bir klasik değer atamak için yerleşik bir içsel Unitary işlemi olan işlemi kullanın.</span><span class="sxs-lookup"><span data-stu-id="f9646-155">Use the [`M`](xref:microsoft.quantum.intrinsic.m) operation, which is a built-in intrinsic non-unitary operation, to measure a single qubit in the `PauliZ` basis and assign a classical value to the result.</span></span>
+<span data-ttu-id="f9646-156">`M`, `Result` yalnızca değer `Zero` `One` elde eden veya ölçülen durum $ \ket {0} $ veya $ \ket {1} $-sonucu yalnızca bir hisse</span><span class="sxs-lookup"><span data-stu-id="f9646-156">`M` has a reserved return type, `Result`, which can only take values `Zero` or `One` corresponding to the measured states $\ket{0}$ or $\ket{1}$ - indicating that the result is no longer a quantum state.</span></span>
+
+<span data-ttu-id="f9646-157">Basit bir örnek, $ \ket $ durumunda bir qubit ayıran aşağıdaki işlemdir {0} , ardından buna bir Hadamard işlemi uygular `H` ve sonucu `PauliZ` temelde ölçer.</span><span class="sxs-lookup"><span data-stu-id="f9646-157">A simple example is the following operation, which allocates one qubit in the $\ket{0}$ state, then applies a Hadamard operation `H` to it and measures the result in the `PauliZ` basis.</span></span>
 
 ```qsharp
 operation MeasureOneQubit() : Result {
     // The following using block creates a fresh qubit and initializes it
     // in the |0〉 state.
     using (qubit = Qubit()) {
-        // We apply a Hadamard operation H to the state, thereby preparing the
+        // Apply a Hadamard operation H to the state, thereby preparing the
         // state 1 / sqrt(2) (|0〉 + |1〉).
         H(qubit);
-        // Now we measure the qubit in Z-basis.
+        // Now measure the qubit in Z-basis.
         let result = M(qubit);
         // As the qubit is now in an eigenstate of the measurement operator,
-        // we reset the qubit before releasing it.
+        // reset the qubit before releasing it.
         if (result == One) { X(qubit); }
-        // Finally, we return the result of the measurement.
+        // Finally, return the result of the measurement.
         return result;
     }
 }
 ```
 
-<span data-ttu-id="758a9-147">Aşağıdaki işlem tarafından biraz daha karmaşık bir örnek verilmiştir `true` ve bu tür bir kayıttaki tüm qubits `Qubit[]` 'ler, belirtilen bir Pauli tabanında ölçülerek sıfır durumunda ise ve aksi takdirde bu değer geri döndüğünde Boolean değeri döndürür `false` .</span><span class="sxs-lookup"><span data-stu-id="758a9-147">A slightly more complicated example is given by the following operation, which returns the Boolean value `true` if all qubits in a register of type `Qubit[]` are in the state zero when measured in a specified Pauli basis, and which returns `false` otherwise.</span></span>
+### <a name="measure-one-or-more-qubits-in-specific-bases"></a><span data-ttu-id="f9646-158">Belirli tabanlarda bir veya daha fazla qubit ölçme</span><span class="sxs-lookup"><span data-stu-id="f9646-158">Measure one or more qubits in specific bases</span></span>
+
+<span data-ttu-id="f9646-159">Belirli tabanlarda bir veya daha fazla qubit dizisini ölçmek için, [`Measure`](xref:microsoft.quantum.intrinsic.measure) işlemini kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f9646-159">To measure an array of one or more qubits in specific bases, you can use the [`Measure`](xref:microsoft.quantum.intrinsic.measure) operation.</span></span>
+
+<span data-ttu-id="f9646-160">İçin girdiler, `Measure` türlerin bir dizisidir `Pauli` (örneğin, `[PauliX, PauliZ, PauliZ]` ) ve bir qubit dizisidir.</span><span class="sxs-lookup"><span data-stu-id="f9646-160">The inputs to `Measure` are an array of `Pauli` types (for example, `[PauliX, PauliZ, PauliZ]`) and an array of qubits.</span></span>
+
+<span data-ttu-id="f9646-161">Aşağıdaki işlem tarafından biraz daha karmaşık bir örnek verilmiştir `true` ve bu tür bir kayıttaki tüm qubits `Qubit[]` 'ler, belirtilen bir Pauli tabanında ölçülerek sıfır durumunda ise ve aksi takdirde bu değer geri döndüğünde Boolean değeri döndürür `false` .</span><span class="sxs-lookup"><span data-stu-id="f9646-161">A slightly more complicated example is given by the following operation, which returns the Boolean value `true` if all qubits in a register of type `Qubit[]` are in the state zero when measured in a specified Pauli basis, and which returns `false` otherwise.</span></span>
 
 ```qsharp
 operation MeasureIfAllQubitsAreZero(qubits : Qubit[], pauli : Pauli) : Bool {
@@ -172,10 +190,11 @@ operation MeasureIfAllQubitsAreZero(qubits : Qubit[], pauli : Pauli) : Bool {
 }
 ```
 
-## <a name="borrowing-qubits-example"></a><span data-ttu-id="758a9-148">Ödünç alma qubits örneği</span><span class="sxs-lookup"><span data-stu-id="758a9-148">Borrowing Qubits Example</span></span>
+<span data-ttu-id="f9646-162">Bu örneğin `Measure` her seferinde yalnızca tek bir qubits üzerinde devam ettiğinden, ancak işlem birden çok qubit üzerinde birlikte bulunan ölçümlere genişletilebilir.</span><span class="sxs-lookup"><span data-stu-id="f9646-162">Note that this example still only performs `Measure` on individual qubits one at a time, but the operation can be extended to joint measurements on multiple qubits.</span></span>
 
-<span data-ttu-id="758a9-149">Canon, `borrowing` anahtar sözcüğünü kullanan örnekler, örneğin, `MultiControlledXBorrow` aşağıda tanımlanan işlev.</span><span class="sxs-lookup"><span data-stu-id="758a9-149">In the canon there are examples that use the `borrowing` keyword, for instance the function `MultiControlledXBorrow` defined below.</span></span>
-<span data-ttu-id="758a9-150">`controls`Bir işleme eklenmesi gereken denetimi qubits 'e işaret ederseniz `X` , `Length(controls)-2` Bu uygulama tarafından birçok kirli ve daha fazla Las 'nin bir bütün olarak eklenmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="758a9-150">If `controls` denotes the control qubits that should be added to an `X` operation, then an overall of `Length(controls)-2` many dirty ancillas will be added by this implementation.</span></span>
+## <a name="borrowing-qubits-example"></a><span data-ttu-id="f9646-163">Ödünç alma qubits örneği</span><span class="sxs-lookup"><span data-stu-id="f9646-163">Borrowing Qubits Example</span></span>
+
+<span data-ttu-id="f9646-164">`borrowing`Aşağıdaki işlev gibi, Canon anahtar sözcüğünü kullanan örnekler vardır `MultiControlledXBorrow` .</span><span class="sxs-lookup"><span data-stu-id="f9646-164">There are examples in the canon that use the `borrowing` keyword, such as the following function `MultiControlledXBorrow`.</span></span> <span data-ttu-id="f9646-165">`controls`Denetimi bir işleme eklemek için denetim qubits 'e işaret ederseniz `X` , bu uygulama tarafından eklenen kirli [ancillas](xref:microsoft.quantum.glossary#ancilla) bir ve daha fazla değer vardır `Length(controls)-2` .</span><span class="sxs-lookup"><span data-stu-id="f9646-165">If `controls` denotes the control qubits to add to an `X` operation, then the number of dirty [ancillas](xref:microsoft.quantum.glossary#ancilla) added by this implementation is `Length(controls)-2`.</span></span>
 
 ```qsharp
 operation MultiControlledXBorrow ( controls : Qubit[] , target : Qubit ) : Unit
@@ -214,13 +233,13 @@ is Adj + Ctl {
 }
 ```
 
-<span data-ttu-id="758a9-151">`With`Combinator---'ın, adjoint 'i destekleyen işlemler için geçerli olan (Bu örnekte,---) kapsamlı olarak kullanılması gerektiğini unutmayın `WithA` .</span><span class="sxs-lookup"><span data-stu-id="758a9-151">Note that extensive use of the `With` combinator---in its form that is applicable for operations that support adjoint, i.e., `WithA`---was made in this example.</span></span>
-<span data-ttu-id="758a9-152">Denetimi yalnızca iç işleme yayar içeren yapılara denetim eklemek için bu iyi bir programlama stilidir `With` .</span><span class="sxs-lookup"><span data-stu-id="758a9-152">This is good programming style, because adding control to structures involving `With` propagates control only to the inner operation.</span></span>
-<span data-ttu-id="758a9-153">Ayrıca, bu işlemin yanı sıra, işlem `body` `controlled` gövdesinin bir uygulamasının bir deyime yeniden değil, açıkça sağlandığını unutmayın `controlled auto` .</span><span class="sxs-lookup"><span data-stu-id="758a9-153">Further, note that here in addition to the `body` of the operation, an implementation of the `controlled` body of the operation was explicitly provided, rather than resorting to a `controlled auto` statement.</span></span>
-<span data-ttu-id="758a9-154">Bunun nedeni, bağlantı hattı yapısından, her bir ve içindeki her bir kapıya denetim eklemeye kıyasla yararlı olan daha fazla denetimi nasıl kolayca ekleyebiliyoruz `body` .</span><span class="sxs-lookup"><span data-stu-id="758a9-154">The reason for this is that we know from the structure of the circuit how to easily add further controls which is beneficial compared to adding control to each and every individual gate in the `body`.</span></span> 
+<span data-ttu-id="f9646-166">Bu örnekte,, `With` Örneğin, adjoint 'i destekleyen işlemler için geçerli olan Combinator 'ın kapsamlı kullanımını kullandığına unutmayın `WithA` .</span><span class="sxs-lookup"><span data-stu-id="f9646-166">Note that this example used extensive use of the `With` combinator, in its form that is applicable for operations that support adjoint, for example, `WithA`.</span></span>
+<span data-ttu-id="f9646-167">Denetimi yalnızca iç işleme yayar içeren yapılara denetim eklemek için bu iyi bir programlama stilidir `With` .</span><span class="sxs-lookup"><span data-stu-id="f9646-167">This is good programming style, because adding control to structures involving `With` propagates control only to the inner operation.</span></span>
+<span data-ttu-id="f9646-168">Ayrıca, işlemin yanı sıra, `body` `controlled` bir ifadeye daha sonra değil, işlemin gövde bir uygulamasının açıkça sağlandığını unutmayın `controlled auto` .</span><span class="sxs-lookup"><span data-stu-id="f9646-168">Also note that, in addition to the `body` of the operation, an implementation of the `controlled` body of the operation was explicitly provided, rather than resorting to a `controlled auto` statement.</span></span>
+<span data-ttu-id="f9646-169">Bunun nedeni, devrenin yapısı nedeniyle, içindeki her bir kapıya denetim eklemeye kıyasla yararlı olan daha fazla denetim eklemek kolaydır `body` .</span><span class="sxs-lookup"><span data-stu-id="f9646-169">The reason for this is that, because of the structure of the circuit, it is easy to add further controls, which is beneficial compared to adding control to each gate in the `body`.</span></span> 
 
-<span data-ttu-id="758a9-155">Bu kodu başka bir Canon işleviyle karşılaştırmak `MultiControlledXClean` `X` , ancak mekanizmayı kullanarak birkaç temiz qubit kullanan, çarpma denetimli bir işlem uygulama amacını elde eder `using` .</span><span class="sxs-lookup"><span data-stu-id="758a9-155">It is instructive to compare this code with another canon function `MultiControlledXClean` which achieves the same goal of implementing a multiply-controlled `X` operation, however, which uses several clean qubits using the `using` mechanism.</span></span> 
+<span data-ttu-id="f9646-170">Bu kodu başka bir Canon işleviyle karşılaştırmak `MultiControlledXClean` `X` , ancak mekanizmayı kullanarak birkaç temiz qubit kullanan, çarpma denetimli bir işlem uygulama amacını elde eder `using` .</span><span class="sxs-lookup"><span data-stu-id="f9646-170">It is instructive to compare this code with another canon function `MultiControlledXClean` which achieves the same goal of implementing a multiply-controlled `X` operation, however, which uses several clean qubits using the `using` mechanism.</span></span> 
 
-## <a name="next-steps"></a><span data-ttu-id="758a9-156">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="758a9-156">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="f9646-171">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="f9646-171">Next steps</span></span>
 
-<span data-ttu-id="758a9-157">Q # içindeki [Denetim akışı](xref:microsoft.quantum.guide.controlflow) hakkında bilgi edinin.</span><span class="sxs-lookup"><span data-stu-id="758a9-157">Learn about [Control Flow](xref:microsoft.quantum.guide.controlflow) in Q#.</span></span>
+<span data-ttu-id="f9646-172">Q # içindeki [Denetim akışı](xref:microsoft.quantum.guide.controlflow) hakkında bilgi edinin.</span><span class="sxs-lookup"><span data-stu-id="f9646-172">Learn about [Control Flow](xref:microsoft.quantum.guide.controlflow) in Q#.</span></span>
