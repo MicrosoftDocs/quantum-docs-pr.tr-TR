@@ -7,22 +7,24 @@ summary: >-
   Denetim yazmacı durumu belirtilen bir bit maskesine karşılık geliyorsa, hedef kayıt üzerinde Oracle uygulayan Unitary işlemini döndürür.
 
 
-  Bu işlevin çıktısı, bir Unitary dönüşümle temsil edilebilir bir işlemdir $U $ \begin{hizalaması} U \ket{b_0 b_1 \cnoktalar B_ {n-1}} \ket{\psı} = \ket{b_0 b_1 \cnoktalar B_ {n-1}} \otimes \begin{Cases} V \ket{\psi} & \textrm{if} (b_0 b_1 \cnoktalar B_ {n-1}) = \texttt{bits} \\ \\ \ket{\psı} & \textrm{otherwise} \end{Cases}, \end{hizalaması}; burada $V $ `oracle` işlemin eylemini temsil eden bir Unitary dönüşümtür.
+  Bu işlevin çıktısı, bir Unitary dönüşümle temsil edilebilir bir işlemdir $U $ \begin{hizalaması} U \ket{b_0 b_1 \cnoktalar b_ {n-1}} \ket{\psı} = \ket{b_0 b_1 \cnoktalar b_ {n-1}} \otimes \begin{Cases} V \ket{\psi} & \textrm{if} (b_0 b_1 \cnoktalar b_ {n-1}) = \texttt{bits} \\ \\ \ket{\psı} & \textrm{otherwise} \end{Cases}, \end{hizalaması}; burada $V $ işlemin eylemini temsil eden bir Unitary dönüşümtür `oracle` .
 remarks: >-
-  `bits` Ve `controlRegister` uzunluğu eşit olmalıdır.
+  Tarafından verilen model `bits` öğesinden daha kısa olabilir `controlRegister` , bu durumda ek denetim qugeler yok sayılır (yani, $ \grex {0} veya $ \ket $ üzerinde denetlenmez {1} ).
+
+  `bits`Daha uzunsa `controlRegister` bir hata oluşur.
 
 
-  Bir Boole dizisi `bits` ve Unitary işlemi `oracle`verildiğinde, bu işlevin çıktısı aşağıdaki adımları gerçekleştiren bir işlemdir:
+  Bir Boole dizisi `bits` ve Unitary işlemi verildiğinde `oracle` , bu işlevin çıktısı aşağıdaki adımları gerçekleştiren bir işlemdir:
 
 
-  * öğesinin öğesine `X` karşılık gelen denetim yazmacın her bir qubit öğesine bir işlem uygulayın. `bits` `false`
+  * `X`öğesinin öğesine karşılık gelen denetim yazmacın her bir qubit öğesine bir işlem uygulayın `false` `bits` .
 
-  * Denetim `Controlled oracle` ve hedef Yazmaçları için geçerlidir;
+  * `Controlled oracle`Denetim ve hedef Yazmaçları için geçerlidir;
 
-  * Denetim kaydını `X` özgün durumuna döndürmek için, `false` `bits` tekrar öğesine karşılık gelen denetim yazmacın her bir qubit öğesine bir işlem uygulayın.
+  * `X` `false` `bits` denetim kaydını özgün durumuna döndürmek için, tekrar öğesine karşılık gelen denetim yazmacın her bir qubit öğesine bir işlem uygulayın.
 
 
-  `Controlled` Functor çıkışı, öğesinin `ControlledOnBitString` nereden `bits` eşit olduğu özel bir durumdur `[true, ..., true]`.
+  Functor çıkışı, `Controlled` öğesinin nereden eşit olduğu özel bir durumdur `ControlledOnBitString` `bits` `[true, ..., true]` .
 examples: >-
   Aşağıdaki kod parçacıkları eşdeğerdir:
 
@@ -48,7 +50,7 @@ examples: >-
   ```
 
 
-  Aşağıdaki kod bir durum{1}{2}$ \frac{00} (\tus-{01} \tus+ \ket{10} + \ ayraç{11}) $:
+  Aşağıdaki kod bir durum $ \frac {1} {2} ( {00} \tus- {01} \tus+ \ket {10} + \ ayraç {11} ) $:
 
 
   ```qsharp
@@ -85,7 +87,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Denetim kayıt durumu bit maskesine `oracle` `bits`karşılık geliyorsa, hedef kayıt üzerinde geçerli olan Unitary işlemi.
+  - summary: '`oracle`Denetim kayıt durumu bit maskesine karşılık geliyorsa, hedef kayıt üzerinde geçerli olan Unitary işlemi `bits` .'
     isOperation: true
     input:
       types:
@@ -102,9 +104,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: d5a6223c130150f42f83044aec19b1d5a875bb1d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 98bb8a9d5770e34257cd2fbc5456bcf70139af07
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680352"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885522"

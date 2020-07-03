@@ -4,10 +4,10 @@ name: T
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: >-
-  Π/8 geçidini tek bir qubit 'e uygular.
+  T geçidini tek bir qubit 'e uygular.
 
 
-  \begin{hizalaması} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ 0 & e ^ {ı \pi/4} \end{bmatrix}.
+  Bu işlem, Unitary matrisi \ Begin{hizalaması} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ 0 & e ^ {ı \ Pi/4} \end{bmatrix} tarafından benzetilir.
 
   \end{hizalaması}
 syntax: 'operation T (qubit : Qubit) : Unit'
@@ -27,9 +27,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: f654748925ec76cfececadd9fe2de8698449f6f8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d149038bea705d10a67197e0eeece33ef98e6c36
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685420"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885693"

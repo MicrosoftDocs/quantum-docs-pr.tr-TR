@@ -5,7 +5,7 @@ type: newtype
 namespace: Microsoft.Quantum.ErrorCorrection
 summary: Hata düzeltme kod bloğunun eşitleniyor işlemini ölçmek için kullanılan bir işlemi temsil eder.
 remarks: >-
-  İmza `(LogicalRegister => Syndrome)` , içindeki `LogicalRegister` qubit ve bazı gıılcal değerleri ile birlikte ortaklaşa çalışan bir işlemi temsil eder ve ardından Bu ölçülerden `Syndrome` `Result[]` birini temsil eden bir değer çıkarmak için bir IBU ve daha sonra da bir.
+  İmza, `(LogicalRegister => Syndrome)` içindeki qubit ve bazı yardımcı qugeler üzerinde birlikte ortaklaşa çalışan bir işlemi temsil eder `LogicalRegister` ve ardından `Syndrome` Bu ölçümlerin sayısını temsil eden bir değer çıkarmak için yardımcı qubits ölçülerinin bir ölçümünü izler `Result[]` .
 
 
   ### <a name="examples"></a>Örnekler
@@ -24,9 +24,9 @@ seeAlso:
 - logicalregister
 - syndrome
 metadata:
-  ms.openlocfilehash: aa324e8e149ba9418082145ed982236c473c1a4d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e4c011bcbe4200fe894962e0432f4c5c358d0295
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684823"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885749"

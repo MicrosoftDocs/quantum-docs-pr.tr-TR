@@ -3,28 +3,23 @@ uid: microsoft.quantum.intrinsic.assert
 name: Assert
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: Verilen Pauli tabanında verilen qubits ölçmeye yönelik onaylar, her zaman verilen sonuca sahip olur.
-remarks: Bu işlemin adjoint ve kontrollü sürümlerinin koşulu denetyacağını unutmayın.
+summary: Onaylama kullanım dışı bırakıldı. Lütfen @"microsoft.quantum.diagnostics.assertmeasurement" bunun yerine kullanın.
 syntax: 'operation Assert (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, msg : String)'
   types:
   - name: bases
-    summary: Bir multi-qubit Pauli işleci olarak ifade edilen olasılığını onaylama için bir ölçüm etkisi.
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: qubits
-    summary: Onaylama yapılacak bir kayıt.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: result
-    summary: Beklenen sonucu `Measure(bases, qubits)`.
     isPrimitive: true
     uid: Result
   - name: msg
-    summary: Onaylama başarısız olursa bildirilecek bir ileti.
     isPrimitive: true
     uid: String
 output:
@@ -35,12 +30,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-seeAlso:
-- assertprob
 metadata:
-  ms.openlocfilehash: ececd74240ef9340666795142719faeeb0cbef7b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 56e41923bfeaa5ecf10bd47130260c78fbce7970
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674180"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885740"
