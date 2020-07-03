@@ -6,12 +6,12 @@ uid: microsoft.quantum.more-information
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: bcc26f66a4ba3e861800ceca122b38b8d3ef6ad5
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: d3c252c6579e1286aae71a0f18ac7b6b02a5c1ed
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275375"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884147"
 ---
 # <a name="more-quantum-computing-learning-resources"></a>Daha fazla hisse bilgi işlem öğrenme kaynakları
 
@@ -24,6 +24,14 @@ Bu bölüm, hisse bilgi işlem konularının derin kapsamına yönelik seçili b
 + Kitaev, A. Y., Shen, A., & Vyalyi, d. N. (2002). Klasik ve hisse hesaplama (Vol. 47). Providence: American matematiksel topluluğu.
 + Kaye, P., LaFlamme, R., & Mosca, M. (2007). Hisse bilgi işlem konusuna giriş. Oxford University Press.
 + Rieffel, E. G., & Polak, W. H. (2011). Hisse bilgi işlem: Gentle giriş. MIT Press.
++ Sarah C. Kaiser ve Christopure. granade (erken erişim programı, 2019 Nisan 'da 2020 ' de yayını) başladı. [Python ve Q #-uygulamalı yaklaşımla bilgi işlem hakkında bilgi edinin](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp).
+
+## <a name="online-courses"></a>Çevrimiçi kurslar ##
+
++ [MS hisse bilgi işlem modüllerini öğrenin](https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r). Hisse bilgi işlem kavramları ve uygulamaları için Ste-by adım bir öğretici. 
++ [Hisse bilgi işlem-parlak kurs](https://brilliant.org/courses/quantum-computing/). Tarayıcınızdan bir hisse ıcı bilgisayar olan, sıfırdan daha fazla hisse algoritması oluşturmayı öğrenin.
++ [Hisse bilgi işlem-LinkedIn öğrenimine giriş](https://www.linkedin.com/learning/introduction-to-quantum-computing). 1h25a video tanıtımı. 
++ [Comikler aracılığıyla hisse bilgi işlem](https://hackaday.io/project/168554-introduction-to-quantum-computing). Pazar haftalık uygulamalı topluluk sınıfı. 
 
 ## <a name="elementary-techniques-for-building-controlled-gates"></a>Denetimli kapıların oluşturulmasına yönelik temel teknikler ##
 

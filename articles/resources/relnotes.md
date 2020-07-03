@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 0fcdec1a304730b593224283421539ea3ca9c913
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: d10f81a1e49235be8e02661dcd6d3c839485af6e
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415465"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885046"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -20,6 +20,27 @@ Bu makale her Quantum Development Kit sürümüne ilişkin bilgileri içerir.
 Yükleme yönergeleri için bu [yükleme kılavuzuna](xref:microsoft.quantum.install) başvurun.
 
 Güncelleştirme yönergeleri için bu [güncelleştirme kılavuzuna](xref:microsoft.quantum.update) başvurun.
+
+## <a name="version-01220070124"></a>Sürüm 0.12.20070124
+
+*Yayın tarihi: 2 Temmuz 2020*
+
+Bu sürüm aşağıdakileri içerir:
+
+- `qdk-chem`Eski elektronik yapı sorun serileştirme biçimlerini (ör.: FCıDUMP) [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) 'e dönüştürmek için yeni araç
+- [ `Microsoft.Quantum.Synthesis` Ad alanındaki](xref:microsoft.quantum.synthesis) yeni işlevler ve işlemler, dönüştürme ve ayrıştırma tabanlı senklik algoritmaları kullanılarak klasik Oracles uygulanıyor.
+- IQ # artık `%simulate` , `%estimate` ve diğer sihirli komutlara bağımsız değişkenlere izin veriyor. Daha fazla bilgi için bkz. [ `%simulate` sihirli komut başvurusu](xref:microsoft.quantum.iqsharp.magic-ref.simulate) .
+- IQ # içindeki yeni aşama görüntüleme seçenekleri. Daha fazla bilgi için bkz. [ `%config` sihirli komut başvurusu](xref:microsoft.quantum.iqsharp.magic-ref.config) .
+- IQ # ve `qsharp` Python paketi artık Conda paketleri ([qsharp](https://anaconda.org/quantum-engineering/qsharp) ve [ıqsharp](https://anaconda.org/quantum-engineering/iqsharp)) aracılığıyla, Q # jupi ve Python işlevlerinin bir Conda ortamına yerel yüklenmesini basitleştirecek şekilde sağlanır. Daha fazla bilgi için bkz. soru-cevap yükleme [kılavuzlarıyla](xref:microsoft.quantum.install.python) [q # jupi Not defterleri](xref:microsoft.quantum.install.jupyter) ve q #.
+- Simülatörü kullanırken, qubits 'in yayından sonra | 0 ⟩ durumunda olması gerekmez, ancak serbest bırakıldıktan hemen önce ölçüldüğünde otomatik olarak sıfırlanabilir.
+- IQ # kullanıcılarının farklı QDK sürümleriyle kitaplık paketlerini kullanmasını kolaylaştıran güncelleştirmeler, aynı sürüm yerine yalnızca büyük & ikincil sürüm numaraları eşleşmesi gerektirir
+- Kullanım dışı bırakılan `Microsoft.Quantum.Primitive.*` ad alanı kaldırıldı
+- Taşınan işlemler:
+  - `Microsoft.Quantum.Intrinsic.Assert`Artık`Microsoft.Quantum.Diagnostics.AssertMeasurement`
+  - `Microsoft.Quantum.Intrinsic.AssertProb`Artık`Microsoft.Quantum.Diagnostics.AssertMeasurementProbability`
+- Hata düzeltmeleri 
+
+[Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
 
 ## <a name="version-0112006403"></a>Sürüm 0.11.2006.403
 

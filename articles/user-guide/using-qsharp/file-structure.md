@@ -6,49 +6,46 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
-ms.openlocfilehash: b8c24dae6cc8d8f37ad4f1f74017c05cabe3a4b4
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 54efc2b9d6b7f1956cdf9a335c88620b29f7729d
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327467"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884182"
 ---
 # <a name="q-file-structure"></a>Q # dosya yapısı
 
-Her Q # işlem, işlev ve Kullanıcı tanımlı tür bir ad alanı içinde tanımlanır.
-
 Bir Q # dosyası, bir dizi *ad alanı bildirimi*içerir.
-Her ad alanı bildirimi, Kullanıcı tanımlı türler, işlemler ve işlevler için bildirimler içerir.
-Bir ad alanı bildirimi her bir tür bildirime ve herhangi bir sıraya sahip olabilir.
-Bir ad alanı içindeki [Kullanıcı tanımlı türler](xref:microsoft.quantum.guide.types#user-defined-types), [işlemler](xref:microsoft.quantum.guide.operationsfunctions#defining-new-operations)ve [işlevleri](xref:microsoft.quantum.guide.operationsfunctions#defining-new-functions) bildirme hakkında daha fazla bilgi için bu bağlantıları izleyin.
+Her ad alanı bildirimi, Kullanıcı tanımlı türler, işlemler ve işlevler için bildirimler içerir ve her bir tür bildirime ve herhangi bir sıraya sahip olabilir.
+Bir ad alanı içindeki bildirimler hakkında daha fazla bilgi için bkz. [Kullanıcı tanımlı türler](xref:microsoft.quantum.guide.types#user-defined-types), [işlemler](xref:microsoft.quantum.guide.operationsfunctions#defining-new-operations)ve [işlevler](xref:microsoft.quantum.guide.operationsfunctions#defining-new-functions).
 
 Bir ad alanı bildiriminin dışında görünebilen tek metin açıklamalardır.
-Özellikle, bildirim öncesinde bir ad alanı için belge açıklamaları (daha fazla ayrıntı).
+Özellikle, bir ad alanı için bildirim öncesinde belge açıklamaları. Daha fazla bilgi için bu makaledeki [belge açıklamaları](#documentation-comments) bölümüne bakın. 
 
 ## <a name="namespace-declarations"></a>Ad alanı bildirimleri
 
-Bir Q # dosyası genellikle tam olarak bir ad alanı bildirimine sahip olur, ancak None (ve boş veya yalnızca açıklama içeremez) olabilir veya birden çok ad alanı içerebilir.
+Bir Q # dosyası genellikle yalnızca bir ad alanı bildirimine sahiptir, ancak None (ve boş olabilir ya da yalnızca açıklama içeremez) veya birden çok ad alanı içerebilir.
 Ad alanı bildirimleri iç içe olamaz.
 
-Aynı ad alanı, aynı ada sahip hiçbir tür, işlem veya işlev bildirimi olmadığı sürece birlikte derlenen birden fazla Q # dosyasında da bildirilemez.
+Aynı ada sahip hiçbir tür, işlem veya işlev bildirimi olmadığı sürece, birlikte derlenen birden fazla Q # dosyasında aynı ad alanını bildirebilirsiniz.
 Özellikle, bildirimler özdeş olsa bile, birden çok dosyada aynı ad alanında aynı türü tanımlamak geçersizdir.
 
-Bir ad alanı bildirimi, anahtar sözcüğünden `namespace` , ardından ad alanının adı, açık bir küme ayracı, `{` ad alanında yer alan bildirimler ve bir kapalı ayraç oluşur `}` .
+Bir ad alanı bildirimi, anahtar sözcüğünden `namespace` ve ardından ad alanının adı ve küme ayraçları içine alınmış ad alanında yer alan bildirimlerin oluşur `{ }` .
 Ad alanı adları, noktalarla ayrılmış bir veya daha fazla yasal sembol dizisinin .NET örüntüsünün izler `.` .
 Örneğin, `MyQuantumStuff` ve `Microsoft.Quantum.Intrinsic` geçerli ad alanı adlardır.
-Kurala göre, bir ad alanı adındaki semboller büyük harfli olur, ancak bu gerekli değildir.
+Kurala göre, bir ad alanı adında sembolleri büyük harfle yapın, ancak bu gerekli değildir.
 
-Bir dosyada daha fazla bildirimde bulunan türlerin veya sabit labların başvuruları düzgün şekilde çözümlenir; bir başvurunun önüne geçmek için tür, işlem veya işlev bildirimine gerek yoktur.
+Bir dosyada düzgün şekilde tanımlanan türlerin veya callabların başvuruları doğru bir şekilde çözümlenir; bir başvurunun önüne geçmek için tür, işlem veya işlev bildirimine gerek yoktur.
 
 ## <a name="open-directives"></a>Açık yönergeler
 
-Bir ad alanı bloğunda, `open` yönerge, belirli bir ad alanında belirtilen tüm türleri ve callabları içeri aktarmak ve bunları nitelenmemiş adlarıyla ifade etmek için kullanılabilir.
+Bir ad alanı bloğunda, `open` belirli bir ad alanında belirtilen tüm türleri ve callabları içeri aktarmak için yönergesini kullanın ve bunları nitelenmemiş adlarıyla inceleyin.
 Bu tür bir `open` yönerge, `open` anahtar sözcüğünden, ardından açılacak ad alanı ve bir sona noktalı virgül içerir.
 
 > [!NOTE] 
 > Tüm `open` yönergeler `function` `operation` `newtype` ad alanı bloğunda, veya bildirimlerinden önce gelmelidir.
 
-İsteğe bağlı olarak, açık ad alanı için bir kısa ad, bu ad alanındaki tüm öğelerin tanımlanmış kısa ad ile nitelendirilerek (ve gerek olması) tanımlanabilir. Örneğin, aşağıdaki ad alanı bildirimi ve açık yönergeler verildiğinde,
+İsteğe bağlı olarak, açılan ad alanı için kısa bir ad tanımlayabilirsiniz. Kısa bir ad tanımlanmışsa, bu ad alanındaki tüm öğeleri tanımlanmış kısa ad ile nitelemeniz gerekir. Örneğin, aşağıdaki ad alanı bildirimi ve açık yönergeler verildiğinde,
 
 ```qsharp
 namespace NS {
@@ -60,54 +57,56 @@ namespace NS {
 }
 ```
 
-bildirdiğimiz bir işlem öğesinden bir işlem kullanıyorsa `Op` `Microsoft.Quantum.Intrinsic` , bunu yalnızca kullanarak çağıracağız `Op` .
-Ancak, ' den belirli bir işlevi çağırmayı istiyorduk `Fn` `Microsoft.Quantum.Math` , kullanarak çağırırız `Math.Fn` .
+tanımlı bir işlem öğesinden bir işlem kullanıyorsa `Op` `Microsoft.Quantum.Intrinsic` , bunu kullanarak çağırın `Op` .
+Ancak, ' den belirli bir işlevi çağırmak için `Fn` `Microsoft.Quantum.Math` öğesini kullanarak çağırmanız gerekir `Math.Fn` .
 
 `open`Yönerge, bir dosya içindeki tüm ad alanı bloğunun tamamına uygulanır.
-Bu nedenle, yukarıdaki aynı Q # dosyasında ek bir ad alanı tanımlıyoruz `NS` , ikinci ad alanında tanımlanan tüm işlemler/işlevler/türler, `Microsoft.Quantum.Intrinsic` `Microsoft.Quantum.Math` içindeki açık yönergeleri tekrarlamadığı sürece veya ' den herhangi bir şeye erişemez. 
+Bu nedenle, aynı Q # dosyasında daha önce ek bir ad alanı tanımlarsanız, bu durumda, `NS` ikinci ad alanında tanımlanan tüm işlemler/işlevler/türler, `Microsoft.Quantum.Intrinsic` `Microsoft.Quantum.Math` içindeki açık yönergeleri tekrarlamazsanız veya hiçbir şeye erişemez. 
 
-Geçerli ad alanında açılmamış başka bir ad alanında tanımlanan bir tür veya *çağrılabilir, tam* nitelikli ad tarafından başvurulmalıdır.
-Örneğin, ad alanı `Op` `X.Y` `X.Y.Op` `X.Y` geçerli blokta daha önce açılmamışsa, ad alanından adlı bir işleme tam nitelikli adıyla başvurulmalıdır. Yukarıda belirtildiği gibi, `X` ad alanı açılmış olsa da, işleme olarak başvurmak mümkün değildir `Y.Op` .
-İçin kısa bir ad `Z` `X.Y` , bu ad alanında ve dosyada tanımlanmışsa, `Op` olarak adlandırılmaları gerekir `Z.Op` . 
+Geçerli ad alanında *açılmayan* başka bir ad alanında tanımlanan bir türe veya çağrılabilir öğesine başvurmak için, tam adı ile ona başvurmanız gerekir.
+Örneğin, ad alanından adlı bir işlem verilince `Op` `X.Y` :
+
+* `X.Y.Op` `X.Y` Ad alanı geçerli blokta daha önce açılmamışsa, bu ada tam adı ile başvurmanız gerekir. 
+* `X`Ad alanı açılmış olsa da, işleme olarak başvurmak mümkün değildir `Y.Op` .
+* `Z` `X.Y` Bu ad alanında ve dosyada için kısa ad tanımladıysanız, olarak başvurmanız gerekir `Op` `Z.Op` . 
 
 Bir yönergesi kullanarak bir ad alanı eklemek genellikle daha iyidir `open` .
 İki ad alanı aynı ada sahip yapıları tanımladıysa ve geçerli kaynak yapıları her ikisiyle kullanıyorsa, tam nitelikli ad kullanılması gerekir.
 
 Q #, diğer .NET dilleri olarak adlandırmayla aynı kuralları izler.
 Ancak, Q # ad alanlarına göreli başvuruları desteklemez.
-Diğer bir deyişle, ad alanı `a.b` açıldıysa, adlı bir işlem için bir başvuru, `c.d` tam ada *not* sahip bir işleme çözümlenmeyecektir `a.b.c.d` .
+Örneğin, ad alanı `a.b` açıksa adlı bir işleme başvuru, `c.d` tam ada sahip bir işleme *çözümlenmez* `a.b.c.d` .
 
 ## <a name="formatting"></a>Biçimlendirme
 
 Çoğu Q # deyimi ve yönergeleri sonlandırma noktalı virgülle biter `;` .
-Ve gibi deyimler ve bildirimler `for` `operation` bir deyim bloğu (aşağıya bakın) ile biten bir bitiş noktalı virgül gerektirmez.
+Ve gibi deyimler ve bildirimler `for` `operation` bir deyim bloğu ile biter (aşağıdaki bölüme bakın) sonlandırma noktalı virgül gerektirmez.
 Her bir ifade açıklaması, Sonlandırıcı noktalı virgülden gerekli olup olmadığını not edin.
 
 İfadeler, bildirimler ve yönergeler gibi deyimler birden çok satıra ayrılabilir.
-Tek bir satırda birden çok deyimin olması kaçınılmalıdır.
+Birden çok deyimi tek bir satıra yerleştirmekten kaçının.
 
 ## <a name="statement-blocks"></a>Ekstre blokları
 
-Q # deyimleri deyim blokları halinde gruplandırılır.
-Bir ifade bloğu bir açma ile başlar `{` ve kapanış ile biter `}` .
+Q # deyimleri, küme ayraçları ile birlikte bulunan deyim blokları halinde gruplandırılır `{ }` . Bir ifade bloğu bir açma ile başlar `{` ve kapanış ile biter `}` .
 
 Başka bir blok içinde Sözcüksel olarak bulunan bir ifade bloğu, kapsayan bloğun bir alt bloğu olarak kabul edilir; içerilen ve alt bloklara dış ve iç bloklar de denir.
 
 ## <a name="comments"></a>Yorumlar
 
-Açıklamalar iki eğik çizgi ile başlar `//` ve satır sonuna kadar devam eder.
+Açıklamalar iki eğik çizgi ile başlar `//` ve satırın sonuna kadar devam eder.
 Bir soru, Q # kaynak dosyasında herhangi bir yerde görünebilir.
 
 ## <a name="documentation-comments"></a>Belge Açıklamaları
 
 Üç eğik çizgi ile başlayan yorumlar, `///` bir ad alanı, işlem, özelleştirme, işlev veya tür tanımından hemen önce göründüğü zaman derleyici tarafından özellikle değerlendirilir.
-Bu durumda, içeriği diğer .NET dilleri gibi tanımlanmış çağrılabilir veya Kullanıcı tanımlı tür için belgeler olarak alınır.
+Bu durumda, derleyici, tanımlı çağrılabilir veya Kullanıcı tanımlı tür için diğer .NET dilleri ile aynı şekilde bir belge olarak davranır.
 
-`///`Açıklamalar içinde, API belgelerinin bir parçası olarak görünen metin, özel olarak adlandırılmış üst bilgiler tarafından belirtilen belgelerin farklı bölümleriyle [markaşağı](https://daringfireball.net/projects/markdown/syntax)olarak biçimlendirilir.
-Markı 'nin bir uzantısı olarak, Q # içindeki işlemlere, işlevlere ve Kullanıcı tanımlı türlere çapraz başvurular kullanılarak dahil edilebilir, `@"<ref target>"` burada, `<ref target>` başvurulan kod nesnesinin tam adı ile değiştirilmiştir.
-İsteğe bağlı olarak, bir belge altyapısı ek markı uzantılarını da destekleyebilir.
+`///`Açıklamalar içinde, API belgelerinin bir parçası olarak görünen metin, özel olarak adlandırılan üstbilgiler tarafından belirtilen farklı kısımlarla [markaşağı](https://daringfireball.net/projects/markdown/syntax)olarak biçimlendirilir.
+Markaşağı içinde, `@"<ref target>"` uzantı çapraz başvuru işlemleri, işlevler ve Kullanıcı tanımlı türler Için Q # kullanın. `<ref target>`Başvurulan kod nesnesinin tam adı ile değiştirin.
+Farklı belge motorları, ek Marki uzantılarını da destekleyebilir.
 
-Örnek:
+Örneğin:
 
 ```qsharp
 /// # Summary
@@ -138,19 +137,19 @@ operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit {
 }
 ```
 
-Aşağıdaki adlar belge açıklama üstbilgileri olarak tanınır.
+Aşağıdaki adlar belge açıklaması üst bilgileri olarak geçerlidir.
 
-- **Özet**: bir işlev veya işlemin davranışının veya bir tür amacının kısa özeti. Özetin ilk paragrafı, üzerine gelme bilgileri için kullanılır. Düz metin olmalıdır.
-- **Açıklama**: bir işlevin veya işlemin davranışının veya bir türün amacının açıklaması. Özet ve açıklama, işlev, işlem veya tür için üretilen belge dosyasını oluşturacak şekilde birleştirilir.
-  Açıklama, satır içi LaTeX biçimli sembolleri ve denklemleri içerebilir.
+- **Özet**: bir işlev veya işlemin davranışının kısa bir özeti veya bir türün amacı. Özetin ilk paragrafı, üzerine gelme bilgileri için kullanılır. Düz metin olmalıdır.
+- **Açıklama**: bir işlev veya işlemin davranışının açıklaması veya bir türün amacı. Birlikte, Özet ve açıklama işlev, işlem veya tür için üretilen belge dosyasını oluşturur.
+  Açıklama, satır içi LaTeX biçimli sembolleri ve denklemleri destekler.
 - **Giriş**: bir işlemin veya işlevin giriş kayıt düzeninin açıklaması.
-  Giriş kayıt düzeni öğelerinin her birini belirten ek Markup alt bölümleri içerebilir.
+  Giriş kayıt düzeninin her bir öğesini gösteren ek Markup alt bölümleri içerebilir.
 - **Output**: bir işlem veya işlev tarafından döndürülen tanımlama grubunun açıklaması.
 - **Tür parametreleri**: her genel tür parametresi için bir ek alt bölüm içeren boş bir bölüm.
-- **Örnek**: işlemin, işlevin veya tür kullanılan kısa bir örnek.
+- **Örnek**: işlem, işlev veya kullanılan tür için kısa bir örnek.
 - **Açıklamalar**: işlemin, işlevin veya türün bazı yönlerini açıklayan çeşitli işlemler.
 - **Ayrıca bkz**: ilgili işlevleri, işlemleri veya Kullanıcı tanımlı türleri gösteren tam nitelikli adların listesi.
-- **Başvurular**: belgelendirilmekte olan öğe için başvuruların ve alıntıların listesi.
+- **Başvurular**: belgelenen öğe için başvuruların ve alıntıların listesi.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -6,23 +6,23 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
-ms.openlocfilehash: 456c05d4ca66a747e0cc514a30c6bbb33610f481
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 08301f408dcb2211ba25c582a5e5aa43310b714a
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327790"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885281"
 ---
 # <a name="variables-in-q"></a>Soru-cevap #
 
-S #, değişebilir ve değişmez semboller arasında veya deyimlere sınırlanan/atanan "değişkenler" arasında ayrım yapar.
+S #, değişebilir ve değişmez semboller ya da ifadelerle sınırlanan/atanan *değişkenler*arasında ayrım yapar.
 Genellikle, derleyicinin daha iyi iyileştirmeler gerçekleştirmesini sağladığından, değişmez sembollerin kullanılması önerilir.
 
 Bir bağlamanın sol tarafı bir sembol tanımlama grubu ve bir ifadenin sağ tarafından oluşur.
 
 ## <a name="immutable-variables"></a>Sabit değişkenler
 
-Q # içindeki herhangi bir türde bir değer, anahtar sözcüğü kullanılarak bir işlem veya işlev içinde yeniden kullanım için bir değişkene atanabilir `let` .
+Anahtar sözcüğünü kullanarak bir işlem veya işlev içinde yeniden kullanmak üzere Q # içinde herhangi bir türün değerini bir değişkene atayabilirsiniz `let` . 
 
 Değişmez bir bağlama anahtar sözcükten `let` , ardından bir sembol veya sembol kümesi, eşittir işareti `=` , sembolleri bağlamak için bir ifade ve sondaki noktalı virgülden oluşur.
 
@@ -35,27 +35,28 @@ let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
 Bu, belirli bir Pauli işleçleri dizisini değişken adına (veya "Symbol") atar `measurementOperator` .
 
 > [!NOTE]
-> Deyimin sağ tarafındaki ifade `let` belirsiz olduğundan ve tür derleyici tarafından çıkarsandığı için yeni değişkenimizin türünü açıkça belirtmemiz gerekmedik. 
+> Önceki örnekte, deyimin sağ tarafındaki ifade `let` belirsiz olduğundan ve derleyici doğru türü kodcıdığı için, yeni değişkenin türünü açıkça belirtmeniz gerekmez. 
 
-Kullanılarak tanımlanan değişkenler `let` *sabittir*, yani tanımlandıktan sonra hiçbir şekilde değiştirilemez.
-Bu, bir işlemin türevini uygulamak için değişkenlerin yeniden düzenlenmesine yönelik klasik mantığın iyileştirilmesi dahil olmak üzere birkaç yarar iyileştirmesi sağlar `Adjoint` .
+Kullanılarak tanımlanan değişkenler `let` *sabittir*, yani tanımladıktan sonra herhangi bir şekilde artık değiştiremezsiniz.
+Bu, bir işlemin türevini uygulamak için değişkenlerin yeniden sıralanmasında davranan klasik mantığın iyileştirmesi dahil olmak üzere birkaç yararlı iyileştirmede izin verir `Adjoint` .
 
 ## <a name="mutable-variables"></a>Değişebilir değişkenler
 
-İle bir değişken oluşturulmasına alternatif olarak `let` , anahtar sözcüğü, `mutable` ilk oluşturulduktan sonra anahtar sözcüğü kullanılarak oluşturulduktan *can* sonra yeniden bağlanabilen kesilebilir bir değişken oluşturur `set` .
+İle bir değişken oluşturulmasına alternatif olarak `let` , anahtar sözcüğü, `mutable` anahtar sözcüğü kullanılarak ilk oluşturulduktan sonra *can* yeniden bağlanabilen kesilebilir bir değişken oluşturur `set` .
 
-Bir deyimin parçası olarak belirtilen ve bağlantılı semboller `mutable` kodun ilerleyen kısımlarında farklı bir değere yeniden bağlanabilir. Bir sembol kodun ilerleyen kısımlarında yeniden bağlanmışsa, türü değişmez ve yeni bağlanan değerin bu türle uyumlu olması gerekir.
+Bir deyimin parçası olarak belirtilen ve bağlantılı sembolleri `mutable` kodun ilerleyen kısımlarında bulunan farklı bir değere yeniden bağlayabilirsiniz. Bir sembol kodun ilerleyen kısımlarında yeniden bağlanmışsa, türü değişmez ve yeni bağlanan değer bu türle uyumlu olmalıdır.
 
 ### <a name="rebinding-of-mutable-symbols"></a>Kesilebilir sembolleri yeniden bağlama
 
-Kesilebilir değişken, bir ifade kullanılarak yeniden bağlanabilir `set` .
+Bir ifadeyi kullanarak kesilebilir bir değişkeni yeniden bağlayabilirsiniz `set` .
 Bu tür bir yeniden bağlama anahtar sözcüğünden `set` , ardından bir sembol veya sembol tanımlama grubu, eşittir işareti `=` , sembolleri yeniden bağlamak için bir ifade ve sondaki noktalı virgülden oluşur.
 
-Burada, yeniden bağlama bildiriminin tekniklerinin bazı örneklerini sunuyoruz
+Aşağıda, yeniden bağlama deyimleri tekniklerinin bazı örnekleri verilmiştir.
 
-### <a name="apply-and-reassign-statements"></a>Uygula ve yeniden ata deyimleri
+#### <a name="apply-and-reassign-statements"></a>Uygula ve yeniden ata deyimleri
 
-`set`Bir *Apply ve-reassıgn* olarak ifade edilen belirli bir tür ifade, sağ taraftaki bir ikili işleç uygulamasından oluşuyorsa ve sonucun işlecin sol bağımsız değişkenine yeniden bağlanması durumunda bir birleştirme için kullanışlı bir yol sağlar. Örneğin,
+Belirli bir tür `set` ifade, *Uygula ve-yeniden ata* deyimleri, sağ taraf bir ikili işlecin uygulamasından oluşuyorsa ve sonuç işlecin sol bağımsız değişkenine yeniden bağlanılacağından, birleştirme için kullanışlı bir yol sağlar. Örneğin,
+
 ```qsharp
 mutable counter = 0;
 for (i in 1 .. 2 .. 10) {
@@ -63,7 +64,8 @@ for (i in 1 .. 2 .. 10) {
     // ...
 }
 ```
-`counter`döngünün her yinelemesinde sayacın değerini artırır `for` . Yukarıdaki kod şu şekilde eşdeğerdir 
+`counter`döngünün her yinelemesinde sayacın değerini artırır `for` . Önceki kod şu şekilde eşdeğerdir 
+
 ```qsharp
 mutable counter = 0;
 for (i in 1 .. 2 .. 10) {
@@ -72,9 +74,9 @@ for (i in 1 .. 2 .. 10) {
 }
 ```
 
-Benzer deyimler, sol taraftaki türün ifade türüyle eşleştiği tüm ikili işleçler için kullanılabilir. Bu, örneğin değerleri biriktirmek için kullanışlı bir yol sağlar.
+Benzer deyimler, sol taraftaki türün ifade türüyle eşleştiği tüm ikili işleçler için kullanılabilir. Bu deyimler, değerleri biriktirmek için kullanışlı bir yol sağlar.
 
-Örneğin, `qubits` bir Quu 'nin bir REGOF:
+Örneğin, `qubits` bir qubits 'in bir kaydı vardır:
 ```qsharp
 mutable results = new Result[0];   // results is an empty array of type Result[]
 for (q in qubits) {
@@ -84,7 +86,7 @@ for (q in qubits) {
 ...                                // results contains the measurement outcomes from the whole register
 ```
 
-### <a name="update-and-reassign-statements"></a>Güncelleştirme ve yeniden atama deyimleri
+#### <a name="update-and-reassign-statements"></a>Güncelleştirme ve yeniden atama deyimleri
 
 Sağ taraftaki [kopyalama ve güncelleştirme ifadeleri](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) için benzer bir birleştirme bulunur.
 Kullanıcı tanımlı türlerde ve *dizi öğelerinde* *adlandırılmış öğeler* için birlikte, *Update-ve-yeniden ata* deyimleri mevcuttur.  
@@ -105,7 +107,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-Diziler söz konusu olduğunda, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) Standart kitaplıklarımızda birçok yaygın dizi başlatma ve işleme ihtiyacı için gerekli araçları sağlar ve bu nedenle dizi öğelerini ilk yerde güncelleştirmek zorunda kalmamak için yardımcı olur. 
+Diziler söz konusu olduğunda, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) Q # standart kitaplığı 'nda birçok yaygın dizi başlatma ve işleme ihtiyacı için gerekli araçlar sağlanır ve bu sayede dizi öğelerini ilk yerde güncelleştirmek zorunda kalmamak için yardımcı olur. 
 
 Update-ve-yeniden ata deyimleri gerekirse bir alternatif sağlar:
 
@@ -130,7 +132,7 @@ operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
 
 ```
 
-' De sağlanan diziler için kitaplık araçlarını kullanarak, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) Örneğin, dizinindeki `i` pabd'ın verilen değeri aldığı ve diğer tüm girdilerin kimlik olduğu Paulis dizisini döndüren bir işlevi kolayca tanımlayabiliriz.
+' De sağlanan diziler için kitaplık araçlarını kullanarak, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) Örneğin, `Pauli` dizindeki öğenin belirli bir değeri aldığı bir tür dizisi döndüren bir işlevi kolayca tanımlayabilir `i` `Pauli` ve diğer tüm girişler kimlik () olarak verilebilir `PauliI` .
 
 Bu tür bir işlevin, elden çıkarmada araçların avantajlarından faydalanarak iki tanımı vardır.
 
@@ -139,13 +141,13 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
     mutable pauliArray = new Pauli[length];             // initialize pauliArray of given length
     for (index in 0 .. length - 1) {                    // iterate over the integers in the length range
         set pauliArray w/= index <-                     // change the value at index to input pauli or PauliI
-            index == location ? pauli | PauliI;         // cond. expression evaluating to pauli or PauliI dep. on whether index==location
+            index == location ? pauli | PauliI;         // cond. expression evaluating to pauli if index==location and PauliI if not
     }    
     return pauliArray;
 }
 ```
 
-Dizideki her bir dizin üzerinde yineleme yapmak yerine, veya ' i koşullu olarak ayarlamak `PauliI` yerine `Pauli` `ConstantArray` ' den ' ı kullanarak [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) ' ın bir dizisini oluşturup `PauliI` , sonra dizinde belirtilen değer c değerini değiştirdiğimiz bir kopya ve güncelleştirme ifadesini döndürmemiz gerekir `location` :
+Dizideki her dizin üzerinde yineleme yapmak ve bunu olarak veya verilen olarak ayarlamak yerine ' `PauliI` den ' ı `pauli` kullanarak `ConstantArray` [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) bir tür dizisi oluşturabilir `PauliI` ve sonra dizinde belirli bir değeri değiştirdiğiniz bir kopya ve güncelleştirme ifadesi döndürebilirsiniz `location` :
 
 ```qsharp
 function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
@@ -155,13 +157,13 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
 
 ## <a name="tuple-deconstruction"></a>Demet oluşturmayı kaldırma
 
-Tek bir değişken atamaya ek olarak, `let` ve `mutable` anahtar sözcükler (aşağıda açıklanan---) gibi diğer tüm bağlama yapısına de---, `set` Ayrıca bir [demet türünün](xref:microsoft.quantum.guide.types#tuple-types)içeriğinin açılmasını sağlar.
+Tek bir değişken atamaya ek olarak, `let` `mutable` `set` bir [demet türünün](xref:microsoft.quantum.guide.types#tuple-types)içeriğini açmak için ve anahtar sözcüklerini ya da gibi başka herhangi bir bağlama yapısını kullanabilirsiniz.
 Bu formun bir ataması, bu kayıt düzeninin öğelerini *parçalara ayırmayı* kabul edilir.
 
-Bağlamanın sağ tarafı bir tanımlama grubu ise, bu kayıt düzeni atama sonrasında oluşturulabilir.
-Bu tür ayrıştırmaları iç içe geçmiş tanımlama gruplarını içerebilir ve sağ taraftaki tanımlama grubunun şekli sembol tanımlama grubu şekli ile uyumlu olduğu sürece herhangi bir tam veya kısmi kaldırma geçerli olur.
+Bağlamanın sağ tarafı bir tanımlama grubu ise, bu kayıt kümesini atama sırasında oluşturabilirsiniz.
+Bu tür ayrıştırmaları iç içe diziler içerebilir ve sağ taraftaki tanımlama grubunun şekli sembol tanımlama grubu şekli ile uyumlu olduğu sürece herhangi bir tam veya kısmi ayrıştırma geçerlidir.
 
-Örnek:
+Örneğin:
 
 ```qsharp
 let (i, f) = (5, 0.1); // i is bound to 5 and f to 0.1
@@ -177,14 +179,14 @@ Genel olarak, sembol bağlamaları kapsam dışına çıkar ve içinde oluştuğ
 Bu kuralın iki özel durumu vardır:
 
 - Bir döngünün döngü değişkeninin bağlaması, `for` for döngüsünün gövdesinden, ancak döngünün sonundan sonra değil.
-- Bir döngünün üç bölümü `repeat` / `until` (gövde, test ve düzeltme) tek bir kapsam olarak değerlendirilir, bu nedenle gövdede bağlanan semboller testte ve düzeltmede kullanılabilir.
+- Bir döngünün üç bölümü `repeat` / `until` (gövde, test ve düzeltme) tek bir kapsam gibi davranır, bu nedenle gövdede bağlanan semboller testte ve düzeltmede kullanılabilir.
 
-Her iki döngü türü için, döngüden geçen her bir geçiş kendi kapsamında yürütülür, bu nedenle önceki bir geçişte bağlamalar daha sonraki bir geçişte kullanılamaz.
-Bu Döngülerde ayrıntılar, [Denetim akışında](xref:microsoft.quantum.guide.controlflow)bulunabilir.
+Her iki döngü türü için, döngüden geçen her bir geçiş kendi kapsamında çalışır, bu nedenle önceki bir geçişte bağlamalar daha sonraki bir geçişte kullanılamaz.
+Bu döngüler hakkında daha fazla bilgi için bkz. [Denetim akışı](xref:microsoft.quantum.guide.controlflow).
 
-Dış bloklarında sembol bağlamaları iç bloklar tarafından devralınır.
-Bir sembol, blok başına yalnızca bir kez bağlanabilir; kapsam içindeki başka bir sembolle aynı ada sahip bir sembol tanımlamak geçersizdir ("gölgeleme" yoktur).
-Aşağıdaki diziler geçerli olacaktır:
+İç bloklar, dış bloklarında sembol bağlamalarını miras alır.
+Her blok için yalnızca bir sembol bağlayabilirsiniz; kapsam içindeki başka bir sembolle aynı ada sahip bir sembol tanımlamak geçersizdir ("gölgeleme" yoktur).
+Aşağıdaki diziler geçerlidir:
 
 ```qsharp
 if (a == b) {
