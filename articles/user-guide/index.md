@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
-ms.openlocfilehash: c5611f3e2907791f2dfc1644be0a45515d50dfd7
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: 078d86c808b26c7f0b7b2577020cd9cef9491a9d
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415380"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885009"
 ---
 # <a name="the-q-user-guide"></a>Q# Kullanıcı Kılavuzu
 
@@ -22,6 +22,8 @@ Bu kılavuzun farklı konularında, Q# diline ait temel kavramların ve kuantum 
 ## <a name="user-guide-contents"></a>Kullanıcı Kılavuzu İçeriği
 
 - [Q# Temel Bilgileri](xref:microsoft.quantum.guide.basics): Q# programlama dilinin amacı ve işlevselliğine yönelik tanıtıcı bir genel bakış. 
+
+- [Q# programını çalıştırma yolları](xref:microsoft.quantum.guide.host-programs): Q# programının nasıl yürütüleceğini açıklar ve şunlar gibi programı çağırabileceğiniz çeşitli yöntemlere genel bir bakış sunar: komut satırından, Q# Jupyter Notebook içinde veya Python ya da .NET dilinde yazılmış bir klasik konak programından.
 
 ### <a name="q-language"></a>Q# Dili
 

@@ -7,12 +7,12 @@ ms.date: 5/8/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 6a52eb0a9cdf699e8bb37578ffa3d73fe96a990e
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: ee8d210d67a20cfea3bdc36162efc47f021a6dc6
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273754"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885464"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum Development Kit (QDK) yükleme
 
@@ -24,10 +24,11 @@ Kuantum programlamaya başlayabilmek için Microsoft Quantum Development Kit (QD
 - Geliştirmenizi kolaylaştıracak araçlar
 
 Q# programları Visual Studio Code veya Visual Studio kullanarak veya IQ# Jupyter çekirdeğine sahi Jupyter Notebook’lar aracılığıyla tek uygulamalar olarak çalışabilir.
-
 Ayrıca bir .NET dilinde (genellikle C#) veya Python’la yazılmış bir konak programla eşlenebilirler ve klasik bir programın içinden kuantum işlemleri çağırmanıza olanak verirler.
 
-QDK, birden çok geliştirme ortamında kullanılabilir. Tercih ettiğiniz kurulumu şuradan seçin:
+Bu kurulumların her birine yönelik iş akışları, [Q# programını çalıştırma yolları](xref:microsoft.quantum.guide.host-programs) konusunda açıklanmış ve karşılaştırılmıştır.
+
+QDK'yi yüklemeye ve Q# projelerini oluşturmaya devam etmek için tercih ettiğiniz kurulumu seçin:
 
 [Q# komut satırı uygulamalarıyla geliştirme](xref:microsoft.quantum.install.standalone): Q# ile komut satırından çalışmak için bu yaklaşımı seçin. Bunun için, aşağıdaki seçenekler gibi bir sürücü veya konak programı gerekmez.
 

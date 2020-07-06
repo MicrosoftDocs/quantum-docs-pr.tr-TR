@@ -2,6 +2,8 @@
   href: index.md
 - name: Q# temel bilgileri
   href: basics.md
+- name: Q# programını çalıştırma yolları
+  href: host-programs.md
 - name: Q# dili
   href: language/toc.yml
 - name: Q# kullanma

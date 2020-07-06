@@ -2,6 +2,13 @@
 
 | Magic Komutu | Özet |
 |---------------|---------|
+| [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect) | Azure Quantum çalışma alanına bağlanır veya geçerli bağlantı durumunu görüntüler. |
+| [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute) | Azure Quantum çalışma alanında bir işi yürütür. |
+| [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs) | Geçerli Azure Quantum çalışma alanındaki işlerin listesini görüntüler. |
+| [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output) | Geçerli Azure Quantum çalışma alanındaki işin sonuçlarını görüntüler. |
+| [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status) | Geçerli Azure Quantum çalışma alanındaki işin durumunu görüntüler. |
+| [`%azure.submit`](xref:microsoft.quantum.iqsharp.magic-ref.azure.submit) | Azure Quantum çalışma alanına iş gönderir. |
+| [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target) | Azure Quantum çalışma alanında Q# işi gönderimi için etkin yürütme hedefini ayarlar veya görüntüler. |
 | [`%check_kata`](xref:microsoft.quantum.iqsharp.magic-ref.check_kata) | Tek bir kata testi için başvuru uygulamasını denetler. |
 | [`%chemistry.broombridge`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.broombridge) | Verilen bir .yaml dosyasından Broombridge elektronik yapı sorunu sunusunu yükleyip döndürür. |
 | [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode) | Bir fermion Hamilton’unu Q# tarafından kullanılabilen bir biçime dönüştürür. |
@@ -12,9 +19,9 @@
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | Verilen bir işlevi veya işlemi ResourcesEstimator hedef makinesinde çalıştırır. |
 | [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | Tek bir test yürütür. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | Şu anda kullanılabilen tüm magic komutlarının listesini döndürür. |
-| [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | NuGet paketi yükleme özelliği sağlar. Paketin NuGet kaynakları listesinde bulunması gerekir, genellikle burada nuget.org yer alır |
+| [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | NuGet paketini yükleme özelliği sağlar. |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | Bu çekirdek için geçerli performans ölçümlerini bildirir. |
-| [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | Verilen bir işlevi veya işlemi QuantumSimulator hedef makinesinde çalıştırır |
-| [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) | Verilen bir işlevi veya işlemi ToffoliSimulator adlı simülatör hedef makinesinde çalıştırır |
-| [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who) | Geçerli çalışma alanıyla ilgili eylemleri sağlar. |
-| [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace) | Geçerli oturumda tanımlı, etkileşimli veya geçerli bir çalışma alanından yüklenen tüm işlem ve işlevlerin listesini döndürür. |
+| [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | Verilen bir işlevi veya işlemi QuantumSimulator hedef makinesinde çalıştırır. |
+| [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) | Verilen bir işlevi veya işlemi ToffoliSimulator hedef makinesinde çalıştırır. |
+| [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who) | Geçerli oturumda kullanılabilir olan Q# işlemlerini listeler. |
+| [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace) | Geçerli çalışma alanıyla ilgili eylemleri sağlar. |
