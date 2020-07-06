@@ -1,3 +1,17 @@
+- href: azure.connect.md
+  name: '%azure.connect magic komutu'
+- href: azure.execute.md
+  name: '%azure.execute magic komutu'
+- href: azure.jobs.md
+  name: '%azure.jobs magic komutu'
+- href: azure.output.md
+  name: '%azure.output magic komutu'
+- href: azure.status.md
+  name: '%azure.status magic komutu'
+- href: azure.submit.md
+  name: '%azure.submit magic komutu'
+- href: azure.target.md
+  name: '%azure.target magic komutu'
 - href: check_kata.md
   name: '%check_kata magic komutu'
 - href: chemistry.broombridge.md
