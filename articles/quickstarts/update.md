@@ -7,12 +7,11 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 8d39716c4d4c96ad87862b4b185895aab66cd210
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
-ms.translationtype: HT
+ms.openlocfilehash: 457083ea4756d64375834e5a276c2d91031138fe
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274145"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885149"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum geliştirme setini (QDK) güncelleştirme
 
@@ -151,14 +150,32 @@ Q# projeleriniz güncelleştirildiğine göre, QDK’nin kendisini güncelleşti
 QDK'yi güncelleştirme işlemi, geliştirme dilinize ve ortamınıza bağlı olarak değişir.
 Aşağıda geliştirme ortamınızı seçin.
 
-* [Python: IQ# uzantısını güncelleştirme](#update-iq-for-python)
-* [Jupyter Not Defterleri: IQ# uzantısını güncelleştirme](#update-iq-for-jupyter-notebooks)
+* [Python: `qsharp` paketini güncelleştirme](#update-the-qsharp-python-package)
+* [Jupyter Not Defterleri: IQ# çekirdeğini güncelleştirme](#update-the-iq-jupyter-kernel)
 * [Visual Studio: QDK uzantısını güncelleştirme](#update-visual-studio-qdk-extension)
 * [VS Code: QDK uzantısını güncelleştirme](#update-vs-code-qdk-extension)
 * [Komut satırı ve C#: proje şablonlarını güncelleştirme](#c-using-the-dotnet-command-line-tool)
 
 
-### <a name="update-iq-for-python"></a>Python için IQ# uzantısını güncelleştirme
+### <a name="update-the-qsharp-python-package"></a>`qsharp` Python paketini güncelleştirme
+
+Güncelleştirme yordamı, ilk olarak Conda veya .NET CLI ve PIP kullanarak yükleyip yüklemediğinize bağlıdır.
+
+#### <a name="update-using-conda-recommended"></a>[Conda kullanarak güncelleştirme (önerilir)](#tab/tabid-conda)
+
+1. `qsharp` paketini yüklediğiniz Conda ortamını etkinleştirin ve sonra güncelleştirmek için şu komutu çalıştırın:
+
+    ```
+    conda update -c quantum-engineering qsharp
+    ```
+
+1. `.qs` dosyalarınızın konumundan şu komutu çalıştırın:
+
+    ```
+    python -c "import qsharp; qsharp.reload()"
+    ```
+
+#### <a name="update-using-net-cli-and-pip-advanced"></a>[.NET CLI ve PIP kullanarak güncelleştirme (gelişmiş)](#tab/tabid-dotnetcli)
 
 1. `iqsharp` çekirdeğini güncelleştirin 
 
@@ -167,7 +184,7 @@ Aşağıda geliştirme ortamınızı seçin.
     dotnet iqsharp install
     ```
 
-2. `iqsharp` sürümünü doğrulayın
+1. `iqsharp` sürümünü doğrulayın
 
     ```dotnetcli
     dotnet iqsharp --version
@@ -176,19 +193,19 @@ Aşağıda geliştirme ortamınızı seçin.
     Aşağıdaki çıktıyı görmeniz gerekir:
 
     ```
-    iqsharp: 0.10.1912.501
-    Jupyter Core: 1.2.20112.0
+    iqsharp: 0.12.20070124
+    Jupyter Core: 1.4.0.0
     ```
 
-    `iqsharp` sürümünüz daha yüksekse endişelenmeyin, [en son sürüm](xref:microsoft.quantum.relnotes) ile eşleşmelidir.
+    `iqsharp` sürümünüz daha yüksekse endişelenmeyin. Sürümünüz [en son sürüm](xref:microsoft.quantum.relnotes) ile eşleşmelidir.
 
-3. `qsharp` paketini güncelleştirin
+1. `qsharp` paketini güncelleştirin:
 
     ```
     pip install qsharp --upgrade
     ```
 
-4. `qsharp` sürümünü doğrulayın
+1. `qsharp` sürümünü doğrulayın:
 
     ```
     pip show qsharp
@@ -198,29 +215,49 @@ Aşağıda geliştirme ortamınızı seçin.
 
     ```
     Name: qsharp
-    Version: 0.10.1912.501
+    Version: 0.12.20070124
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
 
-5. `.qs` dosyalarınızın konumundan aşağıdaki komutu çalıştırın
+1. `.qs` dosyalarınızın konumundan şu komutu çalıştırın:
 
     ```
     python -c "import qsharp; qsharp.reload()"
     ```
 
-6. Artık mevcut kuantum programlarınızı çalıştırmak için güncelleştirilmiş QDK sürümünü kullanabilirsiniz.
+***
 
-### <a name="update-iq-for-jupyter-notebooks"></a>Jupyter Not Defterleri için IQ# uzantısını güncelleştirme
+Artık mevcut kuantum programlarınızı çalıştırmak için güncelleştirilmiş `qsharp` Python paketini kullanabilirsiniz.
 
-1. `iqsharp` çekirdeğini güncelleştirin
+### <a name="update-the-iq-jupyter-kernel"></a>IQ# Jupyter çekirdeğini güncelleştirme
+
+Güncelleştirme yordamı, ilk olarak Conda veya .NET CLI ve PIP kullanarak yükleyip yüklemediğinize bağlıdır.
+
+#### <a name="update-using-conda-recommended"></a>[Conda kullanarak güncelleştirme (önerilir)](#tab/tabid-conda)
+
+1. `qsharp` paketini yüklediğiniz Conda ortamını etkinleştirin ve sonra güncelleştirmek için şu komutu çalıştırın:
+
+    ```
+    conda update -c quantum-engineering qsharp
+    ```
+
+1. Mevcut Q# Jupyter Not Defterlerinizin her birindeki bir hücreden aşağıdaki komutu çalıştırın:
+
+    ```
+    %workspace reload
+    ```
+
+#### <a name="update-using-net-cli-and-pip-advanced"></a>[.NET CLI ve PIP kullanarak güncelleştirme (gelişmiş)](#tab/tabid-dotnetcli)
+
+1. `Microsoft.Quantum.IQSharp` paketini güncelleştirin:
 
     ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
-2. `iqsharp` sürümünü doğrulayın
+1. `iqsharp` sürümünü doğrulayın:
 
     ```dotnetcli
     dotnet iqsharp --version
@@ -229,19 +266,21 @@ Aşağıda geliştirme ortamınızı seçin.
     Çıkışınızın aşağıdakine benzer olması gerekir:
 
     ```
-    iqsharp: 0.10.1912.501
-    Jupyter Core: 1.2.20112.0
+    iqsharp: 0.12.20070124
+    Jupyter Core: 1.4.0.0
     ```
 
-    `iqsharp` sürümünüz daha yüksekse endişelenmeyin, [en son sürüm](xref:microsoft.quantum.relnotes) ile eşleşmelidir.
+    `iqsharp` sürümünüz daha yüksekse endişelenmeyin. Sürümünüz [en son sürüm](xref:microsoft.quantum.relnotes) ile eşleşmelidir.
 
-3. Jupyter not defterinizdeki bir hücreden aşağıdaki komutu çalıştırın:
+1. Mevcut Q# Jupyter Not Defterlerinizin her birindeki bir hücreden aşağıdaki komutu çalıştırın:
 
     ```
     %workspace reload
     ```
 
-4. Artık mevcut bir Jupyter not defterini açabilir ve bunu güncelleştirilmiş QDK ile çalıştırabilirsiniz.
+***
+
+Artık mevcut Q# Jupyter Not Defterlerinizi çalıştırmak için güncelleştirilmiş IQ# çekirdeğini kullanabilirsiniz.
 
 ### <a name="update-visual-studio-qdk-extension"></a>Visual Studio QDK uzantısını güncelleştirme
 

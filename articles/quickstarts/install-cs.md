@@ -6,17 +6,18 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 2b0b16bdd9fccc3b668036e6df2b20e11b32f8b6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
-ms.translationtype: HT
+ms.openlocfilehash: 714c15d9589095f0fe395fcd6941672167879dca
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274157"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885496"
 ---
 # <a name="develop-with-q-and-net"></a>Q# ve .NET ile geliştirme
 
 Q# dili, C# ve F# gibi .NET dilleri ile birlikte uyumlu olacak şekilde tasarlanmıştır.
-Bu kılavuzda, Q# dilinin bir .NET dilinde yazılmış konak programıyla nasıl kullanılacağını göstereceğiz.
+Bu kılavuzda, Q# dilinin bir .NET dilinde yazılmış konak programıyla nasıl kullanılacağını gösteriyoruz.
+
+İlk olarak Q# uygulamasını ve .NET konağını oluşturuyoruz, sonra da konaktan Q# diline nasıl çağrı yapılacağını gösteriyoruz.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
@@ -26,23 +27,8 @@ Bu kılavuzda, Q# dilinin bir .NET dilinde yazılmış konak programıyla nasıl
 
 İlk adım, Q# kitaplığınız ve Q# kitaplığınızda tanımlanan işlemlere ve işlevlere çağrı yapacak .NET konağı için projeleri oluşturmaktır.
 
-### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
-
-- Yeni bir Q# kitaplığı oluşturun
-  - **Dosya** -> **Yeni** -> **Proje**’ye gidin
-  - Arama kutusuna "Q#" yazın
-  - **Q# Kitaplığı**’nı seçin
-  - **İleri**’yi seçin
-  - Kitaplığınız için bir ad ve konum seçin
-  - "Projeyi ve çözümü aynı dizine yerleştir" seçeneğinin **işaretlenmemiş** olduğundan emin olun
-  - **Oluştur**’u seçin
-- Yeni bir C# veya F# konak programı oluşturun
-  - **Dosya** → **Yeni** → **Proje**’ye gidin
-  - C# veya F# için "Konsol Uygulaması (.NET Core")" seçeneğini belirleyin
-  - **İleri**’yi seçin
-  - *Çözüm* altında "çözüme ekle"yi seçin
-  - Konak programınız için bir ad seçin
-  - **Oluştur**’u seçin
+Geliştirme ortamınıza karşılık gelen sekmedeki yönergeleri izleyin.
+Visual Studio veya VS Code dışında bir düzenleyici kullanıyorsanız komut satırı adımlarını izlemeniz yeterlidir.
 
 ### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code veya Komut Satırı](#tab/tabid-cmdline)
 
@@ -72,6 +58,24 @@ Bu kılavuzda, Q# dilinin bir .NET dilinde yazılmış konak programıyla nasıl
   dotnet sln quantum-dotnet.sln add ./quantum/quantum.csproj
   dotnet sln quantum-dotnet.sln add ./host/host.csproj
   ```
+
+### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+
+- Yeni bir Q# kitaplığı oluşturun
+  - **Dosya** -> **Yeni** -> **Proje**’ye gidin
+  - Arama kutusuna "Q#" yazın
+  - **Q# Kitaplığı**’nı seçin
+  - **İleri**’yi seçin
+  - Kitaplığınız için bir ad ve konum seçin
+  - "Projeyi ve çözümü aynı dizine yerleştir" seçeneğinin **işaretlenmemiş** olduğundan emin olun
+  - **Oluştur**’u seçin
+- Yeni bir C# veya F# konak programı oluşturun
+  - **Dosya** → **Yeni** → **Proje**’ye gidin
+  - C# veya F# için "Konsol Uygulaması (.NET Core")" seçeneğini belirleyin
+  - **İleri**’yi seçin
+  - *Çözüm* altında "çözüme ekle"yi seçin
+  - Konak programınız için bir ad seçin
+  - **Oluştur**’u seçin
 
 ***
 

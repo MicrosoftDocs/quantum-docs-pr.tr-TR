@@ -6,18 +6,39 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 6513acd5b9cdce15ce61ed2c0454f46e6a6d9bd0
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
-ms.translationtype: HT
+ms.openlocfilehash: 7fbbb81b1ee51bff74b287745bf4447004a0254c
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274146"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885534"
 ---
 # <a name="develop-with-q-and-python"></a>Q# ve Python ile geliştirme
 
 Q# işlemlerini çağırmak için Python konak programları geliştirmek üzere QDK'yi yükleyin.
 
-1. Ön koşullar
+## <a name="install-the-qsharp-python-package"></a>`qsharp` Python paketini yükleme
+
+### <a name="install-using-conda-recommended"></a>[Conda kullanarak yükleme (önerilir)](#tab/tabid-conda)
+
+1. [Miniconda](https://docs.conda.io/en/latest/miniconda.html) veya [Anaconda](https://www.anaconda.com/products/individual#Downloads)'yı yükleyin.
+
+1. Anaconda İstemini açın.
+
+   - Ya da PowerShell veya pwsh kullanmayı tercih ediyorsanız: Bir kabuğu açın, `conda init powershell` komutunu çalıştırın, ardından kabuğu kapatıp yeniden açın.
+
+1. Şu komutları çalıştırarak gerekli paketlerle (Jupyter Notebook ve IQ# dahil) `qsharp-env` adlı yeni bir Conda ortamı oluşturup etkinleştirin:
+
+    ```
+    conda create -n qsharp-env -c quantum-engineering qsharp notebook
+
+    conda activate qsharp-env
+    ```
+
+1. Yüklemenizi doğrulamak için aynı terminalden `python -c "import qsharp"` komutunu çalıştırın ve yerel paket önbelleğinizi tüm gerekli QDK bileşenleriyle doldurun.
+
+### <a name="install-using-net-cli-and-pip-advanced"></a>[.NET CLI ve PIP kullanarak yükleme (gelişmiş)](#tab/tabid-dotnetcli)
+
+1. Ön koşullar:
 
     - [Python](https://www.python.org/downloads/) 3.6 veya üzeri
     - [PIP](https://pip.pypa.io/en/stable/installing) Python paket yöneticisi
@@ -45,53 +66,50 @@ Q# işlemlerini çağırmak için Python konak programları geliştirmek üzere 
     > ```
     > `/path/to/dotnet-iqsharp`, dosya sisteminizdeki `dotnet-iqsharp` aracının mutlak yolu ile değiştirilmelidir.
     > Genellikle bu, kullanıcı profili klasörünüzdeki `.dotnet/tools` altında bulunur.
-  
-1. Q# dilini Python ile herhangi bir IDE'de kullanabiliyor olsanız da, Q# + Python uygulamalarınız için Visual Studio Code (VS Code) IDE kullanmanız önerilir. Visual Studio Code ve QDK Visual Studio Code uzantısını kullanarak daha zengin işlevselliğe erişim elde edersiniz.
+    
+***
 
-    - [VS Code](https://code.visualstudio.com/download)’u (Windows, Linux ve Mac) yükleyin
-    - [VS Code için QDK uzantısını](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode) yükleyin.
+İşte bu kadar! Artık Jupyter için hem `qsharp` Python paketine hem de IQ# çekirdeğine sahipsiniz. Bu paket Python’dan Q# işlemlerini derlemek ve yürütmek üzere temel işlevselliği sağlar ve Q# Jupyter Not Defterlerini kullanmanıza olanak tanır.
 
-1. `Hello World` uygulaması oluşturarak yüklemeyi doğrulayın
+## <a name="choose-your-ide"></a>IDE’nizi seçin
 
-    - `Operation.qs` adlı bir dosya oluşturup dosyaya aşağıdaki kodu ekleyerek küçük bir Q# işlemi oluşturun:
+Q# dilini Python ile herhangi bir IDE'de kullanabiliyor olsanız da, Q# + Python uygulamalarınız için Visual Studio Code (VS Code) IDE kullanmanız önerilir. QDK Visual Studio Code uzantısı ile uyarılar, söz dizimi vurgulama, proje şablonları gibi daha zengin işlevlere erişim elde edersiniz.
 
-        ```qsharp
-        namespace HelloWorld {
-            open Microsoft.Quantum.Intrinsic;
-            open Microsoft.Quantum.Canon;
+VS Code kullanmak istiyorsanız:
 
-            operation SayHello() : Unit {
-                Message("Hello from quantum world!");
-            }
-        }
-        ```
+- [VS Code](https://code.visualstudio.com/download)’u (Windows, Linux ve Mac) yükleyin.
+- [VS Code için QDK uzantısını](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode) yükleyin.
 
-    - Q# `SayHello()` işlemini çağırmak için `hello_world.py` adlı bir Python programı oluşturun:
+Farklı bir düzenleyici kullanmak istiyorsanız, yukarıdaki yönergelerle gerekli hazırlıkları yapabilirsiniz.
 
-        ```python
-        import qsharp
+## <a name="write-your-first-q-program"></a>İlk Q# programınızı yazma
 
-        from HelloWorld import SayHello
+Artık basit bir Q# programı yazarak ve yürüterek `qsharp` Python paketi yüklemenizi doğrulamaya hazırsınız.
 
-        SayHello.simulate()
-        ```
+1. `Operation.qs` adlı bir dosya oluşturup dosyaya aşağıdaki kodu ekleyerek küçük bir Q# işlemi oluşturun:
 
-    - Programı çalıştırın:
+    :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="3-14":::
 
-        ```
-        python hello_world.py
-        ```
+1. `Operation.qs` ile aynı klasörde, Q# `SampleQuantumRandomNumberGenerator()` işleminin simülasyonunu oluşturmak için `host.py` adlı bir Python programı oluşturun:
 
-    - Çıktıyı doğrulayın. Programınız aşağıdaki satırları çıkarmalıdır:
+    ```python
+    import qsharp
+    from Qrng import SampleQuantumRandomNumberGenerator
 
-        ```
-        Hello from quantum world!
-        ```
+    SampleQuantumRandomNumberGenerator.simulate()
+    ```
 
+1. Yükleme sırasında oluşturduğunuz ortamdan (yani `qsharp` yüklediğiniz Conda veya Python ortamı) şu programı çalıştırın:
+
+    ```
+    python host.py
+    ```
+
+1. Çağırdığınız işlemin sonucunu görmeniz gerekir. Bu durumda, işleminiz rastgele bir sonuç oluşturduğundan ekranda `Zero` veya `One` yazdırılmış olduğunu görürsünüz. Programı tekrar tekrar yürütürseniz, her sonucu yaklaşık olarak yarı sürede görmeniz gerekir.
 
 > [!NOTE]
-> * Ayrıca Python Jupyter not defterlerini, klasik Python programı yazmak ve hücrelerden Q# işlemlerini çağırmak için de kullanabilirsiniz. Python kodu yalnızca normal bir Python programıdır.
+> * Python kodu yalnızca normal bir Python programıdır. Python programını yazmak ve Q# işlemlerini çağırmak için Python tabanlı Jupyter Not Defterleri dahil olmak üzere herhangi bir Python ortamını kullanabilirsiniz. Python programı, Python kodunun kendisi ile aynı klasörde bulunan tüm .qs dosyalarından Q# işlemlerini içeri aktarabilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Quantum Development Kit’i tercih ettiğiniz ortama yüklediğinize göre [ilk kuantum programınızı](xref:microsoft.quantum.quickstarts.qrng) yazıp çalıştırabilirsiniz.
+Quantum geliştirme setini tercih ettiğiniz ortama yüklediğinize göre, [ilk kuantum programınızı](xref:microsoft.quantum.quickstarts.qrng) yazıp çalıştırmak için bu öğreticiyi izleyebilirsiniz.

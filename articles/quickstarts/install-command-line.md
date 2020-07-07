@@ -6,12 +6,11 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 4311ebf9f72254485a20ba721ea2ce19163f4371
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
-ms.translationtype: HT
+ms.openlocfilehash: 15015d1673f47faf5a13dde516f834916b4319d6
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274195"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884277"
 ---
 # <a name="develop-with-q-command-line-applications"></a>Q# komut satırı uygulamaları ile geliştirme
 
@@ -23,7 +22,7 @@ Q# programları, C#, F# veya Python gibi bir konak dilinde sürücü olmadan ken
 
 ## <a name="installation"></a>Yükleme
 
-Q# komut satırı uygulamalarını herhangi bir IDE'de derleyebilseniz de, Q# uygulamalarınız için Visual Studio Code (VS Code) veya Visual Studio IDE kullanmanızı öneririz. Bu araçlarda geliştirme yapılması, zengin işlevselliğe erişim sağlar.
+Q# komut satırı uygulamalarını herhangi bir IDE'de derleyebilseniz de, Q# uygulamalarınız için Visual Studio Code (VS Code) veya Visual Studio IDE kullanmanızı öneririz. Bu ortamlarda geliştirme yapmak, QDK uzantısının uyarı, söz dizimi vurgulama, proje şablonları gibi zengin işlevlerini içerir.
 
 VS Code'u yapılandırmak için:
 
@@ -35,8 +34,17 @@ Visual Studio'yu yapılandırmak için:
 1. .NET Core platformlar arası geliştirme iş yükü etkin olan [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 veya üzerini indirip yükleyin.
 2. [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)’yi indirip yükleyin.
 
+Başka bir ortam için QDK'yi yüklemek üzere komut satırına şunu girin:
 
-## <a name="develop-with-q-using-vs-code"></a>VS Code kullanarak Q# ile geliştirme
+```dotnetcli
+dotnet new -i Microsoft.Quantum.ProjectTemplates
+```
+
+## <a name="develop-with-q"></a>Q# ile geliştirme
+
+Ortamınıza karşılık gelen sekmedeki yönergeleri izleyin.
+
+### <a name="vs-code"></a>[VS Code](#tab/tabid-vscode)
 
 Q# proje şablonlarını yükleyin:
 
@@ -64,7 +72,7 @@ Uygulamayı çalıştırmak için:
 > [!NOTE]
 > Birden fazla kök klasörü olan çalışma alanları şu anda VS Code Q# uzantısı tarafından desteklenmemektedir. Bir VS Code çalışma alanında birden çok projeniz varsa, tüm projelerin aynı kök klasörde yer alması gerekir.
 
-## <a name="develop-with-q-using-visual-studio"></a>Visual Studio kullanarak Q# ile geliştirme
+### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs)
 
 Bir Q# `Hello World` uygulaması oluşturarak Visual Studio yüklemenizi doğrulayın.
 
@@ -83,6 +91,30 @@ Uygulamayı çalıştırmak için:
 > [!NOTE]
 > Bir Visual Studio çözümünde birden fazla projeniz varsa, çözümde yer alan tüm projelerin çözüm ile aynı klasörde veya bunun alt klasörlerinin birinde olması gerekir.  
 
+### <a name="other-editors-with-the-command-line"></a>[Komut satırı içeren diğer düzenleyiciler](#tab/tabid-cmdline)
+
+Bir Q# `Hello World` uygulaması oluşturarak yüklemenizi doğrulayın.
+
+1. Yeni bir uygulama oluşturun:
+    ```dotnetcli
+    dotnet new console -lang Q# -o runSayHello
+    ```
+
+2. Uygulama dizinine gidin:
+    ```dotnetcli
+    cd runSayHello
+    ```
+
+    Bu dizin artık, konsola ileti yazdırmak için basit bir işlem tanımlayan bir Q# programı olan `Program.qs` adlı dosyayı içermelidir. Bu şablonda bir metin düzenleyiciyle değişiklik yapabilir ve kendi kuantum uygulamalarınızla bu şablonun üzerine yazabilirsiniz. 
+
+3. Programı çalıştırın:
+    ```dotnetcli
+    dotnet run
+    ```
+
+4. Şu metnin yazdırıldığını görmeniz gerekir: `Hello quantum world!`
+
+***
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
