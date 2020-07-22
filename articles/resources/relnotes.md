@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: d10f81a1e49235be8e02661dcd6d3c839485af6e
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 4b5e7b657f0e11fb4a14308c20859f4007729146
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885046"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871577"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -21,6 +21,17 @@ Yükleme yönergeleri için bu [yükleme kılavuzuna](xref:microsoft.quantum.ins
 
 Güncelleştirme yönergeleri için bu [güncelleştirme kılavuzuna](xref:microsoft.quantum.update) başvurun.
 
+
+## <a name="version-01220072031"></a>Sürüm 0.12.20072031
+
+*Yayın tarihi: 21 Temmuz 2020*
+
+Bu sürüm aşağıdakileri içerir:
+
+- Q # Not defterlerindeki açık ad alanları artık gelecekteki tüm hücre yürütmeleri için kullanılabilir. Bu, örneğin, ad alanlarının her kod hücresinde ilgili ad alanlarını açmak zorunda kalmadan, Not defterinin en üstündeki bir hücrede açılmasını sağlar. Yeni bir `%lsopen` Magic komutu, şu anda açık olan ad alanlarının listesini görüntüler.
+
+[Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
+
 ## <a name="version-01220070124"></a>Sürüm 0.12.20070124
 
 *Yayın tarihi: 2 Temmuz 2020*
@@ -28,7 +39,7 @@ Güncelleştirme yönergeleri için bu [güncelleştirme kılavuzuna](xref:micro
 Bu sürüm aşağıdakileri içerir:
 
 - `qdk-chem`Eski elektronik yapı sorun serileştirme biçimlerini (ör.: FCıDUMP) [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) 'e dönüştürmek için yeni araç
-- [ `Microsoft.Quantum.Synthesis` Ad alanındaki](xref:microsoft.quantum.synthesis) yeni işlevler ve işlemler, dönüştürme ve ayrıştırma tabanlı senklik algoritmaları kullanılarak klasik Oracles uygulanıyor.
+- Ad alanındaki yeni işlevler ve işlemler, [`Microsoft.Quantum.Synthesis`](xref:microsoft.quantum.synthesis) dönüştürme ve ayrıştırma tabanlı senklik algoritmaları kullanılarak klasik Oracles uygulanıyor.
 - IQ # artık `%simulate` , `%estimate` ve diğer sihirli komutlara bağımsız değişkenlere izin veriyor. Daha fazla bilgi için bkz. [ `%simulate` sihirli komut başvurusu](xref:microsoft.quantum.iqsharp.magic-ref.simulate) .
 - IQ # içindeki yeni aşama görüntüleme seçenekleri. Daha fazla bilgi için bkz. [ `%config` sihirli komut başvurusu](xref:microsoft.quantum.iqsharp.magic-ref.config) .
 - IQ # ve `qsharp` Python paketi artık Conda paketleri ([qsharp](https://anaconda.org/quantum-engineering/qsharp) ve [ıqsharp](https://anaconda.org/quantum-engineering/iqsharp)) aracılığıyla, Q # jupi ve Python işlevlerinin bir Conda ortamına yerel yüklenmesini basitleştirecek şekilde sağlanır. Daha fazla bilgi için bkz. soru-cevap yükleme [kılavuzlarıyla](xref:microsoft.quantum.install.python) [q # jupi Not defterleri](xref:microsoft.quantum.install.jupyter) ve q #.
@@ -446,7 +457,7 @@ Bu sürüm, [GitHub’da bildirilen sorun #48](https://github.com/Microsoft/Quan
 
 *Sürüm tarihi: 22 Haziran 2018*
 
-Bu sürüm, topluluk için yapılan birkaç katkıyı, geliştirilmiş hata ayıklama deneyimini ve iyileştirilmiş performansı içerir.  Daha ayrıntılı şekilde belirtmek gerekirse:
+Bu sürüm, topluluk için yapılan birkaç katkıyı, geliştirilmiş hata ayıklama deneyimini ve iyileştirilmiş performansı içerir.  Özellikle:
 
 * QuantumSimulator hedef makinesine yönelik küçük ve büyük simülasyonlarda performans iyileştirmeleri.
 * Hata ayıklama işlevi geliştirildi.

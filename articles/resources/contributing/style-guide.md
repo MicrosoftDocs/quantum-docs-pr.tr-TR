@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 3ddb5d67b972f69df1774b476a10e74dd16d97b7
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 26de7d5f639ea1b4df24232127b6f95cee3a041e
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884189"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871391"
 ---
 # <a name="q-style-guide"></a>S # stil kılavuzu #
 ## <a name="general-conventions"></a>Genel kurallar ##
@@ -93,7 +93,7 @@ Benzer şekilde, _Aracı isimleri_ , işlem adlarından Işlev ve udt adlarını
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-|   | Adı | Açıklama |
+|   | Ad | Açıklama |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | İşlemin etkisini göstermek için bir fiil ("yansıtma") kullanımını temizleyin. |
 | ☒ | <s>`operation XRotation`</s> | İsim ifadesi kullanımı, işlem yerine Function önerisinde bulunur. |
@@ -126,7 +126,7 @@ Ayrıca, q # giriş noktaları, bir uygulamanın tamamı için giriş noktaları
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-|   | Adı | Açıklama |
+|   | Ad | Açıklama |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | Giriş noktası amacını, işlem adı aracılığıyla açıkça iletir. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | Kullanımı `Main` , giriş noktası amacını açıkça iletmez ve özniteliğiyle birlikte gereksizdir `@EntryPoint()` . |
@@ -168,7 +168,7 @@ is Adj + Ctl {
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-|   | Adı | Açıklama |
+|   | Ad | Açıklama |
 |---|------|-------------|
 | ☑ | `X` | "Bir $X $ dönüşümü Uygula" için iyi anlaşılan toplu değer |
 | ☑ | `CNOT` | "Denetimli-NOT" için iyi anlaşılan toplu değer |
@@ -225,7 +225,7 @@ Tüm tür dönüştürme işlevlerinin, `As` hızlı bir şekilde tanımlanabilm
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-|   | Adı | Açıklama |
+|   | Ad | Açıklama |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | "To" ön konumu, bir işlevi değil bir işlem belirten bir fiil ifadesi içinde sonuçlanır. |
 | ☒ | <s>`AsDouble`</s> | Giriş türü, işlev adından net değildir. |
@@ -248,7 +248,7 @@ Bir işlem veya işlev doğrudan kullanıma yönelik değildir, ancak bunun yeri
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-|   | Adı | Açıklama |
+|   | Ad | Açıklama |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | `_`Bu işlemin yalnızca iç kullanım için olduğunu göstermek için alt çizgi kullanmayın. |
 | ☑ | `internal operation ApplyDecomposedOperation` | `internal`Başındaki anahtar sözcük açıkça bu işlemin yalnızca iç kullanım için olduğunu gösterir. |
@@ -320,7 +320,7 @@ Bu, erişimci gösterimini (ör.: `callable::Apply` ) veya kopyalama ve güncell
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-|   | Kod Parçacığı | Açıklama |
+|   | Kod Parçacığı | Description |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | Ad, `Apply` `CamelCase` adlandırılmış öğenin bir işlem olmasını öneren, biçimli bir fiil tümceciktir. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Adlandırılmış öğeler ilk büyük harfle başlamalıdır. |
@@ -386,9 +386,8 @@ Hisse geliştirme seti ile sağlanan derleyici, bu açıklamaları ayıklar ve b
 Benzer şekilde, hisse geliştirme kiti ile birlikte sağlanan dil sunucusu, kullanıcılar için Q # kodundaki sembolleri üzerine getirdiğinde yardım sağlamak üzere bu açıklamaları kullanır.
 Belge açıklamalarının kullanımı, bu belgedeki diğer kurallara göre kolayca ifade olmayan Ayrıntılar için yararlı bir başvuru sunarak kullanıcıların kod anlamlı olmasına yardımcı olabilir.
 
-<div class="nextstepaction">
-    [Belge açıklaması sözdizimi başvurusu](xref:microsoft.quantum.guide.filestructure#documentation-comments)
-</div>
+> [!div class="nextstepaction"]
+> [Belge açıklaması sözdizimi başvurusu](xref:microsoft.quantum.guide.filestructure#documentation-comments).
 
 Kullanıcılara yardımcı olmak üzere bu işlevselliği etkili bir şekilde kullanabilmek için, belge açıklamalarını yazarken göz önünde bulundurmanız önerilir.
 
@@ -477,7 +476,7 @@ Bu kurallar, Q # derleyicisi ile tümleştirilmiş biçimlendirme Aracı kullan�
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-|   | Kod Parçacığı | Açıklama |
+|   | Kod Parçacığı | Description |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | İkili işleçler etrafında boşluklar kullanın. |
 | ☒ | <s>`target:Qubit`</s> | Tür ek açıklaması etrafında boşluklar kullanın. |

@@ -5,12 +5,12 @@ author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: fa5173f710dd9e0b0b2c110e45aa0bf019111aca
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 324753cfa1b7d940bf5a0bbe7665f19cc6dda82c
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275711"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870643"
 ---
 # <a name="diagnostics"></a>Tanılama #
 
@@ -61,19 +61,19 @@ Q # standart kitaplıkları, olguları temsil etmek için çeşitli farklı işl
 
 Pratikte, onaylamalar, gerçek makinemiz için bir simülatör kullanırken fiziksel ölçümleri ve onaylamaları yapabilmemiz gibi, tüm hisse uygun olmayan ölçümleri ve kayıt kaldırma işlemlerini [hiçbir](https://arxiv.org/abs/quant-ph/9607018)şekilde etkilemez.
 Bu nedenle, donanıma dağıtım yapmadan önce tek tek işlemleri klasik Benzetici üzerinde test edebilirsiniz.
-Onayların değerlendirmesine izin verilmeyen hedef makinelerde, çağrıları <xref:microsoft.quantum.intrinsic.assert> güvenle yoksayılabilir.
+Onayların değerlendirmesine izin verilmeyen hedef makinelerde, çağrıları <xref:microsoft.quantum.diagnostics.assertmeasurement> güvenle yoksayılabilir.
 
-Daha genel olarak, <xref:microsoft.quantum.intrinsic.assert> işlem, verilen pabdtabanında verilen qubits 'leri ölçmeye her zaman verilen sonuca sahip olacağını onaylar.
+Daha genel olarak, <xref:microsoft.quantum.diagnostics.assertmeasurement> işlem, verilen pabdtabanında verilen qubits 'leri ölçmeye her zaman verilen sonuca sahip olacağını onaylar.
 Onaylama başarısız olursa, yürütme, verilen iletiyle çağırarak sona erer `fail` .
 Varsayılan olarak, bu işlem uygulanmaz; Bunu destekleyebilen simülatörleri, çalışma zamanı denetimini gerçekleştiren bir uygulama sağlamalıdır.
-`Assert`imza içeriyor `((Pauli[], Qubit[], Result, String) -> ())` .
-`Assert`, Çıkış türü olarak boş bir tanımlama grubu olan bir işlev olduğundan, çağrısı yapmadan hiçbir efekt `Assert` bir Q # programı içinde observable değildir.
+`AssertMeasurement`imza içeriyor `((Pauli[], Qubit[], Result, String) -> ())` .
+`AssertMeasurement`, Çıkış türü olarak boş bir tanımlama grubu olan bir işlev olduğundan, çağrısı yapmadan hiçbir efekt `AssertMeasurement` bir Q # programı içinde observable değildir.
 
-<xref:microsoft.quantum.intrinsic.assertprob>İşlem işlevi, verilen pabdtabanında verilen qubits 'in belirli bir tolerans dahilinde verilen olasılığa sahip olduğunu ölçmeye yönelik onaylar.
+<xref:microsoft.quantum.diagnostics.assertmeasurementprobability>İşlem işlevi, verilen pabdtabanında verilen qubits 'in belirli bir tolerans dahilinde verilen olasılığa sahip olduğunu ölçmeye yönelik onaylar.
 Tolerans eklenebilir (ör. `abs(expected-actual) < tol` ).
 Onaylama başarısız olursa, yürütme, verilen iletiyle çağırarak sona erer `fail` .
 Varsayılan olarak, bu işlem uygulanmaz; Bunu destekleyebilen simülatörleri, çalışma zamanı denetimini gerçekleştiren bir uygulama sağlamalıdır.
-`AssertProb`imza içeriyor `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . `Double`Parametrelerin ilki, sonucun istenen olasılığını ve ikinci bir toleransı sağlar.
+`AssertMeasurementProbability`imza içeriyor `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . `Double`Parametrelerin ilki, sonucun istenen olasılığını ve ikinci bir toleransı sağlar.
 
 Tek bir ölçüm için bir Benzetici tarafından kullanılan klasik bilgilerin, bir qubit 'in iç durumunu temsil etmesi için kullanılan klasik bilgilerin kopyalanmaya, bu şekilde, fiticimizi test etmek için bir ölçüm gerçekleştirmeleri gerekmez.
 Özellikle, bu, gerçek donanım üzerinde mümkün olmayan, *uyumsuz* ölçümler hakkında nedenimizi olanaklı kılmaktadır.
@@ -100,7 +100,7 @@ using (register = Qubit()) {
 ```
 
 Ancak genel olarak, Pauli işleçlerinin eigenstates ile aynı olmayan durumlar hakkında onaylara erişemeyebilirsiniz.
-Örneğin, $ \ket{\psı} = (\ket {0} + e ^ {i \pi/8} \ket {1} )/\sqrt {2} $, bir Pauli işlecinin eigenstate değil; bu nedenle, <xref:microsoft.quantum.intrinsic.assertprob> bir State $ \ket{\psı '} $ öğesinin $ \ket{\psı} $ değerine eşit olduğunu benzersiz şekilde tespit etmek için kullandığımyız.
+Örneğin, $ \ket{\psı} = (\ket {0} + e ^ {i \pi/8} \ket {1} )/\sqrt {2} $, bir Pauli işlecinin eigenstate değil; bu nedenle, <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> bir State $ \ket{\psı '} $ öğesinin $ \ket{\psı} $ değerine eşit olduğunu benzersiz şekilde tespit etmek için kullandığımyız.
 Bunun yerine, simülatımız tarafından desteklenen temel elemanlar kullanılarak doğrudan sınanabilen varsayımlar halinde $ \ket{\psı '} = \ket{\psi} $ onaylama onayını kaldırdık.
 Bunu yapmak için $ \ket{\psı} = \Alpha {0} \tus+ \beta \ demet $ ' i {1} karmaşık sayılar için $ \Alpha = a \_ r + a \_ i i $ ve $ \beta $ $.
 Bu ifadenin, \{ \_ \_ \_ \_ \} her bir karmaşık sayının gerçek ve sanal bir parçanın toplamı olarak ifade edileceği dört gerçek sayı olan $ a r, ı, b r, b i $ değerini belirtmesini unutmayın.

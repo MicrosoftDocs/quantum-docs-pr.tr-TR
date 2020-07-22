@@ -1,157 +1,158 @@
 ---
-title: Kuantum oracle’ları
-description: İle nasıl çalışacağınızı ve başka bir algoritmaya girdi olarak kullanılan hisse Oracles, kara Box işlemlerini tanımlama hakkında bilgi edinin.
-author: cgranade
-uid: microsoft.quantum.concepts.oracles
-ms.author: Christopher.Granade@microsoft.com
-ms.date: 07/11/2018
-ms.topic: article
-no-loc:
-- $
-- $
-- $
-- $
-- $
-- $
-- '\cdots'
-- bmatrix
-- '\ddots'
-- '\equiv'
-- '\sum'
-- '\begin'
-- '\end'
-- '\sqrt'
-- '\otimes'
-- '{'
-- '}'
-- '\text'
-- '\phi'
-- '\kappa'
-- '\psi'
-- '\alpha'
-- '\beta'
-- '\gamma'
-- '\delta'
-- '\omega'
-- '\bra'
-- '\ket'
-- '\boldone'
-- '\\\\'
-- '\\'
-- =
-- '\frac'
-- '\text'
-- '\mapsto'
-- '\dagger'
-- '\to'
+Başlık: hisse Oracles açıklaması: ile nasıl çalışacağınızı ve başka bir algoritmaya girdi olarak kullanılan hisse Oracles, kara Box işlemlerini nasıl tanımlayacağınızı öğrenin.
+Yazar: cgranade uid: Microsoft. hisse. Concepts. Oracles MS. Author: Christopher.Granade@microsoft.com MS. Date: 07/11/2018 MS. Topic: article No-loc:
+- "$$"
+- "$$"
+- "$"
+- "$"
+- "$"
+- "$$"
+- "\cdots"
+- "bmatrix"
+- "\ddots"
+- "\equiv"
+- "\sum"
+- "\begin"
+- "\end"
+- "\sqrt"
+- "\otimes"
+- "{"
+- "}"
+- "\text"
+- "\phi"
+- "\kappa"
+- "\psi"
+- "\alpha"
+- "\beta"
+- "\gamma"
+- "\delta"
+- "\omega"
+- "\bra"
+- "\ket"
+- "\boldone"
+- "\\\\"
+- "\\"
+- "="
+- "\frac"
+- "\text"
+- "\mapsto"
+- "\dagger"
+- "\to"
 - "\begin{cases}"
 - "\end{cases}"
-- '\operatorname'
-- '\braket'
-- '\id'
-- '\expect'
-- '\defeq'
-- '\variance'
-- '\dd'
-- '&'
+- "\operatorname"
+- "\braket"
+- "\id"
+- "\expect"
+- "\defeq"
+- "\variance"
+- "\dd"
+- "&"
 - "\begin{align}"
 - "\end{align}"
-- '\Lambda'
-- '\lambda'
-- '\Omega'
-- '\mathrm'
-- '\left'
-- '\right'
-- '\qquad'
-- '\times'
-- '\big'
-- '\langle'
-- '\rangle'
-- '\bigg'
-- '\Big'
-- '|'
-- '\mathbb'
-- '\vec'
-- '\in'
-- '\texttt'
-- '\ne'
-- <
-- '>'
-- '\leq'
-- '\geq'
-- ~~
+- "\Lambda"
+- "\lambda"
+- "\Omega"
+- "\mathrm"
+- "\left"
+- "\right"
+- "\qquad"
+- "\times"
+- "\big"
+- "\langle"
+- "\rangle"
+- "\bigg"
+- "\Big"
+- "|"
+- "\mathbb"
+- "\vec"
+- "\in"
+- "\texttt"
+- "\ne"
+- "<"
+- ">"
+- "\leq"
+- "\geq"
+- "~~"
 - "~"
 - "\begin{bmatrix}"
 - "\end{bmatrix}"
-- '\_'
-ms.openlocfilehash: 747c08df110f1f10efe552628d15e3500509b690
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85269567"
+- "\_"
+
 ---
 # <a name="quantum-oracles"></a>Hisse Oracles
 
-Oracle $O $ , başka bir algoritmaya girdi olarak kullanılan "kara kutu" işlemidir.
-Genellikle, bu gibi işlemler klasik bir işlev kullanılarak tanımlanır $f: \\ {0, 1 \\ } ^ n \- \\ {0, 1 \\ } ^ d, $ $n $ bit ikili bir giriş alır ve bir $m $ bit ikili çıktı üretir.
-Bunu yapmak için, belirli bir ikili girişi $x = (x_ {0 } , X_ {1 } , \noktalar, X_ {n-1 } ) $) göz önünde bulundurun.
-Qubit durumları $ \ket { \ VEC{x } } = \ket{X_ {0 } } \otimes \ket{X_ {1 } } \otimes \cnoktalar \otimes \ket{X_ {n-1 } } $ olarak etiketliyoruz.
+Oracle $ O $ , başka bir algoritmaya girdi olarak kullanılan "kara kutu" işlemidir.
+Genellikle, bu gibi işlemler, $ \\ { \\ } \to \\ { \\ } $ $ n $ bit ikili girişi alan ve bir $ d $ bit ikili çıkış üreten bir klasik işlev olan f: 0, 1 ^ n 0, 1 ^ d kullanılarak tanımlanır.
+Bunu yapmak için, belirli bir ikili giriş $ x = (X_ { 0 } , X_ { 1 } , \noktalar, X_ { n-1) } $ göz önünde bulundurun.
+Qubit durumlarını $ \ket { \vec { x } } = \ket { X_ { 0 } } \otimes \ket { X_ { 1 } } \otimes \cdots \otimes \ket { X_ { n-1 } } $ olarak etiketleyebilir.
 
-İlk $ \ket } olarak, {x = \ket{f (x)} $ $O bir $O tanımlamaya çalışır, ancak bu birkaç soruna neden olabilir.
-İlk olarak, $f $ farklı bir giriş ve çıkış boyutuna sahip olabilir ($n \ne m $ ), bu nedenle $O uygulamak, $ kayıttaki qubit sayısını değiştirebilir.
-İkinci olarak, $n = m olsa bile $ , işlev ters çevrilebilir olmayabilir: bazı $x \ne y için $f (x) = f (y) $ $ , sonra $O \ket {x } = O \ket {y } $, ancak $O ^ \hanger o { \ket x } \ne o ^ \hanger o \ket {y } $.
-Bu, ^ \dağılım $O adjoint işlemini oluşturmayamayacağız $ ve Oracles için tanımlanmış bir adjoint 'ın olması anlamına gelir.
+İlk $ $ olarak o $ \ket { x } = \ket { f (x) için o 'yu tanımlamaya çalışır } $ , ancak bu, birkaç soruna neden olabilir.
+İlk olarak, $ f 'nin $ farklı bir giriş ve çıkış boyutu ( $ n \ne m) olabilir $ ; Örneğin, $ O da $ kayıttaki qubit sayısını değiştirebilir.
+İkincisi, $ n m olsa = bile $ , işlev ters çevrilebilir olmayabilir: $ x y için f (x) = f (y) f (y) $ $ \ne $ , o zaman $ o \ket { x } = o y, o, o & o \ket { } $ $ \dagger \ket { x } \ne o ^ \dagger o \ket { y } $ .
+Bu, adeklem işlemi olarak $ ^ ' i oluşturmayacağız \dagger $ ve Oracles için tanımlanmış bir adjoint 'ın olması anlamına gelir.
 
 ## <a name="defining-an-oracle-by-its-effect-on-computational-basis-states"></a>Bir Oracle 'ı hesaplama tabanlı durumlar üzerinde etkile tanımlama
-Bu sorunlardan her ikisi de $ cevaplarımızı tutmak için $m qubits 'in ikinci bir kaydına bakarak ilgilenebiliriz.
-Daha sonra, Oracle 'ın tüm hesaplama tabanlı durumlarında etkisini tanımlayacağız: tüm $x \< \\ 0, 1 \\ } ^ n $ ve $y \in \\ {0, 1 \\ } ^ d $ ,
+$Yanıtınızı tutmak için ikinci bir m qubit kaydı sunarak bu sorunlardan her ikisiyle de ilgilenebiliriz $ .
+Ardından, Oracle 'ın tüm hesaplama tabanlı durumlarında etkisini tanımlayacağız: tüm $ x \in \\ { 0, 1 \\ } ^ n $ ve $ y \in \\ { 0, 1 \\ } ^ d $ ,
 
-$ $ \begin{align}
-    O (\ket{x } \otimes \ket{y } ) = \ket{x } \otimes \ket{y \oplus f (x)}.
+$$
+\begin{align}
+    O ( \ket { x } \otimes \ket { y } ) = \ket { x } \otimes \ket { y \oplus f (x) } .
 \end{align}
 $$
 
-Şimdi, oluşturma ile birlikte $O = O ^ \dağılım $ , bu nedenle daha önceki sorunlardan her ikisi çözümlendik.
+Şimdi de şu anda bu $ = \dagger $ nedenle, daha önceki sorunları çözeceğiz.
 
 > [!TIP]
-> Bu $O = O ^ {\dağılım $ olduğunu görmek için } $O, $ tüm $a < \ OPLUS b \oplus b = a $a $ , b \ in \{ 0, 1 \} $.
-> Sonuç olarak, \ket{x } \ket{y \oplus f (x)} = \ket{x } \ket{y \oplus f (x) \oplus f (x)} = \ket{x } \ket{y $ $O } .
+>O o o 'un o & u olduğunu görmek için, b! ' nin bir $ = { \dagger } $ $ = \boldone $ $ \oplus b \ OPLUS b a ile bu yana = $ $ , b \in \[ ! olduğunu unutmayın. Üs. Hayır-LOC ({)] 0, 1 \[ ! Üs. Hayır-LOC (})] $ .
+>Sonuç olarak, $ O \ket { x } \ket { y \oplus f (x) } = \ket { x } \ket { y \oplus f (x) \oplus f (x) } = \ket { x } \ket { y } $ .
 
-Bu şekilde, her hesaplama tabanlı durum için Oracle bu şekilde tanımlanması, her bir } } $ durum için $O nasıl davrandığını tanımlar.
-Bu, $ tüm hisse işlemleri gibi $O, üzerinde işlem yaptığı durumda doğrusal bir şekilde.
-Örneğin, $H \ket{0 } = { \tus+} $ ve $H \ket{1 } = { \tus-} $ tarafından tanımlanan Hadamard işlemini göz önünde bulundurun.
-$H $ $ \ket +} $ üzerinde nasıl davranması gerektiğini öğrenmek istiyoruz, { Bu $H, $ Doğrusal olduğunu,
+Bu şekilde, her hesaplama tabanlı durum x y için Oracle bu şekilde tanımlamak, $ \ket { } \ket { } $ O zaman $ O gibi $ diğer tüm durumları nasıl davrandığını da tanımlar.
+Bu $ $ , tüm hisse işlemleri gibi, üzerinde işlem yaptığı durumunda doğrusal bir şekilde olmak üzere, o kadar her şey için hemen takip eder.
+Örneğin, $ h \ket { 0 } = \ket { + } $ ve $ h \ket { 1 } = \ket { - } $ tarafından tanımlanan Hadamard işlemini göz önünde bulundurun.
+H 'nin üzerinde nasıl hareket eteceğimizi öğrenmek istiyoruz, $ $ $ \ket { + } $ Bu $ h $ 'nin doğrusal olduğunu kullanabiliriz.
 
-$ $ \begin{align}
-H \ket { +} & = \frac{1 } {\sqrt{2 } } H (\ket{0 } + \ket{1 } ) = \frac{1 } {\sqrt{2 } } (h \ket {0 } + H \ket {1 } ) \\ \\ & = \frac{1 } {\sqrt{2 } } (\ket { +} + \ demet { -}) = \frac12 (\ket{0 } + \ket{1 } + \ket{0 } -\ket{1 } ) = \ket{0 } .
+$$
+\begin{align}
+H \ket { + } & = \frac { 1 } { \sqrt { 2 } } sa ( \ket { 0 }  +  \ket { 1 } ) = \frac { 1 } { \sqrt { 2 } } (h \ket { 0 } + h \ket { 1 } )\\\\
+           &= \frac{ 1 } { \sqrt { 2 } } ( \ket { + }  +  \ket { - } ) = \frac 12 ( \ket { 0 }  +  \ket { 1 }  +  \ket { 0 }  -  \ket { 1 } ) = \ket { 0 } .
 \end{align}
 $$
 
-Oracle $O tanımlama durumunda $ benzer şekilde, { } $n + m qubitleri üzerinde herhangi bir durum $ \ket \ PSI $ $ şöyle yazılabilir.
+Oracle O sitemizi tanımlama durumunda $ $ benzer şekilde, $ \ket { \psi } $ $ n + m qubits üzerinde herhangi bir durumun şu $ şekilde yazılabileceğini de kullanabilirsiniz
 
-$ $ \begin{align}
-\ket { \ psi } & = \ sum_ {x \in \\ {0, 1 \\ } ^ n, y \ in \\ {0, 1 \\ } ^ d } \ Alpha (x, y) \ket{x } \ket{y}
+$$
+\begin{align}
+\ket{\psi}& = \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ e } \alpha (x, y) \ket { x } \ket { y}
 \end{align}
 $$
 
-Burada $ \Alpha: \\ {0, 1 \\ } ^ n \times \\ {0, 1 \\ } ^ d \ to \mathbb{C } $, $ \tus\psı $ durumunun katsayılarını temsil eder { } . Bu nedenle,
+Burada $ \alpha : \\ { 0, 1 \\ } ^ n \times \\ { 0, 1 \\ } ^ m \to \mathbb { C, } $ durumun katsayılarını temsil eder $ \ket { \psi } $ . Bu nedenle,
 
-$ $ \begin{align}
-O \ket \ { psi } & = O \ sum_ {x \in \\ {0, 1 \\ } ^ n, y \ in \\ {0, 1 \\ } ^ m } \ Alpha (x, y) \ket{x } \ket{y } \\ \\ & = \ sum_ {x \in \\ {0, 1 \\ } ^ n, y \ in \\ {0, 1 \\ } ^ m } \ Alpha (x, y) O \ket{x } \ket{y } \\ \\ & = \ sum_ {x \in \\ {0, 1 \\ } ^ n, y \ içinde { \\ 0, 1 \\ } ^ m } \Alpha (x, y) \ket{x } \ket{y \oplus f (x)}.
+$$
+\begin{align}
+O o \ket { \psi } & = \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & , = 1 ^ n, y 0, 1 ^ m (x, y) O \sum _ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
+             &= \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ e } \alpha (x, y) \ket { x } \ket { y \ OPLUS f (x) } .
 \end{align}
 $$
 
 ## <a name="phase-oracles"></a>Phase Oracles
-Alternatif olarak, $ $ $O girişine göre bir _aşama_ uygulayarak bir Oracle $O $f kodlayabiliriz $ .
-Örneğin, $ $ $ \begin{align gibi $O tanımlayabiliriz}
-    O \ket{x } = (-1) ^ {f (x)} \ket{x } .
+Alternatif olarak, $ $ $ $ O 'ya giriş temelinde bir _aşama_ uygulayarak bir Oracle 'a f $ 'yi kodlayabiliriz $ . Örneğin, $ o $ gibi$$
+\begin{align}
+    O \ket { x } = (-1) ^ { f (x) } \ket { x } .
 \end{align}
-$ $ Bir evre, başlangıçta hesaplama tabanlı bir durum $ \ket{x $ ile bir yazmaç üzerinde işlem yaptığı takdirde } Bu aşama genel bir aşamadır ve bu nedenle observable değildir.
+$$
+Bir evre, başlangıçta hesaplama tabanlı bir durum x 'te bir yazmaç üzerinde hareket eder $ \ket { } $ , bu aşama genel bir aşamadır ve bu nedenle observable değildir.
 Ancak bu tür bir Oracle, bir üst konuma veya denetimli bir işleme uygulandığında çok güçlü bir kaynak olabilir.
-Örneğin, $ tek bir-qubit işlevi $f _F bir aşamayı veya $O düşünün $ .
-Sonra, $ $ \begin{align}
-    O_f \ket { +} & = O_f (\ket{0 } + \ket{1 } )/\sqrt{2 } \\ \\ & = ((-1) ^ {f (0)} \ket{0 } + (-1) ^ {f (1)} \sı{1 } )/\sqrt{2 } \\ \\ & = (-1) ^ {f (0)} (\ket{0 } + (-1) ^ {f (1)-f (0)} \ket{1 } )/\sqrt{2 } \\ \\ & = (-1) ^ {f (0)} Z ^ {f (0)-f (1)} { \tus+}.
+Örneğin, $ $ tek bir-qubit işlevi için bir Oracle O_f aşaması düşünün $ $ .
+Ni$$
+\begin{align}
+    O_f\ket{+}
+        &=O_f ( \ket { 0 }  +  \ket { 1 } )/ \sqrt { 2 }\\\\
+        &=((-1) ^ { f (0) } \ket { 0 } + (-1) ^ { f (1) } \ket { 1 } )/ \sqrt { 2 }\\\\
+        &=(-1) ^ { f (0) } ( \ket { 0 } + (-1) ^ { f (1)-f (0) } \ket { 1 } )/ \sqrt { 2 }\\\\
+        &=(-1) ^ { f (0) } Z ^ { f (0)-f (1) } \ket { + } .
 \end{align}
 $$
 

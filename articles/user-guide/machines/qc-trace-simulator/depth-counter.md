@@ -1,26 +1,42 @@
 ---
-title: Derinlik sayacı
-description: Hisse bir programda çağrılan her işlemin derinlik sayısını toplayan Microsoft QDK derinlik sayacı hakkında bilgi edinin.
+title: Derinlik sayacı-hisse geliştirme seti
+description: 'Bir Q # programında çağrılan her işlemin derinlik sayısını toplamak için hisse izi simülatörü kullanan Microsoft QDK derinlik sayacı hakkında bilgi edinin.'
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
-ms.openlocfilehash: 0029a00e6a3563dc542daeda2afa7cabf42441fb
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: 811e387fedf547d2681518ae0bb525c13dc84ff4
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415288"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871136"
 ---
-# <a name="depth-counter"></a>Derinlik sayacı
+# <a name="quantum-trace-simulator-depth-counter"></a>Hisse izleme simülatörü: derinlik sayacı
 
-, `Depth Counter` Hisse bilgisayar [Izleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro)'nin bir parçasıdır.
-Bir hisse bir programda çağrılan her işlemin derinliğine yönelik alt sınırı temsil eden sayıları toplamak için kullanılır. ' Den tüm işlemler <xref:microsoft.quantum.intrinsic> tek qubit ifade, T kapıları, tek qubit Clienfford kapıları, CNOT kapıları ve Multi-Qubitpauli gözlemlenenler ölçümleri bakımından ifade edilir. Kullanıcılar, alanı aracılığıyla temel işlemlerin her biri için derinlik ayarlayabilir `gateTimes` <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .
+Derinlik sayacı, hisse Geliştirme Seti [hisse izleyici benzeticisinin](xref:microsoft.quantum.machines.qc-trace-simulator.intro)bir parçasıdır.
+Bu işlemi, bir hisse dosyasında çağrılan her işlemin derinliğine ait derinlik alt sınırını temsil eden sayıları toplamak için kullanabilirsiniz. 
 
-Varsayılan olarak, tüm işlemler, 1 derinliğine sahip T kapısı dışında derinlik 0 ' dır. Bu, varsayılan olarak yalnızca T ve Operations 'in yalnızca T derinliğini hesaplandığı anlamına gelir (Bu genellikle tercih edilir). Toplanan istatistikler, işlemler çağrı grafiğinin tüm kenarlarına toplanır. 
+## <a name="depth-values"></a>Derinlik değerleri
 
-Şimdi işlemin derinliğini hesaplamıza izin verin <xref:microsoft.quantum.intrinsic.t> <xref:microsoft.quantum.intrinsic.ccnot> . Aşağıdaki Q # örnek kodunu kullanacağız:
+Varsayılan olarak, tüm işlemler, **0** `T` **1**derinliğine sahip olan işlem haricinde 0 derinliğine sahiptir. Bu, varsayılan olarak yalnızca `T` işlemlerin derinliğini (çoğunlukla tercih edilir) hesaplandığı anlamına gelir. Derinlik sayacı, işlemin [çağrı grafiğinin](https://en.wikipedia.org/wiki/Call_graph)tüm kenarlarındaki istatistikleri toplar ve toplar.
+
+Tüm <xref:microsoft.quantum.intrinsic> işlemler tek qubit döndürmeler, <xref:microsoft.quantum.intrinsic.t> işlemler, tek qubit Clienfford işlemleri, <xref:microsoft.quantum.intrinsic.cnot> işlemler ve Multi-Qubitpauli gözlemlenenler ölçümleri bakımından ifade edilir. Kullanıcılar, alanı aracılığıyla temel işlemlerin her biri için derinlik ayarlayabilir `gateTimes` <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .
+
+## <a name="invoking-the-depth-counter"></a>Derinlik sayacını çağırma
+
+Hisse izi izleme simülatörünü derinlik sayacından çalıştırmak için bir <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> örnek oluşturmanız, özelliğini true olarak ayarlamanız `UseDepthCounter` ve sonra **true** <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> parametresi olarak yeni bir örnek oluşturmanız gerekir `QCTraceSimulatorConfiguration` . 
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UseDepthCounter = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## <a name="using-the-depth-counter-in-a-c-host-program"></a>C# ana programında derinlik sayacını kullanma
+
+Bu bölümde aşağıdaki C# örneği `T` `CCNOT` , aşağıdaki Q # örnek koduna bağlı olarak işlemin derinliğini hesaplar:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -33,15 +49,13 @@ operation ApplySampleWithCCNOT() : Unit {
 }
 ```
 
-## <a name="using-depth-counter-within-a-c-program"></a>C# programı içinde derinlik sayacı kullanma
-
-Bunun derinliğine sahip olup olmadığını denetlemek için `CCNOT` `T` `ApplySampleWithCCNOT` `T` Aşağıdaki C# kodunu kullanabiliriz:
+Bunun derinliğine sahip olup olmadığını denetlemek için `CCNOT` `T` **5** `ApplySampleWithCCNOT` `T` aşağıdaki **6**C# kodunu kullanın:
 
 ```csharp
 using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
 using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();
-config.useDepthCounter = true;
+config.UseDepthCounter = true;
 var sim = new QCTraceSimulator(config);
 var res = ApplySampleWithCCNOT.Run(sim).Result;
 
@@ -49,18 +63,16 @@ double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounte
 double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 ```
 
-Programın ilk kısmı yürütülür `ApplySampleWithCCNOT` . İkinci bölümde, `QCTraceSimulator.GetMetric` ve derinliğini almak için yöntemini kullanıyoruz `T` `CCNOT` `ApplySampleWithCCNOT` : 
+Programın ilk kısmı çalışır `ApplySampleWithCCNOT` . İkinci bölüm, [`GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) ve derinliğini almak için yöntemini kullanır `T` `CCNOT` `ApplySampleWithCCNOT` . 
 
-```csharp
-double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
-double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
-```
-
-Son olarak, CSV biçiminde toplanan tüm istatistiklerin çıktısını almak için `Depth Counter` aşağıdakileri kullanabilirsiniz:
+Son olarak, aşağıdaki kullanarak, derinlik sayacı tarafından toplanan tüm istatistiklerin CSV biçiminde çıktısını alabilirsiniz:
 ```csharp
 string csvSummary = sim.ToCSV()[MetricsCountersNames.depthCounter];
 ```
 
-## <a name="see-also"></a>Ayrıca bkz. ##
+## <a name="see-also"></a>Ayrıca bkz.
 
-- Hisse bilgisayar [Izleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro) genel bakış.
+- Hisse Geliştirme Seti [hisse izi simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro) genel bakış.
+- <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API başvurusu.
+- <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>API başvurusu.
+- <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.DepthCounter>API başvurusu.

@@ -3,20 +3,22 @@ title: Enerji düzeyi tahminleri edinme
 description: "Molesel Hydrogen 'ın enerji düzeyi değerlerini tahmin eden örnek bir Q # programını gözden geçir."
 author: guanghaolow
 ms.author: gulow
-ms.date: 10/23/2018
+ms.date: 07/02/2020
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: 3242d8c6dc6fad2bd99055027dd7ce4ec3510ff4
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: b26538980366cf4cbe01fc2ef59580ae182f1e8a
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276059"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871578"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Enerji düzeyi tahminleri edinme
-Enerji seviyelerinin değerlerini tahmin etmek, hisse Chemistry 'ın asıl uygulamalarından biridir. Burada, bu, molesel Hydrogen 'nin kurallı örneği için nasıl gerçekleştirilebileceğini özetler. Bu bölümde başvurulan örnek, `MolecularHydrogen` Kimya örnekleri deposunda bulunur. Çıktıyı gösteren daha fazla görsel örnek `MolecularHydrogenGUI` tanıtım olur.
+Enerji seviyelerinin değerlerini tahmin etmek, hisse Chemistry 'ın asıl uygulamalarından biridir. Bu makalede, bu işlemi, molesel Hydrogen 'nin kurallı örneği için nasıl gerçekleştirebileceğiniz özetlenmektedir. Bu bölümde başvurulan örnek, [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) Kimya örnekleri deposunda bulunur. Çıktıyı gösteren daha fazla görsel örnek [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) tanıtım olur.
 
-İlk adımımız, molesel Hydrogen 'i temsil eden Hamiltonian 'yi oluşturmak için kullanılır. Bu, NWChem aracı aracılığıyla oluşturulabilse de, bu örnekteki breçekimi için Hamiltonian koşullarını el ile ekledik.
+## <a name="estimating-the-energy-values-of-molecular-hydrogen"></a>Molesel Hydrogen 'ın enerji değerlerini tahmin etme
+
+İlk adım, molesel Hydrogen 'i temsil eden Hamiltonian 'yi oluşturmak için kullanılır. Bu işlemi NWChem aracını kullanarak oluşturabilseniz de, kısaltma için bu örnek Hamiltonian koşullarını el ile ekler.
 
 ```csharp
     // These orbital integrals are represented using the OrbitalIntegral
@@ -35,11 +37,11 @@ Enerji seviyelerinin değerlerini tahmin etmek, hisse Chemistry 'ın asıl uygul
         new OrbitalIntegral(new int[] { }, energyOffset)
     };
 
-    // We initialize a fermion Hamiltonian data structure and add terms to it.
+    // Initialize a fermion Hamiltonian data structure and add terms to it.
     var fermionHamiltonian = new OrbitalIntegralHamiltonian(orbitalIntegrals).ToFermionHamiltonian();
 ```
 
-Hamiltonian benzetimi yapmak, fermıon işleçlerini qubit işleçlerine dönüştürmemizi gerektirir. Bu dönüştürme, aşağıdaki gibi, Ürdün-Wigner kodlaması aracılığıyla gerçekleştirilir.
+Hamiltonian benzetimi yapmak, fermıon işleçlerini qubit işleçlerine dönüştürmeyi gerektirir. Bu dönüştürme, şu şekilde Ürdün-Wigner kodlaması aracılığıyla gerçekleştirilir:
 
 ```csharp
     // The Jordan-Wigner encoding converts the fermion Hamiltonian, 
@@ -49,8 +51,8 @@ Hamiltonian benzetimi yapmak, fermıon işleçlerini qubit işleçlerine dönü�
     // computer.
     var jordanWignerEncoding = fermionHamiltonian.ToPauliHamiltonian(Pauli.QubitEncoding.JordanWigner);
 
-    // We also need to create an input quantum state to this Hamiltonian.
-    // Let us use the Hartree-Fock state.
+    // You also need to create an input quantum state to this Hamiltonian.
+    // Use the Hartree-Fock state.
     var fermionWavefunction = fermionHamiltonian.CreateHartreeFockState(nElectrons);
 
     // This Jordan-Wigner data structure also contains a representation 
@@ -60,7 +62,7 @@ Hamiltonian benzetimi yapmak, fermıon işleçlerini qubit işleçlerine dönü�
     var qSharpData = QSharpFormat.Convert.ToQSharpFormat(qSharpHamiltonianData, qSharpWavefunctionData);
 ```
 
-Şimdi Hamiltonian 'nin `qSharpData` benzetimini yaparken Hamiltonian 'i temsil eden işlevi geçirdik `TrotterStepOracle` . [Simulating Hamiltonian dynamics](xref:microsoft.quantum.libraries.standard.algorithms) `TrotterStepOracle`Hamiltonian 'nin gerçek zamanlı evrimini yaklaştırın bir hisse işlemi döndürür.
+Daha sonra, `qSharpData` Hamiltonian 'yi temsil eden, `TrotterStepOracle` işlevine. `TrotterStepOracle`Hamiltonian 'ın gerçek zamanlı evrimini yaklaştırın bir hisse işlemi döndürür. Daha fazla bilgi için bkz. [Hamiltonian Dynamics benzetimi](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms).
 
 ```qsharp
 // qSharpData passed from driver
@@ -74,13 +76,13 @@ let integratorOrder = 4;
 
 // `oracle` is an operation that applies a single time-step of evolution for duration `stepSize`.
 // `rescale` is just `1.0/stepSize` -- the number of steps required to simulate unit-time evolution.
-// `nQubits` is the number of qubits that must be allocated to run the `oracle` operatrion.
+// `nQubits` is the number of qubits that must be allocated to run the `oracle` operation.
 let (nQubits, (rescale, oracle)) =  TrotterStepOracle (qSharpData, stepSize, integratorOrder);
 ```
 
-Artık, yukarıdaki simülasyonu kullanarak zemin eyalet enerji hakkında bilgi edinmek için standart kitaplığın aşama tahmini algoritmalarını kullanabiliriz. Bu, hisse zemin durumu için iyi bir yaklaşık hazırlama gerektirir. Şemada bu tür bir yaklaşıma yönelik öneriler verilmiştir `Broombridge` , ancak bu öneriler yoksa, varsayılan yaklaşım, `hamiltonian.NElectrons` diyagonal tek elektron terim enerji düzeyini en aza indirmek için bir dizi elektricü ekler. Aşama tahmini işlevleri ve işlemleri, [Microsoft. hisse. karakterleştirme ad alanında](xref:microsoft.quantum.characterization in DocFX notation)bulunur.
+Bu noktada, önceki simülasyonu kullanarak kara eyalet enerji hakkında bilgi edinmek için standart kitaplığın [aşama tahmini algoritmalarını](xref:microsoft.quantum.libraries.characterization) kullanabilirsiniz. Bu, hisse zemin durumu için iyi bir yaklaşık hazırlama gerektirir. Bu tür bir ilgili önermeler [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) şemada verilmiştir. Ancak, Bu önerilerin karşılanmasına `hamiltonian.NElectrons` izin vermek için varsayılan yaklaşım, diyagonal tek bir elektron terim enerji düzeyini en aza indirmek için bir dizi elektricü ekler. Aşama tahmini işlevleri ve işlemleri, [Microsoft. hisse. karakterleştirme](xref:microsoft.quantum.characterization) ad alanındaki docfx gösteriminde verilmiştir.
 
-Aşağıdaki kod parçacığında, kimya simülasyonu kitaplığı tarafından gerçek zamanlı gelişme çıktısının hisse aşamalı tahminle nasıl tümleştirileceği gösterilmektedir.
+Aşağıdaki kod parçacığında, kimya simülasyonu kitaplığı tarafından gerçek zamanlı evmin çıktısının hisse alma tahminiyle nasıl tümleştirildiğini gösterilmektedir.
 
 ```qsharp
 operation GetEnergyByTrotterization (
@@ -93,42 +95,42 @@ operation GetEnergyByTrotterization (
     // `qSharpData`
     let (nSpinOrbitals, fermionTermData, statePrepData, energyOffset) = qSharpData!;
     
-    // We use a Product formula, also known as `Trotterization` to
+    // Using a Product formula, also known as `Trotterization`, to
     // simulate the Hamiltonian.
     let (nQubits, (rescaleFactor, oracle)) = 
         TrotterStepOracle(qSharpData, trotterStepSize, trotterOrder);
     
-    // The operation that creates the trial state is defined below.
+    // The operation that creates the trial state is defined here.
     // By default, greedy filling of spin-orbitals is used.
     let statePrep = PrepareTrialState(statePrepData, _);
     
-    // We use the Robust Phase Estimation algorithm
+    // Using the Robust Phase Estimation algorithm
     // of Kimmel, Low and Yoder.
     let phaseEstAlgorithm = RobustPhaseEstimation(nBitsPrecision, _, _);
     
     // This runs the quantum algorithm and returns a phase estimate.
     let estPhase = EstimateEnergy(nQubits, statePrep, oracle, phaseEstAlgorithm);
     
-    // We obtain the energy estimate by rescaling the phase estimate
+    // Now, obtain the energy estimate by rescaling the phase estimate
     // with the trotterStepSize. We also add the constant energy offset
     // to the estimated energy.
     let estEnergy = estPhase * rescaleFactor + energyOffset;
     
-    // We return both the estimated phase, and the estimated energy.
+    // Return both the estimated phase and the estimated energy.
     return (estPhase, estEnergy);
 }
 ```
 
-Bu Q # kodu artık sürücü programından çağrılamıyor. Aşağıda, bir tam durum simülatörü oluşturacağız ve bir `GetEnergyByTrotterization` zemin durumu enerji elde etmek üzere çalıştırdık.
+Artık ana bilgisayar programından Q # kodunu çağırabilirsiniz. Aşağıdaki C# kodu bir tam durumlu simülatör oluşturur ve `GetEnergyByTrotterization` zemin durumu enerji elde etmek için çalışır.
 
 ```csharp
 using (var qsim = new QuantumSimulator())
 {
-    // We specify the bits of precision desired in the phase estimation 
+    // Specify the bits of precision desired in the phase estimation 
     // algorithm
     var bits = 7;
 
-    // We specify the step-size of the simulated time-evolution. This needs to
+    // Specify the step size of the simulated time evolution. The step size needs to
     // be small enough to avoid aliasing of phases, and also to control the
     // error of simulation.
     var trotterStep = 0.4;
@@ -136,10 +138,10 @@ using (var qsim = new QuantumSimulator())
     // Choose the Trotter integrator order
     Int64 trotterOrder = 1;
 
-    // As the quantum algorithm is probabilistic, let us run a few trials.
+    // As the quantum algorithm is probabilistic, run a few trials.
 
     // This may be compared to true value of
-    Console.WriteLine("Exact molecular Hydrogen ground state energy: -1.137260278.\n");
+    Console.WriteLine("Exact molecular hydrogen ground state energy: -1.137260278.\n");
     Console.WriteLine("----- Performing quantum energy estimation by Trotter simulation algorithm");
     for (int i = 0; i < 5; i++)
     {
@@ -149,4 +151,7 @@ using (var qsim = new QuantumSimulator())
 }
 ```
 
-İki parametrenin döndürüldüğünü unutmayın. `energyEst`, orta eyalet enerji tahmini tahminidir ve ortalama bir değer olmalıdır `-1.137` . `phaseEst`, aşama tahmini algoritması tarafından döndürülen ham aşamadır ve çok büyük bir durum nedeniyle diğer ad oluşma sırasında tanılanması yararlı olur `trotterStep` .
+İşlem iki parametre döndürür: 
+
+- `energyEst`, orta eyalet enerji tahminidir ve `-1.137` Ortalama üzerinde yakın olmalıdır. 
+- `phaseEst`, aşama tahmini algoritması tarafından döndürülen ham aşamadır. Bu, çok büyük bir değer nedeniyle ortaya çıktığında diğer ad tanılarken yararlı olur `trotterStep` .

@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: cd619607af9e2b601f3bec1304c5729d84312f35
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: db6e49e94e5ceb3b1b0b2d6ab57391618084072b
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884081"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870983"
 ---
 # <a name="testing-and-debugging"></a>Test etme ve hata ayıklama
 
@@ -50,7 +50,7 @@ Başlangıçta bu dosya, `AllocateQubit` yeni ayrılmış bir qubitin $ \ket {0}
     operation AllocateQubit () : Unit {
 
         using (qubit = Qubit()) {
-            Assert([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
+            AssertMeasurement([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
         
         Message("Test passed");
@@ -177,7 +177,7 @@ Burada, <xref:microsoft.quantum.environment.getqubitsavailabletouse> kullanılab
 Bu, programın ve yürütme ortamının genel durumuna bağlı olduğundan, tanımımız da `AssertQubitsAreAvailable` bir işlem olmalıdır.
 Ancak, işleve giriş olarak basit bir değer sağlamak için bu genel durumu kullanabiliriz `Bool` `Fact` .
 
-[Prelude](xref:microsoft.quantum.libraries.standard.prelude), bu fikirleri oluşturmak için iki özellikle yararlı onay sağlar <xref:microsoft.quantum.intrinsic.assert> ve <xref:microsoft.quantum.intrinsic.assertprob> her ikisi de üzerinde işlem olarak modellenir `()` . Bu onayların her biri, belirli bir ölçümü, ölçümün gerçekleştirildiği bir hisse izini ve kuramsal bir sonucu açıklayan bir Pauli işleci alır.
+[Prelude](xref:microsoft.quantum.libraries.standard.prelude), bu fikirleri oluşturmak için iki özellikle yararlı onay sağlar <xref:microsoft.quantum.diagnostics.assertmeasurement> ve <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> her ikisi de üzerinde işlem olarak modellenir `()` . Bu onayların her biri, belirli bir ölçümü, ölçümün gerçekleştirildiği bir hisse izini ve kuramsal bir sonucu açıklayan bir Pauli işleci alır.
 Simülasyonu tarafından çalışan hedef makineler, [hiçbir kopya](https://en.wikipedia.org/wiki/No-cloning_theorem)olmayan kopyalarla bağlantılı değildir ve bu tür ölçümlere, bu tür onayları geçen kaydı etkilemeden gerçekleştirebilir.
 Daha sonra bir Benzetici, `PositivityFact` önceki işleve benzer şekilde, kuramsal sonuç uygulamada gözlemlenmeyen hesaplamayı durdurabilir:
 
@@ -185,14 +185,14 @@ Daha sonra bir Benzetici, `PositivityFact` önceki işleve benzer şekilde, kura
 using (register = Qubit()) 
 {
     H(register);
-    Assert([PauliX], [register], Zero);
+    AssertMeasurement([PauliX], [register], Zero);
     // Even though we do not have access to states in Q#,
     // we know by the anthropic principle that the state
     // of register at this point is |+〉.
 }
 ```
 
-Fiziksel hisse donanımı ' nde, hiçbir kopya olmaması durumunda bir hisse durumunun incelediği, `Assert` ve `AssertProb` işlemleri yalnızca `()` başka bir etkisi olmadan döndürülür.
+Fiziksel hisse donanımı ' nde, hiçbir kopya olmaması durumunda bir hisse durumunun incelediği, `AssertMeasurement` ve `AssertMeasurementProbability` işlemleri yalnızca `()` başka bir etkisi olmadan döndürülür.
 
 <xref:microsoft.quantum.diagnostics>Ad alanı, `Assert` ailede daha fazla gelişmiş koşul için daha fazla sayıda işlev sağlar. 
 
