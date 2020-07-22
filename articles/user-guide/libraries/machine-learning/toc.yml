@@ -1,5 +1,5 @@
 - name: Kuantum makine öğrenimine giriş
-  href: introduction.md
+  href: intro.md
 - name: Temel sınıflandırma
   href: basic-classification.md
 - name: Kendi sınıflandırıcınızı tasarlama
