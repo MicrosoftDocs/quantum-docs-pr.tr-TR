@@ -1,25 +1,29 @@
 ---
-title: Tam durum simülatör
-description: 'Q # programlarınızı Microsoft Quantum Development Kit tam durum Benzeticisinde çalıştırmayı öğrenin.'
+title: Tam durum hisse simülatör-hisse geliştirme seti
+description: 'Q # programlarınızı Microsoft Quantum Development Kit tam durum benzeticisinde çalıştırmayı öğrenin.'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
-ms.date: 12/7/2017
+ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.full-state-simulator
-ms.openlocfilehash: f73abbc4366b003e4b22366ed83ca9c897737307
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 563fdbd2a45461d112e4c46651eddd75c6fc3db2
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275647"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871187"
 ---
-# <a name="quantum-development-kit-full-state-simulator"></a><span data-ttu-id="03e77-103">Hisse geliştirme seti tam durum simülatörü</span><span class="sxs-lookup"><span data-stu-id="03e77-103">Quantum Development Kit Full State Simulator</span></span>
+# <a name="quantum-development-kit-qdk-full-state-simulator"></a><span data-ttu-id="5c42c-103">Hisse geliştirme seti (QDK) tam durum simülatör</span><span class="sxs-lookup"><span data-stu-id="5c42c-103">Quantum Development Kit (QDK) full state simulator</span></span>
 
-<span data-ttu-id="03e77-104">Hisse geliştirme seti, Microsoft Research 'tan [Liq $ UI | \rangle $](http://stationq.github.io/Liquid/) ile benzer bir tam durum hisse Benzetici sağlar.</span><span class="sxs-lookup"><span data-stu-id="03e77-104">The Quantum Development Kit provides a full state quantum simulator similar to [LIQ$Ui|\rangle$](http://stationq.github.io/Liquid/) from Microsoft Research.</span></span>
-<span data-ttu-id="03e77-105">Bu Benzetici, bilgisayarınızda Q # dilinde yazılan hisse algoritmaları yürütmek ve hatalarını ayıklamak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="03e77-105">This simulator can be used to execute and debug quantum algorithms written in Q# on your computer.</span></span>
+<span data-ttu-id="5c42c-104">QDK, yerel bilgisayarınızdaki bir hisse makinenizin benzetimini yapan tam bir durum simülatörü sağlar.</span><span class="sxs-lookup"><span data-stu-id="5c42c-104">The QDK provides a full state simulator that simulates a quantum machine on your local computer.</span></span> <span data-ttu-id="5c42c-105">En fazla 30 qubit kullanarak Q # dilinde yazılan hisse algoritmaları çalıştırmak ve hatalarını ayıklamak için tam durum simülatörü ' ni kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="5c42c-105">You can use the full state simulator to run and debug quantum algorithms written in Q#, utilizing up to 30 qubits.</span></span> <span data-ttu-id="5c42c-106">Tam durum simülatörü, Microsoft Research 'ın [Liq $ UI | \rangle $](http://stationq.github.io/Liquid/) platformunda kullanılan hisse simülatcıya benzer.</span><span class="sxs-lookup"><span data-stu-id="5c42c-106">The full state simulator is similar to the quantum simulator used in the  [LIQ$Ui|\rangle$](http://stationq.github.io/Liquid/) platform from Microsoft Research.</span></span>
 
-<span data-ttu-id="03e77-106">Bu hisse Benzetici, sınıfı aracılığıyla sunulur `QuantumSimulator` .</span><span class="sxs-lookup"><span data-stu-id="03e77-106">This quantum simulator is exposed via the `QuantumSimulator` class.</span></span> <span data-ttu-id="03e77-107">Simülatörü kullanmak için, bu sınıfın bir örneğini oluşturun ve `Run` diğer parametrelerin geri kalanında birlikte yürütmek istediğiniz hisse işlem yöntemine geçirin:</span><span class="sxs-lookup"><span data-stu-id="03e77-107">To use the simulator, simply create an instance of this class and pass it to the `Run` method of the quantum operation you want to execute along with the rest of the parameters:</span></span>
+## <a name="invoking-and-running-the-full-state-simulator"></a><span data-ttu-id="5c42c-107">Tam durum simülatörü çağırma ve çalıştırma</span><span class="sxs-lookup"><span data-stu-id="5c42c-107">Invoking and running the full state simulator</span></span>
 
+<span data-ttu-id="5c42c-108">Sınıf aracılığıyla tam durum simülatörünü kullanıma sunacaksınız `QuantumSimulator` .</span><span class="sxs-lookup"><span data-stu-id="5c42c-108">You expose the full state simulator via the `QuantumSimulator` class.</span></span> <span data-ttu-id="5c42c-109">Daha fazla ayrıntı için bkz. [bir Q # programını çalıştırma yolları](xref:microsoft.quantum.guide.host-programs).</span><span class="sxs-lookup"><span data-stu-id="5c42c-109">For additional details, see [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs).</span></span>
+
+### <a name="invoking-the-simulator-from-c"></a><span data-ttu-id="5c42c-110">C 'den simülatör çağrılıyor #</span><span class="sxs-lookup"><span data-stu-id="5c42c-110">Invoking the simulator from C#</span></span>
+
+<span data-ttu-id="5c42c-111">Sınıfın bir örneğini oluşturun `QuantumSimulator` ve sonra `Run` ek parametrelerle birlikte bir hisse işlem yöntemine geçirin.</span><span class="sxs-lookup"><span data-stu-id="5c42c-111">Create an instance of the `QuantumSimulator` class and then pass it to the `Run` method of a quantum operation, along with any additional parameters.</span></span>
 ```csharp
     using (var sim = new QuantumSimulator())
     {
@@ -28,13 +32,35 @@ ms.locfileid: "85275647"
     }
 ```
 
-## <a name="idisposable"></a><span data-ttu-id="03e77-108">IDisposable</span><span class="sxs-lookup"><span data-stu-id="03e77-108">IDisposable</span></span>
+<span data-ttu-id="5c42c-112">`QuantumSimulator`Sınıfı <xref:System.IDisposable> arabirimini uyguladığından, `Dispose` simülatör örneğine gerek duyduktan sonra yöntemini çağırmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="5c42c-112">Because the `QuantumSimulator` class implements the <xref:System.IDisposable> interface, you must call the `Dispose` method once you do not need the instance of the simulator anymore.</span></span> <span data-ttu-id="5c42c-113">Bunu yapmanın en iyi yolu, simülatör bildirimini ve işlemlerini yöntemi otomatik olarak çağıran bir [using](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using-statement) ifadesiyle sarmalıdır `Dispose` .</span><span class="sxs-lookup"><span data-stu-id="5c42c-113">The best way to do this is to wrap the simulator declaration and operations within a [using](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using-statement) statement, which automatically calls the `Dispose` method.</span></span>
 
-<span data-ttu-id="03e77-109">`QuantumSimulator`Sınıfı uygular <xref:System.IDisposable> , bu nedenle `Dispose` Benzetici örneği artık kullanılmaması durumunda yöntem çağrılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="03e77-109">The `QuantumSimulator` class implements <xref:System.IDisposable>, thus the `Dispose` method should be called once the instance of the simulator is not used anymore.</span></span> <span data-ttu-id="03e77-110">Bunu yapmanın en iyi yolu, simülatörünü `using` Yukarıdaki örnekte olduğu gibi bir deyime sarmalıdır.</span><span class="sxs-lookup"><span data-stu-id="03e77-110">The best way to do this is to wrap the simulator within a `using` statement, as in the example above.</span></span>
+### <a name="invoking-the-simulator-from-python"></a><span data-ttu-id="5c42c-114">Python 'dan simülatör çağrılıyor</span><span class="sxs-lookup"><span data-stu-id="5c42c-114">Invoking the simulator from Python</span></span>
 
-## <a name="seed"></a><span data-ttu-id="03e77-111">Çekirdek</span><span class="sxs-lookup"><span data-stu-id="03e77-111">Seed</span></span>
+<span data-ttu-id="5c42c-115">Q # Python kitaplığındaki, içeri aktarılan Q # işlemiyle [Benzetim ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) yöntemini kullanın:</span><span class="sxs-lookup"><span data-stu-id="5c42c-115">Use the [simulate()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) method from the Q# Python library with the imported Q# operation:</span></span>
 
-<span data-ttu-id="03e77-112">, `QuantumSimulator` Hisse rastlılığını taklit etmek için rastgele bir sayı Oluşturucu kullanır.</span><span class="sxs-lookup"><span data-stu-id="03e77-112">The `QuantumSimulator` uses a random number generator to simulate quantum randomness.</span></span> <span data-ttu-id="03e77-113">Sınama amacıyla, bazen belirleyici sonuçlar elde etmek yararlı olur.</span><span class="sxs-lookup"><span data-stu-id="03e77-113">For testing purposes, it is sometimes useful to have deterministic results.</span></span> <span data-ttu-id="03e77-114">Bu, `QuantumSimulator` parametresi aracılığıyla kurucusundaki rastgele sayı üreticisi için bir çekirdek sağlanarak gerçekleştirilebilir `randomNumberGeneratorSeed` :</span><span class="sxs-lookup"><span data-stu-id="03e77-114">This can be accomplished by providing a seed for the random number generator in the `QuantumSimulator`'s constructor via the `randomNumberGeneratorSeed` parameter:</span></span>
+```python
+qubit_result = myOperation.simulate()
+```
+
+### <a name="invoking-the-simulator-from-the-command-line"></a><span data-ttu-id="5c42c-116">Komut satırından Benzetici çağırma</span><span class="sxs-lookup"><span data-stu-id="5c42c-116">Invoking the simulator from the command line</span></span>
+
+<span data-ttu-id="5c42c-117">Bir Q # programını komut satırından çalıştırırken, tam durum simülatör varsayılan hedef makinedir.</span><span class="sxs-lookup"><span data-stu-id="5c42c-117">When running a Q# program from the command line, the full state simulator is the default target machine.</span></span> <span data-ttu-id="5c42c-118">İsteğe bağlı olarak, istenen hedef makineyi belirtmek için **--simülatör** (veya **-s** Shortcut) parametresini kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="5c42c-118">Optionally, you can use the **--simulator** (or **-s** shortcut) parameter to specify the desired target machine.</span></span> <span data-ttu-id="5c42c-119">Aşağıdaki komutlardan her ikisi de tam durum simülatörü kullanarak bir program çalıştırır.</span><span class="sxs-lookup"><span data-stu-id="5c42c-119">Both of the following commands run a program using the full state simulator.</span></span> 
+
+```dotnetcli
+dotnet run
+dotnet run -s QuantumSimulator
+```
+
+### <a name="invoking-the-simulator-from-juptyer-notebooks"></a><span data-ttu-id="5c42c-120">Juptyer not defterlerinden simülatörü çağırma</span><span class="sxs-lookup"><span data-stu-id="5c42c-120">Invoking the simulator from Juptyer Notebooks</span></span>
+
+<span data-ttu-id="5c42c-121">Q # işlemini çalıştırmak için IQ # Magic komutu [% benzetimini](xref:microsoft.quantum.iqsharp.magic-ref.simulate) kullanın.</span><span class="sxs-lookup"><span data-stu-id="5c42c-121">Use the IQ# magic command [%simulate](xref:microsoft.quantum.iqsharp.magic-ref.simulate) to run the Q# operation.</span></span>
+
+```
+%simulate myOperation
+```
+## <a name="seeding-the-simulator"></a><span data-ttu-id="5c42c-122">Simülatör dengeli</span><span class="sxs-lookup"><span data-stu-id="5c42c-122">Seeding the simulator</span></span>
+
+<span data-ttu-id="5c42c-123">Varsayılan olarak, tam durum simülatörü, hisse miktarı benzetimi için rastgele bir sayı Oluşturucu kullanır.</span><span class="sxs-lookup"><span data-stu-id="5c42c-123">By default, the full state simulator uses a random number generator to simulate quantum randomness.</span></span> <span data-ttu-id="5c42c-124">Sınama amacıyla, bazen belirleyici sonuçlar elde etmek yararlı olur.</span><span class="sxs-lookup"><span data-stu-id="5c42c-124">For testing purposes, it is sometimes useful to have deterministic results.</span></span> <span data-ttu-id="5c42c-125">Bir C# programında, parametresi aracılığıyla oluşturucuda rastgele numara Oluşturucu için bir çekirdek sağlayarak bunu yapabilirsiniz `QuantumSimulator` `randomNumberGeneratorSeed` .</span><span class="sxs-lookup"><span data-stu-id="5c42c-125">In a C# program, you can accomplish this by providing a seed for the random number generator in the `QuantumSimulator` constructor via the `randomNumberGeneratorSeed` parameter.</span></span>
 
 ```csharp
     using (var sim = new QuantumSimulator(randomNumberGeneratorSeed: 42))
@@ -44,7 +70,12 @@ ms.locfileid: "85275647"
     }
 ```
 
-## <a name="threads"></a><span data-ttu-id="03e77-115">İş Parçacıkları</span><span class="sxs-lookup"><span data-stu-id="03e77-115">Threads</span></span>
+## <a name="configuring-threads"></a><span data-ttu-id="5c42c-126">İş parçacıklarını yapılandırma</span><span class="sxs-lookup"><span data-stu-id="5c42c-126">Configuring threads</span></span>
 
-<span data-ttu-id="03e77-116">, `QuantumSimulator` Gereken doğrusal algeköşeli paralel hale getirmek Için [OpenMP](http://www.openmp.org/) kullanır.</span><span class="sxs-lookup"><span data-stu-id="03e77-116">The `QuantumSimulator` uses [OpenMP](http://www.openmp.org/) to parallelize the linear algebra required.</span></span> <span data-ttu-id="03e77-117">Varsayılan olarak, OpenMP kullanılabilir olan tüm donanım iş parçacıklarını kullanır. Böylelikle, gereken koordinasyon asıl işi küçülteceği için az sayıda qubit’i olan programlar sıkça yavaş çalışır.</span><span class="sxs-lookup"><span data-stu-id="03e77-117">By default OpenMP uses all available hardware threads, which means that programs with small numbers of qubits will often run slowly because the coordination required will dwarf the actual work.</span></span> <span data-ttu-id="03e77-118">Bu, ortam değişkeni `OMP_NUM_THREADS` küçük bir sayı olarak ayarlanarak düzeltilebilir.</span><span class="sxs-lookup"><span data-stu-id="03e77-118">This can be fixed by setting the environment variable `OMP_NUM_THREADS` to a small number.</span></span> <span data-ttu-id="03e77-119">Üstünkörü bir temel kural olarak, 1 iş parçacığı yaklaşık 4 qubit için uygundur ve her qubit başına bir tane ek iş parçacığı iyi bir sonuç verir. Ancak, bu kullandığınız algoritmaya yüksek oranda bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="03e77-119">As a very rough rule of thumb, 1 thread is good for up to about 4 qubits, and then an additional thread per qubit is good, although this is highly dependent on your algorithm.</span></span>
+<span data-ttu-id="5c42c-127">Tam durum simülatör, gereken doğrusal algeköşeli paralel hale getirmek için [OpenMP](http://www.openmp.org/) kullanır.</span><span class="sxs-lookup"><span data-stu-id="5c42c-127">The full state simulator uses [OpenMP](http://www.openmp.org/) to parallelize the linear algebra required.</span></span> <span data-ttu-id="5c42c-128">Varsayılan olarak, OpenMP, en az sayıda qubit olan programlar, gerçek işi dide gereken koordinasyon nedeniyle genellikle yavaş çalıştığı anlamına gelen tüm kullanılabilir donanım iş parçacıklarını kullanır.</span><span class="sxs-lookup"><span data-stu-id="5c42c-128">By default, OpenMP uses all available hardware threads, which means that programs with small numbers of qubits often runs slowly because the coordination that is required dwarfs the actual work.</span></span> <span data-ttu-id="5c42c-129">Bu ayarı, ortam değişkenini `OMP_NUM_THREADS` küçük bir sayı olarak ayarlayarak giderebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="5c42c-129">You can fix this by setting the environment variable `OMP_NUM_THREADS` to a small number.</span></span> <span data-ttu-id="5c42c-130">Thumb kuralı olarak, bir iş parçacığını en fazla dört qubit ve daha sonra qubit başına bir ek iş parçacığı yapılandırın.</span><span class="sxs-lookup"><span data-stu-id="5c42c-130">As a rule of thumb, configure one thread for up to four qubits, and then one additional thread per qubit.</span></span> <span data-ttu-id="5c42c-131">Algoritmasına göre değişkeni ayarlamanız gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="5c42c-131">You might need to adjust the variable depending on your algorithm.</span></span>
 
+## <a name="see-also"></a><span data-ttu-id="5c42c-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5c42c-132">See also</span></span>
+
+- [<span data-ttu-id="5c42c-133">Hisse kaynağı tahmin aracı</span><span class="sxs-lookup"><span data-stu-id="5c42c-133">Quantum resources estimator</span></span>](xref:microsoft.quantum.machines.resources-estimator)
+- [<span data-ttu-id="5c42c-134">Hisse Toffoli simülatör</span><span class="sxs-lookup"><span data-stu-id="5c42c-134">Quantum Toffoli simulator</span></span>](xref:microsoft.quantum.machines.toffoli-simulator)
+- [<span data-ttu-id="5c42c-135">Hisse izi izleme simülatörü</span><span class="sxs-lookup"><span data-stu-id="5c42c-135">Quantum trace simulator</span></span>](xref:microsoft.quantum.machines.qc-trace-simulator.intro)

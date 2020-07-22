@@ -1,22 +1,35 @@
 ---
-title: Genişlik sayacı
-description: Bir hisse içindeki her işlem tarafından ayrılan ve ödünç alınan qubits sayısını sayan Microsoft QDK genişlik sayacı hakkında bilgi edinin.
+title: Genişlik sayacı-hisse geliştirme seti
+description: 'Bir Q # programındaki işlemlere ayrılan ve ödünç alınan qubits sayısını saymak için hisse izi simülatörü kullanan Microsoft QDK genişlik sayacı hakkında bilgi edinin.'
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: a76292222950310acc90dded02980e4a5b792e76
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: af8609dc5c05f7a19b8d21755281427feb29b84c
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275567"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871543"
 ---
-# <a name="width-counter"></a><span data-ttu-id="d4f33-103">Genişlik sayacı</span><span class="sxs-lookup"><span data-stu-id="d4f33-103">Width Counter</span></span>
+# <a name="quantum-trace-simulator-width-counter"></a><span data-ttu-id="6adab-103">Hisse izleme simülatörü: Genişlik sayacı</span><span class="sxs-lookup"><span data-stu-id="6adab-103">Quantum trace simulator: width counter</span></span>
 
-<span data-ttu-id="d4f33-104">`Width Counter`Her bir işlem tarafından ayrılan ve ödünç alınan qubits sayısını sayar.</span><span class="sxs-lookup"><span data-stu-id="d4f33-104">The `Width Counter` counts the number of qubits allocated and borrowed by each operation.</span></span>
-<span data-ttu-id="d4f33-105">Ad alanındaki tüm işlemler `Microsoft.Quantum.Intrinsic` tek qubit ifade, T kapıları, tek qubit Clienfford kapıları, CNOT kapıları ve Multi-Qubitpauli gözlemlenenler ölçümleri bakımından ifade edilir.</span><span class="sxs-lookup"><span data-stu-id="d4f33-105">All operations from the `Microsoft.Quantum.Intrinsic` namespace are expressed in terms of single qubit rotations, T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit Pauli observables.</span></span> <span data-ttu-id="d4f33-106">Temel işlemlerden bazıları ek qubit ayırabilirler.</span><span class="sxs-lookup"><span data-stu-id="d4f33-106">Some of the primitive operations can allocate extra qubits.</span></span> <span data-ttu-id="d4f33-107">Örneğin, denetlenen `X` kapıları veya denetimli kapıları çarpın `T` .</span><span class="sxs-lookup"><span data-stu-id="d4f33-107">For example, multiply controlled `X` gates or controlled `T` gates.</span></span> <span data-ttu-id="d4f33-108">Çarpma kontrollü kapıların uygulanması tarafından ayrılan ekstra qubits sayısını hesaplamıza izin verin `X` :</span><span class="sxs-lookup"><span data-stu-id="d4f33-108">Let us compute the number of extra qubits allocated by the implementation of a multiply controlled `X` gate:</span></span>
+<span data-ttu-id="6adab-104">Genişlik sayacı, hisse Geliştirme Seti [hisse izleyici benzeticisinin](xref:microsoft.quantum.machines.qc-trace-simulator.intro)bir parçasıdır.</span><span class="sxs-lookup"><span data-stu-id="6adab-104">The width counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="6adab-105">Bu özelliği, bir Q # programındaki her işlem tarafından ayrılan ve ödünç alınan qubits sayısını saymak için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="6adab-105">You can use it to count the number of qubits allocated and borrowed by each operation in a Q# program.</span></span> <span data-ttu-id="6adab-106">Bazı temel işlemler ek qubit ayırabilir, örneğin, denetlenen `X` işlemleri veya denetlenen işlemleri de çarpır `T` .</span><span class="sxs-lookup"><span data-stu-id="6adab-106">Some primitive operations can allocate extra qubits, for example, multiply controlled `X` operations or controlled `T` operations.</span></span>
+
+## <a name="invoking-the-width-counter"></a><span data-ttu-id="6adab-107">Genişlik sayacını çağırma</span><span class="sxs-lookup"><span data-stu-id="6adab-107">Invoking the width counter</span></span>
+
+<span data-ttu-id="6adab-108">Hisse izi izleme simülatörünü Width sayacından çalıştırmak için bir <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> örnek oluşturmanız, özelliği true olarak ayarlamanız `UseWidthCounter` ve sonra **true** <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> parametresi olarak ile yeni bir örnek oluşturmanız gerekir `QCTraceSimulatorConfiguration` .</span><span class="sxs-lookup"><span data-stu-id="6adab-108">To run the quantum trace simulator with the width counter, you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set the `UseWidthCounter` property to **true**, and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with the `QCTraceSimulatorConfiguration` as the parameter.</span></span> 
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UseWidthCounter = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## <a name="using-the-width-counter-in-a-c-host-program"></a><span data-ttu-id="6adab-109">C# ana programında Width sayacını kullanma</span><span class="sxs-lookup"><span data-stu-id="6adab-109">Using the width counter in a C# host program</span></span>
+
+<span data-ttu-id="6adab-110">Bu bölümde aşağıdaki C# örneği, <xref:microsoft.quantum.intrinsic.x> aşağıdaki Q # örnek koduna bağlı olarak, çarpma denetimli bir işlemin uygulanmasıyla ayrılan ekstra qubits sayısını hesaplar:</span><span class="sxs-lookup"><span data-stu-id="6adab-110">The C# example that follows in this section computes the number of extra qubits allocated by the implementation of a multiply controlled <xref:microsoft.quantum.intrinsic.x> operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -28,13 +41,11 @@ operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
 }
 ```
 
-## <a name="using-width-counter-within-a-c-program"></a><span data-ttu-id="d4f33-109">Bir C# programı içinde Width sayacını kullanma</span><span class="sxs-lookup"><span data-stu-id="d4f33-109">Using Width Counter within a C# Program</span></span>
-
-<span data-ttu-id="d4f33-110">`X`Toplam 5 qubit üzerinde işlem denetimli olan çarpmaya 2 anyacal ve giriş genişliği 5 olur.</span><span class="sxs-lookup"><span data-stu-id="d4f33-110">Multiply controlled `X` acting on a total of 5 qubits will allocate 2 ancillary qubits and its input width will be 5.</span></span> <span data-ttu-id="d4f33-111">Bu durumun bu olduğunu denetlemek için aşağıdaki C# programını kullanabiliriz:</span><span class="sxs-lookup"><span data-stu-id="d4f33-111">To check that this is the case, we can use the following C# program:</span></span>
+<span data-ttu-id="6adab-111">Çarpma kontrollü <xref:microsoft.quantum.intrinsic.x> işlemi, toplam beş qubit üzerinde çalışır, iki [anyaya bitleri](xref:microsoft.quantum.glossary#ancilla)ayırır ve bir giriş genişliğine **5**sahiptir.</span><span class="sxs-lookup"><span data-stu-id="6adab-111">The multiply controlled <xref:microsoft.quantum.intrinsic.x> operation acts on a total of five qubits, allocates two [ancillary qubits](xref:microsoft.quantum.glossary#ancilla), and has an input width of **5**.</span></span> <span data-ttu-id="6adab-112">Sayıları doğrulamak için aşağıdaki C# programını kullanın:</span><span class="sxs-lookup"><span data-stu-id="6adab-112">Use the following C# program to verify the counts:</span></span>
 
 ```csharp 
 var config = new QCTraceSimulatorConfiguration();
-config.useWidthCounter = true;
+config.UseWidthCounter = true;
 var sim = new QCTraceSimulator(config);
 int totalNumberOfQubits = 5;
 var res = ApplyMultiControlledX.Run(sim, totalNumberOfQubits).Result;
@@ -50,13 +61,16 @@ double inputWidth =
         functor: OperationFunctor.Controlled);
 ```
 
-<span data-ttu-id="d4f33-112">Programın ilk kısmı yürütülür `ApplyMultiControlledX` .</span><span class="sxs-lookup"><span data-stu-id="d4f33-112">The first part of the program executes `ApplyMultiControlledX`.</span></span> <span data-ttu-id="d4f33-113">İkinci bölümde, `QCTraceSimulator.GetMetric` ayrılan qubits sayısını ve denetlenen qubits sayısını ve denetim girişi olarak almak için yöntemini kullanırız `X` .</span><span class="sxs-lookup"><span data-stu-id="d4f33-113">In the second part we use the method `QCTraceSimulator.GetMetric` to get the number of allocated qubits as well as the number of qubits that Controlled `X` received as input.</span></span> 
+<span data-ttu-id="6adab-113">Programın ilk kısmı `ApplyMultiControlledX` işlemi çalıştırır.</span><span class="sxs-lookup"><span data-stu-id="6adab-113">The first part of the program runs the `ApplyMultiControlledX` operation.</span></span> <span data-ttu-id="6adab-114">İkinci bölüm, [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) ayrılan qubits sayısını ve `Controlled X` işlemin girdi olarak aldığı qubit sayısını almak için yöntemini kullanır.</span><span class="sxs-lookup"><span data-stu-id="6adab-114">The second part uses the [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) method to retrieve the number of allocated qubits as well as the number of qubits that the `Controlled X` operation received as input.</span></span> 
 
-<span data-ttu-id="d4f33-114">Son olarak, Width sayacı tarafından toplanan tüm istatistikleri CSV biçiminde çıkarmak için aşağıdakileri kullanabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="d4f33-114">Finally, to output all the statistics collected by width counter in CSV format we can use the following:</span></span>
+<span data-ttu-id="6adab-115">Son olarak, aşağıdaki şekilde, Genişlik sayacı tarafından toplanan tüm istatistiklerin CSV biçiminde çıktısını alabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="6adab-115">Finally, you can output all the statistics collected by the width counter in CSV format using the following:</span></span>
 ```csharp
 string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
-## <a name="see-also"></a><span data-ttu-id="d4f33-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d4f33-115">See also</span></span> ##
+## <a name="see-also"></a><span data-ttu-id="6adab-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6adab-116">See also</span></span>
 
-- <span data-ttu-id="d4f33-116">Hisse bilgisayar [Izleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro) genel bakış.</span><span class="sxs-lookup"><span data-stu-id="d4f33-116">The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="6adab-117">Hisse Geliştirme Seti [hisse izi simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro) genel bakış.</span><span class="sxs-lookup"><span data-stu-id="6adab-117">The Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="6adab-118"><xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API başvurusu.</span><span class="sxs-lookup"><span data-stu-id="6adab-118">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.</span></span>
+- <span data-ttu-id="6adab-119"><xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>API başvurusu.</span><span class="sxs-lookup"><span data-stu-id="6adab-119">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.</span></span>
+- <span data-ttu-id="6adab-120"><xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.WidthCounter>API başvurusu.</span><span class="sxs-lookup"><span data-stu-id="6adab-120">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.WidthCounter> API reference.</span></span>

@@ -1,21 +1,25 @@
 ---
-title: Geçersiz kılınan kubit kullanımı denetleyicisi
-description: 'Microsoft QDK geçersiz kılınan qubits kullanım denetleyicisi hakkında bilgi edinin. Bu, olası geçersiz qubits için Q # kodunuzu denetler.'
+title: Geçersiz kılınan qubits denetleyici-hisse geliştirme seti
+description: 'Büyük olasılıkla geçersiz qubit için Q # kodunuzu denetlemek üzere hisse izi simülatörü kullanan Microsoft QDK geçersiz kılınan qubits kullanım denetleyicisi hakkında bilgi edinin.'
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: e2bbb12448e27f28db030a0084302fb24f46f26b
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: fccf6d5784b587f4ad9b659e23027619acd06ffa
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275568"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871102"
 ---
-# <a name="invalidated-qubits-use-checker"></a><span data-ttu-id="d3d6f-103">Geçersiz kılınan qubits kullanımı denetleyicisi</span><span class="sxs-lookup"><span data-stu-id="d3d6f-103">Invalidated Qubits Use Checker</span></span>
+# <a name="quantum-trace-simulator-invalidated-qubits-use-checker"></a><span data-ttu-id="65697-103">Hisse izleme simülatörü: geçersiz qubits kullanım denetleyicisi</span><span class="sxs-lookup"><span data-stu-id="65697-103">Quantum trace simulator: invalidated qubits use checker</span></span>
 
-<span data-ttu-id="d3d6f-104">, `Invalidated Qubits Use Checker` Koddaki olası hataları algılamak için tasarlanan hisse bilgisayar [izlenebenzeticisinin](xref:microsoft.quantum.machines.qc-trace-simulator.intro) bir parçasıdır.</span><span class="sxs-lookup"><span data-stu-id="d3d6f-104">The `Invalidated Qubits Use Checker` is a part of the quantum computer [TraceSimulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) designed for detecting potential bugs in the code.</span></span> <span data-ttu-id="d3d6f-105">Tarafından algılanan sorunları göstermek için aşağıdaki Q # kodu parçasını göz önünde bulundurun `Invalidated Qubits Use Checker` .</span><span class="sxs-lookup"><span data-stu-id="d3d6f-105">Consider the following piece of Q# code to illustrate the issues detected by the `Invalidated Qubits Use Checker`.</span></span>
+<span data-ttu-id="65697-104">Geçersiz kılınan qubits kullanım denetleyicisi, hisse Geliştirme Seti [hisse izleme benzeticisinin](xref:microsoft.quantum.machines.qc-trace-simulator.intro)bir parçasıdır.</span><span class="sxs-lookup"><span data-stu-id="65697-104">The invalidated qubits use checker is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="65697-105">Geçersiz qubits nedeniyle oluşan koddaki olası hataları tespit etmek için bunu kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="65697-105">You can use it to detect potential bugs in the code caused by invalid qubits.</span></span> 
+
+## <a name="invalid-qubits"></a><span data-ttu-id="65697-106">Geçersiz qubits</span><span class="sxs-lookup"><span data-stu-id="65697-106">Invalid qubits</span></span>
+
+<span data-ttu-id="65697-107">Geçersiz kılınan qubits kullanım denetleyicisi tarafından algılanan sorunları göstermek için aşağıdaki Q # kodu parçasını göz önünde bulundurun:</span><span class="sxs-lookup"><span data-stu-id="65697-107">Consider the following piece of Q# code to illustrate the issues detected by the invalidated qubits use checker:</span></span>
 
 ```qsharp
 operation UseReleasedQubit() : Unit {
@@ -27,13 +31,22 @@ operation UseReleasedQubit() : Unit {
 }
 ```
 
-<span data-ttu-id="d3d6f-106">`H`Öğesine uygulandığında, `q[0]` zaten yayınlanmış bir qubit 'e işaret eder.</span><span class="sxs-lookup"><span data-stu-id="d3d6f-106">When `H` is applied to `q[0]` it points to an already released qubit.</span></span> <span data-ttu-id="d3d6f-107">Bu tanımsız davranışa neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="d3d6f-107">This can cause undefined behavior.</span></span> <span data-ttu-id="d3d6f-108">`Invalidated Qubits Use Checker`Etkinleştirildiğinde, `InvalidatedQubitsUseCheckerException` zaten yayımlanmış bir qubit 'e bir işlem uygulanırsa özel durum oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="d3d6f-108">When the `Invalidated Qubits Use Checker` is enabled, the exception `InvalidatedQubitsUseCheckerException` will be thrown if an operation is applied to an already released qubit.</span></span> <span data-ttu-id="d3d6f-109">Daha fazla bilgi için [InvalidatedQubitsUseCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException) adresindeki API belgelerine bakın.</span><span class="sxs-lookup"><span data-stu-id="d3d6f-109">See the API documentation on [InvalidatedQubitsUseCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException) for more details.</span></span>
+<span data-ttu-id="65697-108">`H`İşlemi uygulamasına uyguladığınızda `q[0]` , önceden yayımlanmış bir qubit 'e işaret eder ve bu, tanımsız davranışa neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="65697-108">When you apply the `H` operation to `q[0]`, it points to an already released qubit, which can cause undefined behavior.</span></span> <span data-ttu-id="65697-109">Geçersiz kılınan qubits kullanım denetleyicisi etkinleştirildiğinde, `InvalidatedQubitsUseCheckerException` Program zaten yayınlanmış bir qubit 'e bir işlem uygularsa özel durumu oluşturur.</span><span class="sxs-lookup"><span data-stu-id="65697-109">When the Invalidated Qubits Use Checker is enabled, it throws the exception `InvalidatedQubitsUseCheckerException` if the program applies an operation to an already released qubit.</span></span> <span data-ttu-id="65697-110">Daha fazla bilgi için bkz. <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException>.</span><span class="sxs-lookup"><span data-stu-id="65697-110">For more information, see <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException>.</span></span>
 
-## <a name="using-the-invalidated-qubits-use-checker-in-your-c-program"></a><span data-ttu-id="d3d6f-110">C# programınızda geçersiz qubits kullanım denetleyicisi 'Ni kullanma</span><span class="sxs-lookup"><span data-stu-id="d3d6f-110">Using the Invalidated Qubits Use Checker in your C# Program</span></span>
+## <a name="invoking-the-invalidated-qubits-use-checker"></a><span data-ttu-id="65697-111">Geçersiz kılınan qubits kullanım denetleyicisi çağrılıyor</span><span class="sxs-lookup"><span data-stu-id="65697-111">Invoking the invalidated qubits use checker</span></span>
 
-<span data-ttu-id="d3d6f-111">Aşağıda, hisse bilgisayarı etkin bir şekilde kullanmaya yönelik C# sürücü kodu örneği verilmiştir `Trace
-Simulator` `Invalidated Qubits Use Checker` :</span><span class="sxs-lookup"><span data-stu-id="d3d6f-111">The following is an example of C# driver code for using the quantum computer `Trace
-Simulator` with the `Invalidated Qubits Use Checker` enabled:</span></span> 
+<span data-ttu-id="65697-112">Geçersiz kılınan qubits kullanım denetleyicisi ile hisse izleme simülatörünü çalıştırmak için bir örnek oluşturmanız <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> , `UseInvalidatedQubitsUseChecker` özelliği **true**olarak ayarlamanız ve sonra <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> parametresi olarak yeni bir örnek oluşturmanız gerekir `QCTraceSimulatorConfiguration` .</span><span class="sxs-lookup"><span data-stu-id="65697-112">To run the quantum trace simulator with the invalidated qubits use checker you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set the `UseInvalidatedQubitsUseChecker` property to **true**, and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with `QCTraceSimulatorConfiguration` as the parameter.</span></span> 
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UseInvalidatedQubitsUseChecker = true;
+var sim = new QCTraceSimulator(config);
+```
+
+
+## <a name="using-the-invalidated-qubits-use-checker-in-a-c-host-program"></a><span data-ttu-id="65697-113">C# ana programında geçersiz kılınan qubits kullanım denetleyicisini kullanma</span><span class="sxs-lookup"><span data-stu-id="65697-113">Using the invalidated qubits use checker in a C# host program</span></span>
+
+<span data-ttu-id="65697-114">Aşağıda, geçersiz kılınan qubits kullanım denetleyicisi etkin olan hisse izi simülatörü kullanan C# konak programlarının bir örneği verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="65697-114">The following is an example of C# host programs that uses the quantum trace simulator with the invalidated qubits use checker enabled:</span></span> 
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -47,7 +60,7 @@ namespace Quantum.MyProgram
         static void Main(string[] args)
         {
             var traceSimCfg = new QCTraceSimulatorConfiguration();
-            traceSimCfg.useInvalidatedQubitsUseChecker = true; // enables useInvalidatedQubitsUseChecker
+            traceSimCfg.UseInvalidatedQubitsUseChecker = true; // enables UseInvalidatedQubitsUseChecker
             QCTraceSimulator sim = new QCTraceSimulator(traceSimCfg);
             var res = MyQuantumProgram.Run().Result;
             System.Console.WriteLine("Press any key to continue...");
@@ -57,8 +70,9 @@ namespace Quantum.MyProgram
 }
 ```
 
-<span data-ttu-id="d3d6f-112">Sınıfı, `QCTraceSimulatorConfiguration` hisse bilgisayar izleme simülatörü yapılandırmasını depolar ve Oluşturucu için bir bağımsız değişken olarak bulunabilir `QCTraceSimulator` .</span><span class="sxs-lookup"><span data-stu-id="d3d6f-112">The class `QCTraceSimulatorConfiguration` stores the configuration of the quantum computer trace simulator and can be provided as an argument for the `QCTraceSimulator` constructor.</span></span> <span data-ttu-id="d3d6f-113">`useInvalidatedQubitsUseChecker`True olarak ayarlandığında, `Invalidated Qubits Use Checker` etkindir.</span><span class="sxs-lookup"><span data-stu-id="d3d6f-113">When `useInvalidatedQubitsUseChecker` is set to true the `Invalidated Qubits Use Checker` is enabled.</span></span> <span data-ttu-id="d3d6f-114">Daha fazla bilgi için bkz. [Qctracesimülatör](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) ve [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) hakkında API belgeleri.</span><span class="sxs-lookup"><span data-stu-id="d3d6f-114">See the API documentation on [QCTraceSimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) and [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) for more details.</span></span>
+## <a name="see-also"></a><span data-ttu-id="65697-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="65697-115">See also</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d3d6f-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d3d6f-115">See also</span></span> ##
-
-- <span data-ttu-id="d3d6f-116">Hisse bilgisayar [Izleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro) genel bakış.</span><span class="sxs-lookup"><span data-stu-id="d3d6f-116">The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="65697-116">Hisse Geliştirme Seti [hisse izi simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro) genel bakış.</span><span class="sxs-lookup"><span data-stu-id="65697-116">The Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="65697-117"><xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API başvurusu.</span><span class="sxs-lookup"><span data-stu-id="65697-117">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.</span></span>
+- <span data-ttu-id="65697-118"><xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>API başvurusu.</span><span class="sxs-lookup"><span data-stu-id="65697-118">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.</span></span>
+- <span data-ttu-id="65697-119"><xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException>API başvurusu.</span><span class="sxs-lookup"><span data-stu-id="65697-119">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException> API reference.</span></span>
