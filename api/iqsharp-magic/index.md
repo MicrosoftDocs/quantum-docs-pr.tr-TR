@@ -1,5 +1,18 @@
+---
+title: IQ# Magic Komutları
+author: rmshaffer
+uid: microsoft.quantum.iqsharp.magic-ref.index
+ms.author: rmshaffer
+ms.date: 07/21/2020
+ms.topic: article
+ms.openlocfilehash: 971787adae03af35d2e5b408fb88356a8b7df90a
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870711"
+---
 # <a name="iq-magic-commands"></a>IQ# Magic Komutları
-
 | Magic Komutu | Özet |
 |---------------|---------|
 | [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect) | Azure Quantum çalışma alanına bağlanır veya geçerli bağlantı durumunu görüntüler. |
@@ -19,6 +32,7 @@
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | Verilen bir işlevi veya işlemi ResourcesEstimator hedef makinesinde çalıştırır. |
 | [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | Tek bir test yürütür. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | Şu anda kullanılabilen tüm magic komutlarının listesini döndürür. |
+| [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen) | Şu anda açık olan ad alanlarını ve bunların diğer adlarını listeler. |
 | [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | NuGet paketini yükleme özelliği sağlar. |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | Bu çekirdek için geçerli performans ölçümlerini bildirir. |
 | [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | Verilen bir işlevi veya işlemi QuantumSimulator hedef makinesinde çalıştırır. |

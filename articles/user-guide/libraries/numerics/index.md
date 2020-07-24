@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.intro
-ms.openlocfilehash: efd1a712616534ac281433fc008f0983271881d7
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9552f3683e1df8cb10d19d0b3f85223df056f83d
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273965"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871357"
 ---
 # <a name="introduction-to-the-quantum-numerics-library"></a>Kuantum Sayısal Kitaplığı Tanıtımı
 
@@ -33,9 +33,10 @@ Bu nedenle, Quantum Development Kit geniş bir sayısal işlev yelpazesine yöne
 
 Şu ana kadar bahsedilen tamsayı aritmetiğinin yanı sıra sayısal kitaplık
 
- - Giriş olarak bir veya iki kuantum tamsayının alındığı işaretli (ve işaretsiz) tamsayı işlevi (çarpma, karesini alma, kalanına bölme, evirtim...)
- - Giriş olarak bir veya iki kuantum tamsayının alındığı sabit nokta işlevi (ekleme / çıkarma, çarpma, karesini alma, 1/x, polinom değerlendirmesi)
+- Giriş olarak bir veya iki kuantum tamsayının alındığı işaretli (ve işaretsiz) tamsayı işlevi (çarpma, karesini alma, kalanına bölme, evirtim...)
+- Giriş olarak bir veya iki kuantum tamsayının alındığı sabit nokta işlevi (ekleme / çıkarma, çarpma, karesini alma, 1/x, polinom değerlendirmesi)
 
 ## <a name="getting-started"></a>Başlarken
 
-Sayısal kitaplığı kullanmaya başlamak için [yükleme kılavuzuna](xref:microsoft.quantum.numerics.installation) göz atın ve [Sayısal kitaplığı kullanma](xref:microsoft.quantum.numerics.usage) bölümünde sunulan bilgilere bakın.
+> [!div class="nextstepaction"]
+> [Sayısal kitaplığı kullanma hakkında bilgi edinin](xref:microsoft.quantum.numerics.usage)

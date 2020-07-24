@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: cf913a09395f0694a51645ec8f91171e5b1555c3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 108a50302422e5ae41e14b30ef22169370c2a35a
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273727"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871425"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Quantum Development Kit’e katkı yapma
 
@@ -61,10 +61,9 @@ Bu farklı parçaların her birinin ana unsuru farklı bir depoda bulunur; bu ne
 > [!NOTE]
 > Şu anda [**microsoft/Quantum-NC**](https://github.com/microsoft/Quantum-NC) deposunda ne yazık ki kod ve belge katkılarını kabul edemiyoruz ancak hata raporlarını hala memnuniyetle karşılıyoruz.
 
-Ayrıca, farklı olaylara veya Quantum Development Kit ile ilgili yardımcı işlevlere odaklanan daha ileri düzeyde özelleşmiş birkaç depo daha mevcuttur.
+Ayrıca, Quantum geliştirme seti ile ilgili yardımcı işlevlere odaklanan daha ileri düzeyde özelleşmiş birkaç depo daha mevcuttur.
 
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): Q# söz dizimi için LaTeX biçimlendirme desteği.
-- [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019): 2019 stajyer atölyesinde berilen Deutsch–Jozsa öğreticisi için IQ# Not Defteri.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -3,6 +3,8 @@
 - name: Standart kitaplıklar
   topicHref: standard/index.md
   href: standard/toc.yml
+- name: Ek Q# kitaplıklarını kullanma
+  href: additional-libraries.md
 - name: Kuantum kimyası kitaplığı
   topicHref: chemistry/index.md
   href: chemistry/toc.yml
