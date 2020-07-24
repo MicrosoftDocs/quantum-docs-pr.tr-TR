@@ -32,6 +32,8 @@
   name: '%kata magic komutu'
 - href: lsmagic.md
   name: '%lsmagic magic komutu'
+- href: lsopen.md
+  name: '%lsopen magic komutu'
 - href: package.md
   name: '%package magic komutu'
 - href: performance.md
