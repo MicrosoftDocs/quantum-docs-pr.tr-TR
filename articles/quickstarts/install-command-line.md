@@ -6,11 +6,12 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 15015d1673f47faf5a13dde516f834916b4319d6
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 3d70838289e72afdd0a48bbdff0bec407428d125
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884277"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871442"
 ---
 # <a name="develop-with-q-command-line-applications"></a>Q# komut satırı uygulamaları ile geliştirme
 
@@ -22,7 +23,7 @@ Q# programları, C#, F# veya Python gibi bir konak dilinde sürücü olmadan ken
 
 ## <a name="installation"></a>Yükleme
 
-Q# komut satırı uygulamalarını herhangi bir IDE'de derleyebilseniz de, Q# uygulamalarınız için Visual Studio Code (VS Code) veya Visual Studio IDE kullanmanızı öneririz. Bu ortamlarda geliştirme yapmak, QDK uzantısının uyarı, söz dizimi vurgulama, proje şablonları gibi zengin işlevlerini içerir.
+Q# komut satırı uygulamalarını herhangi bir IDE'de derleyebilseniz de, Q# uygulamalarınızı yerel olarak geliştirmek için Visual Studio Code (VS Code) veya Visual Studio IDE kullanmanızı öneririz. Web tarayıcısı aracılığıyla bulutta geliştirmek için Visual Studio Codespaces’ı öneririz. Bu ortamlarda geliştirme yapmak, QDK uzantısının uyarı, söz dizimi vurgulama, proje şablonları gibi zengin işlevlerini içerir. 
 
 VS Code'u yapılandırmak için:
 
@@ -33,6 +34,13 @@ Visual Studio'yu yapılandırmak için:
 
 1. .NET Core platformlar arası geliştirme iş yükü etkin olan [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 veya üzerini indirip yükleyin.
 2. [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)’yi indirip yükleyin.
+
+Visual Studio Codespaces’ı yapılandırmak için:
+
+1. [Azure hesabı](https://azure.microsoft.com/free/) oluşturun.
+2. Codespaces ortamı oluşturun. Lütfen [hızlı başlangıç kılavuzunu](https://docs.microsoft.com/visualstudio/online/quickstarts/browser) izleyin. Kod alanını oluştururken QDK'ye özgü ayarları yüklemek için "Git Deposu" alanına `microsoft/Quantum` girmeniz önerilir.
+3. Artık yeni ortamınızı başlatabilir ve [VS Codespaces Bulut IDE’si](https://online.visualstudio.com/environments) aracılığıyla tarayıcıda geliştirme yapmaya başlayabilirsiniz. Alternatif olarak, yerel VS Code yüklemenizi kullanmanız ve Codespaces’ı [uzak ortam](https://docs.microsoft.com/visualstudio/online/how-to/vscode) olarak kullanmanız da mümkündür.
+
 
 Başka bir ortam için QDK'yi yüklemek üzere komut satırına şunu girin:
 
@@ -45,14 +53,6 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 Ortamınıza karşılık gelen sekmedeki yönergeleri izleyin.
 
 ### <a name="vs-code"></a>[VS Code](#tab/tabid-vscode)
-
-Q# proje şablonlarını yükleyin:
-
-1. VS Code’u açın.
-2. **Görünüm** -> **Komut Paleti**’ne tıklayın.
-3. **Q#: Proje şablonlarını yükleyin**.
-
-**Proje şablonları başarıyla yüklendi** iletisi görüntülendiğinde, QDK kendi uygulama ve kitaplıklarınızla birlikte kullanıma hazırdır.
 
 Yeni bir proje oluşturmak için:
 
@@ -95,24 +95,30 @@ Uygulamayı çalıştırmak için:
 
 Bir Q# `Hello World` uygulaması oluşturarak yüklemenizi doğrulayın.
 
+1. Proje şablonlarını yükleyin.
+
+    ```dotnetcli
+    dotnet new -i Microsoft.Quantum.ProjectTemplates
+    ```
+
 1. Yeni bir uygulama oluşturun:
     ```dotnetcli
     dotnet new console -lang Q# -o runSayHello
     ```
 
-2. Uygulama dizinine gidin:
+1. Uygulama dizinine gidin:
     ```dotnetcli
     cd runSayHello
     ```
 
     Bu dizin artık, konsola ileti yazdırmak için basit bir işlem tanımlayan bir Q# programı olan `Program.qs` adlı dosyayı içermelidir. Bu şablonda bir metin düzenleyiciyle değişiklik yapabilir ve kendi kuantum uygulamalarınızla bu şablonun üzerine yazabilirsiniz. 
 
-3. Programı çalıştırın:
+1. Programı çalıştırın:
     ```dotnetcli
     dotnet run
     ```
 
-4. Şu metnin yazdırıldığını görmeniz gerekir: `Hello quantum world!`
+1. Şu metnin yazdırıldığını görmeniz gerekir: `Hello quantum world!`
 
 ***
 

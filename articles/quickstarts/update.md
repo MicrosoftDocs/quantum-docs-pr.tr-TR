@@ -7,11 +7,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 457083ea4756d64375834e5a276c2d91031138fe
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 69b83997773896583258a4996a61b6f334edf407
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885149"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871408"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum geliştirme setini (QDK) güncelleştirme
 
@@ -52,7 +53,7 @@ Q# işlemlerini barındırmak için C# veya Python kullanmanızdan bağımsız o
 5. .csproj dosyalarının her birinde, aşağıdaki satırda gösterildiği gibi SDK’yı `Microsoft.Quantum.Sdk` olarak ayarlayın. Lütfen sürüm numarasının mevcut en son sürüme ait olduğuna ve bunu [sürüm notlarını](https://docs.microsoft.com/quantum/relnotes/) inceleyerek belirleyebileceğinize dikkat edin.
 
     ```xml
-    <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+    <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
     ```
 
 6. Çözümünüzdeki tüm dosyaları kaydedip kapatın.
@@ -92,7 +93,7 @@ Artık [Visual Studio QDK uzantınızı güncelleştirme](#update-visual-studio-
     dotnet clean [project_name].csproj
     ```
 
-3. QDK’nin geçerli sürümünü belirleyin. Bunu bulmak için [sürüm notlarını](https://docs.microsoft.com/quantum/relnotes/) gözden geçirebilirsiniz. Sürüm, `0.11.2006.207` ile benzer bir biçimde olacaktır.
+3. QDK’nin geçerli sürümünü belirleyin. Bunu bulmak için [sürüm notlarını](https://docs.microsoft.com/quantum/relnotes/) gözden geçirebilirsiniz. Sürüm, `0.12.20072031` ile benzer bir biçimde olacaktır.
 
 4. `.csproj` dosyalarınızın her birinde, aşağıdaki adımları izleyin:
 
@@ -107,7 +108,7 @@ Artık [Visual Studio QDK uzantınızı güncelleştirme](#update-visual-studio-
     - Proje tanımındaki SDK başvurusunu değiştirin. Sürüm numarasının **3. adımda** belirlenen değere karşılık geldiğinden emin olun.
 
         ```xml
-        <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+        <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
         ```
 
     - Varsa, aşağıdaki girdide belirtilecek olan `Microsoft.Quantum.Development.Kit` paketi başvurusunu kaldırın:
@@ -126,7 +127,7 @@ Artık [Visual Studio QDK uzantınızı güncelleştirme](#update-visual-studio-
         Paketlere yönelik başvurular aşağıdaki biçimdedir:
 
         ```xml
-        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.11.2006.207" />
+        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.12.20072031" />
         ```
 
     - Güncelleştirilen dosyayı kaydedin.
@@ -193,7 +194,7 @@ Güncelleştirme yordamı, ilk olarak Conda veya .NET CLI ve PIP kullanarak yük
     Aşağıdaki çıktıyı görmeniz gerekir:
 
     ```
-    iqsharp: 0.12.20070124
+    iqsharp: 0.12.20072031
     Jupyter Core: 1.4.0.0
     ```
 
@@ -215,7 +216,7 @@ Güncelleştirme yordamı, ilk olarak Conda veya .NET CLI ve PIP kullanarak yük
 
     ```
     Name: qsharp
-    Version: 0.12.20070124
+    Version: 0.12.2007.2031
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
@@ -266,7 +267,7 @@ Güncelleştirme yordamı, ilk olarak Conda veya .NET CLI ve PIP kullanarak yük
     Çıkışınızın aşağıdakine benzer olması gerekir:
 
     ```
-    iqsharp: 0.12.20070124
+    iqsharp: 0.12.20072031
     Jupyter Core: 1.4.0.0
     ```
 
@@ -301,16 +302,19 @@ Artık mevcut Q# Jupyter Not Defterlerinizi çalıştırmak için güncelleştir
     - **Visual Studio Code için Microsoft Quantum geliştirme seti** uzantısını seçin
     - Uzantıyı yeniden yükleyin
 
-2. Quantum proje şablonlarını güncelleştirin:
-
-   - **Görünüm** -> **Komut Paleti**’ne gidin
-   - **Q#: Proje şablonlarını yükle**’yi seçin
-   - Birkaç saniye sonra, "proje şablonlarının başarıyla yüklendiğini" onaylayan bir açılır pencere görmeniz gerekir
-
 ### <a name="c-using-the-dotnet-command-line-tool"></a>`dotnet` komut satırı aracını kullanarak C#
 
 1. .NET için Quantum proje şablonlarını güncelleştirme
 
+    Komut satırından:
+
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
+
+   Alternatif olarak komut satırı şablonlarını kullanmayı amaçlıyorsanız ve VS Code QDK uzantısı zaten yüklüyse proje şablonlarını uzantının kendisinden güncelleştirebilirsiniz:
+
+   - [QDK uzantısını güncelleştirme](#update-vs-code-qdk-extension)
+   - VS Code’da **Görünüm** -> **Komut Paleti**’ne gidin
+   - **Q#: Komut satırı proje şablonlarını yükle** komutunu seçin
+   - Birkaç saniye sonra, "proje şablonlarının başarıyla yüklendiğini" onaylayan bir açılır pencere görmeniz gerekir
