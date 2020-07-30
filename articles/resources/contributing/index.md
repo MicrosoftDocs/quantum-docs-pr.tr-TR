@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 108a50302422e5ae41e14b30ef22169370c2a35a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: c5acd6c2b3163488a9b4c6e52e6d34489a8f4056
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871425"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436574"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Quantum Development Kit’e katkı yapma
 
@@ -19,7 +19,7 @@ Quantum Development Kit, kuantum programları yazmaya yönelik bir araç koleksi
 Kuantum bilişimini keşfetmekte olan, kuantum algoritmalarında araştırma yapan, kuantum cihazlar için yeni uygulamalar geliştiren ve kuantum programlamadan en iyi şekilde yararlanmak için diğer şekillerde çalışan geniş bir insan topluluğunun parçasıdır.
 Bu topluluğun bir parçası olarak Quantum Development Kit, kuantum geliştiricilerine ihtiyaç duydukları özelliklerle çok çeşitli arka planlar sunmayı amaçlamaktadır.
 Quantum Development Kit’e yaptığınız katkılar, diğer kuantum geliştiriciler tarafından kullanılan araçları, bu araçların belgelenme yöntemlerini geliştirerek ve hatta tüm kuantum programlama topluluğunu keşfetmek ve içerik oluşturmak için daha iyi bir yer haline getirmeye yardımcı olan yeni özellik ve işlevler oluşturarak bu amacı gerçekleştirmeye yardımcı olur.
-Nazik katkılarınız ve topluluğumuzu mümkün olan en iyi seviyeye getirirken birlikte çalışma fırsatı sunduğunuz için teşekkür ediyoruz.
+Nazik katkılarınız ve topluluğumuzu mümkün olan en iyi seviyeye getirirken birlikte çalışma fırsatı sunduğunuz için teşekkür ediyoruz. 
 
 Bu kılavuzda, katkınızın kuantum programlama topluluğuna mümkün olduğunca yarar olmasıyla ilgili bazı önerilerde bulunacağız.
 

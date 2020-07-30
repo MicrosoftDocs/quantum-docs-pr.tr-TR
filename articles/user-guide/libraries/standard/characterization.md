@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7ed92c29020ccf389faa099f5bd80516af525578
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275760"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436535"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Hisse ve Istatistik #
 
@@ -96,7 +96,7 @@ Tam Bayeme çıkarımı, uygulama ıntrackingtable içinde.
 Bu Imagine, bir $n $ bit değişkeni $x $ öğrenmek istiyoruz.
 Önceki dağıtım $ \Pr (x) $, $x $ değerinin $2 ^ n $ kuramsal değerlerini destekler.
 Bu, $x $ tam olarak doğru bir tahmine ihtiyaç duyduğumuz için Bayeme aşaması tahmininde, yüksek bellek ve işlem süresine ihtiyaç duyabileceği anlamına gelir.
-Örneğin, hisse kaybı benzetimi gibi bazı uygulamalar için, bu tür yöntemler, Shor 'ın algoritması gibi diğer uygulamaların, aşama tahmini adımı içinde tam Bayeduyma çıkarımı kullanamaz.  Bu nedenle, [rastgele yürüme aşaması Tahmini (RWPE)](xref:microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation) gibi yaklaşık bayeme yöntemlerine ve ayrıca [sağlam aşama tahmini](xref:microsoft.quantum.characterization.robustphaseestimation)gibi baysuz olmayan yaklaşımlara yönelik uygulamalar sunuyoruz.
+Örneğin, hisse kaybı benzetimi gibi bazı uygulamalar için, bu tür yöntemler, Shor 'ın algoritması gibi diğer uygulamaların, aşama tahmini adımı içinde tam Bayeduyma çıkarımı kullanamaz.  Bu nedenle, [rastgele yürüme aşaması Tahmini (RWPE)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) gibi yaklaşık bayeme yöntemlerine ve ayrıca [sağlam aşama tahmini](xref:microsoft.quantum.characterization.robustphaseestimation)gibi baysuz olmayan yaklaşımlara yönelik uygulamalar sunuyoruz.
 
 ### <a name="robust-phase-estimation"></a>Sağlam aşama tahmini ###
 
