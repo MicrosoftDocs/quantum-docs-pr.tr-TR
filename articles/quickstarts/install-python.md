@@ -6,12 +6,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: ec5e66e0c85d89888a8ff1e7d6bf18bf89ff44ac
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: 4d148435f01d975e690828dd02335758fc71dfe4
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871595"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436555"
 ---
 # <a name="develop-with-q-and-python"></a>Q# ve Python ile geliştirme
 
@@ -97,7 +97,7 @@ Artık basit bir Q# programı yazarak ve yürüterek `qsharp` Python paketi yük
     import qsharp
     from Qrng import SampleQuantumRandomNumberGenerator
 
-    SampleQuantumRandomNumberGenerator.simulate()
+    print(SampleQuantumRandomNumberGenerator.simulate())
     ```
 
 1. Yükleme sırasında oluşturduğunuz ortamdan (yani `qsharp` yüklediğiniz Conda veya Python ortamı) şu programı çalıştırın:
@@ -106,7 +106,7 @@ Artık basit bir Q# programı yazarak ve yürüterek `qsharp` Python paketi yük
     python host.py
     ```
 
-1. Çağırdığınız işlemin sonucunu görmeniz gerekir. Bu durumda, işleminiz rastgele bir sonuç oluşturduğundan ekranda `Zero` veya `One` yazdırılmış olduğunu görürsünüz. Programı tekrar tekrar yürütürseniz, her sonucu yaklaşık olarak yarı sürede görmeniz gerekir.
+1. Çağırdığınız işlemin sonucunu görmeniz gerekir. Bu durumda, işleminiz rastgele bir sonuç oluşturduğundan ekranda `0` veya `1` yazdırılmış olduğunu görürsünüz. Programı tekrar tekrar yürütürseniz, her sonucu yaklaşık olarak yarı sürede görmeniz gerekir.
 
 > [!NOTE]
 > * Python kodu yalnızca normal bir Python programıdır. Python programını yazmak ve Q# işlemlerini çağırmak için Python tabanlı Jupyter Not Defterleri dahil olmak üzere herhangi bir Python ortamını kullanabilirsiniz. Python programı, Python kodunun kendisi ile aynı klasörde bulunan tüm .qs dosyalarından Q# işlemlerini içeri aktarabilir.
