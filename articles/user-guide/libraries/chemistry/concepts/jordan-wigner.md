@@ -6,12 +6,15 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
-ms.openlocfilehash: 17cb473c6d33e3356d5da886f47985c3828d4d1f
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 9f1455ebbecf6a3500ec11a5196e7662455c9a78
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275918"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869520"
 ---
 # <a name="jordan-wigner-representation"></a>Ürdün-Wigner temsili
 
@@ -28,7 +31,7 @@ Daha sonra bu $a ^ \ dagger_j {0} \tus_j = \ket {1} _j $ ve $a ^ \ dagger_j \dem
 \Begin{hizalaması} a ^ \ dagger_j &= \begin{bmatrix}0 & 0 \\ \ 1 &0 \ End{bmatrix} = \frac{X_j-iY_j} {2} , \no \\ \\ a_j &= \begin{bmatrix}0 & 1 \\ \ 0 &0 \end{bmatrix} = \frac{X_j + iY_j} {2} , \end{hizalaması}; burada $X _j $ ve $Y _j $, qubit $X $ üzerinde davranan Pauli-$Y $ ve-$j $ işleçleridir.
 
 >[!NOTE]
-> Q # ' da $ \ket $ {0} durumu $Z $ işlecinin + 1 eigenstate değerini temsil eder. Fizik $ \ demet $ ' in bazı alanlarında {0} düşük enerji zemin durumu ve bu nedenle $Z $ işlecinin-1 eigenstate 'i temsil eder. Bu nedenle, bazı formüller popüler belgeler farklılık gösterebilir.
+> Q#$ \Ket {0} $ durumu, $Z $ işlecinin + 1 eigenstate değerini temsil eder. Fizik $ \ demet $ ' in bazı alanlarında {0} düşük enerji zemin durumu ve bu nedenle $Z $ işlecinin-1 eigenstate 'i temsil eder. Bu nedenle, bazı formüller popüler belgeler farklılık gösterebilir.
 
 Kimya kitaplığında, {0} dolu olmayan bir döndürme-orbçeyi göstermek için $ \ket $ kullanıyoruz.
 Bu, tek bir dönüş için, aylık bilgisayarlarda anlamış olan Unitary matrislerinin yanı sıra oluşturma ve Annme işleçlerini temsil etmek için çok kolay olduğunu gösterir.

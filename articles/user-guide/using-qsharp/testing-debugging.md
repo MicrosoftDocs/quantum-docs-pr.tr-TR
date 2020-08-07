@@ -6,30 +6,33 @@ ms.author: mamykhai@microsoft.com
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: db6e49e94e5ceb3b1b0b2d6ab57391618084072b
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 2b5276da594ba263177d435c1153f6d96e29c4e8
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870983"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867922"
 ---
 # <a name="testing-and-debugging"></a>Test etme ve hata ayıklama
 
 Klasik programlamada olduğu gibi, hisse ve yanlış davranışı tanılamanıza olanak tanımak için, bu program tarafından tasarlanan bir işlem olup olmadığını denetlemek önemlidir.
-Bu bölümde, test ve hata ayıklama için Q # tarafından sunulan araçlar ele alınmaktadır.
+Bu bölümde, Q# test ve hata ayıklama için tarafından sunulan araçları ele aldık.
 
 ## <a name="unit-tests"></a>Birim testleri
 
 Klasik programları test etmeye yönelik yaygın bir yaklaşım, bir kitaplıktaki kodu çalıştıran ve çıktısını beklenen bir çıktı ile karşılaştıran *birim testleri*adlı küçük programları yazmaktır.
 Örneğin, `Square(2)` `4` $2 ^ 2 = $4 olan *bir priorı* öğrendiğinizden emin olabilirsiniz.
 
-S #, hisse programları için birim testleri oluşturmayı destekler ve bu, [xUnit](https://xunit.github.io/) birim test çerçevesi içinde testler olarak çalıştırılabilir.
+Q#hisse programları için birim testleri oluşturmayı destekler ve bu, [xUnit](https://xunit.github.io/) birim test çerçevesi içinde testler olarak çalıştırılabilir.
 
 ### <a name="creating-a-test-project"></a>Test projesi oluşturma
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Visual Studio 2019 ' i açın. **Dosya** menüsüne gidin ve **Yeni > proje...** öğesini seçin. Sağ üst köşede, ara `Q#` ' yı arayın ve **Q # test projesi** şablonunu seçin.
+Visual Studio 2019 ' i açın. **Dosya** menüsüne gidin ve **Yeni > proje...** öğesini seçin. Sağ üst köşede, `Q#` öğesini arayın ve ** Q# test projesi** şablonunu seçin.
 
 #### <a name="command-line--visual-studio-code"></a>[Komut Satırı / Visual Studio Code](#tab/tabid-vscode)
 
@@ -42,7 +45,7 @@ $ code . # To open in Visual Studio Code
 
 ****
 
-Yeni projenizde `Tests.qs` , yeni Q # birim testlerini tanımlamak için uygun bir yer sağlayan tek bir dosya vardır.
+Yeni projenizin `Tests.qs` Yeni birim testlerini tanımlamak için uygun bir yer sağlayan tek bir dosyası vardır Q# .
 Başlangıçta bu dosya, `AllocateQubit` yeni ayrılmış bir qubitin $ \ket {0} $ durumunda olduğunu denetleyen ve bir ileti yazdıran bir örnek birim testi içerir:
 
 ```qsharp
@@ -57,7 +60,7 @@ Başlangıçta bu dosya, `AllocateQubit` yeni ayrılmış bir qubitin $ \ket {0}
     }
 ```
 
-Ve döndürmelerinin bağımsız değişkenini alan tüm Q # işlemleri veya işlevleri `Unit` `Unit` , özniteliği aracılığıyla birim testi olarak işaretlenebilir `@Test("...")` . Önceki örnekte, bu özniteliğin bağımsız değişkeni, `"QuantumSimulator"` testin çalıştırıldığı hedefi belirtir. Tek bir test birden çok hedef üzerinde çalıştırılabilir. Örneğin, öğesinden önce bir öznitelik `@Test("ResourcesEstimator")` ekleyin `AllocateQubit` . 
+Q#Ve döndürmelerinin bağımsız değişkenini alan herhangi bir işlem veya işlev `Unit` `Unit` , özniteliği aracılığıyla birim testi olarak işaretlenebilir `@Test("...")` . Önceki örnekte, bu özniteliğin bağımsız değişkeni, `"QuantumSimulator"` testin çalıştırıldığı hedefi belirtir. Tek bir test birden çok hedef üzerinde çalıştırılabilir. Örneğin, öğesinden önce bir öznitelik `@Test("ResourcesEstimator")` ekleyin `AllocateQubit` . 
 ```qsharp
     @Test("QuantumSimulator")
     @Test("ResourcesEstimator")
@@ -66,9 +69,9 @@ Ve döndürmelerinin bağımsız değişkenini alan tüm Q # işlemleri veya iş
 ```
 Dosyayı kaydedin ve tüm testleri çalıştırın. Artık iki birim testi olmalıdır, biri `AllocateQubit` üzerinde çalışır `QuantumSimulator` ve biri içinde çalıştığı yerdir `ResourcesEstimator` . 
 
-Q # derleyicisi, yerleşik hedefleri `"QuantumSimulator"` , `"ToffoliSimulator"` ve `"ResourcesEstimator"` birim testleri için geçerli yürütme hedefleri olarak tanır. Özel bir yürütme hedefi tanımlamak için herhangi bir tam adı belirtmek de mümkündür. 
+Q#Derleyici yerleşik hedefleri `"QuantumSimulator"` , `"ToffoliSimulator"` ve `"ResourcesEstimator"` birim testleri için geçerli yürütme hedefleri olarak tanır. Özel bir yürütme hedefi tanımlamak için herhangi bir tam adı belirtmek de mümkündür. 
 
-### <a name="running-q-unit-tests"></a>Q # birim testlerini çalıştırma
+### <a name="running-no-locq-unit-tests"></a>Q#Birim testlerini çalıştırma
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
@@ -137,9 +140,9 @@ Başarısız testler için çıktılar, hatanın tanılanmasına yardımcı olma
 
 ## <a name="facts-and-assertions"></a>Olgular ve Onaylamalar
 
-Q # içindeki işlevlerin _mantıksal_ kenar etkileri olmadığından, bir q # programı içinden hiçbir daha gözlemleyebilirsiniz, çıkış türü boş tanımlama alanı olan bir işlevi çalıştırmanın diğer etkileri vardır `()` .
-Diğer bir deyişle, bir hedef makine, `()` Bu atlama 'nin aşağıdaki Q # kodunun davranışını değiştirmeyeceği garantisi ile döndürülen hiçbir işlevi çalıştırmayabilir.
-Bu davranış `()` , işlevleri (gibi `Unit` ), soru ve hata ayıklama mantığını Q # programlarına ekleme yararlı bir araç haline getirir. 
+İçindeki işlevlerin Q# _mantıksal_ yan etkileri olmadığından, bir program içinden hiçbir daha gözlemleyebilirsiniz, Q# Çıkış türü boş tanımlama grubu olan bir işlevi çalıştırmanın diğer etkileri vardır `()` .
+Diğer bir deyişle, bir hedef makine, `()` Bu atlama 'nin aşağıdaki kodun davranışını değiştirmeyeceği garantisi ile döndürülen hiçbir işlevi çalıştırmayabilir Q# .
+Bu davranış `()` `Unit` , programları (gibi), programlara onaylar ve hata ayıklama mantığı eklemek için yararlı bir araç sağlar Q# . 
 
 Basit bir örnek ele alalım:
 
@@ -153,8 +156,8 @@ function PositivityFact(value : Double) : Unit
 }
 ```
 
-Burada anahtar sözcüğü, `fail` hesaplamanın devam olmayacağını ve Q # programını çalıştıran hedef makinede bir özel durum harekete geçirdiğini gösterir.
-Tanım olarak, hedef makine artık bir deyime ulaştıktan sonra Q # kodunu çalıştırmayacak olduğundan, bu türden bir hata Q # içinden gözlemlenemez `fail` .
+Burada anahtar sözcüğü, `fail` hesaplamanın devam olmayacağını ve programı çalıştıran hedef makinede bir özel durum harekete geçirdiğini gösterir Q# .
+Tanım olarak, Q# hedef makine artık Q# bir deyime ulaştıktan sonra kodu çalıştırmayacak olduğundan, bu türden bir hata içinden gözlemlenemez `fail` .
 Bu nedenle, çağrısına bir çağrı geçmemiz durumunda `PositivityFact` girişinin pozitif olduğundan emin olabilirsiniz.
 
 `PositivityFact`Ad alanından işlevini kullanarak aynı davranışı uygulayabileceğinizi unutmayın [`Fact`](xref:microsoft.quantum.diagnostics.fact) <xref:microsoft.quantum.diagnostics> :
@@ -354,7 +357,7 @@ Genel olarak, başka bir yazmaç ile ayrılmış bir kaydın durumu saf bir duru
 Qubits provided (0;) are entangled with some other qubit.
 ```
 
-Aşağıdaki örnekte, her ikisini de <xref:microsoft.quantum.diagnostics.dumpregister> ve <xref:microsoft.quantum.diagnostics.dumpmachine> Q # kodunuzda nasıl kullanabileceğiniz gösterilmektedir:
+Aşağıdaki örnek, kodunuzda ve birlikte nasıl kullanabileceğinizi gösterir <xref:microsoft.quantum.diagnostics.dumpregister> <xref:microsoft.quantum.diagnostics.dumpmachine> Q# :
 
 ```qsharp
 namespace app
@@ -381,6 +384,6 @@ namespace app
 
 ## <a name="debugging"></a>Hata Ayıklama
 
-`Assert` `Dump` , Ve işlevleri ve işlemleri üzerinde, Q # standart Visual Studio hata ayıklama özellikleri alt kümesini destekler: [satır kesme noktaları ayarlama](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [F10 kullanarak kod üzerinden atlama](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)ve [Klasik değişkenlerin değerlerini inceleme](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) , benzeticide kod yürütme sırasında mümkün değildir.
+`Assert`Ve `Dump` işlevleri ve işlemleri üzerinde, Q# Standart Visual Studio hata ayıklama özellikleri alt kümesini destekler: [satır kesme noktaları ayarlama](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [F10 kullanarak kod üzerinden atlama](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)ve [Klasik değişkenlerin değerlerini inceleme](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) işlemi, simülatör üzerinde kod yürütme sırasında mümkün değildir.
 
 Visual Studio Code hata ayıklaması, C# tarafından desteklenen ve OmniSharp tarafından desteklenen Visual Studio Code uzantısı Için sağlanan hata ayıklama yeteneklerini kullanır ve [en son sürümü](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)yüklemeyi gerektirir. 

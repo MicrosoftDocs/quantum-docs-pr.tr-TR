@@ -6,12 +6,15 @@ uid: microsoft.quantum.more-information
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: d3c252c6579e1286aae71a0f18ac7b6b02a5c1ed
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 7c5063fccbe73478aeb917e0cd2fe2f7fe51c070
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884147"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866851"
 ---
 # <a name="more-quantum-computing-learning-resources"></a>Daha fazla hisse bilgi işlem öğrenme kaynakları
 
@@ -24,7 +27,7 @@ Bu bölüm, hisse bilgi işlem konularının derin kapsamına yönelik seçili b
 + Kitaev, A. Y., Shen, A., & Vyalyi, d. N. (2002). Klasik ve hisse hesaplama (Vol. 47). Providence: American matematiksel topluluğu.
 + Kaye, P., LaFlamme, R., & Mosca, M. (2007). Hisse bilgi işlem konusuna giriş. Oxford University Press.
 + Rieffel, E. G., & Polak, W. H. (2011). Hisse bilgi işlem: Gentle giriş. MIT Press.
-+ Sarah C. Kaiser ve Christopure. granade (erken erişim programı, 2019 Nisan 'da 2020 ' de yayını) başladı. [Python ve Q #-uygulamalı yaklaşımla bilgi işlem hakkında bilgi edinin](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp).
++ Sarah C. Kaiser ve Christopure. granade (erken erişim programı, 2019 Nisan 'da 2020 ' de yayını) başladı. [Python ve Q# uygulamalı bir yaklaşım ile hisse bilgi Işlem hakkında bilgi edinin](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp).
 
 ## <a name="online-courses"></a>Çevrimiçi kurslar ##
 

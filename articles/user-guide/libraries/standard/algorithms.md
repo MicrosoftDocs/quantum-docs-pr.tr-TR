@@ -1,23 +1,26 @@
 ---
-title: "Q 'da hisse algoritmaları #"
+title: İçindeki hisse algoritmalarıQ#
 description: Genliği yükseltme, Fourier dönüşümü, Draper ve Beauregard adders ve aşama tahmini dahil olmak üzere temel hisse bilgi işlem algoritmaları hakkında bilgi edinin.
 author: QuantumWriter
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 7f4916353c53d6459356243098281ccb16b17278
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0b5972480061c460345057285bbfe53305acc122
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871323"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868823"
 ---
 # <a name="quantum-algorithms"></a>Hisse algoritmaları #
 
 ## <a name="amplitude-amplification"></a>Genliğini Yükseltme ##
 
-*Genliği yükseltme* , hisse bilgi işlem aracının temel araçlarından biridir. Bu, Grover 'in arama, genlik tahmini ve birçok hisse makine öğrenimi algoritmalarının temelini oluşturan temel bir fikirdir.  Birçok çeşit vardır ve soru-cevap bölümünde, uygulamanın en geniş bölümünde izin verilen kısmi yansımalar ile yükümlülüğü düzeyini temel alan genel bir sürüm sağlıyoruz.
+*Genliği yükseltme* , hisse bilgi işlem aracının temel araçlarından biridir. Bu, Grover 'in arama, genlik tahmini ve birçok hisse makine öğrenimi algoritmalarının temelini oluşturan temel bir fikirdir.  Birçok çeşit vardır ve ' de, Q# uygulamanın en geniş bölümünde izin verilen kısmi yansımalar Ile yükümlülüğü düzeyini temel alan genel bir sürüm sağlıyoruz.
 
 Genizme 'nin arkasındaki orta düşünce, bir dizi yansıma gerçekleştirerek istenen sonucun oluşma olasılığını artırmakta.  Bu yansıtılamalar, ilk durumu, genellikle işaretli bir durum olarak adlandırılan istenen hedef durumuna yaklaştırır.  Özellikle, ilk durumu işaretli bir durumda olacak şekilde ölçmeye olasılığı $ \sin ^ 2 (\teta) $ ise, gen$m liği yükseltme işleminden sonra, başarı olasılığı $ \sin ^ 2 ((2m + 1) \teta) $ olur.  Bu, bazı $n $ \teta = \ Pi/[2 (2n + 1)] $ değeri için $ \ teta = \ Pi/[2 (2n + 1)] $ olduğunda, daha sonra genliği yükseltme \\ $n $ yineleme olan $ yinelemeden sonra% $100 ' a kadar başarı olasılığını  $ \Teta = \sin ^ {-1} (\Sqrt{\pr (success)}) $ bu yana, başarılı bir şekilde elde etmek için gereken yineleme sayısının rastgele örnekleme kullanılarak belirleyici olmayan işaretlenmiş bir durumu bulmak için gereken beklenen sayıdan çok daha düşük olduğu anlamına gelir.
 
@@ -27,7 +30,7 @@ Genleştirme 'nın arkasındaki mantık, $Q $ ' ın Eigen ayrıştırma işlemin
 
 Bundan sonra gelen diğer yararlı bir özellik ise, eigenvalue $ \teta $, ilk durumun işaretleneceği olasılığa ($P _0 $ ' ın yalnızca ilk duruma kadar bir projektör olduğu durumlarda) doğrudan ilgilidir.  $Q $ 'nin ıdgenphase $2 \ teta = 2 \ sin ^ {-1} (\Sqrt{\pr (success)}) $ olduğundan, $Q $ öğesine aşama tahmini uyguladığımızda, bir Unitary yordamı için başarılı olma olasılığını öğreniyoruz.  Bu, daha az bir şekilde ihtiyaç duyulduğundan daha fazla bilgi edinmek için hisse prosedürü için en fazla sayıda daha az uygulama gerektirdiğinden yararlıdır.
 
-S #, yükümlülüğü düzeyini en uygun özelleşmenin bir özelleştirmesi olarak sunar.  Yükümlülüğü, ilk egenliği olan Projektörün başlangıç durumuna bir projektör olmaması gerektiğinden, bu bilinen adı ortadan kaldırmaz.  Bu anlamda protokol, ilk duruma kadar zorunluluvou olur.  Yükümlülüğü nesnelerin anahtar uygulaması, ilk durumun bilinmediği, ancak simülasyon protokolünde bir anliksel kayıt ile ayrılmış hale geldiği Unitary Hamiltonian benzetim yöntemlerinin belirli *Doğrusal birleşimleridir* .  Bu anyater kaydı sabit bir değer olacak şekilde ölçüldüğünde, $0 $ deyin, bu tür benzetim yöntemleri, kalan qubits 'e istenen Unitary dönüşümünü uygular (sistem kaydı adı verilir).  Diğer tüm ölçüm sonuçları hataya yol açabilir.  Yükümlülüğü, genlik düzeyini yükseltme, bu ölçümün başarısı, \\ Yukarıdaki düşünmelerin $100% $ ' üne artırılmasından izin verir.  Ayrıca, normal genileri, sistem kaydının boş olduğu durumuna karşılık gelir.  Bu nedenle, soru-cevap, temel genliği yükseltme alt yordamı olarak yükümlülüğü en çok genliğini kullanır.
+Q#zorunluluklığın en çok genliği bir özelleştirmesi olarak genliğini tanıtır.  Yükümlülüğü, ilk egenliği olan Projektörün başlangıç durumuna bir projektör olmaması gerektiğinden, bu bilinen adı ortadan kaldırmaz.  Bu anlamda protokol, ilk duruma kadar zorunluluvou olur.  Yükümlülüğü nesnelerin anahtar uygulaması, ilk durumun bilinmediği, ancak simülasyon protokolünde bir anliksel kayıt ile ayrılmış hale geldiği Unitary Hamiltonian benzetim yöntemlerinin belirli *Doğrusal birleşimleridir* .  Bu anyater kaydı sabit bir değer olacak şekilde ölçüldüğünde, $0 $ deyin, bu tür benzetim yöntemleri, kalan qubits 'e istenen Unitary dönüşümünü uygular (sistem kaydı adı verilir).  Diğer tüm ölçüm sonuçları hataya yol açabilir.  Yükümlülüğü, genlik düzeyini yükseltme, bu ölçümün başarısı, \\ Yukarıdaki düşünmelerin $100% $ ' üne artırılmasından izin verir.  Ayrıca, normal genileri, sistem kaydının boş olduğu durumuna karşılık gelir.  Bunun nedeni, Q# temel genliği yükseltme alt yordamı olarak yükümlülüğü en çok genliğini kullanır.
 
 Genel yordamın ( `AmpAmpObliviousByReflectionPhases` ), ve çağırdığımız iki kaydı vardır `ancillaRegister` `systemRegister` . Ayrıca, gerekli yansıtımları için iki Oracles kabul eder. `ReflectionOracle`Yalnızca üzerinde çalışır, ancak `ancillaRegister` `ObliviousOracle` her iki kasada de çalışır. Giriş, `ancillaRegister` ilk yansıma işlecinin $ \ cıvas-2P_1 $ ' i-1 eigenstate olarak başlatılmalıdır.
 
@@ -116,4 +119,4 @@ Bu şekilde devam ederek, \begin{hizalaması} \ket{\psı} & = \ sum_ {j = 0} ^ n
 $ \Phi = 2 \ Pi p/2 ^ k $ ' ı bir tamsayı $p $ olarak kabul ediyorsanız, bunu $ \ket{\psı} = \operatorname{QFT} \ket{p_0 p_1 \noktalar p_n} $ olarak tanıyacağız; burada $p _j $, $j ^ {\textrm{TH}} $ bit/$2 \pi \phi $ şeklindedir.
 Bu nedenle, hisse dosyası miktarı olarak kodlanan aşamanın ikili gösterimini elde ettiğimiz için, bu nedenle hisse.
 
-Q # içinde, bu işlem tarafından uygulanır <xref:microsoft.quantum.characterization.quantumphaseestimation> , bu, <xref:microsoft.quantum.oracles.discreteoracle> $m $ pozitif tamsayıların bir işlevi olarak $U ^ d $ uygulayan uygulamayı alır.
+' De Q# , bu işlem tarafından uygulanır <xref:microsoft.quantum.characterization.quantumphaseestimation> , bu, <xref:microsoft.quantum.oracles.discreteoracle> $m $ pozitif tamsayılar işlevi olarak $U ^ d $ uygulayan bir uygulama alır.

@@ -1,32 +1,35 @@
 ---
-title: 'Q # API tasarım Ilkeleri'
-description: 'Q # API tasarım Ilkeleri'
+title: Q#API tasarım Ilkeleri
+description: Q#API tasarım Ilkeleri
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
 ms.topic: article
 uid: microsoft.quantum.contributing.api-design
-ms.openlocfilehash: def6a9f12accfa399fd4db3783b9899fc743f025
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 580fcaea575ff544ed2c5f31eba7e963bea4534b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275488"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866918"
 ---
-# <a name="q-api-design-principles"></a>Q # API tasarım Ilkeleri
+# <a name="no-locq-api-design-principles"></a>Q#API tasarım Ilkeleri
 
 ## <a name="introduction"></a>Giriş
 
-Bir dil ve platform olarak, soru-cevap kullanıcılara hisse, çalışma, anlama ve bilgi edinme
-Kullanıcılara güç sağlamak için, Q # kitaplıklarını tasarlarken, tasarımlarımıza kılavuzluk eden bir API tasarım ilkeleri kümesi izler ve hisse geliştirme topluluğu için kullanılabilir kitaplıklar oluşturmamıza yardımcı olun.
-Bu makalede bu ilkeler listelenmekte ve soru-cevap API 'Leri tasarlarken nasıl uygulanabilmenize yardımcı olacak örnekler verilmektedir.
+Bir dil ve platform olarak, Q# kullanıcılara hisse anları yazma, çalıştırma, anlama ve bunları keşfetmeye yönelik güç sağlar.
+Kullanıcılara güç sağlamak için, kitaplıkları tasarlayacağız, Q# tasarımlarımıza kılavuzluk eden BIR API tasarım ilkeleri kümesi izledik ve hisse geliştirme topluluğu için kullanılabilir kitaplıklar oluşturmamıza yardımcı olun.
+Bu makalede bu ilkeler listelenmekte ve API 'leri tasarlarken bunların nasıl uygulanacağını göstermeye yardımcı olacak örnekler verilmektedir Q# .
 
 > [!TIP]
 > Bu, kitaplık geliştirme ve ayrıntılı kitaplık katkılarına kılavuzluk eden oldukça ayrıntılı bir belgedir.
-> Büyük olasılıkla, Q # ' da kendi kitaplıklarınızı yazıyorsanız veya [q # kitaplıkları deposuna](https://github.com/microsoft/QuantumLibraries)daha büyük Özellikler katkıdıysanız en çok yararlı bulacaksınız.
+> Büyük olasılıkla, içinde kendi kitaplıklarınızı yazıyorsanız Q# veya [ Q# Kitaplıklar deposuna](https://github.com/microsoft/QuantumLibraries)daha büyük Özellikler katkısanız bile en yararlı bulacaksınız.
 >
 > Öte yandan, hisse geliştirme paketine daha genel katkıda bulunma hakkında daha fazla bilgi edinmek istiyorsanız, [katkı Kılavuzu](xref:microsoft.quantum.contributing)' nu kullanmaya başladık.
-> Q # kodunuzun biçimlendirilmesini nasıl önerdiğimiz hakkında daha genel bilgiler arıyorsanız, [Stil kılavuzunu](xref:microsoft.quantum.contributing.style)kullanıma almak isteyebilirsiniz.
+> Kodunuzun biçimlendirilmesini nasıl önerdiğimiz hakkında daha genel bilgiler arıyorsanız Q# , [Stil kılavuzunu](xref:microsoft.quantum.contributing.style)kullanıma almak isteyebilirsiniz.
 
 ## <a name="general-principles"></a>Genel Ilkeler
 
@@ -81,7 +84,7 @@ Bu makalede bu ilkeler listelenmekte ve soru-cevap API 'Leri tasarlarken nasıl 
 - ✅Aynı API 'de ve daha önce var olan kitaplıklarda diğer işlevler ve işlemlerle birlikte oluşturmak için işlevler ve **işlemler tasarlayın.**
 
   *Örnekler:*
-  - @"microsoft.quantum.canon.delay"İşlem, girişi hakkında en düşük varsayımlar yapar ve bu nedenle, her iki işlemin veya Kullanıcı tarafından tanımlanan bir işlem için uygulamaları geciktirmek üzere kullanılabilir.
+  - @"microsoft.quantum.canon.delay"İşlem, girişi hakkında en az varsayımlar yapar ve bu nedenle, Q# Standart kitaplıkta veya kullanıcılar tarafından tanımlanan işlemlerin uygulamalarını geciktirmek için kullanılabilir.
     <!-- TODO: define bad example. -->
 
 - ✅İşlemler yerine işlev olarak yalnızca belirleyici klasik **mantığı sergileme** .
@@ -246,12 +249,12 @@ Bu makalede bu ilkeler listelenmekte ve soru-cevap API 'Leri tasarlarken nasıl 
 
   - **İsimler**:
 
-    - **Olgu**: bir hedef makinenin, ortamının veya makine qubits 'in durumunda değil, yalnızca kendi girdilerine bağlı olan bir Boolean koşulu. Bir onaylama işlemi aksine, olgu yalnızca söz konusu olgusuna belirtilen *değerlere* duyarlıdır. Örneğin:
+    - **Olgu**: bir hedef makinenin, ortamının veya makine qubits 'in durumunda değil, yalnızca kendi girdilerine bağlı olan bir Boolean koşulu. Bir onaylama işlemi aksine, olgu yalnızca söz konusu olgusuna belirtilen *değerlere* duyarlıdır. Örnek:
 
       *Örnekler:*
       - @"microsoft.quantum.diagnostics.equalityfacti": iki tamsayı girişi hakkında bir eşitlik olgusu temsil eder; giriş olarak girilen tamsayılar birbirlerine eşittir ya da başka bir program durumundan bağımsız olarak değildir.
 
-    - **Seçenekler:** Bir işlev veya işleme "isteğe bağlı bağımsız değişkenler" gibi davranan, birkaç adlandırılmış öğe içeren bir UDT. Örneğin:
+    - **Seçenekler:** Bir işlev veya işleme "isteğe bağlı bağımsız değişkenler" gibi davranan, birkaç adlandırılmış öğe içeren bir UDT. Örnek:
 
       *Örnekler:*
       - @"microsoft.quantum.machinelearning.trainingoptions"Udt, öğrenme oranı, Mini toplu iş boyutu ve ml eğitimi için diğer yapılandırılabilir parametreler için adlandırılmış öğeler içerir.

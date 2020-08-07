@@ -1,17 +1,20 @@
 ---
 title: Temel işlem sayacı-hisse geliştirme seti
-description: 'Bir Q # programında işlemler tarafından kullanılan temel yürütmeleri izlemek için hisse izi simülatörü kullanan Microsoft QDK temel işlem sayacı hakkında bilgi edinin.'
+description: Bir programdaki işlemler tarafından kullanılan ilkel yürütmeleri izlemek için hisse izi simülatörü kullanan Microsoft QDK temel işlem sayacı hakkında bilgi edinin Q# .
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
-ms.openlocfilehash: ea022d499354f7cefd60da690466496e0ce7c336
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ceb70cef6dc0a4530b992b5a529248a8b283c17f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871034"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868245"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>Hisse izleme simülatörü: temel işlemler sayacı
 
@@ -31,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>C# ana programında temel işlem sayacını kullanma
 
-Bu bölümde aşağıdaki C# örneği, <xref:microsoft.quantum.intrinsic.t> <xref:microsoft.quantum.intrinsic.ccnot> aşağıdaki Q # örnek koduna bağlı olarak, işlemi uygulamak için kaç işlemin gerekli olduğunu sayar:
+<xref:microsoft.quantum.intrinsic.t> <xref:microsoft.quantum.intrinsic.ccnot> Aşağıdaki örnek koda bağlı olarak, bu bölümde aşağıdaki C# örneği, işlemi uygulamak için kaç işlem gerektiğini sayar Q# :
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

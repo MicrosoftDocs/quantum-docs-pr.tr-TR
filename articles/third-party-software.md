@@ -7,21 +7,24 @@ author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
-ms.openlocfilehash: 84d83bf65b3c01a630d98210a5ac3fe322fa501f
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 1d76e9c8532dd7818941d182773a8f85a86becee
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906823"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869758"
 ---
 # <a name="third-party-software-notices-and-information"></a>ÜÇÜNCÜ TARAF YAZıLıM BILDIRIMLERI VE BILGILERI
 
 Bu dosya, aşağıda listelenen projelerden (üçüncü taraf IP) malzemeleri temel alır veya ekler. Özgün telif hakkı bildirimi ve Microsoft 'un böyle üçüncü taraf IP 'nin aldığı lisans aşağıda verilmiştir. Bu tür lisanslar ve bildirimler yalnızca bilgilendirme amacıyla verilmiştir. Microsoft, üçüncü taraf IP 'sini, Microsoft ürün için lisans koşulları altında sizin için lisanslayasağlar. Microsoft, bu sözleşme kapsamında açıkça verilmemiş tüm hakları saklı tutar.
 
 1. YamlDotNet. signed sürüm 4.2.2 (https://www.nuget.org/packages/YamlDotNet.Signed/4.2.2)
-2. xUnit. Runner. VisualStudio 2.3.1 (https://www.nuget.org/packages/xunit.runner.visualstudio/2.3.1)
-3. xUnit. Çalıştırıcısı. Console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1)
-4. xUnit. Extensibility. Execution 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
+2. xUnit. Çalıştırıcısı. VisualStudio 2.3.1 (https://www.nuget.org/packages/xunit.runner.visualstudio/2.3.1)
+3. xUnit. Çalıştırıcısı. Console 2.3.1 ( https://www.nuget.org/packages/xunit.runner.console/2.3.1 )
+4. xunit.extensibility.execution 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
 5. xUnit. Extensibility. Core 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.core/2.3.1)
 6. xUnit. Core 2.3.1 (https://www.nuget.org/packages/xunit.core/2.3.1)
 7. xUnit. onaylama 2.3.1 (https://www.nuget.org/packages/xunit.assert/2.3.1)
@@ -75,7 +78,7 @@ Lisans kapsamındaki izinleri ve sınırlamaları yöneten belirli dile yönelik
 
 
 
-## <a name="xunitextensibilityexecution-notices-and-information"></a>xUnit. Extensibility. yürütme BILDIRIMLERI ve BILGILERI
+## <a name="xunitextensibilityexecution-notices-and-information"></a>xunit.extensibility.exesavunma BILDIRIMLERI ve BILGILERI
 ---------------------------------------
 Telif hakkı (c) .NET Foundation ve katkıda bulunanlar tüm hakları saklıdır
 
@@ -178,7 +181,7 @@ Bu lisans, eşlik eden yazılımın kullanımını yönetir. Yazılımı kullan�
 
 2. Haklar verme
 
-(A) telif hakkı verme-bu lisansın koşullarına tabi, Bölüm 3 ' teki lisans koşulları ve sınırlamaları da dahil olmak üzere her katılımcısı, katkılarını yeniden oluşturmak için size özel, dünya çapında, ücretsiz bir telif hakkı lisansı verir, türeme hazırlığı yapın katkılarından ve katkılarından birini ya da oluşturduğunuz tüm türev çalışmaları dağıtır.
+(A) telif hakkı verme-bu lisansın koşullarına tabi, Bölüm 3 ' teki lisans koşulları ve sınırlamaları da dahil olmak üzere her katılımcısı, katkılarını yeniden oluşturmak, katkılarının katkılarını hazırlamak ve katkılarını veya oluşturduğunuz tüm türev çalışmaları dağıtmak için size özel, dünya çapında, ücretsiz bir telif hakkı lisansı verir.
 
 (B) patent verme-bu lisansın koşullarına tabidir, Bölüm 3 ' teki Lisans koşullarını ve kısıtlamalarını dahil olmak üzere, her katkıda bulunan, lisanslı patentlerde özel olarak, dünya çapında ve ücretsiz olarak lisanslanan bir lisans verir, bu, satışa sunma, kullanma, satma, satışa sunma, satın alma
 
@@ -192,14 +195,14 @@ Bu lisans, eşlik eden yazılımın kullanımını yönetir. Yazılımı kullan�
 
 (D) yazılımın herhangi bir bölümünü kaynak kodu biçiminde dağıtırsanız, bu lisansın yalnızca, dağıtıma sahip olduğu tüm bir kopyasını ekleyerek bu lisans altında bunu yapabilirsiniz. Yazılımın herhangi bir bölümünü derlenen veya nesne kodu biçiminde dağıtırsanız, bunu yalnızca bu lisansla uyumlu bir lisans altında yapabilirsiniz.
 
-(E) yazılım, "olduğu gibi" lisanslanır. Bunların kullanım riski size aittir. Katkıda bulunanlar hiçbir açık teminat, garanti veya koşul vermez. Yerel yasalarınız altında bu lisansın değiştiremeyebileceği ek tüketici haklarına sahip olabilirsiniz. Yerel yasalarınız kapsamında izin verilen ölçüde, katkıda bulunanlar, SATILABİLİRLİK, belirli bir amaca uygunluk ve ihlal edilmemesi dahil olmak üzere zımni garantileri hariç tutar.
+(E) yazılım, "olduğu gibi" lisanslanır. Kullanımlardan doğacak riskler size aittir. Katkıda bulunanlar hiçbir açık teminat, garanti veya koşul vermez. Yerel yasalarınız altında bu lisansın değiştiremeyebileceği ek tüketici haklarına sahip olabilirsiniz. Yerel yasalarınız kapsamında izin verilen ölçüde, katkıda bulunanlar, SATILABİLİRLİK, belirli bir amaca uygunluk ve ihlal edilmemesi dahil olmak üzere zımni garantileri hariç tutar.
 
 ## <a name="fsharpcore-notices-and-information"></a>FSharp. Core BILDIRIMLERI ve BILGILERI
 ---------------------------------------
 MıT lisansı (MıT)
 
-Telif hakkı (c) Microsoft Corporation.
-Tüm hakları saklıdır.
+Telif Hakkı (c) Microsoft Corporation.
+All rights reserved.
 
 Bu yazılımın ve ilişkili belge dosyalarının ("yazılım") bir kopyasını elde eden herhangi bir kişiye izin verildiğinde, bu, ücretsiz olarak kabul edilir. Yazılım kopyalarını kısıtlama olmadan, kopyalama, değiştirme, birleştirme, yayımlama, dağıtma, alt lisans verme, yeniden lisanslama ve/ya da yazılımın kopyalarını, yazılımın hangi kişilere suntığlarına izin verecek şekilde, aşağıdaki koşullara tabi olacak şekilde sınırlama olmaksızın kullanmak için:
 
@@ -218,7 +221,7 @@ Bu yazılımın ve ilişkili belge dosyalarının ("yazılım") bir kopyasını 
 Yukarıdaki telif hakkı bildirimi ve bu izin bildirimi, yazılımın tüm kopyalarına veya önemli bölümlerine dahil edilir.
 
 YAZıLıM, SATıLABILIRLIK, BELIRLI BIR AMACA UYGUNLUK VE IHLAL GARANTISI DAHIL OLMAK ÜZERE HERHANGI BIR GARANTI OLMADAN "OLDUĞU GIBI" SUNULMAKTADıR. HIÇBIR OLAY OLMAMASı DURUMUNDA, YAZARLAR VEYA TELIF HAKKı SAHIPLERI HIÇBIR TALEP, ZARARDAN VEYA BAŞKA BIR YÜKÜMLÜLÜĞÜNDEN, YAZıLıM YA DA YAZıLıMLA VEYA YAZıLıMıN KULLANıMıYLA YA DA DIĞER ANLAŞMALARDAN KAYNAKLANAN, BUNLARDAN VEYA BAŞKA BIR SORUMLULUKTAN SORUMLU DEĞILDIR.
-Bu yazılımın paketlenmiş sürümleri şunlardır; OxyPlot. Core. dll ve OxyPlot. GtkSharp. dll ' nin kopyalarını aşağıda lisanslayabiliriz.
+Bu yazılımın paketlenmiş sürümleri, aşağıdaki OxyPlot.Core.dll ve OxyPlot.GtkSharp.dll kopyalarının yanı sıra aşağıdaki lisansa sahip olabilir.
 
 ---
 
@@ -236,7 +239,7 @@ YAZıLıM, SATıLABILIRLIK, BELIRLI BIR AMACA UYGUNLUK VE IHLAL GARANTISI DAHIL 
 ---------------------------------------
 Telif hakkı (c) 2008-2014, kurt Schelfthout
 
-Tüm hakları saklıdır.
+All rights reserved.
 
 Kaynak ve ikili formlarda, değişiklik yapılmadan veya olmadan yeniden dağıtım ve kullanım için aşağıdaki koşulların karşılandığından izin verilir:
 
@@ -244,7 +247,7 @@ Kaynak ve ikili formlarda, değişiklik yapılmadan veya olmadan yeniden dağıt
 * Redistributions ikili biçimde, yukarıdaki telif hakkı bildirimi, bu koşullar listesi ve belgelerde ve/veya diğer malzemelerde dağıtım ile birlikte verilen aşağıdaki vazgeçme belgesi yeniden oluşturulmalıdır.
 * FsCheck 'in adı ve katkıda bulunanın adları, bu yazılımın önceki yazılı izni olmadan türetilmiş ürünleri onaylama veya yükseltme için de kullanılabilir.
 
-BU YAZILIM, TELİF HAKKI SAHİPLERİ VE KATKIDA BULUNANLAR TARAFINDAN "OLDUĞU GİBİ" SAĞLANMIŞTIR VE TİCARİ OLARAK ELVERİŞLİLİK VE BELİRLİ BİR AMACA UYGUNLUK GİBİ ZIMNİ GARANTİLER DAHİL OLMAK ANCAK BUNLARLA SINIRLI KALMAMAK ÜZERE AÇIK VEYA ZIMNİ HİÇBİR GARANTİ VERİLMEMEKTEDİR. HIÇBIR OLAY OLMAMASı DURUMUNDA, TELIF HAKKı SAHIBI VEYA KATKıDA BULUNANLAR, TÜM DOĞRUDAN, DOLAYLı, ARıZANıN, ÖZEL, MUAF VEYA BELIRLI BIR ZARARDAN SORUMLU YA DA BUNLARLA SıNıRLı OLMAMAK ÜZERE, DAHIL EDILEN MAL VEYA HIZMETLERI TEMIN ETMEK IÇIN SORUMLU DEĞILDIR. KULLANıM, VERI YA DA KAR KAYBı; YA DA IŞ KESINTISI), BU TÜR BIR HASAR OLUŞMASı OLASıLıKSA BILE BU YAZıLıMıN KULLANıMıNDAN BAĞıMSıZ OLARAK, SÖZLEŞME, KESIN YÜKÜMLÜLÜK VEYA TORT (IHMAL EDILEN YA DA BAŞKA BIR ŞEKILDE) MEYDANA GELEN HERHANGI BIR YÜKÜMLÜLÜĞÜNDEN KAYNAKLANıP KAYNAKLANMADıĞıNı BELIRTIR.
+BU YAZıLıM, TELIF HAKKı SAHIPLERI VE KATKıDA BULUNANLAR "OLDUĞU GIBI" VE BUNLARLA SıNıRLı OLMAMAK KAYDıYLA, SATıLABILIRLIK VE BELIRLI BIR AMACA UYGUNLUK DAHIL OLMAK ÜZERE TÜM AÇıK VEYA ZıMNI GARANTILER TARAFıNDAN SAĞLANıR. HIÇBIR OLAY OLMAMASı DURUMUNDA, TELIF HAKKı SAHIBI VEYA KATKıDA BULUNANLAR, TÜM DOĞRUDAN, DOLAYLı, ARıZANıN, ÖZEL, MUAF VEYA BELIRLI BIR ZARARDAN SORUMLU YA DA BUNLARLA SıNıRLı OLMAMAK ÜZERE, DAHIL EDILEN MAL VEYA HIZMETLERI TEMIN ETMEK IÇIN SORUMLU DEĞILDIR. KULLANıM, VERI YA DA KAR KAYBı; YA DA IŞ KESINTISI), BU TÜR BIR HASAR OLUŞMASı OLASıLıKSA BILE BU YAZıLıMıN KULLANıMıNDAN BAĞıMSıZ OLARAK, SÖZLEŞME, KESIN YÜKÜMLÜLÜK VEYA TORT (IHMAL EDILEN YA DA BAŞKA BIR ŞEKILDE) MEYDANA GELEN HERHANGI BIR YÜKÜMLÜLÜĞÜNDEN KAYNAKLANıP KAYNAKLANMADıĞıNı BELIRTIR.
 
 ## <a name="argu-notices-and-information"></a>Argu BILDIRIMLERI ve BILGILERI
 ---------------------------------------
@@ -265,22 +268,22 @@ YAZıLıM, SATıLABILIRLIK, BELIRLI BIR AMACA UYGUNLUK VE IHLAL GARANTISI DAHIL 
 
 Aksi belirtilmedikçe, kaynak ve ikili biçimdeki FParsec kitaplığı, Basitleştirilmiş BSD lisansı altında dağıtılır. Basitleştirilmiş BSD lisansı (deyişle "2 verilere erişme Clause BSD lisansı"), OSı verilere erişme uyumlu basit ve izin veren bir lisanstır. 
 
-FParsec, Unicode karakter veritabanı v 'den türetilmiş verileri içerir. 8.0.0, telif hakkı (c) 1991 \ u20122015 UNICODE, Inc., şu şartlar altında dağıtılır: http://www.unicode.org/terms_of_use.html#Exhibit1 
+FParsec, Unicode karakter veritabanı v 'den türetilmiş verileri içerir. 8.0.0, telif hakkı (c) 1991 \ u20122015 UNICODE, Inc., aşağıdaki şartlar altında dağıtılır:http://www.unicode.org/terms_of_use.html#Exhibit1 
 
 Belge klasöründeki belgeler, Creative Commons Attribution verilere erişme NonCommercial 3,0 olmayan lisans kapsamında lisanslanır. Bu Creative Commons lisansı, izin vermeden belgeleri ticari amaçlar için kullanmanıza izin vermez. Bu, örneğin, belgeleri kar için kitap formu içinde satmayacağınıza veya reklamları bir para kazanmak için bir Web içeriği grubuna koyamayabileceğiniz anlamına gelir. Bununla birlikte, belgelerin metinden doğrudan ücret kazanmaya çalışmadığınız sürece, belgeleri ticari bir bağlamda (örn. bir ticari kuruluşun intranetine koyabilirsiniz) kullanabilirsiniz. 
 
 2,1 Basitleştirilmiş BSD lisansı
 
-Telif hakkı (c) 2007 \ u20122017, Stephan Tolksdorf. Tüm hakları saklıdır.
+Telif hakkı (c) 2007 \ u20122017, Stephan Tolksdorf. All rights reserved.
 
 Kaynak ve ikili formlarda, değişiklik yapılmadan veya olmadan yeniden dağıtım ve kullanım için aşağıdaki koşulların karşılandığından izin verilir: 
 * Kaynak kodu redistributions, yukarıdaki telif hakkı bildirimi, bu koşullar listesi ve aşağıdaki vazgeçme belgesi ile devam etmelidir.
 * Redistributions ikili biçimde, yukarıdaki telif hakkı bildirimi, bu koşullar listesi ve belgelerde ve/veya diğer malzemelerde dağıtım ile birlikte verilen aşağıdaki vazgeçme belgesi yeniden oluşturulmalıdır. 
 
-Bu yazılım, "olduğu gibi" telif hakkı sahipleri tarafından sağlanır ve bunlarla sınırlı olmamak kaydıyla, satılabilirlik ve belirli bir amaca uygunluk dahil, ancak bunlarla sınırlı olmamak kaydıyla, tüm açık veya zımni garantiler tarafından sağlanmamıştır. Hiçbir olay olmaması durumunda, her türlü doğrudan, dolaylı, arıze, özel, muaf veya belirli bir zarardan sorumlu ya da bunlarla sınırlı olmamak üzere, dahil edilen mal veya hizmetleri temin etme, kullanım, veri ya da kar ya da iş kaybı dahil olmak üzere, telif hakkı sahipleri sorumlu olmaz kesinti), ancak işbu bir hasar olasılıksa bile bu yazılımın kullanımından bağımsız olarak, sözleşme, kesin yükümlülük veya haksız fiillerden (ihmal edilen ya da başka bir şekilde) meydana gelen herhangi bir yükümlülüğünden kaynaklanıp kaynaklanmadığını belirtir. 
+Bu yazılım, "olduğu gibi" telif hakkı sahipleri tarafından sağlanır ve bunlarla sınırlı olmamak kaydıyla, satılabilirlik ve belirli bir amaca uygunluk dahil, ancak bunlarla sınırlı olmamak kaydıyla, tüm açık veya zımni garantiler tarafından sağlanmamıştır. Hiçbir olay yoksa, telif hakkı sahipleri hiçbir doğrudan için sorumlu olmaz, dolaylı, arızaya, özel, muaf veya erişsiz zararlardan (alternatif malların veya hizmetlerin satın alınmasına, ancak bunlarla sınırlı olmamak üzere), bu yazılımın kullanımından bağımsız olarak, sözleşme, kesin yükümlülük veya haksız fiillerden dahil olmak üzere herhangi bir yükümlülüğünden kaynaklanan veya herhangi bir sorumluluk teorik durumunda Bu, söz konusu hasar olasılığa yol açsa bile. 
 
 2,2 Creative Commons Attribution verilere erişme NonCommercial 3,0 olmayan lisans
 
-Özet: https://creativecommons.org/licenses/by-nc/3.0/
+Özetlemehttps://creativecommons.org/licenses/by-nc/3.0/
 
-Tam lisans metni: https://creativecommons.org/licenses/by-nc/3.0/legalcode 
+Tam lisans metni:https://creativecommons.org/licenses/by-nc/3.0/legalcode 

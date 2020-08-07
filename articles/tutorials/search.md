@@ -1,21 +1,24 @@
 ---
-title: Q# dilinde Grover arama algoritmasını çalıştırma - Quantum Development Kit
-description: Standart kuantum algoritmalarından biri olan Grover algoritmasını gösteren bir Q# projesi derleyin.
+title: Grover 'in arama algoritmasını Q# -hisse geliştirme seti 'nde Çalıştır
+description: Q#Kurallı hisse algoritmalarından biri olan Grover 'in algoritmasını gösteren bir proje oluşturun.
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 9e4c53b4d5159cf07f0654603c1d477ad09eb7c6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 5c23d71209eb484a510f102e8b581ba4ec21829a
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275264"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869673"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>Öğretici: Q\# dilinde Grover arama algoritmasını uygulama
 
-Bu öğreticide, yapılandırılmamış veri aramasını hızlandırmak için Grover araması oluşturmayı ve çalıştırmayı öğrenebilirsiniz.  Grover araması en popüler kuantum bilişimi algoritmalarından biridir ve görece küçük olan bu Q# uygulaması, kuantum algoritmalarını ifade etmek için üst düzey Q# kuantum programlama dili ile kuantum çözümü programlamanın avantajlarını sunar.  Kılavuzun sonunda, klasik bir bilgisayara kıyasla çok daha kısa sürede, sıralı olmayan girişlerden oluşan bir listede belirli bir dizeyi başarıyla bulma sonucunu gösteren simülasyon çıktısını göreceksiniz.
+Bu öğreticide, yapılandırılmamış veri aramasını hızlandırmak için Grover araması oluşturmayı ve çalıştırmayı öğrenebilirsiniz.  Grover 'in arama en popüler hisse bilgi işlem algoritmalarından biridir ve bu görece küçük uygulama, Q# hızlı bir şekilde yüksek düzeyde bir hisse programlama diliyle hızlı bir şekilde daha fazla bilgi sahibi olmak için bir miktar çözüm sunan bazı avantajlardan yararlanmanızı sağlar Q# .  Kılavuzun sonunda, klasik bir bilgisayara kıyasla çok daha kısa sürede, sıralı olmayan girişlerden oluşan bir listede belirli bir dizeyi başarıyla bulma sonucunu gösteren simülasyon çıktısını göreceksiniz.
 
 Grover algoritması belirli öğeleri bulmak için yapılandırılmamış bir veri listesinde arama yapar. Örneğin şu soruyu yanıtlayabilir: Bir deste iskambil kağıdından çekilen bu kağıt kupa ası mı? Belirli öğenin etiketlenmesi _işaretlenmiş giriş_ olarak adlandırılır.
 
@@ -39,7 +42,7 @@ Aşamalı artışların sayısı listedeki öğelerin sayısından azdır. İşt
 
 ## <a name="write-the-code"></a>Kodu yazma
 
-1. Quantum geliştirme setini kullanarak, [komut satırı uygulaması için yeni bir Q# projesi oluşturun](xref:microsoft.quantum.install.standalone). Projeye `Grover` başlığını verin.
+1. Hisse geliştirme setini kullanarak, [ Q# komut satırı uygulaması için yeni bir proje oluşturun](xref:microsoft.quantum.install.standalone). Projeye `Grover` başlığını verin.
 
 1. Yeni projenizin `Program.qs` dosyasına aşağıdaki kodu ekleyin:
 
@@ -51,9 +54,9 @@ Aşamalı artışların sayısı listedeki öğelerin sayısından azdır. İşt
 
     `ReflectAboutMarked` işlemi aradığınız işaretlenmiş girişi tanımlar: değişen sıfırlar ve birler dizesi. Bu örnek işaretlenmiş girişin sabit kodlamasını yapar ve farklı girişleri aramak veya herhangi bir giriş için genelleştirmek üzere genişletilebilir.
 
-1. Ardından `ReflectAboutMarked` ile işaretlenmiş öğeyi bulmak için yeni Q# programınızı çalıştırın.
+1. Sonra, Q# tarafından işaretlenmiş öğeyi bulmak için yeni programınızı çalıştırın `ReflectAboutMarked` .
 
-### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Visual Studio veya Visual Studio Code ile Q# komut satırı uygulamaları
+### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Q#Visual Studio veya Visual Studio Code ile komut satırı uygulamaları
 
 Yürütülebilir dosya, proje yapılandırmasına ve komut satırı seçeneklerine bağlı olarak simülatör veya kaynak tahmini aracında `@EntryPoint()` özniteliğiyle işaretlenmiş işlemi ya da işlevi çalıştırır.
 
@@ -104,7 +107,7 @@ Reflecting about marked state...
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticiden keyif aldıysanız, Q# kullanarak kendi kuantum uygulamalarınızı nasıl yazabileceğiniz hakkında daha fazla bilgi edinmek için aşağıdaki kaynaklardan bazılarını gözden geçirin:
+Bu öğreticiyi kullandıysanız, Q# kendi hisse ve uygulamalarınızı yazmak üzere nasıl kullanabileceğiniz hakkında daha fazla bilgi edinmek için aşağıdaki kaynaklara göz atın:
 
 - [QDK'yı Kullanmaya Başlama kılavuzuna dön](xref:microsoft.quantum.welcome)
 - Daha genel bir Grover arama algoritması [örneğini](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search) deneyin

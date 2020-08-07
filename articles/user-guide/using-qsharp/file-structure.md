@@ -1,21 +1,24 @@
 ---
-title: 'Q # dosya yapısı'
-description: 'Bir Q # dosyasının yapısını ve sözdizimini açıklar.'
+title: Q#Dosya yapısı
+description: Bir dosyanın yapısını ve sözdizimini açıklar Q# .
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
-ms.openlocfilehash: 54efc2b9d6b7f1956cdf9a335c88620b29f7729d
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884182"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867939"
 ---
-# <a name="q-file-structure"></a>Q # dosya yapısı
+# <a name="no-locq-file-structure"></a>Q#Dosya yapısı
 
-Bir Q # dosyası, bir dizi *ad alanı bildirimi*içerir.
+Bir Q# Dosya, bir dizi *ad alanı bildirimi*içerir.
 Her ad alanı bildirimi, Kullanıcı tanımlı türler, işlemler ve işlevler için bildirimler içerir ve her bir tür bildirime ve herhangi bir sıraya sahip olabilir.
 Bir ad alanı içindeki bildirimler hakkında daha fazla bilgi için bkz. [Kullanıcı tanımlı türler](xref:microsoft.quantum.guide.types#user-defined-types), [işlemler](xref:microsoft.quantum.guide.operationsfunctions#defining-new-operations)ve [işlevler](xref:microsoft.quantum.guide.operationsfunctions#defining-new-functions).
 
@@ -24,10 +27,10 @@ Bir ad alanı bildiriminin dışında görünebilen tek metin açıklamalardır.
 
 ## <a name="namespace-declarations"></a>Ad alanı bildirimleri
 
-Bir Q # dosyası genellikle yalnızca bir ad alanı bildirimine sahiptir, ancak None (ve boş olabilir ya da yalnızca açıklama içeremez) veya birden çok ad alanı içerebilir.
+Bir Q# dosya genellikle yalnızca bir ad alanı bildirimine sahiptir, ancak None (ve boş olabilir veya yalnızca açıklama içeremez) veya birden çok ad alanı içerebilir.
 Ad alanı bildirimleri iç içe olamaz.
 
-Aynı ada sahip hiçbir tür, işlem veya işlev bildirimi olmadığı sürece, birlikte derlenen birden fazla Q # dosyasında aynı ad alanını bildirebilirsiniz.
+Aynı Q# ada sahip hiçbir tür, işlem veya işlev bildirimi olmadığı sürece, birlikte derlenen birden çok dosyada aynı ad alanını bildirebilirsiniz.
 Özellikle, bildirimler özdeş olsa bile, birden çok dosyada aynı ad alanında aynı türü tanımlamak geçersizdir.
 
 Bir ad alanı bildirimi, anahtar sözcüğünden `namespace` ve ardından ad alanının adı ve küme ayraçları içine alınmış ad alanında yer alan bildirimlerin oluşur `{ }` .
@@ -61,7 +64,7 @@ tanımlı bir işlem öğesinden bir işlem kullanıyorsa `Op` `Microsoft.Quantu
 Ancak, ' den belirli bir işlevi çağırmak için `Fn` `Microsoft.Quantum.Math` öğesini kullanarak çağırmanız gerekir `Math.Fn` .
 
 `open`Yönerge, bir dosya içindeki tüm ad alanı bloğunun tamamına uygulanır.
-Bu nedenle, aynı Q # dosyasında daha önce ek bir ad alanı tanımlarsanız, bu durumda, `NS` ikinci ad alanında tanımlanan tüm işlemler/işlevler/türler, `Microsoft.Quantum.Intrinsic` `Microsoft.Quantum.Math` içindeki açık yönergeleri tekrarlamazsanız veya hiçbir şeye erişemez. 
+Bu nedenle, daha önce aynı dosyada ek bir ad alanı tanımlarsanız, bu durumda, Q# `NS` ikinci ad alanında tanımlanan tüm işlemler/işlevler/türler, `Microsoft.Quantum.Intrinsic` `Microsoft.Quantum.Math` içindeki açık yönergeleri tekrarlamazsanız veya hiçbir şeye erişemez. 
 
 Geçerli ad alanında *açılmayan* başka bir ad alanında tanımlanan bir türe veya çağrılabilir öğesine başvurmak için, tam adı ile ona başvurmanız gerekir.
 Örneğin, ad alanından adlı bir işlem verilince `Op` `X.Y` :
@@ -73,13 +76,13 @@ Geçerli ad alanında *açılmayan* başka bir ad alanında tanımlanan bir tür
 Bir yönergesi kullanarak bir ad alanı eklemek genellikle daha iyidir `open` .
 İki ad alanı aynı ada sahip yapıları tanımladıysa ve geçerli kaynak yapıları her ikisiyle kullanıyorsa, tam nitelikli ad kullanılması gerekir.
 
-Q #, diğer .NET dilleri olarak adlandırmayla aynı kuralları izler.
-Ancak, Q # ad alanlarına göreli başvuruları desteklemez.
+Q#diğer .NET dilleri olarak adlandırmayla aynı kurallara uyar.
+Ancak, Q# ad alanlarına göreli başvuruları desteklemez.
 Örneğin, ad alanı `a.b` açıksa adlı bir işleme başvuru, `c.d` tam ada sahip bir işleme *çözümlenmez* `a.b.c.d` .
 
 ## <a name="formatting"></a>Biçimlendirme
 
-Çoğu Q # deyimi ve yönergeleri sonlandırma noktalı virgülle biter `;` .
+Çoğu Q# deyim ve yönergeler sonlandırma noktalı virgülle biter `;` .
 Ve gibi deyimler ve bildirimler `for` `operation` bir deyim bloğu ile biter (aşağıdaki bölüme bakın) sonlandırma noktalı virgül gerektirmez.
 Her bir ifade açıklaması, Sonlandırıcı noktalı virgülden gerekli olup olmadığını not edin.
 
@@ -88,14 +91,14 @@ Birden çok deyimi tek bir satıra yerleştirmekten kaçının.
 
 ## <a name="statement-blocks"></a>Ekstre blokları
 
-Q # deyimleri, küme ayraçları ile birlikte bulunan deyim blokları halinde gruplandırılır `{ }` . Bir ifade bloğu bir açma ile başlar `{` ve kapanış ile biter `}` .
+Q#deyimler, küme ayraçları ile birlikte bulunan deyim blokları halinde gruplandırılır `{ }` . Bir ifade bloğu bir açma ile başlar `{` ve kapanış ile biter `}` .
 
 Başka bir blok içinde Sözcüksel olarak bulunan bir ifade bloğu, kapsayan bloğun bir alt bloğu olarak kabul edilir; içerilen ve alt bloklara dış ve iç bloklar de denir.
 
-## <a name="comments"></a>Yorumlar
+## <a name="comments"></a>Açıklamalar
 
 Açıklamalar iki eğik çizgi ile başlar `//` ve satırın sonuna kadar devam eder.
-Bir soru, Q # kaynak dosyasında herhangi bir yerde görünebilir.
+Bir yorum, kaynak dosyasında herhangi bir yerde görünebilir Q# .
 
 ## <a name="documentation-comments"></a>Belge Açıklamaları
 
@@ -103,10 +106,10 @@ Bir soru, Q # kaynak dosyasında herhangi bir yerde görünebilir.
 Bu durumda, derleyici, tanımlı çağrılabilir veya Kullanıcı tanımlı tür için diğer .NET dilleri ile aynı şekilde bir belge olarak davranır.
 
 `///`Açıklamalar içinde, API belgelerinin bir parçası olarak görünen metin, özel olarak adlandırılan üstbilgiler tarafından belirtilen farklı kısımlarla [markaşağı](https://daringfireball.net/projects/markdown/syntax)olarak biçimlendirilir.
-Markaşağı içinde, `@"<ref target>"` uzantı çapraz başvuru işlemleri, işlevler ve Kullanıcı tanımlı türler Için Q # kullanın. `<ref target>`Başvurulan kod nesnesinin tam adı ile değiştirin.
+Markaşağı içinde, `@"<ref target>"` içindeki çapraz başvuru işlemleri, işlevler ve Kullanıcı tanımlı türler için uzantıyı kullanın Q# . `<ref target>`Başvurulan kod nesnesinin tam adı ile değiştirin.
 Farklı belge motorları, ek Marki uzantılarını da destekleyebilir.
 
-Örneğin:
+Örnek:
 
 ```qsharp
 /// # Summary
@@ -153,4 +156,4 @@ Aşağıdaki adlar belge açıklaması üst bilgileri olarak geçerlidir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Q # içindeki [işlemler ve işlevler](xref:microsoft.quantum.guide.operationsfunctions) hakkında bilgi edinin.
+İçindeki [işlemler ve işlevler](xref:microsoft.quantum.guide.operationsfunctions) hakkında bilgi edinin Q# .

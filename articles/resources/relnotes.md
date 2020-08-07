@@ -6,12 +6,15 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 4b5e7b657f0e11fb4a14308c20859f4007729146
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 869d13acd5cb82fac73be514d6622a616ddceb54
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871577"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866681"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -28,9 +31,9 @@ Güncelleştirme yönergeleri için bu [güncelleştirme kılavuzuna](xref:micro
 
 Bu sürüm aşağıdakileri içerir:
 
-- Q # Not defterlerindeki açık ad alanları artık gelecekteki tüm hücre yürütmeleri için kullanılabilir. Bu, örneğin, ad alanlarının her kod hücresinde ilgili ad alanlarını açmak zorunda kalmadan, Not defterinin en üstündeki bir hücrede açılmasını sağlar. Yeni bir `%lsopen` Magic komutu, şu anda açık olan ad alanlarının listesini görüntüler.
+- Not defterlerinde açılan ad alanları Q# artık gelecekteki tüm hücre yürütmeleri için kullanılabilir. Bu, örneğin, ad alanlarının her kod hücresinde ilgili ad alanlarını açmak zorunda kalmadan, Not defterinin en üstündeki bir hücrede açılmasını sağlar. Yeni bir `%lsopen` Magic komutu, şu anda açık olan ad alanlarının listesini görüntüler.
 
-[Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
+[Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [ı Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) ve [katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)için kapalı PR 'ler tam listesine bakın.  
 
 ## <a name="version-01220070124"></a>Sürüm 0.12.20070124
 
@@ -40,24 +43,24 @@ Bu sürüm aşağıdakileri içerir:
 
 - `qdk-chem`Eski elektronik yapı sorun serileştirme biçimlerini (ör.: FCıDUMP) [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) 'e dönüştürmek için yeni araç
 - Ad alanındaki yeni işlevler ve işlemler, [`Microsoft.Quantum.Synthesis`](xref:microsoft.quantum.synthesis) dönüştürme ve ayrıştırma tabanlı senklik algoritmaları kullanılarak klasik Oracles uygulanıyor.
-- IQ # artık `%simulate` , `%estimate` ve diğer sihirli komutlara bağımsız değişkenlere izin veriyor. Daha fazla bilgi için bkz. [ `%simulate` sihirli komut başvurusu](xref:microsoft.quantum.iqsharp.magic-ref.simulate) .
-- IQ # içindeki yeni aşama görüntüleme seçenekleri. Daha fazla bilgi için bkz. [ `%config` sihirli komut başvurusu](xref:microsoft.quantum.iqsharp.magic-ref.config) .
-- IQ # ve `qsharp` Python paketi artık Conda paketleri ([qsharp](https://anaconda.org/quantum-engineering/qsharp) ve [ıqsharp](https://anaconda.org/quantum-engineering/iqsharp)) aracılığıyla, Q # jupi ve Python işlevlerinin bir Conda ortamına yerel yüklenmesini basitleştirecek şekilde sağlanır. Daha fazla bilgi için bkz. soru-cevap yükleme [kılavuzlarıyla](xref:microsoft.quantum.install.python) [q # jupi Not defterleri](xref:microsoft.quantum.install.jupyter) ve q #.
+- Q#Artık `%simulate` ,, `%estimate` ve diğer sihirli komutlara bağımsız değişkenlerin kullanılmasına izin veriyor. Daha fazla bilgi için bkz. [ `%simulate` sihirli komut başvurusu](xref:microsoft.quantum.iqsharp.magic-ref.simulate) .
+- I 'de yeni aşama görüntüleme seçenekleri Q# . Daha fazla bilgi için bkz. [ `%config` sihirli komut başvurusu](xref:microsoft.quantum.iqsharp.magic-ref.config) .
+- I Q# ve `qsharp` Python paketi artık Conda paketleri ([qsharp](https://anaconda.org/quantum-engineering/qsharp) ve [ıqsharp](https://anaconda.org/quantum-engineering/iqsharp)) aracılığıyla, Q# JUPITER ve Python işlevlerinin yerel yüklemesini bir Conda ortamına basitleştirmeye yardımcı olur. Daha fazla ayrıntı için bkz. [ Q# jupi Not defterleri](xref:microsoft.quantum.install.jupyter) ve [ Q# Python yükleme kılavuzlarıyla birlikte](xref:microsoft.quantum.install.python) .
 - Simülatörü kullanırken, qubits 'in yayından sonra | 0 ⟩ durumunda olması gerekmez, ancak serbest bırakıldıktan hemen önce ölçüldüğünde otomatik olarak sıfırlanabilir.
-- IQ # kullanıcılarının farklı QDK sürümleriyle kitaplık paketlerini kullanmasını kolaylaştıran güncelleştirmeler, aynı sürüm yerine yalnızca büyük & ikincil sürüm numaraları eşleşmesi gerektirir
+- Q#Kullanıcıların, farklı QDK sürümleriyle kitaplık paketlerini kullanmasını kolaylaştıran, tam olarak aynı sürüm yerine yalnızca büyük & ikincil sürüm numaraları eşleşmesi gerektiren güncelleştirmeler
 - Kullanım dışı bırakılan `Microsoft.Quantum.Primitive.*` ad alanı kaldırıldı
 - Taşınan işlemler:
   - `Microsoft.Quantum.Intrinsic.Assert`Artık`Microsoft.Quantum.Diagnostics.AssertMeasurement`
   - `Microsoft.Quantum.Intrinsic.AssertProb`Artık`Microsoft.Quantum.Diagnostics.AssertMeasurementProbability`
 - Hata düzeltmeleri 
 
-[Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
+[Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [ı Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) ve [katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)için kapalı PR 'ler tam listesine bakın.  
 
 ## <a name="version-0112006403"></a>Sürüm 0.11.2006.403
 
 *Sürüm tarihi: 4 Haziran 2020*
 
-Bu sürümde, Q# projelerinin derlenmesini etkileyen bir hata düzeltildi.
+Bu sürüm, projelerin derlemesini etkileyen bir hatayı düzeltir Q# .
 
 ## <a name="version-0112006207"></a>Sürüm 0.11.2006.207
 
@@ -65,15 +68,15 @@ Bu sürümde, Q# projelerinin derlenmesini etkileyen bir hata düzeltildi.
 
 Bu sürüm aşağıdakileri içerir:
 
-- Q# not defterleri ve Python konak programları artık bir Q# giriş noktası mevcut olduğunda başarısız olmaz
+- Q#bir giriş noktası mevcut olduğunda not defterleri ve Python konak programları artık başarısız olmaz Q#
 - Erişim değiştiricilerini kullanmaya yönelik [Standart kitaplık](xref:microsoft.quantum.libraries.standard.intro) güncelleştirmeleri
 - Derleyici şimdi yerleşik yeniden yazma adımları arasında yeniden yazma adımlarının eklenmesine izin veriyor
-- [API ilkelerimizde](xref:microsoft.quantum.contributing.api-design) açıklanan zamanlamaya uygun olarak, kullanım dışı bırakılan birkaç işlev ve işlem kaldırıldı. 0\.11.2004.2825 sürümünde uyarı vermeden derlenebilen Q# programları ve kitaplıkları değişiklik olmadan çalışmaya devam edecek.
+- [API ilkelerimizde](xref:microsoft.quantum.contributing.api-design) açıklanan zamanlamaya uygun olarak, kullanım dışı bırakılan birkaç işlev ve işlem kaldırıldı. Q#sürüm 0.11.2004.2825 'de uyarı olmadan derleme yapan programlar ve kitaplıklar değiştirilmemiş olarak çalışmaya devam edecektir.
 
-[Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
+[Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [ı Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) ve [katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)için kapalı PR 'ler tam listesine bakın.  
 
 > [!NOTE]
-> Bu sürüm, Q# projelerinin derlenmesini etkileyen bir hata içerir. Daha yeni bir sürüme yükseltmenizi öneririz.
+> Bu sürüm, projelerin derlemesini etkileyen bir hata içeriyor Q# . Daha yeni bir sürüme yükseltmenizi öneririz.
 
 ## <a name="version-01120042825"></a>Sürüm 0.11.2004.2825
 
@@ -81,12 +84,12 @@ Bu sürüm aşağıdakileri içerir:
 
 Bu sürüm aşağıdakileri içerir:
 
-- Q# komut satırı uygulaması için artık C# veya Python konak dosyasına ihtiyaç duymayan yeni destek. Q# komut satırı uygulamalarını kullanmaya başlama hakkında daha fazla bilgi için [buraya](xref:microsoft.quantum.install.standalone) göz atın.
+- Q#Artık C# veya Python ana bilgisayar dosyası gerektirmeyen komut satırı uygulamaları için yeni destek. Komut satırı uygulamalarıyla çalışmaya başlama hakkında daha fazla bilgi için Q# [buraya](xref:microsoft.quantum.install.standalone)bakın.
 - Kuantum rastgele sayı oluşturucusu hızlı başlangıcı, artık C# veya Python konak dosyasına ihtiyaç duymayacak şekilde güncelleştirildi. Güncelleştirilmiş [Hızlı başlangıca](xref:microsoft.quantum.quickstarts.qrng) göz atın
-- IQ# Docker görüntülerine yönelik performans iyileştirmeleri
+- Q#Docker görüntülerinde performans iyileştirmeleri
 
 > [!NOTE]
-> Yeni [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) özniteliğini kullanan Q# komut satırı uygulamaları şu anda Python veya .NET konak programlarından çağrılamıyor.
+> Q#Yeni özniteliği kullanan komut satırı uygulamaları [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) Python veya .net konak programlarından Şu anda çağrılamaz.
 > Daha fazla bilgi için [Python](xref:microsoft.quantum.install.python) ve [.NET birlikte çalışabilirlik](xref:microsoft.quantum.install.cs) kılavuzlarına göz atın.
 
 ## <a name="version-01120033107"></a>Sürüm 0.11.2003.3107
@@ -101,7 +104,7 @@ Bu sürüm, 0.11.2003.2506 sürümü için küçük hata düzeltmeleri içerir.
 
 Bu sürüm aşağıdakileri içerir:
 
-- Q# dilinde erişim değiştiricileri için yeni destek, daha fazla bilgi için bkz. [Dosya Yapıları](xref:microsoft.quantum.guide.filestructure)
+- ' De erişim değiştiricileri için yeni destek Q# , daha fazla bilgi için bkz. [Dosya yapıları](xref:microsoft.quantum.guide.filestructure)
 - .NET Core SDK 3.1’e güncelleştirildi
 
 [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
@@ -113,7 +116,7 @@ Bu sürüm aşağıdakileri içerir:
 Bu sürüm aşağıdakileri içerir:
 
 - Yeni Quantum Machine Learning kitaplığı, daha fazla bilgi için [QML belgeleri sayfamıza](https://docs.microsoft.com/quantum/libraries/machine-learning/?view=qsharp-preview) gidin
-- NuGet paketlerini yüklerken 10-20 kat performans artışı sağlayan IQ# hata düzeltmeleri
+- Q#Hata düzeltmeleri, NuGet paketleri yüklenirken 10-20X performans artışına yol açar
 
 [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
 
@@ -124,12 +127,12 @@ Bu sürüm aşağıdakileri içerir:
 Bu sürüm aşağıdakileri içerir:
 
 - Yeni projeler oluştururken Microsoft.Quantum.Development.Kit NuGet paketinin yerini alacak yeni Microsoft.Quantum.SDK NuGet paketi. Microsoft.Quantum.Development.Kit NuGet paketi mevcut projeler için desteklenmeye devam edecek. 
-- Yeni Microsoft.Quantum.SDK NuGet paketi ile etkinleştirilen Q# derleyici uzantıları desteği, daha fazla bilgi için [Github’daki belgelere](https://github.com/microsoft/qsharp-compiler/tree/master/src/QuantumSdk#extending-the-q-compiler), [derleyici uzantıları örneğine](https://github.com/microsoft/qsharp-compiler/tree/master/examples/CompilerExtensions) ve [Q# Geliştirici Blogu](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/)’na bakın
+- Q#Yeni Microsoft. hisse. SDK NuGet packge tarafından etkinleştirilen derleyici uzantıları için destek daha fazla bilgi Için [GitHub](https://github.com/microsoft/qsharp-compiler/tree/master/src/QuantumSdk#extending-the-q-compiler), [derleyici uzantıları örneği](https://github.com/microsoft/qsharp-compiler/tree/master/examples/CompilerExtensions) ve [ Q# dev bloguna](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/) bakın.
 - .NET Core 3.1 desteği eklendi, daha eski .NET Core SDK sürümleriyle derleme işlemi sorunlara neden olabileceğinden 3.1.100 sürümünü yüklemeniz önemle önerilir
 - Microsoft.Quantum.QsCompiler.Experimental altında yeni derleyici dönüşümleri kullanılabilir
-- IQ# içinde çıkış durumu vektörlerinin HTML olarak kullanıma sunulmasına yönelik yeni işlevsellik
+- Çıkış durumu vektörlerinin I I 'de HTML olarak kullanıma sunulmasına yönelik yeni işlevsellikQ#
 - Hadamard ve SWAP testleri için Microsoft.Quantum.Characterization’a EstimateFrequencyA desteği eklendi
-- AmplitudeAmplification ad alanı artık Q# stil kılavuzunu kullanıyor
+- Yükseltilmiş Tudeamplifize ad alanı artık Q# Stil kılavuzunu kullanıyor
 
 [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
 
@@ -139,8 +142,8 @@ Bu sürüm aşağıdakileri içerir:
 
 Bu sürüm aşağıdakileri içerir:
 
-- Q# birim testi için yeni Test özniteliği. Güncelleştirilmiş API belgeleri için [buraya](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test), güncelleştirilmiş test ve hata ayıklama kılavuzu için ise [buraya](xref:microsoft.quantum.guide.testingdebugging) bakın
-- Q # program yürütme hatası durumuna karşın yığın izlemesi eklendi
+- Birim testi için yeni test özniteliği burada Q# GÜNCELLEŞTIRILMIŞ API belgelerine ve [here](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) test & hata ayıklama kılavuzuna bakın [here](xref:microsoft.quantum.guide.testingdebugging)
+- Program yürütme hatası durumunda yığın izlemesi eklendi Q#
 - Visual Studio Code’da kesme noktaları desteğinin [OmniSharp C# Visual Studio Code uzantısında](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) güncelleştirilmesi gerekiyor
 
 [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
@@ -175,7 +178,7 @@ Bu sürüm aşağıdakileri içerir:
 
 Bu sürüm aşağıdakileri içerir:
 
-- Visual Studio 2019 (sürüm 16.3 ve üzeri) ve Visual Studio Code’da Q# kod tamamlamaya yönelik yeni destek
+- Q#Visual Studio 2019 ' de kod tamamlamaya yönelik yeni destek (sürüm 16,3 & sonrası) & Visual Studio Code
 - Kuantum ekleyicileri için yeni [Quantum Kata](https://github.com/Microsoft/QuantumKatas)
 
 [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
@@ -186,7 +189,7 @@ Bu sürüm aşağıdakileri içerir:
 
 Bu sürüm aşağıdakileri içerir:
 
-- Q#’de [çekim deyimlerine](xref:microsoft.quantum.guide.operationsfunctions#conjugations) yönelik yeni destek
+- İçindeki Birleşik bir [ifade](xref:microsoft.quantum.guide.operationsfunctions#conjugations) için yeni destekQ#
 - Derleyiciye, “şununla değiştir”, “belge ekle”, ve tek dizili öğe güncelleştirmesi gibi yeni kod eylemleri eklendi
 - Visual Studio Code uzantısına yükleme şablonu ve yeni proje komutları eklendi
 - [Microsoft.Quantum.Canon.ApplyIfOne](xref:microsoft.quantum.canon.applyifone) gibi yeni ApplyIf birleştiricisi çeşitleri eklendi
@@ -195,7 +198,7 @@ Bu sürüm aşağıdakileri içerir:
 
 [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
 
-Mevcut programlarınızı yükseltmeye yönelik yönergelere ek olarak değişiklikler de burada özetlendi.  [Q# geliştirici blogunda](https://devblogs.microsoft.com/qsharp) bu değişiklikler hakkında daha fazla bilgi edinin.
+Mevcut programlarınızı yükseltmeye yönelik yönergelere ek olarak değişiklikler de burada özetlendi.  [ Q# Geliştirme bloguna](https://devblogs.microsoft.com/qsharp)bu değişiklikler hakkında daha fazla bilgi edinin.
 
 ## <a name="version-08-packagereference-0819071701"></a>Sürüm 0.8 (*PackageReference 0.8.1907.1701*)
 
@@ -204,7 +207,7 @@ Mevcut programlarınızı yükseltmeye yönelik yönergelere ek olarak değişik
 Bu sürüm aşağıdakileri içerir:
 
 - Dilimleme dizileri için yeni dizinleme konumları eklendi. Daha fazla bilgi için [dil başvurusuna bakın](xref:microsoft.quantum.guide.expressions#array-slices).
-- [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry)’de barındırılan Dockerfile eklendi. [Daha fazla bilgi için IQ# depossuna](https://github.com/microsoft/iqsharp/blob/master/README.md) bakın
+- [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry)barındırılan Dockerfile eklendi, [ Q# daha fazla bilgi için ı deposuna](https://github.com/microsoft/iqsharp/blob/master/README.md) bakın
 - [İzleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro) için hataya neden olan değişiklik, yapılandırma ayarları güncelleştirmesi, ad değişiklikleri. [Güncelleştirilmiş adlar için .NET API Tarayıcısına](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration) bakın.
 
 [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), ve [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) için tam kapsamlı kapalı PR’ler listesine bakın.  
@@ -214,16 +217,16 @@ Bu sürüm aşağıdakileri içerir:
 *Sürüm tarihi: 31 Mayıs 2019*
 
 Bu sürüm aşağıdakileri içerir:
-- Q# diline yönelik eklemeler, 
+- Q#dile eklemeler, 
 - kimya kitaplığı güncelleştirmeleri ve 
 - yeni bir sayısal kitaplık.
 
 [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), ve [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) için tam kapsamlı kapalı PR’ler listesine bakın.  
 
-Mevcut programlarınızı yükseltmeye yönelik yönergelere ek olarak değişiklikler de burada özetlendi.  [Q# geliştirici blogunda](https://devblogs.microsoft.com/qsharp) bu değişiklikler hakkında daha fazla bilgi edinin.
+Mevcut programlarınızı yükseltmeye yönelik yönergelere ek olarak değişiklikler de burada özetlendi.  [ Q# Geliştirme bloguna](https://devblogs.microsoft.com/qsharp)bu değişiklikler hakkında daha fazla bilgi edinin.
 
-### <a name="q-language-syntax"></a>Q# dili söz dizimi
-Bu sürüm ile yeni Q# dil söz dizimi eklendi:
+### <a name="no-locq-language-syntax"></a>Q#Dil sözdizimi
+Bu sürüm yeni Q# Dil sözdizimi ekler:
 * [Kullanıcı tanımlı türler](xref:microsoft.quantum.guide.types#user-defined-types) için adlandırılmış öğeler eklendi.  
 * Kullanıcı tanımlı tür oluşturucular artık işlev olarak kullanılabilir.
 * Kullanıcı tanımlı türlerde [kopyala ve güncelleştir](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) ve [uygula ve yeniden ata](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) için destek eklendi.
@@ -246,15 +249,15 @@ Bu sürüm ile kimya kitaplığına yönelik genişletmeler ve güncelleştirmel
 *Sürüm tarihi: 3 Mayıs 2019*
 
 Bu sürüm aşağıdakileri içerir:
-- Q# dilinde yapılan değişiklikler 
+- dilde değişiklikler yapar Q# , 
 - Quantum Development Kit kitaplıklarının yeniden yapılandırılması 
 - eklenen yeni örnekler ve 
 - düzeltilen hatalar.  [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), ve [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) için birkaç kapalı PR.  
 
 Mevcut programlarınızı yükseltmeye yönelik yönergelere ek olarak değişiklikler de burada özetlendi.  Bu değişikler hakkında daha fazla bilgi edinmek için devblogs.microsoft.com/qsharp adresini ziyaret edin.
 
-### <a name="q-language-syntax"></a>Q# dili söz dizimi
-Bu sürüm ile yeni Q# dil söz dizimi eklendi:
+### <a name="no-locq-language-syntax"></a>Q#Dil sözdizimi
+Bu sürüm yeni Q# Dil sözdizimi ekler:
 * `+` işleçleriyle [kuantum işlemlerinin özelleştirmelerini ifade etmek için kısaltılmış bir yol](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations) (denetim ve eklenikler) eklendi.  Eski söz dizimi kullanımdan kaldırıldı.  Eski söz dizimini kullanan programlar (örneğin, `: adjoint`) çalışmaya devam eder ancak derleme zamanı uyarısı oluşturulur.  
 * [copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) için yeni bir işleç olan `w/` eklendi. Bu, dizi oluşturmayı mevcut bir dizinin değiştirilmesi olarak ifade etmek için kullanılabilir.
 * Yaygın [uygula ve güncelleştir ifadesini](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) (örneğin, `+=`, `w/=`) ekleyin.
@@ -266,7 +269,7 @@ Bu sürümle birlikte, bir dizi öğesinin ayarlanan deyimin sol tarafında beli
 Bu sürüm, tutarlı bir şekilde büyümelerine olanak tanımak için kitaplıkları yeniden yapılandırır:
 * Microsoft.Quantum.Primitive ad alanını Microsoft.Quantum.Intrinsic olarak yeniden adlandırır.  Bu işlemler hedef makine tarafından uygulanır.  Microsoft.Quantum.Primitive ad alanı kullanım dışı bırakıldı.  Programlar işlemleri ve işlevleri kullanım dışı bırakılan adlar ile çağırdığında bir çalışma zamanı hatası öneride bulunur.
 
-* Microsoft.Quantum.Canon paketini Microsoft.Quantum.Standard olarak yeniden adlandırır.  Bu paket, çoğu Q# programı için ortak olan ad alanlarını içerir.  Buna aşağıdakiler dahildir:  
+* Microsoft.Quantum.Canon paketini Microsoft.Quantum.Standard olarak yeniden adlandırır.  Bu paket çoğu program için ortak olan ad alanlarını içerir Q# .  Buna aşağıdakiler dahildir:  
     - Genel işlemler için Microsoft.Quantum.Canon
     - Genel amaçlı aritmetik işlemler için Microsoft.Quantum.Arithmetic
     - Qubit durumunu hazırlamak için kullanılan işlemler için Microsoft.Quantum.Preparation
@@ -278,13 +281,13 @@ Bu değişiklik ile, program diğer yeni üç ad alanına taşınan işlemlere b
 
 * Microsoft.Quantum.Arithmetic ad alanı, kullanıcı tanımlı <xref:microsoft.quantum.arithmetic.littleendian> türünü kullanması için normalleştirildi. Little endian’ın dönüştürülmesi gerektiğinde [BigEndianAsLittleEndian](xref:microsoft.quantum.arithmetic.bigendianaslittleendian) işlevini kullanın.  
 
-* [Q# Stil Kılavuzu](xref:microsoft.quantum.contributing.style)’na uyum sağlamak için bazı çağrılabilir öğelerin (işlevler ve işlemler) adları değiştirildi.  Eski çağrılabilir öğe adları kullanım dışı bırakıldı.  Eski çağrılabilir öğeleri kullanan programlar çalışmaya devam eder ancak bir derleme zamanı uyarısı oluşturulur. 
+* Çeşitli callables (işlevler ve işlemler) adları, [ Q# Stil kılavuzuna](xref:microsoft.quantum.contributing.style)uyacak şekilde değiştirilmiştir.  Eski çağrılabilir öğe adları kullanım dışı bırakıldı.  Eski çağrılabilir öğeleri kullanan programlar çalışmaya devam eder ancak bir derleme zamanı uyarısı oluşturulur. 
 
 ### <a name="new-samples"></a>New Örnekler
 
-[Q#’yi F# sürücüsüyle kullanmaya yönelik bir örnek](https://github.com/Microsoft/Quantum/pull/164) ekledik.  
+[ Q# F # sürücüsüyle kullanarak bir örnek](https://github.com/Microsoft/Quantum/pull/164)ekledik.  
 
-**Teşekkürler!** http://github.com/Microsoft/Quantum konumunda yer alan açık kod tabanımıza katkıda bulunduğu için aşağıdaki katkıda bulunan kişiye teşekkürlerimiz sunarız. Bu katkılar, Q# kodunun zengin örneklerine önemli faydalar sağlar:
+**Teşekkürler!** http://github.com/Microsoft/Quantum konumunda yer alan açık kod tabanımıza katkıda bulunduğu için aşağıdaki katkıda bulunan kişiye teşekkürlerimiz sunarız. Bu katkılar, kodun zengin örneklerine önemli ölçüde sahiptir Q# :
 
 * Mathias Soeken ([@msoeken](https://github.com/msoeken)): Oracle işlevi birleştirmesi. [PR #135](https://github.com/Microsoft/Quantum/pull/135).
 
@@ -292,7 +295,7 @@ Bu değişiklik ile, program diğer yeni üç ad alanına taşınan işlemlere b
 
 QDK’yı güncelleştirmek için [yükleme kılavuzuna](xref:microsoft.quantum.install) bakın.
   
-Quantum Development Kit’in 0.5 sürümüne ait Q# projeleri mevcutsa, aşağıdaki adımları uygulayarak bu projeleri en yeni sürüme geçirebilirsiniz.
+Q#Hisse geliştirme setinin 0,5 sürümünden mevcut projeler varsa, bu projeleri en yeni sürüme geçirme adımları aşağıda verilmiştir.
 
     1. Projelerin sırayla yükseltilmesi gerekir.  Birden fazla proje içeren bir çözümünüz varsa, her projeyi başvurulma sırasına göre güncelleştirin.
     2. Mevcut tüm ikilileri ve ara dosyaları kaldırmak için komut satırında `dotnet clean` komutunu çalıştırın.
@@ -305,7 +308,7 @@ Quantum Development Kit’in 0.5 sürümüne ait Q# projeleri mevcutsa, aşağı
     4. Komut satırında bu komutu çalıştırın: `dotnet msbuild`  
     5. Bunu çalıştırdıktan sonra, yukarıda listelenen değişikliklerden ötürü hataları el ile düzeltmeniz gerekebilir.  Çoğu durumda, bu hatalar Visual Studio veya Visual Studio Code’daki IntelliSense tarafından da raporlanır.
         - Projenin kök klasörünü veya içerilen çözümü Visual Studio 2019 veya Visual Studio Code’da açın.
-        - Düzenleyicide bir .qs dosyasını açtıktan sonra, çıkış penceresinde Q# dili uzantısının çıkışını görmeniz gerekir.
+        - Düzenleyicide bir. QS dosyası açtıktan sonra, Q# Çıkış penceresinde dil uzantısının çıkışını görmeniz gerekir.
         - Proje başarıyla yüklendikten sonra (çıkış penceresinde gösterilir), her dosyayı açıp kalan tüm sorunları el ile düzeltin.
 
 > [!NOTE]
@@ -327,7 +330,7 @@ Bu sürüm hata düzeltmelerini içerir.
 
 Bu sürüm aşağıdakileri içerir:
 
-- Q#’yi öğrenmek için harika bir yolu olan Jupyter Notebook’a yönelik destek eklendi.  [Yeni Jupyter Notebook örneklerine göz atın ve kendi Notebook’larınızı yazmayı öğrenin](xref:microsoft.quantum.install). 
+- Hakkında bilgi edinmek için harika bir yol sunan Jupyter Notebook için destek ekler Q# .  [Yeni Jupyter Notebook örneklerine göz atın ve kendi Notebook’larınızı yazmayı öğrenin](xref:microsoft.quantum.install). 
 
 - Quantum Canon kitaplığına tamsayı ekleyici aritmetiğini ekler.  [Yeni tamsayı ekleyicilerini kullanmayı açıklayan](https://github.com/microsoft/Quantum/blob/master/samples/arithmetic/AdderExample.ipynb) Jupyter Notebook’una da bakın.
 
@@ -344,7 +347,7 @@ Bu sürüm aşağıdakileri içerir:
 
 Bu sürüm aşağıdakileri içerir:
 
-- Platformlar arası Python konağına yönelik destek eklendi.  Python için `qsharp` paketi, Python’da Q# işlemleri ve işlevlerinin simülasyonunu yapmayı kolaylaştırır. [Python ile birlikte çalışabilirlik](xref:microsoft.quantum.install) hakkında daha fazla bilgi edinin. 
+- Platformlar arası Python konağına yönelik destek eklendi.  `qsharp`Python paketi, Q# Python içinden işlem ve işlevlerin benzetimini yapmayı kolaylaştırır. [Python ile birlikte çalışabilirlik](xref:microsoft.quantum.install) hakkında daha fazla bilgi edinin. 
 
 - Visual Studio ve Visual Studio Code uzantıları artık sembollerin yeniden adlandırılmasını (örn. işlevler ve işlemler) destekler.
 
@@ -358,7 +361,7 @@ Bu sürüm aşağıdakileri içerir:
 
 - Boyutu isteğe bağlı olarak değiştirilebilen bir işaretli tamsayıyı gösteren yeni temel öğe BigInt için destek eklendi.  [BigInt türü](xref:microsoft.quantum.guide.types) hakkında daha fazla bilgi edinin.
 - Çok fazla sayıda qubit ile X, CNOT ve birden fazla öğe tarafından denetlenen X kuantum işleminin simülasyonunu yapabilen özel amaçlı hızlı bir simülatör olan Toffoli simülatörü eklendi.  [Toffoli simülatörü hakkında](xref:microsoft.quantum.machines.toffoli-simulator) daha fazla bilgi edinin.
-- Bir kuantum bilgisayarda Q# işleminin belirli bir örneğini çalıştırmak için gereken kaynaklara yönelik tahmin yapan basit bir kaynak tahmin aracı eklendi.  [Kaynak tahmin aracı](xref:microsoft.quantum.machines.resources-estimator) hakkında daha fazla bilgi edinin.
+- bir hisse bilgisayar üzerinde bir işlemin belirli bir ınstancee 'sini çalıştırmak için gereken kaynakları tahmin eden basit bir kaynak tahminleyicisi ekler Q# .  [Kaynak tahmin aracı](xref:microsoft.quantum.machines.resources-estimator) hakkında daha fazla bilgi edinin.
 
 
 ## <a name="version-0318112802"></a>Sürüm 0.3.1811.2802
@@ -392,9 +395,9 @@ Bu sürüm, aşağıdakiler de dahil olmak üzere birkaç hata düzeltmesini iç
 
 Bu sürüm, yeni dil özellikleri içerir ve geliştirici deneyimini iyileştirir:
 
-* Bu sürüm Q# için dil sunucusunu ve Visual Studio ve Visual Studio Code için istemci tümleştirmelerini içerir. Bu, hata ve uyarıların dalgalı alt çizgileri biçiminde yazmaya yönelik canlı geri bildirimin yanı sıra yeni IntelliSense özellikleriyle yazma olanağı tanır. 
+* Bu sürümde, için bir dil sunucusu Q# , Ayrıca Visual Studio için istemci tümleştirmeleri ve Visual Studio Code dahildir. Bu, hata ve uyarıların dalgalı alt çizgileri biçiminde yazmaya yönelik canlı geri bildirimin yanı sıra yeni IntelliSense özellikleriyle yazma olanağı tanır. 
 * Bu güncelleştirme, tanılama için kolay gezinti ve hassas aralıklar ve öğenin üzerine gelindiğinde gösterilen ek ayrıntılar ile tanılama iletilerini büyük ölçüde geliştirir.
-* Q# dili, geliştiricilerin ortak işlemleri yapma şeklini birleştirip dil özelliklerinin kuantum işlemlerini güçlü bir şekilde ifade edebilmesi için bunlara yönelik yeni geliştirmeler ile genişletildi.  Bu sürümle birlikte Q# dilinde birçok hataya neden olan değişiklik uygulandı.   
+* Q#Bu dil, geliştiricilerin genel işlemleri yapabildiği ve powertam Express hisse hesaplamalarına yönelik dil özelliklerine yönelik yeni geliştirmelerin yollarını birleştiren yollarla genişletilmiştir.  Bu sürümle birlikte dilde bir çok büyük değişiklikler var Q# .   
 
 Bu sürüm yeni bir kuantum kimyası kitaplığını da içerir:
 
@@ -408,7 +411,7 @@ Bu sürüm yeni bir kuantum kimyası kitaplığını da içerir:
     - Faz tahmini kullanarak topraklanmış ve uyarılmış lityum hidrit enerjilerini görselleştirme.
     - Kuantum kimyası simülasyonuna yönelik kaynak tahminleri gerçekleştirme.
     - Broombridge şeması tarafından gösterilen moleküllerin enerji düzeyini tahmin etme.
-* Belge, Q# ile kuantum simülasyonuna yönelik ek kimyasal model oluşturmak için NWChem’i kullanmayı açıklar.
+* Belgeler, ile hisse benzetiminin ek kimyasal modellerini oluşturmak için NWChem 'in nasıl kullanılacağını açıklar Q# .
 
 [Quantum Development Kit kimya kitaplığı](xref:microsoft.quantum.chemistry.concepts.intro) hakkında daha fazla bilgi edinin.
 
@@ -416,7 +419,7 @@ Yeni kimya kitaplığı ile kitaplıkları yeni bir GitHub deposuna [Microsoft/Q
 
 Bu sürüm, topluluk tarafından bildirilen sorunlara yönelik hata düzeltmelerini ve özellikleri içerir:
 
-* Q# için IntelliSense? ([UserVoice](https://quantum.uservoice.com/forums/906943/suggestions/32656918)).
+* IntelliSense için Q# ? ([UserVoice](https://quantum.uservoice.com/forums/906943/suggestions/32656918)).
 * .qs dosyaları ([UserVoice](https://quantum.uservoice.com/forums/906097/suggestions/32593049)).
 * İf deyiminde küme ayraçları kısaltıldığında oluşan hata iletisi geliştirildi ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/34718518)).
 * Değiştirilebilir (yeniden) bağlama işleminde tanımlama grubu ayrıştırma desteği ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/35020444)).
@@ -425,9 +428,9 @@ Bu sürüm, topluluk tarafından bildirilen sorunlara yönelik hata düzeltmeler
 
 ### <a name="community-contributions"></a>Topluluk Katkıları
 
-**Teşekkürler!** http://github.com/Microsoft/Quantum konumunda yer alan açık kod tabanımıza yönelik katkıları için aşağıdaki katkıda bulunanlara teşekkür ederiz. Bu katkılar, Q# kodunun zengin örneklerine önemli faydalar sağlar:
+**Teşekkürler!** http://github.com/Microsoft/Quantum konumunda yer alan açık kod tabanımıza yönelik katkıları için aşağıdaki katkıda bulunanlara teşekkür ederiz. Bu katkılar, kodun zengin örneklerine önemli ölçüde sahiptir Q# :
 
-* Rolf Huisman ([@RolfHuisman](https://github.com/RolfHuisman)): QASM’den Q#’ye çeviri aracı oluşturarak QASM/Q# geliştiricilerinin deneyimini iyileştirdi. [PR #58](https://github.com/Microsoft/Quantum/pull/58).
+* Rolf Kuisman ( [@RolfHuisman](https://github.com/RolfHuisman) ): qasm/ Q# geliştiriciler IÇIN BIR qasm ile Translator oluşturma deneyimi geliştirilmiştir Q# . [PR #58](https://github.com/Microsoft/Quantum/pull/58).
 
 * Andrew Helwer ([@ahelwer](https://github.com/ahelwer)):  ilişkin bir kuantum oyunu olan CHSH Game’i uygulayan bir örnek ile katkıda bulundu.  [PR #84](https://github.com/Microsoft/Quantum/pull/84).
 
@@ -451,13 +454,13 @@ Teşekkür ederiz!
 
 *Sürüm tarihi: 30 Haziran 2018*
 
-Bu sürüm, [GitHub’da bildirilen sorun #48](https://github.com/Microsoft/Quantum/issues/48)’e (kullanıcı adında boşluk olduğunda Q# derlemesinin başarısız olması) yönelik bir hızlı düzeltmedir. İlgili yeni sürümde de (`0.2.1806.3001-preview`) `0.2.1806.1503` öğesindeki güncelleştirme yönergelerini izleyin.
+Bu sürümler, [GitHub 'da bildirilen #48 soruna](https://github.com/Microsoft/Quantum/issues/48) yönelik hızlı bir düzeldir ( Q# Kullanıcı adı boş bir boşluk içeriyorsa derleme başarısız olur). İlgili yeni sürümde de (`0.2.1806.3001-preview`) `0.2.1806.1503` öğesindeki güncelleştirme yönergelerini izleyin.
 
 ## <a name="version-0218061503"></a>Sürüm 0.2.1806.1503
 
 *Sürüm tarihi: 22 Haziran 2018*
 
-Bu sürüm, topluluk için yapılan birkaç katkıyı, geliştirilmiş hata ayıklama deneyimini ve iyileştirilmiş performansı içerir.  Özellikle:
+Bu sürüm, topluluk için yapılan birkaç katkıyı, geliştirilmiş hata ayıklama deneyimini ve iyileştirilmiş performansı içerir.  Daha ayrıntılı şekilde belirtmek gerekirse:
 
 * QuantumSimulator hedef makinesine yönelik küçük ve büyük simülasyonlarda performans iyileştirmeleri.
 * Hata ayıklama işlevi geliştirildi.
@@ -478,9 +481,9 @@ Bu güncelleştirme ile yeni hata ayıklama işlevi eklendi:
 
 ### <a name="community-contributions"></a>Topluluk Katkıları
 
-Q# kodlayıcı topluluğu büyüyor ve http://github.com/Microsoft/quantum konumunda açık kod tabanımıza kullanıcılar tarafından gönderilen ilk kitaplıkları ve örnekleri görmekten mutluluk duyuyoruz.  **Çok teşekkürler!** Aşağıdaki katkıda bulunanlara teşekkürlerimizi sunarız:
-* Mathias Soeken ([@msoeken](https://github.com/msoeken)):  belirli bir permütasyonu uygulamaya yönelik Toffoli ağlarını oluşturan dönüşüm temelli mantık birleştirme yöntemini tanımlayan bir örnek ile katkıda bulundu. Kod tamamen Q# işlevleri ve işlemleriyle yazıldı.  [PR #41](https://github.com/Microsoft/Quantum/pull/41).
-* Rolf Huisman ([@RolfHuisman](https://github.com/RolfHuisman)): Microsoft MVP’si Rolf Huisman, klasik denetim akışı ve kısıtlı kuantum işlemleri bulunmayan kısıtlı bir program sınıfı için Q# kodundan düz QASM kodu oluşturan bir örnek ile katkıda bulundu. [PR #59](https://github.com/Microsoft/Quantum/pull/59)
+Q#Kodlayıcı topluluğu büyümekte ve üzerinde açık kod temelimize gönderilen ilk Kullanıcı kitaplıklarını ve örnekleri görmek için çok http://github.com/Microsoft/quantum .  **Çok teşekkürler!** Aşağıdaki katkıda bulunanlara teşekkürlerimizi sunarız:
+* Mathias Soeken ([@msoeken](https://github.com/msoeken)):  belirli bir permütasyonu uygulamaya yönelik Toffoli ağlarını oluşturan dönüşüm temelli mantık birleştirme yöntemini tanımlayan bir örnek ile katkıda bulundu. Kod tamamen Q# işlevlerde ve işlemlerde yazılır.  [PR #41](https://github.com/Microsoft/Quantum/pull/41).
+* RolfHuisman ( [@RolfHuisman](https://github.com/RolfHuisman) ): MICROSOFT MVP Rolf Kuisman, Q# Klasik denetim akışı ve kısıtlı hisse işlemleri olmayan kısıtlanmış bir program sınıfı için koddan düz qasm kodu üreten bir örneğe katkıda bulunur. [PR #59](https://github.com/Microsoft/Quantum/pull/59)
 * Sarah Kasier ([@crazy4pi314](https://github.com/crazy4pi314)): denetimli işlemler için kitaplık işlevi göndererek kod temelimizin geliştirilmesine yardımcı oldu. [PR #53](https://github.com/Microsoft/Quantum/pull/53)
 * Jessica Lemieux ([@Lemj3111](https://github.com/Lemj3111)): @"microsoft.quantum.canon.quantumphaseestimation" öğesini düzeltti ve yeni birim testleri oluşturdu.  [PR #54](https://github.com/Microsoft/Quantum/pull/54)
 * Tama McGlinn ([@TamaHobbit](https://github.com/TamaHobbit)): QuantumSimulator örneğinin atılmasını sağlayarak Teleportation örneğini temizledi. [PR #20](https://github.com/Microsoft/Quantum/pull/20)
@@ -559,7 +562,7 @@ Quantum Development Kit’in önceki sürümleri yalnızca .NET Framework’ü d
 ### <a name="project-migration"></a>Proje Geçişi
 
 Bunlarda kullanılan NuGet paketlerini güncelleştirmediğiniz sürece Quantum Development Kit’in önceki sürümleri kullanılarak oluşturulan projeler çalışmaya devam eder. Mevcut kodu yeni sürüme geçirmek için aşağıdaki adımları gerçekleştirin:
-1. Q# proje şablonunun doğru türünü kullanarak yeni bir .NET Core projesi oluşturun (Uygulama, Kitaplık veya Test Projesi).
+1. Doğru Q# proje şablonu türünü (uygulama, kitaplık veya test projesi) kullanarak yeni bir .NET Core projesi oluşturun.
 2. (Ekle > Mevcut Öğe’yi kullanarak) mevcut .qs ve .cs/.fs dosyalarını eski projeden yeni projeye kopyalayın. AssemblyInfo.cs dosyasını kopyalamayın.
 3. Yeni projeyi oluşturup çalıştırın.
 
@@ -567,7 +570,7 @@ Microsoft.Quantum.Canon ad alanındaki RandomWalkPhaseEstimation işleminin [Mic
 
 ### <a name="known-issues"></a>Bilinen Sorunlar
 
-- `dotnet test` için `--filter` seçeneği Q#’de yazılan testler için düzgün çalışmıyor.
+- `--filter`Seçeneği `dotnet test` ' de yazılan testler için doğru çalışmıyor Q# .
   Bunun sonucu olarak, bireysel birim testleri Visual Studio Code’da çalıştırılamaz. Tüm testleri çalıştırmak için komut satırında `dotnet test` öğesini kullanmanızı öneririz.
 
 ## <a name="version-0118011707"></a>Sürüm 0.1.1801.1707
@@ -577,7 +580,7 @@ Microsoft.Quantum.Canon ad alanındaki RandomWalkPhaseEstimation işleminin [Mic
 Bu sürüm ile topluluk tarafından bildirilen bazı sorunları düzeltildi. Bu sorunlar şunlardır:
 
 - Simülatör artık AVX’in etkinleştirildiği eski CPU’larda çalışır.
-- Bölgesel ondalık ayarları Q# ayrıştırıcısının başarısız olmasına sebep olmaz.
+- Bölgesel ondalık ayarları, Q# ayrıştırıcısının başarısız olmasına neden olmaz.
 - `SignD` temel işlemi artık `Double` değerinden ziyade `Int` döndürür.
 
 
@@ -594,15 +597,15 @@ Bu sürüm ile topluluk tarafından bildirilen bazı sorunları düzeltildi. Bu 
 
 #### <a name="project-creation"></a>Proje Oluşturma
 
-- Q# kullanacak bir çözüm oluştururken, çözümün çözümde yer alan her projeden (.csproj) bir dizin yukarda yer alması gerekir. Bu, yeni bir çözüm oluştururken “Yeni Proje” iletişim kutusundaki “Çözüme yönelik dizin oluştur” onay kutusu işaretlenerek gerçekleştirilebilir. Bu yapılmazsa, Quantum Development Kit NuGet paketlerinin el ile yüklenmesi gerekir.
+- Tarafından kullanılacak bir çözüm (. sln) oluştururken çözüm, Q# çözümdeki her projeden (. csproj) daha yüksek bir dizin olmalıdır. Bu, yeni bir çözüm oluştururken “Yeni Proje” iletişim kutusundaki “Çözüme yönelik dizin oluştur” onay kutusu işaretlenerek gerçekleştirilebilir. Bu yapılmazsa, Quantum Development Kit NuGet paketlerinin el ile yüklenmesi gerekir.
 
-#### <a name="q"></a>Q#
+#### Q#
 
-- IntelliSense Q# kodu için doğru hataları göstermiyor. Doğru Q# hatalarını görmek için Visual Studio Hata Listesindeki Derleme hatalarını görüntülediğinizden emin olun. Q# hatalarının bir derlemeyi tamamlanana kadar gösterilmediğini unutmayın.
+- IntelliSense, kod için doğru hataları görüntülemez Q# . Doğru hataları görmek için Visual Studio Hata Listesi derleme hatalarını görüntülediğinizden emin olun Q# . Ayrıca, Q# bir derlemeyi tamamladıktan sonra hataların gösterilmediğini unutmayın.
 - Kısmi bir uygulamada değiştirilebilir bir dizi kullanılması beklenmeyen davranışlara neden olabilir.
 - Sabit bir dizinin değiştirilebilir bir diziye (b’nin değiştirilebilir bir dizi olduğu yerde a = b’ye izin verin) bağlanması beklenmeyen davranışlar neden olabilir.
-- Profil oluşturma, kod kapsamı ve diğer VS eklentileri her zaman Q# satırı ve bloklarını doğru bir şekilde saymayabilir.
-- Q# derleyicisi, düz metin arasına kod eklenmiş dizeleri doğrulamaz. Değişken adlarında imla hatası yapıldığında veya Q# düz metin arasına kod eklenmiş dizelerde C# derleme hataları oluşabilir.
+- Profil oluşturma, kod kapsamı ve diğer VS eklentileri her zaman Q# satırları ve blokları doğru bir şekilde saymayabilir.
+- Q#Derleyici, enterpolasyonlu dizeleri doğrulamaz. Değişken adlarını yanlış yazarak veya enterpolasyonlu dizelerde ifadeleri kullanarak C# derleme hataları oluşturmak mümkündür Q# .
 
 #### <a name="simulation"></a>Benzetim
 
@@ -610,8 +613,8 @@ Bu sürüm ile topluluk tarafından bildirilen bazı sorunları düzeltildi. Bu 
 
 #### <a name="debugging"></a>Hata ayıklama
 
-- F11 (adımla), Q# kodunda çalışmıyor.
-- Q# kodunda bir kesme noktasında veya tek adımlı bir duraklamada kod vurgulama bazen yanlış sonuçlar verir. Doğru satır vurgulanır. Ancak, bazen vurgulama satırın yanlış sütunlarında başlayıp biter.
+- F11 (Step in) Q# kodda çalışmıyor.
+- Q#Bir kesme noktasında veya tek adımlı duraklamadan kodda kod vurgulama bazen yanlış olur. Doğru satır vurgulanır. Ancak, bazen vurgulama satırın yanlış sütunlarında başlayıp biter.
 
 #### <a name="testing"></a>Test Etme
 

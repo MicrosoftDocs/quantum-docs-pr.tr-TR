@@ -1,6 +1,8 @@
 ---
 Başlık: hisse Oracles açıklaması: ile nasıl çalışacağınızı ve başka bir algoritmaya girdi olarak kullanılan hisse Oracles, kara Box işlemlerini nasıl tanımlayacağınızı öğrenin.
 Yazar: cgranade uid: Microsoft. hisse. Concepts. Oracles MS. Author: Christopher.Granade@microsoft.com MS. Date: 07/11/2018 MS. Topic: article No-loc:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -105,7 +107,7 @@ $$
 Şimdi de şu anda bu $ = \dagger $ nedenle, daha önceki sorunları çözeceğiz.
 
 > [!TIP]
->O o o 'un o & u olduğunu görmek için, b! ' nin bir $ = { \dagger } $ $ = \boldone $ $ \oplus b \ OPLUS b a ile bu yana = $ $ , b \in \[ ! olduğunu unutmayın. Üs. Hayır-LOC ({)] 0, 1 \[ ! Üs. Hayır-LOC (})] $ .
+>$O o {0} = ' yi görmek için { \dagger } $ , $ = \boldone $ $ = $ $ b \in \: :: No-Loc ({)::: 0, 1 \: :: No-Loc (}) $ için \ OPLUS b \ OPLUS b a ile bu o.
 >Sonuç olarak, $ O \ket { x } \ket { y \oplus f (x) } = \ket { x } \ket { y \oplus f (x) \oplus f (x) } = \ket { x } \ket { y } $ .
 
 Bu şekilde, her hesaplama tabanlı durum x y için Oracle bu şekilde tanımlamak, $ \ket { } \ket { } $ O zaman $ O gibi $ diğer tüm durumları nasıl davrandığını da tanımlar.

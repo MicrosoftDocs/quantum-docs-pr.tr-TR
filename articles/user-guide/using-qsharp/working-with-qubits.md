@@ -6,18 +6,21 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
-ms.openlocfilehash: 1655d18ab9d8638ad356e6fb90994b5c1fd76a25
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 6808a852ee0de7d3a38ea44e9637eeaa6bea382a
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885299"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867871"
 ---
 # <a name="working-with-qubits"></a>Kubitlerle çalışma
 
 Qubits, hisse bilgi işlem ortamında temel bilgilerin temel nesnesidir. Qubits 'e genel bir bakış için bkz. [hisse parlaklığını anlama](xref:microsoft.quantum.overview.understanding)ve matematiksel gösterimlerine daha ayrıntılı bilgi için bkz. [qubit](xref:microsoft.quantum.concepts.qubit). 
 
-Bu makalede, bir Q # programında qubits 'in nasıl kullanılacağı ve bunlarla nasıl çalıştığı açıklanır. 
+Bu makalede, bir programda qubits 'in nasıl kullanılacağı ve bunlarla nasıl çalıştığı açıklanır Q# . 
 
 > [!IMPORTANT]
 >Bu makalede ele alınan deyimlerden hiçbiri bir işlevin gövdesinde geçerli değildir. Bunlar yalnızca işlemler içinde geçerlidir.
@@ -25,7 +28,7 @@ Bu makalede, bir Q # programında qubits 'in nasıl kullanılacağı ve bunlarla
 ## <a name="allocating-qubits"></a>Qubit ayırma
 
 Fiziksel qugeler, bir hisse bilgisayarında değerli bir kaynak olduğundan, derleyicinin işinin bir parçası mümkün olduğunca verimli şekilde kullanıldıklarından emin olmak.
-Bu nedenle, s # ' ı belirli bir ekstre bloğunda kullanım için qubit *ayırmak* üzere söylemeniz gerekir.
+Bu nedenle, Q# belirli bir ekstre bloğunda kullanmak üzere qubit *ayırmak* için söylemeniz gerekir.
 Qubits 'i tek bir qubit ya da *kayıt*olarak bilinen bir qubits dizisi olarak ayırabilirsiniz. 
 
 ### <a name="clean-qubits"></a>Qubit Temizleme
@@ -82,17 +85,17 @@ Qubits 'i ödünç alırken, sistem ilk olarak isteği kullanımda olan ancak de
 Bu tür qubit yoksa, isteği tamamlaması için yeni qubit ayırır.
 
 Kirli qubits 'in bilinen kullanım durumları arasında, yalnızca çok az sayıda qubit ve incrementers uygulaması gerektiren çok kontrollü CNOT kapıları olan uygulamalardır.
-Q # içinde kullanımları örneği için, bkz. Bu makaledeki [qubits örnekleri örneği](#borrowing-qubits-example) veya düzenleme kağıt, [*Toffoli tabanlı modüler çarpma*](https://arxiv.org/abs/1611.07995) (haner, Roetteler ve svore 2017) ile birlikte, ödünç alınan qubits kullanan bir algoritma için.
+İçindeki kullanımları hakkında bir örnek için Q# , bu makaledeki [Qubitleri örnek olarak ödünç](#borrowing-qubits-example) alma veya düzenleme kağıt, [*Toffoli tabanlı modüler çarpma*](https://arxiv.org/abs/1611.07995) (haner, Roetteler ve svore 2017) ile birlikte, ödünç alınan qubits kullanan bir algoritma için bkz. 2.
 
 ## <a name="intrinsic-operations"></a>İç Işlemler
 
 Ayrıldıktan sonra işlevlere ve işlemlere bir qubit geçirebilirsiniz.
-Bazı bir deyişle, bu, bir Q # programının bir qubit ile yapamalarıdır, ancak gerçekleştirilebilecek eylemler tüm işlemler olarak tanımlanır.
+Bazı bir deyişle, bir Q# programın bir qubit ile yapamamaları, ancak gerçekleştirilebilecek eylemler tüm işlemler olarak tanımlanmıştır.
 
-Bu makalede, qubits ile etkileşim kurmak için kullanabileceğiniz bazı yararlı Q # işlemleri açıklanmaktadır.
+Bu makalede, Q# qubits ile etkileşim kurmak için kullanabileceğiniz birkaç faydalı işlem ele alınmaktadır.
 Bunlar ve diğerleri hakkında daha fazla ayrıntı için bkz. [Iç işlemler ve işlevler](xref:microsoft.quantum.libraries.standard.prelude). 
 
-İlk olarak, tek qubit Pauli Operators $X $, $Y $ ve $Z $, [`X`](xref:microsoft.quantum.intrinsic.x) [`Y`](xref:microsoft.quantum.intrinsic.y) her birinin türüne sahip olan iç işlemler, ve, ve [`Z`](xref:microsoft.quantum.intrinsic.z) her biri için Q # içinde temsil edilir `(Qubit => Unit is Adj + Ctl)` .
+İlk olarak, tek qubit Pauli Operators $X $, $Y $ ve $Z $, Q# [`X`](xref:microsoft.quantum.intrinsic.x) [`Y`](xref:microsoft.quantum.intrinsic.y) [`Z`](xref:microsoft.quantum.intrinsic.z) her birinin türüne sahip olan iç işlemler, ve, ile temsil edilir `(Qubit => Unit is Adj + Ctl)` .
 
 [Iç işlemler ve işlevler](xref:microsoft.quantum.libraries.standard.prelude)bölümünde açıklandığı gibi, $X $ ve bu nedenle, `X` bir bit çevirme işlemi veya ağ geçidi değil olarak düşünün.
 `X`Bazı klasik bit dizeler için $ \ket{s_0 s_1 \noktalara S_N} $ biçimindeki durumları hazırlamak için bu işlemi kullanabilirsiniz $s $:
@@ -124,7 +127,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > Daha sonra, bu işlemi yazmak için el ile denetim akışı gerektirmeyen daha kompakt yollar görürsünüz.
 
-Ayrıca, $ \ket{+} = \left (\ket {0} + \ket {1} \ right)/\sqrt {2} $ ve $ \ket {-} = \left (\tus- {0} \ket {1} \ right)/\Sqrt $ gibi durumları, {2} Hadamard Transform $H $ kullanarak da hazırlayabilirsiniz. Iç işlem [`H`](xref:microsoft.quantum.intrinsic.h) (qubit => Unit, sıfatı + CTL) ') tarafından Q # olarak temsil edilir:
+Ayrıca, $ \ket{+} = \left (\ket {0} + \ket {1} \ right)/\sqrt {2} $ ve $ \ket {-} = \left (\tus- {0} \ket {1} \ right)/\Sqrt $ gibi durumları, {2} Hadamard Transform $H $ kullanarak da hazırlayabilirsiniz. Q# iç işlem tarafından temsil edilen [`H`](xref:microsoft.quantum.intrinsic.h) (qubit => Unit, sıfatı + CTL) '):
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -242,4 +245,4 @@ Bu kodu başka bir Canon işleviyle karşılaştırmak `MultiControlledXClean` `
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Q # içindeki [Denetim akışı](xref:microsoft.quantum.guide.controlflow) hakkında bilgi edinin.
+İçindeki [Denetim akışı](xref:microsoft.quantum.guide.controlflow) hakkında bilgi edinin Q# .

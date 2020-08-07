@@ -1,6 +1,8 @@
 ---
 Başlık: Gelişmiş matris kavramları açıklaması: hisse algoritmalarından bahseve benzetimini yapmak için kullanılan temel araçlar olan eigenvektörler, eigenvalues ve matris üsleri hakkında bilgi edinin.
 Yazar: Histumwriter uid: Microsoft. hisse. Concepts. Matrix-Gelişmiş MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. Topic: article No-loc:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -124,7 +126,7 @@ $$
 e ^ a = \boldone + a + \frac { ^ 2 } { 2! } + \frac { Bir ^ 3 } { 3!}+\cdots
 $$
 
-Bu önemli bir öneme sahip olduğundan, hisse ve saat evriminin $ { } $ B hermitian matrisi için e ^ IB biçiminde $ bir Unitary matrisi tarafından açıklandığından bu önemlidir $ .  Bu nedenle, matris üsleri gerçekleştirmek, hisse alma işlemlerinin temel bir parçasıdır ve bu da bu işlemleri tanımlamak için soru-cevap yordamları sunar.
+Bu önemli bir öneme sahip olduğundan, hisse ve saat evriminin $ { } $ B hermitian matrisi için e ^ IB biçiminde $ bir Unitary matrisi tarafından açıklandığından bu önemlidir $ .  Bu nedenle, matris üsleri gerçekleştirmek, hisse alma işlemlerinin temel bir parçasıdır ve Q# Bu da bu işlemleri tanımlamaya yönelik iç yordamlar sunar.
 Klasik bir bilgisayarda matris üstel değerini hesaplamak için uygulamada birçok yol vardır ve genel olarak bu tür üslü bir üstel olarak yaklaşık olarak, perıl ile bir üstel olarak kullanılır.  Bkz [*. Cleve Moldova ve Charles Van kredisi. "Bir matrisin üstel boyutunu hesaplamak için nineon yedi yol." SıHAR incelemesi 20,4 (1978): 801-836*](https://doi.org/10.1137/S00361445024180) , ilgili zorluk hakkında daha fazla bilgi için bkz..
 
 Bir matrisin üstel değerini nasıl hesapladığınızı anlamanın en kolay yolu, bu matrisin eigenvalues ve eigenvektörlerinden oluşur.  Özellikle, yukarıda açıklanan Spectral, her hermitian veya Unitary matrisinin $ bir $ unitöğeli matris $ U $ ve $ $ $ = u ^ \dagger D u gibi $ diyagonal bir matris olduğunu söylüyor.  UnitID özellikleri nedeniyle, bir $ ^ 2 = u ^ \dagger d ^ 2 u $ ve benzer şekilde herhangi bir Power $ p $ $ a ^ p = u ^ \dagger d ^ p u olabilir $ .  Bunu, elde ettiğimiz işleç üstel işlecinin işleç tanımına değiştirir:

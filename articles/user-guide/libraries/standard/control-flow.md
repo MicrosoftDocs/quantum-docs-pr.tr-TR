@@ -1,22 +1,25 @@
 ---
-title: 'Q # standart libarakları içindeki akış denetimleri'
-description: 'Microsoft Q # standart kitaplığındaki Flow denetim işlemleri ve işlevleri hakkında bilgi edinin.'
+title: Q#Standart liçlerin akış denetimleri
+description: Microsoft standart kitaplığı 'ndaki Flow denetim işlemleri ve işlevleri hakkında bilgi edinin Q# .
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: b41b3edd7a3e3ac13dbda106a869f4cba8183600
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a440f1ef2b901b18593816ca27aeadf7ab827104
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275759"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868585"
 ---
 # <a name="higher-order-control-flow"></a>Daha yüksek sıralı denetim akışı #
 
 Standart kitaplığın birincil rollerinden biri, yüksek düzey algoritmik fikirlerinin [hisse programları](https://en.wikipedia.org/wiki/Quantum_programming)olarak hızlı bir şekilde yönetilmesini kolaylaştırmaktır.
-Bu nedenle, Q # Canon, her biri işlevlerin ve işlemlerin kısmi uygulaması kullanılarak uygulanan çeşitli farklı akış denetim yapıları sağlar.
+Bu nedenle, Q# Canon işlevlerin ve işlemlerin kısmi uygulaması kullanılarak uygulanan çeşitli farklı akış denetim yapıları sağlar.
 Bir örneğe hemen atlamak için, bir kasada "CNOT merdiveni" oluşturmak istediği durumu düşünün:
 
 ```qsharp
@@ -47,7 +50,7 @@ Bu bölümün geri kalanında, Canon to sıkı Express hisse programları taraf�
 
 Canon tarafından sunulan birincil soyutlamalar yinelemeden biridir.
 Örneğin, tek bir-qubit Unitary $U $ için $U \otimes U \otimes \cnoktalar \otimes U $ biçiminde bir Unitary değerini düşünün.
-Soru <xref:microsoft.quantum.arrays.indexrange> -cevap olarak bunu `for` bir yazmaç üzerinde döngü olarak göstermek için kullanabiliriz:
+Q#' De, <xref:microsoft.quantum.arrays.indexrange> bunu `for` bir yazmaç üzerinde döngü olarak göstermek için kullanabiliriz:
 
 ```qsharp
 /// # Summary
@@ -88,7 +91,7 @@ Benzer şekilde, <xref:microsoft.quantum.canon.applytoeachindex> formun desenler
 > Ardından `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` , `code` `recoveryFn` her bloğa bağımsız olarak hata düzeltme kodu ve kurtarma işlevi uygular.
 > Bu, klasik girişler için bile geçerlidir: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` $ \pı/$2 yaklaşık $X $, ardından $Y $ hakkında $Pi/$3 dönüşü uygular.
 
-Q # Canon, işlevsel programlamaya tanıdık olan klasik numaralandırma desenleri için de destek sağlar.
+Q#Canon, işlevsel programlamaya tanıdık olan klasik numaralandırma desenleri için de destek sağlar.
 Örneğin, bir <xref:microsoft.quantum.arrays.fold> \_ \_ \_ liste üzerinde bir işlevi azaltmak için $f (f (f (s {\Text{Initial}}, x 0), \noktalar) $ düzenini uygular.
 Bu model toplamları, ürünleri, Minima, MAXIMA ve diğer benzeri işlevleri uygulamak için kullanılabilir:
 
@@ -100,7 +103,7 @@ function Sum(xs : Int[]) {
 }
 ```
 
-Benzer şekilde, ve gibi işlevler, <xref:microsoft.quantum.arrays.mapped> <xref:microsoft.quantum.arrays.mappedbyindex> Q # içinde fonksiyonel programlama kavramlarını ifade etmek için de kullanılabilir.
+Benzer şekilde, ve gibi işlevler ' <xref:microsoft.quantum.arrays.mapped> <xref:microsoft.quantum.arrays.mappedbyindex> de fonksiyonel programlama kavramlarını ifade etmek için kullanılabilir Q# .
 
 ## <a name="composing-operations-and-functions"></a>Işlemleri ve Işlevleri oluşturma ##
 
@@ -170,7 +173,7 @@ Bu yineleme deseninin uygulanma ölçütü <xref:microsoft.quantum.canon.decompo
 DecomposeIntoTimeStepsCA((2, U), 1);
 ```
 
-' Nin imzası `DecomposeIntoTimeStepsCA` , her biri diziler tarafından desteklenen koleksiyonlar tarafından ya da içindeki işlem öğelerinin, ilk öğeleri uzunluklarını belirten değerler olan tanımlama grupları ile temsil edildiği, Q # içinde ortak bir model izler `Int` .
+' İn imzası `DecomposeIntoTimeStepsCA` , ' deki ortak bir örüntü Q# , burada, diziler tarafından desteklenen koleksiyonlar veya bir öğe, ilk öğeleri `Int` değerlerinin uzunluğunu belirten değerler olan tanımlama grupları tarafından temsil edilir.
 
 ## <a name="putting-it-together-controlling-operations"></a>Birlikte yerleştirme: Işlemleri denetleme ##
 
@@ -215,7 +218,7 @@ Bu, `ApplyWith` tam olarak istediğiniz gibi, denetim yazmacını $P $ ile birli
 
 Bu noktada yapılabiliriz, ancak yeni operasyonumuzın, functor uygulama gibi "uygun değil" olarak karşılanmıyor `Controlled` .
 Bu nedenle, Oracle 'ın denetlenmesi ve yeni bir işlem döndürmesi için geçen bir işlev yazarak yeni denetim akışı kavramımız tanımlamayı tamamlayacağız.
-Bu şekilde, yeni işlevimiz, `Controlled` Q # ve Canon 'yi kullanarak güçlü yeni denetim akışı yapılarını kolayca tanımlayabiliriz.
+Bu şekilde, yeni işlevimiz, `Controlled` ve Canon 'yi kullanarak güçlü yeni denetim akışı yapılarını kolayca tanımlayabiliriz Q# .
 
 ```qsharp
 function ControlledOnBitString(

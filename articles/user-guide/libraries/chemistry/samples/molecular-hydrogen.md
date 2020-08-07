@@ -1,17 +1,20 @@
 ---
 title: Enerji düzeyi tahminleri edinme
-description: "Molesel Hydrogen 'ın enerji düzeyi değerlerini tahmin eden örnek bir Q # programını gözden geçir."
+description: Q#Molesel Hydrogen 'ın enerji düzeyi değerlerini tahmin eden örnek bir program aracılığıyla ilerleyin.
 author: guanghaolow
 ms.author: gulow
 ms.date: 07/02/2020
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: b26538980366cf4cbe01fc2ef59580ae182f1e8a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a2df4b829a3f4946c6de6e6b80ad72a5bc192b2c
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871578"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869214"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Enerji düzeyi tahminleri edinme
 Enerji seviyelerinin değerlerini tahmin etmek, hisse Chemistry 'ın asıl uygulamalarından biridir. Bu makalede, bu işlemi, molesel Hydrogen 'nin kurallı örneği için nasıl gerçekleştirebileceğiniz özetlenmektedir. Bu bölümde başvurulan örnek, [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) Kimya örnekleri deposunda bulunur. Çıktıyı gösteren daha fazla görsel örnek [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) tanıtım olur.
@@ -121,7 +124,7 @@ operation GetEnergyByTrotterization (
 }
 ```
 
-Artık ana bilgisayar programından Q # kodunu çağırabilirsiniz. Aşağıdaki C# kodu bir tam durumlu simülatör oluşturur ve `GetEnergyByTrotterization` zemin durumu enerji elde etmek için çalışır.
+Artık Q# kodu konak programından çağırabilirsiniz. Aşağıdaki C# kodu bir tam durumlu simülatör oluşturur ve `GetEnergyByTrotterization` zemin durumu enerji elde etmek için çalışır.
 
 ```csharp
 using (var qsim = new QuantumSimulator())

@@ -6,12 +6,15 @@ ms.author: ageller@microsoft.com
 ms.date: 6/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
-ms.openlocfilehash: a6ceee592e628215511ec83475d9e25bf54674f7
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8a981645703423856e667be7c3dccf5270a5885f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870626"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868109"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Hisse geliştirme seti (QDK) Toffoli simülatör
 
@@ -21,13 +24,13 @@ Toffoli simülatör, [tam durum simülatörü](xref:microsoft.quantum.machines.f
 
 ## <a name="invoking-the-toffoli-simulator"></a>Toffoli simülatörü çağırma
 
-Toffoli simülatörünü sınıfı aracılığıyla kullanıma sunun `ToffoliSimulator` . Daha fazla ayrıntı için bkz. [bir Q # programını çalıştırma yolları](xref:microsoft.quantum.guide.host-programs).
+Toffoli simülatörünü sınıfı aracılığıyla kullanıma sunun `ToffoliSimulator` . Daha fazla bilgi için bkz. [ Q# Program çalıştırma yolları](xref:microsoft.quantum.guide.host-programs).
 
 ### <a name="invoking-the-toffoli-simulator-from-c"></a>C Toffoli simülatörü çağırma #
 
-Diğer hedef makinelerde olduğu gibi, önce sınıfının bir örneğini oluşturur `ToffoliSimulator` ve sonra bunu bir işlemin yönteminin ilk parametresi olarak iletirsiniz `Run` .
+Diğer hedef makinelerde olduğu gibi, önce `ToffoliSimulator` sınıfının bir örneğini oluşturup ardından bunu bir işlemin `Run` metodunun ilk parametresi olarak geçirirsiniz.
 
-Sınıfından farklı olarak, sınıfı `QuantumSimulator` `ToffoliSimulator` <xref:System.IDisposable> arabirimini uygulamaz ve bu nedenle onu bir deyime almanız gerekmez `using` .
+`QuantumSimulator` sınıfının aksine, `ToffoliSimulator` sınıfının <xref:System.IDisposable> arabirimini uygulamadığını ve bu nedenle bunu bir `using` deyimi içine almanız gerekmediğini unutmayın.
 
 ```csharp
     var sim = new ToffoliSimulator();
@@ -37,7 +40,7 @@ Sınıfından farklı olarak, sınıfı `QuantumSimulator` `ToffoliSimulator` <x
 
 ### <a name="invoking-the-toffoli-simulator-from-python"></a>Python 'dan Toffoli simülatörü çağırma
 
-Python kitaplığındaki [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) yöntemini Içeri aktarılan Q # işlemiyle kullanın:
+Python kitaplığındaki [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) yöntemini içeri aktarılan Q# işlemle kullanın:
 
 ```python
 qubit_result = myOperation.toffoli_simulate()
@@ -45,7 +48,7 @@ qubit_result = myOperation.toffoli_simulate()
 
 ### <a name="invoking-the-toffoli-simulator-from-the-command-line"></a>Komut satırından Toffoli simülatörü çağırma
 
-Bir Q # programını komut satırından çalıştırırken, Toffoli simülatör hedef makinesini belirtmek için **--simülatör** (veya **-s** Shortcut) parametresini kullanın. Aşağıdaki komut Estimator kaynaklarını kullanarak bir program çalıştırır: 
+Q#Komut satırından bir program çalıştırırken, Toffoli simülatör hedef makinesini belirtmek için **--simülatör** (veya **-s** Shortcut) parametresini kullanın. Aşağıdaki komut Estimator kaynaklarını kullanarak bir program çalıştırır: 
 
 ```dotnetcli
 dotnet run -s ToffoliSimulator
@@ -53,7 +56,7 @@ dotnet run -s ToffoliSimulator
 
 ### <a name="invoking-the-toffoli-simulator-from-juptyer-notebooks"></a>Juptyer not defterlerinden Toffoli simülatörü çağırma
 
-Q # işlemini çalıştırmak için IQ # Magic komutunu [% Toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) kullanın.
+Q#İşlemi çalıştırmak için I Magic komutu [% Toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) kullanın Q# .
 
 ```
 %toffoli myOperation
@@ -74,7 +77,7 @@ Varsayılan olarak, bir `ToffoliSimulator` örnek 65.536 qubit için alan ayır�
 Algoritmanız bundan daha fazla qubit gerektiriyorsa, oluşturucuya parametresi için bir değer sağlayarak qubit sayısını belirtebilirsiniz `qubitCount` .
 Her ek qubit yalnızca bir baytlık bellek gerektirir, bu nedenle ihtiyaç duyacağınız qubit sayısını fazla tahmin etmek için önemli bir maliyet yoktur.
 
-Örneğin:
+Örnek:
 
 ```csharp
     var sim = new ToffoliSimulator(qubitCount: 1000000);

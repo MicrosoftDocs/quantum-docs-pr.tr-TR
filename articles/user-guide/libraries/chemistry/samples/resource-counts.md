@@ -6,12 +6,15 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.resourcecounts
-ms.openlocfilehash: 14d0a703a20a801dcee9678a113a33404859a1a9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 35c16e622a390b730ad7385efcc365c212e981fe
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275882"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869333"
 ---
 # <a name="obtaining-resource-counts"></a>Kaynak sayılarını alma
 
@@ -83,7 +86,7 @@ operation RunQubitizationStep (qSharpData: JordanWignerEncodingData) : Double {
 }
 ```
 
-Artık ilgilendiğiniz kaynakları izlemek için izleme simülatörünü yapılandıracağız. Bu durumda, bayrağını olarak ayarlayarak temel hisse işlemleri sayılır `usePrimitiveOperationsCounter` `true` . `throwOnUnconstraintMeasurement` `false` Soru-cevap, her türlü Istenirse, Q # kodunun ölçüm sonuçları olasılığını doğru bir şekilde olmadığı durumlarda özel durumların önüne geçmek için bir teknik ayrıntı olarak ayarlanmıştır.
+Artık ilgilendiğiniz kaynakları izlemek için izleme simülatörünü yapılandıracağız. Bu durumda, bayrağını olarak ayarlayarak temel hisse işlemleri sayılır `usePrimitiveOperationsCounter` `true` . Bir teknik ayrıntı, kodun, varsa `throwOnUnconstraintMeasurement` `false` Q# , ölçüm sonuçları olasılığa doğru bir şekilde olmadığı durumlarda özel durumların önüne geçmek için olarak ayarlanmıştır.
 
 ```csharp
 private static QCTraceSimulator CreateAndConfigureTraceSim()

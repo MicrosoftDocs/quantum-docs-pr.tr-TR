@@ -1,19 +1,22 @@
 ---
-title: 'Q içindeki denetim akışı #'
+title: İçindeki denetim akışıQ#
 description: Döngüler, koşullar, vb.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: b652736168a71b905deaf7c4fdb29a8751b3dfaf
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871000"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867958"
 ---
-# <a name="control-flow-in-q"></a>Q içindeki denetim akışı #
+# <a name="control-flow-in-no-locq"></a>İçindeki denetim akışıQ#
 
 Bir işlem veya işlev içinde, her bir ifade, diğer genel zorunlu klasik dillere benzer şekilde sırayla çalışır.
 Ancak, denetim akışını üç farklı şekilde değiştirebilirsiniz:
@@ -104,12 +107,12 @@ Sonunda aritmetik-SHIFT-Left ikili işlecini kullandığımızda olduğunu unutm
 
 ## <a name="repeat-until-success-loop"></a>Yineleme-Until-başarılı döngüsü
 
-Q # dili, mebitleri ölçmeye yönelik sonuçlara bağlı olarak klasik denetim akışına izin verir.
+Q#Dil klasik denetim akışının, qubits 'in ölçüleriyle sonuçlanmasına bağlıdır.
 Bu özellik, sırasıyla, birimlere uygulama için hesaplama maliyetini azaltabilecekleri güçlü dayalı araçları uygulamaya olanak tanıyor.
-Buna örnek olarak, Q # içindeki *yineleme-* yanıt (Rus) desenleri verilebilir.
+Bunun örnekleri, içindeki *yineleme-başarılı* (Rus) desenlerdir Q# .
 Bu RUS desenleri, temel kapıların bakımından *beklenen* düşük maliyetli dayalı programlarıdır; tahakkuk eden maliyet, gerçek çalıştırmaya ve çoklu olası Branch'in araya yerleştirmesine bağlıdır.
 
-Yinele-başarılı (RUS) desenleri kolaylaştırmak için, Q # yapıları destekler
+Yinele-başarılı (RUS) desenleri kolaylaştırmak için Q# yapıları destekler
 
 ```qsharp
 repeat {
@@ -147,9 +150,9 @@ Daha fazla örnek ve ayrıntı için, bu makaledeki [Yinele-Until-Success örnek
 
 ## <a name="while-loop"></a>While döngüsü
 
-Yinele-Success desenlerinin çok hisse özgü bir connotation vardır. Bunlar, belirli hisse algoritmaları sınıflarında yaygın olarak kullanılır. bu nedenle, Q # dilinde adanmış dil yapısı. Bununla birlikte, bir koşula göre kesintiye uğratır ve derleme zamanında yürütme uzunluğu bilinmiyor olan döngüler, bir hisse çalışma zamanında belirli bir ilgiyle işlenir. Ancak, işlevleri içindeki kullanımları sorunlu değildir çünkü bu döngüler yalnızca geleneksel (hisse olmayan) donanımda çalışan bir kod içerir. 
+Yinele-Success desenlerinin çok hisse özgü bir connotation vardır. Bu değerler, ' de adanmış dil yapısı olan belirli hisse algoritmaları sınıflarında yaygın olarak kullanılırlar Q# . Bununla birlikte, bir koşula göre kesintiye uğratır ve derleme zamanında yürütme uzunluğu bilinmiyor olan döngüler, bir hisse çalışma zamanında belirli bir ilgiyle işlenir. Ancak, işlevleri içindeki kullanımları sorunlu değildir çünkü bu döngüler yalnızca geleneksel (hisse olmayan) donanımda çalışan bir kod içerir. 
 
-Q #, bu nedenle, yalnızca işlevlerdeki while döngülerinin kullanımını destekler. Bir `while` deyim, anahtar sözcükten `while` , parantez içinde Boole ifadesiyle ve deyim bloğundan oluşur.
+Q#Bu nedenle, yalnızca işlevler içindeki while döngülerinin kullanımını destekler. Bir `while` deyim, anahtar sözcükten `while` , parantez içinde Boole ifadesiyle ve deyim bloğundan oluşur.
 Koşul bloğu (Döngünün gövdesi), koşulun değerlendirildiği sürece çalışır `true` .
 
 ```qsharp
@@ -205,7 +208,7 @@ fail $"Syndrome {syn} is incorrect";
 
 ### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a>Irrational Axis hakkında tek qubit döndürme için RUS stili 
 
-Tipik bir kullanım durumunda, aşağıdaki Q # işlemi Bloch Sphere üzerinde $ (I + 2i Z)/\sqrt $ bir ırrational Axis etrafında bir döndürme uygular {5} . Uygulama, bilinen bir RUS modelini kullanır:
+Tipik bir kullanım durumunda aşağıdaki Q# işlem, {5} Bloch Sphere üzerinde $ (I + 2ı Z)/\sqrt $ bir ırrational ekseninin etrafında bir döndürme uygular. Uygulama, bilinen bir RUS modelini kullanır:
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -331,4 +334,4 @@ Daha fazla bilgi için bkz. [Standart kitaplıkla birlikte sunulan birim testi �
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Soru-cevap [Ile test ve hata ayıklama](xref:microsoft.quantum.guide.testingdebugging) hakkında bilgi edinin.
+' De [test ve hata ayıklama](xref:microsoft.quantum.guide.testingdebugging) hakkında bilgi edinin Q# .

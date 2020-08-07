@@ -6,16 +6,19 @@ ms.author: bradben
 ms.date: 06/02/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.katas
-ms.openlocfilehash: 1c4dfa5c47aa38935cd5936cd256e357b6605371
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b2a3b25bf90109468f02c98c6c687befb83648bc
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276221"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869690"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Kuantum Kataları ile kuantum bilişimini öğrenin
 
-[Hisse katas](https://github.com/Microsoft/QuantumKatas/) , aynı anda hisse bilgi Işlem ve Q # programlama öğelerine eğitim eden açık kaynaklı, kendi kendine adımlı öğreticiler ve programlama alıştırmaları içerir.
+[Hisse katas](https://github.com/Microsoft/QuantumKatas/) , her zaman bilgi işlem ve programlama öğelerine aynı anda eğitim eden açık kaynaklı, kendi kendine adımlı öğreticiler ve programlama alıştırmaları içerir Q# .
 
 ## <a name="learning-by-doing"></a>Yaparak öğrenme
 
@@ -36,27 +39,27 @@ Hisse bilgi işlem ve temel bilgilerin temellerini ve temellerini inceleyin. Kua
 
 ### <a name="introduction-to-quantum-computing-concepts"></a>Kuantum bilişimi kavramlarına giriş
 
-| Ta | Description |
+| Ta | Açıklama |
 |:-----|-------------|
 |[Kompleks aritmetik](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)|Bu öğreticide, sanal ve karmaşık sayılar gibi hisse kullanımı için gerekli olan matematiksel arka planın bazıları açıklanmaktadır.|
 |[Doğrusal cebir](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)|Doğrusal algedeniz, hisse ve ABD bilgi işlem işlemlerini temsil etmek için kullanılır. Bu öğretici, matrisler ve vektörler dahil olmak üzere temel bilgileri içerir.|
 |[Kubit kavramı](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)|Hisse bitlerinin temel kavramlarından biri olan qubits hakkında bilgi edinin. |
 |[Tek kubitli kuantum geçitleri](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)|Bu öğretici, hisse algoritmalarının yapı taşları olarak davranan ve hisse qubit durumlarını çeşitli yollarla dönüştüren tek qubit hisse geçitlerini tanıtır.|
-|[Çoklu kubit sistemleri](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|Bu öğretici, Multi-qubit sistemlerini, matematiksel gösterimde ve Q # kodundaki gösterimi ve entanglement kavramını tanıtır.|
+|[Çoklu kubit sistemleri](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|Bu öğretici, Multi-qubit sistemlerini, matematiksel gösterimde ve kod içinde gösterimini Q# ve entanglement kavramını tanıtır.|
 |[Multi-qubit hisse geçitleri](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)|Bu öğretici, [tek qubit hisse kapıları](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates) öğreticisini izler ve Multi-qubit sistemlerine hisse kugeçitleri uygulamaya odaklanır.|
 
 ### <a name="quantum-computing-fundamentals"></a>Kuantum bilişimi ile ilgili temel bilgiler
 
-| Ta | Description |
+| Ta | Açıklama |
 |:-----|-------------|
-|[Kuantum geçitlerini tanıma](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|Q # içindeki temel hisse geçitlerini tanımanız için tasarlanan bir dizi alıştırmada. Temel tek qubit ve Multi-qubit kapıları, adjoint ve kontrollü kapıları ve bir qubit durumunu değiştirmek için kapıları nasıl kullanacağınızı içerir.|
-|[Kuantum süper konumu oluşturma](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|Soru-cevap kavramı ve Q # içinde programlama kavramı hakkında bilgi almak için bu alıştırmaları kullanın. Temel tek qubit ve Multi-qubit kapıları, superposition ve Flow denetimi ve Q # içinde özyineleme için alıştırmaları içerir.|
+|[Kuantum geçitlerini tanıma](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|İçindeki temel hisse geçitlerini tanımanız için tasarlanan bir dizi alıştırmada Q# . Temel tek qubit ve Multi-qubit kapıları, adjoint ve kontrollü kapıları ve bir qubit durumunu değiştirmek için kapıları nasıl kullanacağınızı içerir.|
+|[Kuantum süper konumu oluşturma](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|' De üst konum ve programlama kavramı hakkında bilgi sahibi olmak için bu alýþtýrmalarý kullanın Q# . Temel tek qubit ve Multi-qubit kapıları, superposition ve Flow denetimi ve özyineleme için alıştırmaları içerir Q# .|
 |[Ölçümleri kullanarak kuantum durumlarını ayırt etme](https://github.com/microsoft/QuantumKatas/tree/master/Measurements)|Bu alýþtýrmalarý, hisse ölçümü ve dikgen olmayan durumlar hakkında bilgi alırken çözün. |
 |[Birleşik ölçümler](https://github.com/microsoft/QuantumKatas/tree/master/JointMeasurements)|Birleşik eşlik ölçümleri hakkında bilgi edinin ve [ölçüm](xref:microsoft.quantum.intrinsic.measure) işleminin hisse bilgilerini ayırt etmek için nasıl kullanılacağını öğrenin.|
 
 ### <a name="algorithms"></a>Algoritmalar
 
-| Ta | Description |
+| Ta | Açıklama |
 |:-----|-------------|
 |[Kuantum ışınlanması](https://github.com/microsoft/QuantumKatas/tree/master/Teleportation)|Bu küta, yalnızca klasik iletişim ve daha önce paylaşılan hisse kullanımı ile daha önce paylaşılan hisse|
 |[Süper yoğun kodlama](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding)|Yoğun kodlama, daha önce paylaşılan hisse kullanımı ' nı kullanarak yalnızca bir qubit göndererek, iki bitlik klasik bilgi aktarımına izin veren bir protokoldür.  |
@@ -68,16 +71,16 @@ Hisse bilgi işlem ve temel bilgilerin temellerini ve temellerini inceleyin. Kua
 
 ### <a name="protocols-and-libraries"></a>Protokoller ve kitaplıklar
 
-| Ta | Description |
+| Ta | Açıklama |
 |:-----|-------------|
 |[Kuantum anahtar dağıtımı için BB84 protokolü](https://github.com/microsoft/QuantumKatas/tree/master/KeyDistribution_BB84)|Şifreleme anahtarlarını değiştirmek için qubit kullanarak [BB84](https://en.wikipedia.org/wiki/BB84)ve bir hisse |
 |[Bit-çevir hata düzeltme kodu](https://github.com/microsoft/QuantumKatas/tree/master/QEC_BitFlipCode)|En basit hisse hata düzeltme (QEC) kodlarıyla birlikte hisse hata düzeltmesini keşfet-üç-qubit bit-çevir kodu.|
-|[Aşama tahmini](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|Aşama tahmini algoritmaları, hisse bilgi işlem 'nin en temel yapı taşlarından bazılarıdır. Hisse alma aşaması tahmini olan bu alýþtýrmalar ve Q # ' da aşama tahmini yordamlarını hazırlama ve çalıştırma hakkında bilgi edinin.|
+|[Aşama tahmini](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|Aşama tahmini algoritmaları, hisse bilgi işlem 'nin en temel yapı taşlarından bazılarıdır. Hisse aşamalı tahmini ve ' de aşama tahmini yordamlarını hazırlama ve çalıştırma konusundaki bu alýþtýrmalar ile aşama tahmini hakkında bilgi edinin Q# .|
 |[Hisse aritmetiğini: Ripple-taşıma Ekleyici oluşturma](https://github.com/microsoft/QuantumKatas/blob/master/RippleCarryAdder)|Bir hisse bilgisayar üzerinde [Ripple](https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder) 'ın eklenmesini sağlayan, derinlemesine bir grup dizi. Yerinde hisse Adder oluşturun, bunu farklı bir algoritmayla genişletin ve son olarak, yerinde bir hisse kaşık oluşturun.   |
 
 ### <a name="entanglement-games"></a>Dolaşıklık oyunları
 
-| Ta | Description |
+| Ta | Açıklama |
 |:-----|-------------|
 |[CHSH oyunu](https://github.com/microsoft/QuantumKatas/tree/master/CHSHGame)|[Chsh](https://en.wikipedia.org/wiki/CHSH_inequality) oyununun bir uygulamasıyla hisse zenginl. Bu [Yerel](https://en.wikipedia.org/wiki/Quantum_refereed_game) olmayan oyun, tam olarak klasik bir stratejiyle ne kadar olabildiğini öğrenmek için hisse uygun bir şekilde nasıl kullanılabileceğini gösterir.|
 |[GHZ oyunu](https://github.com/microsoft/QuantumKatas/tree/master/GHZGame)|GHZ oyunu başka bir yerel olmayan oyundur, ancak üç oyuncu içerir.|

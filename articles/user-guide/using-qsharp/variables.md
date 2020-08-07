@@ -1,28 +1,31 @@
 ---
-title: 'Soru-cevap #'
+title: İçindeki değişkenlerQ#
 description: Fill açıklaması
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
-ms.openlocfilehash: 08301f408dcb2211ba25c582a5e5aa43310b714a
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 00af0989cd5a1f9ccc7d9f2545acd0d256bc7eb9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885281"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867854"
 ---
-# <a name="variables-in-q"></a>Soru-cevap #
+# <a name="variables-in-no-locq"></a>İçindeki değişkenlerQ#
 
-S #, değişebilir ve değişmez semboller ya da ifadelerle sınırlanan/atanan *değişkenler*arasında ayrım yapar.
+Q#değişebilir ve değişmez semboller ya da ifadelerle sınırlanan/atanan *değişkenler*arasında ayrım yapar.
 Genellikle, derleyicinin daha iyi iyileştirmeler gerçekleştirmesini sağladığından, değişmez sembollerin kullanılması önerilir.
 
 Bir bağlamanın sol tarafı bir sembol tanımlama grubu ve bir ifadenin sağ tarafından oluşur.
 
 ## <a name="immutable-variables"></a>Sabit değişkenler
 
-Anahtar sözcüğünü kullanarak bir işlem veya işlev içinde yeniden kullanmak üzere Q # içinde herhangi bir türün değerini bir değişkene atayabilirsiniz `let` . 
+İçinde herhangi bir türde bir değeri bir Q# işlem veya işlev içinde yeniden kullanmak için anahtar sözcüğünü kullanarak bir değişkene atayabilirsiniz `let` . 
 
 Değişmez bir bağlama anahtar sözcükten `let` , ardından bir sembol veya sembol kümesi, eşittir işareti `=` , sembolleri bağlamak için bir ifade ve sondaki noktalı virgülden oluşur.
 
@@ -107,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-Diziler söz konusu olduğunda, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) Q # standart kitaplığı 'nda birçok yaygın dizi başlatma ve işleme ihtiyacı için gerekli araçlar sağlanır ve bu sayede dizi öğelerini ilk yerde güncelleştirmek zorunda kalmamak için yardımcı olur. 
+Diziler söz konusu olduğunda, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) Q# Standart kitaplıkta birçok yaygın dizi başlatma ve işleme ihtiyacı için gerekli araçlar sağlanır ve bu sayede dizi öğelerini ilk yerde güncelleştirmek zorunda kalmamak için yardımcı olur. 
 
 Update-ve-yeniden ata deyimleri gerekirse bir alternatif sağlar:
 
@@ -163,7 +166,7 @@ Bu formun bir ataması, bu kayıt düzeninin öğelerini *parçalara ayırmayı*
 Bağlamanın sağ tarafı bir tanımlama grubu ise, bu kayıt kümesini atama sırasında oluşturabilirsiniz.
 Bu tür ayrıştırmaları iç içe diziler içerebilir ve sağ taraftaki tanımlama grubunun şekli sembol tanımlama grubu şekli ile uyumlu olduğu sürece herhangi bir tam veya kısmi ayrıştırma geçerlidir.
 
-Örneğin:
+Örnek:
 
 ```qsharp
 let (i, f) = (5, 0.1); // i is bound to 5 and f to 0.1
@@ -198,7 +201,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-ve
+reservedStorageGb
 
 ```qsharp
 if (a == b) {
@@ -236,4 +239,4 @@ if (a == b) {
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Q # içinde [qubits Ile çalışma](xref:microsoft.quantum.guide.qubits) hakkında bilgi edinin.
+' De [qubits Ile çalışma](xref:microsoft.quantum.guide.qubits) hakkında bilgi edinin Q# .

@@ -6,18 +6,21 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
-ms.openlocfilehash: 5dad4e4a77eea99e72eb2efac52eec61ebbdb21c
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 40f79a66ae95e20a8b1c19af735eedca5e3c15ef
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275933"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869551"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamiltonian Dynamics benzetimi
 
 Hamiltonian, temel alınan işleçlerin toplamı olarak belirtiledikten sonra, daha sonra iyi bilinen tekniklerin bir konak kullanılarak temel geçit işlemlerine derlenebilir.
 Üç verimli yaklaşımlar şunlardır: Suzuki formülleri, birimlere ait doğrusal birleşimler ve qutoleştirme.
-Aşağıdaki üç yaklaşımı anladık ve Hamiltonian simülasyon kitaplığını kullanarak bu yöntemlerin nasıl uygulanacağını gösteren somut Q # örnekleri verilmiştir.
+Aşağıdaki üç yaklaşımı anladık ve Q# Hamiltonian simülasyon kitaplığını kullanarak bu yöntemlerin nasıl uygulanacağını gösteren somut örneklere sahip ediyoruz.
 
 
 ## <a name="trottersuzuki-formulas"></a>Trour – Suzuki formülleri
@@ -49,7 +52,7 @@ Ayrıca, diagonalized olduktan sonra eigenvalues, üzerinde davranabilecekleri q
         0 & 0 & 0 & e ^ {-it} \end{bmatrix}.
 $ $ Burada, $e ^ {-iHt} {00} \tus= e ^ {it} {00} \tus$ ve $e ^ {-iht} {01} \tus= e ^ {-it} {01} \tus$, "$0 $, 1. bit $1 dizesinin eşliği $1 $ iken $0 $,
 
-Pauli işleçlerinin üsleri, işlem kullanılarak doğrudan Q # içinde uygulanabilir <xref:microsoft.quantum.intrinsic.exp> :
+Pauli işleçleri 'nin üs öğeleri Q# , işlemi kullanarak doğrudan uygulanabilir <xref:microsoft.quantum.intrinsic.exp> :
 ```qsharp
     using(qubits = Qubit[2]){
         let pauliString = [PauliX, PauliX];
@@ -86,8 +89,8 @@ Başlangıç noktanızda, sınıfın bir örneği olarak kodda ifade edilen Ferm
     var qSharpData = jordanWignerEncoding.ToQSharpFormat();
 ```
 
-Bu, Q # benzetim algoritmaları tarafından tüketilebilir olan Ürdün-Wigner gösteriminin bu biçimi Kullanıcı tanımlı bir türdür `JordanWignerEncodingData` .
-Q # içinde, bu biçim, `TrotterStepOracle` yürütülmesi için gereken diğer parametrelere ek olarak, bir işleci (Suzuki tümleştirici) kullanarak zaman evrimini yaklaştıran bir operatör döndüren kolay bir işleve geçirilir.
+Simülasyon algoritmaları tarafından tüketilebilir olan Ürdün-Wigner gösteriminin bu biçimi Q# Kullanıcı tanımlı bir türdür `JordanWignerEncodingData` .
+İçinde Q# , bu biçim, `TrotterStepOracle` yürütülmesi için gereken diğer parametrelere ek olarak, bir Işleci (Suzuki tümleştiricisi) kullanarak zaman elde eden bir operatör döndüren kolay bir işleve geçirilir.
 
 ```qsharp
 // qSharpData passed from driver
@@ -151,10 +154,10 @@ $ \Operatorname{Prepare} $ işlemi doğrudan qubitişleştirme içinde kullanıl
 
 $W $, yürüme işleci, $ \operatorname{Select} $ ve $R $ işlemleri $ $ W = \operatorname{Select} R olarak ifade edilebilir. Bu, "^ {\pm i \cos ^ {-1} (H/| H | _1)} $ $e için eşdeğer bir işleç (bir ıometry 'ye kadar) uygulamak için yeniden görünebilen $ $.
 
-Bu alt yordamlar, Q # ' da kolayca ayarlanabilir.
+Bu alt yordamlar ' de kolayca ayarlanabilir Q# .
 Örnek olarak, $H = X_1 + X_2 + Z_1 Z_2 $ ' nin bulunduğu basit qubit çapraz-şaşırtıcı Hamiltonian 'yi düşünün.
-Bu durumda, $ \operatorname{Select} $ işlemini uygulayacak olan Q # kodu tarafından çağrılır <xref:microsoft.quantum.canon.multiplexoperations> ; ancak, $ \operatorname{Prepare} $ işlemi kullanılarak uygulanabilir <xref:microsoft.quantum.preparation.preparearbitrarystate> .
-Hubbard modelinin benzetimini yapmayı içeren bir örnek, bir [Q # örneği](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)olarak bulunabilir.
+Bu durumda, $ Q# \operatorname{Select} $ işlemini uygulayacak kod tarafından çağrılır <xref:microsoft.quantum.canon.multiplexoperations> , ancak $ \operatorname{Prepare} $ işlemi kullanılarak uygulanabilir <xref:microsoft.quantum.preparation.preparearbitrarystate> .
+Hubbard modelinin benzetimini içeren bir örnek, [ Q# örnek](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)olarak bulunabilir.
 
 Rastgele Kimya sorunları için bu adımları el ile belirtmek çok çaba gerektirir, bu da Kimya kitaplığı kullanmaktan kaçınılmaz.
 Yukarıdaki Trour – Suzuki simülasyon algoritmasına benzer şekilde,, `JordanWignerEncodingData` `QubitizationOracle` yürütülmesi için gereken diğer parametrelere ek olarak, yürüme işlecini döndüren kolaylık işlevine geçirilir.

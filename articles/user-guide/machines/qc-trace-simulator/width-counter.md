@@ -1,21 +1,24 @@
 ---
 title: Genişlik sayacı-hisse geliştirme seti
-description: 'Bir Q # programındaki işlemlere ayrılan ve ödünç alınan qubits sayısını saymak için hisse izi simülatörü kullanan Microsoft QDK genişlik sayacı hakkında bilgi edinin.'
+description: Bir programdaki işlemler tarafından ayrılan ve ödünç alınan qubits sayısını saymak için hisse izi simülatörü kullanan Microsoft QDK genişlik sayacı hakkında bilgi edinin Q# .
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: af8609dc5c05f7a19b8d21755281427feb29b84c
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 02f4937aaccf7bf49d6450355c6b42b273071b2e
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871543"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868211"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a>Hisse izleme simülatörü: Genişlik sayacı
 
-Genişlik sayacı, hisse Geliştirme Seti [hisse izleyici benzeticisinin](xref:microsoft.quantum.machines.qc-trace-simulator.intro)bir parçasıdır. Bu özelliği, bir Q # programındaki her işlem tarafından ayrılan ve ödünç alınan qubits sayısını saymak için kullanabilirsiniz. Bazı temel işlemler ek qubit ayırabilir, örneğin, denetlenen `X` işlemleri veya denetlenen işlemleri de çarpır `T` .
+Genişlik sayacı, hisse Geliştirme Seti [hisse izleyici benzeticisinin](xref:microsoft.quantum.machines.qc-trace-simulator.intro)bir parçasıdır. Bu işlemi, bir programdaki her bir işlem tarafından ayrılan ve ödünç alınan qubits sayısını saymak için kullanabilirsiniz Q# . Bazı temel işlemler ek qubit ayırabilir, örneğin, denetlenen `X` işlemleri veya denetlenen işlemleri de çarpır `T` .
 
 ## <a name="invoking-the-width-counter"></a>Genişlik sayacını çağırma
 
@@ -29,7 +32,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-width-counter-in-a-c-host-program"></a>C# ana programında Width sayacını kullanma
 
-Bu bölümde aşağıdaki C# örneği, <xref:microsoft.quantum.intrinsic.x> aşağıdaki Q # örnek koduna bağlı olarak, çarpma denetimli bir işlemin uygulanmasıyla ayrılan ekstra qubits sayısını hesaplar:
+Bu bölümde aşağıdaki C# örneği, <xref:microsoft.quantum.intrinsic.x> Aşağıdaki örnek koda bağlı olarak, çarpma denetimli bir işlemin uygulanmasıyla ayrılan ek qubits sayısını hesaplar Q# :
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

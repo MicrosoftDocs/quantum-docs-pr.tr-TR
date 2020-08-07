@@ -1,6 +1,8 @@
 ---
 Başlık: hisse bilgi işlem açıklamasında vektörler ve matrisler: vektörlerin ve matrislerle nasıl çalışacağınızı öğrenin.
 Yazar: Nicetumwriter uid: Microsoft. hisse. Concepts. vektörms. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. Topic: article No-loc:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -87,7 +89,7 @@ Vektör ve matrislerle ilgili bazı benzerlik, hisse bilgi işlem anlamak için 
 
 Boyutun (veya boyutunun) bir sütun vektörü (veya basitçe [*vektör*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ v $ , $ bir $ $ $ $ sütun olarak düzenlenmiş n karmaşık sayıların (v_1, v_2, \lnoktalar, V_n) bir koleksiyonudur $ :
 
-$$Yönetim=\begin{bmatrix}
+$$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \ sanal noktalar\\\\
@@ -215,7 +217,7 @@ $$
     =\begin{bmatrix}c \\\\ a d \\\\ a \\\\ b c \\\\ b d \\\\ s\end{bmatrix}
 $$
 
-ve
+reservedStorageGb
 
 $$
     \begin{bmatrix}

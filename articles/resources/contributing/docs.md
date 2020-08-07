@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: ed5ab5df9de5d71ccd922cd430cf15779806dd6a
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 1110f32a6486de1a346b115fa928a098749b6690
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275503"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866885"
 ---
 # <a name="improving-documentation"></a>İyileştirme Belgeleri
 
@@ -25,7 +28,7 @@ Benzer şekilde, aşağıda açıklandığı gibi LaTeX dilini kullanarak belgel
 Bu şekilde, her belge formu ayrıntılarda biraz farklılık gösterir:
 
 - **Kavramsal belgeler** , ' de yayımlanan bir makale https://docs.microsoft.com/quantum grubundan oluşur ve hisse kullanımı temellerini, değişim biçimleri için teknik belirtimlere göre anlatmaktadır. Bu makaleler, zengin belge kümeleri oluşturmak için kullanılan bir Markaşağı varyantı olan [Docfx-flavored markaşağı (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)dilinde yazılmıştır.
-- **API başvurusu** , üzerinde yayınlanan her bir Q # işlevi, işlem ve Kullanıcı tanımlı tür için bir sayfa kümesidir https://docs.microsoft.com/qsharp/api/ . Bu sayfalar, her çağrılabilir girdi ve işlemi örneklerle birlikte ve daha fazla bilgi için bağlantıları belgeleyin. API başvurusu, her yayının bir parçası olarak Q # kaynak kodundaki küçük DFM belgelerinden otomatik olarak ayıklanır.
+- **API başvurusu** , üzerinde yayınlanan her bir Q# işlev, işlem ve Kullanıcı tanımlı tür için bir sayfa kümesidir https://docs.microsoft.com/qsharp/api/ . Bu sayfalar, her çağrılabilir girdi ve işlemi örneklerle birlikte ve daha fazla bilgi için bağlantıları belgeleyin. API başvurusu, Q# her sürümün parçası olarak kaynak kodundaki küçük DFM belgelerinden otomatik olarak ayıklanır.
 - Her örnekle birlikte bulunan **README <!----> . MD** dosyaları ve küta, bu örnek veya Kütin nasıl kullanıldığını, ne kapsadığını ve hisse geliştirme setinin geri kalanı ile ilişkisini açıklamaktadır. Bu dosyalar [GitHub flavored Markaşağı (GFM)](https://github.github.com/gfm/)kullanılarak yazılır. Bu, DFM 'in doğrudan kod depolarına belge iliştirmek için popüler bir alternatiftir.
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>Kavramsal belgelere katkıda bulunma
@@ -49,7 +52,7 @@ Aşağıdaki çekme istekleri hakkında daha fazla bilgi edineceksiniz, ancak ş
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
 ```
 
-Bu komut, dosyadaki 4 ' ten 8 ' e kadar olan satırları, söz dizimi vurgulamanın amacına göre soru-cevap olarak işaretleyerek bu dosyadan [ `Game.qs` dosyaya `chsh-game` ](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)aktarır.
+Bu komut, [ `Game.qs` dosyadaki `chsh-game` ](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)4 ' e kadar olan satırları, Q# söz dizimi vurgulamanın amacı için kod olarak işaretleyerek, örnekten içeri aktarır.
 Bu komutu kullanarak, kavramsal makaleler ve örnekler deposu arasında kodu çoğaltmaktan kaçınabilirsiniz. böylece, belgelerde örnek kod her zaman mümkün olduğunca güncel olur.
 
 ## <a name="contributing-to-the-api-references"></a>API başvurularına katkıda bulunma
@@ -64,7 +67,7 @@ Hisse geliştirme setinin her bir sürümünü derliyoruz. bu yorumlar, https://
 
 Örneğin, işlevini düşünün `ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)` .
 Bir belge yorumu, bir kullanıcının nasıl yorumlayacağını `bits` ve işlevin ne olduğunu öğreni konusunda bilgi edinmelidir `oracle` .
-Bu farklı bilgi parçalarının her biri, belge açıklamasında özel olarak adlandırılmış bir Markaşağı bölümü tarafından Q # derleyicisine temin edilebilir.
+Bu farklı bilgi parçalarının her biri, Q# belge açıklamasında özel olarak adlandırılmış bir Markaşağı bölümü tarafından derleyiciye alınabilir.
 Örneği için aşağıdakine `ControlledOnBitString` benzer bir şey yazabiliriz:
 
 ```qsharp
@@ -139,7 +142,7 @@ Yukarıdaki kodun işlenmiş sürümünü, [ `ControlledOnBitString` işlevin AP
 
 Belge yazma hakkında genel olarak, API belge açıklamalarını yazma bölümünde birkaç şeyi aklınızda tutmaya yardımcı olur:
 
-- Her belge açıklamasının biçimi, Q # derleyicisinin belgelerinize doğru görünmesini beklediklerini eşleşmelidir. `/// # Remarks`Bölüm gibi bölümler daha kısıtlayıcı olsa da, serbest biçimli içeriğe izin ver gibi bazı bölümler `/// # See Also` .
+- Her belge açıklamasının biçimi, Q# derleyicinin belgelerinize doğru görünmesini beklediklerini eşleştirmek için sahiptir. `/// # Remarks`Bölüm gibi bölümler daha kısıtlayıcı olsa da, serbest biçimli içeriğe izin ver gibi bazı bölümler `/// # See Also` .
 - Bir okuyucu, API belgelerinizi ana API başvuru sitesinde, her bir ad alanının özetinde veya hatta, üzerine gelme bilgilerini kullanarak IDE içinden okuyabilir. `/// # Summary`Bunun yaklaşık bir cümle olduğundan emin olmak, okuyucunun daha fazla okuma yapmak veya başka bir yere bakmak gerekip gerekmediğini hızlı bir şekilde izlemesine yardımcı olur ve ad alanı özetleri aracılığıyla hızla tarama yapmaya yardımcı olabilir.
 - Belgeleriniz kodun kendisinden çok daha uzun bir süre daha fazla olabilir, ancak bu tamam! Küçük bir kod parçası bile, bu kodun bulunduğu bağlamı bilmiyor olan kullanıcılar için beklenmeyen etkileri olabilir. Somut örnekler ve açık açıklamalar sunarak kullanıcıların, kendileri için kullanılabilir olan kodun en iyi şekilde kullanılmasını sağlayabilirsiniz.
 

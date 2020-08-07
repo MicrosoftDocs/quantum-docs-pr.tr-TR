@@ -1,29 +1,32 @@
 ---
-title: 'Q içindeki tür Ifadeleri #'
-description: Sabitleri, değişkenleri, işleçleri, işlemleri ve işlevleri soru-cevap olarak ifade olarak belirtme, başvurma ve birleştirme hakkında bilgi edinin.
+title: İçindeki ifadelerQ#
+description: Sabitleri, değişkenleri, işleçleri, işlemleri ve işlevleri ' de ifade olarak belirtme, başvurma ve birleştirme işlemlerini anlayın Q# .
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 1821df6a3a51a62b44f3ccd96b127577c5db990a
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b6cc97dfee05dc843e213e84f17043714a8a9656
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415397"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869622"
 ---
-# <a name="type-expressions-in-q"></a>Q içindeki tür Ifadeleri #
+# <a name="expressions-in-no-locq"></a>İçindeki ifadelerQ#
 
 ## <a name="numeric-expressions"></a>Sayısal Ifadeler
 
 Sayısal ifadeler `Int` , veya türündeki ifadelerdir `BigInt` `Double` .
 Diğer bir deyişle, tamsayı veya kayan noktalı sayılardır.
 
-`Int`Q # içindeki sabit değerler, bir dizi basamak olarak yazılmıştır.
+`Int`içindeki değişmez değerler Q# , bir dizi basamak olarak yazılmıştır.
 Onaltılık ve ikili tamsayılar desteklenir ve `0x` sırasıyla bir ve önekiyle yazılır `0b` .
 
-`BigInt`Q # içindeki değişmez değerler sonunda `l` veya `L` soneke sahiptir.
+`BigInt`içindeki değişmez değerler Q# sonunda `l` veya `L` soneke sahiptir.
 Onaltılık büyük tamsayılar desteklenir ve "0x" önekiyle yazılır.
 Bu nedenle, tüm geçerli sabit değer kullanımları aşağıda verilmiştir `BigInt` :
 
@@ -33,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double`Q # içindeki sabit değerler, ondalık basamaklar kullanılarak yazılan kayan nokta sayılarıdır.
+`Double`içindeki değişmez değerler Q# , ondalık basamaklar kullanılarak yazılan kayan nokta sayılarıdır.
 Bunlar ondalık bir nokta veya ya da ya da " `.` e" ya da "e" ya da bir üstel bölüm (yalnızca olası bir negatif işaret ve ondalık basamakların geçerli olması) ile yazılmış veya olmadan yazılabilir.
 Aşağıdakiler geçerli `Double` değişmez değerler: `0.0` , `1.2e5` , `1e-5` .
 
@@ -63,7 +66,7 @@ Diğer bir deyişle, bir adım sola veya sağa kaydırma, sırasıyla 2 ile çar
 
 Tamsayı bölme ve tamsayı mod, negatif sayılar için C# olarak aynı davranışı izler.
 Yani, `a % b` her zaman aynı işarete sahiptir `a` ve `b * (a / b) + a % b` her zaman eşittir `a` .
-Örneğin:
+Örnek:
 
  `A` | `B` | `A / B` | `A % B`
 ---------|----------|---------|---------
@@ -86,7 +89,7 @@ Herhangi bir tamsayı veya büyük tamsayı ifadesi verildiğinde, `~~~` (bit d�
 Aynı ilkel türdeki iki ifade verildiğinde, `==` ve `!=` ikili işleçler bir ifade oluşturmak için kullanılabilir `Bool` .
 İki ifade eşitse true, değilse false şeklindedir.
 
-Kullanıcı tanımlı türlerin değerleri karşılaştırılamayabilir, yalnızca sarmalanmamış değerler karşılaştırılabilir. Örneğin, "sarmalama" işlecini kullanma `!` ( [Q # türlerinde](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)ayrıntılı olarak açıklanmıştır),
+Kullanıcı tanımlı türlerin değerleri karşılaştırılamayabilir, yalnızca sarmalanmamış değerler karşılaştırılabilir. Örneğin, "sarmalama" işlecini kullanma `!` ( [içindeki Q# türlerde ](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)ayrıntılı olarak açıklanmıştır)
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -110,24 +113,24 @@ Herhangi bir Boole ifadesi verildiğinde, `not` birli işleç yanlış olduğund
 
 ## <a name="string-expressions"></a>Dize ifadeleri
 
-Q #, `fail` deyimde ( [Denetim akışında](xref:microsoft.quantum.guide.controlflow#fail-statement)açıklanmıştır) ve standart işlevde dizelerin kullanılmasına izin verir [`Message`](xref:microsoft.quantum.intrinsic.message) . İkinci öğesinin belirli davranışı kullanılan simülatöre bağlıdır, ancak genellikle bir Q # programı sırasında çağrıldığında ana bilgisayar konsoluna bir ileti yazar.
+Q#`fail`deyimde ( [Denetim akışında](xref:microsoft.quantum.guide.controlflow#fail-statement)açıklanmıştır) ve standart işlevde dizelerin kullanılmasına izin verir [`Message`](xref:microsoft.quantum.intrinsic.message) . İkinci öğesinin belirli davranışı kullanılan simülatöre bağlıdır, ancak genellikle bir program sırasında çağrıldığında ana bilgisayar konsoluna bir ileti yazar Q# .
 
-Q # içindeki dizeler, değişmez değer veya enterpolasyonlu dizelerdir.
+İçindeki dizeler Q# değişmez değerler ya da enterpolasyonlardır.
 
 Dize sabit değerleri çoğu dilde basit dize sabit değerlerine benzer: çift tırnak içine alınmış bir Unicode karakter dizisi `" "` .
 Bir dizenin içinde, `\` çift tırnak karakterini ( `\"` ) kaçış veya New-Line ( `\n` ), bir satır başı ( `\r` ) veya Tab ( `\t` ) eklemek için ters eğik çizgi karakterini kullanın.
-Örneğin:
+Örnek:
 
 ```qsharp
 "\"Hello world!\", she said.\n"
 ```
 ### <a name="interpolated-strings"></a>Ara değerli dizeler
 
-Dize enterpolasyonları için Q # sözdizimi, C# sözdiziminin bir alt kümesidir. Bu, soru-cevap ' a ait olan önemli noktalardır:
+Q#Dize enterpolasyonları için sözdizimi, C# sözdiziminin bir alt kümesidir. Aşağıdakiler ile ilgili önemli noktaları aşağıda verilmiştir Q# :
 
 * Bir dize sabit değerini, enterpolasyonlu bir dize olarak tanımlamak için, `$` simgeyi simgesiyle önüne ekleyin. `$`Ve arasında `"` bir dize sabiti Başlatan boşluk olamaz.
 
-* Aşağıdaki, [`Message`](xref:microsoft.quantum.intrinsic.message) diğer Q # ifadeleriyle birlikte, bir ölçünün sonucunu konsola yazmak için işlevi kullanan temel bir örnektir.
+* Aşağıdaki örnek, [`Message`](xref:microsoft.quantum.intrinsic.message) diğer ifadelerle birlikte, bir ölçünün sonucunu konsola yazmak için fonksiyonunu kullanan temel bir örnektir Q# .
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -135,9 +138,9 @@ Dize enterpolasyonları için Q # sözdizimi, C# sözdiziminin bir alt kümesidi
     Message($"Number: {num}, Result: {res}");
 ```
 
-* Geçerli bir Q # ifadesi, enterpolasyonlu bir dizede görünebilir.
+* Geçerli Q# bir ifade, enterpolasyonlu bir dizede görünebilir.
 
-* Enterpolasyonlu dize içindeki ifadeler, C# söz dizimini değil, Q # söz dizimini izler. En önemli ayrım, Q # ' ın tam (çok satırlı) enterpolasyonlu dizeleri desteklemedir.
+* Bir enterpolasyonlu dize içindeki ifadeler Q# C# söz dizimini değil söz dizimini izler. En önemli ayrım, tam Q# (çok satırlı) enterpolasyonlu dizeleri desteklemedir.
 
 C# sözdizimi hakkında daha fazla bilgi için bkz. [*enterpolasyonlu dizeler*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).
 
@@ -197,7 +200,7 @@ Değişmez değerler dışında, Kullanıcı tanımlı bir türün tek ifadeleri
 
 ## <a name="unwrap-expressions"></a>Ifade kaydırmayı geri al
 
-Q # içinde, Unwrap işleci sondaki bir ünlem işaretidir `!` .
+Q#' De, geri sarım işleci sondaki bir ünlem işaretidir `!` .
 Örneğin, `IntPair` temel alınan türe sahip kullanıcı tanımlı bir türdür `(Int, Int)` ve `s` değeri olan bir değişkense, `IntPair(2, 3)` `s!` olur `(2, 3)` .
 
 Diğer Kullanıcı tanımlı türler bakımından tanımlanan Kullanıcı tanımlı türler için, Unwrap işlecini yineleyebilirsiniz. Örneğin, `s!!` paketlenmiş ve sarmalanmamış değeri gösterir `s` .
@@ -208,7 +211,7 @@ Bu nedenle, `WrappedPair` temel alınan türe sahip kullanıcı tanımlı bir t�
 
 `!`İşlecin önceliği belirgin olmayan bir etkiye sahip olabilir.
 Bir işlev veya işlem sarmalanmamış bir değer döndürürse, bağımsız değişken grubu, sarmalama yerine çağrıya bağlamak için işlev veya işlem çağrısının parantez içine alınması gerekir.
-Örneğin:
+Örnek:
 
 ```qsharp
 let f = (Foo(arg))!;    // Calls Foo(arg), then unwraps the result
@@ -270,7 +273,7 @@ Dizi ifadesi basit bir tanımlayıcı değilse, bir öğeyi seçmek için ayraç
 (a + b)[13]
 ```
 
-Q # içindeki tüm diziler sıfır tabanlıdır.
+İçindeki tüm diziler Q# sıfır tabanlıdır.
 Diğer bir deyişle, bir dizinin ilk öğesi `a` her zaman olur `a[0]` .
 
 
@@ -318,7 +321,7 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a>Kopyalama ve güncelleştirme Ifadeleri
 
-Tüm Q # türleri değer türleri olduğundan (biraz özel bir rol alan qubits ile), bir değer bir simgeye bağlandığında veya bir sembol yeniden bağlandığında bir "kopya" oluşturulur. Yani, Q # davranışı bir kopya atama işleci kullanılarak oluşturulmuş şekilde oluşturulmuştur. 
+Tüm Q# türler değer türleri olduğundan (biraz özel bir rol alan qubits ile), bir değer bir simgeye bağlandığında veya bir sembol yeniden bağlandığında bir "kopya" oluşturulur. Şöyle ki, davranışı Q# atama işleci kullanılarak oluşturulmuş bir kopya ile aynı olur. 
 
 Tabii ki, pratikte yalnızca ilgili parçalar gerektiği şekilde yeniden oluşturulur. Bu, dizi öğelerini güncelleştirmek mümkün olmadığından dizileri kopyalamayı etkiler. Var olan bir diziyi değiştirmek için bir *kopyalama ve güncelleştirme* mekanizmasının kullanılmasını gerekir.
 
@@ -381,7 +384,7 @@ Ancak, işlemler `(Qubit[] => Unit is Adj)` ve `(Qubit[] => Unit is Ctl)` ortak 
 
 Örneğin, `[[Op1], [Op2]]` Şu anda iki uyumsuz dizi türünden oluşan bir dizi oluşturmayı denediğinde bir hata oluşturur `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` .
 
-Callables hakkında daha fazla bilgi için bu sayfadaki [çağrılabilir ifadeler](#callable-expressions) veya [Q # Içindeki işlemler ve işlevler](xref:microsoft.quantum.guide.operationsfunctions)bölümüne bakın.
+Callables hakkında daha fazla bilgi için bu sayfadaki veya [işlemler ve Q# işlevlerde ](xref:microsoft.quantum.guide.operationsfunctions) [çağrılabilir ifadeler](#callable-expressions) bölümüne bakın.
 
 ## <a name="conditional-expressions"></a>Koşullu Ifadeler
 
@@ -446,7 +449,7 @@ Bu nedenle, önceki paragraftan çağırma sonucunu çağırmak için `Builder` 
 ```
 
 Bir [tür parametreli](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) çağrılabilir çağırılırken, çağrılabilir ifadeden sonra, açılı ayraç içinde gerçek tür parametrelerini belirtebilirsiniz `< >` .
-Bu eylem, Q # derleyicisi gerçek türleri olduğu için genellikle gereksizdir.
+Derleyici gerçek türleri olduğu için bu eylem genellikle gereksizdir Q# .
 Ancak, tür parametreli bir bağımsız değişken belirtilmemişse, [kısmi uygulama](xref:microsoft.quantum.guide.operationsfunctions#partial-application) *için gereklidir.*
 Aynı zamanda farklı bir functor ile işlemleri bir çağrılabilir hale geçirilerek de yararlıdır.
 
@@ -469,9 +472,9 @@ Tür belirtimi gereklidir çünkü `Op3` ve `Op1` farklı türlere sahip olur, b
 
 * İşlem ve işlev çağırma parantezleri aynı zamanda herhangi bir işleçten önce, ancak dizi dizinlemesi ve komik bir şekilde bağlanır.
 
-En yüksekten en düşüğe göre, öncelik sırasına göre Q # işleçleri:
+Q#en yüksekten en düşüğe göre öncelik sırasına göre işleçler:
 
-Operatör | Sayısına | Açıklama | İşlenen türleri
+İşleç | Sayısına | Açıklama | İşlenen türleri
 ---------|----------|---------|---------------
  arkasında`!` | Birli | Unwrap | Kullanıcı tanımlı herhangi bir tür
  `-`, `~~~`, `not` | Birli | Sayısal negatif, bit düzeyinde tamamlama, mantıksal değilleme | `Int`, için `BigInt` veya için `Double` `-` `Int` veya `BigInt` `~~~` `Bool` için`not`
@@ -492,4 +495,4 @@ Operatör | Sayısına | Açıklama | İşlenen türleri
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Artık Q # içinde ifadelerle çalışdığınıza göre, işlem ve işlevlerin nasıl tanımlanacağını ve çağrılacağını öğrenmek için [q # Içindeki işlemlere ve işlevlere](xref:microsoft.quantum.guide.operationsfunctions) geçiş yapabilirsiniz.
+Artık içindeki ifadelerle Q# çalışacağınızı, işlemler ve işlevlerin nasıl tanımlanacağını ve çağrılacağını öğrenmek için [içindeki Q# işlemlere ve işlevlerine](xref:microsoft.quantum.guide.operationsfunctions) geçebilirsiniz.

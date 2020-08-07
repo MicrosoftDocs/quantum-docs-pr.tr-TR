@@ -1,36 +1,39 @@
 ---
-title: 'Ek Q # kitaplıklarını kullanma'
-description: 'Hisse uygun Q # kitaplıklarını daha fazla bilgi edinin.'
+title: Ek Q# kitaplıkları kullanma
+description: Hisse ve uygulamalarınıza ek kitaplıklar ekleme hakkında bilgi edinin Q# .
 author: cgranade
 ms.author: chgranad
 ms.date: 06/30/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.using
-ms.openlocfilehash: b82113b925870d07c8a28aecd50176e009826062
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ef88ca765a394a7092eb0a60bf6f3615c082ef6a
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872667"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869588"
 ---
-# <a name="using-additional-q-libraries"></a>Ek Q # kitaplıklarını kullanma
+# <a name="using-additional-no-locq-libraries"></a>Ek Q# kitaplıkları kullanma
 
-Hisse geliştirme seti, Q # projelerinize eklenebilen _NuGet paketleri_ aracılığıyla alana özgü ek işlevler sağlar.
+Hisse geliştirme seti, projelerinize eklenebilen _NuGet paketleri_ aracılığıyla alana özgü ek işlevler sağlar Q# .
 
-| S # kitaplığı  | NuGet paketi | Notlar |
+| Q#Kitaplığı  | NuGet paketi | Notlar |
 |---------|---------|--------|
-| [Q # standart kitaplığı](xref:microsoft.quantum.libraries.standard.intro) | [**Microsoft. hisse. Standart**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | Varsayılan olarak eklendi |
+| [Q#Standart Kitaplık](xref:microsoft.quantum.libraries.standard.intro) | [**Microsoft. hisse. Standart**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | Varsayılan olarak eklendi |
 | [Kuantum kimyası kitaplığı](xref:microsoft.quantum.chemistry.concepts.intro) | [**Microsoft.Quantum.Chemistry**](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) | |
 | [Kuantum sayısal kitaplığı](xref:microsoft.quantum.numerics.intro) | [**Microsoft. hisse. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) | |
 | [Kuantum makine öğrenimi kitaplığı](xref:microsoft.quantum.libraries.machine-learning.intro) | [**Microsoft.Quantum.MachineLearning**](https://www.nuget.org/packages/Microsoft.Quantum.MachineLearning) | |
 
-Bir hisse geliştirme setini tercih ettiğiniz ortam ve ana bilgisayar diliyle kullanılmak üzere yükledikten sonra, başka bir yükleme yapmadan tek tek Q # projelerine kitaplıkları kolayca ekleyebilirsiniz.
+Bir hisse geliştirme setini tercih ettiğiniz ortam ve ana bilgisayar diliyle kullanılmak üzere yükledikten sonra, Q# başka bir yükleme yapmadan kitaplıkları ayrı ayrı projelere kolayca ekleyebilirsiniz.
 
 > [!NOTE]
-> Bazı Q # kitaplıkları, Q # programlarınızda birlikte çalışan veya ana bilgisayar uygulamalarınızla tümleştirilen ek araçlarla iyi çalışabilir.
+> Bazı Q# Kitaplıklar Q# , programlarınızda birlikte çalışan veya ana bilgisayar uygulamalarınızla tümleştirilen ek araçlarla iyi çalışabilir.
 > Örneğin, [Kimya kitaplığı yükleme yönergeleri](xref:microsoft.quantum.chemistry.concepts.installation) , [ **Microsoft. hisse. kimya** paketinin](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) nwchem hesaplama Kimya platformuyla birlikte nasıl kullanılacağını ve `qdk-chem` hisse atıkmistry verileriyle çalışmak için komut satırı araçlarının nasıl yükleneceğini açıklamaktadır.
 
-## <a name="q-command-line-applications-or-net-interopability"></a>[Q # komut satırı uygulamaları veya .NET karşılıklı kullanılabilirliği](#tab/tabid-csproj)
+## <a name="no-locq-command-line-applications-or-net-interopability"></a>[Q#komut satırı uygulamaları veya .NET karşılıklı kullanılabilirliği](#tab/tabid-csproj)
 
 **Komut satırı veya Visual Studio Code:** Komut satırını kendi başına veya Visual Studio Code içinden kullanarak `dotnet` projenize bir NuGet paket başvurusu eklemek için komutunu kullanabilirsiniz.
 Örneğin, [**Microsoft. hisse. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) paketini eklemek için aşağıdaki komutu çalıştırın:
@@ -39,7 +42,7 @@ Bir hisse geliştirme setini tercih ettiğiniz ortam ve ana bilgisayar diliyle k
 dotnet add package Microsoft.Quantum.Numerics
 ```
 
-**Visual Studio:** Visual Studio 2019 veya sonraki bir sürümü kullanıyorsanız, NuGet Paket Yöneticisi 'Ni kullanarak ek Q # paketleri ekleyebilirsiniz.
+**Visual Studio:** Visual Studio 2019 veya sonraki bir sürümü kullanıyorsanız, Q# NuGet Paket Yöneticisi 'ni kullanarak ek paketler ekleyebilirsiniz.
 Bir paket yüklemek için: 
 1. Visual Studio 'da açık bir proje ile, **Proje** menüsünden **NuGet Paketlerini Yönet...** öğesini seçin.
 
@@ -61,17 +64,17 @@ Install-Package Microsoft.Quantum.Numerics
 
 Daha ayrıntılı bilgi için bkz. [Paket Yöneticisi konsol Kılavuzu](https://docs.microsoft.com/nuget/tools/package-manager-console).
 
-## <a name="iq-notebooks"></a>[IQ # Not defterleri](#tab/tabid-notebook)
+## <a name="ino-locq-notebooks"></a>[I Q# Not defterleri](#tab/tabid-notebook)
 
-[ `%package` MAGIC komutunu](xref:microsoft.quantum.iqsharp.magic-ref.package)kullanarak bir IQ # not defterinde kullanılmak üzere ek paketleri kullanılabilir hale getirebilirsiniz.
-Örneğin, bir IQ # not defterinde kullanmak üzere [**Microsoft. hisse. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) paketini eklemek için bir not defteri hücresinde aşağıdaki komutu çalıştırın:
+Q# [ `%package` MAGIC komutunu](xref:microsoft.quantum.iqsharp.magic-ref.package)kullanarak bir ı not defterinde kullanılabilecek ek paketleri kullanılabilir hale getirebilirsiniz.
+Örneğin, bir I not defterinde kullanmak üzere [**Microsoft. hisse. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) paketini eklemek için Q# bir not defteri hücresinde aşağıdaki komutu çalıştırın:
 
 ```
 %package Microsoft.Quantum.Numerics
 ```
 
 Bu komutun ardından, paket Not Defteri içindeki herhangi bir hücre için kullanılabilir.
-Paketi geçerli çalışma alanındaki Q # kodundan kullanılabilir hale getirmek için paketinizi ekledikten sonra çalışma alanını yeniden yükleyin:
+Paketi Q# geçerli çalışma alanındaki koddan kullanılabilir hale getirmek için, paketinizi ekledikten sonra çalışma alanını yeniden yükleyin:
 
 ```
 %workspace reload
@@ -81,15 +84,15 @@ Paketi geçerli çalışma alanındaki Q # kodundan kullanılabilir hale getirme
 
 
 Yöntemini kullanarak, Python ana bilgisayarında kullanılabilecek ek paketleri kullanılabilir hale getirebilirsiniz [`qsharp.packages.add`](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages) .
-Örneğin, IQ # not defterinde kullanmak üzere [**Microsoft. hisse. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) paketini eklemek Için aşağıdaki python kodunu çalıştırın:
+Örneğin, bir I not defterinde kullanmak üzere [**Microsoft. hisse. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) paketini eklemek Için Q# aşağıdaki python kodunu çalıştırın:
 
 ```python
 import qsharp
 qsharp.packages.add("Microsoft.Quantum.Numerics")
 ```
 
-Bu komutun ardından paket kullanılarak derlenen her bir Q # kodu için kullanılabilir hale getirilir `qsharp.compile` .
-Paketi geçerli çalışma alanındaki Q # kodundan kullanılabilir hale getirmek için paketinizi ekledikten sonra çalışma alanını yeniden yükleyin:
+Bu komutun ardından paket kullanılarak derlenen tüm kodlar için kullanılabilir hale getirilir Q# `qsharp.compile` .
+Paketi Q# geçerli çalışma alanındaki koddan kullanılabilir hale getirmek için, paketinizi ekledikten sonra çalışma alanını yeniden yükleyin:
 
 ```python
 qsharp.reload()

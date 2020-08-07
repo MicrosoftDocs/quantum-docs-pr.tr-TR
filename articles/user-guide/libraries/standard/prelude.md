@@ -6,16 +6,19 @@ uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 19674620475e68b41c855023807a5fd1f7945ec9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 283504a5f5635a4996c804e514a6f52eb4966d22
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275664"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868449"
 ---
 # <a name="the-prelude"></a>Prelude dili #
 
-H#development Kit 'e dahil edilen Q # derleyicisi ve hedef makineler, Q # ' da hisse programları yazılırken kullanılabilecek bir dizi iç işlev ve işlem sağlar.
+Q#Hisse geliştirme paketine dahil edilen derleyici ve hedef makineler, ' de hisse programları yazılırken kullanılabilecek bir dizi iç işlev ve işlem sağlar Q# .
 
 ## <a name="intrinsic-operations-and-functions"></a>İç Işlemler ve Işlevler ##
 
@@ -27,11 +30,11 @@ Standart kitaplıkta tanımlanan iç işlemler kabaca birkaç kategoriden birine
 - Ölçümleri uygulayan işlemler.
 
 Clienfford + $T $ Gate kümesi, hisse bilgi işlem için [evrensel](xref:microsoft.quantum.concepts.multiple-qubits) olduğundan, bu işlemler, eksik küçük bir hata içinde yaklaşık bir hisse algoritması uygulamak için yeterli olacaktır.
-Q #, tek qubit Unitary ve CNOT Gate kitaplığı içinde çalışmasına izin verir. Bu kitaplık, programcının Clienfford + $T $ ayrıştırma 'yı doğrudan hızlı bir şekilde ifade ettiğinden ve tek qubit birimlere Clienfford ve $T $ Gates 'e (daha fazla bilgi için bkz. [buraya](xref:microsoft.quantum.more-information) bakın) yönelik yüksek verimli yöntemler içerdiğinden düşünmek çok daha kolay.
+Rosalar da sunarak, Q# Programcının tek qubit Unitary ve CNOT kapısı kitaplığı içinde çalışmasına izin verir. Bu kitaplık, programcının Clienfford + $T $ ayrıştırma 'yı doğrudan hızlı bir şekilde ifade ettiğinden ve tek qubit birimlere Clienfford ve $T $ Gates 'e (daha fazla bilgi için bkz. [buraya](xref:microsoft.quantum.more-information) bakın) yönelik yüksek verimli yöntemler içerdiğinden düşünmek çok daha kolay.
 
 Mümkün olduğu durumlarda, ilgeler üzerinde işlem yapan ve `Controlled` hedef makinenin uygun Ayrıştırma işlemini gerçekleştirmesini sağlayan, bu, ilgeler 'yi uygulamaya izin veren bir işlem.
 
-Prelude 'nun bu bölümünde tanımlanan işlevlerin ve işlemlerin çoğu, @"microsoft.quantum.intrinsic" ad alanı içinde, çoğu Q # kaynak dosyası `open Microsoft.Quantum.Intrinsic;` ilk ad alanı bildiriminden hemen sonra gelen bir yönergeye sahip olacaktır.
+Prelude 'nun bu bölümünde tanımlanan işlevlerin ve işlemlerin birçoğu @"microsoft.quantum.intrinsic" ad alanında, çoğu Q# kaynak dosyanın `open Microsoft.Quantum.Intrinsic;` ilk ad alanı bildiriminden hemen sonra gelen bir yönergesi olacaktır.
 <xref:microsoft.quantum.core>Ad alanı otomatik olarak açılır, böylece gibi işlevler <xref:microsoft.quantum.core.length> hiç bir beyan olmadan kullanılabilir `open` .
 
 ### <a name="common-single-qubit-unitary-operations"></a>Yaygın tek qubit Unitary Işlemleri ###
@@ -96,9 +99,9 @@ Yani, $S ^ 2 = Z $.
 \begin{Equation} \begin{bmatrix} 1 & 0 \\ \\ % fixme: Bu şu anda quadwhack Hack 'ı kullanıyor.
 0 & ı \end{bmatrix} \end{Equation}
 
-#### <a name="rotations"></a>Döndürmelerini ####
+#### <a name="rotations"></a>Rotasyonlar ####
 
-Yukarıdaki Pauli ve Clifford işlemlerine ek olarak, Q # Prelude, döndürmeler ifade etmenin çeşitli yollarını sunmaktadır.
+Yukarıdaki Pauli ve Clifford işlemlerine ek olarak, Q# Prelude, döndürmeler ifade etmenin çeşitli yollarını sağlar.
 [Tek qubit işlemlerinde](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)açıklandığı gibi, döndürme özelliği, hisse algoritması için kritik öneme sahiptir.
 
 $H $ ve $T $ kapıları kullanarak herhangi bir tek qubit işlemi hızlı bir şekilde ifade edebiliyoruz; $H burada \begin{Equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ % fixme: Bu, şu anda dörtlü geri Whack Hack 'ı kullanıyor.
@@ -229,7 +232,7 @@ return rs;
 
 ## <a name="extension-functions-and-operations"></a>Uzantı Işlevleri ve Işlemler ##
 
-Ayrıca, Prelude, Q # kodu içinde kullanılmak üzere .NET düzeyinde zengin bir matematik ve tür dönüştürme işlevleri tanımlar.
+Ayrıca, Prelude, kod içinde kullanılmak üzere .NET düzeyinde zengin bir matematik ve tür dönüştürme işlevleri tanımlar Q# .
 Örneğin, <xref:microsoft.quantum.math> ad alanı ve gibi faydalı işlemleri tanımlar <xref:microsoft.quantum.math.sin> <xref:microsoft.quantum.math.log> .
 Hisse geliştirme seti tarafından sunulan uygulama klasik .NET temel sınıf kitaplığını kullanır ve bu nedenle hisse programları ve bunların klasik sürücüleri arasında ek bir iletişim gidiş gelişmesi içerebilir.
 Bu, yerel simülatör için bir sorun sunmadığından, bir hedef makine olarak uzak simülatör veya gerçek donanım kullanılırken bir performans sorunu olabilir.
@@ -238,7 +241,7 @@ Yani, tek bir hedef makine, bu işlemleri söz konusu sistem için daha verimli 
 ### <a name="math"></a>Matematik ###
 
 <xref:microsoft.quantum.math>Ad alanı, .net temel sınıf kitaplığının [ `System.Math` sınıfından](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)birçok yararlı işlev sağlar.
-Bu işlevler, diğer tüm Q # işlevleriyle aynı şekilde kullanılabilir:
+Bu işlevler, diğer işlevlerle aynı şekilde kullanılabilir Q# :
 
 ```qsharp
 open Microsoft.Quantum.Math;
@@ -246,7 +249,7 @@ open Microsoft.Quantum.Math;
 let y = Sin(theta);
 ```
 
-.NET statik yönteminin bağımsız değişkenlerinin türüne göre aşırı yüklendiği yerlerde, karşılık gelen Q # işlevine, girişinin türünü gösteren bir sonek ile açıklama eklenir:
+.NET statik yönteminin bağımsız değişkenlerinin türüne göre aşırı yüklendiği yerlerde, karşılık gelen Q# işlev, girişinin türünü gösteren bir sonek ile açıklanmıştır:
 
 ```qsharp
 let x = AbsI(-3); // x : Int = 3

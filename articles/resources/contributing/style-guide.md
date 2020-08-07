@@ -1,24 +1,27 @@
 ---
-title: 'Microsoft Q # Stil Kılavuzu'
-description: 'Q # programları ve kitaplıkları için adlandırma, giriş, belge ve biçimlendirme kurallarını öğrenin.'
+title: Microsoft Q# Stil Kılavuzu
+description: Programlar ve kitaplıklar için adlandırma, giriş, belge ve biçimlendirme kurallarını öğrenin Q# .
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 26de7d5f639ea1b4df24232127b6f95cee3a041e
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 27a2ae5ae9d00329fc369268edae24228a9a9d0d
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871391"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867599"
 ---
-# <a name="q-style-guide"></a>S # stil kılavuzu #
+# <a name="no-locq-style-guide"></a>Q#Stil Kılavuzu #
 ## <a name="general-conventions"></a>Genel kurallar ##
 
-Bu kılavuzda önerilen kurallar, Q # dilinde yazılmış program ve kitaplıkların okunmasını ve anlaşılması daha kolay hale getirmeye yardımcı olmak için tasarlanmıştır.
+Bu kılavuzda önerilen kurallar, Q# daha kolay okunmaları ve anlaşılması için program ve kitaplıkların yazıldığı konusunda yardımcı olmaya yöneliktir.
 
-## <a name="guidance"></a>Rehber
+## <a name="guidance"></a>Yönerge
 
 Şunları öneririz:
 
@@ -29,13 +32,13 @@ Bu kılavuzda önerilen kurallar, Q # dilinde yazılmış program ve kitaplıkla
 Hisse geliştirme setini sunan bölümünde, hisse geliştiricilerin kolayca okunabilen ve aniden en aza indirecek programlar yazmasına yardımcı olan işlev ve işlem adları için çaba duyuyoruz.
 Bunun önemli bir bölümü, işlevler, işlemler ve türler için ad seçtiğimiz durumlarda, programcıların expressconcepts için kullandığı *sözlüğü* oluşturacağız; seçimlerimiz sayesinde, bunlara açık bir şekilde iletişim kurma çabalarına yardımcı olur veya bu işlemleri de destekliyoruz.
 Bu, sunduğumuz adların Saklılığı yerine netlik sağlamalarını sağlamak için bize bir sorumluluk koyar.
-Bu bölümde, Q # geliştirme topluluğu tarafından en iyi şekilde buluşmamıza yardımcı olan açık yönergeler açısından bu yükümlülüğünüzü nasıl karşıladığımızdan ayrıntılıyoruz.
+Bu bölümde, geliştirme topluluğu tarafından en iyi şekilde buluşmamıza yardımcı olan açık yönergeler açısından bu yükümlülüğünüzü nasıl karşıladığımızdan ayrıntılıyoruz Q# .
 
 ### <a name="operations-and-functions"></a>İşlemler ve Işlevler ###
 
 Bir adın oluşturulması gereken ilk şeylerden biri, belirli bir sembolün bir işlevi veya işlemi temsil ettiğini belirtir.
 İşlevler ve işlemler arasındaki fark, bir kod bloğunun nasıl davranacağını anlamak açısından önemlidir.
-İşlevler ve işlemler arasındaki ayrımı kullanıcılara iletmek için, yan etkileri kullanılarak bu Q # model hisse işlemlerine güveniyoruz.
+İşlevler ve işlemler arasındaki ayrım ile kullanıcılara iletişim kurmak için, yan etkileri kullanılarak bu Q# modellerle eldeki işlemlere güveniyoruz.
 Diğer bir deyişle, bir işlem bir işlem *yapar* .
 
 Buna karşılık işlevler, veriler arasındaki matematik ilişkilerini tanımlar.
@@ -49,7 +52,7 @@ Bu ayrım, işlemleri fiiller olarak ve işlevler olarak işlev olarak adı vere
 > Bu perspektiften, hem türün kendisi hem de Oluşturucu işlevinin tutarlı adlara sahip olması için Kullanıcı tanımlı türlerin adlarla adlandırılması gerekir.
 
 Makul yerlerde, işlem adlarının işlem tarafından gerçekleştirilen etkiyi açıkça belirten fiiller ile başlayıp başlamadığından emin olun.
-Örneğin:
+Örnek:
 
 - `MeasureInteger`
 - `EstimateEnergy`
@@ -80,7 +83,7 @@ Diğer fiiller, içinde olduğu gibi, bu durumda da yararlı olabilir `IterateTh
 Bu ad, `Controlled` aşağıda açıklandığı gibi yerleşik funın semantiğini eşleştirmesinin ek avantajına sahiptir.
 Benzer şekilde, _Aracı isimleri_ , işlem adlarından Işlev ve udt adlarını oluşturmak için, `Encoder` kesin olarak ilişkili bir udt 'nin adı durumunda olduğu gibi kullanılabilir `Encode` .
 
-# <a name="guidance"></a>[Rehber](#tab/guidance)
+# <a name="guidance"></a>[Yönerge](#tab/guidance)
 
 Şunları öneririz:
 
@@ -97,8 +100,8 @@ Benzer şekilde, _Aracı isimleri_ , işlem adlarından Işlev ve udt adlarını
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | İşlemin etkisini göstermek için bir fiil ("yansıtma") kullanımını temizleyin. |
 | ☒ | <s>`operation XRotation`</s> | İsim ifadesi kullanımı, işlem yerine Function önerisinde bulunur. |
-| ☒ | <s>`operation search_oracle`</s> | `snake_case`Değişken venes Q # gösterimi kullanımı. |
-| ☒ | <s>`operation Search_Oracle`</s> | Alt çizgi kullanımı iç işlem adı nvenes Q # gösterimi. |
+| ☒ | <s>`operation search_oracle`</s> | `snake_case`Değişken Venn Q# gösterimi kullanımı. |
+| ☒ | <s>`operation Search_Oracle`</s> | Alt çizgiler iç işlem adı sınıfları Q# gösterimi kullanımı. |
 | ☑ | `function StatePreparationOracle` | İsim ifadesinin kullanılması işlevin bir işlem döndürdüğünü önerir. |
 | ☑ | `function EqualityFact` | Bu işlevin bir işlev olduğunu göstermek için ("olgu"), sıfatı seçimini temizleyin. |
 | ☒ | <s>`function GetRotationAngles`</s> | Fiil ("Get") kullanılması bunun bir işlem olduğunu önerir. |
@@ -110,14 +113,14 @@ Benzer şekilde, _Aracı isimleri_ , işlem adlarından Işlev ve udt adlarını
 
 ### <a name="entry-points"></a>Giriş Noktaları
 
-Bir Q # programına bir giriş noktası tanımlarken, Q # derleyicisi, giriş noktalarının belirli bir ada sahip olmasını sağlamak yerine [ `@EntryPoint()` özniteliği](xref:microsoft.quantum.core.entrypoint) tanır (ör.: `main` , `Main` , veya `__main__` ).
-Diğer bir deyişle, bir Q # geliştiricisinin perspektifinden giriş noktaları, ile açıklamalı olağan işlemlerdir `@EntryPoint()` .
-Ayrıca, q # giriş noktaları, bir uygulamanın tamamı için giriş noktaları olabilir (yani, Q # tek başına yürütülebilir dosyalarında) veya bir uygulama için bir Q # programı ile ana bilgisayar programı (örneğin, Python veya .NET ile kullanıldığında) arasında bir arabirim olabilir. bu şekilde, bir Q # giriş noktasına uygulandığında "Main" adının yanıltıcı olması gerekir.
+Bir programa giriş noktası tanımlarken Q# , Q# derleyici, giriş noktalarının belirli bir ada sahip olması yerine [ `@EntryPoint()` özniteliği](xref:microsoft.quantum.core.entrypoint) tanır (ör.: `main` , `Main` , veya `__main__` ).
+Diğer bir deyişle, bir Q# geliştiricinin perspektifinden giriş noktaları ile açıklanmış sıradan işlemlerdir `@EntryPoint()` .
+Üstelik, Q# giriş noktaları uygulamanın tamamı için giriş noktaları olabilir (yani, Q# tek başına yürütülebilir dosyalarda) veya bir Q# uygulama için bir program ve ana bilgisayar ( Q# Python veya .NET ile kullanılırken) arasında bir arabirim olabilir. bu şekilde, "Main" adı bir giriş noktasına uygulandığında yanıltıcı olabilir Q# .
 
 `@EntryPoint()`Yukarıda listelenen adlandırma işlemlerine yönelik genel tavsiyeler kullanılarak özniteliğin kullanımını yansıtmak için adlandırma giriş noktaları kullanmayı öneririz.
 
 
-# <a name="guidance"></a>[Rehber](#tab/guidance)
+# <a name="guidance"></a>[Yönerge](#tab/guidance)
 
 Şunları öneririz:
 
@@ -157,7 +160,7 @@ is Adj + Ctl {
 }
 ```
 
-# <a name="guidance"></a>[Rehber](#tab/guidance)
+# <a name="guidance"></a>[Yönerge](#tab/guidance)
 
 Şunları öneririz:
 
@@ -190,14 +193,14 @@ Especially in a field such as quantum computing that is rich with domain experti
 In naming code symbols, one way that this cognizance expresses itself is as an awareness of the convention from physics of adopting as the names of algorithms and operations the names of their original publishers.
 While we must maintain the history and intellectual provenance of concepts in quantum computing, demanding that all users be versed in this history to use even the most basic of functions and operations places a barrier to entry that is in most cases severe enough to even present an ethical compromise. -->
 Bu nedenle, bir kavramı tanımlayan makul, yaygın isimler kavramı, bir kavramın yayın geçmişini tanımlayan doğru isimler için güçlü bir tercih halinde benimsemesi önerilir.
-Belirli bir örnek olarak, listedir kontrollü DEĞIŞTIRME ve buna uygun olmayan işlemler, genellikle akademik belgelerinde "Fredkaş" ve "Toffoli" işlemleri olarak adlandırılır, ancak bu, birincil olarak `CSWAP` ve ile olarak tanımlanmıştır `CCNOT` .
+Belirli bir örnek olarak, listedir denetimli takas ve yerleşik olmayan işlemler genellikle akademik belgelerinde "Fredkabağı" ve "Toffoli" işlemleri olarak adlandırılır, ancak Q# temelde ve olarak tanımlanmıştır `CSWAP` `CCNOT` .
 Her iki durumda da, API belgesi açıklamaları uygun adlara göre eş anlamlı adlar sağlar ve tüm uygun alıntıları birlikte kapsar.
 
-Bu tercih, bazı uygun isimler kullanımının her zaman gerekli olacağı bir şekilde önemlidir. Q #, örneğin birçok klasik dil tarafından ayarlanan gelenek kümesini izler ve daha sonra `Bool` George Boole 'in içinde adı verilen Boolean mantığına başvuru türleri anlamına gelir.
-Benzer şekilde, örneğin, `Pauli` Q # dilinde yerleşik olan türü de dahil olmak üzere, benzer bir şekilde adlandırılmış birkaç hisse kavramdır.
+Bu tercih, bazı uygun isimler kullanımının her zaman gerekli olacağı bir Q# şekilde önemlidir. Örneğin, gelenek için birçok klasik dil tarafından ayarlanan (örneğin,) ve daha sonra `Bool` George Boole 'in içinde adı verilen Boolean mantığına başvuruda bulunan türlere başvurur.
+Benzer şekilde, dilin yerleşik türü de dahil olmak üzere, benzer bir şekilde adlandırılmış birkaç hisse kavram kavramı `Pauli` Q# .
 Bu kullanım açısından gerekli olan doğru isimler kullanımını en aza indirerek, doğru isimleri kabul etmeyeceğinden etkiyi azalttık.
 
-# <a name="guidance"></a>[Rehber](#tab/guidance) 
+# <a name="guidance"></a>[Yönerge](#tab/guidance) 
 
 Şunları öneririz:
 
@@ -209,15 +212,15 @@ Bu kullanım açısından gerekli olan doğru isimler kullanımını en aza indi
 
 ### <a name="type-conversions"></a>Tür Dönüştürmeleri ###
 
-Q #, kesin ve statik olarak yazılmış bir dil olduğundan, bir tür değeri yalnızca bir tür dönüştürme işlevine açık bir çağrı kullanılarak başka bir türün değeri olarak kullanılabilir.
+Q#Kesin ve statik olarak yazılmış bir dil olduğundan, bir tür değeri yalnızca bir tür dönüştürme işlevine açık bir çağrı kullanılarak başka bir türün değeri olarak kullanılabilir.
 Bu, değerlerin örtük olarak (ör. tür promosyonu) veya atama yoluyla türlerin değiştirilmesini sağlayan dillere karşılık gelir.
-Sonuç olarak, tür dönüştürme işlevleri Q # kitaplığı geliştirme bölümünde önemli bir rol oynar ve adlandırma hakkında yaygın olarak karşılaşılan kararlardan birini içerir.
+Sonuç olarak, tür dönüştürme işlevleri kitaplık geliştirmede önemli bir rol oynar Q# ve adlandırma hakkında yaygın olarak karşılaşılan kararlardan birini içerir.
 Ancak, tür dönüştürmeleri her zaman _belirleyici_olduğundan, bunlar işlev olarak yazılabilecekleri ve bu nedenle yukarıdaki önerinin altına düşecek.
 Özellikle, tür dönüştürme işlevlerinin hiçbir şekilde fiiller (ör.: `ConvertToX` ) veya duyurusu b önceden konumsal tümceleri () olarak adlandırılmaması önerilir `ToX` , ancak kaynak ve hedef türlerini belirten sıfatıcı önceden konumsal ifadeler olarak adlandırılmalıdır ( `XAsY` ).
 Tür dönüştürme işlevi adlarında dizi türleri listelenirken, Stenk önerilir `Arr` .
 Tüm tür dönüştürme işlevlerinin, `As` hızlı bir şekilde tanımlanabilmesi için kullanılarak adlandırılması önerilir.
 
-# <a name="guidance"></a>[Rehber](#tab/guidance)
+# <a name="guidance"></a>[Yönerge](#tab/guidance)
 
 Şunları öneririz:
 
@@ -240,11 +243,11 @@ Tüm tür dönüştürme işlevlerinin, `As` hızlı bir şekilde tanımlanabilm
 Yalnızca iç kodda yanlışlıkla bağımlılıklara açık hale getirilmeleri için işlevleri ve işlemleri adlandırırken bu durumun büyük bir zaman olduğunu açıkça belirtmek faydalı olur.
 Bir işlem veya işlev doğrudan kullanıma yönelik değildir, ancak bunun yerine kısmi uygulama tarafından davranan, eşleşen bir çağrılabilir tarafından kullanılması gerekiyorsa, `internal` kısmen uygulanan çağrılabilir anahtar sözcüğüyle başlayan bir ad kullanmayı düşünün.
 
-# <a name="guidance"></a>[Rehber](#tab/guidance)
+# <a name="guidance"></a>[Yönerge](#tab/guidance)
 
 Şunları öneririz:
 
-- Bir işlev, işlem veya Kullanıcı tanımlı tür bir Q # kitaplığı veya programı için ortak API 'nin bir parçası olmadığında, `internal` anahtar sözcüğünü `function` , `operation` veya bildiriminden önce yerleştirerek iç olarak işaretlendiğinden emin olun `newtype` .
+- Bir işlev, işlem veya Kullanıcı tanımlı tür bir kitaplık veya program için ortak API 'nin bir parçası olmadığında, Q# `internal` anahtar sözcüğünü `function` , `operation` veya bildiriminden önce yerleştirerek iç olarak işaretlendiğinden emin olun `newtype` .
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
@@ -256,7 +259,7 @@ Bir işlem veya işlev doğrudan kullanıma yönelik değildir, ancak bunun yeri
 ***
 ### <a name="variants"></a>Değişkenler ###
 
-Bu sınırlama gelecekteki bir soru-cevap sürümünde kalmayabilir, ancak bu durum genellikle, kendilerine ait oldukları veya bağımsız değişkenlerinin somut türleri tarafından kendilerine ait olan ilgili işlem veya işlev grupları olacaktır.
+Bu sınırlama gelecekteki sürümlerinde kalmayabilir, ancak bu durum genellikle, kendilerine ait oldukları ve onların Q# bağımsız değişkenlerinin somut türleri tarafından kendilerine ait olan ilgili işlem veya işlev grupları olacaktır.
 Bu gruplar, kendisini belirten bir veya iki harften sonra aynı kök adı kullanılarak ayırt edilebilir.
 
 | Önekini | Anlamı |
@@ -268,7 +271,7 @@ Bu gruplar, kendisini belirten bir veya iki harften sonra aynı kök adı kullan
 | `D` | Giriş veya girişler tür`Double` |
 | `L` | Giriş veya girişler tür`BigInt` |
 
-# <a name="guidance"></a>[Rehber](#tab/guidance)
+# <a name="guidance"></a>[Yönerge](#tab/guidance)
 
 Şunları öneririz:
 
@@ -281,11 +284,11 @@ Bu gruplar, kendisini belirten bir veya iki harften sonra aynı kök adı kullan
 
 ### <a name="arguments-and-variables"></a>Bağımsız değişkenler ve değişkenler ###
 
-Bir işlev veya işlem için Q # kodunun anahtar hedefi kolayca okunabilme ve anlaşılmalıdır.
+Q#Bir işlev veya işlem için kodun önemli hedefi kolayca okunabilme ve anlaşılmalıdır.
 Benzer şekilde, giriş ve tür bağımsız değişkenlerinin adları, bir işlev veya bağımsız değişkenin sağlandığı bir şekilde nasıl kullanılacağını iletmelidir.
 
 
-# <a name="guidance"></a>[Rehber](#tab/guidance)
+# <a name="guidance"></a>[Yönerge](#tab/guidance)
 
 Şunları öneririz:
 
@@ -309,7 +312,7 @@ Benzer şekilde, giriş ve tür bağımsız değişkenlerinin adları, bir işle
 Kullanıcı tanımlı türlerdeki adlandırılmış öğeler `CamelCase` , udt oluşturucularının girişinde bile olarak adlandırılmalıdır.
 Bu, erişimci gösterimini (ör.: `callable::Apply` ) veya kopyalama ve güncelleştirme gösterimini () kullanırken, adlandırılmış öğeleri yerel kapsamlı değişkenlere göre açıkça ayırmak için yardımcı olur `set arr w/= Data <- newData` .
 
-# <a name="guidance"></a>[Rehber](#tab/guidance)
+# <a name="guidance"></a>[Yönerge](#tab/guidance)
 
 Şunları öneririz:
 
@@ -320,7 +323,7 @@ Bu, erişimci gösterimini (ör.: `callable::Apply` ) veya kopyalama ve güncell
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-|   | Kod Parçacığı | Description |
+|   | Kod Parçacığı | Açıklama |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | Ad, `Apply` `CamelCase` adlandırılmış öğenin bir işlem olmasını öneren, biçimli bir fiil tümceciktir. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Adlandırılmış öğeler ilk büyük harfle başlamalıdır. |
@@ -366,7 +369,7 @@ Bazı işlevler ve işlemler beklenmedik bir şekilde en aza indirildiği için,
 Örneğin, `ControlledOnInt<'T>` `(Int, ('T => Unit is Adj + Ctl)) => ((Qubit[], 'T) => Unit is Adj + Ctl)` `ControlledOnInt<Qubit[]>(5, _)` functor gibi davranan, `Controlled` ancak denetim kaydının $ \ket {5} = \ket $ durumunu temsil ettiği koşulda, türü vardır {101} .
 Bu nedenle, bir geliştirici, `ControlledOnInt` çağrılabilir 'in, en son dönüştürülmüş değerini yerleştirmesini ve sonuçta elde edilen işlemin giriş---, diğer bir deyişle, `(Qubit[], 'T)` functor çıkışı tarafından aynı sırada sürdüğünü bekler `Controlled` .
 
-# <a name="guidance"></a>[Rehber](#tab/guidance)
+# <a name="guidance"></a>[Yönerge](#tab/guidance)
 
 Şunları öneririz:
 
@@ -380,10 +383,10 @@ Bu nedenle, bir geliştirici, `ControlledOnInt` çağrılabilir 'in, en son dön
 
 ## <a name="documentation-conventions"></a>Belge kuralları ##
 
-Q # dili, özel olarak biçimlendirilmiş belge açıklamalarını kullanarak işlemlere, işlevlere ve Kullanıcı tanımlı türlere belge iliştirmeye olanak tanır.
+Q#Dil, özel olarak biçimlendirilmiş belge açıklamalarını kullanarak işlemler, işlevler ve Kullanıcı tanımlı türlere belge iliştirmeye olanak tanır.
 Üçlü eğik çizgi () tarafından belirtilen `///` Bu belge Yorumları, her bir işlemin, işlevin ve Kullanıcı tanımlı türün amacını açıklamak için kullanılabilen küçük [docfx-flavored](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) , her beklediği girişi, vb..
 Hisse geliştirme seti ile sağlanan derleyici, bu açıklamaları ayıklar ve bu yorumları, ' deki şuna benzer şekilde karakterlik alan kaplamaları belgelerine yardımcı olmak için kullanır https://docs.microsoft.com/quantum .
-Benzer şekilde, hisse geliştirme kiti ile birlikte sağlanan dil sunucusu, kullanıcılar için Q # kodundaki sembolleri üzerine getirdiğinde yardım sağlamak üzere bu açıklamaları kullanır.
+Benzer şekilde, hisse geliştirme kiti ile sağlanan dil sunucusu, kullanıcıların kodlarında sembolleri üzerine geldiğinde kullanıcılara yardım sağlamak için bu açıklamaları kullanır Q# .
 Belge açıklamalarının kullanımı, bu belgedeki diğer kurallara göre kolayca ifade olmayan Ayrıntılar için yararlı bir başvuru sunarak kullanıcıların kod anlamlı olmasına yardımcı olabilir.
 
 > [!div class="nextstepaction"]
@@ -391,7 +394,7 @@ Belge açıklamalarının kullanımı, bu belgedeki diğer kurallara göre kolay
 
 Kullanıcılara yardımcı olmak üzere bu işlevselliği etkili bir şekilde kullanabilmek için, belge açıklamalarını yazarken göz önünde bulundurmanız önerilir.
 
-# <a name="guidance"></a>[Rehber](#tab/guidance)
+# <a name="guidance"></a>[Yönerge](#tab/guidance)
 
 Şunları öneririz:
 
@@ -454,10 +457,10 @@ is Adj + Ctl {
 
 Önceki önerilere ek olarak, tutarlı biçimlendirme kuralları kullanmak için kodun mümkün olduğunca okunabilir olmasını sağlamaya yardımcı olmak yararlı olur.
 Doğası gereği bu tür biçimlendirme kuralları, kişisel aesmerkler için biraz rastgele ve kesin bir şekilde çalışır.
-Nonetheless, bir ortak grup içinde tutarlı bir biçimlendirme kuralları kümesi ve özellikle de hisse geliştirme seti gibi büyük Q # projeleri için bakım yapmanızı öneririz.
-Bu kurallar, Q # derleyicisi ile tümleştirilmiş biçimlendirme Aracı kullanılarak otomatik olarak uygulanabilir.
+Nonetheless, bir ortak grup içinde tutarlı bir biçimlendirme kuralları kümesi ve özellikle de Q# hisse geliştirme setinin kendisi gibi büyük projeler için bakım yapmanızı öneririz.
+Bu kurallar, derleyici ile tümleşik biçimlendirme Aracı kullanılarak otomatik olarak uygulanabilir Q# .
 
-# <a name="guidance"></a>[Rehber](#tab/guidance) 
+# <a name="guidance"></a>[Yönerge](#tab/guidance) 
 
 Şunları öneririz:
 
@@ -476,7 +479,7 @@ Bu kurallar, Q # derleyicisi ile tümleştirilmiş biçimlendirme Aracı kullan�
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-|   | Kod Parçacığı | Description |
+|   | Kod Parçacığı | Açıklama |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | İkili işleçler etrafında boşluklar kullanın. |
 | ☒ | <s>`target:Qubit`</s> | Tür ek açıklaması etrafında boşluklar kullanın. |

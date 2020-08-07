@@ -6,12 +6,15 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/17/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.design
-ms.openlocfilehash: b304b9d1a15f164f4dfe758aaed31b7b2369b18c
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 60e694e9f7c2f01a6679ef960f5a7774c8bd6a62
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276041"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868958"
 ---
 # <a name="design-your-own-classifier"></a>Kendi sınıflandırıcınızı tasarlama
 
@@ -47,6 +50,8 @@ Sınıflandırıcının bir örneğini görelim. [Yarım Moons örneğinde](http
 Burada tanımladığımız özellikler, bir dizi parametre ile birlikte bir dizi öğe döndüren bir işlev `ControlledRotation` ve bir sapma de tanımlayacağız [`SequentialModel`](xref:microsoft.quantum.machinelearning.sequentialmodel) . Bu tür, hisse Machine Learning kitaplığı 'nda temel ve sınıflandırıcının tanımlanandır. Yukarıdaki işlevde tanımlanan devre, veri kümesinin her bir örneğinin iki özellik içerdiği bir sınıflandırıcının parçasıdır. Bu nedenle, yalnızca iki qubit gerekir. Devresinin grafik gösterimi:
 
  ![Devre modeli örneği](~/media/circuit_model_1.PNG)
+
+Varsayılan olarak, hisse senedi Machine Learning kitaplığı işlemlerinin, sınıflandırma olasılıkların tahmin edilmesi için kaydın son qubit ' i ölçüsünde olduğunu unutmayın. Devrenizi tasarlarken bu olguyu göz önünde bulundurmanız gerekir.
 
 ## <a name="use-the-library-functions-to-write-layers-of-gates"></a>Kapı katmanlarını yazmak için kitaplık işlevlerini kullanma
 

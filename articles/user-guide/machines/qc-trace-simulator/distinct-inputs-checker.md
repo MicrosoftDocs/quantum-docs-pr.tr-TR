@@ -1,17 +1,20 @@
 ---
 title: Ayrı girişler denetleyicisi-hisse geliştirme seti
-description: 'Paylaşılan qubits ile olası çakışmalar için Q # kodunuzu denetlemek üzere hisse izleme simülatörünü kullanan Microsoft QDK farklı giriş denetleyicisi hakkında bilgi edinin.'
+description: Q#Paylaşılan qubits ile olası çakışmalar için kodunuzu denetlemek üzere hisse izi simülatörünü kullanan Microsoft QDK farklı giriş denetleyicisi hakkında bilgi edinin.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 49a1ccc5f37acfeaa1ee08bd974be45a40a76f93
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 750c94e7f861678d37f051619ff5b29bf4fd3d3e
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871153"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868279"
 ---
 # <a name="quantum-trace-simulator-distinct-inputs-checker"></a>Hisse izleme simülatörü: ayrı girişler denetleyicisi
 
@@ -19,7 +22,7 @@ Ayrı giriş denetleyicisi, hisse Geliştirme Seti [hisse izleme simülatörü](
 
 ## <a name="conflicts-with-shared-qubits"></a>Paylaşılan qubits ile çakışmalar
 
-Ayrı giriş denetleyicisi tarafından algılanan sorunları göstermek için aşağıdaki Q # kodu parçasını göz önünde bulundurun:
+Q#Ayrı giriş denetleyicisi tarafından algılanan sorunları göstermek için aşağıdaki kod parçasını göz önünde bulundurun:
 
 ```qsharp
 operation ApplyBoth(
@@ -47,7 +50,7 @@ operation ApplyWithNonDistinctInputs() : Unit {
 }
 ```
 
-`op1`Ve `op2` öğelerinin her ikisi de kısmi uygulama kullanılarak elde edilir ve bir qubit paylaşır. `ApplyBoth`Bu örnekte çağırdığınızda, işlemin sonucu, `op1` `op2` `ApplyBoth` oluşmasını beklediğiniz şekilde değil, bu sıraya bağlıdır. Ayrı giriş denetleyicisini etkinleştirdiğinizde bu durum söz konusu durumları algılar ve bir oluşturur `DistinctInputsCheckerException` . Daha fazla bilgi için, bkz <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> . Q # API kitaplığı.
+`op1`Ve `op2` öğelerinin her ikisi de kısmi uygulama kullanılarak elde edilir ve bir qubit paylaşır. `ApplyBoth`Bu örnekte çağırdığınızda, işlemin sonucu, `op1` `op2` `ApplyBoth` oluşmasını beklediğiniz şekilde değil, bu sıraya bağlıdır. Ayrı giriş denetleyicisini etkinleştirdiğinizde bu durum söz konusu durumları algılar ve bir oluşturur `DistinctInputsCheckerException` . Daha fazla bilgi için bkz <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> Q# . API kitaplığı 'nda.
 
 ## <a name="invoking-the-distinct-inputs-checker"></a>Ayrı giriş denetleyicisini çağırma
 

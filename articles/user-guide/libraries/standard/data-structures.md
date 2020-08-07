@@ -1,17 +1,20 @@
 ---
-title: 'Q # standart kitaplıklarında veri yapıları'
-description: 'Microsoft Q # standart kitaplıklarında veri yapıları, Oracles ve dinamik oluşturucuları hakkında bilgi edinin.'
+title: Standart kitaplıklardaki veri yapıları Q#
+description: Microsoft standart kitaplıklarında veri yapıları, Oracles ve dinamik oluşturucuları hakkında bilgi edinin Q# .
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 46ac6794d1e21e111aa1d98e11a6f83194f8d54e
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275728"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868534"
 ---
 # <a name="data-structures-and-modeling"></a>Veri yapıları ve modelleme #
 
@@ -34,7 +37,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ### <a name="arrays"></a>Diziler ###
 
 Canon, dizileri işlemek için çeşitli işlevler sağlar.
-Bu işlevler tür parametreli parametreleridir ve bu nedenle herhangi bir Q # türündeki dizilerle birlikte kullanılabilir.
+Bu işlevler tür parametreli parametreleridir ve bu nedenle herhangi bir türdeki dizilerle birlikte kullanılabilir Q# .
 Örneğin, işlevi, <xref:microsoft.quantum.arrays.reversed> öğeleri girişinden ters sırada olan yeni bir dizi döndürür.
 Bu işlem, işlemler çağrılırken bir hisse kayıt 'nın nasıl temsil edileceğini değiştirmek için kullanılabilir:
 
@@ -72,7 +75,7 @@ ApplyToEach(
 Burada Oracle terimi, bir qubits kümesi üzerinde davranan ve yanıtı bir aşama olarak döndüren bir kara kutu hisse alt yordamını ifade eder.
 Bu alt yordam, genellikle Oracle 'ı kabul eden bir hisse algoritması girişi olarak düşünülebilir, diğer parametrelere ek olarak bir dizi hisse ve bir dizi işlem uygular ve bu hisse için bir çağrı, temel bir geçit gibi bir çağrı sağlar.
 Kuşkusuz, büyük algoritmayı gerçekten uygulamak için, Oracle 'ın, temel kapıların somut bir şekilde ayrıştırma sağlanması gerekir, ancak Oracle 'ı çağıran algoritmayı anlamak için bu ayrıştırma gerekmez.
-Q # içinde, bu soyutlama, işlemler ilk sınıf değerlerdir ve bu da işlemler, bir siyah kutu halinde hisse algoritmaları uygulamalarına geçirilebilirler.
+' De Q# , bu soyutlama, bu işlemler ilk sınıf değerlerdir, örneğin, işlemler bir siyah kutu ile hisse algoritması uygulamalarına geçirilebilirler.
 Ayrıca, Kullanıcı tanımlı türler, farklı Oracle temsillerini tür açısından güvenli bir şekilde etiketlemek için kullanılır. bu sayede, farklı siyah kutu işlemlerini yanlışlıkla daha kolay hale getirmeyi zorlaştırır.
 
 Bu tür Oracles, [Grover 'in arama](https://en.wikipedia.org/wiki/Grover%27s_algorithm) ve hisse simülasyonu algoritmaları gibi çok sayıda örnek de dahil olmak üzere çeşitli bağlamlarda görünür.
@@ -189,7 +192,7 @@ Bu tür hisse dinamikleri tanımlayan Unitary, evlenme süresi $t $ ve bilinmeye
 Bu bağlamda, tek bir $R _z $ kapısı kullanarak herhangi bir $t $ için $U (t) $ benzetimi yapabiliriz ve bu nedenle kendimize yalnızca Unitary ile ayrı sorgularla sınırlandırması gerekmez.
 Benzer bir şekilde, bu tür bir sürekli model, diğer bir deyişle, Logaritmik sorgular kullanan aşama tahmin işlemlerinden, diğer bir deyişle $t $ ' nin yorumsuz değerler üzerinde gerçekleştirilen denemeleri sonuçlarından ortaya çıkacak olan bir özellik elde edebilir.
 Bu nedenle, bu sürekli sorgu modelleri gibi sorunlar için Oracle yalnızca uygun değildir ancak ayrık sorgu modeli için de tercih edilir.
-Bu nedenle, Q # her iki sorgu formu için işlevlere sahiptir ve bir aşama tahmin algoritmasıyla ilgili olarak gereksinimlerine ve mevcut Oracle türüne göre karar vermek için bunu kullanıcıya bırakır.
+Bu nedenle, Q# her iki sorgu formu için de işlevselliğe sahiptir ve ihtiyaçlarını karşılamak için bir aşama tahmin algoritması ve kullanılabilir Oracle türü hakkında karar vermek için kullanıcıya bırakın.
 
 ## <a name="dynamical-generator-modeling"></a>Dynamical Oluşturucu modelleme ##
 

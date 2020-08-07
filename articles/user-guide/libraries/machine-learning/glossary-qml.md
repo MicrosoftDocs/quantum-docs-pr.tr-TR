@@ -5,12 +5,15 @@ ms.author: alexei.bocharov@microsoft.com
 ms.date: 2/27/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.training
-ms.openlocfilehash: f9b33a607a892179795d0700ba3080f9a24ab94a
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 52c3f69fb99384270a27e57c4f32212d18bee1a4
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276206"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868908"
 ---
 # <a name="quantum-machine-learning-glossary"></a>Hisse Machine Learning sözlüğü
 
@@ -48,7 +51,7 @@ Thumb kuralı olarak, ilk ölçüm sayısı yaklaşık $1/\ mbox {toleransı} ^ 
 
 ### <a name="training-threads"></a>Eğitim iş parçacıkları
 
-Sınıflandırıcı için eğitim yardımcı programı olan olasılık işlevi, genellikle kalite gereği önemli ölçüde farklı olabilecek parametre alanında çok sayıda yerel optimize eden bir convex. SGD işlemi yalnızca tek bir en uygun değere yakınlaşdığından, birden çok başlangıç parametresi vektörünü incelemek önemlidir. Machine Learning 'de yaygın olarak kullanılan uygulama, başlangıç vektörlerini rastgele başlatmaktır. Q # eğitim API 'SI, bu tür başlangıç vektörlerine yönelik rastgele bir dizi kabul eder ancak temeldeki kod bunları sırayla araştırır. Çoklu bir bilgisayarda veya herhangi bir paralel bilgi işlem mimarisi üzerinde, çağrılar genelinde farklı parametre başlatmaları ile paralel olarak Q # eğitim API 'sine birkaç çağrı gerçekleştirmeniz önerilir.
+Sınıflandırıcı için eğitim yardımcı programı olan olasılık işlevi, genellikle kalite gereği önemli ölçüde farklı olabilecek parametre alanında çok sayıda yerel optimize eden bir convex. SGD işlemi yalnızca tek bir en uygun değere yakınlaşdığından, birden çok başlangıç parametresi vektörünü incelemek önemlidir. Machine Learning 'de yaygın olarak kullanılan uygulama, başlangıç vektörlerini rastgele başlatmaktır. Q#Eğitim API 'si, bu tür başlangıç vektörlerine yönelik rastgele bir dizi kabul eder ancak temeldeki kod bunları sırayla araştırır. Bir çok veya daha fazla paralel bilgi işlem mimarisi üzerinde Q# , çağrılar genelinde farklı parametre başlatmaları ile paralel olarak EĞITIM API 'sine birkaç çağrı gerçekleştirmeniz önerilir.
 
 #### <a name="how-to-modify-the-hyperparameters"></a>Hiper parametreleri değiştirme
 

@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: edc52dc4434e91258bece28812fd76b66329c6f9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 956b0957a5261b8a77bf18d776fbcc2853bfbfe7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275487"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866919"
 ---
 # <a name="contributing-code"></a>Koda Katkıda Bulunma
 
@@ -28,10 +31,10 @@ Bu nedenle, bir katkı tarafından eklenen işlevlerin iyi test edildiğini ve b
 
 ### <a name="unit-tests"></a>Birim testleri
 
-Canon gibi kitaplıkları oluşturan Q # işlevleri, işlemler ve Kullanıcı tanımlı türler, [**Microsoft/Histumlibraries**](https://github.com/Microsoft/QuantumLibraries/) deposunda geliştirmenin bir parçası olarak otomatik olarak test edilir.
+Q#Canon gibi kitaplıkları oluşturan işlevler, işlemler ve Kullanıcı tanımlı türler, [**Microsoft/Histumlibraries**](https://github.com/Microsoft/QuantumLibraries/) deposunda geliştirmenin bir parçası olarak otomatik olarak test edilir.
 Örneğin, yeni bir çekme isteği açıldığında, [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) yapılandırmanızla, çekme isteğindeki değişikliklerin, hisse programlama topluluğunun bağlı olduğu mevcut işlevleri bozmadığını kontrol eder.
 
-En son Q # sürümü ile birim testi özniteliği kullanılarak tanımlanır `@Test("QuantumSimulator")` . Bağımsız değişken, "Histumsimülatör", "Toffzeytin", "Tracesimülatör" veya yürütme hedefini belirten tam nitelikli bir ad olabilir. Farklı yürütme hedeflerini tanımlayan birkaç öznitelik aynı çağrılabilir öğesine iliştirilebilir. Bazı testlerimizde, xUnit çerçevesine biten tüm Q # işlevlerini ve işlemlerini kullanıma sunan kullanım dışı [Microsoft. hisse. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) paketini kullanmaya devam edersiniz `Test` . [xUnit](https://xunit.github.io/) Bu paket artık birim testlerini tanımlamak için gerekli değildir. 
+En son Q# sürümde, birim testi özniteliği kullanılarak tanımlanır `@Test("QuantumSimulator")` . Bağımsız değişken, "Histumsimülatör", "Toffzeytin", "Tracesimülatör" veya yürütme hedefini belirten tam nitelikli bir ad olabilir. Farklı yürütme hedeflerini tanımlayan birkaç öznitelik aynı çağrılabilir öğesine iliştirilebilir. Bazı testlerimizde, xUnit çerçevesine biten tüm işlevleri ve işlemleri sunan kullanım dışı [Microsoft. hisse. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) paketini kullanmaya devam edersiniz Q# `Test` . [xUnit](https://xunit.github.io/) Bu paket artık birim testlerini tanımlamak için gerekli değildir. 
 
 Aşağıdaki işlev, <xref:microsoft.quantum.canon.fst> ve <xref:microsoft.quantum.canon.snd> işlevlerinin her ikisinin de bir temsilci örneğinde doğru çıkışları döndürmesini sağlamak için kullanılır.
 `Fst`Veya çıkışı `Snd` yanlışsa, `fail` test başarısız olmasına neden olması için ifade kullanılır.
@@ -92,7 +95,7 @@ Her şeyi yapmak zor olabilir. bu nedenle, bir yol haritası olarak hangi özell
 Bu, bir özelliğin üçüncü taraf bir kitaplık olarak bırakılması çok daha anlamlı hale geçirebileceği bir durum olabilir.
 Alternatif olarak, bununla ilgili en iyi işi yapabilmemiz için bir özelliği, yol etiketimize daha iyi uyum sağlayacak şekilde değiştirme konusunda yardım almak için sorun yaşayabilirsiniz.
 
-Ayrıca, bunu kullanmamıza yardımcı olmak üzere daha fazla belge veya birim testi gerektiriyorsa veya bir çekme isteğinde, kullanıcıların özelliğinizi bulmasını zortacağından, daha fazla bilgi almak için bir çekme isteğinde de değişiklik yapmanızı isteyeceğiz.
+Ayrıca, bunu kullanmamıza yardımcı olması için daha fazla belge veya birim testi gerektiriyorsa veya Q# kullanıcıların özelliğinizi bulmasını zortacağından, kitaplıkların geri kalanından yeterince farklıysa bir çekme isteğinde değişiklik yapmanızı isteyeceğiz.
 Bu durumlarda, katkılarınızın dahil etmemizi kolaylaştırmak için nelerin eklenebileceği veya değiştirilebilecek hakkında kod incelemelerinde bazı tavsiyeler sunmaya çalışacaktır.
 
 Son olarak, [Microsoft açık kaynak kullanım kuralları](https://opensource.microsoft.com/codeofconduct/)' nda açıklandığı gibi hisse bilgi işlem Topluluğu ' na zarar veren katkılarını kabul edemedik.
@@ -102,10 +105,10 @@ Bu hedefi gerçekleştirme konusunda yardımımız olduğunu biliyoruz.
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Hisse geliştirme setini tüm hisse programlama topluluğu için harika bir kaynak haline getirmek için teşekkürler!
-Daha fazla bilgi edinmek için lütfen Q # stilinde aşağıdaki kılavuzla devam edin.
+Daha fazla bilgi edinmek için lütfen stil sayfasında aşağıdaki kılavuzla devam edin Q# .
 
 > [!div class="nextstepaction"]
-> [Q # stil yönergeleri hakkında bilgi edinin](xref:microsoft.quantum.contributing.style)
+> [Stil yönergeleri hakkında bilgi edinin Q#](xref:microsoft.quantum.contributing.style)
 
 Katkıda bulunduğunuz kod türüne bağlı olarak, katkılarınızı mümkün olduğunca çok iyi hale getirmenize yardımcı olabilecek başka şeyler de olabilir.
 

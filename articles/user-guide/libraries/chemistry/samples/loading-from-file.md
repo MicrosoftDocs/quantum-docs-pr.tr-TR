@@ -6,12 +6,15 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian
-ms.openlocfilehash: 715dbcefc10ecc5af45f2bdd228890f1cb28886b
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 57e25bf55009797b01695cef0f3d29b94662ccc0
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275247"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869248"
 ---
 # <a name="loading-a-hamiltonian-from-file"></a>Dosyadan Hamiltonian yükleme
 Daha önce, kendisine ayrı koşullar ekleyerek Hamiltonians oluşturduk. Bu küçük örnekler için çok iyi olsa da, ölçek at ölçeğinde hisse Hamiltonians, milyonlarca veya milyarlarca şart gerektirir. Nwchem gibi kimya paketleri tarafından oluşturulan Hamiltonians, el ile içeri aktarmak için çok büyük. Bu örnekte, bir `FermionHamiltonian` Örneğin, [Brombridge şeması](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)tarafından temsil edilen bir moleule tarafından otomatik olarak nasıl üretilebileceğinizi gösteririz. Başvuru için, bir tane, belirtilen `LithiumHydrideGUI` örneği veya `RunSimulation` örneği inceleyebilir. Sınırlı destek, [LIQUi |>](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/)tarafından tüketilen biçimden içeri aktarılmak için de kullanılabilir.
@@ -40,7 +43,7 @@ var fermionHamiltonian = orbitalIntegralHamiltonian.ToFermionHamiltonian(IndexCo
 var jordanWignerEncoding = fermionHamiltonian.ToPauliHamiltonian(Pauli.QubitEncoding.JordanWigner);
 ```
 
-Broombridge şeması, hazırlanan ilk durumun önerilerini de içerir. `"|G⟩"` `"|E1⟩"` Bu durumlar için, veya gibi Etiketler dosyayı inceleyerek görünebilir. Bu ilk durumları hazırlamak için, `qSharpData` Q # hisse algoritmaları tarafından tüketilen, [önceki bölüme](xref:microsoft.quantum.chemistry.examples.energyestimate)benzer şekilde alınır, ancak istenen ilk durumu seçerek ek bir parametreye sahip olur. Örneğin,
+Broombridge şeması, hazırlanan ilk durumun önerilerini de içerir. `"|G⟩"` `"|E1⟩"` Bu durumlar için, veya gibi Etiketler dosyayı inceleyerek görünebilir. Bu ilk durumları hazırlamak için, `qSharpData` Q# hisse algoritmaları tarafından tüketilen bir [önceki bölüme](xref:microsoft.quantum.chemistry.examples.energyestimate)benzer şekilde, ancak istenen ilk durumu seçerek ek bir parametreyle elde edilir. Örneğin,
 ```csharp
 // The desired initial state, assuming that a description of it is present in the
 // Broombridge schema.

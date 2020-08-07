@@ -1,70 +1,73 @@
 ---
-title: "Q 'de qubit düzeyi programları yazma ve benzetimini yapma #"
+title: İçindeki qubit düzeyi programları yazın ve benzetimini yapınQ#
 description: Bireysel qubit düzeyinde çalışan bir hisse programını yazma ve benzetimi yapma hakkında adım adım öğretici
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
-ms.openlocfilehash: e7ebdec4cd1aa201030d82759a3aa56473b26417
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 22c79e4e01db1a0d0c291d0dcff81dbfa8df5cd3
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275344"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869724"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Öğretici: Q 'da qubit düzeyi programları yazma ve benzetimini yapma\#
 
 Her bir qubit üzerinde çalışan temel bir hisse dili programını yazma ve benzetimi yapma hakkında hisse geliştirme seti öğreticisine hoş geldiniz. 
 
-Q #, büyük ölçekli hisse programları için öncelikli olarak yüksek düzeyde bir programlama dili olarak oluşturulsa da, daha düşük hisse bitlerinin düzeyini araştırmak için yalnızca kolayca kullanılabilir.
-Q # ' ın esnekliği, kullanıcıların bu tür bir soyutlama düzeyinden elde etmesine izin verir ve bu öğreticide, qubits 'e daha fazla yaklaşıyoruz.
+Q#Büyük ölçekli hisse programları için öncelikli olarak yüksek düzeyde bir programlama dili olarak oluşturulsa da, daha düşük hisse düzeyi programlarının düzeyini araştırmak için kolayca kullanılabilir.
+' Nin esnekliği, Q# kullanıcıların her türlü soyutlama düzeyinden elde etmesine izin verir ve bu öğreticide, qubits 'e de yaklaşıyoruz.
 Özellikle de, birçok büyük hisse algoritmaya integral olan bir alt yordam olan [hisse](https://en.wikipedia.org/wiki/Quantum_Fourier_transform)
 
 Hisse senedi bilgi işlemenin bu alt düzey görünümünün genellikle, bir sistemin belirli qugeler için sıralı uygulamayı temsil eden "[hisse devreleri](xref:microsoft.quantum.concepts.circuits)" bakımından açıklandığına bakın.
 
 Bu nedenle, ardışık olarak uygulanan tek ve Multi-qubit işlemleri "devre diyagramı" içinde kolayca temsil edilebilir.
-Bu durumda, aşağıdaki gösterimi bir devre olarak bulunan tam üç qubit hisse Fourier dönüşümünü gerçekleştirmek için bir Q # işlemi tanımlayacağız:
+Bizim örneğimizde, Q# aşağıdaki gösterimi bir devre olarak bulunan tam üç qubit hisse Fourier dönüşümünü gerçekleştirmeye yönelik bir işlem tanımlayacağız:
 
 <br/>
 <img src="../media/qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * [Install](xref:microsoft.quantum.install) Tercih ettiğiniz dil ve geliştirme ortamınızı kullanarak hisse geliştirme setini kullanın.
 * Makinenizde QDK zaten yüklüyse en son sürüme [güncelleştirdiğinizden](xref:microsoft.quantum.update) emin olun
 
 
-## <a name="in-this-tutorial-youll-learn-how-to"></a>Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+## <a name="in-this-tutorial-youll-learn-how-to"></a>Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
 > [!div class="checklist"]
-> * Q 'da hisse işlemleri tanımlama #
-> * Doğrudan komut satırından veya klasik ana bilgisayar programını kullanarak Q # işlemlerini doğrudan çağırın
+> * İçinde hisse işlemleri tanımlayınQ#
+> * Q#İşlemleri doğrudan komut satırından veya klasik ana bilgisayar programını kullanarak çağırma
 > * Ölçüm çıkışına qubit ayırmayı bir hisse alma işlemi benzetimi yap
 > * Hisse sisteminin sanal dalga işlevinin işlem boyunca nasıl gelişdiğini gözlemleyin
 
 Microsoft 'un hisse geliştirme seti ile bir hisse programın çalıştırılması genellikle iki bölümden oluşur:
-1. Bu programın kendisi, Q # hisse programlama dili kullanılarak uygulanır ve ardından bir hisse bilgisayar veya hisse Benzetici üzerinde çalışmak üzere çağırılır. Bunlardan oluşur 
-    - S # işlemleri: hisse kayıtları ile çalışan alt yordamlar ve 
-    - S # işlevleri: hisse algoritması içinde kullanılan klasik alt yordamlar.
+1. Programın kendisi, Q# hisse dili programlama dili kullanılarak uygulanır ve ardından hisse bir bilgisayar veya hisse Benzetici üzerinde çalışmak üzere çağırılır. Bunlardan oluşur 
+    - Q#işlemler: hisse kayıtları için davranan alt yordamlar ve 
+    - Q#işlevler: hisse algoritması içinde kullanılan klasik alt yordamlar.
 2. Hisse programını çağırmak ve üzerinde çalıştırılması gereken hedef makineyi belirtmek için kullanılan giriş noktası.
     Bu işlem doğrudan komut satırından veya Python veya C# gibi bir klasik programlama dilinde yazılmış bir konak programı aracılığıyla yapılabilir.
     Bu öğretici, tercih ettiğiniz yönteme ilişkin yönergeleri içerir.
 
 ## <a name="allocate-qubits-and-define-quantum-operations"></a>Qubits ayırın ve hisse alma işlemlerini tanımlayın
 
-Bu öğreticinin ilk bölümünde `Perform3qubitQFT` , üç qubit üzerinde hisse Fourier dönüşümünü gerçekleştiren Q # işleminin tanımlanması oluşur. 
+Bu öğreticinin ilk bölümü, Q# `Perform3qubitQFT` üç qubit üzerinde hisse Fourier dönüşümünü gerçekleştiren işlemi tanımlamayı içerir. 
 
 Ayrıca, [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) üç qubit sistemimizin benzetilen dalga işlevinin işlem genelinde geliştikçe, işlevini kullanacağız.
 
-İlk adım, Q # projenizi ve dosyanızı oluşturmaktır.
+İlk adım, Q# projenizi ve dosyanızı oluşturmaktır.
 Bunun adımları programı çağırmak için kullanacağınız ortama bağlıdır ve ilgili [yükleme kılavuzlarındaki](xref:microsoft.quantum.install)ayrıntıları bulabilirsiniz.
 
 Adım adım, dosyanın bileşenlerinde size kılavuzluk ederiz, ancak kod aşağıdaki tam bir blok olarak da kullanılabilir.
 
-### <a name="namespaces-to-access-other-q-operations"></a>Diğer Q # işlemlerine erişmek için ad alanları
+### <a name="namespaces-to-access-other-no-locq-operations"></a>Diğer işlemlere erişmek için ad alanları Q#
 Dosya içinde, önce derleyici tarafından erişilecek ad alanını tanımlayacağız `NamespaceQFT` .
-Var olan Q # işlemlerini kullanmaya yönelik işlemimiz için ilgili `Microsoft.Quantum.<>` ad alanlarını açarız.
+Operasyonumuz mevcut işlemleri kullanmak için Q# ilgili `Microsoft.Quantum.<>` ad alanlarını açıyoruz.
 
 ```qsharp
 namespace NamespaceQFT {
@@ -90,7 +93,7 @@ Sonra, işlemi tanımladık `Perform3qubitQFT` :
 Daha sonra, bunu bir dizi ölçüm sonucu döndürecek şekilde değiştirecek ve bu noktada `Unit` Değiştirilecek `Result[]` . 
 
 ### <a name="allocate-qubits-with-using"></a>İle qubit ayırın`using`
-Q # operasyonumuza göre, ilk olarak deyimle üç qubit kaydı ayırdık `using` :
+Bizim Q# işlem dahilinde, öncelikle şu deyimle üç qubit kaydı ayırdık `using` :
 
 ```qsharp
         using (qs = Qubit[3]) {
@@ -104,16 +107,16 @@ Q # operasyonumuza göre, ilk olarak deyimle üç qubit kaydı ayırdık `using`
 İle `using` , qubits $ \ket $ durumunda otomatik olarak ayrılır {0} . Bunu [`Message(<string>)`](xref:microsoft.quantum.intrinsic.message) [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) , ve ' ı kullanarak, bir dizeyi ve sistemin geçerli durumunu konsola yazdıracak şekilde doğrulayabiliriz.
 
 > [!NOTE]
-> `Message(<string>)`Ve `DumpMachine()` işlevleri ( [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) ve [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics) sırasıyla), her ikisi de doğrudan konsola yazdırılır. Gerçek bir hisse hesaplamasında olduğu gibi, Q #, qubit durumlarına doğrudan erişememize izin vermez.
+> `Message(<string>)`Ve `DumpMachine()` işlevleri ( [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) ve [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics) sırasıyla), her ikisi de doğrudan konsola yazdırılır. Tıpkı gerçek bir hisse hesaplamasına benzer şekilde, Q# qubit durumlarına doğrudan erişememize izin vermez.
 > Ancak, `DumpMachine` hedef makinenin geçerli durumunu yazdırdığından, tam durum simülatörü ile birlikte kullanıldığında hata ayıklama ve öğrenimi için değerli öngörüler sağlayabilir.
 
 
 ### <a name="applying-single-qubit-and-controlled-gates"></a>Tek qubit ve denetimli kapıları uygulama
 
 Daha sonra, işlemin kendisini oluşturan kapıları uyguladık.
-S #, ad alanında işlem olarak birçok temel hisse kapısı içeriyor [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) ve bunlar özel durum değildir. 
+Q#, ad alanında işlem olarak birçok temel hisse kapısı zaten içeriyor [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) ve bunlar özel durum değildir. 
 
-Bir Q # işlemi içinde, callables çağıran deyimler sıralı sırada yürütülür.
+Bir Q# işlem içinde, callables çağıran deyimler sıralı sırada yürütülür.
 Bu nedenle, uygulanacak ilk kapı [`H`](xref:microsoft.quantum.intrinsic.h) ilk qubit 'e (Hadamard) sahiptir:
 
 <br/>
@@ -131,7 +134,7 @@ Bu nedenle, [`H`](xref:microsoft.quantum.intrinsic.h) kayıt yaptığımız ilk 
 
 #### <a name="controlled-operations"></a>Denetlenen işlemler
 
-Q # bir veya daha fazla denetim qubits üzerinde bir işlemin yürütülmesini çok kolay hale getirir.
+Q#bir veya birden fazla denetim qubit üzerinde bir işlemin yürütülmesini çok kolay hale getirir.
 Genel olarak, yalnızca ile çağrıyı önliyoruz `Controlled` ve işlem bağımsız değişkenleri şu şekilde değişir:
 
  `Op(<normal args>)`$ \-$ `Controlled Op([<control qubits>], (<normal args>))` .
@@ -176,12 +179,12 @@ Ayrıca, bir `Double` (örn.), bir `2.0` tamsayı ile bölmek bir `2` tür hatas
 
 Bu gereklidir çünkü, bu işlem, bu, boyut ve alt yordamın daha büyük algoritmalara sorunsuz bir şekilde tümleştirilmesini sağlar.
 
-Bu nedenle, hisse uygun bir şekilde, hımız dönüştürme işlemi için, Q # işlemimize bir HBIT düzeyi işlem yazma
+Bu nedenle, bu nedenle, hisse bir şekilde hisse Q#
 
 <img src="../media/qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
 Ancak henüz bir gün arayamıyoruz.
-Qubits 'lerimiz {0} , ayrıldığımızda $ \ket $ durumunda ve çok daha fazla olduğu gibi, her ne kadar iyi olduğu gibi, her şeyi bulduğumuz gibi bırakmamız gerekir (veya daha iyi!).
+Qubits 'lerimiz {0} , ayrıldığımızda $ \demet $ durumunda ve çok benzer şekilde, Q# her şeyi bulduğumuz gibi bırakmamız gerekir (veya daha iyi!).
 
 ### <a name="deallocate-qubits"></a>Qubit serbest bırakma
 
@@ -194,11 +197,11 @@ Qubits 'lerimiz {0} , ayrıldığımızda $ \ket $ durumunda ve çok daha fazla 
             ResetAll(qs);
 ```
 
-Tüm serbest bırakılmış qubits 'in {0} Bu aynı qubit 'leri (bir nadir kaynağı) kullanmaya başladıklarında, diğer işlemlerin durumlarını tam olarak bilmesini sağlamasına izin vermek için, bir Q # öğesinin temel bir özelliğidir.
+Tüm serbest bırakılmış qubits 'in, {0} Q# aynı qubit (bir nadir kaynağı) ile çalışmaya başladıklarında durumlarını tam olarak öğrenmesini sağlayan temel bir özelliğidir.
 Buna ek olarak, bu, sistemdeki diğer qubits ile zenginler olmasını sağlar.
 Bir ayırma bloğunun sonunda sıfırlama gerçekleştirildiyse `using` , bir çalışma zamanı hatası oluşur.
 
-Tam Q # dosyanız şu şekilde görünmelidir:
+Tam Q# dosyanız şu şekilde görünmelidir:
 
 ```qsharp
 namespace NamespaceQFT {
@@ -239,18 +242,18 @@ namespace NamespaceQFT {
 ```
 
 
-Q # dosyası ve işlem tamamlandıktan sonra, hisse mamızda program çağrılmaya ve benzetimine hazırlanmaktadır.
+Q#Dosya ve işlem tamamlandıktan sonra, hisse mamızda program çağrılmaya ve benzetimine hazırlanmaktadır.
 
-## <a name="execute-the-program"></a>Programı Yürüt
+## <a name="execute-the-program"></a>Programı yürütme
 
-Q # işleminizi bir `.qs` dosyada tanımladık, şimdi bu işlemi çağırmalı ve döndürülen tüm klasik verileri gözlemleyeceğiz.
-Şimdilik, döndürülen hiçbir şey yok (daha sonra işlem tarafından tanımlanan işlemin döndürdüğü geri çek `Unit` ), ancak daha sonra Q # işlemini bir ölçüm sonuçları dizisi () döndürecek şekilde değiştirdiğimiz zaman `Result[]` bunu ele alınacaktır.
+Q#İşleminizi bir `.qs` dosyada tanımladık, şimdi bu işlemi çağırmalı ve döndürülen klasik verileri gözlemleyeceğiz.
+Şimdilik, döndürülen hiçbir şey yok (daha sonra işlem tarafından tanımlanan işlemin döndürdüğü geri çek `Unit` ), ancak daha sonra işlemi daha sonra Q# ölçüm sonuçları dizisi döndürecek şekilde değiştirdiğimiz zaman, `Result[]` bunu ele alınacaktır.
 
-Q # programı, bunu çağırmak için kullanılan ortamlara göre değişiklik yapalım olsa da, bunu yapmanın bir yolu farklılık gösterecektir. Bu nedenle, kuruluma karşılık gelen sekmedeki yönergeleri izlemeniz yeterlidir: Q # komut satırı uygulamasından çalışma veya Python ya da C# ' de bir konak programı kullanma.
+Program, Q# Bu işlemi çağırmak için kullanılan ortamlarda bizden gerçekleşirken, bunu yapmanın yolu da farklılık gösterir. Bu nedenle, kuruluma karşılık gelen sekmedeki yönergeleri izlemeniz yeterlidir: Q# komut satırı uygulamasından çalışma veya Python ya da C# ' de bir konak programı kullanma.
 
 #### <a name="command-line"></a>[Komut satırı](#tab/tabid-cmdline)
 
-Q # programını komut satırından çalıştırmak, Q # dosyasında yalnızca küçük bir değişiklik yapılmasını gerektirir.
+Q#Program komut satırından çalıştırıldığında dosyada yalnızca küçük bir değişiklik yapılması gerekir Q# .
 
 `@EntryPoint()`İşlem tanımından önceki bir satıra eklemeniz yeterlidir:
 
@@ -274,17 +277,17 @@ Yürütmeden sonra, `Message` `DumpMachine` aşağıda ve aşağıdaki çıktıl
 Python ana bilgisayar dosyası oluştur: `host.py` .
 
 Ana bilgisayar dosyası şu şekilde oluşturulur: 
-1. İlk olarak, `qsharp` Modül yükleyicisini Q # birlikte çalışabilirlik için kaydeden modülünü içeri aktardık. 
-    Bu, q # çalışma alanlarına izin verir (örneğin, `NamespaceQFT` q # dosyası içinde tanımladık), ' den, q # işlemlerini içeri aktarabilmemiz Için Python modülleri olarak görünür.
-2. Ardından, bu durumda---doğrudan çağıracağız olan Q # işlemlerini içeri aktarın `Perform3qubitQFT` .
-    Giriş noktasını yalnızca bir Q # programına (ve gibi _değil_ `H` `R1` , diğer q # işlemleri tarafından çağrılan ancak hiçbir şekilde klasik ana bilgisayar tarafından çağırılan) içeri aktardık.
-3. Q # işlemlerine veya işlevlerine benzetim yaparken, bu formu `<Q#callable>.simulate(<args>)` hedef makinede çalıştırmak için kullanın `QuantumSimulator()` . 
+1. Öncelikle modül `qsharp` yükleyicisini birlikte çalışabilirlik için kaydeden modülünü içeri aktardık Q# . 
+    Bu Q# , ad alanlarını (ör. `NamespaceQFT` bizim örneğimizde tanımladığımız Q# ), içinden içeri aktarabilmemiz için Python modülleri olarak görünmesini sağlar Q# .
+2. Ardından, Q# Bu durumda---doğrudan çağıracağız işlemleri içeri aktarın `Perform3qubitQFT` .
+    Giriş noktasını yalnızca bir Q# programa (ve gibi _değil_ `H` `R1` , başka işlemler tarafından çağrılan Q# ancak hiçbir şekilde klasik ana bilgisayar tarafından çağırılan) içeri aktarmanız gerekir.
+3. Q#İşlem veya işlevlerin benzetimini yaparken, `<Q#callable>.simulate(<args>)` hedef makinede çalıştırmak için formunu kullanın `QuantumSimulator()` . 
 
 > [!NOTE]
 > İşlemi farklı bir makinede çağırmak isteseyk, örneğin, `ResourceEstimator()` yalnızca kullanacağız `<Q#callable>.estimate_resources(<args>)` .
-> Genel olarak, Q # işlemleri çalıştırdıkları makinelere belirsizdir, ancak gibi bazı özellikler `DumpMachine` farklı davranabilirler.
+> Genel olarak, Q# işlemler çalıştıkları makinelere belirsizdir, ancak gibi bazı özellikler `DumpMachine` farklı davranabilir.
 
-4. Benzetimi gerçekleştirdikten sonra, işlem çağrısı, Q # dosyasında tanımlandığı şekilde değerleri döndürür.
+4. Benzetimi gerçekleştirdikten sonra işlem çağrısı, dosyada tanımlanan şekilde değerleri döndürür Q# .
     Şimdilik hiçbir şey döndürülmedi, ancak daha sonra bu değerleri atamaya ve işlemeye yönelik bir örnek görüyoruz.
     Uygulamalı ve tamamen klasik verileri elde ettiğimiz için, beğendiğimiz her şeyi yapabiliriz.
 
@@ -310,7 +313,7 @@ C# ana bilgisayarının dört bölümü vardır:
 2. Kuantum algoritması için gereken tüm bağımsız değişkenleri hesaplama.
     Bu örnekte hiçbiri yok.
 3. Kuantum algoritmasını çalıştırma. 
-    Her Q# işlemi aynı adda bir C# sınıfı oluşturur. 
+    Her Q# işlem aynı ada sahip bir C# sınıfı oluşturur. 
     Bu sınıfın, işlemi **zaman uyumsuz** olarak yürüten bir `Run` yöntemi vardır.
     Yürütmenin zaman uyumsuz olmasının nedeni gerçek donanım üzerindeki yürütmenin zaman uyumsuz yapılacağıdır. 
     `Run`Yöntemi zaman uyumsuz olduğundan, yöntemi çağırıyoruz `Wait()` ; Bu, görev tamamlanana kadar yürütmeyi engeller ve sonucu zaman uyumlu olarak döndürür. 
@@ -393,7 +396,7 @@ Bu nedenle, yazdırılan çıktı, programlanmış kapıları durumumuzu dönü�
 
 $ $ \ket{\psı} \_ {Initial} = \ket {000} $ $
 
-- 
+şöyle değiştirin: 
 
 $ $ \begin{hizalaması} \ket{\psı} \_ {final} &= \frac {\sqrt} \left (\ket + \tus+ \tus+ \tus+ \tus+ \ket {1} {8} {000} {001} {010} {011} {100} {101} + \ket {110} + \ ayraç {111} \ sağ) \\ \\ &= \frac {1} {\sqrt{2 ^ n}} \sum \_ {j = 0} ^ {2 ^ n-1} \ket{j}, \end{hizalaması} $ $
 
@@ -407,7 +410,7 @@ Ne yazık ki hisse kuyadan oluşan bir temel taş, gerçek bir hisse sisteminin 
 Birçok hisse ölçüm ölçümü vardır ancak tek bir qubit üzerinde en temel: çoklu ölçümler üzerinde odaklanacağız.
 Belirli bir temelde ölçülerek (örn. hesaplama tabanlı $ \{ \demet {0} , \demet {1} \} $), qubit durumu, bu nedenle ikisi arasındaki herhangi bir üst konuma yok edilirken, her bir temel duruma göre yansıtılmıştır---.
 
-Bir Q # programı içindeki ölçümleri uygulamak için, `M` `Microsoft.Quantum.Intrinsic` bir türü döndüren (from) işlemini kullanırız `Result` .
+Bir program içindeki ölçümleri uygulamak için, Q# `M` `Microsoft.Quantum.Intrinsic` bir türü döndüren (from) işlemini kullanırız `Result` .
 
 İlk olarak, `Perform3QubitQFT` işlem yerine, ölçüm sonuçlarının bir dizisini döndürecek şekilde değişiklik yaptık `Result[]` `Unit` .
 
@@ -438,7 +441,7 @@ Blok içindeki Fourier dönüştürme işlemlerinden sonra `using` aşağıdaki 
 Her ölçülen `Result` tür ( `Zero` ya da `One` ), `resultArray` bir Update ve-yeniden atama ifadesiyle ilgili dizin konumuna eklenir.
 
 > [!NOTE]
-> Bu deyimin sözdizimi, Q # için benzersizdir, ancak `resultArray[i] <- M(qs[i])` F # ve R gibi diğer dillerde görülen benzer değişken yeniden atamaya karşılık gelir.
+> Bu deyimin sözdizimi, için benzersizdir Q# , ancak `resultArray[i] <- M(qs[i])` F # ve R gibi diğer dillerde görülen benzer değişken yeniden atamaya karşılık gelir.
 
 Anahtar sözcüğü, `set` kullanarak değişkenlerin bağlanmasını yeniden atamak için her zaman kullanılır `mutable` .
 
@@ -501,7 +504,7 @@ Aksi takdirde, döndürülen diziyi işlemek için ana bilgisayar programınız�
 
 #### <a name="command-line"></a>[Komut satırı](#tab/tabid-cmdline)
 
-Konsolda yazdırılacak döndürülen diziyi daha fazla anlamak için, `Message` deyimden hemen önce Q # dosyasına bir tane ekleyebiliriz `return` :
+Konsolda yazdırılacak döndürülen diziyi daha fazla anlamak için, `Message` Q# yalnızca deyimden hemen önce dosyaya bir tane ekleyebiliriz `return` :
 
 ```qsharp
         Message("Post-QFT measurement results [qubit0, qubit1, qubit2]: ");
@@ -694,12 +697,12 @@ diğer ad alanı `open` deyimleriyle.
 Sonuçta elde edilen çıktıda, her bir qubit ölçülerek dereceli projeksiyonları alt boşluklara görürsünüz.
 
 
-## <a name="use-the-q-libraries"></a>Q # kitaplıklarını kullanma
-Giriş bölümünde bahsedildiği gibi, Q # gücünün büyük bir bölümü, tek bir qubits ile ilgilenme dünyadan yararlanın.
+## <a name="use-the-no-locq-libraries"></a>Kitaplıkları kullanma Q#
+Giriş bölümünde bahsedildiği gibi, dünyanın çoğu, Q# bireysel qubits ile ilgilenme dünyadan yararlanın.
 Gerçekten de, tam ölçekli, uygun hisse programları geliştirmek istiyorsanız, `H` belirli bir dönüşten önce veya sonra bir işlemin, yalnızca sizi yavaşlatıp yavaşlamadığını endişelenmeniz gerekir. 
 
-Q # kitaplıkları, herhangi bir sayıda qubit için yalnızca uygulayabileceğiniz ve uygulayabileceğiniz [QFT](xref:microsoft.quantum.canon.qft) işlemini içerir.
-Denemek için, Q # dosyanızda aynı içeriğe sahip olan `Perform3QubitQFT` , ancak ilk `H` `SWAP` yerine iki kolay satıra sahip olan her şeyi içeren yeni bir işlem tanımlayın:
+Q#Kitaplıklar, herhangi bir sayıda qubit için uygulayabileceğiniz ve uygulayabileceğiniz [QFT](xref:microsoft.quantum.canon.qft) işlemini içerir.
+Denemek için, Q# dosyanızda aynı içeriğe sahip olan `Perform3QubitQFT` , ancak ilk `H` `SWAP` yerine iki kolay satıra sahip olan her şeyi içeren yeni bir işlem tanımlayın:
 ```qsharp
             let register = BigEndian(qs);    //from Microsoft.Quantum.Arithmetic
             QFT(register);                   //from Microsoft.Quantum.Canon
@@ -707,7 +710,7 @@ Denemek için, Q # dosyanızda aynı içeriğe sahip olan `Perform3QubitQFT` , a
 İlk satır yalnızca, [`BigEndian`](xref:microsoft.quantum.arithmetic.bigendian) `qs` [QFT](xref:microsoft.quantum.canon.qft) işleminin bağımsız değişken olarak aldığı bir qubit dizisinin ayrılmış dizisinin bir ifadesini oluşturur.
 Bu, kayıttaki qubits 'in Dizin sıralamasına karşılık gelir.
 
-Bu işlemlere erişebilmek için, `open` Q # dosyasının başlangıcında ilgili ad alanları için deyimler ekleyin:
+Bu işlemlere erişebilmek için, `open` dosyanın başlangıcında ilgili ad alanları için deyimler ekleyin Q# :
 ```qsharp
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Arithmetic;
@@ -715,7 +718,7 @@ Bu işlemlere erişebilmek için, `open` Q # dosyasının başlangıcında ilgil
 
 Şimdi, ana bilgisayar programınızı yeni işleminizi (ör.) çağırmak için ayarlayın `PerformIntrinsicQFT` ve bir yanıt verin.
 
-Q # kitaplığı işlemlerini kullanmanın gerçek avantajını görmek için, qubit sayısını dışında bir şekilde değiştirin `3` :
+Kitaplık işlemlerini kullanmanın gerçek avantajını görmek için Q# qubits sayısını şundan farklı bir şekilde değiştirin `3` :
 ```qsharp
         mutable resultArray = new Result[4]; 
 

@@ -1,17 +1,20 @@
 ---
-title: 'Q # standart kitaplıklarında hata düzeltme'
-description: "Qubits 'in durumunu korurken, Q # programlarınızda hata düzeltme kodlarını nasıl kullanacağınızı öğrenin."
+title: Standart kitaplıklarda hata düzeltme Q#
+description: Q#Qubits 'in durumunu korurken programlarınızda hata düzeltme kodlarını nasıl kullanacağınızı öğrenin.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 514fe68f603b9a3a0b4607390719b08a43fe4967
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8b1f008793281121bc547d1a6ac3b960feb082ab
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275727"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868500"
 ---
 # <a name="error-correction"></a>Hata Düzeltme #
 
@@ -48,7 +51,7 @@ Pauli işlecinin her ölçüsünün, ölçülen durumun hangi eigenvalue 'a kar�
 Diğer taraftan, $Z _0 Z_1 {100} \tus=-\ket {100} $ ve $Z _0 Z_1 \tus= {011} -\ket {011} $, bu nedenle $Z _0 Z_1 $ ölçmesi sonucu oluşan hata oluştuğunda yararlı bilgileri ortaya çıkarır.
 
 Bunu vurgulamak için yukarıdaki tabloyu yineliyoruz, ancak her satırda $Z _0 Z_1 $ ve $Z _1 Z_2 $ ölçüm sonuçlarını eklersiniz.
-Her ölçümün sonucunu, sırasıyla Q # değerlerine karşılık gelen $ + $ veya $-$ gibi gözlemlenen eigenvalue işaretine göre gösterir `Result` `Zero` `One` .
+Her ölçümün sonucunu, Q# `Result` `Zero` sırasıyla, ve değerlerine karşılık gelen $ + $ veya $-$ gibi gözlemlenen eigenvalue işaretine göre gösterir `One` .
 
 | Hata $E $ | $E \ket{\üst çizgi {0} } $ | $E \ket{\üst çizgi {1} } $ | Sonuç olarak $Z _0 Z_1 $ | $Z _1 Z_2 $ sonucu |
 | --- | --- | --- | --- | --- |
@@ -68,16 +71,16 @@ Bu sonuçlara bir *sendromu*çağrısı yaptık ve bir sendromu 'yi *Kurtarma*ol
 > Genellikle, daha fazla hata sayısını işlemek ve $Z $ hata ve $X $ hatası işlemek için kodlar oluşturulabilir.
 
 Ölçümleri, tüm kod durumlarında aynı şekilde davranan hisse hata düzeltmesine ilişkin ölçümleri anlayabiliriz *.*
-Q # Canon, sabitleyici kodlardan kodlama ve kod çözme hakkında bir çerçeve sağlar ve bir hata durumundan nasıl kurtardığını tanımlar.
+Q#Canon, sabitleyici kodlardan kodlama ve kod çözme hakkında bir çerçeve sağlar ve bir hata durumundan nasıl kurtardığını tanımlar.
 Bu bölümde, bu Framework 'ü ve uygulamayı birkaç basit hisse hata düzeltme koduna anladık.
 
 > [!TIP]
 > Sabitleyici formalroni'ya tam giriş, bu bölümün kapsamının dışındadır.
 > [Gottesman 2009](https://arxiv.org/abs/0904.2557)' ye daha fazla bilgi edinmek isteyen okuyucular hakkında bilgi veririz.
 
-## <a name="representing-error-correcting-codes-in-q"></a>Q 'daki hata düzeltme kodlarını temsil etme # ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a>İçindeki hata düzeltme kodlarını temsil etmeQ# ##
 
-Q # Canon, hata düzeltme kodları belirtmeye yardımcı olmak için birkaç farklı Kullanıcı tanımlı tür sağlar:
+Canon, hata düzeltme kodları belirtmeye yardımcı olmak için Q# birkaç farklı Kullanıcı tanımlı tür sağlar:
 
 - <xref:microsoft.quantum.errorcorrection.logicalregister>`= Qubit[]`: Bir qubits kaydının bir hata düzeltme kodunun kod bloğu olarak yorumlanması gerektiğini gösterir.
 - <xref:microsoft.quantum.errorcorrection.syndrome>`= Result[]`: Bir ölçüm sonuçları dizisinin, bir kod bloğunda ölçülen sendromu olarak yorumlanması gerektiğini gösterir.
@@ -119,4 +122,4 @@ using (scratch = Qubit[nScratch]) {
 
 Bu, [bit çevirme kod örneğinde](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code)daha ayrıntılı bir şekilde araştırıyoruz.
 
-Bit çevirme kodundan başlayarak, Q # Canon, [beş qubit kusursuz kodun](https://arxiv.org/abs/quant-ph/9602019)uygulamalarıyla ve her ikisi de rastgele bir tek qubit hatayı düzeltebilen [yedi-qubit kodu](https://arxiv.org/abs/quant-ph/9705052)ile sağlanır.
+Bit çevirme kodundan başlayarak, Q# Canon, [beş qubit kusursuz kodun](https://arxiv.org/abs/quant-ph/9602019)uygulamalarıyla ve her ikisi de rastgele bir tek qubit hatayı düzeltebilen [yedi-qubit kod](https://arxiv.org/abs/quant-ph/9705052)uygulamalarıyla birlikte sağlanır.

@@ -1,32 +1,36 @@
 ---
-title: Q# dilindeki türler
-description: 'Q # programlama dilinde kullanılan farklı türler hakkında bilgi edinin.'
+title: İçindeki türlerQ#
+description: Programlama dilinde kullanılan farklı türler hakkında bilgi edinin Q# .
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: e37ce6e3a2dfad5395cdecf06178d64ec51b79f1
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b034af0b1d3b967b5680403341813407e4412f93
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415295"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869605"
 ---
-# <a name="types-in-q"></a>Q# dilindeki türler
+# <a name="types-in-no-locq"></a>İçindeki türlerQ#
 
-Bu makalede Q # tür modeli ve türleri belirtilerek ve bunlarla çalışmak için sözdizimi açıklanır. Bu türlerin ifadelerinde oluşturma ve üzerinde işlem yapma hakkında ayrıntılı bilgi için bkz. [tür ifadeleri](xref:microsoft.quantum.guide.expressions).
+Bu makalede Q# tür modeli ve türleri belirtmek ve bunlarla çalışmak için sözdizimi açıklanır. Bu türlerin ifadelerinde oluşturma ve üzerinde işlem yapma hakkında ayrıntılı bilgi için bkz. [tür ifadeleri](xref:microsoft.quantum.guide.expressions).
 
-Bu tür dikkatle kullanılması derleyicinin, derleme zamanında Q # programları hakkında güçlü garantiler sağlamasına yardımcı olabileceğini belirten, *kesin olarak yazılmış* bir dil olduğunu unutmayın.
-Mümkün olan en güçlü garantiyi sağlamak için, Q # içindeki türler arasındaki dönüştürmeler, bu dönüştürmeyi ifade eden işlevlere yapılan çağrılar kullanılarak açık olmalıdır. S #, ad alanının bir parçası olarak çeşitli işlevler sağlar <xref:microsoft.quantum.convert> .
+Q#Bu tür dikkatle kullanılması derleyicinin derleme zamanında programlar hakkında güçlü garantiler sağlamasına yardımcı olabileceğini belirten, *kesin olarak belirlenmiş* bir dil olduğunu unutmayın Q# .
+Mümkün olan en güçlü garantiyi sağlamak için, içindeki türler arasındaki dönüştürmeler, Q# bu dönüştürmeyi ifade eden işlevlere yapılan çağrılar kullanılarak açık olmalıdır. 
+Q#ad alanının bir parçası olarak çeşitli işlevler sağlar <xref:microsoft.quantum.convert> .
 Diğer yandan, uyumlu türlere yönelik olarak yapılan yayınlar örtülü olarak gerçekleşir. 
 
-S #, doğrudan kullanılan ilkel türler ve diğer türlerden yeni türler oluşturmak için çeşitli yollar sağlar.
+Q#, doğrudan kullanılan ilkel türler ve diğer türlerden yeni türler oluşturmak için çeşitli yollar sağlar.
 Bu makalenin geri kalanında anlatılmaktadır.
 
 ## <a name="primitive-types"></a>İlkel Türler
 
-Q # dili, hepsi doğrudan Q # programlarında kullanabileceğiniz aşağıdaki *temel türleri*sağlar. Bu temel türleri yeni türler oluşturmak için de kullanabilirsiniz.
+Q#Dil, hepsi doğrudan programlarda kullanabileceğiniz aşağıdaki *temel türleri*sağlar Q# . Bu temel türleri yeni türler oluşturmak için de kullanabilirsiniz.
 
 - `Int`Tür, 64 bitlik işaretli bir tamsayıyı temsil eder, örneğin,, `2` , `107` `-5` .
 - `BigInt`Türü, rastgele boyutun işaretli bir tamsayı temsil eder, örneğin,, `2L` , `107L` `-5L` .
@@ -40,7 +44,7 @@ Q # dili, hepsi doğrudan Q # programlarında kullanabileceğiniz aşağıdaki *
 - `String`Tür, bir kez oluşturulduktan sonra kullanıcıya donuk olan Unicode karakterlerinden oluşan bir dizidir.
   `string`Bir hata veya tanılama olayı durumunda iletileri klasik bir konağa raporlamak için türünü kullanın.
 - `Unit`Tür yalnızca bir değere sahip olabilir `()` . 
-  Bir Q # işlevi veya işleminin hiçbir bilgi döndürdüğünü belirtmek için bu türü kullanın. 
+  Bir Q# işlev veya işlemin hiçbir bilgi döndürdüğünü belirtmek için bu türü kullanın. 
 - `Qubit`Tür bir hisse bitini veya qubit 'i temsil eder.
    `Qubit`, kullanıcının opaktır. Bunlar ile mümkün olan tek işlem, başka bir işleme geçirilmekten farklı kimlik (eşitlik) için test amaçlıdır.
    Sonuç olarak, `Qubit` bir hisse işlemcisi (veya hisse Benzetici simülatörü) üzerinde iç yönergeleri çağırarak öğeleri ' de uygulayabilirsiniz.
@@ -51,19 +55,19 @@ Q # dili, hepsi doğrudan Q # programlarında kullanabileceğiniz aşağıdaki *
    Bu, iki olası değeri olan `One` ve türünde sabitler olan numaralandırılmış bir türdür `Zero` `Result` .
    `Zero`+ 1 eigenvalue değerinin ölçüldüğünü belirtir; `One`-1 eigenvalue değerinin ölçüldüğünü gösterir.
 
-,,,,,, Ve sabitleri, `true` `false` `PauliI` `PauliX` `PauliY` `PauliZ` `One` `Zero` Q # içinde tüm ayrılmış sembollerdir.
+,,,,,, `true` `false` Ve sabitleri `PauliI` `PauliX` `PauliY` `PauliZ` `One` `Zero` içindeki tüm ayrılmış semboller Q# .
 
 ## <a name="array-types"></a>Dizi türleri
 
-* Geçerli herhangi bir Q # türü için, bu türdeki bir değer dizisini temsil eden bir tür vardır.
+* Geçerli herhangi bir Q# tür için, bu türdeki bir değer dizisini temsil eden bir tür vardır.
     Örneğin, `Qubit[]` ve `(Bool, Pauli)[]` `Qubit` değerlerin dizilerini ve `(Bool, Pauli)` demet değerlerini temsil edin.
 
 * Dizi dizisi de geçerlidir. Önceki örnekte genişletilen dizi dizisi `(Bool, Pauli)` gösterilir `(Bool, Pauli)[][]` .
 
 > [!NOTE] 
-> Bu örnek, `(Bool, Pauli)[][]` dikdörtgen bir iki boyutlu diziyi değil, potansiyel olarak pürüzlü dizi dizileri temsil eder. Q #, dikdörtgen çok boyutlu dizileri desteklemez.
+> Bu örnek, `(Bool, Pauli)[][]` dikdörtgen bir iki boyutlu diziyi değil, potansiyel olarak pürüzlü dizi dizileri temsil eder. Q#dikdörtgen çok boyutlu dizileri desteklemez.
 
-* Bir dizi değeri, içinde olduğu gibi bir dizinin öğeleri etrafında köşeli parantezler kullanılarak Q # kaynak kodunda yazılabilir `[PauliI, PauliX, PauliY, PauliZ]` .
+* Bir dizi değeri Q# , içinde olduğu gibi bir dizinin öğeleri etrafında köşeli parantezler kullanılarak kaynak kodunda yazılabilir `[PauliI, PauliX, PauliY, PauliZ]` .
 Dizideki tüm öğelerin ortak temel türü bir dizi sabit değerinin türünü belirler. Bu nedenle, ortak temel türü olmayan öğelerle bir dizi oluşturmak bir hata oluşturur.  
 Bir örnek için bkz. [callables dizileri](xref:microsoft.quantum.guide.expressions#arrays-of-callables).
 
@@ -91,7 +95,7 @@ Dizilerin alt simgeleri sıfır tabanlıdır ve tür `Int` ya da tür olmalıdı
 
 ## <a name="tuple-types"></a>Demet türleri
 
-Tanımlama grupları, her bir değer toplamak için Q # boyunca kullanılan güçlü bir kavramdır; bu da, daha kolay bir şekilde geçiş yapmayı kolaylaştırır.
+Tanımlama grupları Q# , değerleri tek bir değer toplamak için kullanılan güçlü bir kavramdır, bu da bunları bir araya getirmek daha kolay hale getirir.
 Özellikle, tanımlama grubu gösterimini kullanarak her işlemin ve çağrılabilir şekilde tam olarak bir giriş aldığını ve tam olarak bir çıkış döndürdüğünü ifade edebilirsiniz.
 
 * Sıfır veya daha fazla farklı tür (, `T0` `T1` ...) verildiğinde, `Tn` Yeni bir *demet türünü* olarak belirtebilirsiniz `(T0, T1, ..., Tn)` .
@@ -102,17 +106,17 @@ Bu iç içe geçme her zaman sınırlıdır, ancak demet türleri hiçbir koşul
 Örneğin, `(3, false)` türü demet türünde olan bir kayıt türüdür `(Int, Bool)` .
 Tanımlama dizileri, dizi dizileri, alt tanımlama grupları ve benzeri diziler oluşturmak mümkündür.
 
-* Q # 0,3 itibariyle, boş tanımlama grubunun türünün adı, boş tanımlama grubunun `Unit` *type* `()` *değeri* için kullanılır.
+* 0,3 itibariyle Q# , boş tanımlama grubunun `Unit` *türünün* adı, `()` boş tanımlama grubunun *değeri* için kullanılır.
 
 * Demet örnekleri sabittir.
-S #, oluşturulduktan sonra bir kayıt düzeninin içeriğini değiştirme mekanizması sağlamaz.
+Q#, oluşturulduktan sonra bir kayıt düzeninin içeriğini değiştirme mekanizması sağlamaz.
 
 
 
 ### <a name="singleton-tuple-equivalence"></a>Tek kayıt düzeni denklik
 
 Ya da gibi tek bir (tek öğeli) tanımlama grubu oluşturmak mümkündür `('T1)` `(5)` `([1,2,3])` .
-Ancak, Q #, tek bir kayıt kümesini, parantez içine alınmış türdeki bir değere eşdeğer olarak değerlendirir.
+Ancak, Q# tek bir kayıt kümesini, iliştirilmiş türdeki bir değere eşdeğer olarak değerlendirir.
 Diğer bir deyişle, ve arasında ya da ile arasında ya da arasında bir fark yoktur `5` `(5)` `5` `(((5)))` `(5, (6))` `(5, 6)` .
 Yazmak üzere yazmak için geçerli olduğu gibi, `(5)+3` `5+3` her iki ifade de olarak değerlendirilir `8` .
 
@@ -129,20 +133,20 @@ Bu özelliğe, _tek demet denklik_olarak başvurduk.
 
 Kullanıcı tanımlı tür bildirimi, anahtar sözcükten `newtype` , ardından Kullanıcı tanımlı türün adı, bir `=` , geçerli bir tür belirtimi ve sonlandırma noktalı virgülünden oluşur.
 
-Örneğin:
+Örnek:
 
 ```qsharp
 newtype PairOfInts = (Int, Int);
 ```
     
-* Her Q # kaynak dosyası herhangi bir sayıda kullanıcı tanımlı tür bildirebilir.
+* Her Q# kaynak dosya, Kullanıcı tanımlı herhangi bir sayıda tür bildirebilir.
 * Tür adları ad alanı içinde benzersiz olmalıdır ve işlem ve işlev adlarıyla çakışmayabilir.
 * Temel türler özdeş olsa bile Kullanıcı tanımlı türler farklıdır.
 Özellikle, temel alınan türler özdeş olsa bile, iki Kullanıcı tanımlı türün değerleri arasında otomatik dönüşüm yoktur.
 
 ### <a name="named-vs-anonymous-items"></a>Adlandırılmış vs. Anonymous öğeleri
 
-Bir Q # dosyası, geçerli bir türden tek bir değer içeren yeni bir adlandırılmış tür tanımlayabilir.
+Bir Q# Dosya, geçerli bir türden tek bir değer içeren yeni bir adlandırılmış tür tanımlayabilir.
 Herhangi bir demet türü için `T` , ifadesiyle birlikte bir alt türü olan yeni bir Kullanıcı tanımlı tür bildirebilirsiniz `T` `newtype` .
 @"microsoft.quantum.math"Ad alanında, örneğin, karmaşık sayılar Kullanıcı tanımlı bir tür olarak tanımlanmıştır:
 
@@ -151,7 +155,7 @@ newtype Complex = (Double, Double);
 ```
 Bu ifade, türünde iki anonim öğe içeren yeni bir tür oluşturur `Double` .   
 
-Anonim öğeler dışında, Kullanıcı tanımlı türler Ayrıca, Q # sürüm 0,7 veya üzeri olarak *adlandırılmış öğeleri* de destekler. Örneğin, `Re` bir karmaşık sayının gerçek bölümünü ve sanal parçayı temsil eden Double için öğeleri olarak adlandırın `Im` : 
+Anonim öğeler dışında, Kullanıcı tanımlı türler Ayrıca sürüm 0,7 veya üzeri olarak *adlandırılmış öğeleri* destekler Q# . Örneğin, `Re` bir karmaşık sayının gerçek bölümünü ve sanal parçayı temsil eden Double için öğeleri olarak adlandırın `Im` : 
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
@@ -178,7 +182,7 @@ Karmaşık tanımlama grubu türleri için kısa diğer adlar sağlamaya ek olar
 newtype Polar = (Radius : Double, Phase : Double);
 ```
 
-Hem hem de `Complex` `Polar` her ikisi de temel alınan bir türe sahip olsa da `(Double, Double)` , iki tür Q # içinde tamamen uyumsuzdur, yanlışlıkla bir karmaşık matematik işlevini kutupsal koordinatlarla çağırma riskini en aza indirir ve tam tersi de geçerlidir.
+Hem hem de `Complex` `Polar` her ikisi de temel bir türe sahip olsa da `(Double, Double)` , iki tür ' de tamamen uyumsuz Q# , yanlışlıkla bir karmaşık matematik işlevini kutupsal koordinatlarla çağırma riskini en aza indirir ve tam tersi de geçerlidir.
 
 #### <a name="access-anonymous-items-with-the-unwrap-operator"></a>Unwrap işleci ile anonim öğelere erişme
 
@@ -195,7 +199,7 @@ function PrintedMessage(value : Nested) : Unit {
 
 Tek sarmalama işleci bir sarmalama katmanının sarmalanmasını kaldırır. Çarpmadan kaydırılmış bir değere erişmek için birden çok sarmalama işleci kullanın.
 
-Örneğin:
+Örnek:
 
 ```qsharp
 newtype WrappedInt = Int;
@@ -211,7 +215,7 @@ newtype DoublyWrappedInt = WrappedInt;
 ...
 ```
 
-Unwrap işleci hakkında daha fazla bilgi için bkz. [Q # Içinde tür ifadeleri](xref:microsoft.quantum.guide.expressions).
+Unwrap işleci hakkında daha fazla bilgi için bkz. [Içindeki Q# tür ifadeleri ](xref:microsoft.quantum.guide.expressions).
 
 ### <a name="creating-values-of-user-defined-types"></a>Kullanıcı tanımlı türlerin değerlerini oluşturma
 
@@ -260,7 +264,7 @@ Türler `'Tinput` ve `'Tresult` :
 
 Bunlara çağrılabilir *imzası* denir.
 
-* Tüm Q # callables, girdi olarak tek bir değer alır ve çıkış olarak tek bir değer döndürür.
+* Tüm Q# callables, girdi olarak tek bir değer alır ve çıkış olarak tek bir değer döndürür.
 * Hem giriş hem de çıkış değerleri için tanımlama grupları kullanabilirsiniz.
 * Sonuç içermeyen callables, döndürün `Unit` .
 * Girişi olmayan callables, boş kayıt grubunu giriş olarak alır.
@@ -273,7 +277,7 @@ Bunlara çağrılabilir *imzası* denir.
 Örneğin, işlemin yürütülmesi diğer qubits 'in durumuna dayanıyorsa, bu durumda `Controlled` functor 'ı desteklemelidir; işlemin bir ters olması halinde, functor 'ı desteklemesi gerekir `Adjoint` .
 
 > [!NOTE]
-> Bu makalede, yalnızca funörler işlem imzasını nasıl değiştirtiğiyle tartışılmaz. Komik ve işlemler hakkında daha fazla bilgi için bkz. [Q # Içindeki işlemler ve işlevler](xref:microsoft.quantum.guide.operationsfunctions). 
+> Bu makalede, yalnızca funörler işlem imzasını nasıl değiştirtiğiyle tartışılmaz. Komik ve işlemler hakkında daha fazla bilgi için bkz. [Içindeki Q# Işlemler ve işlevler ](xref:microsoft.quantum.guide.operationsfunctions). 
 
 `Controlled`Bir işlem türünde ve/veya functor desteğinin gerekli olmasını sağlamak için `Adjoint` , karşılık gelen özellikleri belirten bir ek açıklama eklemeniz gerekir.
 Ek açıklama `is Ctl` (örneğin, `(Qubit => Unit is Ctl)` ), işlemin denetlenebilir olduğunu gösterir. Diğer bir deyişle, yürütmesi başka bir qubit veya qubits 'in durumuna bağlıdır. Benzer şekilde, ek açıklama `is Adj` işlemin bir adeklem olduğunu, yani "ters" (bir işlem) ve ardından adjoint değerini bir durum olduğu gibi bırakır. 
@@ -286,7 +290,7 @@ Herhangi bir belirtiyi desteklemeyen bir işlem türü, giriş ve çıkış tür
 
 Çağrılabilir türler *tür parametreleri*içerebilir.
 Bir tür parametresi belirtilen tek tırnak tarafından önekli bir sembol kullanın; Örneğin, `'A` yasal bir tür parametresidir.
-Tür parametreli callables tanımlama hakkında daha fazla bilgi ve Ayrıntılar için bkz. [Q # Içindeki işlemler ve işlevler](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables).
+Tür parametreli callables tanımlama hakkında daha fazla bilgi ve Ayrıntılar için bkz. [Içindeki Q# Işlemler ve işlevler ](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables).
 
 Bir tür parametresi, tek bir imzada birden çok kez görünebilir.
 Örneğin, bir dizinin her öğesine başka bir işlev uygulayan ve toplanan sonuçların imzasını döndüren bir işlev `(('A[], 'A->'A) -> 'A[])` .
@@ -294,8 +298,8 @@ Benzer şekilde, iki işlemin birleşimini döndüren bir işlev imzaya sahiptir
 
 Parametreli bir tür türü çağırdığınızda, aynı tür parametresine sahip olan tüm bağımsız değişkenler aynı türde olmalıdır.
 
-S #, bir kullanıcının bir tür parametresi için yerine geçecek olası türleri kısıtlayan bir mekanizma sağlamaz.
+Q#, bir kullanıcının bir tür parametresi için yerine geçecek olası türleri kısıtlayan bir mekanizma sağlamaz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Artık, Q # dilini oluşturan tüm türleri gördüğünüze göre, bu çeşitli türlerin ifadelerini oluşturmayı ve kullanmayı öğrenmek için [q # Içindeki tür ifadeleri](xref:microsoft.quantum.guide.expressions) bölümüne bakın.
+Dili oluşturan tüm türleri gördüğünüze Q# göre, bu çeşitli türlerin ifadelerini oluşturmayı ve işlemeyi öğrenmek için [Içindeki Q# tür ifadeleri](xref:microsoft.quantum.guide.expressions) bölümüne bakın.

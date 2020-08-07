@@ -1,25 +1,28 @@
 ---
 title: Tam durum hisse simülatör-hisse geliştirme seti
-description: 'Q # programlarınızı Microsoft Quantum Development Kit tam durum benzeticisinde çalıştırmayı öğrenin.'
+description: Q#Programlarınızı Microsoft Quantum Development Kit tam durum benzeticisinde nasıl çalıştıracağınızı öğrenin.
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.full-state-simulator
-ms.openlocfilehash: 563fdbd2a45461d112e4c46651eddd75c6fc3db2
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b15af66123dadae09815cde1966c69b3ce2e9e64
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871187"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868347"
 ---
 # <a name="quantum-development-kit-qdk-full-state-simulator"></a>Hisse geliştirme seti (QDK) tam durum simülatör
 
-QDK, yerel bilgisayarınızdaki bir hisse makinenizin benzetimini yapan tam bir durum simülatörü sağlar. En fazla 30 qubit kullanarak Q # dilinde yazılan hisse algoritmaları çalıştırmak ve hatalarını ayıklamak için tam durum simülatörü ' ni kullanabilirsiniz. Tam durum simülatörü, Microsoft Research 'ın [Liq $ UI | \rangle $](http://stationq.github.io/Liquid/) platformunda kullanılan hisse simülatcıya benzer.
+QDK, yerel bilgisayarınızdaki bir hisse makinenizin benzetimini yapan tam bir durum simülatörü sağlar. En fazla 30 qubit kullanarak, içinde yazılmış olan hisse algoritmaları çalıştırmak ve hatalarını ayıklamak için tam durum simülatörü ' Q# ni kullanabilirsiniz. Tam durum simülatörü, Microsoft Research 'ın [Liq $ UI | \rangle $](http://stationq.github.io/Liquid/) platformunda kullanılan hisse simülatcıya benzer.
 
 ## <a name="invoking-and-running-the-full-state-simulator"></a>Tam durum simülatörü çağırma ve çalıştırma
 
-Sınıf aracılığıyla tam durum simülatörünü kullanıma sunacaksınız `QuantumSimulator` . Daha fazla ayrıntı için bkz. [bir Q # programını çalıştırma yolları](xref:microsoft.quantum.guide.host-programs).
+Sınıf aracılığıyla tam durum simülatörünü kullanıma sunacaksınız `QuantumSimulator` . Daha fazla bilgi için bkz. [ Q# Program çalıştırma yolları](xref:microsoft.quantum.guide.host-programs).
 
 ### <a name="invoking-the-simulator-from-c"></a>C 'den simülatör çağrılıyor #
 
@@ -36,7 +39,7 @@ Sınıfın bir örneğini oluşturun `QuantumSimulator` ve sonra `Run` ek parame
 
 ### <a name="invoking-the-simulator-from-python"></a>Python 'dan simülatör çağrılıyor
 
-Q # Python kitaplığındaki, içeri aktarılan Q # işlemiyle [Benzetim ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) yöntemini kullanın:
+Python kitaplığındaki [Benzetim ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) yöntemini Q# içeri aktarılan işlemle birlikte kullanın Q# :
 
 ```python
 qubit_result = myOperation.simulate()
@@ -44,7 +47,7 @@ qubit_result = myOperation.simulate()
 
 ### <a name="invoking-the-simulator-from-the-command-line"></a>Komut satırından Benzetici çağırma
 
-Bir Q # programını komut satırından çalıştırırken, tam durum simülatör varsayılan hedef makinedir. İsteğe bağlı olarak, istenen hedef makineyi belirtmek için **--simülatör** (veya **-s** Shortcut) parametresini kullanabilirsiniz. Aşağıdaki komutlardan her ikisi de tam durum simülatörü kullanarak bir program çalıştırır. 
+Q#Komut satırından bir program çalıştırırken, tam durum simülatör varsayılan hedef makinedir. İsteğe bağlı olarak, istenen hedef makineyi belirtmek için **--simülatör** (veya **-s** Shortcut) parametresini kullanabilirsiniz. Aşağıdaki komutlardan her ikisi de tam durum simülatörü kullanarak bir program çalıştırır. 
 
 ```dotnetcli
 dotnet run
@@ -53,7 +56,7 @@ dotnet run -s QuantumSimulator
 
 ### <a name="invoking-the-simulator-from-juptyer-notebooks"></a>Juptyer not defterlerinden simülatörü çağırma
 
-Q # işlemini çalıştırmak için IQ # Magic komutu [% benzetimini](xref:microsoft.quantum.iqsharp.magic-ref.simulate) kullanın.
+Q#İşlemi çalıştırmak için I Magic komutu [% benzetimini](xref:microsoft.quantum.iqsharp.magic-ref.simulate) kullanın Q# .
 
 ```
 %simulate myOperation
@@ -76,6 +79,6 @@ Tam durum simülatör, gereken doğrusal algeköşeli paralel hale getirmek içi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hisse kaynağı tahmin aracı](xref:microsoft.quantum.machines.resources-estimator)
-- [Hisse Toffoli simülatör](xref:microsoft.quantum.machines.toffoli-simulator)
+- [Kuantum kaynak tahmin aracı](xref:microsoft.quantum.machines.resources-estimator)
+- [Kuantum Toffoli simülatörü](xref:microsoft.quantum.machines.toffoli-simulator)
 - [Hisse izi izleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro)

@@ -1,21 +1,24 @@
 ---
-title: 'Q # standart kitaplıklarında tanılama'
-description: 'Hisse ve hata hatalarını yakalamak için kullanılan Q # standart kitaplıklarında Tanılama işlevleri ve işlemler hakkında bilgi edinin.'
+title: Q#Standart kitaplıklarda tanılama
+description: Q#Standart kitaplıklarda bulunan ve hisse ve hataların hatalarını yakalamak için kullanılan tanılama işlevleri ve işlemleri hakkında bilgi edinin.
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 324753cfa1b7d940bf5a0bbe7665f19cc6dda82c
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4a98795b2459adaa4e47c888751121fffdc70971
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870643"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868551"
 ---
 # <a name="diagnostics"></a>Tanılama #
 
 Klasik geliştirmede olduğu gibi, hisse ve hata programlarındaki hataları ve hataları tanılamanıza de bilmek önemlidir.
-Q # standart kitaplıkları, bölümünde açıklandığı gibi hisse programlarının doğruluğunu sağlamak için çeşitli yollar sunar <xref:microsoft.quantum.guide.testingdebugging> .
+Q#Standart kitaplıklar, bölümünde açıklandığı gibi hisse programlarının doğruluğunu sağlamak için çeşitli yollar sağlar <xref:microsoft.quantum.guide.testingdebugging> .
 Büyük ölçüde konuşuyor, bu destek, hedef makineye ana bilgisayar programına veya geliştiriciye ek tanılama bilgileri sağlamasını belirten işlev ve işlemler biçiminde gelir veya işlev ya da işlem çağrısıyla ifade edilen koşulların ve varyantların doğruluğunu zorunlu kılar.
 
 ## <a name="machine-diagnostics"></a>Makine tanılama ##
@@ -30,7 +33,7 @@ Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> `Message`imza içeriyor `(String -> Unit)` , bir hata ayıklama günlüğü iletisinin yaydığını temsil eden, Q # içinden gözlemlenemez.
+> `Message`imza içerir `(String -> Unit)` ve bir hata ayıklama günlüğü iletisinin yayılamıyor olduğunu temsil eder Q# .
 
 <xref:microsoft.quantum.diagnostics.dumpmachine>Ve <xref:microsoft.quantum.diagnostics.dumpregister> callables, hedef makinelere, geçerli olarak ayrılmış olan tüm qubits ve sırasıyla belirli bir qubit kaydı hakkında tanılama bilgileri sağlar.
 Her bir hedef makine, bir döküm yönergesine yanıt olarak hangi tanılama bilgilerinin sağlandığını farklılık gösterir.
@@ -49,7 +52,7 @@ Bu _koşullar, giriş_olarak geçirilen bir veya daha fazla qubit 'in durumları
 Örneğin, `EqualityFactI(1 + 1, 2, "1 + 1 != 2")` $1 + 1 = $2 olan matematiksel olguyu temsil ederken, `AssertQubit(One, qubit)` `qubit` ölçüyle bir belirsizlik döndüren koşulu temsil eder `One` .
 Önceki durumda, koşulun yalnızca kendi değerleri verilen değerini denetliyoruz, ikincisi de onaylaması değerlendirmek için qubit durumu hakkında bir şeyler bilmelidir.
 
-Q # standart kitaplıkları, olguları temsil etmek için çeşitli farklı işlevler sağlar; örneğin:
+Q#Standart kitaplıklar, olguları temsil etmek için çeşitli farklı işlevler sağlar; örneğin:
 
 - <xref:microsoft.quantum.diagnostics.fact>
 - <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact>
@@ -67,7 +70,7 @@ Daha genel olarak, <xref:microsoft.quantum.diagnostics.assertmeasurement> işlem
 Onaylama başarısız olursa, yürütme, verilen iletiyle çağırarak sona erer `fail` .
 Varsayılan olarak, bu işlem uygulanmaz; Bunu destekleyebilen simülatörleri, çalışma zamanı denetimini gerçekleştiren bir uygulama sağlamalıdır.
 `AssertMeasurement`imza içeriyor `((Pauli[], Qubit[], Result, String) -> ())` .
-`AssertMeasurement`, Çıkış türü olarak boş bir tanımlama grubu olan bir işlev olduğundan, çağrısı yapmadan hiçbir efekt `AssertMeasurement` bir Q # programı içinde observable değildir.
+`AssertMeasurement`, Çıkış türü olarak boş bir tanımlama grubu olan bir işlev olduğundan, çağrılmasından hiçbir efekt `AssertMeasurement` bir program içinde observable değildir Q# .
 
 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability>İşlem işlevi, verilen pabdtabanında verilen qubits 'in belirli bir tolerans dahilinde verilen olasılığa sahip olduğunu ölçmeye yönelik onaylar.
 Tolerans eklenebilir (ör. `abs(expected-actual) < tol` ).

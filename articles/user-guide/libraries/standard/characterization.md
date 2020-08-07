@@ -6,12 +6,15 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0090fb2b9ac5f3c9d195a3ab02dcd21c848d8ef7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436535"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868636"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Hisse ve Istatistik #
 
@@ -19,7 +22,7 @@ Yararlı hisse algoritmaları geliştirmek için işlemlerin etkilerini niteleye
 Bu, bir hisse sisteminin her ölçümü en fazla bir bilgi elde ettiği için bu zor bir değer.
 Bir eigenvalue öğrenmek için, tek başına bir hisse alım durumunda, kullanıcının bu kavramları temsil etmek için gereken pek çok bilgi bitini bir araya getirmek için birçok ölçüm sonucunun birlikte kullanılması gerekir.
 Her [şey, bu](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) durum kopyasının tek bir kopyasından rastgele bir hisse alım durumu öğrenmenin bir yolu olmadığını ve bu nedenle durumun kopyalarını oluşturmanıza olanak sağladığından, hisse alma işlemleri özellikle sanal olarak kullanılır.
-Bu hisse Sayın Kullanıcı tarafından bu şekilde gösterilmesi, Q # ' ın sergilemeyeceği veya hatta *bir durumun hisse* için ne kadar bir durum olduğunu belirtmeyeceğine göre yansıtılır.
+Bu hisse Sayın Kullanıcı tarafından bu şekilde gösterilmesi, Q# bir durumun hisse amayan programlar için ne olduğunu ortaya çıkaran ya da tanımlamayan bir *is* olgusuna yansıtılmıştır.
 Bu nedenle, işlemleri ve durumları siyah kutu olarak düşünerek hisse uygun hale getirme yaklaşıyoruz; Bu yaklaşım, hisse uygun, doğrulama ve doğrulamanın (QCVV) deneysel uygulaması ile ortak olarak çok daha yaygın bir şekilde paylaşır.
 
 Daha önce ele alınan diğer kitaplıkların birçoğu karakter ayırma farklıdır.
@@ -36,7 +39,7 @@ Bu, her adımın bir yinelemeli bir şekilde açıklandığı aşamayı daha son
 Aşağıda önerilen yöntemlerin her biri, aşamayı öğrenmek için denemeleri ve farklı veri işleme yöntemleri tasarlamak üzere farklı bir strateji kullanır.  Bunların her biri, ciddi bir hata sınırlarına sahip olmanın, önceki bilgileri birleştirme, hataları tolerans veya bellek için kabul edilen klasik bilgisayarlarda çalıştırma yeteneklerine kadar benzersiz bir avantajı vardır.
 
 Yinelemeli aşama tahminlerini tartışmak için, bir siyah kutu işlemi olarak verilen bir Unitary $U $ ' i düşüneceğiz.
-[Veri yapılarında](xref:microsoft.quantum.libraries.data-structures)Oracles bölümünde açıklandığı gibi, Q # Canon, <xref:microsoft.quantum.oracles.discreteoracle> kayıt düzeni türü tarafından tanımlanan Kullanıcı tanımlı tür ile bu işlemleri modeller `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
+[Veri yapılarında](xref:microsoft.quantum.libraries.data-structures)Oracles bölümünde açıklandığı gibi, Q# Canon, <xref:microsoft.quantum.oracles.discreteoracle> kayıt türü tarafından tanımlanan Kullanıcı tanımlı türe göre bu işlemleri modelleyerek `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
 `U : DiscreteOracle`Daha sonra, `U(m)` için $U ^ m $ uygular `m : Int` .
 
 Bu tanım söz konusu olduğunda, yinelemeli aşama tahmininin her adımı, $ \ket{+} $ durumunda bir yardımcı qubit, $U (m) $ ' nin [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) ' i olduğunu varsaydığımız ilk durum olan $ \ket{\phi} $, ör. $U (m) \ket{\phi} = e ^ {im\phi} \ demet {\ Fi} $.  
@@ -47,7 +50,7 @@ Denetim olarak kullanılan yardımcı qubit, `U(m)` tek bir klasik elde etmek i�
 
 Bu noktada, `Result` yinelemeli aşama tahmini aracılığıyla elde edilen değerlerden aşamayı yeniden oluşturmak, klasik istatistiksel çıkarım sorunudur.
 Sabit bir çıkarım yöntemi verildiğinde elde edilen bilgileri en üst düzeye çıkaran $m $ değerini bulmak, istatistikte yalnızca bir sorundur.
-Bunu, bu klasik çıkarım sorununu çözmek için Q # Canon ' de sunulan istatistiksel algoritmaları tanımlamaya devam etmeden önce, bu işlemi bir teorik olarak, Bayema parametresi tahmin formalronu 'da, bir teorik olarak, bir teorik özelliği olan bir teorik düzeyde
+Bunu, bu Q# Klasik çıkarım sorununu çözmek için Canon 'de sunulan istatistiksel algoritmaları tanımlamaya devam etmeden önce, bu hatayı, bir teorik olarak, Bayema parametresi tahmin formalronu 'de bir teorik olarak, en çok bir teorik olarak, bir teorik
 
 ### <a name="iterative-phase-estimation-without-eigenstates"></a>Idgenstates olmadan yinelemeli aşama tahmini ###
 
@@ -127,7 +130,7 @@ Bu nedenle, sürekli sorgular ile aşama tahmini kullanmak, $t $ ' ın bir tamsa
 
 ### <a name="random-walk-phase-estimation"></a>Rastgele yürüme aşaması tahmini ###
 
-Q #, yinelemeli aşama tahmininizden elde edilen veri kaydı üzerinde rastgele bir adım adım şekilde çalışan hisse kullanımı için tasarlanan Bayeme aşaması tahmini için yararlı bir yaklaşık yol sağlar.
+Q#yinelemeli aşama tahmininizden elde edilen veri kaydı üzerinde rastgele bir adım adım şekilde çalışan hisse için yakın bir işlem tahmini olan Bayeme aşaması tahminimizin yararlı bir şekilde kullanılmasını sağlar.
 Bu yöntem hem Uyarlamalı hem de tamamen belirleyici olduğundan, tahmini aşama $ \hat{\phi} $ içindeki hataların neredeyse en iyi şekilde ölçeklendirilmesine olanak tanır.
 
 Protokol, önceki dağıtımın Gauss olduğunu varsayan yaklaşık bir Bayeme çıkarım yöntemi kullanır.
@@ -141,7 +144,7 @@ Geriye doğru ilerleyebilme özelliği, ilk önceki standart sapma inapropriatel
 
 ## <a name="calling-phase-estimation-algorithms"></a>Aşama tahmini algoritmaları çağırma ##
 
-Q # Canon ile birlikte sunulan her aşama tahmin işlemi, son tahmin $ \hat{\phi} $ ' i talep ettiğimiz kaliteyi doğru bir şekilde parametreleştirirken farklı bir giriş kümesi alır.
+Canon ile birlikte sunulan her aşama tahmin işlemi, Q# son tahmin $ \hat{\phi} $ ' i talep ettiğimiz kaliteyi karşılayan farklı bir giriş kümesi alır.
 Bununla birlikte, bu çeşitli girişler ortak bir şekilde yaygın bir şekilde yapılır, bu da kalite parametrelerinin üzerindeki kısmi uygulama ortak bir imzaya neden olur.
 Örneğin, <xref:microsoft.quantum.characterization.robustphaseestimation> sonraki bölümde ele alınan işlem aşağıdaki imzaya sahiptir:
 

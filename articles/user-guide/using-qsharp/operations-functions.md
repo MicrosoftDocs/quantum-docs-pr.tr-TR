@@ -1,28 +1,31 @@
 ---
-title: "Q 'daki işlemler ve işlevler #"
+title: İçindeki işlemler ve işlevlerQ#
 description: İşlem ve işlevlerin yanı sıra denetlenen ve Adjoint işlem uzmanlıklarını tanımlama ve çağırma.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: 08eaf150a38afd789f8a23f567ff111d002bac07
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 76437c83df894fa86409e680f961d97e267c6869
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884210"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867888"
 ---
-# <a name="operations-and-functions-in-q"></a>Q 'daki işlemler ve Işlevler #
+# <a name="operations-and-functions-in-no-locq"></a>İçindeki işlemler ve IşlevlerQ#
 
 ## <a name="defining-new-operations"></a>Yeni Işlemleri tanımlama
 
-İşlemler, Q # ' ın temel sayısıdır.
-Bildirdikten sonra, klasik .NET uygulamalarından çağrılabilir; Örneğin, simülatör veya Q # içinde başka işlemler olabilir.
-Q # içinde tanımlanan her işlem, dil tarafından tanımlanan yerleşik iç işlemler de dahil olmak üzere herhangi bir sayıda işlemi çağırabilir. Bu iç işlemleri Q # ' ın tanımladığı belirli yol, hedef makineye bağlıdır.
+İşlemleri Core Q# .
+Bildirdikten sonra, klasik .NET uygulamalarından çağrılabilir, örneğin, simülatör veya içinde başka işlemler olabilir Q# .
+İçinde tanımlanan her işlem Q# , dil tarafından tanımlanan yerleşik iç işlemler de dahil olmak üzere herhangi bir sayıda işlemi çağırabilir. Q#Bu iç işlemleri tanımlayan belirli bir yol, hedef makineye bağlıdır.
 Derlendiğinde, her işlem hedef makinelere sağlanlenebilecek bir .NET sınıf türü olarak temsil edilir.
 
-Her Q # kaynak dosyası herhangi bir sayıda işlem tanımlayabilir.
+Her Q# kaynak dosya, herhangi bir sayıda işlem tanımlayabilir.
 İşlem adları ad alanı içinde benzersiz olmalıdır ve tür veya işlev adlarıyla çakışmayabilir.
 
 İşlem bildirimi, anahtar sözcüğünden ve `operation` ardından işlemin adı olan sembol, işlem için bağımsız değişkenleri tanımlayan türü belirlenmiş bir tanımlayıcı tanımlama grubu, iki nokta üst üste `:` , işlemin sonuç türünü açıklayan bir tür açıklaması, isteğe bağlı olarak işlem özellikleri olan bir ek açıklama, bir açık küme ayracı ve sonra da işlem bildiriminin gövdesini içerir `{ }` .
@@ -61,16 +64,16 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 ```
 
 > [!NOTE]
-> Q # içindeki her işlem tam olarak bir giriş alır ve tam olarak bir çıkış döndürür.
+> İçindeki her işlem Q# tam olarak bir giriş alır ve tam olarak bir çıkış döndürür.
 > Birden çok giriş ve çıkış, birden çok değeri birlikte tek bir değerde depolayan *Tanımlama grupları*kullanılarak temsil edilir.
-> Bu şekilde, Q #, "kayıt düzeni oluşturma" dilidir.
+> Bu şekilde, Q# "kayıt düzeni oluşturma" dilidir.
 > Bu kavramı takip eden bir dizi boş parantezler, `()` daha sonra türü olan "boş" kayıt düzeni olarak okunmalıdır `Unit` .
 
 ## <a name="controlled-and-adjoint-operations"></a>Denetlenen ve Adjoint Işlemleri
 
-Bir işlem, bir Unitary dönüştürmesi uygularsa, Q # içindeki birçok işlem için durum olduğu gibi, *adjointed* veya *denetimli*olduğunda işlemin nasıl davrandığını tanımlamak mümkündür. Bir işlemin *adjoint* özelleştirmesi işlemin nasıl davranması gerektiğini belirtir, *denetimli* bir özelleşme, uygulamanın belirli bir hisse kaydı durumunda olduğu durumlarda bir işlemin nasıl davranması gerektiğini belirtir.
+Bir işlem, içindeki birçok işlem için olduğu gibi bir Unitary dönüştürmesi uygularsa, Q# *adjointed* veya *denetimli*olduğunda işlemin nasıl davrandığını tanımlamak mümkündür. Bir işlemin *adjoint* özelleştirmesi işlemin nasıl davranması gerektiğini belirtir, *denetimli* bir özelleşme, uygulamanın belirli bir hisse kaydı durumunda olduğu durumlarda bir işlemin nasıl davranması gerektiğini belirtir.
 
-Hisse unsurlarının bir bölümünü, hisse bilgi işlem işlemlerinin birçok yönü için çok önemlidir. Faydalı bir Q # programlama tekniğinden oluşan bir örnek için, bu makaledeki [conjugations](#conjugations) bakın. 
+Hisse unsurlarının bir bölümünü, hisse bilgi işlem işlemlerinin birçok yönü için çok önemlidir. Faydalı programlama tekniğinin yanı sıra ele alınan bir örnek için Q# , bu makaledeki [conjugations](#conjugations) bakın. 
 
 Bir işlemin denetlenen sürümü, yalnızca tüm denetim qubits 'in belirtilen durumda olması durumunda temel işlemi etkili bir şekilde uygulayan yeni bir işlemdir.
 Denetim qubitleri üst konumundayken, temel işlem üst konumun uygun bölümüne doğru şekilde uygulanır.
@@ -83,15 +86,15 @@ Doğal olarak, *denetlenen bir adjoint* özelleştirmesi de bir işlemin adjoint
 > Bir işlemin büyük bir bir şekilde uygulanması ve sonra adekliği, bu durum, $UU ^ \gger = U ^ \gger U = \ID $, kimlik matrisi olan olgu tarafından gösterildiği gibi durumu değişmeden bırakır.
 > Denetlenen bir işlemin Unitary temsili biraz daha fazla bir işlemdir, ancak daha fazla ayrıntı için [hisse bilgi işlem kavramlarıyla daha fazla bilgi bulabilirsiniz: birden çok qubit](xref:microsoft.quantum.concepts.multiple-qubits).
 
-Aşağıdaki bölümde, bu çeşitli uzmanların Q # kodunuzda nasıl çağrılacağını ve bunları desteklemek için işlemlerin nasıl tanımlanacağı açıklanmaktadır.
+Aşağıdaki bölümde, bu çeşitli uzmanların kodunuzda nasıl çağrılacağını Q# ve bunları desteklemek için işlemlerin nasıl tanımlanacağı açıklanmaktadır.
 
 ### <a name="calling-operation-specializations"></a>İşlem uzmanlık işlemleri çağrılıyor
 
-Q # ' daki bir *functor* , başka bir işlemden yeni bir işlem tanımlayan bir fabrikadır.
-Q # içindeki iki standart komik `Adjoint` ve ' dir `Controlled` .
+' De bir *functor* Q# , başka bir işlemden yeni bir işlem tanımlayan bir fabrikadır.
+İçindeki iki standart komik, Q# ve ' `Adjoint` dir `Controlled` .
 
 Funörler, yeni işlemin uygulamasını tanımlarken temel işlemin uygulamasına erişebilir.
-Bu nedenle, funörler geleneksel daha yüksek düzey işlevlerden daha karmaşık işlevler gerçekleştirebilir. Funörler, Q # tür sisteminde bir gösterimine sahip değildir. Bu nedenle, şu anda bunları bir değişkene bağlamak veya bağımsız değişken olarak geçirmek mümkün değildir. 
+Bu nedenle, funörler geleneksel daha yüksek düzey işlevlerden daha karmaşık işlevler gerçekleştirebilir. Funörler tür sisteminde bir gösterimine sahip değildir Q# . Bu nedenle, şu anda bunları bir değişkene bağlamak veya bağımsız değişken olarak geçirmek mümkün değildir. 
 
 Yeni bir işlem döndüren bir işleme uygulayarak bir functor kullanın.
 Örneğin, `Adjoint` işlem için functor uygulandığında `Y` Yeni işlem döndürülür `Adjoint Y` . Yeni işlemi başka bir işlem gibi çağırabilirsiniz.
@@ -109,7 +112,7 @@ Yeni işlem, temel işlemle aynı imzaya ve türe sahip `Y` .
 Benzer şekilde, `Controlled X(controls, target)` `Controlled` `X` Yeni bir işlem oluşturmak için functor işlemini uygular ve bu yeni işlemi ve için uygular `controls` `target` .
 
 > [!NOTE]
-> Q # ' da, denetlenen sürümler her zaman bir denetim qubit dizisini alır ve denetim her zaman hesaplama () durumunda olan tüm denetim qubits 'i `PauliZ` `One` $ \tus$ ' i temel alır {1} .
+> Q#' De, denetimli sürümler her zaman bir denetim qubit dizisini alır ve denetim her zaman hesaplama ( `PauliZ` ) durumunda olan `One` $ \tus$ olan tüm denetim qubits 'i temel alır {1} .
 > Diğer durumlara göre denetlemek, denetimli işlemden önce denetim qubits 'e uygun Unitary işlemini uygulayarak ve sonra, denetimli işlemden sonra Unitary işleminin evirimini uygulayarak elde edilir.
 > Örneğin, `X` denetimli bir işlemden önce ve sonra bir işlemi bir denetim qubit uygulamak, `Zero` Bu qubit için ($ \ket $) durumunda işlemin denetlenmesini sağlar {0} ; durum `H` üzerinde ve sonrasında denetimleri `PauliX` `One` , durum yerine Pauli X, $ \tus\mathrel{ {-} : =} (\tus- {0} {1} \tus)/\sqrt {2} $ olan `PauliZ` `One` -1.
 
@@ -140,7 +143,7 @@ Başka bir örnek olarak, `CNOT(control, target)` olarak uygulanabilir `Controll
 `DecodeSuperdense`Ölçümler de dahil olmak üzere, Unitary bir işlem değildir ve bu nedenle hiçbir adeksel uzmanlık yok (Bu, bu tür bir işlemin döndürdüğü ilgili gereksinimi geri çağırır `Unit` ).
 Ancak, `BitFlip` yalnızca Unitary işlemini gerçekleştirdiğinden, <xref:microsoft.quantum.intrinsic.x> bunu her iki uzmanlıklarla tanımlamış olabilirsiniz.
 
-Bu bölümde, Q # işlem bildirimlerinizde özelleştirilmiş uygulanmaları 'nın nasıl dahil olduğu açıklanır ve bu nedenle, `Adjoint` veya funlar ile birlikte çağrılabilir `Controlled` .
+Bu bölümde, işlem bildirimlerinizde uzmanlıklarınızın nasıl dahil olduğu Q# , bu nedenle veya komik bir şekilde çağrılabilir `Adjoint` `Controlled` .
 Bazı durumlar hakkında daha fazla bilgi edinmek için geçerli olduğu veya bazı Uzmanlıkları bildirmek için geçerli olmayan durumlar hakkında daha fazla bilgi için, bu makaledeki [özelleştirilmiş oluşturmaları Ilgili koşullar](#circumstances-for-validly-defining-specializations) bölümüne bakın.
 
 İşlem özellikleri, bildirildiği işleme ne tür işlevler uygulayabileceğinizi ve sahip oldukları etkiyi tanımlar. Bu uzmanlıklardan biri, özellikle işlem özelliklerine sahip bir ek açıklama aracılığıyla işlem imzasının bir parçası olarak bildirilemez: `is Adj` ,, `is Ctl` veya `is Adj + Ctl` .
@@ -148,7 +151,7 @@ Her özelleştirmenin gerçek uygulama *örtük* veya *Açık* bir şekilde tan�
 
 ### <a name="implicitly-specifying-implementations"></a>Örtük olarak uygulamaları belirtme
 
-Bu durumda, işlem bildiriminin gövdesi yalnızca varsayılan uygulamadan oluşur. Örneğin:
+Bu durumda, işlem bildiriminin gövdesi yalnızca varsayılan uygulamadan oluşur. Örnek:
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -189,7 +192,7 @@ Aşağıda, bazı açık özelleşmeye örnek olarak tüm olasılıklar verilmi�
 
 #### <a name="explicit-specialization-declarations"></a>Açık Özelleştirme bildirimleri
 
-S # işlemleri aşağıdaki açık özelleştirme bildirimlerini içerebilir:
+Q#işlemler aşağıdaki açık özelleştirme bildirimlerini içerebilir:
 
 - `body`Özelleşme, hiçbir komik uygulanmamış şekilde işlemin uygulanmasını belirtir.
 - `adjoint`Özelleşme, işlem için `Adjoint` functor uygulanmış olan uygulamayı belirtir.
@@ -224,7 +227,7 @@ Yönergelerin ve `auto` tümünün bir kapanış noktalı virgül olması gereki
 > [!TIP]   
 > Bir işlem kendi kendine adekiyiyise, `self` derleyicinin en iyi duruma getirme amacıyla bu bilgileri kullanmasına izin vermek için oluşturma yönergesi aracılığıyla adjoint veya denetimli adjoint özelleşmesini açıkça belirtin.
 
-Kullanıcı tanımlı bir uygulama içeren bir özelleştirme bildirimi, bir bağımsız değişken kayıt kümesinden ve ardından, özelleştirmeyi uygulayan Q # koduna sahip bir ekstre bloğundan oluşur.
+Kullanıcı tanımlı bir uygulama içeren bir özelleştirme bildirimi, bir bağımsız değişken kayıt kümesinden ve ardından özelleşmeyi uygulayan kodla bir ifade bloğunun yer aldığı bir Q# .
 Bağımsız değişken listesinde, `...` işlem için belirtilen bağımsız değişkenleri bir bütün olarak temsil etmek için kullanılır.
 `body`Ve için `adjoint` bağımsız değişken listesi her zaman olmalıdır `(...)` ; ve için `controlled` `adjoint controlled` bağımsız değişken listesi, denetim qubits dizisini temsil eden bir sembol olmalıdır `...` ; Örneğin, parantez içine alınmış `(controls,...)` .
 
@@ -326,9 +329,9 @@ Gövdesi denetimli bir adjoint sürümüne sahip olmayan diğer işlemlere çağ
 
 Daha az komik, ancak aynı imzaya sahip bir işlem kullandığınızda her yerde desteklenen ek komik bir işlem kullanın. Örneğin, türündeki bir işlemi kullandığınız her yerde türünde bir işlem kullanın `(Qubit => Unit is Adj)` `(Qubit => Unit)` .
 
-Q #, çağrılabilir dönüş türlerine göre *birlikte değişken* : bir tür döndüren çağrılabilir, `'A` aynı giriş türüne ve ile uyumlu bir sonuç türüne sahip çağrılabilir ile uyumludur `'A` .
+Q#çağrılabilir dönüş türlerine göre *birlikte değişken* : bir tür döndüren çağrılabilir, `'A` aynı giriş türüne ve ile uyumlu bir sonuç türüne sahip çağrılabilir ile uyumludur `'A` .
 
-S #, giriş türlerine göre *değişken karşıtı:* giriş olarak bir türü alan çağrılabilir, `'A` aynı sonuç türü ve ile uyumlu bir giriş türü olan çağrılabilir ile uyumludur `'A` .
+Q#, giriş türlerine göre *değişken karşıtı:* giriş olarak bir türü alan çağrılabilir, `'A` aynı sonuç türü ve ile uyumlu bir giriş türü olan çağrılabilir ile uyumludur `'A` .
 
 Diğer bir deyişle, aşağıdaki tanımlar verildiğinde,
 
@@ -357,7 +360,7 @@ function ConjugateUnitaryWith(
 - Türünden bir değer döndürür `(Qubit[] => Unit is Adj + Ctl)` `ConjugateInvertWith` .
 
 > [!IMPORTANT]
-> Q # 0,3, Kullanıcı tanımlı türlerin davranışında önemli bir farklılık sunmuştur.
+> Q#0,3, Kullanıcı tanımlı türlerin davranışında önemli bir farklılık sunmuştur.
 
 Kullanıcı tanımlı türler, alt tür yerine temel alınan türün Sarmalanan bir sürümü olarak değerlendirilir.
 Bu, Kullanıcı tanımlı türün bir değerinin, temel alınan türün bir değerini beklediğinizi tahmin ettiğiniz durumlarda kullanılabilir olmadığı anlamına gelir.
@@ -380,7 +383,7 @@ operation ApplyWith<'T>(
 }
 ```
 
-0,9 sürümümüzden başlayarak, Q #, önceki dönüştürmeyi uygulayan bir Birleşik bildirim bildirisini destekler. Bu ifadeyi kullanarak, işlem `ApplyWith` aşağıdaki şekilde uygulanabilir:
+0,9 sürümümüzden başlayarak, Q# önceki dönüştürmeyi uygulayan bir Birleşik bildirim bildirisini destekler. Bu ifadeyi kullanarak, işlem `ApplyWith` aşağıdaki şekilde uygulanabilir:
 
 ```qsharp
 operation ApplyWith<'T>(
@@ -405,12 +408,12 @@ Bu tür bir birleşim deyimi, dış ve iç dönüşümler işlem olarak hazır d
 
 ## <a name="defining-new-functions"></a>Yeni Işlevleri tanımlama
 
-İşlevler, bir çıkış değerinin hesaplanmasının dışında etkileri olmasına izin verilmediğinden, işlemlerinden farklı olarak, yalnızca belirleyici olan, bu işlemler olan Q # içindeki klasik yordamlardır.
+İşlevler, ' de, Q# bir çıkış değeri hesaplamasının ötesinde etkileri olmasına izin verilmediğinden işlemlerinden farklı olarak, ' de yalnızca belirleyici ve klasik yordamlardır.
 Özellikle, işlevler işlemleri çağıramaz; işlem yapın, ayırın veya ödünç alma; örnek rastgele sayılar; ya da diğer bir deyişle, giriş değerinin ötesine bir işleve bağımlı duruma bağlıdır.
-Sonuç olarak, Q # işlevleri *saf*olduğundan, her zaman aynı giriş değerlerini aynı çıkış değerleriyle eşleştirirler.
-Bu davranış, Q # derleyicisinin, işlem uzmanlıklarını oluştururken işlevlerin nasıl ve ne zaman çağrılacağını güvenle yeniden oluşturmasını sağlar.
+Sonuç olarak, Q# işlevler *saf*olduğundan, her zaman aynı giriş değerlerini aynı çıkış değerleriyle eşleştirirler.
+Bu davranış, Q# derleyicinin işlem uzmanlıklarını oluştururken işlevlerin nasıl ve ne zaman çağrılacağını güvenle yeniden oluşturmasını sağlar.
 
-Her Q # kaynak dosyası herhangi bir sayıda işlev tanımlayabilir.
+Her Q# kaynak dosya, herhangi bir sayıda işlev tanımlayabilir.
 İşlev adları bir ad alanı içinde benzersiz olmalıdır ve işlem veya tür adlarıyla çakışamaz.
 
 Bir işlev tanımlamak, bir işlev için hiçbir adjoint veya denetimli uzmanlık tanımlanmamasının dışında, bir işlemi tanımlamaya benzer şekilde çalışır.
@@ -442,7 +445,7 @@ function DotProduct(a : Double[], b : Double[]) : Double {
 
 Bunu yapmak mümkün olduğunda, işlemleri daha kolay kullanabilmek için işlemler yerine işlevler bakımından klasik mantığı yazmak yararlı olur. Örneğin, önceki `Square` bildirimi bir *işlem*olarak yazdıysanız, derleyici aynı girişe çağrı yapan aynı çıkışları tutarlı bir şekilde üretmesi gerektiğini garanti edemeyebilir.
 
-İşlevler ve işlemler arasındaki farkın altını bir şekilde çözmek için, bir Q # işlemi içinden rastgele bir sayı örnekleme sorununu ele alalım:
+İşlevler ve işlemler arasındaki farkı altı çizili yapmak için, bir işlemin içinden rastgele bir sayı örnekleme sorununu ele alalım Q# :
 
 ```qsharp
 operation U(target : Qubit) : Unit {
@@ -464,7 +467,7 @@ Bu nedenle, işlevlerde mümkün olduğunca klasik mantığı yalıtmak, diğer 
 
 Tanımlamak isteyebileceğiniz birçok işlev ve işlem, kendi giriş türlerine gerçekten büyük ölçüde güvenmiyor, ancak bunun yerine yalnızca başka bir işlev veya işlem aracılığıyla türlerini örtülü olarak kullanın.
 Örneğin, yaygın olarak kullanılan *harita* kavramını birçok işlevsel dilde değerlendirin. $f (x) $ işlevi ve $ \{ x_1, x_2, \noktalar, x_n $, Map bir değer koleksiyonu verildiğinde, \} $ \{ f (x_1), f (x_2), \noktalar, f (x_n) $ gibi yeni bir koleksiyon döndürür \} .
-Bunu Q # ' da uygulamak için işlevlerin ilk sınıf olduğu olgunun avantajlarından yararlanın.
+Bunu uygulamak için Q# , işlevlerin ilk sınıf olduğu olgunun avantajlarından yararlanın.
 İşte `Map` , `T` ihtiyacınız olan türleri öğrenirken yer tutucu olarak kullanmanın hızlı bir örneği.
 
 ```qsharp
@@ -504,17 +507,17 @@ Ayrıca, yeni bir tanımlama grubu veya UDT oluşturursanız, yeni türle birlik
 Bu, az sayıda işlev için daha fazla ve daha fazla işlev topladıkça, bu tür bir izleme tablosu olsa da `Map` , yeni türleri tanıtma maliyeti oldukça kısa bir süre boyunca makul bir şekilde büyük olur.
 
 Bununla birlikte, bu zorluklar, derleyicinin farklı sürümlerinin nasıl ilişkili olduğunu tanıması için ihtiyaç duymamanızdan kaynaklanır `Map` .
-Etkin olarak, derleyicinin `Map` bir tür matematik işlevi olarak q # *türünden* q # işlevlerine işlem görmesini istiyorsunuz.
+Etkin olarak, derleyicinin `Map` türlerden bir tür matematik işlevi olarak bir tür işlevi görmesini istersiniz Q# *types* Q# .
 
-S # formbu kavramı, işlevlerin ve işlemlerin *tür parametrelerine*ve bunların normal demet parametrelerine sahip olmasını sağlar.
+Q#işlevlerin ve işlemlerin *tür parametrelerine*ve sıradan demet parametrelerine izin vererek bu kavramı şekillendirir.
 Önceki örneklerde, `Map` `Int, Pauli` ilk durumda ve ikinci durumda tür parametrelerine sahip olacak şekilde düşünmek istersiniz `Double, String` .
 Çoğu bölüm için, bu tür parametrelerini sıradan türlermiş gibi kullanın. Dizi ve tanımlama oluşturmak, işlevleri ve işlemleri çağırmak ve sıradan ya da kesilebilir değişkenlere atamak için parametre türü değerlerini kullanın.
 
 > [!NOTE]
-> Dolaylı bağımlıların en büyük olması, bir Q # programının türün yapısına doğrudan güvenebileceği `Qubit` ancak bu tür türleri diğer işlemlere ve işlevlere geçirmesi **gereken** qubitlerdir.
+> Dolaylı bağımlıların en büyük olması, bir Q# programın doğrudan türün yapısına bağlı olması, `Qubit` ancak bu tür türleri diğer işlemlere ve işlevlere geçirmesi **gereken** qubitlerdir.
 
 Önceki örneğe dönerek, `Map` bir tane olmak üzere tür parametrelerine sahip olması gerektiğini, diğeri girişi temsil etmek için `fn` ise çıktıyı temsil edecek şekilde görürsünüz `fn` .
-Q # dilinde, bu, `<>` {} bildiriminde bir işlev veya işlemin adından sonra ve her tür parametresini listeleyerek açılı ayraçlar (brakets $ \braket $! değil) eklenerek yazılır.
+İçinde Q# , bu, `<>` {} bildiriminde bir işlev veya işlemin adından sonra ve her tür parametresini listeleyerek açılı ayraç (yani brakets $ \bratus$! değil) eklenerek yazılır.
 Her tür parametresinin adı bir Tick ile başlamalı `'` ve sıradan bir tür ( *somut* tür olarak da bilinir) değil bir tür parametresi olduğunu gösterir.
 Bu nedenle, `Map` yazılır:
 
@@ -541,8 +544,8 @@ let paulis = Map(IntToPauli, ints);
 ```
 
 > [!TIP]
-> Genel işlevler ve işlemler yazmak, "kayıt düzeni-Out" ın Q # işlevleri ve işlemlerini düşünmek için çok faydalı bir yoldur.
-> Her işlev tam olarak bir giriş yaptığından ve tam olarak bir çıkış döndürdüğünden, türünde bir giriş `'T -> 'U` *herhangi* bir Q # işleviyle eşleşir.
+> Genel işlevler ve işlemler yazmak, "demet oluşturma-kapatma" Q# işlevinin işlevler ve işlemler hakkında düşünmek için çok faydalı bir yoldur.
+> Her işlev tam olarak bir giriş yaptığından ve tam olarak bir çıkış döndürdüğünden, tür girişi `'T -> 'U` herhangi bir *any* Q# işlevle eşleşir.
 > Benzer şekilde, herhangi bir işlemi türü bir girişe geçirebilirsiniz `'T => 'U` .
 
 İkinci bir örnek olarak, iki diğer işlevin birleşimini döndüren bir işlev yazma sınamasını göz önünde bulundurun:
@@ -571,15 +574,15 @@ function Compose<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B)) : ('A -
 }
 ```
 
-Q # standart kitaplıkları, daha yüksek sıralı denetim akışı hızlı bir şekilde daha kolay hale getirmek için tür parametreli işlem ve işlev aralığı sağlar.
-Bunlar, [Q # standart kitaplığı kılavuzunda](xref:microsoft.quantum.libraries.standard.intro)daha ayrıntılı olarak ele alınmıştır.
+Q#Standart kitaplıklar, daha yüksek sıralı denetim akışını Express 'in daha kolay hale getirmek için bu tür parametreli işlemler ve işlevlerin bir aralığını sunar.
+Bunlar, [ Q# standart kitaplık kılavuzunda](xref:microsoft.quantum.libraries.standard.intro)daha ayrıntılı olarak ele alınmıştır.
 
 
 ## <a name="callables-as-first-class-values"></a>Ilk sınıf değerleri olarak callables
 
-İşlemler yerine işlevleri kullanarak denetim akışı ve klasik mantık hakkında önemli bir tekniktir, bu işlemler ve Q # içindeki işlevler *birinci sınıf*olur.
+İşlemler yerine işlevleri kullanarak denetim akışı ve klasik mantık hakkında önemli bir tekniktir, bu işlemleri ve işlevleri Q# *ilk sınıfındır*.
 Diğer bir deyişle, her bir değer kendi sağ tarafındaki dilde değerlerdir.
-Örneğin, daha az dolaylı bir değer varsa, aşağıdakiler mükemmel bir Q # kodudur:
+Örneğin, daha az dolaylı bir değer varsa, aşağıdakiler tam olarak geçerli Q# koddur:
 
 ```qsharp
 operation FirstClassExample(target : Qubit) : Unit {
@@ -649,12 +652,12 @@ function SquareOperation(op : (Qubit => Unit)) : (Qubit => Unit) {
 }
 ```
 
-Prensibi, içindeki klasik mantık çok `SquareOperation` daha fazla olabilir, ancak derleyicinin işlevler hakkında sunabileceği garantilere göre bir işlemin geri kalanından yalıtılmıştır. Q # standart kitaplığı, bu yaklaşımı, klasik denetim akışını, hisse uygun maliyetli bir şekilde ifade etmek için kullanır.
+Prensibi, içindeki klasik mantık çok `SquareOperation` daha fazla olabilir, ancak derleyicinin işlevler hakkında sunabileceği garantilere göre bir işlemin geri kalanından yalıtılmıştır. Q#Standart kitaplık, klasik denetim akışını, hisse programlarının kullanabileceği bir şekilde ifade etmek için bu yaklaşımı kullanır.
 
 
 ## <a name="recursion"></a>Özyineleme
 
-Q # callables 'in doğrudan veya dolaylı olarak özyinelemeli olmasına izin verilir.
+Q#callables 'in doğrudan veya dolaylı olarak özyinelemeli olmasına izin verilir.
 Diğer bir deyişle, bir işlem veya işlev kendisini çağırabilir veya çağrılabilir işlemi doğrudan veya dolaylı olarak çağıran başka bir çağrılabilir çağrısı yapabilir.
 
 Ancak özyineleme kullanımı hakkında iki önemli yorum vardır:
@@ -662,8 +665,8 @@ Ancak özyineleme kullanımı hakkında iki önemli yorum vardır:
 - İşlemlerde özyineleme kullanımı, bazı iyileştirmelere engel olabilir.
   Bu girişim, algoritmanın yürütme süresi üzerinde önemli bir etkiye sahip olabilir.
 - Gerçek bir hisse cihazında çalışırken yığın alanı sınırlı olabilir ve bu nedenle derin özyineleme bir çalışma zamanı hatasına neden olabilir.
-  Özellikle, Q # derleyicisi ve çalışma zamanı, kuyruk özyinelemeyi tanımlamaz ve iyileştirmez.
+  Özellikle, Q# derleyici ve çalışma zamanı Kuyruk özyineleme 'yi tanımlamaz ve iyileştirmez.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Q # [değişkenleri](xref:microsoft.quantum.guide.variables) hakkında bilgi edinin.
+İçindeki [değişkenler](xref:microsoft.quantum.guide.variables) hakkında bilgi edinin Q# .

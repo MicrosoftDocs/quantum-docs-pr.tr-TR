@@ -1,28 +1,31 @@
 ---
 title: Hisse Machine Learning kitaplığı ile temel sınıflandırma
-description: "Microsoft QDK 'nin hisse Machine Learning kitaplığını kullanarak Q # dilinde yazılmış bir hisse ve sıralı sınıflandırıcının nasıl yürütüleceğini öğrenin."
+description: Q#Microsoft QDK 'Nin hisse Machine Learning kitaplığı kullanılarak yazılmış bir hisse ve sıralı sınıflandırıcının nasıl yürütüleceğini öğrenin.
 author: geduardo
 ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: 1d2538fd164c4c61c2712978d3b5c57b0eb766e6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: f9c3e7ab85c0f0d1a6063e593607d35c5cb76936
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275791"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868976"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Temel sınıflandırma: verileri QDK ile sınıflandırma
 
-Bu hızlı başlangıçta, QDK 'nin hisse Machine Learning kitaplığını kullanarak Q # dilinde yazılmış bir hisse ve sıralı sınıflandırıcının nasıl yürütüleceğini öğreneceksiniz. 
+Bu hızlı başlangıçta, Q# QDK 'Nin hisse Machine Learning kitaplığı kullanılarak yazılmış bir hisse ve sıralı sınıflandırıcının nasıl yürütüleceğini öğreneceksiniz. 
 
-Bu kılavuzda, Q # içinde tanımlanan bir sınıflandırıcı yapısını kullanarak yarı ay veri kümesini kullanacağız.
+Bu kılavuzda, içinde tanımlanan bir sınıflandırıcı yapısını kullanarak yarı ay veri kümesini kullanacağız Q# .
 
 ## <a name="prerequisites"></a>Ön koşullar
 
 - Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
-- Bir [Python konak programı](xref:microsoft.quantum.install.python) veya [C# ana bilgisayar programı](xref:microsoft.quantum.install.cs)için bir Q # projesi oluşturun.
+- Q# [Python konak programı](xref:microsoft.quantum.install.python) veya [C# ana bilgisayar programı](xref:microsoft.quantum.install.cs)için bir proje oluşturun.
 
 ## <a name="host-program"></a>Konak programı
 
@@ -34,7 +37,7 @@ Ana bilgisayar programınız üç bölümden oluşur:
 
     ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Visual Studio Code veya Komut Satırı ile Python](#tab/tabid-python)
 
-    Python 'dan gelen Q # sınıflandırıcınızı çalıştırmak için aşağıdaki kodu olarak kaydedin `host.py` . Bu öğreticinin ilerleyen kısımlarında açıklanan Q # dosyasına da ihtiyacınız olduğunu unutmayın `Training.qs` .
+    Q#Python 'un sınıflandırıcılarından istediğinizi çalıştırmak için aşağıdaki kodu olarak kaydedin `host.py` . Q#Bu öğreticinin ilerleyen kısımlarında açıklanan dosyanın da gerekli olduğunu unutmayın `Training.qs` .
 
     :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="3-42":::
 
@@ -49,7 +52,7 @@ Ana bilgisayar programınız üç bölümden oluşur:
 
     ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[Visual Studio Code veya Komut Satırı ile C#](#tab/tabid-csharp)
 
-    C# ' den gelen Q # sınıflandırıcınızı çalıştırmak için aşağıdaki kodu olarak kaydedin `Host.cs` . Bu öğreticinin ilerleyen kısımlarında açıklanan Q # dosyasına da ihtiyacınız olduğunu unutmayın `Training.qs` .
+    Q#C# ' den sınıflandırıcıdır, aşağıdaki kodu olarak kaydedin `Host.cs` . Q#Bu öğreticinin ilerleyen kısımlarında açıklanan dosyanın da gerekli olduğunu unutmayın `Training.qs` .
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -63,7 +66,7 @@ Ana bilgisayar programınız üç bölümden oluşur:
 
     ### <a name="c-with-visual-studio-2019"></a>[Visual Studio 2019 ile C#](#tab/tabid-vs2019)
 
-    Visual Studio 'Da C# ' den yeni Q # programınızı çalıştırmak için `Host.cs` Aşağıdaki C# kodunu içerecek şekilde değiştirin. Bu öğreticinin ilerleyen kısımlarında açıklanan Q # dosyasına da ihtiyacınız olduğunu unutmayın `Training.qs` .
+    Q#Visual Studio 'Da c# ' den yeni programınızı çalıştırmak için `Host.cs` Aşağıdaki c# kodunu içerecek şekilde değiştirin. Q#Bu öğreticinin ilerleyen kısımlarında açıklanan dosyanın da gerekli olduğunu unutmayın `Training.qs` .
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -78,7 +81,7 @@ Ana bilgisayar programınız üç bölümden oluşur:
 
 ## <a name="q-classifier-code"></a>Q \# sınıflandırıcı kodu
 
-Şimdi, ana bilgisayar programı tarafından çağrılan işlemlerin Q # içinde nasıl tanımlandığını görelim.
+Şimdi konak program tarafından çağrılan işlemlerin nasıl tanımlandığını görelim Q# .
 Aşağıdaki kodu adlı bir dosyaya kaydettik `Training.qs` .
 
 :::code language="qsharp" source="~/quantum/samples/machine-learning/half-moons/Training.qs" range="4-116":::
