@@ -6,22 +6,25 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
-ms.openlocfilehash: ede4ad005090e4ac8ffd9b05d27edfa91f8c50ab
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 3ee9e897eb142bbc9503a617cc3e25c1a665ff35
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327722"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866953"
 ---
-# <a name="what-are-the-q-programming-language-and-qdk"></a>Q# programlama dili ve QDK nedir?
+# <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Q# programlama dili ve QDK nedir?
 
-Q#, Microsoft'un kuantum algoritmaları geliştirmeye ve çalıştırmaya yönelik açık kaynak programlama dilidir. Bu, [Q# kitaplıklarını](xref:microsoft.quantum.libraries), [kuantum simülatörlerini](xref:microsoft.quantum.machines), [diğer programlama ortamlarına yönelik uzantıları](xref:microsoft.quantum.install) ve [API belgelerini](xref:microsoft.quantum.standardlibsintro) içeren Quantum geliştirme setinin (QDK) bir parçasıdır. Standart Q# kitaplığına ek olarak QDK; Kimya, Makine Öğrenmesi ve Sayısal kitaplıklarını da içerir.
+Q#, Microsoft'un kuantum algoritmaları geliştirmeye ve çalıştırmaya yönelik açık kaynak programlama dilidir. Bu, [Q# kitaplıklarını](xref:microsoft.quantum.libraries), [kuantum simülatörlerini](xref:microsoft.quantum.machines), [diğer programlama ortamlarına yönelik uzantıları](xref:microsoft.quantum.install) ve [API belgelerini](xref:microsoft.quantum.standardlibsintro) içeren Quantum geliştirme setinin (QDK) bir parçasıdır. QDK, Standart Q# kitaplığına ek olarak Kimya, Makine Öğrenmesi ve Sayısal kitaplıklarını da içerir.
 
-Q#, bir programlama dili olarak Python, C# ve F# dillerindeki tanıdık öğeleri kullanır ve döngüler, if/then deyimleri ve ortak veri türleri içeren programlar yazmak için temel bir yordamsal modeli destekler. Ayrıca kuantum odaklı yeni veri yapıları ve işlemleri sunar.
+Q#, bir programlama dili olarak Python, C# ve F# dillerindeki alışıldık öğeleri kullanır ve döngüler, if/then deyimleri ve ortak veri türleri içeren programlar yazmak için temel bir yordamsal modeli destekler. Ayrıca kuantum odaklı yeni veri yapıları ve işlemleri sunar.
 
 ## <a name="what-can-i-do-with-the-qdk"></a>QDK ile ne yapabilirim?
 
-QDK, çeşitli ortamlarda çalıştırabileceğiniz kuantum uygulamaları geliştirmek için ortak araçlar ve dillerle kullanabileceğiniz, Q# diline yönelik tam özellikli bir geliştirme setidir. Q# programları bir komut satırı uygulaması olarak çalışabilir, Jupyter Not Defterleri aracılığıyla çalışabilir veya bir Python ya da .NET konak programı kullanabilir.
+QDK, çeşitli ortamlarda çalıştırabileceğiniz kuantum uygulamaları geliştirmek için ortak araçlar ve dillerle kullanabileceğiniz, Q# diline yönelik tam özellikli bir geliştirme setidir. Q# programları Jupyter Not Defterleri aracılığıyla bir komut satırı uygulaması olarak çalışabilir veya bir Python ya da .NET konak programı kullanabilir.
 
 ### <a name="develop-in-common-tools-and-environments"></a>Ortak araçlarda ve ortamlarda geliştirme
 
@@ -33,7 +36,7 @@ Süper konum, dolaşıklık ve diğer kuantum işlemlerini keşfetmek için kuan
 
 ### <a name="run-programs-in-simulators"></a>Simülatörlerde program çalıştırma
 
-Kuantum programlarınızı tam durumlu bir kuantum simülatöründe veya sınırlı kapsama sahip bir Toffoli simülatöründe çalıştırın ya da Q# kodunuzu farklı tahmin araçlarında test edin. 
+Kuantum programlarınızı tam durumlu bir kuantum simülatöründe veya sınırlı kapsama sahip bir Toffoli simülatöründe çalıştırın ya da Q# kodunuzu farklı kaynak tahmin araçlarında test edin. 
 
 ## <a name="where-can-i-learn-more"></a>Nereden daha fazla bilgi edinebilirim?
 
@@ -43,7 +46,7 @@ Kuantum programlarınızı tam durumlu bir kuantum simülatöründe veya sınır
 | **Q# dilini daha ayrıntılı olarak incelemek istiyorum** | [Q# Kullanıcı Kılavuzu](xref:microsoft.quantum.guide)’nda türleri, ifadeleri, değişkenleri ve kuantum program yapısını keşfedin.|
 | **Yalnızca kuantum programları yazmaya başlamak istiyorum** | [Hızlı Başlangıçlar](xref:microsoft.quantum.install)’da Q# ortamınızı ayarlayın ve kuantum programları yazmaya başlayın.|
 
-## <a name="how-does-q-work"></a>Q# nasıl çalışır?
+## <a name="how-does-no-locq-work"></a>Q# nasıl çalışır?
 
 Bir Q# programı, bağımsız bir komut satırı uygulaması olarak derlenebilir veya Python ya da .NET dilinde yazılmış bir konak programı tarafından çağrılabilir.
 
@@ -55,7 +58,7 @@ Q# kodunu simülatörde yalıtmak, algoritmaların kuantum fiziği yasalarını 
 
 ## <a name="how-do-i-use-the-qdk"></a>QDK’yi nasıl kullanırım?
 
-Q# derleyicisi, Q# kitaplıkları ve kuantum simülatörleri de dahil olmak üzere Q# programları yazmak ve çalıştırmak için ihtiyacınız olan her şey yerel bilgisayarınızdan yüklenip çalıştırılabilir. Gelecekte Q# programlarınızı gerçek bir kuantum bilgisayarda uzaktan çalıştırabileceksiniz, ancak o zamana kadar QDK ile birlikte sunulan kuantum simülatörleri, doğru ve güvenilir sonuçlar sağlar.
+Q# derleyicisi, Q# kitaplıkları ve kuantum simülatörleri de dahil olmak üzere Q# programları yazmak ve çalıştırmak için ihtiyacınız olan her şey yerel bilgisayarınızdan yüklenip çalıştırılabilir. Gelecekte Q# programlarınızı gerçek bir kuantum bilgisayarda uzaktan çalıştırabileceksiniz, ancak o zamana kadar QDK ile birlikte sunulan kuantum simülatörleri doğru ve güvenilir sonuçlar sağlar.
 
 - [Komut satırından Q#](xref:microsoft.quantum.install.standalone) çalıştırmak, başlamak için en hızlı yoldur.
 

@@ -6,25 +6,28 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: bbd1f58ba7de205e452be7bac72b5fd78e7acd56
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 10b1faafa70c87a99ea09916e2c386b32f9a570f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871459"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866817"
 ---
-# <a name="develop-with-q-jupyter-notebooks"></a>Q# Jupyter Not Defterleri ile geliştirme
+# <a name="develop-with-no-locq-jupyter-notebooks"></a>Q# Jupyter Not Defterleri ile geliştirme
 
 Q# Jupyter Not Defterlerinde Q# işlemleri geliştirmek için QDK'yi yükleyin.
 
 Jupyter Not Defterleri yönergeler, notlar ve diğer içeriklerin yanı sıra yerinde kod yürütmeye olanak sağlar. Bu ortam, ekli açıklamalar veya kuantum bilişimi etkileşimli öğreticileri ile Q# kodu yazmak için idealdir. Kendi Q# not defterlerinizi oluşturmaya başlamak için gerekenler aşağıda verilmiştir.
 
 > [!NOTE]
-> * Q# Jupyter Not Defterlerinde yalnızca Q# kodu çalıştırılabilir ve işlemler dış konak programlarından (ör. Python veya C# dosyaları) çağrılamaz. Amacınız bir dış klasik konak programını kuantum programı ile birleştirmekse, bu ortam uygun değildir.
+> * Q# Jupyter Not Defterlerinde yalnızca Q# kodu çalıştırılabilir ve işlemler, dış konak programlarından (ör. Python veya C# dosyaları) çağrılamaz. Amacınız bir dış klasik konak programını kuantum programı ile birleştirmekse, bu ortam uygun değildir.
 
-## <a name="install-the-iq-jupyter-kernel"></a>IQ# Jupyter çekirdeğini yükleme
+## <a name="install-the-ino-locq-jupyter-kernel"></a>IQ# Jupyter çekirdeğini yükleme
 
-IQ# (ay-kü-şarp okunur) öncelikli olarak Jupyter ve Python tarafından .NET Core SDK için kullanılan ve Q# işlemlerinin derlenmesine ve benzetiminin yapılmasına yönelik temel işlevselliği sağlayan bir uzantıdır.
+IQ# (ay-kü-şarp olarak okunur) öncelikli olarak Jupyter ve Python tarafından .NET Core SDK için kullanılan ve Q# işlemlerinin derlenmesine ve simülasyonunun yapılmasına yönelik temel işlevselliği sağlayan bir uzantıdır.
 
 ### <a name="install-using-conda-recommended"></a>[Conda kullanarak yükleme (önerilir)](#tab/tabid-conda)
 
@@ -72,7 +75,7 @@ IQ# (ay-kü-şarp okunur) öncelikli olarak Jupyter ve Python tarafından .NET C
 
 İşte bu kadar! Artık Jupyter için IQ# çekirdeğine sahipsiniz. Bu çekirdek Q# Jupyter Not Defterlerinden Q# işlemlerini derlemek ve yürütmek üzere temel işlevselliği sağlar.
 
-## <a name="create-your-first-q-notebook"></a>İlk Q# not defterinizi oluşturma
+## <a name="create-your-first-no-locq-notebook"></a>İlk Q# not defterinizi oluşturma
 
 Artık basit bir Q# işlemi yazarak ve yürüterek Q# Jupyter Notebook yüklemenizi doğrulamaya hazırsınız.
 
@@ -90,9 +93,9 @@ Artık basit bir Q# işlemi yazarak ve yürüterek Q# Jupyter Notebook yüklemen
 
 1. Not defterinin şu hücresini çalıştırın:
 
-    ![Q# kodu içeren Jupyter Not Defteri hücresi](~/media/install-guide-jupyter.png)
+    ![Q# kodu içeren Jupyter Notebook hücresi](~/media/install-guide-jupyter.png)
 
-    Hücrenin çıktısında `SampleQuantumRandomNumberGenerator` görmeniz gerekir. Jupyter Notebook’ta çalışırken Q# kodu derlenir ve hücre bulduğu tüm işlemlerin adını çıkarır.
+    Hücrenin çıktısında `SampleQuantumRandomNumberGenerator` görmeniz gerekir. Jupyter Notebook’ta çalışırken Q# kodu derlenir ve hücre, bulduğu tüm işlemlerin adlarını çıktı olarak verir.
 
 1. Yeni bir hücrede, az önce oluşturduğunuz işlemi `%simulate` komutunu kullanarak yürütün (simülatör içinde):
 
@@ -107,4 +110,4 @@ Artık Q# Jupyter Not Defterleri için QDK’yi yüklediğinize göre, Q# kodunu
 Q# Jupyter Not Defterleri ile yapabileceklerinize ilişkin daha fazla örnek için lütfen şuraya göz atın:
 
 - [Q# ve Jupyter Notebook’a giriş](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/). Burada, Jupyter ortamında Q# kullanmayla ilgili daha fazla ayrıntı sağlayan bir Q# Jupyter Not Defteri bulacaksınız.
-- [Quantum Katas](xref:microsoft.quantum.overview.katas), kendi hızınızda ilerleyebileceğiniz öğreticilerden ve Q# Jupyter Not Defterleri biçimindeki programlama alıştırmaları dizilerinden oluşan bir açık kaynak koleksiyondur. [Quantum Katas öğretici not defterleri](https://github.com/microsoft/QuantumKatas#tutorial-topics) iyi bir başlangıç noktasıdır. Quantum Katas, size aynı anda hem kuantum bilişiminin hem de Q# programlamanın öğelerini öğretmeyi amaçlar. Bu öğreticiler, Q# Jupyter Not Defterleri ile oluşturabileceğiniz içerik türüne dair harika bir örnektir.
+- [Quantum Kataları](xref:microsoft.quantum.overview.katas), kendi hızınızda ilerleyebileceğiniz öğreticilerden ve Q# Jupyter Not Defterleri biçimindeki programlama alıştırması setlerinden oluşan bir açık kaynak koleksiyondur. [Quantum Katas öğretici not defterleri](https://github.com/microsoft/QuantumKatas#tutorial-topics) iyi bir başlangıç noktasıdır. Quantum Kataları, size aynı anda hem kuantum bilişiminin hem de Q# programlamanın öğelerini öğretmeyi amaçlar. Bu öğreticiler, Q# Jupyter Not Defterleri ile oluşturabileceğiniz içerik türüne dair harika bir örnektir.

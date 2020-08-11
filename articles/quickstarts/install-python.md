@@ -6,14 +6,17 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 4d148435f01d975e690828dd02335758fc71dfe4
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 01a5c31a7a920a69f4f90701d370f3a772d2c4d2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436555"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866749"
 ---
-# <a name="develop-with-q-and-python"></a>Q# ve Python ile geliştirme
+# <a name="develop-with-no-locq-and-python"></a>Q# ve Python ile geliştirme
 
 Q# işlemlerini çağırmak için Python konak programları geliştirmek üzere QDK'yi yükleyin.
 
@@ -83,7 +86,7 @@ VS Code kullanmak istiyorsanız:
 
 Farklı bir düzenleyici kullanmak istiyorsanız, yukarıdaki yönergelerle gerekli hazırlıkları yapabilirsiniz.
 
-## <a name="write-your-first-q-program"></a>İlk Q# programınızı yazma
+## <a name="write-your-first-no-locq-program"></a>İlk Q# programınızı yazma
 
 Artık basit bir Q# programı yazarak ve yürüterek `qsharp` Python paketi yüklemenizi doğrulamaya hazırsınız.
 

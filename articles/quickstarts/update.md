@@ -7,12 +7,15 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 69b83997773896583258a4996a61b6f334edf407
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: dd7360961aa728a6aa63b8d8c4e4840f5bf2afe8
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871408"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866766"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum geliştirme setini (QDK) güncelleştirme
 
@@ -24,7 +27,7 @@ QDK’yi en son sürümde güncel tutmanız önerilir. En son QDK sürümüne y�
 1. Kodunuzu güncelleştirilmiş herhangi bir söz dizimi ile uyumlu hale getirmek için mevcut Q# dosyalarınızı ve projelerinizi güncelleştirme.
 2. Seçili geliştirme ortamınız için QDK'nin kendisini güncelleştirme.
 
-## <a name="updating-q-projects"></a>Q# Projelerini Güncelleştirme 
+## <a name="updating-no-locq-projects"></a>Q# Projelerini Güncelleştirme 
 
 Q# işlemlerini barındırmak için C# veya Python kullanmanızdan bağımsız olarak Q# projelerinizi güncelleştirmek için bu yönergeleri izleyin.
 
@@ -36,7 +39,7 @@ Q# işlemlerini barındırmak için C# veya Python kullanmanızdan bağımsız o
 
     Çıkışın `3.1.100` veya daha yüksek olduğunu doğrulayın. Aksi takdirde [en son sürümü](https://dotnet.microsoft.com/download) yükleyip yeniden denetleyin. Ardından, kurulumunuza (Visual Studio, Visual Studio Code veya doğrudan komut satırı) bağlı olarak aşağıdaki yönergeleri izleyin.
 
-### <a name="update-q-projects-in-visual-studio"></a>Visual Studio'daki Q# projelerini güncelleştirme
+### <a name="update-no-locq-projects-in-visual-studio"></a>Visual Studio'daki Q# projelerini güncelleştirme
  
 1. Visual Studio 2019’un en son sürümüne güncelleştirme hakkında yönergeler için [buraya](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) bakın.
 2. Çözümünüzü Visual Studio’da açın.
@@ -77,13 +80,13 @@ Q# işlemlerini barındırmak için C# veya Python kullanmanızdan bağımsız o
 Artık [Visual Studio QDK uzantınızı güncelleştirme](#update-visual-studio-qdk-extension) bölümüne atlayabilirsiniz.
 
 
-### <a name="update-q-projects-in-visual-studio-code"></a>Visual Studio Code'daki Q# projelerini güncelleştirme
+### <a name="update-no-locq-projects-in-visual-studio-code"></a>Visual Studio Code'da Q# projelerini güncelleştirme
 
 1. Visual Studio Code’da, güncelleştirilecek projeyi içeren klasörü açın.
 2. **Terminal** -> **Yeni Terminal**’i seçin.
 3. Komut satırını kullanarak güncelleştirme yönergelerini izleyin (doğrudan aşağıda verilmiştir).
 
-### <a name="update-q-projects-using-the-command-line"></a>Komut satırını kullanarak Q# projelerini güncelleştirme
+### <a name="update-no-locq-projects-using-the-command-line"></a>Komut satırını kullanarak Q# projelerini güncelleştirme
 
 1. Ana proje dosyanızı içeren klasöre gidin.
 
@@ -231,7 +234,7 @@ Güncelleştirme yordamı, ilk olarak Conda veya .NET CLI ve PIP kullanarak yük
 
 Artık mevcut kuantum programlarınızı çalıştırmak için güncelleştirilmiş `qsharp` Python paketini kullanabilirsiniz.
 
-### <a name="update-the-iq-jupyter-kernel"></a>IQ# Jupyter çekirdeğini güncelleştirme
+### <a name="update-the-ino-locq-jupyter-kernel"></a>IQ# Jupyter çekirdeğini güncelleştirme
 
 Güncelleştirme yordamı, ilk olarak Conda veya .NET CLI ve PIP kullanarak yükleyip yüklemediğinize bağlıdır.
 
@@ -316,5 +319,5 @@ Artık mevcut Q# Jupyter Not Defterlerinizi çalıştırmak için güncelleştir
 
    - [QDK uzantısını güncelleştirme](#update-vs-code-qdk-extension)
    - VS Code’da **Görünüm** -> **Komut Paleti**’ne gidin
-   - **Q#: Komut satırı proje şablonlarını yükle** komutunu seçin
+   - **Q# seçeneğini belirleyin: Komut satırı proje şablonlarını yükle** komutunu seçin
    - Birkaç saniye sonra, "proje şablonlarının başarıyla yüklendiğini" onaylayan bir açılır pencere görmeniz gerekir

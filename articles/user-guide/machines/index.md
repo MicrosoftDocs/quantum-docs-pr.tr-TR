@@ -6,16 +6,19 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: c81226ba3e50b65cb1012e885866bd6fcc3764d7
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 77401ca3642b89d708f338f852dc60bf7346b87b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871170"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868313"
 ---
 # <a name="quantum-simulators"></a>Kuantum simülatörleri
 
-Kuantum simülatörleri, klasik bilgisayarlarda çalışıp bir Q# programı için *hedef makine* işlevi görerek kubitlerin farklı işlemlere nasıl tepki vereceğini tahmin eden bir ortamda kuantum programları çalıştırıp test etmeyi mümkün hale getiren yazılım programlarıdır. Bu makalede, Quantum geliştirme seti’ne (QDK) dahil edilen kuantum simülatörleri ve bir Q# programını kuantum simülatörlerine geçirebileceğiniz farklı yollar (örneğin komut satırı aracılığıyla veya klasik bir dilde yazılmış sürücü kodunun kullanılması gibi) açıklanmaktadır.  
+Kuantum simülatörleri, klasik bilgisayarlarda çalışıp bir Q# programı için *hedef makine* işlevi görerek, kubitlerin farklı işlemlere nasıl tepki vereceğini tahmin eden bir ortamda kuantum programları çalıştırıp test etmeyi mümkün hale getiren yazılım programlarıdır. Bu makalede, Quantum geliştirme seti’ne (QDK) dahil edilen kuantum simülatörleri ve bir Q# programını kuantum simülatörlerine geçirmenin farklı yolları (örneğin komut satırı aracılığıyla veya klasik bir dilde yazılmış sürücü kodunun kullanılması gibi) açıklanmaktadır.  
 
 
 

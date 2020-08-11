@@ -6,16 +6,19 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 3d70838289e72afdd0a48bbdff0bec407428d125
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 630dc7b8acf2dd8f258eb27dfbc367b812cd1c19
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871442"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867616"
 ---
-# <a name="develop-with-q-command-line-applications"></a>Q# komut satırı uygulamaları ile geliştirme
+# <a name="develop-with-no-locq-command-line-applications"></a>Q# komut satırı uygulamaları ile geliştirme
 
-Q# programları, C#, F# veya Python gibi bir konak dilinde sürücü olmadan kendi başına çalıştırılabilir.
+Q# programları, C#, F# veya Python gibi bir konak dilinde sürücü olmadan kendi başına yürütülebilir.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
@@ -48,7 +51,7 @@ Başka bir ortam için QDK'yi yüklemek üzere komut satırına şunu girin:
 dotnet new -i Microsoft.Quantum.ProjectTemplates
 ```
 
-## <a name="develop-with-q"></a>Q# ile geliştirme
+## <a name="develop-with-no-locq"></a>Q# ile geliştirme
 
 Ortamınıza karşılık gelen sekmedeki yönergeleri izleyin.
 
@@ -70,7 +73,7 @@ Uygulamayı çalıştırmak için:
 
 
 > [!NOTE]
-> Birden fazla kök klasörü olan çalışma alanları şu anda VS Code Q# uzantısı tarafından desteklenmemektedir. Bir VS Code çalışma alanında birden çok projeniz varsa, tüm projelerin aynı kök klasörde yer alması gerekir.
+> Birden fazla kök klasörü içeren çalışma alanları şu anda VS Code Q# uzantısı tarafından desteklenmemektedir. Bir VS Code çalışma alanında birden çok projeniz varsa, tüm projelerin aynı kök klasörde yer alması gerekir.
 
 ### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs)
 
@@ -111,7 +114,7 @@ Bir Q# `Hello World` uygulaması oluşturarak yüklemenizi doğrulayın.
     cd runSayHello
     ```
 
-    Bu dizin artık, konsola ileti yazdırmak için basit bir işlem tanımlayan bir Q# programı olan `Program.qs` adlı dosyayı içermelidir. Bu şablonda bir metin düzenleyiciyle değişiklik yapabilir ve kendi kuantum uygulamalarınızla bu şablonun üzerine yazabilirsiniz. 
+    Bu dizin şimdi, konsola ileti yazdırmak için basit bir işlem tanımlayan bir Q# programı olan `Program.qs` adlı dosyayı içermelidir. Bu şablonda bir metin düzenleyiciyle değişiklik yapabilir ve kendi kuantum uygulamalarınızla bu şablonun üzerine yazabilirsiniz. 
 
 1. Programı çalıştırın:
     ```dotnetcli

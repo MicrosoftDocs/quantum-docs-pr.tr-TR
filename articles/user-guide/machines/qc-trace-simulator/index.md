@@ -6,12 +6,15 @@ ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
-ms.openlocfilehash: c01f01973ea08153cbfa35d87a588a4eae46f1b7
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 5d5efef037ff236bd040dfd88e94f7f3dd331aef
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871119"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868228"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum geliştirme seti (QDK) kuantum izleme simülatörü
 
@@ -91,7 +94,7 @@ Bu araçların her biri, `QCTraceSimulatorConfiguration` içinde uygun bayraklar
 
 ## <a name="qctracesimulator-methods"></a>QCTraceSimulator metotları
 
-`QCTraceSimulator`, bir kuantum işlemi sırasında izlenen ölçümlerin değerlerini almak için birkaç yerleşik metot içerir. [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) ve [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) metodu örnekleri, [Temel işlem sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), [Derinlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) ve [Genişlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter) makalelerinde bulunabilir. Kullanılabilir tüm metotlar hakkında daha fazla bilgi için, Q# API başvurusundaki [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) konusuna bakın.  
+`QCTraceSimulator`, bir kuantum işlemi sırasında izlenen ölçümlerin değerlerini almak için birkaç yerleşik metot içerir. [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) ve [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) metodu örnekleri, [Temel işlem sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), [Derinlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) ve [Genişlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter) makalelerinde bulunabilir. Kullanılabilir tüm metotlar hakkında daha fazla bilgi için Q# API başvurusundaki [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) konusuna bakın.  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

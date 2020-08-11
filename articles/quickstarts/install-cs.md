@@ -6,13 +6,17 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 714c15d9589095f0fe395fcd6941672167879dca
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 13d73bdf0287941c89e03ba63869095e5fca4e70
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885496"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867565"
 ---
-# <a name="develop-with-q-and-net"></a>Q# ve .NET ile geliştirme
+# <a name="develop-with-no-locq-and-net"></a>Q# ve .NET ile geliştirme
 
 Q# dili, C# ve F# gibi .NET dilleri ile birlikte uyumlu olacak şekilde tasarlanmıştır.
 Bu kılavuzda, Q# dilinin bir .NET dilinde yazılmış konak programıyla nasıl kullanılacağını gösteriyoruz.
@@ -23,9 +27,9 @@ Bu kılavuzda, Q# dilinin bir .NET dilinde yazılmış konak programıyla nasıl
 
 - [Q# komut satırı projeleriyle birlikte kullanmak için](xref:microsoft.quantum.install.standalone) Quantum geliştirme setini yükleyin.
 
-## <a name="creating-a-q-library-and-a-net-host"></a>Q# kitaplığı ve .NET konağı oluşturma
+## <a name="creating-a-no-locq-library-and-a-net-host"></a>Q# kitaplığı ve .NET konağı oluşturma
 
-İlk adım, Q# kitaplığınız ve Q# kitaplığınızda tanımlanan işlemlere ve işlevlere çağrı yapacak .NET konağı için projeleri oluşturmaktır.
+İlk adım, Q# kitaplığınız ve Q# kitaplığınızda tanımlanan işlemlere ve işlevlere çağrı yapacak .NET konağı için projeler oluşturmaktır.
 
 Geliştirme ortamınıza karşılık gelen sekmedeki yönergeleri izleyin.
 Visual Studio veya VS Code dışında bir düzenleyici kullanıyorsanız komut satırı adımlarını izlemeniz yeterlidir.
@@ -79,7 +83,7 @@ Visual Studio veya VS Code dışında bir düzenleyici kullanıyorsanız komut s
 
 ***
 
-## <a name="calling-into-q-from-net"></a>.NET'ten Q# diline çağrı yapma
+## <a name="calling-into-no-locq-from-net"></a>.NET'ten Q# diline çağrı yapma
 
 Projelerinizi yukarıdaki yönergeleri izleyerek ayarladıktan sonra, .NET konsol uygulamanızdan Q# diline çağrı yapabilirsiniz.
 Q# derleyicisi, her Q# işlemi ve işlevi için kuantum programlarınızı bir simülatörde çalıştırmanızı sağlayan .NET sınıfları oluşturur.

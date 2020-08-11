@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: c5acd6c2b3163488a9b4c6e52e6d34489a8f4056
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0fbbe127b9f4c6b98bdc2cf0e46098bf40a816e3
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436574"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866868"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Quantum Development Kit’e katkı yapma
 
@@ -55,7 +58,7 @@ Bu farklı parçaların her birinin ana unsuru farklı bir depoda bulunur; bu ne
 - [**microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas): Kuantum bilişimini ve Q# programlama dilini öğrenmeye yönelik, kendi hızınızda ilerleyebileceğiniz programlama alıştırmaları.
 - [**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler): Q# derleyicisi, Visual Studio uzantısı ve Visual Studio Code uzantısı.
 - [**microsoft/qsharp-runtime**](https://github.com/microsoft/qsharp-runtime): Quantum Development Kit için simülasyon çerçevesi, kod oluşturma ve simülasyon hedef makineleri.
-- [**microsoft/iqsharp**](https://github.com/microsoft/iqsharp): Q# için Jupyter çekirdeği ve Python ana bilgisayar işlevinin yanı sıra bulut ortamlarında IQ# kullanmak için Docker görüntüleri.
+- [**microsoft/iqsharp**](https://github.com/microsoft/iqsharp): Q# için Jupyter çekirdeği ve Python konak işlevinin yanı sıra bulut ortamlarında IQ# kullanmak için Docker görüntüleri.
 - [**MicrosoftDocs/quantum-docs-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr): https://docs.microsoft.com/quantum adresinde yayımlanan belgeler için kaynak kodu.
 
 > [!NOTE]

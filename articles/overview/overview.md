@@ -6,12 +6,15 @@ ms.author: bradben
 ms.date: 05/05/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.introduction
-ms.openlocfilehash: 7c55420bd35f9b6e0e7ec80ddffe8a861cb7df39
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 59cb595ac207d6e84358fc6ba742e0e0019c76f9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430790"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867003"
 ---
 # <a name="introduction-to-quantum-computing-and-the-quantum-development-kit"></a>Kuantum bilişimine ve Quantum geliştirme setine giriş
 
@@ -62,7 +65,7 @@ Klasik bilgisayarlardaki makine öğrenimi, bilim ve iş dünyasında devrim yap
 
 Quantum geliştirme seti, hibrit kuantum/klasik makine öğrenimi denemeleri çalıştırmanıza olanak tanıyan [kuantum makine öğrenimi kitaplığı](xref:microsoft.quantum.machine-learning.concepts.intro) ile birlikte gelir. Kitaplık, örnekler ve öğreticiler içerir, denetimli sınıflandırma sorunlarını çözmek üzere yeni bir hibrit kuantum-klasik algoritması olan devre merkezli kuantum sınıflandırıcısını uygulamak için gerekli olan araçları sağlar.
 
-## <a name="q-and-the-microsoft-quantum-development-kit-qdk"></a>Q# ve Microsoft Quantum geliştirme seti (QDK)
+## <a name="no-locq-and-the-microsoft-quantum-development-kit-qdk"></a>Q# ve Microsoft Quantum geliştirme seti (QDK)
 
 Q#, Microsoft'un kuantum algoritmaları geliştirmeye ve çalıştırmaya yönelik açık kaynak programlama dilidir. Yerleşik tam durumlu kuantum simülatörü de dahil olmak üzere çeşitli ortamlarda çalıştırabileceğiniz kuantum uygulamaları geliştirmek için standart araçlar ve dillerle kullanabileceğiniz, Q# diline yönelik tam özellikli bir geliştirme seti olan [QDK](https://docs.microsoft.com/quantum/)’nin bir parçasıdır.
 
@@ -70,11 +73,11 @@ Visual Studio ve VS Code uzantılarının yanı sıra Python ve Jupyter Notebook
 
 QDK, özelleştirilmiş kimya, makine öğrenimi ve sayısal kitaplıklarıyla birlikte standart bir kitaplık içerir.
 
-Belgeler, hızlı bir şekilde başlamanıza yardımcı olacak bir Q# dili kılavuzu, öğreticiler ve örnek kodun yanı sıra kuantum bilişimi kavramlarını daha ayrıntılı incelemenize yardımcı olacak zengin makaleler içerir.  
+Belgelerde, hızlı bir şekilde başlamanıza yardımcı olacak bir Q# dili kılavuzu, öğreticiler ve örnek kodun yanı sıra kuantum bilişimi kavramlarını daha ayrıntılı incelemenize yardımcı olacak zengin makaleler bulunur.  
 
 ## <a name="microsoft-quantum-hardware-partners"></a>Microsoft kuantum donanımı iş ortakları
 
-Microsoft, geliştiricilere kuantum donanımına bulut erişimi sağlamak amacıyla kuantum donanımı şirketleriyle iş ortaklığı kuruyor. Geliştiriciler [Azure Quantum](https://azure.microsoft.com/services/quantum/) platformu ve Q# dilinden yararlanarak, kuantum algoritmalarını keşfedebilir ve kendi kuantum programlarını farklı kuantum donanımı türlerinde çalıştırabilir.
+Microsoft, geliştiricilere kuantum donanımına bulut erişimi sağlamak amacıyla kuantum donanımı şirketleriyle iş ortaklığı kuruyor. Geliştiriciler [Azure Quantum](https://azure.microsoft.com/services/quantum/) platformu ve Q# dilinden yararlanarak, kuantum algoritmalarını keşfedebilir ve kendi kuantum programlarını farklı türlerdeki kuantum donanımlarında çalıştırabilir.
 
 Hem [IonQ](https://ionq.com/news/november-4-2019-microsoft-partnership) hem de [Honeywell](https://www.honeywell.com/en-us/newsroom/news/2019/11/the-future-of-quantum-computing), elektronik bir alanda kapalı tutulan iyonlardan tek tek yararlanan **kapalı iyon bazlı** işlemciler kullanır, [QCI](https://quantumcircuits.com/news-and-publications/quantum-circuits-partners-with-microsoft-on-azure-quantum) ise süper iletkenli devreler kullanır.
 

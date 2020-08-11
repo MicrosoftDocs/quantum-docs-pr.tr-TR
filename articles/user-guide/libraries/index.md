@@ -6,18 +6,21 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries
-ms.openlocfilehash: 09fc723d27f2e026430b358c62b817c106c135c2
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: d61fe459362fdb5f3550768a26b34656a8a538a7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871510"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869112"
 ---
-# <a name="overview-of-q-libraries"></a>Q# Kitaplıklarına Genel Bakış
-Q#’de kuantum uygulamaları geliştirmeyi kolaylaştırmak için Quantum Development Kit ile birlikte birkaç kitaplık sunulur.
+# <a name="overview-of-no-locq-libraries"></a>Q# Kitaplıklarına Genel Bakış
+Q# dilinde kuantum uygulamaları geliştirmeyi kolaylaştırmak için Quantum geliştirme seti ile birlikte birkaç kitaplık sunulur.
 Belgenin bu bölümünde bu kitaplıkları ve bunları programlarınızda kullanmayı açıklayacağız.
 
-- [**Standart kitaplıklar**](xref:microsoft.quantum.libraries.standard.intro): Bu bölümde, Q# programları ve hedef makineler arasındaki arabirimi açıklayan giriş bölümü ve Q# programları yazarken kullanılabilen genel amaçlı işlemleri ve işlevleri sağlayan Q# kitaplığı Canon açıklanır.
+- [**Standart kitaplıklar**](xref:microsoft.quantum.libraries.standard.intro): Bu bölümde, Q# programları ve hedef makineler arasındaki arabirimi açıklayan prelüt ve Q# programları yazarken kullanılabilen genel amaçlı işlemleri ve işlevleri sağlayan Q# kitaplığı olan kanon açıklanmaktadır.
 - [**Kuantum kimyası kitaplığı**](xref:microsoft.quantum.chemistry.concepts.intro): Bu bölümde, fermiyonik Hamiltonian’ların yükleme gösterimlerine yönelik bir veri modeli sağlayan kuantum kimyası kitaplığı ve bu gösterimler üzerinde eylem gerçekleştiren kuantum simülasyonu işlemleri ve işlevleri açıklanır.
 - [**Kuantum sayıları kitaplığı**](xref:microsoft.quantum.numerics.intro): Bu bölümde, çeşitli matematiksel işlevlere yönelik uygulamaları sağlayan kuantum sayıları kitaplığı açıklanır. Bu, tamsayıları (işaretli ve işaretsiz) ve sabit noktalı gösterimleri destekler.
 - [**Kuantum makine öğrenmesi kitaplığı**](xref:microsoft.quantum.machine-learning.concepts.intro): Bu bölümde, verileri anlamak için kuantum bilişiminden yararlanan sıralı sınıflandırıcıların uygulanmasını sağlayan kuantum makine öğrenmesi kitaplığı açıklanmaktadır.

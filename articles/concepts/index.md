@@ -6,12 +6,15 @@ ms.author: nawiebe
 uid: microsoft.quantum.concepts.intro
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: fb1df9e3460c18d0cdc0ff430fa236192b3aa2fa
-ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: f62317cd32068319f15c15ae1fa0775ea3fb00b2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73442310"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866834"
 ---
 # <a name="quantum-computing-history-and-background"></a>Kuantum bilişiminin geçmişi ve arka planı
 
@@ -27,4 +30,4 @@ Kuantum bilişiminin temeli, maddenin kuantum hallerindeki bilgileri depolamak v
 
 Çakışmadan yararlanmak için bir kuantum programı tasarlamak göz korkutan bir zorluk gibi gelebilir. Öyle olsa da, kuantum programlama ve algoritma geliştirme işlemini daha erişilebilir hale getirmek amacıyla Microsoft Quantum Development Kit gibi birçok teknik ve araç kullanıma sunulmuştur. Kuantum çakışmasını bilişim için faydalı bir şekilde yönetmek için kullanılabilen, aynı zamanda çözümün kuantum olasılıklarının kargaşası için kaybolmasına neden olmayan birkaç temel strateji mevcuttur. Kuantum programlama, kuantum algoritma düşünce biçimini anlayıp ifade etmek için çok farklı araçlar gerektiren klasik programlamadan ayrı bir beceridir. Gerçekten de, bir kuantum geliştiricisinin kuantum programlamayı başarmasına yardımcı olan genel araçlar olmadan kuantum algoritma geliştirmek o kadar kolay değildir.
 
-Görevleri, sorunları ve çözümleri için kuantum devrimini gerçekleştirmeye yardımcı olacak araçlarla büyüyen bir topluluğu desteklemek üzere Microsoft Quantum Development Kit’i sunuyoruz. Üst düzey bilgisayar dilimiz Q# kuantum bilgi işlemenin zorluklarına çözüm getirmek için tasarlanmıştır; kuantum algoritmasının bir kuantum bilgisayarın temel işlemlerine kadar derlenmesine olanak tanıyan bir yazılım yığınıyla tümleştirilmiştir.  Programlama diline yaklaşmadan önce, kuantum bilişiminin dayandığı temel ilkeleri gözden geçirmek yararlıdır. Kuantum bilişiminin temel kurallarını, kuantum mekaniğindeki temellerini ayrıntılı olarak anlatmak yerine aksiyom olarak kabul edeceğiz. Ayrıca, lineer cebir (vektör, matrisler vb.) ile ilgili temel bilgilere sahip olduğunuzu varsayacağız. Kuantum bilişimin geçmişi ve ilkeleri hakkında daha ayrıntılı bir çalışma görmek istiyorsanız, daha fazla bilgi içeren [başvuru bölümüne](xref:microsoft.quantum.more-information) bakabilirsiniz.
+Görevleri, sorunları ve çözümleri için kuantum devrimini gerçekleştirmeye yardımcı olacak araçlarla büyüyen bir topluluğu desteklemek üzere Microsoft Quantum Development Kit’i sunuyoruz. Üst düzey programlama dilimiz olan Q#, kuantum bilgi işlemenin zorluklarına çözüm getirmek için tasarlanmıştır; kuantum algoritmasının bir kuantum bilgisayarın temel işlemlerine kadar derlenmesine olanak tanıyan bir yazılım yığınıyla tümleştirilmiştir.  Programlama diline yaklaşmadan önce, kuantum bilişiminin dayandığı temel ilkeleri gözden geçirmek yararlıdır. Kuantum bilişiminin temel kurallarını, kuantum mekaniğindeki temellerini ayrıntılı olarak anlatmak yerine aksiyom olarak kabul edeceğiz. Ayrıca, lineer cebir (vektör, matrisler vb.) ile ilgili temel bilgilere sahip olduğunuzu varsayacağız. Kuantum bilişimin geçmişi ve ilkeleri hakkında daha ayrıntılı bir çalışma görmek istiyorsanız, daha fazla bilgi içeren [başvuru bölümüne](xref:microsoft.quantum.more-information) bakabilirsiniz.
