@@ -9,12 +9,12 @@ uid: microsoft.quantum.quickstarts.search
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5c23d71209eb484a510f102e8b581ba4ec21829a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f2ae56bdca893e8a317c16d0a993da15b9f021b5
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869673"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863116"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>Öğretici: Q\# dilinde Grover arama algoritmasını uygulama
 
@@ -42,7 +42,7 @@ Aşamalı artışların sayısı listedeki öğelerin sayısından azdır. İşt
 
 ## <a name="write-the-code"></a>Kodu yazma
 
-1. Hisse geliştirme setini kullanarak, [ Q# komut satırı uygulaması için yeni bir proje oluşturun](xref:microsoft.quantum.install.standalone). Projeye `Grover` başlığını verin.
+1. Hisse geliştirme setini kullanarak, [ Q# uygulama için yeni bir proje oluşturun](xref:microsoft.quantum.install.standalone). Projeye `Grover` başlığını verin.
 
 1. Yeni projenizin `Program.qs` dosyasına aşağıdaki kodu ekleyin:
 
@@ -56,7 +56,7 @@ Aşamalı artışların sayısı listedeki öğelerin sayısından azdır. İşt
 
 1. Sonra, Q# tarafından işaretlenmiş öğeyi bulmak için yeni programınızı çalıştırın `ReflectAboutMarked` .
 
-### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Q#Visual Studio veya Visual Studio Code ile komut satırı uygulamaları
+### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a>Q# Visual Studio veya Visual Studio Code ile uygulamalar
 
 Yürütülebilir dosya, proje yapılandırmasına ve komut satırı seçeneklerine bağlı olarak simülatör veya kaynak tahmini aracında `@EntryPoint()` özniteliğiyle işaretlenmiş işlemi ya da işlevi çalıştırır.
 

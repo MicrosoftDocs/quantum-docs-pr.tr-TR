@@ -91,8 +91,8 @@ Aslında, notational perspektifinden, işlem tabanlı ölçümlerde hızlı bir 
 Bu gibi durumlarda, bir Pauli işlecinin, genel olarak $ x, Y, z $ veya $ z \otimes z, x \otimes x, x \otimes Y $ , vb. gibi bir operatör ölçmesi konusunda tartışmak yaygındır.
 
 > [!TIP]
->' De Q# , Multi-qubit Pauli işleçleri genellikle türündeki diziler tarafından temsil edilir `Pauli[]` .
->Örneğin, $ X Z Y 'yi göstermek için \otimes \otimes $ dizisini kullanabilirsiniz `[PauliX, PauliZ, PauliY]` .
+> ' De Q# , Multi-qubit Pauli işleçleri genellikle türündeki diziler tarafından temsil edilir `Pauli[]` .
+> Örneğin, $ X Z Y 'yi göstermek için \otimes \otimes $ dizisini kullanabilirsiniz `[PauliX, PauliZ, PauliY]` .
 
 Pauli işleçleri açısından ölçüm ele alınması, özellikle de hisse hata düzeltmesinin alt alanında ortaktır.
 İçinde Q# , benzer bir kuralı izliyoruz; artık ölçümlerin bu alternatif görünümünü açıkladık.
@@ -122,7 +122,7 @@ Pauli ölçülerinin gösterimi, $ X, Y, Z $ ölçümlerini bir qubitden bilgi e
 Bu ölçümler, kolaylık sağlamak için aşağıda verilmiştir.
 
 
-|Pauli ölçüm | Unitary dönüşümü|
+|Pauli ölçüm  | Unitary dönüşümü  |
 |-------------------|------------------------|
 |$ $ Z |               $\boldone$             |
 |$ $ X | $H               $                    |
@@ -162,7 +162,7 @@ Doğru durum daha sonra hesaplama temeline geri dönüştürülmesiyle, bu işle
 Multi-qubitpauli işleçlerinin ölçümleri benzer şekilde, şöyle görüldüğü gibi tanımlanmıştır:
 
 $$
-Z \otimes z = \begin{bmatrix} 1 & 0 0 0 & & \\\\ 0 & -1 & 0 & 0 \\\\ 0 & 0 & -1 & 0 \\\\ 0 0 0 & & & 1 \end{bmatrix} .
+Z \otimes z = \begin{bmatrix} 1 & 0 0 0 & & \\\\  0 & -1 & 0 & 0 \\\\ 0 & 0 & -1 & 0 \\\\ 0 0 0 & & & 1 \end{bmatrix} .
 $$
 
 Bu nedenle, iki Pauli-Z işleçlerinin Tensor ürünleri, $ $ $ + 1 $ ve $ -1 $ eigenvalues içeren iki boşluktan oluşan bir matris oluşturur.
@@ -173,10 +173,10 @@ Genel olarak, Pauli-Z işleçleri için herhangi bir Tensor ürününün $ ve ki
 $$
 \begin{align}
     \otimes \boldone Z =\begin{bmatrix}
-        1 & 0 & 0 & 0\\\\
-        0 & 1 & 0 & 0\\\\
-        0 & 0 & -1 & 0\\\\
-        0 & 0 & 0 & -1 \end{bmatrix} .
+        1 &  0 &  0 &  0 \\\\
+        0 &  1 &  0 &  0 \\\\
+        0 &  0 & -1 &  0 \\\\
+        0 &  0 &  0 & -1 \end{bmatrix} .
 \end{align}
 $$
 
@@ -189,16 +189,15 @@ Tek qubit çalışmasına benzer şekilde, tüm iki-qubit Pauli-ölçümleri $ \
 > \begin{align}
 >     \operatorname{TAKAS et } &=
 >     \left( \begin { matris}
->1 & 0 & 0 & 0\\\\
->0 & 0 & 1 & 0\\\\
->0 & 1 & 0 & 0\\\\
+>         1 & 0 & 0 & 0 \\\\
+>         0 & 0 & 1 & 0 \\\\
+>         0 & 1 & 0 & 0 \\\\
 >0 & 0 & 0 & 1 > \end { matris } \right ) >     \end{align}
 > $$
->iç işlemin benzetimini yapmak için kullanılır [`SWAP`](xref:microsoft.quantum.intrinsic) .
+> iç işlemin benzetimini yapmak için kullanılır [`SWAP`](xref:microsoft.quantum.intrinsic) .
 
-|Pauli ölçüm | Unitary dönüşümü|
+|Pauli ölçüm     | Unitary dönüşümü  |
 |----------------------|------------------------|
-|$ \otimes \boldone Z $ | $\boldone \otimes \boldone$|
 |$ \otimes \boldone Z $ | $\boldone\otimes \boldone$|
 |$ \otimes \boldone X $ | $ \otimes \boldone H $|
 |$ \otimes \boldone Y $ | $ HS \dagger \otimes \boldone ^ $|
@@ -240,7 +239,7 @@ Bu nedenle, yukarıda belirtilen gereksinimlere başvurırlar.
 ' De Q# , bu tür ölçümler, $ $ ölçü $ (-1) ^ j 'nin egenspace 'e bir sonuç veriyor ise j döndürür $ .
 İçinde yerleşik bir özellik olarak Pauli ölçümleri olması Q# yararlı olur, çünkü bu tür işleçler, $ $ işlemi bir Z ve bir Tensor ürünü olarak ifade etmek için gereken diagonalizing U geçidini açıklayan, denetimli olmayan ve temel dönüşümlerde uzun zincirler gerektirir $ $ $ \id $ .
 Önceden tanımlanmış Bu ölçülerden birini yapmak istediğinizi belirleyebilmeksizin, bir hesaplama tabanlı ölçüm için gerekli bilgileri sağlamak üzere temelinizi nasıl dönüştürebileceğinizi merak etmeniz gerekmez.
-Q#sizin için gerekli olan tüm temel dönüştürmeleri otomatik olarak işler.
+Q# sizin için gerekli olan tüm temel dönüştürmeleri otomatik olarak işler.
 Daha fazla bilgi için bkz [`Measure`](xref:microsoft.quantum.intrinsic.measure) . ve [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) işlemleri.
 
 ## <a name="the-no-cloning-theorem"></a>Kopyalama olmayan bu Üyeler
@@ -257,7 +256,7 @@ Bu konu başlığı altında, hiçbir ek yardımcı qubit, bizim tartışmamız 
 
 Bu tür bir hisse bilgisayar için kopyalama işlemi bir Unitary matrisi tarafından açıklanmalıdır.
 Klonlamamız denendiğimiz hisse TI durumunu bozduğundan ölçüme izin vermeiyoruz.
-Kopyalama işleminin benzetimini yapmak için Unitary matrisinin özelliği$$
+Kopyalama işleminin benzetimini yapmak için Unitary matrisinin özelliği $$
   U \ket { \psi } \ket { 0 } = \ket { \psi }\ket{\psi}
 $$
 herhangi bir durum için $ \ket { \psi } $ .

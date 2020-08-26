@@ -9,20 +9,20 @@ uid: microsoft.quantum.libraries.using
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ef88ca765a394a7092eb0a60bf6f3615c082ef6a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c558e25bf0d906ba6480cd7c41d3ece4ea97c2d1
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869588"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863080"
 ---
 # <a name="using-additional-no-locq-libraries"></a>Ek Q# kitaplıkları kullanma
 
 Hisse geliştirme seti, projelerinize eklenebilen _NuGet paketleri_ aracılığıyla alana özgü ek işlevler sağlar Q# .
 
-| Q#Kitaplığı  | NuGet paketi | Notlar |
+| Q# Kitaplığı  | NuGet paketi | Notlar |
 |---------|---------|--------|
-| [Q#Standart Kitaplık](xref:microsoft.quantum.libraries.standard.intro) | [**Microsoft. hisse. Standart**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | Varsayılan olarak eklendi |
+| [Q# Standart Kitaplık](xref:microsoft.quantum.libraries.standard.intro) | [**Microsoft. hisse. Standart**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | Varsayılan olarak eklendi |
 | [Kuantum kimyası kitaplığı](xref:microsoft.quantum.chemistry.concepts.intro) | [**Microsoft.Quantum.Chemistry**](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) | |
 | [Kuantum sayısal kitaplığı](xref:microsoft.quantum.numerics.intro) | [**Microsoft. hisse. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) | |
 | [Kuantum makine öğrenimi kitaplığı](xref:microsoft.quantum.libraries.machine-learning.intro) | [**Microsoft.Quantum.MachineLearning**](https://www.nuget.org/packages/Microsoft.Quantum.MachineLearning) | |
@@ -33,9 +33,9 @@ Bir hisse geliştirme setini tercih ettiğiniz ortam ve ana bilgisayar diliyle k
 > Bazı Q# Kitaplıklar Q# , programlarınızda birlikte çalışan veya ana bilgisayar uygulamalarınızla tümleştirilen ek araçlarla iyi çalışabilir.
 > Örneğin, [Kimya kitaplığı yükleme yönergeleri](xref:microsoft.quantum.chemistry.concepts.installation) , [ **Microsoft. hisse. kimya** paketinin](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) nwchem hesaplama Kimya platformuyla birlikte nasıl kullanılacağını ve `qdk-chem` hisse atıkmistry verileriyle çalışmak için komut satırı araçlarının nasıl yükleneceğini açıklamaktadır.
 
-## <a name="no-locq-command-line-applications-or-net-interopability"></a>[Q#komut satırı uygulamaları veya .NET karşılıklı kullanılabilirliği](#tab/tabid-csproj)
+## <a name="no-locq-applications-or-net-interopability"></a>[Q# uygulamalar veya .NET karşılıklı kullanılabilirliği](#tab/tabid-csproj)
 
-**Komut satırı veya Visual Studio Code:** Komut satırını kendi başına veya Visual Studio Code içinden kullanarak `dotnet` projenize bir NuGet paket başvurusu eklemek için komutunu kullanabilirsiniz.
+**Komut istemi veya Visual Studio Code:** Komut istemi 'ni kendi başına veya Visual Studio Code içinden kullanarak `dotnet` projenize bir NuGet paket başvurusu eklemek için komutunu kullanabilirsiniz.
 Örneğin, [**Microsoft. hisse. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) paketini eklemek için aşağıdaki komutu çalıştırın:
 
 ```dotnetcli
@@ -54,7 +54,7 @@ Daha ayrıntılı bilgi için bkz. [Paket Yöneticisi Kullanıcı Arabirimi Kıl
 
 Alternatif olarak, komut satırı arabirimi aracılığıyla, sayılıcs kitaplığını projenize eklemek için Package Manager konsolunu kullanabilirsiniz.
 
-![Paket Yöneticisi konsolunu komut satırından kullanma](~/media/vs2017-nuget-console-menu.png)
+![Paket Yöneticisi konsolunu komut isteminden kullanma](~/media/vs2017-nuget-console-menu.png)
 
 Paket Yöneticisi konsolundan aşağıdakileri çalıştırın:
 

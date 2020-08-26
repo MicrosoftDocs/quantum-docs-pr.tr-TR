@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.allowatmostnqubits
+name: AllowAtMostNQubits
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: Bu işleme ve adeklem çağrısı arasında, using deyimleri ile verilen sayıda ek qubit için en fazla bir kaç sayının ayrıldığını onaylar.
+remarks: Bu işlem, onu desteklemeyen hedefler üzerinde bir işleç ile değiştirilebilir.
+examples: >-
+  Aşağıdaki kod parçacığı, bu tanılamayı destekleyen makinelerde yürütüldüğünde başarısız olur:
+
+
+  ```Q#
+
+  within {
+      AllowAtMostNQubits(3, "Too many qubits allocated.");
+  } apply {
+      // Fails since this allocates four qubits.
+      using (register = Qubit[4]) {
+      }
+  }
+
+  ```
+syntax: 'operation AllowAtMostNQubits (nQubits : Int, message : String) : Unit'
+input:
+  content: '(nQubits : Int, message : String)'
+  types:
+  - name: nQubits
+    summary: Ayrılabilen en fazla qubit sayısı.
+    isPrimitive: true
+    uid: Int
+  - name: message
+    summary: Hata durumunda görüntülenecek bir ileti.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+metadata:
+  ms.openlocfilehash: 154bcc5f67a44e436e42907d8679c14f68c88021
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864406"

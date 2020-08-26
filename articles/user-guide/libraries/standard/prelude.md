@@ -2,19 +2,19 @@
 title: QDK 'deki iç işlemler ve işlevler
 description: Klasik işlevler ve Unitary, döndürme ve ölçüm işlemleri dahil olmak üzere QDK 'deki iç işlemler ve işlevler hakkında bilgi edinin.
 author: QuantumWriter
-uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
+uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 283504a5f5635a4996c804e514a6f52eb4966d22
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 4eb10e82a64381c503703be440be90e60f3a8622
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868449"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863735"
 ---
 # <a name="the-prelude"></a>Prelude dili #
 
@@ -128,27 +128,27 @@ Hisse algoritmaları dahilinde, her zaman {\phi = \pi k/2 ^ n $ for \mathbb{Z} $
 Bu, <xref:microsoft.quantum.intrinsic.r> döndürme açısının, `Int` dyadic kesri olarak yorumlanan iki tür giriş olarak belirtildiğinden farklıdır.
 Bu nedenle, `RFrac` imzası vardır `((Pauli, Int, Int, Qubit) => Unit is Adj + Ctl)` .
 Tek qubit Unitary $ \ exp (i \pı k \ Sigma/2 ^ n) $, burada $ \sigma $ ilk bağımsız değişkene karşılık gelen Pauli matrisi, $k $ ikinci bağımsız değişkendir ve $n $ üçüncü bağımsız değişkendir.
-`RFrac(_,k,n,_)`ile aynıdır `R(_,-πk/2^n,_)` ; açının kesirin *negatifi* olduğunu unutmayın.
+`RFrac(_,k,n,_)` ile aynıdır `R(_,-πk/2^n,_)` ; açının kesirin *negatifi* olduğunu unutmayın.
 
 <xref:microsoft.quantum.intrinsic.rx>Işlem Pauli $X $ ekseninin etrafında bir döndürme uygular.
 İmza içeriyor `((Double, Qubit) => Unit is Adj + Ctl)` .
-`Rx(_, _)`, ile aynıdır `R(PauliX, _, _)` .
+`Rx(_, _)` , ile aynıdır `R(PauliX, _, _)` .
 
 <xref:microsoft.quantum.intrinsic.ry>Işlem Pauli $Y $ ekseninin etrafında bir döndürme uygular.
 İmza içeriyor `((Double, Qubit) => Unit is Adj + Ctl)` .
-`Ry(_, _)`, ile aynıdır `R(PauliY,_ , _)` .
+`Ry(_, _)` , ile aynıdır `R(PauliY,_ , _)` .
 
 <xref:microsoft.quantum.intrinsic.rz>Işlem Pauli $Z $ ekseninin etrafında bir döndürme uygular.
 İmza içeriyor `((Double, Qubit) => Unit is Adj + Ctl)` .
-`Rz(_, _)`, ile aynıdır `R(PauliZ, _, _)` .
+`Rz(_, _)` , ile aynıdır `R(PauliZ, _, _)` .
 
 <xref:microsoft.quantum.intrinsic.r1>İşlem, {1} $Z $ $-$1 eigenstate of $ \ket $ etrafında verilen miktarda bir döndürme uygular.
 İmza içeriyor `((Double, Qubit) => Unit is Adj + Ctl)` .
-`R1(phi,_)`, `R(PauliZ,phi,_)` ve ile aynıdır `R(PauliI,-phi,_)` .
+`R1(phi,_)` , `R(PauliZ,phi,_)` ve ile aynıdır `R(PauliI,-phi,_)` .
 
 <xref:microsoft.quantum.intrinsic.r1frac>İşlem, Z = 1 eigenstate etrafında verilen miktarda kesirli bir döndürme uygular.
 İmza içeriyor `((Int,Int, Qubit) => Unit is Adj + Ctl)` .
-`R1Frac(k,n,_)`, `RFrac(PauliZ,-k.n+1,_)` ve ile aynıdır `RFrac(PauliI,k,n+1,_)` .
+`R1Frac(k,n,_)` , `RFrac(PauliZ,-k.n+1,_)` ve ile aynıdır `RFrac(PauliI,k,n+1,_)` .
 
 Bloch sphere üzerine eşlenmiş bir döndürme işlemi (Bu örnekteki Pauli $Z $ ekseni etrafında) örneği aşağıda gösterilmektedir:
 
@@ -160,17 +160,17 @@ Yukarıdaki tek qubit işlemlerine ek olarak, Prelude birçok multi-qubit işlem
 
 İlk olarak, <xref:microsoft.quantum.intrinsic.cnot> işlem standart kontrollü bir- `NOT` kapısı, \begin{Equation} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 & 0 \\ \\ \\ \\ & 1 & 0 & 0 & 0 &
 \end{Equation} `((Qubit, Qubit) => Unit is Adj + Ctl)` , iki bireysel qubit üzerinde $ \operatorname{CNOT} $ davranır unitarily öğesini temsil eden imzaya sahip.
-`CNOT(q1, q2)`, ile aynıdır `(Controlled X)([q1], q2)` .
+`CNOT(q1, q2)` , ile aynıdır `(Controlled X)([q1], q2)` .
 `Controlled`Functor bir yazmaç üzerinde denetlemeye izin verdiğinden, `[q1]` yalnızca bir denetim isteytiğimiz belirten dizi değişmez değerini kullanırız.
 
 Bu <xref:microsoft.quantum.intrinsic.ccnot> işlem, bazen Toffoli kapısı olarak da bilinen, düzenli olarak denetlenen bir kapısı gerçekleştirir.
 İmza içeriyor `((Qubit, Qubit, Qubit) => Unit is Adj + Ctl)` .
-`CCNOT(q1, q2, q3)`, ile aynıdır `(Controlled X)([q1, q2], q3)` .
+`CCNOT(q1, q2, q3)` , ile aynıdır `(Controlled X)([q1, q2], q3)` .
 
 <xref:microsoft.quantum.intrinsic.swap>İşlem iki qubit 'in hisse durumlarını değiştirir.
 Diğer bir deyişle, Unitary matrisi \begin{Equation} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 0 & \\ \\ 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{bmatrix} uygular.
 \end{Equation} öğesinde imza var `((Qubit, Qubit) => Unit is Adj + Ctl)` .
-`SWAP(q1,q2)`, `CNOT(q1, q2)` ve sonrasında ile eşdeğerdir `CNOT(q2, q1)` `CNOT(q1, q2)` .
+`SWAP(q1,q2)` , `CNOT(q1, q2)` ve sonrasında ile eşdeğerdir `CNOT(q2, q1)` `CNOT(q1, q2)` .
 
 > [!NOTE]
 > TAKAS kapısı, türünde bir değişkenin öğelerinin yeniden düzenleme işlemiyle aynı *değil* `Qubit[]` .
@@ -202,7 +202,7 @@ Son olarak, Prelude, Multi-qubit Pauli işleçlerinin üslerini temsil eden iki 
 
 <xref:microsoft.quantum.intrinsic.measure>İşlem, belirtilen Pauli işleçleri üründe bir veya daha fazla qubits 'in Birleşik ölçüsünü gerçekleştirir.
 Pauli Array ve qubit dizisi farklı uzunluklardır, işlem başarısız olur.
-`Measure`imza içeriyor `((Pauli[], Qubit[]) => Result)` .
+`Measure` imza içeriyor `((Pauli[], Qubit[]) => Result)` .
 
 Bir eklem ölçüsünün her bir qubit ayrı ayrı ölçüyle aynı olmadığına unutmayın.
 Örneğin, $ \ket {11} = \ket {1} \otimes {1} \Tus= X\otimes X \ket $ durumunu göz önünde bulundurun {00} .
@@ -215,11 +215,11 @@ Hata düzeltmesini tartıştığımız için bu özellik daha sonra temel alına
 Kolaylık sağlaması için, Prelude, qubits 'i ölçmek için iki diğer işlem de sağlar.
 Birincisi, tek qubit ölçümleri gerçekleştirirken oldukça yaygın olduğundan, Prelude bu durum için bir toplu değer tanımlar.
 <xref:microsoft.quantum.intrinsic.m>Işlem Pauli $Z $ işlecini tek bir qubit üzerinde ölçer ve imza içeriyor `(Qubit => Result)` .
-`M(q)`değerine eşdeğerdir `Measure([PauliZ], [q])` .
+`M(q)` değerine eşdeğerdir `Measure([PauliZ], [q])` .
 
 <xref:microsoft.quantum.measurement.multim>Pauli $Z $ işlecini her bir qubit dizisi üzerinde *ayrı olarak* ölçer ve her bir *array* `Result` qubit için elde edilen değer dizisini döndürür.
 Bazı durumlarda bu, iyileştirilebilir. İmza ( `Qubit[] => Result[])` .
-`MultiM(qs)`eşittir:
+`MultiM(qs)` eşittir:
 
 ```qsharp
 mutable rs = new Result[Length(qs)];

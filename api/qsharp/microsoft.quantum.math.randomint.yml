@@ -3,26 +3,23 @@ uid: microsoft.quantum.math.randomint
 name: RandomInt
 type: operation
 namespace: Microsoft.Quantum.Math
-summary: Sıfırdan büyük veya sıfıra eşit ve belirtilen üst sınırdan küçük bir rastgele tam sayı üretir.
-remarks: Bu işlev çağırır <xref:microsoft.quantum.intrinsic.random>, bu nedenle, rasgeleliği uygulamanın uygulamasına bağlıdır `Random`.
+summary: RandomInt kullanım dışı bırakıldı. Lütfen @"microsoft.quantum.random.drawrandomint" bunun yerine kullanın.
 syntax: 'operation RandomInt (maxInt : Int) : Int'
 input:
   content: '(maxInt : Int)'
   types:
   - name: maxInt
-    summary: Bu işlem tarafından döndürülecek en büyük tamsayıdan büyük bir tamsayı.
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: Verilen aralıktan rastgele bir tamsayı $x. Yani, $ \Pr (x) = \frac{1}{\Texttt{maxint}} $ ile birlikte.
-    isPrimitive: true
+  - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 578761c1710484913122227fb3b37330702ea038
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: aacaa92c47492e49544241bd7a47519ce8413fe8
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682750"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863526"

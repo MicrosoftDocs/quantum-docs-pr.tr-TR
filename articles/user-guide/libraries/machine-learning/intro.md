@@ -8,18 +8,18 @@ uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9a24d0b4145d0db2fd8c4e16be807165fff5fb32
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 65b0aa6a7f385765933d4d89ce34901f77cf76ec
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868925"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863095"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>Hisse Machine Learning giriş
 
 ## <a name="framework-and-goals"></a>Çerçeve ve hedefler
 
-Hisse ve bilgi işleme, klasik makine öğrenimi sınıflandırıcılarının güçlü bir alternatifidir, özellikle de özellik sayısına kısa bir değer olan hisse ve sınıf çıkarma işlemi için, daha önce hisse kaynağı oluşturma ve sınıf çıkarımı için hisse ölçümü oluşturma.
+Hisse ve bilgi işleme, klasik makine öğrenimi sınıflandırıcılarında güçlü bir alternatiftir. Özellikle, işlem kaynağı olarak, ve sınıf çıkarımı için hisse ölçümü kullanarak, özellik sayısına kısa bir değer olan, ortalama kayıt verilerini kodlayabileceğimizi sağlar.
 Devre merkezli hisse ayırıcı, veri kodlamasını hızlı bir şekilde birleştiren ve veri örneklerinin sınıf etiketlerini çıkarması için ölçüm tarafından izlenen görece basit bir hisse atım çözümüdür.
 Amaç, konu devrelerinin klasik şekilde ve depolama alanının yanı sıra son derece büyük özellik alanları için de devre parametrelerinin karma hisse/klasik eğitimine sahip olmasını sağlamaktır.
 
@@ -29,14 +29,18 @@ Sınıflandırma, \{ belirli veri örneklerinin $ y_1, y_2, \lnoktalar, y_d $ s�
 Geleneksel yöntemlere benzer şekilde, hisse sınıflandırması üç adımdan oluşur:
 - veri kodlama
 - sınıflandırıcı durumunun hazırlanması
-- ölçüm, ölçümün dayalı doğası nedeniyle, bu üç adım birden çok kez tekrarlanmış olmalıdır. Ölçüm, doğrusal olmayan etkinleştirmenin hisse eşdeğeri olarak görüntülenebilir.
-Hem kodlama hem de sınıflandırıcı durumunun bilgi işlem miktarı *hisse*kullanım yoluyla yapılır. Kodlama devresi genellikle veri odaklı ve parametre-ücretsiz olsa da, sınıflandırıcı devresi uygun bir öğrenme parametreleri kümesi içerir. 
+- ölçüm, ölçümün dayalı doğası nedeniyle, bu üç adım birden çok kez tekrarlanmış olmalıdır. Hem kodlama hem de sınıflandırıcı durumunun bilgi işlem miktarı *hisse*kullanım yoluyla yapılır. Kodlama devresi genellikle veri odaklı ve parametre-ücretsiz olsa da, sınıflandırıcı devresi uygun bir öğrenme parametreleri kümesi içerir. 
 
 Önerilen çözümde, sınıflandırıcı devresi tek qubit döndürmeler ve iki qubit kontrollü döndürmeler oluşur. Burada öğrenme parametreleri, döndürme açıtlardır. Döndürme ve denetlenen döndürme kapıları, hisse alma işlemi için *evrensel* olarak bilinir. Bu, tüm Unitary ağırlığı, söz konusu kapıları oluşan uzun bir devreye göre parçalanabileceği anlamına gelir.
 
+Önerilen sürümde, yalnızca tek bir sıklık tahmini tarafından izlenen yalnızca bir devre desteklenir.
+Bu nedenle çözüm, düşük dereceli bir polinom çekirdeği olan destek vektör makinesi 'nin bir hisse andır.
+
 ![Multilayer Perceptron vs. devre merkezli sınıflandırıcı](~/media/DLvsQCC.png)
 
-Temel yapıyı daha iyi anlamak için bu modeli çok katmanlı bir Perceptron karşılaştırabiliriz. Perceptron $p (y | x, \teta) $, doğrusal olmayan etkinleştirme işlevlerini (neurlanlar) bağlayan doğrusal işlevleri belirten ağırlıklar $ \teta $ parametrized. Bu parametreler modeli oluşturmak için eğitilmiş olabilir. Çıkış katmanında, SOFTMAX gibi doğrusal olmayan etkinleştirme işlevlerini kullanarak bir sınıfa ait bir örnek olasılığını alabilirler. Devre merkezli sınıflandırıcıda, tahmine Tor, model devresinin tek qubit ve iki-qubit denetimli döndürmeler için döndürme açılarının parametrized. Benzer bir biçimde, bu parametreler, gradyan algoritması algoritmasının karma hisse/klasik bir sürümü ile eğitilir. Çıktıyı hesaplamak için, doğrusal olmayan etkinleştirme işlevleri kullanmak yerine, bu sınıfın olasılığı, denetlenen döndürmeler sonrasında belirli bir qubit üzerinden yinelenen ölçümleri okuyarak elde edilir. Bir hisse anındaki klasik verileri kodlamak için, durum hazırlığı için denetlenebilir bir kodlama devresi kullanıyoruz.
+Basit bir hisse sınıflandırıcı tasarımı, geleneksel destek vektör makinesi (SVM) çözümüyle karşılaştırılabilir. SVM 'nin büyük/küçük bir bir çekirdek biçimi olan $ \sum \ alpha_j k (x_j, x) $k $ gibi bir veri $x örneği için çıkarım, belirli bir çekirdek işlevidir.
+
+Buna karşılık, hisse bir sınıflandırıcı $p tahmine ici kullanır (y │ x, U (\teta)) = 〈 U (\teta) x | D | U (\teta) x 〉 $. Bu, ruıt ile benzerdir ancak teknik olarak oldukça farklıdır. Bu nedenle, basit bir genlik kodlaması kullanıldığında, $p (y │ x, U (\teta)) $, $x $ ' ın yükseltilmiş tudes biçiminde bir ikinci dereceden formdur, ancak bu formun katmaları artık bağımsız olarak öğrenilmemelidir; Bunlar, genellikle, "$" vekt$x örünün boyutundan büyük ölçüde daha az öğrendiği $ \teta $ parametrelerine sahip olan devre $U (\teta) $ öğesinin matris öğelerinden toplanır. Özgün özelliklerde $p polinom derecesi (y │ x, U (\teta)) $, $x $ $l $ kopyaları üzerinde hisse bir ürün kodlaması kullanılarak $2 ^ l $ değerine artırılabilir.
 
 Mimarimiz görece basit devreleri araştırır. bu nedenle, tüm aralıklarda veri özellikleri arasındaki tüm bağıntıları yakalamak için *hızlı* bir şekilde olmalıdır. Aşağıdaki şekilde, en faydalı hızlı bir şekilde, devtoze devre bileşeni örneği gösterilmektedir. Bu geometriye sahip bir devre yalnızca $3 n + 1 $ kapısından oluşuyor olsa da, hesapladığı Unitary ağırlığı, $2 ^ n $ özellikleri arasında önemli bir çapraz konuşmayı sağlar.
 
@@ -69,3 +73,5 @@ RULE1 başına $x $ için gösterilen etiket aslında $y $ öğesinden farklıys
 ### <a name="reference"></a>Başvuru
 
 Bu bilgiler, kodla yürütmeye başlamak için yeterli olmalıdır. Ancak, bu model hakkında daha fazla bilgi edinmek istiyorsanız lütfen orijinal teklifi okuyun: [ *' devre merkezli hisse ıcılar ', Maria Schuld, Alex Bocharov, Kronysta svore ve Nathan Wiebe*](https://arxiv.org/abs/1804.00633)
+
+Sonraki adımlarda göreceğiniz kod örneğine ek olarak, [Bu öğreticide](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/QuantumClassification) hisse sınıflandırması 'nı keşfetmeye de başlayabilirsiniz 

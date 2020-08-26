@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.continuousuniformdistribution
+name: ContinuousUniformDistribution
+type: function
+namespace: Microsoft.Quantum.Random
+summary: Verilen bir kapsayıcı aralığı üzerinde Tekdüzen dağılımı döndürür.
+remarks: Başarısız olur `max <= min` .
+examples: >-
+  Aşağıdaki Q # kod parçacığı $0 $ ile $2 \pı $ arasında bir açı rastgele çizer:
+
+
+  ```Q#
+
+  let angleDistribution = ContinuousUniformDistribution(0.0, 2.0 * PI());
+
+  let angle = angleDistribution::Sample();
+
+  ```
+syntax: 'function ContinuousUniformDistribution (min : Double, max : Double) : Microsoft.Quantum.Random.ContinuousDistribution'
+input:
+  content: '(min : Double, max : Double)'
+  types:
+  - name: min
+    summary: Çizilecek en küçük gerçek sayı.
+    isPrimitive: true
+    uid: Double
+  - name: max
+    summary: Çizilecek en büyük gerçek sayı.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Microsoft.Quantum.Random.ContinuousDistribution
+  types:
+  - summary: Rastgele `min` bultteklerini, kapsamlı olasılığa sahip olan bağımsız aralıkta gerçek sayı olan bir dağıtım `max` .
+    uid: microsoft.quantum.random.continuousdistribution
+seeAlso:
+- microsoft.quantum.drawrandomdouble
+metadata:
+  ms.openlocfilehash: ac2f90f2793cf6a94fbb50bdac1d05f3790efa1e
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864556"

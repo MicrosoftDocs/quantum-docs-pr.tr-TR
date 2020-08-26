@@ -9,12 +9,12 @@ uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8db892091794cb1166e41744572d8938d975abf2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d80f1c640ac7ddb0104ccbbb6de6d0e26ba05fd6
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869775"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863620"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Öğretici: Q\# dilinde Kuantum Rastgele Sayı Oluşturucusu uygulama
 
@@ -23,11 +23,11 @@ ms.locfileid: "87869775"
 ## <a name="prerequisites"></a>Ön koşullar
 
 - Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
-- Q# [ Q# Komut satırından](xref:microsoft.quantum.install.standalone)veya bir [Python ana programı](xref:microsoft.quantum.install.python) ya da [C# ana bilgisayar programıyla](xref:microsoft.quantum.install.cs)kullanarak bir proje oluşturun.
+- Bir Q# [ Q# uygulama](xref:microsoft.quantum.install.standalone)için bir [Python ana bilgisayar programıyla](xref:microsoft.quantum.install.python)veya bir [C# ana bilgisayar programıyla](xref:microsoft.quantum.install.cs)bir proje oluşturun.
 
 ## <a name="write-a-no-locq-operation"></a>İşlem yazma Q#
 
-### <a name="no-locq-operation-code"></a>Q#işlem kodu
+### <a name="no-locq-operation-code"></a>Q# işlem kodu
 
 1. Program.qs dosyasının içeriğini aşağıdaki kodla değiştirin:
 
@@ -64,13 +64,13 @@ Kodun gerçekleştirdiği işlemleri görselleştirmek için şu gösterimi kull
 
 ## <a name="creating-a-complete-random-number-generator"></a>Eksiksiz bir rastgele sayı oluşturucu oluşturma
 
-Artık Q# rastgele bitler üreten bir işlem olduğuna göre, bunu bir tamamen hisse rastgele sayı Oluşturucu oluşturmak için kullanabiliriz. Q#Komut satırı uygulamalarını kullanabilir veya bir konak programı kullanabilirsiniz.
+Artık Q# rastgele bitler üreten bir işlem olduğuna göre, bunu bir tamamen hisse rastgele sayı Oluşturucu oluşturmak için kullanabiliriz. Bir Q# uygulamayı kullanabilir veya bir konak programı kullanabilirsiniz.
 
 
 
-### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Q#Visual Studio veya Visual Studio Code ile komut satırı uygulamaları](#tab/tabid-qsharp)
+### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a>[Q# Visual Studio veya Visual Studio Code ile uygulamalar](#tab/tabid-qsharp)
 
-Tam Q# komut satırı uygulamasını oluşturmak için, aşağıdaki giriş noktasını Q# programınıza ekleyin: 
+Tam uygulamayı oluşturmak için Q# , aşağıdaki giriş noktasını Q# programınıza ekleyin: 
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
@@ -92,13 +92,13 @@ Sonraki çalıştırmalar için tekrar derlenmesi gerekmez. Çalıştırmak içi
 dotnet run --no-build
 ```
 
-### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Visual Studio Code veya Komut Satırı ile Python](#tab/tabid-python)
+### <a name="python-with-visual-studio-code-or-the-command-prompt"></a>[Visual Studio Code veya komut istemiyle Python](#tab/tabid-python)
 
 Yeni Q# programınızı Python 'da çalıştırmak için aşağıdaki kodu şu şekilde kaydedin `host.py` :
 
 :::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
 
-Ardından Python konak programınızı komut satırından çalıştırabilirsiniz:
+Ardından, komut isteminden Python ana bilgisayar programınızı çalıştırabilirsiniz:
 
 ```bash
 $ python host.py
@@ -112,7 +112,7 @@ Q#C# ' deki yeni programınızı çalıştırmak için `Driver.cs` Aşağıdaki 
 
 :::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
 
-Ardından C# konak programınızı komut satırından çalıştırabilirsiniz (Visual Studio’da F5 tuşuna basmalısınız):
+Ardından, komut isteminden C# ana bilgisayar programınızı çalıştırabilirsiniz (Visual Studio 'da F5 'e basmalısınız):
 
 ```bash
 $ dotnet run

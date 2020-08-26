@@ -1,6 +1,6 @@
 ---
 title: Program çalıştırma yolları Q#
-description: Programları çalıştırmanın farklı yollarına genel bakış Q# . Komut satırından, Q# jupi Not defterleri ve Python veya bir .net dilinde klasik ana bilgisayar programları.
+description: Programları çalıştırmanın farklı yollarına genel bakış Q# . Komut isteminden, Q# jupi Not defterleri ve Python veya bir .net dilinde klasik ana bilgisayar programları.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 05/15/2020
@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8e3fa83700417a4ffaf9e3be91796c9e9513b253
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: e44a366b7eea133499beb44dbb338a02174c0073
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869741"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863144"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Program çalıştırma yolları Q#
 
@@ -25,7 +25,7 @@ Bu sayfada, bir program çalıştırıldığında ne olduğunu açıkladık Q# v
 Birincil ayrım, çalıştırılabilir bir değer olabilir Q# :
 - tek başına bir uygulama olarak, Q# söz konusu tek dildir ve program doğrudan çağırılır. Bu kategoriye aslında iki yöntem yer almalıdır:
   - komut satırı arabirimi
-  - Q#Jupyıter Not defterleri
+  - Q# Jupyıter Not defterleri
 - daha sonra programı çağıran ve döndürülen sonuçları daha sonra işlemek için Python veya .NET dilinde (ör. C# veya F #) yazılmış ek bir *ana bilgisayar programı*ile.
 
 Bu işlemlerin ve bunların farklarının en iyi şekilde anlaşılması için, basit bir Q# programı ele alalım ve bunların yürütülme yollarını karşılaştırıyoruz.
@@ -116,13 +116,13 @@ Daha belirgin olarak, farklar ve etrafında
 3. üzerinde yürütüleceği hedef makineyi belirtme ve
 4. sonuçların nasıl döndürüldüğü.
 
-İlk olarak, komut satırından tek başına uygulama ile bunun nasıl yapıldığını anladık Q# ve Python ve C# ana bilgisayar programlarını kullanmaya devam ediyoruz.
+İlk olarak, komut isteminden tek başına uygulama ile bunun nasıl yapıldığını anladık Q# ve Python ve C# ana bilgisayar programlarını kullanmaya devam ediyoruz.
 Q#İlk üçünün aksine, birincil işlevselliği yerel bir dosya etrafında ortalamadığından, en son jupi Not defterlerinin tek başına uygulamasını ayırdık Q# .
 
 > [!NOTE]
 > Bu örneklerde anlamadığımızda, yürütme yöntemleriyle ilgili bir genel durumda, program içinden yazdırılan tüm iletiler Q# ( [`Message`](xref:microsoft.quantum.intrinsic.message) [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) Örneğin, veya) her zaman ilgili konsola yazdırılır.
 
-## <a name="no-locq-from-the-command-line"></a>Q#komut satırından
+## <a name="no-locq-from-the-command-prompt"></a>Q# komut isteminden
 Programları yazmaya başlamanın en kolay yollarından biri Q# , ayrı dosyalar ve ikinci bir dilin tamamen kaygılanmasından kaçınmaktır.
 Visual Studio Code veya Visual Studio 'Yu QDK uzantısıyla kullanmak, Q# tek bir dosyadan callables çalıştırdığımız sorunsuz bir iş akışına olanak sağlar Q# .
 
@@ -130,7 +130,7 @@ Bunun için, son olarak programın yürütmesini şunu girerek çağıracağız
 ```dotnetcli
 dotnet run
 ```
-komut satırında.
+komut isteminde.
 En basit iş akışı, terminalin Dizin konumunun dosyayla aynı olduğu Q# , Q# Örneğin vs Code ' deki tümleşik Terminal kullanılarak dosya düzenlemeyle birlikte kolayca işlenebilen bir dosyadır.
 Ancak, [ `dotnet run` komut](https://docs.microsoft.com/dotnet/core/tools/dotnet-run) çok sayıda seçenek kabul eder ve yalnızca `--project <PATH>` dosyanın konumuyla birlikte sağlanarak program farklı bir konumdan da çalıştırılabilir Q# .
 
@@ -157,7 +157,7 @@ namespace NamespaceName {
 }
 ```
 
-Şimdi, `dotnet run` komut satırından bir çağrısı `MeasureSuperposition` çalıştırılmakta ve döndürülen değer daha sonra doğrudan terminale yazdırılır.
+Şimdi, `dotnet run` komut isteminden bir çağrısı `MeasureSuperposition` çalıştırılmakta ve döndürülen değer daha sonra doğrudan terminale yazdırılır.
 Bu nedenle, ya da `One` yazdırılmış görürsünüz `Zero` . 
 
 Aşağıda, daha fazla callabaldığınıza bakılmaksızın yalnızca `MeasureSuperposition` çalıştırılacağını unutmayın.
@@ -179,7 +179,7 @@ Bu tür bir işlem şöyle yazılabilir
 döndürülen değer ölçüm sonuçlarının bir dizisidir.
 Ve [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) [`ForEach`](xref:microsoft.quantum.arrays.foreach) ad alanlarında olduğunu ve [`Microsoft.Quantum.Canon`](xref:microsoft.quantum.canon) [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) `open` her biri için ek deyimler kullanılmasını unutmayın.
 
-`@EntryPoint()`Özniteliği bu yeni işlemden önce taşıdığımızda (bir dosyada yalnızca bir satır olabilir), çalıştırmayı denemek yalnızca `dotnet run` ek komut satırı seçeneklerinin gerekli olduğunu ve bunları nasıl ifade ettiğine ilişkin bir hata mesajı sonucu olarak sonuçlanır.
+`@EntryPoint()`Özniteliği bu yeni işlemden önce (örneğin, bir dosyada yalnızca bir satır olabilir) taşıdığımızda, çalıştırmayı denemek yalnızca bir `dotnet run` hata mesajı ile sonuçlanmaya, hangi ek komut satırı seçeneklerinin gerekli olduğunu ve bunları nasıl ifade ettiğine ilişkin bir hata iletisiyle sonuçlanır.
 
 Komut satırı için genel biçim aslında olur `dotnet run [options]` ve çağrılabilir bağımsız değişkenler burada sağlanır.
 Bu durumda, bağımsız değişkeni `n` eksik olur ve seçeneğini sağlamaları gerektiğini gösterir `-n <n>` . `MeasureSuperpositionArray` `n=4` Bu nedenle, qubit 'i çalıştırmak için
@@ -203,7 +203,7 @@ Hata iletisi ayrıca, hedef makinenin nasıl değiştirileceği dahil olmak üze
 
 ### <a name="different-target-machines"></a>Farklı hedef makineler
 
-İşlemlerimizin çıkışları gerçek qubit üzerinde eylemin beklenen sonuçları olduğundan, komut satırından varsayılan hedef makinenin tam durum çıkarkileri simülatörü `QuantumSimulator` ,
+İşlemlerimizin çıkışları gerçek qubit üzerinde eylemin beklenen sonuçları olduğundan, komut satırından varsayılan hedef makinenin tam durum hisse benzeticileri olduğunu temizler `QuantumSimulator` .
 Ancak, callables ' i `--simulator` (veya toplu) belirli bir hedef makinede çalıştırmayı söyleyebilirsiniz `-s` .
 
 Örneğin, şunu üzerinde çalıştırabiliriz [`ResourcesEstimator`](xref:microsoft.quantum.machines.resources-estimator) :
@@ -238,9 +238,9 @@ Bu seçenekte kısaca bahsedilen gibi `--project` , [ `dotnet run` komut](https:
 Her iki tür seçeneği de sağladıysanız, `dotnet` önce özel seçenekler önce, sonra da bir `--` Q# delil ve ardından özel seçenekler sağlanmalıdır.
 Örneğin, yukarıdaki işlem için bir sayı ile birlikte bir yolu belirtir, aracılığıyla yürütülür `dotnet run --project <PATH> -- -n <n>` .
 
-## <a name="no-locq-with-host-programs"></a>Q#Konak programları ile
+## <a name="no-locq-with-host-programs"></a>Q# Konak programları ile
 
-Dosya birlikte Q# , doğrudan komut satırından bir işlem veya işlev çağırma alternatifi, bir *konak programını* başka bir klasik dilde kullanmaktır. Özellikle, bu, Python veya C# ya da F # gibi bir .NET diliyle yapılabilir (breçların sake 'ı için burada yalnızca c# ayrıntı alınacaktır).
+Dosya ile birlikte Q# , doğrudan komut isteminden bir işlem veya işlev çağırma alternatifi, bir *konak programını* başka bir klasik dilde kullanmaktır. Özellikle, bu, Python veya C# ya da F # gibi bir .NET diliyle yapılabilir (breçların sake 'ı için burada yalnızca c# ayrıntı alınacaktır).
 Birlikte çalışabilirliği etkinleştirmek için biraz daha fazla kurulum gerekir, ancak bu Ayrıntılar [yükleme kılavuzlarında](xref:microsoft.quantum.install)bulunabilir.
 
 Bir Nutshell 'de, durum artık, `*.py` `*.cs` dosya ile aynı konumda bir ana bilgisayar program dosyası (ör. veya) içeriyor Q# .
@@ -256,7 +256,7 @@ Genel düzen burada gösterilmektedir ve aşağıda Python ve C# için özel uyg
 <img src="../media/hostprograms_host_program_diagram.png" alt="Q# program from a host program" width="700">
 
 > [!NOTE]
-> `@EntryPoint()` Q# Komut satırı uygulamaları için kullanılan öznitelik konak programlarıyla kullanılamaz.
+> `@EntryPoint()`Uygulamalar için kullanılan öznitelik Q# konak programlarıyla kullanılamaz.
 > Q#Bir ana bilgisayar tarafından çağrılan dosyada mevcutsa bir hata oluşur. 
 
 Farklı ana bilgisayar programlarıyla çalışmak için, bir dosya için gerekli değişiklik yoktur `*.qs` Q# .
@@ -332,7 +332,7 @@ print(multi_qubit_resources)
 
 aşağıdakine benzer bir çıktı oluşur:
 
-```python
+```output
 Single qubit:
 1
 {'CNOT': 0, 'QubitClifford': 1, 'R': 0, 'Measure': 1, 'T': 0, 'Depth': 0, 'Width': 1, 'BorrowedWidth': 0}
@@ -341,6 +341,56 @@ Multiple qubits:
 [0, 1, 1, 1]
 {'CNOT': 0, 'QubitClifford': 4, 'R': 0, 'Measure': 4, 'T': 0, 'Depth': 0, 'Width': 4, 'BorrowedWidth': 0}
 ```
+
+#### <a name="using-no-locq-code-from-other-projects-or-packages"></a>Q#Diğer projelerden veya paketlerdeki kodu kullanma
+
+Varsayılan olarak, `import qsharp` komut tüm `.qs` dosyaları geçerli klasöre yükler ve kendi Q# Işlemlerini ve işlevlerini Python betiği içinden kullanıma sunar.
+
+Başka bir Q# klasörden kod yüklemek için [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects) , bir proje için bir dosyaya başvuru eklemek için kullanılabilir `.csproj` (yani Q# , başvuran bir proje `Microsoft.Quantum.Sdk` ).
+Bu komut `.qs` , ve alt klasörlerini içeren klasördeki tüm dosyaları derler `.csproj` . Ayrıca, `PackageReference` ya da Q# Bu dosyanın üzerinden başvurulan projeler aracılığıyla başvurulan paketleri yinelemeli olarak yükler `ProjectReference` `.csproj` .
+
+Örnek olarak, aşağıdaki Python kodu bir dış projeyi içeri aktarır ve geçerli klasöre göre yoluna başvurarak, işlemlerinden birini çağırır Q# :
+
+```python
+import qsharp
+qsharp.projects.add("../qrng/Qrng.csproj")
+from Qrng import SampleQuantumRandomNumberGenerator
+print(f"Qrng result: {SampleQuantumRandomNumberGenerator.simulate()}")
+```
+
+Bu, aşağıdakine benzer bir çıktı ile sonuçlanır:
+
+```output
+Adding reference to project: ../qrng/Qrng.csproj
+Qrng result: 0
+```
+
+Kod içeren harici paketleri yüklemek için Q# [ `qsharp.packages` API](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages)'yi kullanın.
+
+Q#Geçerli klasördeki kod dış projelere veya paketlere bağımlıysa, `import qsharp` Bağımlılıklar henüz yüklenmediği için çalışırken hatalarla karşılaşabilirsiniz.
+Komut sırasında gerekli harici paketleri veya Q# projeleri yüklemek için `import qsharp` , Python betiğinin bulunduğu klasörde, başvuruda bulunan bir dosya bulunduğundan emin olun `.csproj` `Microsoft.Quantum.Sdk` . Bu durumda, `.csproj` özelliğini öğesine ekleyin `<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` `<PropertyGroup>` . Bu, Q# `ProjectReference` `PackageReference` komutu sırasında ' de bulunan herhangi bir veya öğesini yinelemeli olarak yükleyemem talimatını verecektir `.csproj` `import qsharp` .
+
+Örneğin, `.csproj` Q# paketi otomatik olarak yükleyemem neden olan basit bir dosya aşağıda verilmiştir `Microsoft.Quantum.Chemistry` :
+
+```xml
+<Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Quantum.Chemistry" Version="0.12.20072031" />
+    </ItemGroup>
+</Project>
+```
+
+> [!NOTE]
+> Şu anda bu özel `<IQSharpLoadAutomatically>` özellik Python konakları için gereklidir, ancak gelecekte bu, `.csproj` Python betiği ile aynı klasörde bulunan bir dosya için varsayılan davranış haline gelebilir.
+
+> [!NOTE]
+> `<QsharpCompile>`' Deki ayarı, `.csproj` Python konakları tarafından yok sayılır ve `.qs` `.csproj` (alt klasörler dahil) klasöründeki tüm dosyalar yüklenir ve derlenir. `.csproj`Gelecekte ayarlar için destek sunulacaktır (daha fazla ayrıntı için bkz. [ıqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) ).
+
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
@@ -359,7 +409,7 @@ using NamespaceName;                              // make the Q# namespace avail
 ```
 
 Daha sonra C# ad boşluğumuzu, diğer birkaç bit ve parçadan (örneğin, callables için bilgi işlem bağımsız değişkenleri) bildiririz Q# .
-İkinci durumda gerekli değildir, ancak bu tür bir örnek [.net birlikte çalışabilirlik örneğinde](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet)bulunabilir.
+İkinci durumda gerekli değildir, ancak bu tür bir örnek  [.net birlikte çalışabilirlik örneğinde](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet)bulunabilir.
 
 #### <a name="target-machines"></a>Hedef makineler
 
@@ -424,7 +474,7 @@ namespace host
 }
 ```
 
-C# dosyasının konumunda, ana bilgisayar programı komut satırından şunu girerek çalıştırılabilir:
+C# dosyasının konumunda, ana bilgisayar programı komut isteminden şunu girerek çalıştırılabilir:
 ```dotnetcli
 dotnet run
 ```
@@ -526,8 +576,8 @@ BorrowedWidth   0
 
 ***
 
-## <a name="no-locq-jupyter-notebooks"></a>Q#Jupyıter Not defterleri
-Q#Jupyter Not defterleri, Q# Q# tüm yönergeler, notlar ve diğer içeriklerden---tek bir not defterinde callables tanımlamanızı, derlemenize ve çalıştırmanıza olanak tanıyan ı çekirdeğini kullanır.
+## <a name="no-locq-jupyter-notebooks"></a>Q# Jupyıter Not defterleri
+Q# Jupyter Not defterleri, Q# Q# tüm yönergeler, notlar ve diğer içeriklerden---tek bir not defterinde callables tanımlamanızı, derlemenize ve çalıştırmanıza olanak tanıyan ı çekirdeğini kullanır.
 Bu, dosyaların içeriğini içeri ve dışarı aktarmak mümkün olsa `*.qs` Q# da, yürütme modelinde gerekli değildir anlamına gelir.
 
 Burada, yukarıda tanımlanan işlemleri nasıl çalıştıracağınızı ayrıntılarız Q# , ancak Q# [giriş Q# ve jupi](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)Not defterleri Ile jupi not defterlerini kullanma hakkında daha geniş bir giriş sunulmaktadır.
@@ -546,7 +596,7 @@ Bu tür bir deyime sahip bir hücreyi çalıştırırken, bu ad alanlarından al
 
 Benzer şekilde, tanımlama işlemleri yalnızca kodu yazmak Q# ve hücreyi çalıştırmak için gereklidir.
 
-<img src="../media/hostprograms_jupyter_op_def_crop.png" alt="Jupyter cell defining Q# operations" width="600">
+<img src="../media/hostprograms_jupyter_op_def_crop.png" alt="Jupyter cell defining Q# operations" width="773">
 
 Daha sonra çıktı bu işlemleri listeler, daha sonra gelecekteki hücrelerden çağrılabilir.
 
@@ -555,12 +605,49 @@ Daha sonra çıktı bu işlemleri listeler, daha sonra gelecekteki hücrelerden 
 Belirli hedef makinelerde işlem çalıştırma işlevselliği [I Q# Magic komutları](xref:microsoft.quantum.guide.quickref.iqsharp)aracılığıyla sağlanır.
 Örneğin, `%simulate` `QuantumSimulator` öğesini kullanır ve şunları `%estimate` kullanır `ResourcesEstimator` :
 
-<img src="../media/hostprograms_jupyter_no_args_sim_est_crop.png" alt="Simulate and estimate resources Jupyter cell" width="500">
+<img src="../media/hostprograms_jupyter_no_args_sim_est_crop.png" alt="Jupyter cell simulating a Q# operation and running resource estimation" width="773">
 
 ### <a name="passing-inputs-to-functions-and-operations"></a>İşlevlere ve işlemlere giriş geçirme
 
-Şu anda yürütme Magic komutları yalnızca bağımsız değişken içermeyen işlemlerle birlikte kullanılabilir. Bu nedenle, çalıştırmak için `MeasureSuperpositionArray` bir "sarmalayıcı" işlemi tanımlamamız gerekir ve bu işlemden sonra işlemi bağımsız değişkenlerle çağırır:
+Q#İşlemleri işlemlere geçirmek için bağımsız değişkenler `key=value` yürütme Magic komutuna çiftler olarak geçirilebilir.
+Bu nedenle, `MeasureSuperpositionArray` dört qubit ile çalıştırmak için şunları çalıştırabiliriz `%simulate MeasureSuperpositionArray n=4` :
 
-<img src="../media/hostprograms_jupyter_wrapper_def_sim_crop.png" alt="Wrapper function and simulate Jupyter cell" width="550">
+<img src="../media/hostprograms_jupyter_args_sim_crop.png" alt="Jupyter cell simulating a Q# operation with arguments" width="773">
 
-Bu işlem, `%estimate` ve diğer yürütme komutlarıyla benzer şekilde kullanılabilir.
+Bu model, `%estimate` ve diğer yürütme komutlarıyla benzer şekilde kullanılabilir.
+
+### <a name="using-no-locq-code-from-other-projects-or-packages"></a>Q#Diğer projelerden veya paketlerdeki kodu kullanma
+
+Varsayılan olarak, bir Q# Jupyter Notebook tüm `.qs` dosyaları geçerli klasöre yükler ve Q# işlemlerini ve işlevlerini Not defterinin içinden kullanıma sunar. [ `%who` MAGIC komutu](xref:microsoft.quantum.iqsharp.magic-ref.who) , mevcut olan tüm Q# işlemleri ve işlevleri listeler.
+
+Başka bir Q# klasörden kod yüklemek için, [ `%project` MAGIC komutu](xref:microsoft.quantum.iqsharp.magic-ref.project) bir proje için bir dosyaya başvuru eklemek için kullanılabilir `.csproj` (yani Q# , başvuru yapan bir proje `Microsoft.Quantum.Sdk` ). Bu komut `.qs` , `.csproj` (ve alt klasörleri) içeren klasörde bulunan dosyaları derler. Ayrıca, `PackageReference` ya da Q# Bu dosyanın üzerinden başvurulan projeler aracılığıyla başvurulan paketleri yinelemeli olarak yükler `ProjectReference` `.csproj` . 
+
+Örnek olarak, aşağıdaki hücreler, Q# Proje yolunun geçerli klasöre göre başvurduğu bir dış projeden bir işlemin benzetimini yapar:
+
+<img src="../media/hostprograms_jupyter_project_crop.png" alt="Jupyter cell simulating a Q# operation from an external project" width="773">
+
+Kod içeren harici paketleri yüklemek için Q# [ `%package` Magic komutunu](xref:microsoft.quantum.iqsharp.magic-ref.package)kullanın.
+Bir paketin yüklenmesi, özel bir Magic komutu da kullanılabilir hale getirir veya paketin parçası olan tüm derlemelerde bulunan kodlayıcıları görüntüler.
+
+Q#Not defteri başlatma zamanında dış paketleri veya projeleri yüklemek için Not defteri klasörünün başvuran bir dosya içerdiğinden emin olun `.csproj` `Microsoft.Quantum.Sdk` . Bu durumda, `.csproj` özelliğini öğesine ekleyin `<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` `<PropertyGroup>` . Bu, içinde bulunan Q# `ProjectReference` ve `PackageReference` `.csproj` Not defteri yükleme sırasında bulunan ' de bulunan her türlü öğeyi yinelemeli olarak yüklemeyi ister.
+
+Örneğin, `.csproj` Q# paketi otomatik olarak yükleyemem neden olan basit bir dosya aşağıda verilmiştir `Microsoft.Quantum.Chemistry` :
+
+```xml
+<Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Quantum.Chemistry" Version="0.12.20072031" />
+    </ItemGroup>
+</Project>
+```
+
+> [!NOTE]
+> Şu anda bu özel `<IQSharpLoadAutomatically>` özellik Q# Jupyter Notebook konakları için gereklidir, ancak gelecekte bu durum, `.csproj` Not defteri dosyasıyla aynı klasörde bulunan bir dosya için varsayılan davranış haline gelebilir.
+
+> [!NOTE]
+> `<QsharpCompile>`' Deki ayarı şu anda `.csproj` Jupyter Notebook konakları tarafından yok sayılır Q# ve `.qs` `.csproj` (alt klasörler dahil) klasöründeki tüm dosyalar yüklenir ve derlenir. `.csproj`Gelecekte ayarlar için destek sunulacaktır (daha fazla ayrıntı için bkz. [ıqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) ).

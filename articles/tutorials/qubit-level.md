@@ -1,5 +1,5 @@
 ---
-title: İçindeki qubit düzeyi programları yazın ve benzetimini yapınQ#
+title: İçindeki qubit düzeyi programları yazın ve benzetimini yapın Q#
 description: Bireysel qubit düzeyinde çalışan bir hisse programını yazma ve benzetimi yapma hakkında adım adım öğretici
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -9,12 +9,12 @@ ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 22c79e4e01db1a0d0c291d0dcff81dbfa8df5cd3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869724"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863345"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Öğretici: Q 'da qubit düzeyi programları yazma ve benzetimini yapma\#
 
@@ -41,17 +41,17 @@ Bizim örneğimizde, Q# aşağıdaki gösterimi bir devre olarak bulunan tam ü�
 ## <a name="in-this-tutorial-youll-learn-how-to"></a>Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
 > [!div class="checklist"]
-> * İçinde hisse işlemleri tanımlayınQ#
-> * Q#İşlemleri doğrudan komut satırından veya klasik ana bilgisayar programını kullanarak çağırma
+> * İçinde hisse işlemleri tanımlayın Q#
+> * Q#İşlemleri doğrudan komut isteminden veya klasik ana bilgisayar programını kullanarak çağırma
 > * Ölçüm çıkışına qubit ayırmayı bir hisse alma işlemi benzetimi yap
 > * Hisse sisteminin sanal dalga işlevinin işlem boyunca nasıl gelişdiğini gözlemleyin
 
 Microsoft 'un hisse geliştirme seti ile bir hisse programın çalıştırılması genellikle iki bölümden oluşur:
 1. Programın kendisi, Q# hisse dili programlama dili kullanılarak uygulanır ve ardından hisse bir bilgisayar veya hisse Benzetici üzerinde çalışmak üzere çağırılır. Bunlardan oluşur 
-    - Q#işlemler: hisse kayıtları için davranan alt yordamlar ve 
-    - Q#işlevler: hisse algoritması içinde kullanılan klasik alt yordamlar.
+    - Q# işlemler: hisse kayıtları için davranan alt yordamlar ve 
+    - Q# işlevler: hisse algoritması içinde kullanılan klasik alt yordamlar.
 2. Hisse programını çağırmak ve üzerinde çalıştırılması gereken hedef makineyi belirtmek için kullanılan giriş noktası.
-    Bu işlem doğrudan komut satırından veya Python veya C# gibi bir klasik programlama dilinde yazılmış bir konak programı aracılığıyla yapılabilir.
+    Bu işlem doğrudan komut isteminden veya Python veya C# gibi bir klasik programlama dilinde yazılmış bir konak programı aracılığıyla yapılabilir.
     Bu öğretici, tercih ettiğiniz yönteme ilişkin yönergeleri içerir.
 
 ## <a name="allocate-qubits-and-define-quantum-operations"></a>Qubits ayırın ve hisse alma işlemlerini tanımlayın
@@ -92,7 +92,7 @@ Sonra, işlemi tanımladık `Perform3qubitQFT` :
 Şimdilik işlem herhangi bir bağımsız değişken almaz ve bu durumda---hiçbir şey döndürmez; bu durumda, `Unit` `void` Python 'Da C# veya boş bir tanımlama alanı olan bir nesneyi döndüren bir nesne döndürür `Tuple[()]` .
 Daha sonra, bunu bir dizi ölçüm sonucu döndürecek şekilde değiştirecek ve bu noktada `Unit` Değiştirilecek `Result[]` . 
 
-### <a name="allocate-qubits-with-using"></a>İle qubit ayırın`using`
+### <a name="allocate-qubits-with-using"></a>İle qubit ayırın `using`
 Bizim Q# işlem dahilinde, öncelikle şu deyimle üç qubit kaydı ayırdık `using` :
 
 ```qsharp
@@ -114,7 +114,7 @@ Bizim Q# işlem dahilinde, öncelikle şu deyimle üç qubit kaydı ayırdık `u
 ### <a name="applying-single-qubit-and-controlled-gates"></a>Tek qubit ve denetimli kapıları uygulama
 
 Daha sonra, işlemin kendisini oluşturan kapıları uyguladık.
-Q#, ad alanında işlem olarak birçok temel hisse kapısı zaten içeriyor [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) ve bunlar özel durum değildir. 
+Q# , ad alanında işlem olarak birçok temel hisse kapısı zaten içeriyor [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) ve bunlar özel durum değildir. 
 
 Bir Q# işlem içinde, callables çağıran deyimler sıralı sırada yürütülür.
 Bu nedenle, uygulanacak ilk kapı [`H`](xref:microsoft.quantum.intrinsic.h) ilk qubit 'e (Hadamard) sahiptir:
@@ -134,10 +134,10 @@ Bu nedenle, [`H`](xref:microsoft.quantum.intrinsic.h) kayıt yaptığımız ilk 
 
 #### <a name="controlled-operations"></a>Denetlenen işlemler
 
-Q#bir veya birden fazla denetim qubit üzerinde bir işlemin yürütülmesini çok kolay hale getirir.
+Q# bir veya birden fazla denetim qubit üzerinde bir işlemin yürütülmesini çok kolay hale getirir.
 Genel olarak, yalnızca ile çağrıyı önliyoruz `Controlled` ve işlem bağımsız değişkenleri şu şekilde değişir:
 
- `Op(<normal args>)`$ \-$ `Controlled Op([<control qubits>], (<normal args>))` .
+ `Op(<normal args>)` $ \-$ `Controlled Op([<control qubits>], (<normal args>))` .
 
 Tek bir qubit olsa bile denetim qubits 'in bir dizi olarak sağlanması gerektiğini unutmayın.
 
@@ -157,7 +157,7 @@ Bu [`PI()`](xref:microsoft.quantum.math.pi) işlevi, [`Microsoft.Quantum.Math`](
 Ayrıca, bir `Double` (örn.), bir `2.0` tamsayı ile bölmek bir `2` tür hatası oluşturacak. 
 
 > [!TIP]
-> `R1(π/2)`ve `R1(π/4)` , `S` ve `T` işlemlerine eşdeğerdir (Ayrıca içinde `Microsoft.Quantum.Intrinsic` ).
+> `R1(π/2)` ve `R1(π/4)` , `S` ve `T` işlemlerine eşdeğerdir (Ayrıca içinde `Microsoft.Quantum.Intrinsic` ).
 
 
 `H`İkinci ve üçüncü qubits 'e ilgili işlemler ve denetlenen döndürmeler uygulandıktan sonra:
@@ -249,11 +249,11 @@ Q#Dosya ve işlem tamamlandıktan sonra, hisse mamızda program çağrılmaya ve
 Q#İşleminizi bir `.qs` dosyada tanımladık, şimdi bu işlemi çağırmalı ve döndürülen klasik verileri gözlemleyeceğiz.
 Şimdilik, döndürülen hiçbir şey yok (daha sonra işlem tarafından tanımlanan işlemin döndürdüğü geri çek `Unit` ), ancak daha sonra işlemi daha sonra Q# ölçüm sonuçları dizisi döndürecek şekilde değiştirdiğimiz zaman, `Result[]` bunu ele alınacaktır.
 
-Program, Q# Bu işlemi çağırmak için kullanılan ortamlarda bizden gerçekleşirken, bunu yapmanın yolu da farklılık gösterir. Bu nedenle, kuruluma karşılık gelen sekmedeki yönergeleri izlemeniz yeterlidir: Q# komut satırı uygulamasından çalışma veya Python ya da C# ' de bir konak programı kullanma.
+Program, Q# Bu işlemi çağırmak için kullanılan ortamlarda bizden gerçekleşirken, bunu yapmanın yolu da farklılık gösterir. Bu nedenle, kuruluma karşılık gelen sekmedeki yönergeleri izlemeniz yeterlidir: Q# uygulamadan çalışma veya Python ya da C# ' de bir konak programı kullanma.
 
-#### <a name="command-line"></a>[Komut satırı](#tab/tabid-cmdline)
+#### <a name="command-prompt"></a>[Komut istemi](#tab/tabid-cmdline)
 
-Q#Program komut satırından çalıştırıldığında dosyada yalnızca küçük bir değişiklik yapılması gerekir Q# .
+Q#Programı komut isteminden çalıştırmak, dosyada yalnızca küçük bir değişiklik yapılmasını gerektirir Q# .
 
 `@EntryPoint()`İşlem tanımından önceki bir satıra eklemeniz yeterlidir:
 
@@ -445,7 +445,7 @@ Her ölçülen `Result` tür ( `Zero` ya da `One` ), `resultArray` bir Update ve
 
 Anahtar sözcüğü, `set` kullanarak değişkenlerin bağlanmasını yeniden atamak için her zaman kullanılır `mutable` .
 
-#### <a name="return-resultarray"></a>Döndürülmesini`resultArray`
+#### <a name="return-resultarray"></a>Döndürülmesini `resultArray`
 
 Üç qubit ölçülmüş ve sonuçları öğesine eklendiğinde `resultArray` , qubits 'i daha önce sıfırlamak ve serbest bırakmak güvenlidir.
 Blok kapatıldıktan sonra `using` Ekle
@@ -499,10 +499,10 @@ Son işlem kodu şöyle görünmelidir:
 }
 ```
 
-Komut satırından çalışıyorsanız, döndürülen dizi yalnızca yürütmenin sonunda konsola doğrudan yazdırılır...
+Komut isteminden çalışıyorsanız, döndürülen dizi yalnızca, yürütmenin sonunda konsola doğrudan yazdırılır.
 Aksi takdirde, döndürülen diziyi işlemek için ana bilgisayar programınızı güncelleştirin.
 
-#### <a name="command-line"></a>[Komut satırı](#tab/tabid-cmdline)
+#### <a name="command-prompt"></a>[Komut istemi](#tab/tabid-cmdline)
 
 Konsolda yazdırılacak döndürülen diziyi daha fazla anlamak için, `Message` Q# yalnızca deyimden hemen önce dosyaya bir tane ekleyebiliriz `return` :
 

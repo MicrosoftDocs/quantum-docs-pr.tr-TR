@@ -1,5 +1,5 @@
 ---
-title: Entanglement 'i ile keşfetQ#
+title: Entanglement 'i ile keşfet Q#
 description: "' De bir hisse programı yazmayı öğrenin Q# . Quantum Development Kit'i (QDK) kullanarak Bell Durumu uygulaması geliştirme"
 author: geduardo
 ms.author: v-edsanc@microsoft.com
@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c66d26b5ea253d6fc2633fbe52fa35ba703d185d
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d815a9a25b8ba5e9489b6d3d27fb0d64ab4aaa1d
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869707"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863434"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Öğretici: Q\# ile dolaşıklığı keşfetme
 
@@ -52,11 +52,11 @@ Birden çok kubit [**dolaşık hale getirilebilir**](xref:microsoft.quantum.glos
 
 ## <a name="creating-a-no-locq-project"></a>Proje oluşturma Q#
 
-Yapmanız gereken ilk şey yeni bir Q# Proje oluşturmaktır. Bu öğreticide, [vs Code ile komut satırı uygulamalarına](xref:microsoft.quantum.install.standalone)göre ortamı kullanacağız.
+Yapmanız gereken ilk şey yeni bir Q# Proje oluşturmaktır. Bu öğreticide, [ Q# vs Code olan uygulamalara](xref:microsoft.quantum.install.standalone)göre ortamı kullanacağız.
 
 Yeni bir proje oluşturmak için VS Code: 
 
-1. Komut **paleti görüntüle**' ye tıklayın  ->  **Command Palette** ve ** Q# şunları seçin: yeni proje oluştur**.
+1. **Görünüm** -> **Komut Paleti**’ne tıklayın ve **Q#: Yeni Proje Oluştur**’u seçin.
 2. **Bağımsız konsol uygulaması**’na tıklayın.
 3. Projenin kaydedileceği konuma gidin ve **Proje Oluştur**’a tıklayın.
 4. Proje başarıyla oluşturulduğunda, sağ alt kısımdaki **Yeni proje aç...** seçeneğine tıklayın.
@@ -125,7 +125,7 @@ Kuantum işlemi, kubitin durumunu dönüştürür. Bazen kuantum işlemleri, kla
 
 Sonrasında `SetQubitState` işleminin etkisini göstermek için bir `TestBellState` işlemi eklenir. Bu işlem giriş olarak `Zero` veya `One` alır. Ardından `SetQubitState` işlemini bu girişle birkaç kez çağırıp kubitin ölçümünden döndürülen `Zero` sayısı ile döndürülen `One` sayısını hesaplar. Elbette bu ilk `TestBellState` işlemi simülasyonunda çıkışın parametre girişi `Zero` döndüreceğinden, tüm kubit ölçümlerinin `Zero` ile ayarlanmış olduğunu ve parametre girişi `One` döndüreceğinden tüm kubit ölçümlerinin `One` ile ayarlanmış olduğunu göstermesi beklenir. Ayrıca, `TestBellState` üst konumu ve entanglement 'i göstermek için öğesine kod ekleyeceğiz.
 
-Aşağıdaki işlemi `Bell.qs` dosyasında ad alanının içine, `SetQubitState` işleminin sonuna ekleyin:
+Aşağıdaki işlemi `Program.qs` dosyasında ad alanının içine, `SetQubitState` işleminin sonuna ekleyin:
 
 ```qsharp
    operation TestBellState(count : Int, initial : Result) : (Int, Int) {
@@ -161,13 +161,13 @@ Varsayılan olarak, ' deki değişkenler Q# sabittir; bu değerler bağlandıkta
 
 Değeri değişebilen `numOnes` gibi bir değişkene ihtiyacınız varsa değişkeni `mutable` anahtar sözcüğüyle bildirebilirsiniz. Değişebilir değişkenin değeri `setQubitState` deyimi kullanılarak değiştirilebilir.
 
-Her iki durumda da, değişkenin türü derleyici tarafından çıkarsanır. Q#değişkenler için herhangi bir tür ek açıklaması gerektirmez.
+Her iki durumda da, değişkenin türü derleyici tarafından çıkarsanır. Q# değişkenler için herhangi bir tür ek açıklaması gerektirmez.
 
 #### <a name="about-using-statements-in-q"></a>`using`Q içindeki deyimler hakkında\#
 
 `using`İfade için de özeldir Q# . Kubitleri bir kod bloğunda kullanım amacıyla ayırmak için kullanılır. ' De Q# , tüm qubits, karmaşık bir algoritmanın tüm kullanım ömrü boyunca yer alan sabit kaynaklar yerine dinamik olarak ayrılır ve serbest bırakılır. Başlangıçta `using` deyimi bir kubit kümesi ayırır ve bloğun sonunda bu kubitleri serbest bırakır.
 
-## <a name="execute-the-code-from-the-command-line"></a>Komut satırından kodu yürütün
+## <a name="run-the-code-from-the-command-prompt"></a>Komut isteminden kodu çalıştırma
 
 Kodu çalıştırmak için, komutunu sağlamamız durumunda, çağrılabilir olarak çalıştırılabilir *olan* derleyiciyi belirtmemiz gerekir `dotnet run` . Bu, Q# `@EntryPoint()` çağrılabilir: `TestBellState` Bu durumda işlem tarafından doğrudan bir satır eklenerek, dosyada basit bir değişiklik ile yapılır. Tam kod şu şekilde olmalıdır:
 
@@ -208,7 +208,7 @@ namespace Bell {
 }
 ```
 
-Programı çalıştırmak için `count` `initial` komut satırından ve bağımsız değişkenleri belirtmeniz gerekir. Örneğin `count = 1000` , ve ' i seçelim `initial = One` . Aşağıdaki komutu girin:
+Programı çalıştırmak için `count` `initial` komut isteminden ve bağımsız değişkenleri belirtmemiz gerekir. Örneğin `count = 1000` , ve ' i seçelim `initial = One` . Aşağıdaki komutu girin:
 
 ```dotnetcli
 dotnet run --count 1000 --initial One
@@ -235,7 +235,7 @@ Test results (# of 0s, # of 1s):
 
 Şimdi Q# de bilgeler 'yi üst konuma yerleştirmek için nasıl ifade etmenin nasıl olduğunu inceleyelim.  Hatırlayacağınız gibi bir kubit 0 ve 1 süper konumlarında olabilir.  Bunu gerçekleştirmek için `Hadamard` işlemini kullanacağız. Kubitin klasik durumlardan birine olması halinde (ölçümün her zaman `Zero` veya her zaman `One` döndürmesi durumunda) `Hadamard` ya da `H` işlemi kubiti ölçümün %50 oranında `Zero` ve %50 oranında `One` döndüreceği bir duruma alır.  Kavramsal olarak kubitin `Zero` ile `One` arasındaki bir noktada olduğu düşünülebilir.  Şimdi `TestBellState` işleminin simülasyonunu yaptığımızda, ölçüm sonrasında elde edilen sonuçların `Zero` ve `One` için yaklaşık olarak eşit değerler verdiğini göreceğiz.  
 
-### <a name="x-flips-qubit-state"></a>`X`qubit durumunu çevirir
+### <a name="x-flips-qubit-state"></a>`X` qubit durumunu çevirir
 
 İlk olarak kubiti çevirmeyi deneyeceğiz. (Kubit `Zero` durumundaysa `One` durumuna çevireceğiz veya aksi halde işlemin tam tersini yapacağız.) Bu, kubiti `TestBellState` işleminde ölçmeden önce bir `X` işlemi gerçekleştirilerek yapılır:
 
@@ -265,7 +265,7 @@ Test results (# of 0s, # of 1s):
 
 Şimdi qubits 'in hisse özelliklerini keşfedelim.
 
-### <a name="h-prepares-superposition"></a>`H`üst konumu hazırlar
+### <a name="h-prepares-superposition"></a>`H` üst konumu hazırlar
 
 Önceki çalıştırmadaki `X` işlemini bir `H` veya Hadamard işlemiyle değiştirmemiz yeterli olacaktır. Kubiti 0'dan 1'e kadar tümüyle çevirmek yerine yalnızca yarı yola kadar çevireceğiz. `TestBellState` işleminde değiştirilen satırlar şöyle görünür:
 

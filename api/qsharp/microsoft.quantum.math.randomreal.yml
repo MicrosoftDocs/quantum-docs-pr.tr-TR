@@ -3,19 +3,12 @@ uid: microsoft.quantum.math.randomreal
 name: RandomReal
 type: operation
 namespace: Microsoft.Quantum.Math
-summary: Aralıktan büyük veya sıfıra eşit ve sıfırdan küçük bir rastgele gerçek sayı döndürür.
-remarks: Bu işlev çağırır <xref:microsoft.quantum.intrinsic.random>, bu nedenle, rasgeleliği uygulamanın uygulamasına bağlıdır `Random`.
+summary: Rasgelereal kullanım dışı bırakıldı. Lütfen @"microsoft.quantum.random.drawrandomdouble" bunun yerine kullanın.
 syntax: 'operation RandomReal (bitsRandom : Int) : Double'
 input:
   content: '(bitsRandom : Int)'
   types:
   - name: bitsRandom
-    summary: >-
-      Rastgele sayının örneklendiği duyarlık bitlerinin sayısı.
-
-          # Output
-
-      $ [0, 2 ^ {\texttt{bitsRandom}} $ ($ [0, 2 ^ {\Texttt{bitsrasgele}}) $, olasılık $ \Pr (k) = 1/2 ^ {\texttt{bitsRandom}} $ ile örneklenen bir tamsayı $k $ için gerçek sayı $x = k/2 ^ {
     isPrimitive: true
     uid: Int
 output:
@@ -24,9 +17,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: b3974f5b12f8d49cc7920021caad98f6e2f3a60c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2cb70e92b47d9233d241eee730337c5fcf709ca8
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681521"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863568"
