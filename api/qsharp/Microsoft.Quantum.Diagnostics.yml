@@ -1,6 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.diagnostics
 name: Microsoft.Quantum.Diagnostics
+summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı, sağlama işlemleri ve talep işlevleri dahil olmak üzere tanılama amaçları için yararlı işlevler ve işlemler içerir."
 functions:
 - uid: microsoft.quantum.diagnostics.allequalityfactb
   summary: İki dizi Boole değerinin eşit olduğunu onaylar.
@@ -35,6 +36,10 @@ functions:
 - uid: microsoft.quantum.diagnostics.nearequalityfactd
   summary: Klasik bir kayan nokta değerinin, 1e-10 ' un küçük bir toleransına kadar beklenen değere sahip olduğunu onaylar.
 operations:
+- uid: microsoft.quantum.diagnostics.allowatmostncallsca
+  summary: Bu işleme ve Adjoint çağrısı arasında, belirli bir işlemin en çok birkaç kez çağrıldığını onaylar.
+- uid: microsoft.quantum.diagnostics.allowatmostnqubits
+  summary: Bu işleme ve adeklem çağrısı arasında, using deyimleri ile verilen sayıda ek qubit için en fazla bir kaç sayının ayrıldığını onaylar.
 - uid: microsoft.quantum.diagnostics.assertallzero
   summary: Verilen qubits 'in hepsi $ \ket {0} $ durumunda olduğunu onaylayın.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
@@ -67,6 +72,8 @@ operations:
     Bu nedenle, bu işlem yalnızca sınanan her bir işlem için tek bir çağrıya gerek duyar, ancak ayrılacak sayıda qubit için iki kez gerekir.
 
     Bu onaylama, örneğin, bir işlemin en iyi duruma getirilmiş bir sürümünün Naïve uygulamasına benzer bir şekilde davranması veya bir dizi hisse kullanım dışı girişleri üzerinde davranan bir işlemin bilinen durumları kabul ettiği bir işlem olduğundan emin olmak için kullanılabilir.
+- uid: microsoft.quantum.diagnostics.assertphase
+  summary: Bir eşit üst konum durumunun beklenen değere sahip olduğunu onaylar.
 - uid: microsoft.quantum.diagnostics.assertqubit
   summary: Qubitin `q` Pauli Z işlecinin beklenen eigenstate öğesinde olduğunu onaylar.
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
@@ -74,23 +81,24 @@ operations:
     Beklenen durumda bir qubitin olduğunu onaylar.
 
 
-    `expected`karmaşık bir vektörü temsil eder, $ \ket{\psı} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+    `expected` karmaşık bir vektörü temsil eder, $ \ket{\psı} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
 
     $A $, $b $ her birini temsil eden başlıkların ilk öğesi, karmaşık sayının gerçek bölümüdür; ikinci tane ise sanal parçadır.
 
     Son bağımsız değişken, onaylama işlemi yapılan toleransı tanımlar.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
   summary: Qubit 'in `q` Pauli Z işlecinin, belirli bir toleransa kadar beklenen eigenstate olduğunu onaylar.
+- uid: microsoft.quantum.diagnostics.dumpoperation
+  summary: Bir işlem verildiğinde, geçerli yürütme hedefi tarafından kullanılabilir hale getirilen işlem hakkındaki tanılamayı görüntüler.
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
   summary: Bir tür yüklenirken veya test amaçlı olarak çağrılabilir şekilde kullanılabilecek alternatif bir adın tanımlanabilmesi için, derleyici tarafından tanınan öznitelik.
 - uid: microsoft.quantum.diagnostics.test
   summary: Derleyici tarafından tanınan öznitelik bir birim testini işaretlemek için kullanılır.
-summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı, sağlama işlemleri ve talep işlevleri dahil olmak üzere tanılama amaçları için yararlı işlevler ve işlemler içerir."
 metadata:
-  ms.openlocfilehash: c8e1cd7f3458e736a47749dd057174eb4961c31d
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 16c457188160a3e0d2b4d04b40af0dabbbdc0f0a
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884567"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863041"

@@ -243,17 +243,17 @@ newtypes:
 summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı klasik matematik işlevlerini ve veri türlerini içerir."
 operations:
 - uid: microsoft.quantum.math.randomint
-  summary: Sıfırdan büyük veya sıfıra eşit ve belirtilen üst sınırdan küçük bir rastgele tam sayı üretir.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nRandomInt kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.random.drawrandomint\" bunun yerine kullanın."
 - uid: microsoft.quantum.math.randomintpow2
-  summary: Verilen bit sayısında temsil edilebilir tüm tamsayılarla rastgele bir tam sayı üretir.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nRandomIntPow2 kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.random.drawrandomint\" bunun yerine kullanın."
 - uid: microsoft.quantum.math.randomreal
-  summary: Aralıktan büyük veya sıfıra eşit ve sıfırdan küçük bir rastgele gerçek sayı döndürür.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nRasgelereal kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.random.drawrandomdouble\" bunun yerine kullanın."
 - uid: microsoft.quantum.math.randomsinglequbitpauli
-  summary: Tek qubit Pauli işleçlerinden birini rastgele bir şekilde döndürür.
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nRandomsingliqubitpauli kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.random.drawrandompauli\" bunun yerine kullanın."
 metadata:
-  ms.openlocfilehash: 03b75e3dbaa8be699e58fcbcd13db4fbf1c82f12
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 9df4513399d0b2d1ac534c7ba106189483ef49cc
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326511"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863058"

@@ -450,11 +450,7 @@ operations:
 - uid: microsoft.quantum.canon.assertlessthanphasele
   summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAssertlessıfemhasele kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.arithmetic.assertphaselessthan\" bunun yerine kullanın.\nLütfen @\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\" kullanın."
 - uid: microsoft.quantum.canon.assertphase
-  summary: >-
-    Bir eşit üst konum durumunun beklenen değere sahip olduğunu onaylar.
-
-
-    Özellikle, bazı rastgele bir Real t için beklenen değere sahip $ \frac{e ^ {ı t}} {\sqrt {2} } (e ^ {i\phi} \ demet {0} + e ^ {-i\phi} \ ayraç) $ olarak ifade edilebilir olan bir hisse cısının $ \ Fi $ aşamasının $ \phi $ değerinin sayısını onaylar {1} .
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAssertPhase kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.diagnostics.assertphase\" bunun yerine kullanın."
 - uid: microsoft.quantum.canon.cascadeccnot
   summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nBasamakarda kaldırılmamıştır. Lütfen @\"microsoft.quantum.canon.applyccnotchain\" bunun yerine kullanın."
 - uid: microsoft.quantum.canon.cascadecnot
@@ -585,9 +581,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nResultStack kullanım dışı bırakıldı."
 metadata:
-  ms.openlocfilehash: ab6e8a58dd163e4a9b2ea299e544a4e487d61e23
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 72e806d0a44fdcc372ab0d10edcaceb501713180
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884672"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88862943"
