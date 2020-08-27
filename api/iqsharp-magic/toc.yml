@@ -38,10 +38,14 @@
   name: '%package magic komutu'
 - href: performance.md
   name: '%performance magic komutu'
+- href: project.md
+  name: '%project magic komutu'
 - href: simulate.md
   name: '%simulate magic komutu'
 - href: toffoli.md
   name: '%toffoli magic komutu'
+- href: trace.md
+  name: '%trace magic komutu'
 - href: who.md
   name: '%who magic komutu'
 - href: workspace.md

@@ -3,14 +3,14 @@ title: IQ# Magic Komutları
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.index
 ms.author: rmshaffer
-ms.date: 07/21/2020
+ms.date: 08/25/2020
 ms.topic: article
-ms.openlocfilehash: 971787adae03af35d2e5b408fb88356a8b7df90a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: d6bf8407e40be092689b38cf90514c88f798cc2f
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870711"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862958"
 ---
 # <a name="iq-magic-commands"></a>IQ# Magic Komutları
 | Magic Komutu | Özet |
@@ -35,7 +35,9 @@ ms.locfileid: "86870711"
 | [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen) | Şu anda açık olan ad alanlarını ve bunların diğer adlarını listeler. |
 | [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | NuGet paketini yükleme özelliği sağlar. |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | Bu çekirdek için geçerli performans ölçümlerini bildirir. |
+| [`%project`](xref:microsoft.quantum.iqsharp.magic-ref.project) | Q# proje başvurularını görüntüleme veya ekleme özelliği sağlar. |
 | [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | Verilen bir işlevi veya işlemi QuantumSimulator hedef makinesinde çalıştırır. |
 | [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) | Verilen bir işlevi veya işlemi ToffoliSimulator hedef makinesinde çalıştırır. |
+| [`%trace`](xref:microsoft.quantum.iqsharp.magic-ref.trace) | Verilen işlemin yürütme yolunu görselleştirir. |
 | [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who) | Geçerli oturumda kullanılabilir olan Q# işlemlerini listeler. |
 | [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace) | Geçerli çalışma alanıyla ilgili eylemleri sağlar. |

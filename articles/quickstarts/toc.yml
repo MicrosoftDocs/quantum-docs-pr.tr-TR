@@ -6,7 +6,7 @@ items:
     items:
       - name: Yüklemeye genel bakış
         href: index.md
-      - name: Q# komut satırı uygulamaları
+      - name: Q# uygulamaları
         href: install-command-line.md
       - name: Q# Jupyter Notebook’ları
         href: install-jupyter.md
