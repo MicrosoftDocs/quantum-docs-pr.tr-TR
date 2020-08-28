@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8a981645703423856e667be7c3dccf5270a5885f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6a0885035c12a99ae43533f04cdc95c5c529380a
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868109"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992232"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Hisse geliştirme seti (QDK) Toffoli simülatör
 
@@ -40,7 +40,7 @@ Diğer hedef makinelerde olduğu gibi, önce `ToffoliSimulator` sınıfının bi
 
 ### <a name="invoking-the-toffoli-simulator-from-python"></a>Python 'dan Toffoli simülatörü çağırma
 
-Python kitaplığındaki [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) yöntemini içeri aktarılan Q# işlemle kullanın:
+Python kitaplığındaki [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) yöntemini içeri aktarılan Q# işlemle kullanın:
 
 ```python
 qubit_result = myOperation.toffoli_simulate()
@@ -68,7 +68,7 @@ Toffoli simülatör şunları destekler:
 
 * `R` `Exp` Ortaya çıkan işlem, `X` ya da kimlik matrisine eşit olduğunda, ve gibi geçen Paulis 'ler.
 * Ölçüm ve [onaylama](xref:microsoft.quantum.diagnostics.assertmeasurement) işlemleri, ancak yalnızca Pauli `Z` temelinde. Ölçüm işleminin olasılığının her zaman **0** ya da **1**olduğunu unutmayın; Toffoli benzeticisinde rastgele bir değer yoktur.
-* `DumpMachine`ve `DumpRegister` işlevleri.
+* `DumpMachine` ve `DumpRegister` işlevleri.
 Her iki işlev de `Z` her bir qubit, satır başına bir qubit olmak üzere, her bir qubit için geçerli
 
 ## <a name="specifying-the-number-of-qubits"></a>Qubits sayısını belirtme
@@ -77,7 +77,7 @@ Varsayılan olarak, bir `ToffoliSimulator` örnek 65.536 qubit için alan ayır�
 Algoritmanız bundan daha fazla qubit gerektiriyorsa, oluşturucuya parametresi için bir değer sağlayarak qubit sayısını belirtebilirsiniz `qubitCount` .
 Her ek qubit yalnızca bir baytlık bellek gerektirir, bu nedenle ihtiyaç duyacağınız qubit sayısını fazla tahmin etmek için önemli bir maliyet yoktur.
 
-Örnek:
+Örneğin:
 
 ```csharp
     var sim = new ToffoliSimulator(qubitCount: 1000000);

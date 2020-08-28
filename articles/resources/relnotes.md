@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f94c20281c5a242aac6a731a5091264dc2847712
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 70d0c9b61e49d4ee6142edbe2767310403885f01
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863762"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992267"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -32,7 +32,7 @@ Bu sürüm aşağıdakileri içerir:
 
 - Yeni [Microsoft. hisse. Random ad alanı](xref:microsoft.quantum.random), programlar içinden rastgele değerler örneklemek için daha uygun bir yol sağlar Q# . ([Niceno kitaplıkları # 311.864](https://github.com/microsoft/QuantumLibraries/pull/311), [qsharp-Runtime # üçaynumarası](https://github.com/microsoft/qsharp-runtime/pull/328))
 - Yeni [ `DumpOperation` Işlemle](xref:microsoft.quantum.diagnostics.dumpoperation)Iyileştirilmiş [Microsoft. hisse. Diagnostics ad alanı](xref:microsoft.quantum.diagnostics) ve qubit ayırmayı ve Oracle çağrılarını kısıtlamak için yeni işlemler. ([Hiskkitaplıkları # 302](https://github.com/microsoft/QuantumLibraries/pull/302))
-- [ `%project` ](xref:microsoft.quantum.iqsharp.magic-ref.project) Q# [ `qsharp.projects` ](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects) Q# Geçerli çalışma alanı klasörü dışındaki projelere yönelik başvuruları desteklemek için I ve Python 'daki API 'de yeni Magic komutu. Bu özelliğin geçerli sınırlamaları için bkz. [ıqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) . 
+- [ `%project` ](xref:microsoft.quantum.iqsharp.magic-ref.project) Q# [ `qsharp.projects` ](https://docs.microsoft.com/python/qsharp-core/qsharp.projects.projects) Q# Geçerli çalışma alanı klasörü dışındaki projelere yönelik başvuruları desteklemek için I ve Python 'daki API 'de yeni Magic komutu. Bu özelliğin geçerli sınırlamaları için bkz. [ıqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) . 
 - `.csproj` Q# Dış proje veya paket başvurularının başlatma sırasında yüklenmesine izin veren ı/Python konakları için dosyaları otomatik olarak yükleme desteği. Daha fazla bilgi için bkz. [ Q# Python ve jupi Not defterleri ile](xref:microsoft.quantum.guide.host-programs) kullanma kılavuzu.
 - Errordüzeltmesini eklendi. Syndrome örneği.
 - Simplefon için ayarlanabilir bağlantısı eklendi.
