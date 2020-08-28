@@ -2,7 +2,7 @@
   items:
     - name: API başvurusu
       href: index.md
-    - name: 'Q# kitaplıkları'
+    - name: Q# kitaplıkları
       topicHref: qsharp/index.md
       href: qsharp/toc.yml
     - name: .NET kitaplıkları
@@ -14,6 +14,6 @@
         - name: Kuantum kimyası
           href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry'
     - name: Python kitaplıkları
-      href: 'https://docs.microsoft.com/python/qsharp'
-    - name: 'IQ# magic komutları'
+      href: 'https://docs.microsoft.com/python/qsharp-core/qsharp'
+    - name: IQ# magic komutları
       href: iqsharp-magic/toc.yml
