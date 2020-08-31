@@ -9,12 +9,12 @@ ms.topic: overview
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ff5eb9984da0b22a65f3919599ee18605a206fa0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 06198f3b5b806bab49abf9fca38b5d2f15cfb65f
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867531"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863747"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Quantum Development Kit'i (QDK) kullanmaya başlama
 
@@ -36,7 +36,7 @@ Kuantumun gücünden yararlanmaya başlamak için öğreticilerimizi deneyebilir
 * [Q# ile dolaşıklığı keşfetme](xref:microsoft.quantum.write-program): Bu öğretici, kuantum programlamanın bazı temel kavramlarını gösteren bir Q# programı yazma adımlarında size rehberlik eder.
     Kodlamaya başlamaya hazır değilseniz, yine de QDK'yi yüklemeden anlatımı takip ederek Q# programlama diline genel bir bakış elde edebilir ve kuantum bilişiminin ilk kavramlarını öğrenebilirsiniz.
 * [Grover arama algoritması](xref:microsoft.quantum.quickstarts.search): Kuantum algoritmasına alt düzey kuantum işlemlerini soyutlama açısından yaklaşan ve Q# dilinin gücü hakkında fikir edinmenizi sağlayan bu Q# programı örneğini keşfedin.
-    Bu öğretici, Visual Studio veya Visual Studio Code kullanarak programı bir Q# komut satırı uygulaması olarak geliştirme sürecinde size rehberlik eder.
+    Bu öğretici, programı Visual Studio veya Visual Studio Code kullanıp Q# uygulaması olarak geliştirme sürecinde size rehberlik eder.
 
 ### <a name="learning-further"></a>Daha fazlasını öğrenme
 * [Kuantum bilişimi için Microsoft Learn modülleri](https://docs.microsoft.com/learn/browse/?term=quantum), temel kavramlar konusunda size uygun hızda ve zamanda ustalaşmayı öğretir. [İlk modülümüzü](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/) kullanarak QDK ile kuantum programlarının nasıl oluşturulacağı ile ilgili temel bilgileri öğrenebilirsiniz.

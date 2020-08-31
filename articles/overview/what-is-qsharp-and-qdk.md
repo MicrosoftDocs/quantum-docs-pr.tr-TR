@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.q-sharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3ee9e897eb142bbc9503a617cc3e25c1a665ff35
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 5db574b0380ffa1616cb3959d84925854df4e321
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866953"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863787"
 ---
 # <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Q# programlama dili ve QDK nedir?
 
@@ -24,7 +24,7 @@ Q#, bir programlama dili olarak Python, C# ve F# dillerindeki alışıldık öğ
 
 ## <a name="what-can-i-do-with-the-qdk"></a>QDK ile ne yapabilirim?
 
-QDK, çeşitli ortamlarda çalıştırabileceğiniz kuantum uygulamaları geliştirmek için ortak araçlar ve dillerle kullanabileceğiniz, Q# diline yönelik tam özellikli bir geliştirme setidir. Q# programları Jupyter Not Defterleri aracılığıyla bir komut satırı uygulaması olarak çalışabilir veya bir Python ya da .NET konak programı kullanabilir.
+QDK, çeşitli ortamlarda çalıştırabileceğiniz kuantum uygulamaları geliştirmek için ortak araçlar ve dillerle kullanabileceğiniz, Q# diline yönelik tam özellikli bir geliştirme setidir. Q# programları Jupyter Not Defterleri aracılığıyla bir konsol uygulaması olarak çalışabilir veya bir Python ya da .NET konak programı kullanabilir.
 
 ### <a name="develop-in-common-tools-and-environments"></a>Ortak araçlarda ve ortamlarda geliştirme
 
@@ -48,7 +48,7 @@ Kuantum programlarınızı tam durumlu bir kuantum simülatöründe veya sınır
 
 ## <a name="how-does-no-locq-work"></a>Q# nasıl çalışır?
 
-Bir Q# programı, bağımsız bir komut satırı uygulaması olarak derlenebilir veya Python ya da .NET dilinde yazılmış bir konak programı tarafından çağrılabilir.
+Q# programı, bağımsız bir uygulama olarak derlenebilir veya Python ya da bir .NET dilinde yazılmış konak programı tarafından çağrılabilir.
 
 Programı derleyip çalıştırdığınızda, bir kuantum simülatörü örneği oluşturur ve Q# kodunu buna geçirir. Simülatör, Q# kodunu kullanarak kubitler (kuantum parçacıklarının simülasyonları) oluşturur ve bu kubitlerin durumlarını değiştirmek için dönüştürme işlemleri uygular. Ardından simülatördeki kuantum işlemlerinin sonuçları programa döndürülür.  
 
@@ -60,7 +60,7 @@ Q# kodunu simülatörde yalıtmak, algoritmaların kuantum fiziği yasalarını 
 
 Q# derleyicisi, Q# kitaplıkları ve kuantum simülatörleri de dahil olmak üzere Q# programları yazmak ve çalıştırmak için ihtiyacınız olan her şey yerel bilgisayarınızdan yüklenip çalıştırılabilir. Gelecekte Q# programlarınızı gerçek bir kuantum bilgisayarda uzaktan çalıştırabileceksiniz, ancak o zamana kadar QDK ile birlikte sunulan kuantum simülatörleri doğru ve güvenilir sonuçlar sağlar.
 
-- [Komut satırından Q#](xref:microsoft.quantum.install.standalone) çalıştırmak, başlamak için en hızlı yoldur.
+- [Q# uygulamaları](xref:microsoft.quantum.install.standalone) geliştirmek, kullanmaya başlamanın en hızlı yoludur.
 
 - Q# programlarını derlemeye, görselleştirmeye ve bunların simülasyonunu yapmaya yönelik bir Jupyter uzantısı olan bağımsız ve [IQ# içeren Jupyter Not Defterlerini](xref:microsoft.quantum.install.jupyter) çalıştırın.
 

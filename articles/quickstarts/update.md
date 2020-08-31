@@ -10,12 +10,12 @@ uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dd7360961aa728a6aa63b8d8c4e4840f5bf2afe8
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 84782d1628dd100c0939b2b12aa0a9aa8ab2b80e
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866766"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863637"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum geliştirme setini (QDK) güncelleştirme
 
@@ -37,7 +37,7 @@ Q# işlemlerini barındırmak için C# veya Python kullanmanızdan bağımsız o
     dotnet --version
     ```
 
-    Çıkışın `3.1.100` veya daha yüksek olduğunu doğrulayın. Aksi takdirde [en son sürümü](https://dotnet.microsoft.com/download) yükleyip yeniden denetleyin. Ardından, kurulumunuza (Visual Studio, Visual Studio Code veya doğrudan komut satırı) bağlı olarak aşağıdaki yönergeleri izleyin.
+    Çıkışın `3.1.100` veya daha yüksek olduğunu doğrulayın. Aksi takdirde [en son sürümü](https://dotnet.microsoft.com/download) yükleyip yeniden denetleyin. Ardından, kurulumunuza (Visual Studio, Visual Studio Code veya doğrudan komut isteminden) bağlı olarak aşağıdaki yönergeleri izleyin.
 
 ### <a name="update-no-locq-projects-in-visual-studio"></a>Visual Studio'daki Q# projelerini güncelleştirme
  
@@ -84,9 +84,9 @@ Artık [Visual Studio QDK uzantınızı güncelleştirme](#update-visual-studio-
 
 1. Visual Studio Code’da, güncelleştirilecek projeyi içeren klasörü açın.
 2. **Terminal** -> **Yeni Terminal**’i seçin.
-3. Komut satırını kullanarak güncelleştirme yönergelerini izleyin (doğrudan aşağıda verilmiştir).
+3. Komut istemini kullanarak güncelleştirme yönergelerini izleyin (hemen aşağıda verilmiştir).
 
-### <a name="update-no-locq-projects-using-the-command-line"></a>Komut satırını kullanarak Q# projelerini güncelleştirme
+### <a name="update-no-locq-projects-using-the-command-prompt"></a>Komut istemini kullanarak Q# projelerini güncelleştirme
 
 1. Ana proje dosyanızı içeren klasöre gidin.
 
@@ -309,7 +309,7 @@ Artık mevcut Q# Jupyter Not Defterlerinizi çalıştırmak için güncelleştir
 
 1. .NET için Quantum proje şablonlarını güncelleştirme
 
-    Komut satırından:
+    Komut isteminden:
 
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates

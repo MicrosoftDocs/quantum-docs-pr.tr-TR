@@ -1,5 +1,5 @@
 ---
-title: Q# komut satırı uygulamaları ile geliştirme
+title: Q# uygulamaları ile geliştirme
 author: KittyYeungQ
 ms.author: kitty
 ms.date: 4/24/2020
@@ -9,14 +9,14 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 630dc7b8acf2dd8f258eb27dfbc367b812cd1c19
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6a287dd76162a05d72af7e9d1e46533425283e2a
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867616"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863656"
 ---
-# <a name="develop-with-no-locq-command-line-applications"></a>Q# komut satırı uygulamaları ile geliştirme
+# <a name="develop-with-no-locq-applications"></a>Q# uygulamaları ile geliştirme
 
 Q# programları, C#, F# veya Python gibi bir konak dilinde sürücü olmadan kendi başına yürütülebilir.
 
@@ -26,7 +26,7 @@ Q# programları, C#, F# veya Python gibi bir konak dilinde sürücü olmadan ken
 
 ## <a name="installation"></a>Yükleme
 
-Q# komut satırı uygulamalarını herhangi bir IDE'de derleyebilseniz de, Q# uygulamalarınızı yerel olarak geliştirmek için Visual Studio Code (VS Code) veya Visual Studio IDE kullanmanızı öneririz. Web tarayıcısı aracılığıyla bulutta geliştirmek için Visual Studio Codespaces’ı öneririz. Bu ortamlarda geliştirme yapmak, QDK uzantısının uyarı, söz dizimi vurgulama, proje şablonları gibi zengin işlevlerini içerir. 
+Q# uygulamalarını herhangi bir IDE'de derleyebilseniz de, Q# uygulamalarınızı yerel olarak geliştirmek için Visual Studio Code (VS Code) veya Visual Studio IDE kullanmanızı öneririz. Web tarayıcısı aracılığıyla bulutta geliştirmek için Visual Studio Codespaces’ı öneririz. Bu ortamlarda geliştirme yapmak, QDK uzantısının uyarı, söz dizimi vurgulama, proje şablonları gibi zengin işlevlerini içerir. 
 
 VS Code'u yapılandırmak için:
 
@@ -45,7 +45,7 @@ Visual Studio Codespaces’ı yapılandırmak için:
 3. Artık yeni ortamınızı başlatabilir ve [VS Codespaces Bulut IDE’si](https://online.visualstudio.com/environments) aracılığıyla tarayıcıda geliştirme yapmaya başlayabilirsiniz. Alternatif olarak, yerel VS Code yüklemenizi kullanmanız ve Codespaces’ı [uzak ortam](https://docs.microsoft.com/visualstudio/online/how-to/vscode) olarak kullanmanız da mümkündür.
 
 
-Başka bir ortam için QDK'yi yüklemek üzere komut satırına şunu girin:
+Başka bir ortam için QDK'yi yüklemek üzere komut istemine şunu girin:
 
 ```dotnetcli
 dotnet new -i Microsoft.Quantum.ProjectTemplates
@@ -94,7 +94,7 @@ Uygulamayı çalıştırmak için:
 > [!NOTE]
 > Bir Visual Studio çözümünde birden fazla projeniz varsa, çözümde yer alan tüm projelerin çözüm ile aynı klasörde veya bunun alt klasörlerinin birinde olması gerekir.  
 
-### <a name="other-editors-with-the-command-line"></a>[Komut satırı içeren diğer düzenleyiciler](#tab/tabid-cmdline)
+### <a name="other-editors-with-the-command-prompt"></a>[Komut istemi içeren diğer düzenleyiciler](#tab/tabid-cmdline)
 
 Bir Q# `Hello World` uygulaması oluşturarak yüklemenizi doğrulayın.
 

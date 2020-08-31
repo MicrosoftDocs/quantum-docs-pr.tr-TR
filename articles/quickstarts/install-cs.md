@@ -9,12 +9,12 @@ uid: microsoft.quantum.install.cs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 13d73bdf0287941c89e03ba63869095e5fca4e70
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 24318380e0e63957a51961762a33446fe0121b21
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867565"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863685"
 ---
 # <a name="develop-with-no-locq-and-net"></a>Q# ve .NET ile geliştirme
 
@@ -25,16 +25,16 @@ Bu kılavuzda, Q# dilinin bir .NET dilinde yazılmış konak programıyla nasıl
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-- [Q# komut satırı projeleriyle birlikte kullanmak için](xref:microsoft.quantum.install.standalone) Quantum geliştirme setini yükleyin.
+- [Q# projeleriyle birlikte kullanmak için](xref:microsoft.quantum.install.standalone) Quantum geliştirme setini yükleyin.
 
 ## <a name="creating-a-no-locq-library-and-a-net-host"></a>Q# kitaplığı ve .NET konağı oluşturma
 
 İlk adım, Q# kitaplığınız ve Q# kitaplığınızda tanımlanan işlemlere ve işlevlere çağrı yapacak .NET konağı için projeler oluşturmaktır.
 
 Geliştirme ortamınıza karşılık gelen sekmedeki yönergeleri izleyin.
-Visual Studio veya VS Code dışında bir düzenleyici kullanıyorsanız komut satırı adımlarını izlemeniz yeterlidir.
+Visual Studio veya VS Code dışında bir düzenleyici kullanıyorsanız komut istemi adımlarını izlemeniz yeterlidir.
 
-### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code veya Komut Satırı](#tab/tabid-cmdline)
+### <a name="visual-studio-code-or-command-prompt"></a>[Visual Studio Code veya komut istemi](#tab/tabid-cmdline)
 
 - Yeni bir Q# kitaplığı oluşturun
 
@@ -106,4 +106,4 @@ Bu işlemi bir kuantum simülatöründe .NET'ten çağırmak için, Q# derleyici
     
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Artık hem Q# komut satırı programları hem de .NET ile birlikte çalışabilirlik için Quantum geliştirme setini ayarladığınıza göre, [ilk kuantum programınızı](xref:microsoft.quantum.quickstarts.qrng) yazıp çalıştırabilirsiniz.
+Artık hem Q# uygulamaları hem de .NET ile birlikte çalışabilirlik için Quantum geliştirme setini ayarladığınıza göre, [ilk kuantum programınızı](xref:microsoft.quantum.quickstarts.qrng) yazıp çalıştırabilirsiniz.
