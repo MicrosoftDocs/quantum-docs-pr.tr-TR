@@ -2,12 +2,12 @@
 uid: microsoft.quantum.diagnostics.dumpregister
 name: DumpRegister
 type: function
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: Geçerli hedef makinenin belirtilen qubits ile ilişkili durumunun dökümünü yapar.
 remarks: >-
   Bu yöntem, belirtilen qubits durumuyla ilişkili bilgilerin bir dosya veya başka bir konumda dökümünü yapmanıza olanak sağlar.
 
-  Oluşturulan gerçek bilgiler ve semantiği her bir `location` hedef makineye özeldir. Ancak, konum (`()`) olarak boş bir tanımlama grubu sağlamak, genellikle çıktıyı konsola oluşturma anlamına gelir.
+  Oluşturulan gerçek bilgiler ve semantiği `location` her bir hedef makineye özeldir. Ancak, konum () olarak boş bir tanımlama grubu sağlamak, `()` genellikle çıktıyı konsola oluşturma anlamına gelir.
 
 
   Bu yöntem, hisse geliştirme seti 'nin bir parçası olarak dağıtılan yerel tam durum simülatörü için, söz konusu qubits 'in durumunu (karşılık gelen alt sistemin Wave işlevi), her bir öğenin karşılık gelen durumu ölçme olasılığının uyumlu olmasını temsil ettiği bir dosyanın yolunu içeren bir dize bekler.
@@ -33,9 +33,9 @@ output:
     isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 3bf5302364b37cb1ccef651935833b966ff84464
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 384ce2373081545129c569ea6acc6b01733587fc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677223"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337306"
