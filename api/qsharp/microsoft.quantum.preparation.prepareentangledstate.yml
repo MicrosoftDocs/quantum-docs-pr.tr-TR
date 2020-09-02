@@ -2,12 +2,12 @@
 uid: microsoft.quantum.preparation.prepareentangledstate
 name: PrepareEntangledState
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
   İkili entangles iki qubit kaydı.
 
 
-  Diğer bir deyişle, iki kayıt söz konusu olduğunda, her kaydın $ \ket{0\cnoktalar 0{1}} $ durumunda{2}başlayacağını varsayarak, her bir kasadaki her bir qubit çifti arasında en yüksek düzeyde entangled State $ \frac {\sqrt} \left (\ment{00} + \ket{11} \ right) $ değerini hazırlar.
+  Diğer bir deyişle, iki kayıt söz konusu olduğunda, {1} {2} {00} {11} her kaydın $ \ket{0\cnoktalar 0} $ durumunda başlayacağını varsayarak, her bir kasadaki her bir qubit çifti arasında en yüksek düzeyde entangled State $ \frac {\sqrt} \left (\ment + \ket \ right) $ değerini hazırlar.
 syntax: 'operation PrepareEntangledState (left : Qubit[], right : Qubit[]) : Unit'
 input:
   content: '(left : Qubit[], right : Qubit[])'
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: c761362c8793e4e08e7e702b2909f0253b8723d6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1756ef2c983ea7b0a93e991369bc658ff02b06a9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686535"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331526"

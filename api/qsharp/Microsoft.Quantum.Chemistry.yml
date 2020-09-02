@@ -3,11 +3,11 @@ uid: microsoft.quantum.chemistry
 name: Microsoft.Quantum.Chemistry
 functions:
 - uid: microsoft.quantum.chemistry.htermstogenidx
-  summary: Bir dizini, `HTerm[]` veri biçimindeki Hamiltonian terimine bir Generatorındex olarak dönüştürür.
+  summary: Bir dizini, veri biçimindeki Hamiltonian terimine `HTerm[]` bir Generatorındex olarak dönüştürür.
 - uid: microsoft.quantum.chemistry.htermstogensys
-  summary: '`HTerm[]` Veri biçimindeki Hamiltonian bir GeneratorSystem öğesine dönüştürür.'
+  summary: Veri biçimindeki Hamiltonian `HTerm[]` bir GeneratorSystem öğesine dönüştürür.
 - uid: microsoft.quantum.chemistry.htermtogenidx
-  summary: '`HTerm` Veri biçimindeki Hamiltonian terimini bir Generatorındex öğesine dönüştürür.'
+  summary: Veri biçimindeki Hamiltonian terimini `HTerm` bir Generatorındex öğesine dönüştürür.
 - uid: microsoft.quantum.chemistry.isnotzero
   summary: Bir `Double` sayının yaklaşık olarak sıfır olup olmadığını denetler.
 newtypes:
@@ -17,9 +17,9 @@ newtypes:
 
     Temsil edilen verilerin anlamı onu alan algoritma tarafından belirlenir.
 metadata:
-  ms.openlocfilehash: fda6e5c8daebeae115046771e85e0e49d057e666
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d39701c0e7ee50a064d24020298bef12406e5728
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677030"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340230"

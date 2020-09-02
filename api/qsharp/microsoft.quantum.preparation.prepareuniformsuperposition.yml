@@ -2,16 +2,16 @@
 uid: microsoft.quantum.preparation.prepareuniformsuperposition
 name: PrepareUniformSuperposition
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
-  0 ile `nIndices`kodlayan durumlar üzerinde Tekdüzen üst konumu oluşturur.
+  0 ile kodlayan durumlar üzerinde Tekdüzen üst konumu oluşturur `nIndices` .
 
 
-  Diğer bir deyişle, bu Unitary $U $, $0 $ ile $M-$1 arasında tek bir üst konum oluşturarak bir giriş durumu $ \ket{0\cnoktalar 0} $ olarak sunulur. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket{0}= \frac{1}{\Sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
+  Diğer bir deyişle, bu Unitary $U $, $0 $ ile $M-$1 arasında tek bir üst konum oluşturarak bir giriş durumu $ \ket{0\cnoktalar 0} $ olarak sunulur. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket {0} = \frac {1} {\Sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
   \end{hizalaması} $ $.
 examples: >-
-  Aşağıdaki örnek, $3 $ qubits üzerinde $ \frac{1}{{6}\sqrt} \ sum_ {j = 0{5}} ^ \ket{j} $ durumunu hazırlar.
+  Aşağıdaki örnek, {1} $3 $ qubits üzerinde $ \frac {\sqrt {6} } \ sum_ {j = 0} ^ {5} \ket{j} $ durumunu hazırlar.
 
 
   ```Q#
@@ -33,7 +33,7 @@ input:
     uid: Int
   - name: indexRegister
     summary: >-
-      Sayı durumlarını `LittleEndian` depolayan qubit kaydı.
+      Sayı durumlarını depolayan qubit kaydı `LittleEndian` .
 
       Bu yazmaç $M-$1 numarasını depolayabilmelidir ve $ \ket{0\cnoktalar 0} $ durumunda başlatılmıştı.
     uid: microsoft.quantum.arithmetic.littleendian
@@ -46,9 +46,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: a697f4d410ed47c8be3908e2206080a9393260f7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 442daa4affb6b59191af9117a8094f7bfbf71302
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686519"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331339"

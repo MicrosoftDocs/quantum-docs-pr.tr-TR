@@ -2,20 +2,20 @@
 uid: microsoft.quantum.errorcorrection.recovercss
 name: RecoverCSS
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: Bir `CSS` tür tarafından tanımlanan bir hisse kodu tarafından hata düzeltmesinin tek bir yuvarlamesi gerçekleştirir.
+namespace: microsoft.quantum.errorcorrection
+summary: Bir tür tarafından tanımlanan bir hisse kodu tarafından hata düzeltmesinin tek bir yuvarlamesi gerçekleştirir `CSS` .
 syntax: 'operation RecoverCSS (code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
 input:
   content: '(code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
   - name: code
-    summary: Hisse ve bir `CSS` tür olarak paketlenmiş kod düzeltme kodu, hisse verileri kodlamasını ve kodunu çözmeyi ve hata eşitleme 'nin nasıl ölçüldüğünü açıklar.
+    summary: Hisse ve bir tür olarak paketlenmiş kod düzeltme kodu, `CSS` hisse verileri kodlamasını ve kodunu çözmeyi ve hata eşitleme 'nin nasıl ölçüldüğünü açıklar.
     uid: microsoft.quantum.errorcorrection.css
   - name: fnX
-    summary: Her `RecoveryFn` bir $X $ hata syndrobeni, algılanan hatayı düzeltecek `Pauli[]` işlemlere eşler.
+    summary: '`RecoveryFn`Her bir $X $ hata syndrobeni, `Pauli[]` algılanan hatayı düzeltecek işlemlere eşler.'
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: fnZ
-    summary: Her `RecoveryFn` bir $Z $ hata syndrobeni, algılanan hatayı düzeltecek `Pauli[]` işlemlere eşler.
+    summary: '`RecoveryFn`Her bir $Z $ hata syndrobeni, `Pauli[]` algılanan hatayı düzeltecek işlemlere eşler.'
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: logicalRegister
     summary: Sabitleyici kodun tanımlandığı bir qubits dizisi.
@@ -30,9 +30,9 @@ seeAlso:
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
 metadata:
-  ms.openlocfilehash: 8c9504e985b224421d3eb66b0d7e9bc0ef8f2e96
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cb3a6bf49913b340545e3659f078adc244356246
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682282"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349903"
