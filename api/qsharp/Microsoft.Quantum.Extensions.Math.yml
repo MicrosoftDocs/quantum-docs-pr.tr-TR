@@ -3,81 +3,81 @@ uid: microsoft.quantum.extensions.math
 name: Microsoft.Quantum.Extensions.Math
 functions:
 - uid: microsoft.quantum.extensions.math.absb
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAbsB kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.absl\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.absl\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAbsB kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.absl\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.absl\" kullanın."
 - uid: microsoft.quantum.extensions.math.absd
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAbsD kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.absd\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.absd\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAbsD kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.absd\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.absd\" kullanın."
 - uid: microsoft.quantum.extensions.math.absi
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAbsı kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.absi\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.absi\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nAbsı kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.absi\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.absi\" kullanın."
 - uid: microsoft.quantum.extensions.math.arccos
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nArcCos kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.arccos\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.arccos\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nArcCos kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.arccos\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.arccos\" kullanın."
 - uid: microsoft.quantum.extensions.math.arcsin
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nArcSin kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.arcsin\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.arcsin\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nArcSin kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.arcsin\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.arcsin\" kullanın."
 - uid: microsoft.quantum.extensions.math.arctan
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nArcTan kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.arctan\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.arctan\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nArcTan kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.arctan\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.arctan\" kullanın."
 - uid: microsoft.quantum.extensions.math.arctan2
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nArcTan2 kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.arctan2\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.arctan2\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nArcTan2 kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.arctan2\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.arctan2\" kullanın."
 - uid: microsoft.quantum.extensions.math.ceiling
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nTavan kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.ceiling\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.ceiling\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nTavan kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.ceiling\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.ceiling\" kullanın."
 - uid: microsoft.quantum.extensions.math.cos
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nCos kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.cos\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.cos\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nCos kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.cos\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.cos\" kullanın."
 - uid: microsoft.quantum.extensions.math.cosh
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nCosh kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.cosh\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.cosh\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nCosh kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.cosh\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.cosh\" kullanın."
 - uid: microsoft.quantum.extensions.math.divremb
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nDivRemB kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.divreml\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.divreml\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nDivRemB kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.divreml\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.divreml\" kullanın."
 - uid: microsoft.quantum.extensions.math.e
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nE kullanım dışı bırakıldı. Lütfen kullanın@\"microsoft.quantum.math.e\" gösterebilirsiniz.\nLütfen kullanın @\"microsoft.quantum.math.e\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nE kullanım dışı bırakıldı. Lütfen kullanın @\"microsoft.quantum.math.e\" gösterebilirsiniz.\nLütfen @\"microsoft.quantum.math.e\" kullanın."
 - uid: microsoft.quantum.extensions.math.expd
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nExpD kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.expd\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.expd\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nExpD kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.expd\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.expd\" kullanın."
 - uid: microsoft.quantum.extensions.math.floor
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nKat kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.floor\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.floor\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nKat kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.floor\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.floor\" kullanın."
 - uid: microsoft.quantum.extensions.math.ieeeremainder
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nIEEERemainder kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.ieeeremainder\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.ieeeremainder\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nIEEERemainder kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.ieeeremainder\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.ieeeremainder\" kullanın."
 - uid: microsoft.quantum.extensions.math.log
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nGünlük kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.log\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.log\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nGünlük kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.log\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.log\" kullanın."
 - uid: microsoft.quantum.extensions.math.log10
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nLog10 kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.log10\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.log10\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nLog10 kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.log10\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.log10\" kullanın."
 - uid: microsoft.quantum.extensions.math.maxb
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nMaxB kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.maxl\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.maxl\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nMaxB kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.maxl\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.maxl\" kullanın."
 - uid: microsoft.quantum.extensions.math.maxd
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nMaxD kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.maxd\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.maxd\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nMaxD kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.maxd\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.maxd\" kullanın."
 - uid: microsoft.quantum.extensions.math.maxi
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nMAXI kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.maxi\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.maxi\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nMAXI kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.maxi\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.maxi\" kullanın."
 - uid: microsoft.quantum.extensions.math.minb
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nMinB kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.minl\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.minl\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nMinB kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.minl\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.minl\" kullanın."
 - uid: microsoft.quantum.extensions.math.mind
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nGöz önünde bulundurularak kullanım dışı bırakılmıştır. Lütfen bunun @\"microsoft.quantum.math.mind\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.mind\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nGöz önünde bulundurularak kullanım dışı bırakılmıştır. Lütfen @\"microsoft.quantum.math.mind\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.mind\" kullanın."
 - uid: microsoft.quantum.extensions.math.mini
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nMinI kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.mini\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.mini\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nMinI kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.mini\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.mini\" kullanın."
 - uid: microsoft.quantum.extensions.math.modpowb
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nModpgb kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.modpowl\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.modpowl\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nModpgb kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.modpowl\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.modpowl\" kullanın."
 - uid: microsoft.quantum.extensions.math.pi
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nPI kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.pi\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.pi\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nPI kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.pi\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.pi\" kullanın."
 - uid: microsoft.quantum.extensions.math.powd
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nPMD kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.powd\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.powd\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nPMD kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.powd\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.powd\" kullanın."
 - uid: microsoft.quantum.extensions.math.round
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nYuvarlak kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.round\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.round\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nYuvarlak kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.round\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.round\" kullanın."
 - uid: microsoft.quantum.extensions.math.signb
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nSignB kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.signl\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.signl\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nSignB kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.signl\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.signl\" kullanın."
 - uid: microsoft.quantum.extensions.math.signd
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nSignD kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.signd\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.signd\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nSignD kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.signd\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.signd\" kullanın."
 - uid: microsoft.quantum.extensions.math.signi
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nSignı kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.signi\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.signi\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nSignı kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.signi\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.signi\" kullanın."
 - uid: microsoft.quantum.extensions.math.sin
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nSin kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.sin\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.sin\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nSin kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.sin\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.sin\" kullanın."
 - uid: microsoft.quantum.extensions.math.sinh
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nSinh kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.sinh\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.sinh\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nSinh kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.sinh\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.sinh\" kullanın."
 - uid: microsoft.quantum.extensions.math.sqrt
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nSqrt kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.sqrt\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.sqrt\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nSqrt kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.sqrt\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.sqrt\" kullanın."
 - uid: microsoft.quantum.extensions.math.tan
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nTan kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.tan\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.tan\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nTan kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.tan\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.tan\" kullanın."
 - uid: microsoft.quantum.extensions.math.tanh
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nTanh kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.tanh\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.tanh\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nTanh kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.tanh\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.tanh\" kullanın."
 - uid: microsoft.quantum.extensions.math.truncate
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nKesme kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.math.truncate\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.math.truncate\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nKesme kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.math.truncate\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.math.truncate\" kullanın."
 metadata:
-  ms.openlocfilehash: b94b4c7aa1523d9f3e8b42359e759ffa356b25ea
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f5896e114085169670eddd1f768f38ec89ce8b7a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673253"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340978"

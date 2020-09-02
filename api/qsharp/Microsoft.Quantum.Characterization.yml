@@ -8,9 +8,9 @@ operations:
 - uid: microsoft.quantum.characterization.discretephaseestimationiteration
   summary: Bir Unitary Oracle 'ın tamsayı üslerini kullanarak yinelemeli (sınıflı kontrollü) bir aşama tahmin algoritmasının tek bir yinelemesini gerçekleştirir.
 - uid: microsoft.quantum.characterization.estimatefrequency
-  summary: Hazırlık ve ölçüm verildiğinde, belirli bir deneme sayısı gerçekleştirerek, ölçümün başarılı olduğu sıklığı ( `Zero`döndürür) tahmin eder.
+  summary: Hazırlık ve ölçüm verildiğinde, `Zero` belirli bir deneme sayısı gerçekleştirerek, ölçümün başarılı olduğu sıklığı (döndürür) tahmin eder.
 - uid: microsoft.quantum.characterization.estimatefrequencya
-  summary: Adjointable ve ölçüm olan bir hazırlık verildiğinde, belirli bir deneme sayısı gerçekleştirerek, ölçümün başarılı olduğu sıklığı ( `Zero`döndürür) tahmin eder.
+  summary: Adjointable ve ölçüm olan bir hazırlık verildiğinde, `Zero` belirli bir deneme sayısı gerçekleştirerek, ölçümün başarılı olduğu sıklığı (döndürür) tahmin eder.
 - uid: microsoft.quantum.characterization.estimateimagoverlapbetweenstates
   summary: Her birinin bir durum kopyasını hazırlayabileceği iki işlem, her bir işlem tarafından hazırlanan durumlar arasındaki çakışmadan oluşan sanal kısmını tahmin eder.
 - uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
@@ -18,19 +18,19 @@ operations:
 - uid: microsoft.quantum.characterization.estimaterealoverlapbetweenstates
   summary: Her birinin bir durum kopyasını hazırlayabileceği iki işlem, her bir işlem tarafından hazırlanan durumlar arasındaki örtüşme işleminin gerçek parçasını tahmin eder.
 - uid: microsoft.quantum.characterization.measureallz
-  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nMeasureAllZ kullanım dışı bırakıldı. Lütfen bunun @\"microsoft.quantum.measurement.measureallz\" yerine kullanın.\nLütfen kullanın @\"microsoft.quantum.measurement.measureAllZ\"."
+  summary: "\n> [!WARNING]\n> Kullanım Dışı\n\nMeasureAllZ kullanım dışı bırakıldı. Lütfen @\"microsoft.quantum.measurement.measureallz\" bunun yerine kullanın.\nLütfen @\"microsoft.quantum.measurement.measureAllZ\" kullanın."
 - uid: microsoft.quantum.characterization.measureidentity
   summary: Qubits 'in bir kaydındaki kimlik işlecini ölçer.
 - uid: microsoft.quantum.characterization.quantumphaseestimation
-  summary: Belirli bir Oracle `U` ve `targetState`aşamayı bir büyük endian hisse kaydına okumak için hisse aşaması tahmin algoritmasını gerçekleştirir.
+  summary: Belirli bir Oracle `U` ve `targetState` aşamayı bir büyük endian hisse kaydına okumak için hisse aşaması tahmin algoritmasını gerçekleştirir.
 - uid: microsoft.quantum.characterization.robustphaseestimation
-  summary: ', Belirli bir Oracle `U` ve eigenstate için dayanıklı ve dayanıklı olmayan dayanıklı bir tahmin algoritması gerçekleştirir ve Heisenberg sınırında varyans ölçeklendirmesiyle aşamanın gerçek değerli tek bir tahminini sağlar.'
+  summary: ', Belirli bir Oracle ve eigenstate için dayanıklı ve dayanıklı olmayan dayanıklı bir tahmin algoritması gerçekleştirir `U` ve Heisenberg sınırında varyans ölçeklendirmesiyle aşamanın gerçek değerli tek bir tahminini sağlar.'
 - uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
   summary: ', Belirli bir ilgi kanalı verildiğinde Pauli temelinde tek qubit işlem işlemleri gerçekleştirir.'
 metadata:
-  ms.openlocfilehash: 2ae4ee28cf6e87a3fde1f8107194760c388b462c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b8b7c1b7e6fc3dad00e62d7722ef4cb38b96b82f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673368"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341488"

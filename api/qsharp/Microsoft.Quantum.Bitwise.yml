@@ -6,7 +6,7 @@ functions:
   summary: >-
     İki tamsayının bit düzeyinde ve bu değerini döndürür.
 
-    Bu, yerleşik `&&&` işleçle aynı hesaplamayı gerçekleştirir.
+    Bu, yerleşik işleçle aynı hesaplamayı gerçekleştirir `&&&` .
 - uid: microsoft.quantum.bitwise.leftshiftedi
   summary: Bir sayının bit düzeyinde gösterimini verilen bit sayısı ile sola kaydırır.
 - uid: microsoft.quantum.bitwise.leftshiftedl
@@ -15,12 +15,12 @@ functions:
   summary: >-
     Bir tamsayı DEĞIL bit seviyesinde değer döndürür.
 
-    Bu, yerleşik `~~~` işleçle aynı hesaplamayı gerçekleştirir.
+    Bu, yerleşik işleçle aynı hesaplamayı gerçekleştirir `~~~` .
 - uid: microsoft.quantum.bitwise.or
   summary: >-
     Bit düzeyinde veya iki tamsayının değerini döndürür.
 
-    Bu, yerleşik `|||` işleçle aynı hesaplamayı gerçekleştirir.
+    Bu, yerleşik işleçle aynı hesaplamayı gerçekleştirir `|||` .
 - uid: microsoft.quantum.bitwise.parity
   summary: Bir tamsayı bit düzeyinde eşlık değerini döndürür (ikili temsili tek sayı içeriyorsa 1, aksi takdirde 0).
 - uid: microsoft.quantum.bitwise.rightshiftedi
@@ -33,14 +33,14 @@ functions:
   summary: >-
     İki tamsayının bit düzeyinde dışlamalı veya (XOR) döndürür.
 
-    Bu, yerleşik `^^^` işleçle aynı hesaplamayı gerçekleştirir.
+    Bu, yerleşik işleçle aynı hesaplamayı gerçekleştirir `^^^` .
 - uid: microsoft.quantum.bitwise.zbits
   summary: Pauli işleçleri dizisinin Z bitlerini temsil eden bir tamsayı döndürür.
 summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanı, klasik veri türlerinin bit düzeyinde gösterimine işlem yapmak için işlevler içerir."
 metadata:
-  ms.openlocfilehash: fb52d02d38d31b96b46dfc469ee07ee62e29a9d4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 02fa75fd66a8f6dfeda42bc7e9e8832b34ecba40
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673372"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341590"
