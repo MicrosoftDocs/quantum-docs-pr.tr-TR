@@ -2,13 +2,13 @@
 uid: microsoft.quantum.math.bigfraction
 name: BigFraction
 type: newtype
-namespace: Microsoft.Quantum.Math
-summary: Formun `p/q`bir Rational numarasını temsil eder. Tamsayı `p` , kayıt düzeninin ilk öğesidir ve `q` kayıt düzeninin ikinci öğesidir.
+namespace: microsoft.quantum.math
+summary: Formun bir Rational numarasını temsil eder `p/q` . Tamsayı, `p` kayıt düzeninin ilk öğesidir ve `q` kayıt düzeninin ikinci öğesidir.
 syntax: newtype BigFraction = (BigInt, BigInt);
 metadata:
-  ms.openlocfilehash: d9da825f0317e9c51dd78f90ec7ee5b087d5dd43
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3ae7d6cf0f9bd200c0620caf8bce93403e18f9cf
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684230"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344429"

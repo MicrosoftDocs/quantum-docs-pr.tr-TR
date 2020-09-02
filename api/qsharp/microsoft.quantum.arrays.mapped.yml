@@ -2,15 +2,15 @@
 uid: microsoft.quantum.arrays.mapped
 name: Mapped
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Dizi öğeleri için tanımlanan bir dizi ve bir işlev verildiğinde, işlevin altındaki orijinal dizinin görüntülerinden oluşan yeni bir dizi döndürür.
-remarks: "İşlevi genel türler için tanımlanmıştır, yani bir dizi `'T[]` ve bir işlev `mapper: 'T -> 'U` olduğunda dizinin öğelerini eşleyebilir ve yeni türde `'U[]`bir dizi üretebilirsiniz."
+remarks: "İşlevi genel türler için tanımlanmıştır, yani bir dizi `'T[]` ve bir işlev olduğunda `mapper: 'T -> 'U` dizinin öğelerini eşleyebilir ve yeni türde bir dizi üretebilirsiniz `'U[]` ."
 syntax: "function Mapped (mapper : ('T -> 'U), array : 'T[]) : 'U[]"
 input:
   content: "(mapper : ('T -> 'U), array : 'T[])"
   types:
   - name: mapper
-    summary: Öğeleri eşlemek için `'T` kullanılan `'U` öğesinden öğesine bir işlev.
+    summary: "`'T` `'U` Öğeleri eşlemek için kullanılan öğesinden öğesine bir işlev."
     isFunction: true
     input:
       types:
@@ -21,26 +21,26 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: Öğesinden bir dizi öğe `'T`.
+    summary: Öğesinden bir dizi öğe `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: İşlev tarafından eşlenen öğelerin dizisi `'U[]` `mapper`
+  - summary: "`'U[]`İşlev tarafından eşlenen öğelerin dizisi `mapper` ."
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: '`array` Öğelerin türü.'
+  summary: '`array`Öğelerin türü.'
 - uid: "'U"
-  summary: '`mapper` İşlevin sonuç türü.'
+  summary: İşlevin sonuç türü `mapper` .
 metadata:
-  ms.openlocfilehash: 877899dad82374281090e189c727c2a662f12b7b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 8f2b2c741bf9052032e37b830d9d6871bccf724a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680942"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351977"
