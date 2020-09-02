@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.applyifzeroa
 name: ApplyIfZeroA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Klasik sonuç değeri sıfır olan bir adjointable işlemi uygular.
 
 
-  Bir işlem `op` ve sonuç değeri `result`verildiğinde, `op` `target` if `result` ise için geçerlidir. `Zero` Varsa `One`, hiçbir şey olmaz `target`.
+  Bir işlem `op` ve sonuç değeri verildiğinde, `result` if ise `op` için geçerlidir `target` `result` `Zero` . Varsa, `One` hiçbir şey olmaz `target` .
 
-  Sonek `A` , uygulanacak işlemin adjointable olduğunu gösterir.
+  Sonek, `A` uygulanacak işlemin adjointable olduğunu gösterir.
 syntax: "operation ApplyIfZeroA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj), target : 'T))"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: b8b85714f173e10d3121d6f012fefa76b956686e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fe4c995a57e9dc964cb0c7d5e557cc51eca5bf0d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672608"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89358182"

@@ -2,11 +2,11 @@
 uid: microsoft.quantum.canon.applymulticontrolledca
 name: ApplyMultiControlledCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Listedir denetimli bir işlemin çarpma denetimli bir sürümünü uygular.
 
-  Değiştirici `CA` , tek qubit işleminin denetlenebilir ve adjointable olduğunu gösterir.
+  Değiştirici, `CA` tek qubit işleminin denetlenebilir ve adjointable olduğunu gösterir.
 remarks: >-
   Bu işlem yalnızca temiz bir anyenla qubit kullanır.
 
@@ -23,7 +23,7 @@ input:
 
       İşlemin bağımsız değişkenindeki ilk qubit bir denetim olarak kabul edilir ve REST 'in hedef qubit olduğu varsayılır.
 
-      `ApplyMultiControlled`her zaman `singlyControlledOp` en az 1 uzunluğunda bir bağımsız değişkenle çağırır.
+      `ApplyMultiControlled` her zaman `singlyControlledOp` en az 1 uzunluğunda bir bağımsız değişkenle çağırır.
     isOperation: true
     input:
       types:
@@ -41,14 +41,14 @@ input:
     uid: microsoft.quantum.canon.ccnotop
   - name: controls
     summary: >-
-      Üzerinde kontrol edilecek qubits `singlyControlledOp` .
+      `singlyControlledOp`Üzerinde kontrol edilecek qubits.
 
       Uzunluğu `controls` en az 1 olmalıdır.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targets
-    summary: Üzerinde `singlyControlledOp` davranan hedef qubit.
+    summary: Üzerinde davranan hedef qubit `singlyControlledOp` .
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -63,9 +63,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applymulticontrolledc
 metadata:
-  ms.openlocfilehash: 1cb239c8c49ff4f4f8f991d6ad81374f0dd23f7f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0d54acf4f218dcb091fe6dee6c8763878d2f3546
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672521"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89358097"

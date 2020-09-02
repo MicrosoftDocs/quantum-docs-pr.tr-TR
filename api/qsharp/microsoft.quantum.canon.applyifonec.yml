@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.applyifonec
 name: ApplyIfOneC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Klasik sonuç değeri bir olan denetlenebilir bir işlem uygular.
 
 
-  Bir işlem `op` ve sonuç değeri `result`verildiğinde, `op` `target` if `result` ise için geçerlidir. `One` Varsa `Zero`, hiçbir şey olmaz `target`.
+  Bir işlem `op` ve sonuç değeri verildiğinde, `result` if ise `op` için geçerlidir `target` `result` `One` . Varsa, `Zero` hiçbir şey olmaz `target` .
 
-  Sonek `C` , uygulanacak işlemin denetlenebilir olduğunu gösterir.
+  Sonek, `C` uygulanacak işlemin denetlenebilir olduğunu gösterir.
 syntax: "operation ApplyIfOneC (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Ctl), target : 'T))"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: e42bb11c3f3f8cf740bbd619b4388f23c77ed8a5
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 8ec4b6b7baf3571ff259007c15c7c426e502da08
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672668"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89358233"
