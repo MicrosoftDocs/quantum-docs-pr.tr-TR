@@ -2,7 +2,7 @@
 uid: microsoft.quantum.machinelearning.localrotationslayer
 name: LocalRotationsLayer
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: Bir kayıttaki her bir qubit için tek bir dönüşle, ayrı model parametrelerine göre parametrelendirilmiş bir, denetlenmeyen (tek qubit) döndürmeler dizisini döndürür.
 syntax: 'function LocalRotationsLayer (nQubits : Int, axis : Pauli) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
 input:
@@ -19,13 +19,13 @@ input:
 output:
   content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
   types:
-  - summary: Her bir `nQubits` qubit üzerinde bir tane olmak üzere, verilen eksen hakkında kontrollü bir dizin dizisi.
+  - summary: Her bir qubit üzerinde bir tane olmak üzere, verilen eksen hakkında kontrollü bir dizin dizisi `nQubits` .
     isArray: true
     uid: microsoft.quantum.machinelearning.controlledrotation
 metadata:
-  ms.openlocfilehash: ad6259c46aee6b05ac201bd978f42ce3add8f03d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a08df354e389b1f282e18657f579e831180c81f2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684487"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335929"

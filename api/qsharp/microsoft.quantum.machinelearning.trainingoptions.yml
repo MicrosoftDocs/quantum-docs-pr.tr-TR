@@ -2,10 +2,10 @@
 uid: microsoft.quantum.machinelearning.trainingoptions
 name: TrainingOptions
 type: newtype
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: Eğitim hisse sınıflandırıcıları içinde kullanılacak seçenekler koleksiyonu.
 remarks: >-
-  Bu UDT doğrudan oluşturulmamalıdır, ancak bunun yerine farklı Varsayılanları geçersiz kılmak için @"microsoft.quantum.machinelearning.defaulttrainingoptions" `w/` işleci kullanılarak belirtilmelidir.
+  Bu UDT doğrudan oluşturulmamalıdır, ancak bunun yerine @"microsoft.quantum.machinelearning.defaulttrainingoptions" `w/` farklı Varsayılanları geçersiz kılmak için işleci kullanılarak belirtilmelidir.
 
 
   Örneğin, 100.000 ölçümleri ve en fazla 8 eğitim dönemlerinde kullanmak için:
@@ -20,9 +20,9 @@ remarks: >-
 syntax: newtype TrainingOptions = (Double, Double, Int, Int, Int, Int, Double, Int, (String -> Unit));
 references: '- [Arxıv: 1804.00633](https://arxiv.org/abs/1804.00633)'
 metadata:
-  ms.openlocfilehash: b8a24b0a9e036c0a6c1eea229ca76d62e400fde8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e9020ee77dbad438c06e6504416303968ec5bba3
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684329"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335521"
