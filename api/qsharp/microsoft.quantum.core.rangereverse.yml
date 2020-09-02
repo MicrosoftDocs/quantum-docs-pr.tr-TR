@@ -2,9 +2,9 @@
 uid: microsoft.quantum.core.rangereverse
 name: RangeReverse
 type: function
-namespace: Microsoft.Quantum.Core
+namespace: microsoft.quantum.core
 summary: Giriş aralığının tersine çevrilmiş yeni bir Aralık döndürür.
-remarks: Bir aralığın ters çevrilmesinin yalnızca `end`değil. olduğunu unutmayın. `-step`.. `start`, bir aralığın gerçek son öğesi ile `end`aynı olamaz.
+remarks: Bir `end` `-step` `start` aralığın gerçek son öğesi ile aynı olamaz, bir aralığın ters çevrilmesinin yalnızca.... olduğunu `end` unutmayın.
 syntax: 'function RangeReverse (r : Range) : Range'
 input:
   content: '(r : Range)'
@@ -20,9 +20,9 @@ output:
     isPrimitive: true
     uid: Range
 metadata:
-  ms.openlocfilehash: d6fbf120ecb9bff176857cf8d3c48d6f08da0bde
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 23af67d6107d954c40cacd16af81eb6d3acc61f2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82657379"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337969"
