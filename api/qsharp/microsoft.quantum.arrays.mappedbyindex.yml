@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.mappedbyindex
 name: MappedByIndex
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Bir dizi ve dizinin dizinli öğeleri için tanımlanan bir işlev verildiğinde, işlevin altındaki orijinal dizinin görüntülerinden oluşan yeni bir dizi döndürür.
 examples: >-
   Aşağıdaki iki satır eşdeğerdir:
@@ -28,7 +28,7 @@ input:
   content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"
   types:
   - name: mapper
-    summary: Öğesi ve bunların `(Int, 'T)` dizinlerini `'U` eşlemek için kullanılan öğesinden bir işlevi.
+    summary: "`(Int, 'T)` `'U` Öğesi ve bunların dizinlerini eşlemek için kullanılan öğesinden bir işlevi."
     isFunction: true
     input:
       types:
@@ -41,28 +41,28 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: Öğesinden bir dizi öğe `'T`.
+    summary: Öğesinden bir dizi öğe `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: İşlev tarafından eşlenen öğelerin dizisi `'U[]` `mapper`
+  - summary: "`'U[]`İşlev tarafından eşlenen öğelerin dizisi `mapper` ."
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: '`array` Öğelerin türü.'
+  summary: '`array`Öğelerin türü.'
 - uid: "'U"
-  summary: '`mapper` İşlevin sonuç türü.'
+  summary: İşlevin sonuç türü `mapper` .
 seeAlso:
 - mapped
 metadata:
-  ms.openlocfilehash: 64741df4a3d7b7937f13614ffc9c7c7ec1aa3f7b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d6f50c3fe90998431b71050a953ec5dc08e31e92
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680929"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351943"

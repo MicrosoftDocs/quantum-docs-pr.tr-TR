@@ -2,13 +2,13 @@
 uid: microsoft.quantum.research.characterization.randomwalkphaseestimation
 name: RandomWalkPhaseEstimation
 type: operation
-namespace: Microsoft.Quantum.Research.Characterization
+namespace: microsoft.quantum.research.characterization
 summary: Belirli bir Oracle ve eigenstate 'teki klasik ölçüm sonuçlarında Bayeduyma çıkarımı için rastgele bir adım kullanarak yinelemeli aşama tahmini gerçekleştirir.
 remarks: >-
   ### <a name="iterative-phase-estimation-and-eigenstates"></a>Yinelemeli aşama tahmini ve Eigenstates
 
 
-  Genel olarak, giriş kaydının `eigenstate` bir eigenstate $ \ket{\phi} $ $U $ olması gerekmez, ancak eigenstates üzerinde bir üst konum olabilir. Giriş durumunun \begin{hizalaması\_} \ket{\psı} & = \sum {j} \Alpha\_j \ket{\phi\_j} tarafından verildiğini varsayalım. \end{hizalaması}; $\{\Alpha\_j\}$, $ \sum\_j | \Alpha\_j | ^ 2 = $1 ve $U \ket{\phi\_j} = \phi\_j\tus{\ Phi\_j} $ gibi karmaşık katlardır.
+  Genel olarak, giriş kaydının `eigenstate` bir eigenstate $ \ket{\phi} $ $U $ olması gerekmez, ancak eigenstates üzerinde bir üst konum olabilir. Giriş durumunun \begin{hizalaması} \ket{\psı} & = \sum \_ {j} \Alpha \_ j \ket{\phi j} tarafından verildiğini varsayalım. \_ \end{hizalaması}; $ \{ \Alpha j \_ \} $, $ \sum \_ j | \alpha \_ j | ^ 2 = $1 ve $U \ket{\phi \_ j} = \phi \_ j\tus{\ Phi \_ j} $ gibi karmaşık katlardır.
 
 
   Daha sonra, yinelemeli aşama tahmini gerçekleştirmek [geliştirme kılavuzunda](xref:microsoft.quantum.libraries.characterization#iterative-phase-estimation-without-eigenstates)açıklandığı gibi, sonunda tek bir eigenstate 'e yakınsayacaktır.
@@ -17,7 +17,7 @@ remarks: >-
   ### <a name="experiment-design"></a>Deneme tasarımı
 
 
-  $T $ ve Inversion açıları $ \teta $ öğesine `oracle` geçirilen ölçüm süreleri, *parçacık tahmin buluşsal*yöntemi, \begin{hizalaması} \Teta \ sim \pr (\fi), \dörtlü t \yaklaşık \frac{1}{\variance{\phi}} öğesine göre seçilir.
+  $T $ ve Inversion açıları $ \teta $ öğesine geçirilen ölçüm süreleri `oracle` , *parçacık tahmin buluşsal*yöntemi, \begin{hizalaması} \teta \ sim \pr (\fi), \dörtlü t \yaklaşık \frac {1} {\variance{\phi}} öğesine göre seçilir.
 
   \end{hizalaması} bu buluşsal yöntemi, daha önce normal varsayımıyla, yinelemeli aşama tahminlerinde beklenen posterior varyansı azaltmak için idealdir.
 
@@ -74,9 +74,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 719c8583cb0fe7f0c9c0f7fa617fa469080a9588
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 27841784ec8961f7a5a78c425411fcf0ae8e8f15
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82706746"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330591"

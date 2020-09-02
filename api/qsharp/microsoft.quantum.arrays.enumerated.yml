@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.enumerated
 name: Enumerated
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Bir dizi verildiğinde, orijinal dizinin öğelerini içeren yeni bir dizi döndürür ve her bir öğenin indisleriyle birlikte.
 examples: >-
   Aşağıdaki `for` döngüler eşdeğerdir:
@@ -41,9 +41,9 @@ typeParameters:
 - uid: "'TElement"
   summary: Dizinin öğe türü.
 metadata:
-  ms.openlocfilehash: a8b0a9abeb378c863d228268315950f32c5247c0
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: aecfb5c9f6a7d3f6b14717a7068a0596ae867c9f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884643"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352419"

@@ -2,15 +2,15 @@
 uid: microsoft.quantum.arrays.foreach
 name: ForEach
 type: operation
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Dizi öğeleri için tanımlanan bir dizi ve bir işlem verildiğinde, işlem altındaki orijinal dizinin görüntülerinden oluşan yeni bir dizi döndürür.
-remarks: "İşlem genel türler için tanımlanmıştır, yani bir dizi `'T[]` ve bir işlem `action : 'T -> 'U` olduğunda dizinin öğelerini eşleyebilir ve yeni türde `'U[]`bir dizi üretebilir."
+remarks: "İşlem genel türler için tanımlanmıştır, yani bir dizi `'T[]` ve bir işlem olduğunda `action : 'T -> 'U` dizinin öğelerini eşleyebilir ve yeni türde bir dizi üretebilir `'U[]` ."
 syntax: "operation ForEach (action : ('T => 'U), array : 'T[]) : 'U[]"
 input:
   content: "(action : ('T => 'U), array : 'T[])"
   types:
   - name: action
-    summary: Her öğesine öğesinden `'T` öğesine `'U` bir işlem uygulanır.
+    summary: "`'T`Her öğesine öğesinden öğesine bir işlem `'U` uygulanır."
     isOperation: true
     input:
       types:
@@ -21,26 +21,26 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: Öğesinden bir dizi öğe `'T`.
+    summary: Öğesinden bir dizi öğe `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: İşlem tarafından eşlenen öğelerin dizisi `'U[]` `action`
+  - summary: "`'U[]`İşlem tarafından eşlenen öğelerin dizisi `action` ."
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: '`array` Öğelerin türü.'
+  summary: '`array`Öğelerin türü.'
 - uid: "'U"
-  summary: '`action` İşlemin sonuç türü.'
+  summary: İşlemin sonuç türü `action` .
 metadata:
-  ms.openlocfilehash: af4b6b469017e4cee581a9bdd96ef6171d9b1deb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c630f23c57ccba1588e553641acf61312411f146
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681032"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352283"

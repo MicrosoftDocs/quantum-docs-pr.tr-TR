@@ -2,24 +2,24 @@
 uid: microsoft.quantum.research.chemistry.jwoptimizedgeneratorsystem
 name: JWOptimizedGeneratorSystem
 type: function
-namespace: Microsoft.Quantum.Research.Chemistry
-summary: Tarafından `JWOptimizedHTerms` açıklanan Hamiltonian 'yi, bu dosyada `GeneratorSystem` tanımlanan `GeneratorIndex` kural açısından ifade edilen öğesine dönüştürür.
+namespace: microsoft.quantum.research.chemistry
+summary: Tarafından açıklanan Hamiltonian `JWOptimizedHTerms` 'yi `GeneratorSystem` , `GeneratorIndex` Bu dosyada tanımlanan kural açısından ifade edilen öğesine dönüştürür.
 syntax: 'function JWOptimizedGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms)'
   types:
   - name: data
-    summary: '`JWOptimizedHTerms` Biçimdeki Hamiltonian açıklaması.'
+    summary: Biçimdeki Hamiltonian açıklaması `JWOptimizedHTerms` .
     uid: microsoft.quantum.chemistry.jordanwigner.jwoptimizedhterms
 output:
   content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
-  - summary: Hamiltonian as `GeneratorSystem`gösterimi.
+  - summary: Hamiltonian as gösterimi `GeneratorSystem` .
     uid: microsoft.quantum.simulation.generatorsystem
 metadata:
-  ms.openlocfilehash: 54b172085c66a826a571c5eb2e6dc0a2bfa303a4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6234b4849bd8f2763df6f63d3b07a1482618f8be
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683084"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330472"
