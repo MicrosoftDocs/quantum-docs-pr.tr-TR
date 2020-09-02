@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.transformedoperationca
 name: TransformedOperationCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Bir işlev ve bir işlem verildiğinde, girişi verilen işlev tarafından dönüştürülen yeni bir işlem döndürür.
 examples: >-
-  Aşağıdaki çağrı, giriş @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" için @"Microsoft.Quantum.Arithmetic.BigEndian" tasarlanan bir işlemi, türü @"Microsoft.Quantum.Arithmetic.LittleEndian"girdileri kabul eden bir işleme dönüştürmek için kullanır:
+  Aşağıdaki çağrı, @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" giriş için tasarlanan bir işlemi @"Microsoft.Quantum.Arithmetic.BigEndian" , türü girdileri kabul eden bir işleme dönüştürmek için kullanır @"Microsoft.Quantum.Arithmetic.LittleEndian" :
 
 
   ```qsharp
@@ -45,7 +45,7 @@ input:
 output:
   content: ('U => Unit is Adj + Ctl)
   types:
-  - summary: Yeni bir işlem olan tbat `fn` , girişiyle birlikte çağrı yapar ve sonuç çıktısını öğesine `op`geçirir.
+  - summary: Yeni bir işlem olan tbat `fn` , girişiyle birlikte çağrı yapar ve sonuç çıktısını öğesine geçirir `op` .
     isOperation: true
     input:
       types:
@@ -65,9 +65,9 @@ seeAlso:
 - applywithinputtransformation
 - compose
 metadata:
-  ms.openlocfilehash: 95f2233ae50f404ec3a6e137470150fc77ae2406
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0bbd9d2f84d8dbb5121a10f81ca2ef1546d9bde5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678031"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354918"

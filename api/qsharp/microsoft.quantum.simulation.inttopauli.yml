@@ -2,26 +2,26 @@
 uid: microsoft.quantum.simulation.inttopauli
 name: IntToPauli
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: Bir tamsayıyı tek qubit Pauli işlecine dönüştürür.
 syntax: 'function IntToPauli (idx : Int) : Pauli'
 input:
   content: '(idx : Int)'
   types:
   - name: idx
-    summary: Pauli işleçlerine `0..3` dönüştürülecek aralıktaki tamsayı.
+    summary: '`0..3`Pauli işleçlerine dönüştürülecek aralıktaki tamsayı.'
     isPrimitive: true
     uid: Int
 output:
   content: Pauli
   types:
-  - summary: Tarafından `Pauli` `[PauliI, PauliX, PauliY, PauliZ][idx]`verilen bir işleç.
+  - summary: '`Pauli`Tarafından verilen bir işleç `[PauliI, PauliX, PauliY, PauliZ][idx]` .'
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 92d9d1e29d85c57d22cb0d7b9867986bf0768bc5
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 8970c7ca707f714aabd8353366bd186260a7eac7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682604"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329793"
