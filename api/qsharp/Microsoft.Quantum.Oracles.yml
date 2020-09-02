@@ -4,15 +4,15 @@ name: Microsoft.Quantum.Oracles
 summary: " # <a name=\"summary\"></a>Özet\n Bu ad alanları, çeşitli Oracles türlerini, aşama tahmini ve genirliği gibi hisse kullanım amaçlarına göre tasarlanan çeşitli türlerde süslemek için Kullanıcı tanımlı türler sağlar."
 functions:
 - uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
-  summary: Bir Oracle türünü `StateOracle` öğesine `DeterministicStateOracle`dönüştürür.
+  summary: Bir Oracle türünü öğesine dönüştürür `StateOracle` `DeterministicStateOracle` .
 - uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
-  summary: Oracles `DeterministicStateOracle` ve `ObliviousOracle`birleştirir.
+  summary: Oracles ve birleştirir `DeterministicStateOracle` `ObliviousOracle` .
 - uid: microsoft.quantum.oracles.oracletodiscrete
   summary: "\"Siyah kutu\" Oracle 'ı temsil eden bir işlem verildiğinde, \"siyah kutu\" Oracle 'ın birden çok kez tekrarlandığı bir bağımsız Oracle döndürür."
 - uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
   summary: Bir Oracle 'dan belirli bir durum hakkında yansıma oluşturur.
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
-  summary: Bir Oracle türünü `DeterministicStateOracle` öğesine `StateOracle`dönüştürür.
+  summary: Bir Oracle türünü öğesine dönüştürür `DeterministicStateOracle` `StateOracle` .
 newtypes:
 - uid: microsoft.quantum.oracles.continuousoracle
   summary: >-
@@ -28,7 +28,7 @@ newtypes:
     Oracle $O $ ' e giriş:
 
 
-    - İstenen hisse durumu $ \ket{\psı}\_s $ ' i depolayacak kayıt.
+    - İstenen hisse durumu $ \ket{\psı} s $ ' i depolayacak kayıt \_ .
 - uid: microsoft.quantum.oracles.discreteoracle
   summary: >-
     Ayrı bir Oracle 'ı temsil eder.
@@ -45,7 +45,7 @@ newtypes:
 
     - Anyükleyen La, $O $ 'ın üzerinde davranması $a $.
 
-    - İstenen Unitary $U $ ' in uygulandığı $s $, kayıt sonrasında $ \ket{t}\_a $ konumundaki $a $ konumunda seçili olan sistem kaydı.
+    - İstenen Unitary $U $ ' in uygulandığı $s $, kayıt sonrasında $ \ket{t} a $ konumundaki $a $ konumunda seçili olan sistem kaydı \_ .
 - uid: microsoft.quantum.oracles.reflectionoracle
   summary: >-
     Bir yansımayı bir Oracle temsil eder.
@@ -67,11 +67,11 @@ newtypes:
 
     - Qubit $f $ bayrağını dizinleyen bir tamsayı.
 
-    - System Register $s $, istenen hisse durumu $ \ket{\psı}\_s $ ' i depolayacak.
+    - System Register $s $, istenen hisse durumu $ \ket{\psı} s $ ' i depolayacak \_ .
 metadata:
-  ms.openlocfilehash: c1f364d74aab6d318e7b6db078d5532aeae57bcd
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 100ea34895b343c8b24ef4f584bbf534acd9d6ff
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673099"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340961"

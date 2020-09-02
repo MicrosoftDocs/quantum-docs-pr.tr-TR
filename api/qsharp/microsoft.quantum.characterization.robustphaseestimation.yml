@@ -2,11 +2,11 @@
 uid: microsoft.quantum.characterization.robustphaseestimation
 name: RobustPhaseEstimation
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: ', Belirli bir Oracle `U` ve eigenstate için dayanıklı ve dayanıklı olmayan dayanıklı bir tahmin algoritması gerçekleştirir ve Heisenberg sınırında varyans ölçeklendirmesiyle aşamanın gerçek değerli tek bir tahminini sağlar.'
+namespace: microsoft.quantum.characterization
+summary: ', Belirli bir Oracle ve eigenstate için dayanıklı ve dayanıklı olmayan dayanıklı bir tahmin algoritması gerçekleştirir `U` ve Heisenberg sınırında varyans ölçeklendirmesiyle aşamanın gerçek değerli tek bir tahminini sağlar.'
 remarks: Çok sayıda sorgu sınırında, $ \phi $ ile ilgili $ \sigma \ge 2 \pı/\Text{# sorgu} $ tahmininin standart sapması için, Cramer-Rampakıs alt sınırı.
 syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[]) : Double'
-references: '- Bir evrensel tek qubit kapısı, Kımel, Guang Hao Low, Theodore J. Yoder tarafından güçlü bir aşama tahmini aracılığıyla ayarlamahttps://arxiv.org/abs/1502.02677'
+references: '- Bir evrensel tek qubit kapısı, Kımel, Guang Hao Low, Theodore J. Yoder tarafından güçlü bir aşama tahmini aracılığıyla ayarlama https://arxiv.org/abs/1502.02677'
 input:
   content: '(bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[])'
   types:
@@ -28,9 +28,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 5fa87e4da621871685501d58fa4a70b172f973b7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 098cb9bbf804d93d2e03d4f776bd0e88cb5b25bb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677593"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354272"

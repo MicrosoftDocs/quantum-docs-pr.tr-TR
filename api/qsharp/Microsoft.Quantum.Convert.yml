@@ -18,9 +18,9 @@ functions:
 - uid: microsoft.quantum.convert.boolarrayaspauli
   summary: Bir bit dizesi verildiğinde, tek qubit Pauli işleçleri dizisi olarak temsil edilen bir multi-qubit Pauli işleci döndürür.
 - uid: microsoft.quantum.convert.boolarrayasresultarray
-  summary: Bir `Bool[]` türü `Result[]` türüne dönüştürür; burada `true` eşlenir `One` ve `false` ile eşlenir. `Zero`
+  summary: Bir `Bool[]` türü `Result[]` türüne dönüştürür; burada `true` eşlenir ve ile `One` `false` eşlenir `Zero` .
 - uid: microsoft.quantum.convert.boolasresult
-  summary: Bir `Bool` türü `Result` türüne dönüştürür; burada `true` eşlenir `One` ve `false` ile eşlenir. `Zero`
+  summary: Bir `Bool` türü `Result` türüne dönüştürür; burada `true` eşlenir ve ile `One` `false` eşlenir `Zero` .
 - uid: microsoft.quantum.convert.boolasstring
   summary: Verilen bir Boolean değeri eşdeğer dize gösterimine dönüştürür.
 - uid: microsoft.quantum.convert.doubleasstring
@@ -47,20 +47,20 @@ functions:
 - uid: microsoft.quantum.convert.pauliarrayasint
   summary: Tek qubit Pauli işleçleri dizisi olarak temsil edilen bir multi-qubit Pauli işlecini tamsayı olarak kodlar.
 - uid: microsoft.quantum.convert.rangeasintarray
-  summary: Start tarafından numaralandırılan `arr` tamsayılar dizisini oluşturur. adım.. erer.
+  summary: '`arr`Start tarafından numaralandırılan tamsayılar dizisini oluşturur. adım.. erer.'
 - uid: microsoft.quantum.convert.resultarrayasboolarray
-  summary: Bir `Result[]` türü `Bool[]` türüne dönüştürür; burada `One` eşlenir `true` ve `Zero` ile eşlenir. `false`
+  summary: Bir `Result[]` türü `Bool[]` türüne dönüştürür; burada `One` eşlenir ve ile `true` `Zero` eşlenir `false` .
 - uid: microsoft.quantum.convert.resultarrayasint
   summary: Little endian biçimindeki bir sonuç dizesinden pozitif bir tamsayı üretir.
 - uid: microsoft.quantum.convert.resultasbool
-  summary: Bir `Result` türü `Bool` türüne dönüştürür; burada `One` eşlenir `true` ve `Zero` ile eşlenir. `false`
+  summary: Bir `Result` türü `Bool` türüne dönüştürür; burada `One` eşlenir ve ile `true` `Zero` eşlenir `false` .
 operations:
 - uid: microsoft.quantum.convert.call
   summary: Verilen bir girişi olan bir işlev çağırır.
 metadata:
-  ms.openlocfilehash: d435979692fe94efb64af82f4a7a949cb2341ef8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7ab5e02631823dcf4dee36f98c14212b43381b74
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677013"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341369"

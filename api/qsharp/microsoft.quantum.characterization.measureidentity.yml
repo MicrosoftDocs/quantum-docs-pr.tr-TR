@@ -2,10 +2,10 @@
 uid: microsoft.quantum.characterization.measureidentity
 name: MeasureIdentity
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: Qubits 'in bir kaydındaki kimlik işlecini ölçer.
 remarks: >-
-  $ \Cıvadone $ yalnızca eigenvalue $1 $ olduğundan ve negatif bir eigenvalue olmadığından, bu işlem her zaman `Zero`, eigenvalue $ + 1 = (-1) ^ 0 $ öğesine karşılık gelir ve durumunun daraltımasına neden olmaz. `register`
+  $ \Cıvadone $ yalnızca eigenvalue $1 $ olduğundan ve negatif bir eigenvalue olmadığından, bu işlem her zaman `Zero` , eigenvalue $ + 1 = (-1) ^ 0 $ öğesine karşılık gelir ve durumunun daraltımasına neden olmaz `register` .
 
 
   Bu işlem, kendi kendine yararlı değildir, ancak bir hisse işleminin izleme koruması hakkında bilgi sağladığından işlem tografı bağlamında faydalıdır.
@@ -23,13 +23,13 @@ input:
 output:
   content: Result
   types:
-  - summary: Sonuç değeri `Zero`.
+  - summary: Sonuç değeri `Zero` .
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 28dd3655c883c02b798e6e4cdf39c70100c6535b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9b6b8bfbf8d13bf1415afadd0b520551201cd3d2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677629"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354308"
