@@ -2,15 +2,15 @@
 uid: microsoft.quantum.errorcorrection.injectpi4yrotation
 name: InjectPi4YRotation
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: >-
   Y ekseni hakkında π/4 ile tek bir qubit döndürür.
 
 
-  Hakkında `Y`π/4 döndürme gerçekleştirir.
+  Hakkında π/4 döndürme gerçekleştirir `Y` .
 
 
-  Döndürme, bir sihirli durum tüketerek gerçekleştirilir; diğer bir deyişle, $ $ \begin{hizalaması}{8} \cos\frac{\pi} \tus+{0} \sin \ FRAC{\pi}{8} \tusöğesinin{1}bir kopyasıdır.
+  Döndürme, bir sihirli durum tüketerek gerçekleştirilir; diğer bir deyişle, $ $ \begin{hizalaması} \cos\frac{\pi} {8} {0} \tus+ \sin \ FRAC{\pi} {8} \tusöğesinin bir kopyasıdır {1} .
 
   \end{hizalaması} $ $
 remarks: >-
@@ -48,7 +48,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: magic
-    summary: Başlangıçta Magic durumunda bir qubit. Bu işlemin `magic` aşağıdaki uygulaması $ \ket{0}$ durumuna döndürülür.
+    summary: Başlangıçta Magic durumunda bir qubit. Bu işlemin aşağıdaki uygulaması `magic` $ \ket {0} $ durumuna döndürülür.
     isPrimitive: true
     uid: Qubit
 output:
@@ -59,9 +59,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: cb0efd896b4d8f9b4b81c061b644a1e2f7f74e96
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bf39fac578e364b5b228490484525f044d40b29d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684875"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336235"
