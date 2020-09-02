@@ -2,11 +2,11 @@
 uid: microsoft.quantum.canon.uncurriedopca
 name: UncurriedOpCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   İşlemleri döndüren bir işlev verildiğinde, her iki girişi de tanımlama grubu olarak alan yeni bir işlem döndürür.
 
-  Değiştirici `CA` , işlemlerin denetlenebilir ve adjointable olduğunu gösterir.
+  Değiştirici, `CA` işlemlerin denetlenebilir ve adjointable olduğunu gösterir.
 syntax: "function UncurriedOpCA (curriedOp : ('T -> ('U => Unit is Ctl + Adj))) : (('T, 'U) => Unit is Ctl + Adj)"
 input:
   content: "(curriedOp : ('T -> ('U => Unit is Ctl + Adj)))"
@@ -35,7 +35,7 @@ input:
 output:
   content: (('T, 'U) => Unit is Ctl + Adj)
   types:
-  - summary: İle `(curriedOp(t))(u)`eşdeğer olan `op` `op(t, u)` yeni bir işlem.
+  - summary: '`op`İle eşdeğer olan yeni bir işlem `op(t, u)` `(curriedOp(t))(u)` .'
     isOperation: true
     input:
       types:
@@ -58,9 +58,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.uncurryop
 metadata:
-  ms.openlocfilehash: aa04fce36dcfb989e109ab791822e83fba3cd9bc
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cc2ac733e8cdc2d4e21e55e87fa624385aaf9724
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677955"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354697"
