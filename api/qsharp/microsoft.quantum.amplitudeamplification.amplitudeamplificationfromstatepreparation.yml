@@ -2,14 +2,14 @@
 uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation
 name: AmplitudeAmplificationFromStatePreparation
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Kısmi yansıtımları için Oracles tarafından bir aşağı yönlü yükseltme.
 remarks: >-
-  Bu, başlangıç ve hedef durumlarının biçiminde öğesinden daha sıkı koşullar uygular `AmpAmpByReflectionPhases`.
+  Bu, başlangıç ve hedef durumlarının biçiminde öğesinden daha sıkı koşullar uygular `AmpAmpByReflectionPhases` .
 
-  Hedef durumun $ \ket{1}\_f $ tarafından işaretlenmiş olduğu varsayılır.
+  Hedef durumun $ \ket f $ tarafından işaretlenmiş olduğu varsayılır {1} \_ .
 
-  {0}\_\Begin{hizalaması} a\ket {f}{0}\_\demet s = \lambda\tusf\ket{1}\_{\ Text {Target}}\_s + \sqrt{1-| \lambda | ^ 2} \tusf\cnoktalar{0}\_, \end{hizalaması} çoğu durumda `flagQubit` ve `auxiliaryRegister` $ \demet{0}\_{f} \ demet{0}\_s $ durumunda başlatılır.
+  \Begin{hizalaması} A\ket {0} \_ {f} \demet {0} \_ s = \lambda\tusf\ket {1} \_ {\ Text {Target}} \_ s + \sqrt{1-| \lambda | ^ 2} {0} \_ \tusf\cnoktalar, \end{hizalaması} çoğu durumda `flagQubit` ve `auxiliaryRegister` $ \demet {0} \_ {f} \ demet {0} \_ s $ durumunda başlatılır.
 syntax: 'function AmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
@@ -42,9 +42,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 2d29383db3cebfe1848a1fcee3115fcee0825d4d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: de9059b0abc7eb8fd622c72561b8875e07a831ad
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676960"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340672"

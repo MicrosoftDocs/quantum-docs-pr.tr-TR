@@ -2,7 +2,7 @@
 uid: microsoft.quantum.amplitudeamplification.reflectionphases
 name: ReflectionPhases
 type: newtype
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Genize göre kısmi yansıtımları dizisinin aşamaları.
 remarks: >-
   İlk parametre, başlangıç durumu hakkında yansıma için aşamaların bir dizisidir. İkinci parametre, hedef durumu hakkında yansıma için aşamaların bir dizisidir.
@@ -10,9 +10,9 @@ remarks: >-
   Her iki dizi de aynı uzunlukta olmalıdır. Çoğu durumda, hedef durum hakkında başlangıç durumu ve son aşama hakkında ilk aşamanın genel bir aşama kaydırma ve $0 $ olarak ayarlanması gerektiğini unutmayın.
 syntax: newtype ReflectionPhases = (Double[], Double[]);
 metadata:
-  ms.openlocfilehash: 84d2c006997f8a2a3c9b121581b5dd58804a806d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4a0ed1c01dc6cd14d2569064d769d7057087db48
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680110"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340366"
