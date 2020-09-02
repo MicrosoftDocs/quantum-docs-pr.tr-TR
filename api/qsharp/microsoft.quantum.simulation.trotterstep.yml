@@ -2,8 +2,8 @@
 uid: microsoft.quantum.simulation.trotterstep
 name: TrotterStep
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: ', Bir Trour – Suzuki ayrıştırma `EvolutionGenerator` kullanımı ile açıklanan sistem tarafından tek seferlik bir zaman adımı uygular.'
+namespace: microsoft.quantum.simulation
+summary: ', `EvolutionGenerator` Bir Trour – Suzuki ayrıştırma kullanımı ile açıklanan sistem tarafından tek seferlik bir zaman adımı uygular.'
 remarks: Trour – Suzuki ayrıştırma hakkında daha fazla bilgi için bkz. [zaman Içinde sıralı bileşim](/quantum/libraries/control-flow#time-ordered-composition).
 syntax: 'function TrotterStep (evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, trotterOrder : Int, trotterStepSize : Double) : (Qubit[] => Unit is Adj + Ctl)'
 input:
@@ -23,7 +23,7 @@ input:
 output:
   content: (Qubit[] => Unit is Adj + Ctl)
   types:
-  - summary: Süre `trotterStepSize`için tek bir zaman gelişini yaklaştırın Unitary işlemi.
+  - summary: Süre için tek bir zaman gelişini yaklaştırın Unitary işlemi `trotterStepSize` .
     isOperation: true
     input:
       types:
@@ -38,9 +38,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 7059972ad5494e7d2cd86c943314005f620ad60f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 649c8cf249287df71297fd0ae1604fe6e4893f34
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687223"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328143"

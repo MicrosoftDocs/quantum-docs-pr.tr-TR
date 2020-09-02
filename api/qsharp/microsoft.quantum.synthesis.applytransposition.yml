@@ -2,7 +2,7 @@
 uid: microsoft.quantum.synthesis.applytransposition
 name: ApplyTransposition
 type: operation
-namespace: Microsoft.Quantum.Synthesis
+namespace: microsoft.quantum.synthesis
 summary: Bu işlem, dizin üzerindeki genonu, `a` `b` belirtilen eyalet- `register` $n $ uzunluğundaki vektörde bulunan dizindeki genlerle değiştirir.  `a`Eşitse `b` , eyalet vektörü değiştirilmez.
 examples: >-
   2 qubitlerde $ | 1 \ Rangle $, $ | 2 \ Rangle $ ve $ | 3 \ Rangle $ sayı durumlarıyla ilgili Tekdüzen üst konumunu hazırlayın.
@@ -41,9 +41,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: de888c27a7d897492283c7285c6d2d828fe5821b
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: caffae137e4e1fa23ef087c4fbb30179a43dd8c0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85887084"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328006"

@@ -2,26 +2,26 @@
 uid: microsoft.quantum.arithmetic.compareusingripplecarry
 name: CompareUsingRippleCarry
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Bu işlem, qubits 'in bir yazmacından temsil edilen bir tamsayı başka bir tamsayıdır daha büyükse, bir çıkış qubit üzerine bir XOR sonucu uygulayarak sınar.
 
 
-  İki tamsayı `x` verildiğinde ve `y` eşit boyutlu qubit Yazmaçları içinde depolanan bu işlem, karşılayıp `x > y`karşılamadığını denetler. True ise, 1 çıkış qubit XORed. Aksi halde, 0 bir çıkış qubit içine XORed.
+  İki tamsayı verildiğinde `x` ve `y` eşit boyutlu qubit Yazmaçları içinde depolanan bu işlem, karşılayıp karşılamadığını denetler `x > y` . True ise, 1 çıkış qubit XORed. Aksi halde, 0 bir çıkış qubit içine XORed.
 
   Diğer bir deyişle, bu işlem Unitary $ $ \begin{hizalaması} U\ket {x} \ ayraç {y} \ demet {z} = \ket{x}\ket{y}\ket{z\oplus (x>y)} tarafından temsil edilebilir.
 
   \end{hizalaması} $ $
 syntax: 'operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
-references: '- Yeni bir hisse Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutın, David Petrie Moultonhttps://arxiv.org/abs/quant-ph/0410184'
+references: '- Yeni bir hisse Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutın, David Petrie Moulton https://arxiv.org/abs/quant-ph/0410184'
 input:
   content: '(x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit)'
   types:
   - name: x
-    summary: Bir qubit kasada saklanan `LittleEndian` biçimde Karşılaştırılacak ilk numara.
+    summary: '`LittleEndian`Bir qubit kasada saklanan biçimde Karşılaştırılacak ilk numara.'
     uid: microsoft.quantum.arithmetic.littleendian
   - name: y
-    summary: Bir qubit kasada saklanan `LittleEndian` şekilde karşılaştırılan ikinci sayı.
+    summary: Bir qubit kasada saklanan şekilde karşılaştırılan ikinci sayı `LittleEndian` .
     uid: microsoft.quantum.arithmetic.littleendian
   - name: output
     summary: $X>y $ karşılaştırma sonucunu depolayan qubit.
@@ -36,9 +36,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 08cff4d874060fce0b461c7eeadfdcadf6fa1453
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 374b1611c7bf34f11ab8a8c3f11fad951e288565
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679751"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327378"

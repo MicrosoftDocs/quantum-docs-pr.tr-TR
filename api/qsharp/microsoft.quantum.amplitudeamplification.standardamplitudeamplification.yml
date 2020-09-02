@@ -2,9 +2,9 @@
 uid: microsoft.quantum.amplitudeamplification.standardamplitudeamplification
 name: StandardAmplitudeAmplification
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Standart genliği yükseltme algoritması
-remarks: "`AmpAmpPhasesStandard` Bu,{0}\\_\\begin{hizalaması} a\\ket {f}{0}\\_\\gens = \\lambda\\tusf\\ket{1}\\_{\\ Text {Target\\_}} + \\ sqrt{1-| \\lambda | ^ 2} \\tusf\\cnoktalar{0}\\_, \\end{hizalaması} bu işlem, çoğu durumda \\begin{hizalaması} \\operatorname{AmpAmpByOracle}\\ket{0}\\_{f} \\tuss{0}\\_= \\sin ((2n + 1) \\sin ^{-1}(\\lambda)) \\tusf\\ket{1}\\_{\\ Text {Target}}\\_s + \\cdots\\tusf{0}\\_\\end{hizalaması} durumunu hazırlar. `flagQubit` ve `auxiliaryRegister` $ \\demet{0}\\_f\\tusa{0}\\_$ ' da başlatılır."
+remarks: Bu, `AmpAmpPhasesStandard` \begin{hizalaması} A\ket {0} \_ {f} {0} \_ \gens = \lambda\tusf\ket {1} \_ {\ Text {Target}} \_ + \ sqrt{1-| \lambda | ^ 2} {0} \_ \tusf\cnoktalar, \end{hizalaması} bu işlem, çoğu durumda \begin{hizalaması} \operatorname{AmpAmpByOracle}\ket {0} \_ {f} {0} \_ \tuss = \sin ((2n + 1) \sin ^ {-1} (\lambda)) {1} \_ \tusf\ket {\ Text {Target}} \_ s + \cdots\tusf {0} \_ \end{hizalaması} durumunu hazırlar. `flagQubit` ve `auxiliaryRegister` $ \demet {0} \_ f\tusa $ ' da başlatılır {0} \_ .
 syntax: 'function StandardAmplitudeAmplification (nIterations : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 references: '- [*G. Brassard, P. Hoyer, M. Mosca, a. Tapp*](https://arxiv.org/abs/quant-ph/0005055)'
 input:
@@ -38,9 +38,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 0fc7ceb390a64ce6224a084147207663d96c3b75
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f78b541045b309403387962128a3cfda3290cade
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676922"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341879"
