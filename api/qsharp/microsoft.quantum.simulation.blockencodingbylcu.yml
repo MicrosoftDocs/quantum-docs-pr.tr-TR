@@ -2,13 +2,13 @@
 uid: microsoft.quantum.simulation.blockencodingbylcu
 name: BlockEncodingByLCU
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
-  Bir ilgilendiğiniz işleci bir `BlockEncoding`ile kodluyor.
+  Bir ilgilendiğiniz işleci bir ile kodluyor `BlockEncoding` .
 
 
-  Bu, bazı `BlockEncoding` işleci kodlayan bir unitary $U = P\cdot V\cdot P ^ \dağılım $ oluşturur $H = \ sum_ {j} | \ alpha_j | U_j $ ilgi çekici bir şekilde oluşturulur. Genellikle $P $, $P \tusa{0}\_= \ sum_j \sqrt{\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ ve $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $ gibi bir durum hazırlama birimiyiydir.
-remarks: Bu `BlockEncoding` uygulama, bunun özelliklerini verir `BlockEncodingReflection`.
+  Bu `BlockEncoding` , bazı işleci kodlayan bir Unitary $U = P\cdot V\cdot P ^ \dağılım $ oluşturur $H = \ sum_ {j} | \ alpha_j | U_j $ ilgi çekici bir şekilde oluşturulur. Genellikle $P $, $P {0} \_ \tusa = \ sum_j \sqrt{\ alpha_j/ \| \vec\alpha \| \_ 2} \ket{j} \_ a $ ve $V = \ sum_ {j} \ket{j}\bra{j} \_ a\otimes U_j $ gibi bir durum hazırlama birimiyiydir.
+remarks: Bu `BlockEncoding` uygulama, bunun özelliklerini verir `BlockEncodingReflection` .
 syntax: "function BlockEncodingByLCU (statePreparation : ('T => Unit is Adj + Ctl), selector : (('T, 'S) => Unit is Adj + Ctl)) : (('T, 'S) => Unit is Adj + Ctl)"
 input:
   content: "(statePreparation : ('T => Unit is Adj + Ctl), selector : (('T, 'S) => Unit is Adj + Ctl))"
@@ -46,7 +46,7 @@ input:
 output:
   content: (('T, 'S) => Unit is Adj + Ctl)
   types:
-  - summary: Bir Unitary $U $, yazmaçlara `a` ve `s` bu blok-kodlar $H $ $U ve bu da < \Hanger = U $ karşılar.
+  - summary: Bir Unitary $U $, yazmaçlara `a` ve `s` Bu blok-kodlar $H $ $U ve bu da < \hanger = U $ karşılar.
     isOperation: true
     input:
       types:
@@ -65,9 +65,9 @@ seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 581170f33001b0fef6606a39085b36c7f9559ac0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9886496e446a9dfc0b302be0077f35b3190ff9e4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686905"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330200"

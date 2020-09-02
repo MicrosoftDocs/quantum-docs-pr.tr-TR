@@ -2,8 +2,8 @@
 uid: microsoft.quantum.simulation.estimateenergywithadiabaticevolution
 name: EstimateEnergyWithAdiabaticEvolution
 type: operation
-namespace: Microsoft.Quantum.Simulation
-summary: Otomatik olarak ayrılan bir giriş durumuna `statePrepUnitary` , ardından bir ve ile son derece tahmini kullanarak bir `adiabaticUnitary`, ve son derece tahmini `qpeUnitary`kullanarak bir durum hazırlığı gerçekleştirir. `phaseEstAlgorithm`
+namespace: microsoft.quantum.simulation
+summary: '`statePrepUnitary`Otomatik olarak ayrılan bir giriş durumuna, ardından bir ve ile son derece tahmini kullanarak bir `adiabaticUnitary` , ve son derece tahmini kullanarak bir durum hazırlığı gerçekleştirir `qpeUnitary` `phaseEstAlgorithm` .'
 syntax: 'operation EstimateEnergyWithAdiabaticEvolution (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double)) : Double'
 input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'
@@ -37,7 +37,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: Bir Unitary işlecini temsil eden bir Oracle $U $ \ma{\phi} $ ve taban durumu enerji $E = \fi\\, \ Delta t $ ile bir dinamik üreticisi altında
+    summary: Bir Unitary işlecini temsil eden bir Oracle $U $ \ma{\phi} $ ve taban durumu enerji $E = \fi \\ , \ Delta t $ ile bir dinamik üreticisi altında
     isOperation: true
     input:
       types:
@@ -74,9 +74,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: ffab30daf3028c12768d9c9f4cd16a8011a7931f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ee69257bcde8ac8ed3afa34d520f9778bde0da91
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82655195"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343287"

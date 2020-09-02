@@ -2,21 +2,21 @@
 uid: microsoft.quantum.simulation.generatorindex
 name: GeneratorIndex
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
-  Bu oluşturucunun, ile `EvolutionSet`ilgili Oluşturucu tarafından zaman için bir eşleme varolduğu, örneğin, tüm dinamik oluşturucuları (ör. hermitian işleçleri) kümesinde tek bir temel terimi temsil eder.
+  Bu oluşturucunun, ile ilgili Oluşturucu tarafından zaman için bir eşleme varolduğu, örneğin, tüm dinamik oluşturucuları (ör. hermitian işleçleri) kümesinde tek bir temel terimi temsil eder `EvolutionSet` .
 
 
   İlk öğe (INT [], Double []) Tek terimli olan dizindir--Örneğin, 0,5 katsayısı olan Pauli dize XXY, ([1, 1, 2], [0,5]) tarafından dizinlenebilir. Alternatif olarak, X cos φ + Y φ gibi sürekli bir değişken tarafından parametreleştirilen Hamiltonians, örneğin ([], [φ]) tarafından temsil edilebilir. İkinci öğe, oluşturucunun üzerinde çalıştığı alt sistemin dizinini oluşturur.
 remarks: >-
   > [!WARNING]
 
-  > ' In `GeneratorIndex` yorumu, belirli bir dizi özel kümesine başvuru dışında tanımlı değildir.
+  > ' In yorumu, `GeneratorIndex` belirli bir dizi özel kümesine başvuru dışında tanımlı değildir.
 
 
   ### <a name="examples"></a>Örnekler
 
-  Kullanarak <xref:microsoft.quantum.simulation.paulievolutionset>, $ \pı X_2 X_5 Y_9 $ işleci şu şekilde gösterilir:
+  Kullanarak  <xref:microsoft.quantum.simulation.paulievolutionset> , $ \pı X_2 X_5 Y_9 $ işleci şu şekilde gösterilir:
 
 
   ```qsharp
@@ -29,9 +29,9 @@ seeAlso:
 - evolutionset
 - paulievolutionset
 metadata:
-  ms.openlocfilehash: d633ecdc11075eb45a40a58bb2a1ca67af577c3c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b291cc0b0adc4799e49403fb76f0f47dbadcaf5c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82655155"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330183"

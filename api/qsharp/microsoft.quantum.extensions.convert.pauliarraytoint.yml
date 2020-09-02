@@ -2,8 +2,8 @@
 uid: microsoft.quantum.extensions.convert.pauliarraytoint
 name: PauliArrayToInt
 type: function
-namespace: Microsoft.Quantum.Extensions.Convert
-summary: Pauliarraytoınt kullanım dışı bırakıldı. Lütfen bunun @"microsoft.quantum.convert.pauliarrayasint" yerine kullanın.
+namespace: microsoft.quantum.extensions.convert
+summary: Pauliarraytoınt kullanım dışı bırakıldı. Lütfen @"microsoft.quantum.convert.pauliarrayasint" bunun yerine kullanın.
 syntax: 'function PauliArrayToInt (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 58c842f4b18e76c390bfa530a4b3f72da1de7dd8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4fd765ccf67f7a3d49fdfdd39a69130d90424e37
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682080"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349274"
