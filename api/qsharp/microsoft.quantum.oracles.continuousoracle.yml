@@ -2,7 +2,7 @@
 uid: microsoft.quantum.oracles.continuousoracle
 name: ContinuousOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
   Sürekli bir Oracle 'ı temsil eder.
 
@@ -10,9 +10,9 @@ summary: >-
   Bu, $U $ ' in sabit bir işlem olduğu ve $ \delta t $ ' un negatif olmayan bir gerçek sayı olduğu her zaman için $U (\delta t): \ket{\psı (t)} \mapsto \ket{\psı (t + \delta t)} $ $t uygulayan bir Oracle ' dır.
 syntax: newtype ContinuousOracle = ((Double, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 9c5776dfa2ec4cfbd128a6e20158f1be23680f11
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0fb357af013d37aeb9576085a6e977a36ac90074
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681316"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332155"

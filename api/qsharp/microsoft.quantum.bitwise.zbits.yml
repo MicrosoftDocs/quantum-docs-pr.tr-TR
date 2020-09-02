@@ -2,9 +2,9 @@
 uid: microsoft.quantum.bitwise.zbits
 name: ZBits
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: Pauli işleçleri dizisinin Z bitlerini temsil eden bir tamsayı döndürür.
-remarks: "`paulis` Dizi uzunluğu 63 ' den büyükse işlev oluşturulur."
+remarks: Dizi uzunluğu 63 ' den büyükse işlev oluşturulur `paulis` .
 syntax: 'function ZBits (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -17,15 +17,15 @@ input:
 output:
   content: Int
   types:
-  - summary: "{62}\\,İkili temsili $ (P_ P_{61}\\,\\noktalar\\,p_0) $ olan bir tamsayı $x $, burada $p _i = $0 `paulis[i]` `PauliI` `PauliX` , veya ise $p = $1 `paulis[i]` `PauliY` ' dir. `PauliZ`"
+  - summary: İkili temsili $ (p_ {62} \, P_ {61} \, \noktalar p_0) $ olan bir tamsayı $x $ \, , burada $p _i = $0, veya ise $p `paulis[i]` `PauliI` `PauliX` = $1 ' dir `paulis[i]` `PauliY` `PauliZ` .
     isPrimitive: true
     uid: Int
 seeAlso:
 - xbits
 metadata:
-  ms.openlocfilehash: d7605a48451292792a97e9049125674c6716780f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 38515f1ad8e6f4a11161f4bea0604a21a61c7546
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676435"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350923"

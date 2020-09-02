@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.applyifoneca
 name: ApplyIfOneCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Klasik sonuç değeri bir olan bir Unitary işlemi uygular.
 
 
-  Bir işlem `op` ve sonuç değeri `result`verildiğinde, `op` `target` if `result` ise için geçerlidir. `One` Varsa `Zero`, hiçbir şey olmaz `target`.
+  Bir işlem `op` ve sonuç değeri verildiğinde, `result` if ise `op` için geçerlidir `target` `result` `One` . Varsa, `Zero` hiçbir şey olmaz `target` .
 
-  Sonek `CA` , uygulanacak işlemin Unitary (denetlenebilir ve adjointable) olduğunu gösterir.
+  Sonek, `CA` uygulanacak işlemin Unitary (denetlenebilir ve adjointable) olduğunu gösterir.
 syntax: "operation ApplyIfOneCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T))"
@@ -52,9 +52,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: f8837e549ec1fc70b76e8151a211c4bf9f71168e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1e4aa4a8b7d4947ee72b322aaccb0b360992f1f9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672646"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89358216"

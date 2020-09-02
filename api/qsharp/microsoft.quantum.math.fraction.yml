@@ -2,13 +2,13 @@
 uid: microsoft.quantum.math.fraction
 name: Fraction
 type: newtype
-namespace: Microsoft.Quantum.Math
-summary: Formun `p/q`bir Rational numarasını temsil eder. Tamsayı `p` , kayıt düzeninin ilk öğesidir ve `q` kayıt düzeninin ikinci öğesidir.
+namespace: microsoft.quantum.math
+summary: Formun bir Rational numarasını temsil eder `p/q` . Tamsayı, `p` kayıt düzeninin ilk öğesidir ve `q` kayıt düzeninin ikinci öğesidir.
 syntax: newtype Fraction = (Int, Int);
 metadata:
-  ms.openlocfilehash: 3059bc8bfb8e5f0cd92f373bc3999e25374dd777
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 63ff365d45d7000f2c75e72630da48fc75144eb9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673811"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343953"

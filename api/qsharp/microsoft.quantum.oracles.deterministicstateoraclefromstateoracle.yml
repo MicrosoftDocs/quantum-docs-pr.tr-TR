@@ -2,31 +2,31 @@
 uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
 name: DeterministicStateOracleFromStateOracle
 type: function
-namespace: Microsoft.Quantum.Oracles
-summary: Bir Oracle türünü `StateOracle` öğesine `DeterministicStateOracle`dönüştürür.
+namespace: microsoft.quantum.oracles
+summary: Bir Oracle türünü öğesine dönüştürür `StateOracle` `DeterministicStateOracle` .
 syntax: 'function DeterministicStateOracleFromStateOracle (idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle) : Microsoft.Quantum.Oracles.DeterministicStateOracle'
 input:
   content: '(idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle)'
   types:
   - name: idxFlagQubit
-    summary: 'İki kayıt üzerinde `stateOracle` açıkça işlem gören $A $ bayrağının işaret eden dizin: $f $ bayrağı ve System $s $, örneğin $A \tusf\tus{{0}\_\ PSI}\_s $.'
+    summary: '`stateOracle`İki kayıt üzerinde açıkça işlem gören $A $ bayrağının işaret eden dizin: $f $ bayrağı ve system $s $, örneğin $A {0} \_ \tusf\tus{\ PSI} \_ s $.'
     isPrimitive: true
     uid: Int
   - name: stateOracle
-    summary: Bir durum hazırlama Oracle $A $ türü `StateOracle`.
+    summary: Bir durum hazırlama Oracle $A $ türü `StateOracle` .
     uid: microsoft.quantum.oracles.stateoracle
 output:
   content: Microsoft.Quantum.Oracles.DeterministicStateOracle
   types:
-  - summary: Aynı durum hazırlama Oracle $A $, ancak artık `DeterministicStateOracle`bu nedenle, $a, s $ artık açıkça ayrısız bir kayıt üzerinde davranır, ör.  $A \ket{0\psı}\_{as} $.
+  - summary: Aynı durum hazırlama Oracle $A $, ancak artık `DeterministicStateOracle` Bu nedenle, $a, s $ artık açıkça ayrısız bir kayıt üzerinde davranır, ör.  $A \ket{0\psı} \_ {as} $.
     uid: microsoft.quantum.oracles.deterministicstateoracle
 seeAlso:
 - microsoft.quantum.canon.stateoracle
 - microsoft.quantum.canon.deterministicstateoracle
 metadata:
-  ms.openlocfilehash: cf6ddc1f1baff27c986f36d944e67192958a0d3f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 20ce22cb90be3f7fd3c135e9dccce4482a3e3939
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681297"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332070"

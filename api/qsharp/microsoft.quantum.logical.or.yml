@@ -2,10 +2,10 @@
 uid: microsoft.quantum.logical.or
 name: Or
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: İki değerden oluşan Boole birleşim durumunu döndürür.
 remarks: >-
-  `or` İşlecin aksine, bu işlev kısa devre değildir, her iki giriş de tam olarak değerlendirilir.
+  İşlecin aksine `or` , bu işlev kısa devre değildir, her iki giriş de tam olarak değerlendirilir.
 
 
   En fazla kısa devre davranýþý, şunlar eşdeğerdir:
@@ -33,13 +33,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`yalnızca ya da `a` `b` varsa `true`.'
+  - summary: '`true` yalnızca ya da varsa `a` `b` `true` .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: fb3d62473ec3fd7c40b44bfa919b69d54c5d0218
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e95ecbda0b5a51b7380d77f514af76644689757c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683573"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345092"
