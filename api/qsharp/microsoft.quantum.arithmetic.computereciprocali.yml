@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.computereciprocali
 name: ComputeReciprocalI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Tamsayı bölme kullanılarak işaretsiz bir tamsayı x için karşılıklı 1/x hesaplar. Sonuç, bir tamsayı olarak yorumlanır `floor(2^(2*n-1) / x)`.
+namespace: microsoft.quantum.arithmetic
+summary: Tamsayı bölme kullanılarak işaretsiz bir tamsayı x için karşılıklı 1/x hesaplar. Sonuç, bir tamsayı olarak yorumlanır `floor(2^(2*n-1) / x)` .
 remarks: X = 0 girişi için çıkış hepsi olur.
 syntax: 'operation ComputeReciprocalI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
@@ -13,7 +13,7 @@ input:
     summary: n bit işaretsiz tamsayı
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: 2N-bit çıkış, başlangıçta $ \ket{0}$ konumunda olmalıdır.
+    summary: 2N-bit çıkış, başlangıçta $ \ket $ konumunda olmalıdır {0} .
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: b371c7c1e7442e49aab01793fdaa9c99bcafa35d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 824bc89e8d6290c98d505b0b17d4521edaa36384
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679732"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342304"
