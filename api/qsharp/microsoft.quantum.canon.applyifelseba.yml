@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelseba
 name: ApplyIfElseBA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Klasik bir bit değerine bağlı olarak iki adjointable işlemden birini uygular.
 
 
-  Bir bit `bit`verildiğinde,,, olduğu `trueOp` `trueInput` `bit` `true`zaman girişi olarak ile işlemini uygular ve ne zaman `falseOp(falseInput)` `bit` geçerlidir `false`.
+  Bir bit verildiğinde, `bit` `trueOp` `trueInput` ,, olduğu zaman girişi olarak ile işlemini `bit` uygular `true` ve `falseOp(falseInput)` ne zaman geçerlidir `bit` `false` .
 syntax: "operation ApplyIfElseBA (bit : Bool, (trueOp : ('T => Unit is Adj), trueInput : 'T), (falseOp : ('U => Unit is Adj), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit is Adj), trueInput : 'T), (falseOp : ('U => Unit is Adj), falseInput : 'U))"
   types:
   - name: bit
-    summary: Veya `trueOp` `falseOp` uygulanıp uygulanmadığını belirlemede kullanılan Boolean değeri.
+    summary: '`trueOp`Veya uygulanıp uygulanmadığını belirlemede kullanılan Boolean değeri `falseOp` .'
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: Olduğunda `bit` uygulanacak adjointable işlemi `true`.
+    summary: Olduğunda uygulanacak adjointable işlemi `bit` `true` .
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Adjoint
   - name: trueInput
-    summary: Olduğunda `trueOp` `bit` olarak sağlanacak giriş `true`.
+    summary: Olduğunda olarak sağlanacak giriş `trueOp` `bit` `true` .
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: Olduğunda `bit` uygulanacak adjointable işlemi `false`.
+    summary: Olduğunda uygulanacak adjointable işlemi `bit` `false` .
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Adjoint
   - name: falseInput
-    summary: Olduğunda `falseOp` `bit` olarak sağlanacak giriş `false`.
+    summary: Olduğunda olarak sağlanacak giriş `falseOp` `bit` `false` .
     uid: "'U"
     isLocal: true
 output:
@@ -57,9 +57,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: Koşullu olarak uygulanacak işlemin `trueOp` giriş türü.
+  summary: Koşullu olarak uygulanacak işlemin giriş türü `trueOp` .
 - uid: "'U"
-  summary: Koşullu olarak uygulanacak işlemin `falseOp` giriş türü.
+  summary: Koşullu olarak uygulanacak işlemin giriş türü `falseOp` .
 functors:
 - Adjoint
 seeAlso:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: 6e84acfbad8d1811ee0ab41de1f51fbcab4c286c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ec84d5f11aefafd44bd2a4a2ef9fff21a6f6d1b8
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675018"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350379"

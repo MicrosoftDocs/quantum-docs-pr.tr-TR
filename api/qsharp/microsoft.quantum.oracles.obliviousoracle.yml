@@ -2,7 +2,7 @@
 uid: microsoft.quantum.oracles.obliviousoracle
 name: ObliviousOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
   Bir Oracle 'ın yükümlülüğü en çok genliğini temsil eder.
 
@@ -12,16 +12,16 @@ summary: >-
 
   - Anyükleyen La, $O $ 'ın üzerinde davranması $a $.
 
-  - İstenen Unitary $U $ ' in uygulandığı $s $, kayıt sonrasında $ \ket{t}\_a $ konumundaki $a $ konumunda seçili olan sistem kaydı.
+  - İstenen Unitary $U $ ' in uygulandığı $s $, kayıt sonrasında $ \ket{t} a $ konumundaki $a $ konumunda seçili olan sistem kaydı \_ .
 remarks: >-
-  Bu Oracle tarafından tanımlanan bu Oracle $ $ O\ket {\_s} a\ket {\\_PSI} s = \lambda\ket{t}\_a U \ket{\psı}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cnoktalara $ $, $ \ket{t}\_\_\_a $ tarafından işaretlenen temelinde her türlü sistem durumu $ \ket{\psi} s $, genlik $ \lambda $ olan herhangi bir sistem durumunda Unitary $U $ ' i uygulamak için ansınla State $ \ket{s} a $ üzerinde çalışır.
+  Bu Oracle tarafından tanımlanan bu Oracle $ $ O\ket {s} \_ a\ket {\ PSI} \_ s = \lambda\ket{t} \_ a U \ket{\psı} \_ s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp} \_ a\cnoktalara $ $, $ \_ \ket{t} a $ tarafından işaretlenen temelinde her türlü sistem durumu $ \ket{\psi} \_ s $, genlik $ \lambda $ olan herhangi bir sistem durumunda Unitary $U $ ' i uygulamak için ansınla State $ \ket{s} a $ üzerinde çalışır \_ .
 
-  İlk parametre $ \ket{s}\_a $ 'ın qubit kayıt dizinidir. İkinci parametre, $ \ket{\psı}\_s $ ' nin qubit kayıt dizinidir.
+  İlk parametre $ \ket{s} a $ 'ın qubit kayıt dizinidir \_ . İkinci parametre, $ \ket{\psı} s $ ' nin qubit kayıt dizinidir \_ .
 syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 9d7a799a9069e6d7eb3470d62322f803a68eb2e6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c88ad3b0a4fe6067a0e52972c23587d5835c779e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681252"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332019"

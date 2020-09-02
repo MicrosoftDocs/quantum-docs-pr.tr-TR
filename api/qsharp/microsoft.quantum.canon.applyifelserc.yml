@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelserc
 name: ApplyIfElseRC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Klasik sonucun değerine bağlı olarak, iki denetlenebilir işlemden birini uygular.
 
 
-  `result`Sonuç `zeroOp` verildiğinde, öğesine `zeroInput` `result` `Zero`eşit olduğu zaman girişi olarak ile işlemi uygular ve ne zaman `oneOp(oneInput)` `result == One`geçerlidir.
+  Sonuç verildiğinde `result` , `zeroOp` `zeroInput` öğesine eşit olduğu zaman girişi olarak ile işlemi uygular `result` `Zero` ve `oneOp(oneInput)` ne zaman geçerlidir `result == One` .
 syntax: "operation ApplyIfElseRC (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U))"
   types:
   - name: result
-    summary: Ölçüm sonucu, veya `zeroOp` `oneOp` uygulanmış olup olmadığını tespit etmek için kullanılır.
+    summary: Ölçüm sonucu, veya uygulanmış olup olmadığını tespit etmek için kullanılır `zeroOp` `oneOp` .
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: Ne zaman `result == Zero`uygulanacak denetlenebilir işlem.
+    summary: Ne zaman uygulanacak denetlenebilir işlem `result == Zero` .
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Controlled
   - name: zeroInput
-    summary: '`zeroOp` Ne zaman `result == Zero`sağlanacak giriş.'
+    summary: '`zeroOp`Ne zaman sağlanacak giriş `result == Zero` .'
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: Ne zaman `result == One`uygulanacak denetlenebilir işlem.
+    summary: Ne zaman uygulanacak denetlenebilir işlem `result == One` .
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Controlled
   - name: oneInput
-    summary: '`oneOp` Ne zaman `result == One`sağlanacak giriş.'
+    summary: '`oneOp`Ne zaman sağlanacak giriş `result == One` .'
     uid: "'U"
     isLocal: true
 output:
@@ -57,9 +57,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: Koşullu olarak uygulanacak işlemin `zeroOp` giriş türü.
+  summary: Koşullu olarak uygulanacak işlemin giriş türü `zeroOp` .
 - uid: "'U"
-  summary: Koşullu olarak uygulanacak işlemin `oneOp` giriş türü.
+  summary: Koşullu olarak uygulanacak işlemin giriş türü `oneOp` .
 functors:
 - Controlled
 seeAlso:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: aeb4c7f86ac1f41140bb14436d9dee39b4c4d98b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b31ace845d04b3c279b54e0dfea575632ce575f8
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672734"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350226"

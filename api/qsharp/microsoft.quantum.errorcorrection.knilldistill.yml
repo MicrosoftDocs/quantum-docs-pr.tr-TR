@@ -2,12 +2,12 @@
 uid: microsoft.quantum.errorcorrection.knilldistill
 name: KnillDistill
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: >-
   Knill Magic State deneyimlerinin algoritmasını uygular.
 
 
-  Bir sihirli durum $ $ \begin{hizalaması}{8} \cos\frac{\pi} \tus+{0} \sin \ FRAC{\pi}{8} \kovaryans{1} \ End{hizalaması}, $ $ ' nin yaklaşık 15 ' i, daha yüksek kaliteli bir kopya veriyor.
+  Bir sihirli durum $ $ \begin{hizalaması} \cos\frac{\pi} {8} {0} \tus+ \sin \ FRAC{\pi} {8} \kovaryans {1} \ End{hizalaması}, $ $ ' nin yaklaşık 15 ' i, daha yüksek kaliteli bir kopya veriyor.
 remarks: >-
   Knill algoritmasını izliyoruz.
 
@@ -27,13 +27,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: Daha `true`sonra, başarılı olan yordam ve daha yüksek kaliteli kopya kabul edilmelidir. Eğer `false`yordam başarısız olursa ve kaydın durumu tanımsız olarak düşünülmelidir.
+  - summary: '`true`Daha sonra, başarılı olan yordam ve daha yüksek kaliteli kopya kabul edilmelidir. Eğer `false` yordam başarısız olursa ve kaydın durumu tanımsız olarak düşünülmelidir.'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 5a8e4c43ff21491b35efedb8f60717979e44f0ed
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 979a318e036fbe1585809ce7ba0152b68b4a840e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682356"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350124"
