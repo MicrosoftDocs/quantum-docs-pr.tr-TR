@@ -2,7 +2,7 @@
 uid: microsoft.quantum.oracles.stateoracle
 name: StateOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
   Durum hazırlığı için bir Oracle temsil eder.
 
@@ -12,16 +12,16 @@ summary: >-
 
   - Qubit $f $ bayrağını dizinleyen bir tamsayı.
 
-  - System Register $s $, istenen hisse durumu $ \ket{\psı}\_s $ ' i depolayacak.
+  - System Register $s $, istenen hisse durumu $ \ket{\psı} s $ ' i depolayacak \_ .
 remarks: >-
-  Bu Oracle tarafından tanımlanan bu Oracle $ ${0}\_o\ket {f}{0}\_\ayraç s = \lambda\tusf\ket{1}\_{\\_PSI} s + \sqrt{1-| \lambda | ^ 2}{0}\_\demet f\cnoktalar{0}\_, $ ${0}\_\_${1}\_\tusf $ tarafından işaretlenen esasına göre $ \ket{\psı} s $ hedef durumu $ \lambda $, genlik $ \lambda $ oluşturmak için hesaplama tabanlı durum $ \tus{f} \tuss $ üzerinde çalışır.
+  Bu Oracle tarafından tanımlanan bu Oracle $ $ O\ket {0} \_ {f} \ayraç {0} \_ s = \lambda\tusf\ket {1} \_ {\ PSI} \_ s + \sqrt{1-| \lambda | ^ 2} \demet {0} \_ f\cnoktalar, $ $ $ {0} \_ {0} \_ \tusf $ tarafından işaretlenen esasına göre $ \ket{\psı} s $ hedef durumu $ \_ \lambda $, genlik $ \lambda $ oluşturmak için hesaplama {1} tabanlı durum $ \tus{f} \tuss $ üzerinde çalışır \_ .
 
-  İlk parametre, $ \ket{0}\_f $ ' nin qubit kaydına yönelik bir dizindir. İkinci parametrenin her ikisi de kaydettirir.
+  İlk parametre, $ \ket f $ ' nin qubit kaydına yönelik bir dizindir {0} \_ . İkinci parametrenin her ikisi de kaydettirir.
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: fe7ced83927d709bcc6fe82d8866b221446c7d73
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1a303e51638a792fb31ee7cca58bd3662d86897b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673477"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331764"

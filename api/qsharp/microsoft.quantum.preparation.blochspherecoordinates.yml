@@ -2,26 +2,26 @@
 uid: microsoft.quantum.preparation.blochspherecoordinates
 name: BlochSphereCoordinates
 type: function
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
   Tek qubit durumu için Bloch Sphere koordinatlarını hesaplar.
 
 
-  Bu iki karmaşık sayı $a, qubit durumunu temsil eden 0, a1 $, $a 0 \{0} ayraç + a1 \ Tus={1} r e ^ {it} (e ^ {-ı \phi/2}\cos{(\ teta/2)} \tus+{0}e ^ {ı \fi/2}\sin{(\ teta/2)} \ket{1}) $.
+  Bu iki karmaşık sayı $a, qubit durumunu temsil eden 0, a1 $, $a 0 \ ayraç {0} + a1 \ {1} Tus= r e ^ {it} (e ^ {-ı \phi/2}\cos{(\ teta/2)} {0} \tus+ e ^ {ı \fi/2}\sin{(\ teta/2)} \ket {1} ) $.
 syntax: 'function BlochSphereCoordinates (a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar) : (Microsoft.Quantum.Math.ComplexPolar, Double, Double)'
 input:
   content: '(a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar)'
   types:
   - name: a0
-    summary: Karmaşık katsayı devleti $ \ket{0}$.
+    summary: Karmaşık katsayı devleti $ \ket {0} $.
     uid: microsoft.quantum.math.complexpolar
   - name: a1
-    summary: Karmaşık katsayı devleti $ \ket{1}$.
+    summary: Karmaşık katsayı devleti $ \ket {1} $.
     uid: microsoft.quantum.math.complexpolar
 output:
   content: (Microsoft.Quantum.Math.ComplexPolar, Double, Double)
   types:
-  - summary: İçeren `(ComplexPolar(r, t), phi, theta)`bir tanımlama grubu.
+  - summary: İçeren bir tanımlama grubu `(ComplexPolar(r, t), phi, theta)` .
     types:
     - uid: microsoft.quantum.math.complexpolar
     - isPrimitive: true
@@ -29,9 +29,9 @@ output:
     - isPrimitive: true
       uid: Double
 metadata:
-  ms.openlocfilehash: 98d543849be177941a0c346c1de6b5b6930e783e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a1bf578d2dc6c45d553bff503385f7760a08458d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683235"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331713"
