@@ -2,7 +2,7 @@
 uid: microsoft.quantum.machinelearning.trainsequentialclassifier
 name: TrainSequentialClassifier
 type: operation
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: Sıralı bir sınıflandırıcının yapısı verildiğinde, belirli bir etiketli eğitim kümesindeki sınıflandırıcının kullanımını yapın.
 syntax: 'operation TrainSequentialClassifier (models : Microsoft.Quantum.MachineLearning.SequentialModel[], samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions, trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : (Microsoft.Quantum.MachineLearning.SequentialModel, Int)'
 input:
@@ -17,7 +17,7 @@ input:
     isArray: true
     uid: microsoft.quantum.machinelearning.labeledsample
   - name: options
-    summary: Eğitim sırasında kullanılacak yapılandırma; daha @"microsoft.quantum.machinelearning.trainingoptions" fazla @"microsoft.quantum.machinelearning.defaulttrainingoptions" ayrıntı için bkz. ve.
+    summary: Eğitim sırasında kullanılacak yapılandırma; @"microsoft.quantum.machinelearning.trainingoptions" @"microsoft.quantum.machinelearning.defaulttrainingoptions" daha fazla ayrıntı için bkz. ve.
     uid: microsoft.quantum.machinelearning.trainingoptions
   - name: trainingSchedule
     summary: Eğitim adımları sırasında eğitim verilerinden örnek seçerken kullanılacak örnekleme zamanlaması.
@@ -40,9 +40,9 @@ seeAlso:
 - microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
 - microsoft.quantum.machinelearning.validatesequentialclassifier
 metadata:
-  ms.openlocfilehash: e5a9d2c6747ee970bfd01b266e2f10f45d514f06
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b8b0873395a3d75ea06f655a08d0de496c1f4449
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684322"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335504"
