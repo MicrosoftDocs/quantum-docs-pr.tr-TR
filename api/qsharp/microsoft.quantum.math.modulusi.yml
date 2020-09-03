@@ -2,9 +2,9 @@
 uid: microsoft.quantum.math.modulusi
 name: ModulusI
 type: function
-namespace: Microsoft.Quantum.Math
-summary: Modülden `value` `modulus`kaynaklanan kurallı bir şekilde hesaplar.
-remarks: Bu işlev, işlecin `%` C# ' de nasıl davrandığı ile farklı davranır ve sonuçta, değer negatif olsa bile 0 ile `modulus - 1`her zaman pozitif bir tamsayı olur.
+namespace: microsoft.quantum.math
+summary: Modülden kaynaklanan kurallı bir şekilde `value` hesaplar `modulus` .
+remarks: Bu işlev, işlecin `%` C# ' de nasıl davrandığı ile farklı davranır ve sonuçta `modulus - 1` , değer negatif olsa bile 0 ile her zaman pozitif bir tamsayı olur.
 syntax: 'function ModulusI (value : Int, modulus : Int) : Int'
 input:
   content: '(value : Int, modulus : Int)'
@@ -24,9 +24,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: d804caa4e5eba1e8d6293d33164255ea4768900c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 63d8e1ed1083be193b976ea7c4086f7bfdad7a69
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686647"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89334059"

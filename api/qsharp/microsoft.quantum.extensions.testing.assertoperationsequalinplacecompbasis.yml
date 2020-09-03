@@ -2,8 +2,8 @@
 uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
 name: AssertOperationsEqualInPlaceCompBasis
 type: operation
-namespace: Microsoft.Quantum.Extensions.Testing
-summary: AssertOperationsEqualInPlaceCompBasis kullanım dışı bırakıldı. Lütfen bunun @"microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis" yerine kullanın.
+namespace: microsoft.quantum.extensions.testing
+summary: AssertOperationsEqualInPlaceCompBasis kullanım dışı bırakıldı. Lütfen @"microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis" bunun yerine kullanın.
 syntax: 'operation AssertOperationsEqualInPlaceCompBasis (actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj), nQubits : Int) : Unit'
 input:
   content: '(actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj), nQubits : Int)'
@@ -41,9 +41,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 00664cc1be56f72b78df2c83a499608163564159
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 66dafd7e1e02842ee085542c4a58bcb65c97b7eb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682916"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89347421"
