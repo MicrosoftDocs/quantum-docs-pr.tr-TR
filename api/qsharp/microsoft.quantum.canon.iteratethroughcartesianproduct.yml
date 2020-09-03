@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.iteratethroughcartesianproduct
 name: IterateThroughCartesianProduct
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Birkaç aralığın Kartezyen üründeki her bir dizin için bir işlem uygular.
 
 
-  Yinelemeli olarak `0..(bounds[0] - 1)`, `0..(bounds[1] - 1)`,,,..., Kartezyen ürünün her bir öğesi için bir işlem uygular`0..(bounds[Length(bounds) - 1] - 1)`
+  Yinelemeli olarak,,, `0..(bounds[0] - 1)` `0..(bounds[1] - 1)` ,..., Kartezyen ürünün her bir öğesi için bir işlem uygular `0..(bounds[Length(bounds) - 1] - 1)`
 examples: >-
-  Bir işlem `op`verildiğinde, aşağıdaki iki kod parçacığı eşdeğerdir:
+  Bir işlem verildiğinde `op` , aşağıdaki iki kod parçacığı eşdeğerdir:
 
 
   ```Q#
@@ -69,9 +69,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.iteratethroughcartesianpower
 metadata:
-  ms.openlocfilehash: 0021d7715963d0b0d2f3a0248b857b7591876220
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 07b22e7b094198a42c6126579ebf285b7d93af52
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679042"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356193"

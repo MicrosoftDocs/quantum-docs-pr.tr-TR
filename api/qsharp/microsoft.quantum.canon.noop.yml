@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.noop
 name: NoOp
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Bir bağımsız değişkende kimlik işlemini (No-Op) gerçekleştirir.
 
@@ -13,8 +13,8 @@ summary: >-
 
   Örneğin, belirli bir hata düzeltmesi sendromu hata oluştuğunu gösteriyorsa, `NoOp<Qubit[]>` doğru kurtarma yordamı olabilir.
 
-  Benzer şekilde, bir işlem giriş olarak bir durum hazırlama yordamı beklediğinde `NoOp<Qubit[]>` , $ \ket{0 \cnoktalar 0} $ durumunu hazırlamak için kullanılabilir.
-remarks: Neredeyse her durumda, için `NoOp` tür parametresinin açıkça belirtilmesi gerekir. Örneğin, `NoOp<Qubit>` ile <xref:microsoft.quantum.intrinsic.i>aynıdır.
+  Benzer şekilde, bir işlem giriş olarak bir durum hazırlama yordamı beklediğinde, `NoOp<Qubit[]>` $ \ket{0 \cnoktalar 0} $ durumunu hazırlamak için kullanılabilir.
+remarks: Neredeyse her durumda, için tür parametresinin `NoOp` açıkça belirtilmesi gerekir. Örneğin, `NoOp<Qubit>` ile aynıdır <xref:microsoft.quantum.intrinsic.i> .
 syntax: "operation NoOp (input : 'T) : Unit"
 input:
   content: "(input : 'T)"
@@ -34,9 +34,9 @@ functors:
 seeAlso:
 - microsoft.quantum.intrinsic.i
 metadata:
-  ms.openlocfilehash: 74c85340e065929feabb81d7e97339f80255c0f6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9af76ff7f2c559aef0f940ff3c56e6f8d8cdbb60
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678716"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355992"
