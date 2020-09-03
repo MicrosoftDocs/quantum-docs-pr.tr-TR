@@ -2,11 +2,11 @@
 uid: microsoft.quantum.canon.operationpowca
 name: OperationPowCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Bir işlemi bir güce yükseltir.
 
-  Değiştirici `A` , işlemin denetlenebilir ve adjointable olduğunu gösterir.
+  Değiştirici, `A` işlemin denetlenebilir ve adjointable olduğunu gösterir.
 
 
   Diğer bir deyişle, $U $ geçidini temsil eden bir işlem verildiğinde, bir Power $m $ için ^ d $ $U yeni bir işlem döndürür.
@@ -54,9 +54,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.operationpow
 metadata:
-  ms.openlocfilehash: 896d142da1075eb282ef7889c26b9874ca478d16
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bec7e61813934efcb50e2a4c0e1c8a776c281571
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678654"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355836"

@@ -2,7 +2,7 @@
 uid: microsoft.quantum.convert.intasboolarray
 name: IntAsBoolArray
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: Döndürülen dizi için küçük endian gösterimini kullanarak pozitif bir tam sayının ikili gösterimini üretir.
 remarks: >-
   Giriş `bits` 0 ile 63 arasında olmalıdır.
@@ -17,20 +17,20 @@ input:
     isPrimitive: true
     uid: Int
   - name: bits
-    summary: Öğesinin `number`ikili temsilindeki bit sayısı.
+    summary: Öğesinin ikili temsilindeki bit sayısı `number` .
     isPrimitive: true
     uid: Int
 output:
   content: Bool[]
   types:
-  - summary: Temsil eden `number`bir Boole değerleri dizisi.
+  - summary: Temsil eden bir Boole değerleri dizisi `number` .
     isArray: true
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: f14af582713f5d08e29b54a1e1758b4efbeea094
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 529ef27e63bd637c3994fd3c37d1d707a9bde5b8
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82659181"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338564"
