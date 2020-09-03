@@ -2,12 +2,12 @@
 uid: microsoft.quantum.math.pnormalized
 name: PNormalized
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: >-
-  `L(p)` Norm içindeki bir vektörü `Double`normalleştirir.
+  Norm içindeki bir vektörü normalleştirir `Double` `L(p)` .
 
 
-  Diğer bir deyişle, türünde `Double[]`bir dizi $x, bu, tüm öğelerin $p $-norm $\|x\|_p $ tarafından bölündüğü bir dizi döndürür.
+  Diğer bir deyişle, türünde bir dizi $x `Double[]` , bu, tüm öğelerin $p $-norm $ \| x _p $ tarafından bölündüğü bir dizi döndürür \| .
 syntax: 'function PNormalized (p : Double, array : Double[]) : Double[]'
 input:
   content: '(p : Double, array : Double[])'
@@ -23,16 +23,16 @@ input:
 output:
   content: Double[]
   types:
-  - summary: Dizi $x $-norm $\|x\|_p $ $p tarafından normalleştirilmelidir.
+  - summary: Dizi $x $-norm $ \| x _p $ $p tarafından normalleştirilmelidir \| .
     isArray: true
     isPrimitive: true
     uid: Double
 seeAlso:
 - pnorm
 metadata:
-  ms.openlocfilehash: 68697fe159fecfeed0078f95de8d91f825125f41
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4605ad867b02b240bd5c11bd8a5137b089b5265e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684022"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333481"
