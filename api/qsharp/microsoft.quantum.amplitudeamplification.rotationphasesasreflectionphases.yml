@@ -2,7 +2,7 @@
 uid: microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases
 name: RotationPhasesAsReflectionPhases
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Tek qubit döndürmeler olarak belirtilen aşamaları kısmi yansıtılamalar olarak belirtilen aşamalara dönüştürür.
 syntax: 'function RotationPhasesAsReflectionPhases (rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
 references: >-
@@ -22,9 +22,9 @@ output:
   - summary: Kısmi yansıtımları olarak belirtilen aşamaları uygulayan bir işlem.
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
 metadata:
-  ms.openlocfilehash: 9fde93767d1ac0d99b6d0f27db00cfe672315831
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a11d124796a0e164c7a8348c76a720e704d49dc9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680066"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339567"
