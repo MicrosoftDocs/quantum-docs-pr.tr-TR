@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d815a9a25b8ba5e9489b6d3d27fb0d64ab4aaa1d
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
+ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863434"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90063249"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Öğretici: Q\# ile dolaşıklığı keşfetme
 
@@ -112,7 +112,7 @@ Q#İşlem bir hisse alt yordamı. Diğer bir deyişle, diğer hisse işleme ça�
 
 İşlemin bağımsız değişkenleri parantez içinde tanımlama grubu olarak belirtilir.
 
-Bir iki nokta işareti eklendikten sonra işlemin dönüş türü belirtilir. Bu örnekte `SetQubitState` işleminin dönüşü yoktur, dolayısıyla `Unit` döndürüyor olarak işaret edilir. Bu, Q# C# ' de `unit` kabaca benzer olan `void` ve Python 'da boş bir tanımlama grubu () olan F # ' ın eşdeğeridir `Tuple[()]` .
+Bir iki nokta işareti eklendikten sonra işlemin dönüş türü belirtilir. Bu örnekte `SetQubitState` işleminin dönüşü yoktur, dolayısıyla `Unit` döndürüyor olarak işaret edilir. Bu, Q# C# ' de `unit` kabaca benzer olan `void` ve Python 'da boş bir tanımlama grubu olan ( `()` tür Ipucuyla temsil edilen) F # ' ın eşdeğeridir `Tuple[()]` .
 
 İlk işlem sırasında iki hisse işlem kullandınız Q# :
 
