@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0090fb2b9ac5f3c9d195a3ab02dcd21c848d8ef7
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b226f355771f2b65399ebe00cc3de9429a3cebb0
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868636"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759918"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Hisse ve Istatistik #
 
@@ -74,7 +74,7 @@ Bu nedene yönelik aşama tahmini, üstel hızlı bir şekilde bir dizi algoritm
 ### <a name="bayesian-phase-estimation"></a>Bayeme aşaması tahmini ###
 
 > [!TIP]
-> Uygulamada Bayeme aşaması tahmini hakkında daha fazla bilgi için lütfen [**Phasetahmine**](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) örnek bölümüne bakın.
+> Uygulamada Bayeme aşaması tahmini hakkında daha fazla bilgi için lütfen [**Phasetahmine**](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation) örnek bölümüne bakın.
 
 Bayeme aşaması tahmini fikri basittir.
 Aşama tahmini protokolünden Ölçüm istatistiklerini toplar ve ardından Bayeme çıkarımı kullanarak sonuçları işleyin ve bir tahmin parametresi sağlayabilirsiniz.
@@ -112,7 +112,7 @@ En önemli kapsamlı aşama tahmini özelliği, diğer birçok yararlı çeşitl
 İlgili diğer ayrıntılar, yalnızca $1 $ anileri La qubit 'in küçük alan ek yükünü ya da yordamın Uyarlamalı olduğu anlamına gelir. bu da, gerekli hisse denemeleri dizisi ara ölçü sonuçlarının bağımsızdır. Bu ve daha sonra, aşama tahmin algoritması seçiminin önemli olduğu durumlarda, bir diğeri gibi belgelere @"microsoft.quantum.characterization.robustphaseestimation" ve ilgili yayınlar hakkında daha fazla bilgi ve uygulama için başvuru yapmanız gerekir.
 
 > [!TIP]
-> Sağlam aşama tahmini kullanıldığı birçok örnek vardır. Çeşitli fiziksel sistemin zemin durumu enerji düzeyini çıkartarak aşama tahmini için, lütfen [ **H2 simülasyon** örneğine](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), [ **simplefon** örneğe](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)ve [ **Hubbard model** örneğine](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)bakın.
+> Sağlam aşama tahmini kullanıldığı birçok örnek vardır. Çeşitli fiziksel sistemin zemin durumu enerji düzeyini çıkartarak aşama tahmini için, lütfen [ **H2 simülasyon** örneğine](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line), [ **simplefon** örneğe](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)ve [ **Hubbard model** örneğine](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)bakın.
 
 
 ### <a name="continuous-oracles"></a>Sürekli Oracles ###
@@ -130,7 +130,7 @@ Bu nedenle, sürekli sorgular ile aşama tahmini kullanmak, $t $ ' ın bir tamsa
 
 ### <a name="random-walk-phase-estimation"></a>Rastgele yürüme aşaması tahmini ###
 
-Q#yinelemeli aşama tahmininizden elde edilen veri kaydı üzerinde rastgele bir adım adım şekilde çalışan hisse için yakın bir işlem tahmini olan Bayeme aşaması tahminimizin yararlı bir şekilde kullanılmasını sağlar.
+Q# yinelemeli aşama tahmininizden elde edilen veri kaydı üzerinde rastgele bir adım adım şekilde çalışan hisse için yakın bir işlem tahmini olan Bayeme aşaması tahminimizin yararlı bir şekilde kullanılmasını sağlar.
 Bu yöntem hem Uyarlamalı hem de tamamen belirleyici olduğundan, tahmini aşama $ \hat{\phi} $ içindeki hataların neredeyse en iyi şekilde ölçeklendirilmesine olanak tanır.
 
 Protokol, önceki dağıtımın Gauss olduğunu varsayan yaklaşık bir Bayeme çıkarım yöntemi kullanır.

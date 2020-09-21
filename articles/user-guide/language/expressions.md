@@ -1,32 +1,32 @@
 ---
-title: İçindeki ifadelerQ#
+title: İçindeki ifadeler Q#
 description: Sabitleri, değişkenleri, işleçleri, işlemleri ve işlevleri ' de ifade olarak belirtme, başvurma ve birleştirme işlemlerini anlayın Q# .
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b6cc97dfee05dc843e213e84f17043714a8a9656
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 9bf28e3854eae1892692d7ca840e1860de2e2934
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869622"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835851"
 ---
-# <a name="expressions-in-no-locq"></a>İçindeki ifadelerQ#
+# <a name="expressions-in-no-locq"></a>İçindeki ifadeler Q#
 
 ## <a name="numeric-expressions"></a>Sayısal Ifadeler
 
 Sayısal ifadeler `Int` , veya türündeki ifadelerdir `BigInt` `Double` .
 Diğer bir deyişle, tamsayı veya kayan noktalı sayılardır.
 
-`Int`içindeki değişmez değerler Q# , bir dizi basamak olarak yazılmıştır.
+`Int` içindeki değişmez değerler Q# , bir dizi basamak olarak yazılmıştır.
 Onaltılık ve ikili tamsayılar desteklenir ve `0x` sırasıyla bir ve önekiyle yazılır `0b` .
 
-`BigInt`içindeki değişmez değerler Q# sonunda `l` veya `L` soneke sahiptir.
+`BigInt` içindeki değişmez değerler Q# sonunda `l` veya `L` soneke sahiptir.
 Onaltılık büyük tamsayılar desteklenir ve "0x" önekiyle yazılır.
 Bu nedenle, tüm geçerli sabit değer kullanımları aşağıda verilmiştir `BigInt` :
 
@@ -36,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double`içindeki değişmez değerler Q# , ondalık basamaklar kullanılarak yazılan kayan nokta sayılarıdır.
+`Double` içindeki değişmez değerler Q# , ondalık basamaklar kullanılarak yazılan kayan nokta sayılarıdır.
 Bunlar ondalık bir nokta veya ya da ya da " `.` e" ya da "e" ya da bir üstel bölüm (yalnızca olası bir negatif işaret ve ondalık basamakların geçerli olması) ile yazılmış veya olmadan yazılabilir.
 Aşağıdakiler geçerli `Double` değişmez değerler: `0.0` , `1.2e5` , `1e-5` .
 
@@ -64,16 +64,14 @@ Hem tamsayı hem de büyük tamsayı değerleri için, vardiyalar aritmetik değ
 Negatif bir değeri sol veya sağ olarak değiştirme negatif bir sayı ile sonuçlanır.
 Diğer bir deyişle, bir adım sola veya sağa kaydırma, sırasıyla 2 ile çarpılarak veya bölünerek aynıdır.
 
-Tamsayı bölme ve tamsayı mod, negatif sayılar için C# olarak aynı davranışı izler.
-Yani, `a % b` her zaman aynı işarete sahiptir `a` ve `b * (a / b) + a % b` her zaman eşittir `a` .
-Örnek:
+Tamsayı bölme ve tamsayı mod, negatif sayılar için C# olarak aynı davranışı izler. Yani, `a % b` her zaman aynı işarete sahiptir `a` ve `b * (a / b) + a % b` her zaman eşittir `a` . Örnek:
 
- `A` | `B` | `A / B` | `A % B`
----------|----------|---------|---------
- 5 | 2 | 2 | 1
- 5 | -2 | -2 | 1
- -5 | 2 | -2 | -1
- -5 | -2 | 2 | -1
+|`A` | `B` | `A / B` | `A % B`|
+|:---------:|:----------:|:---------:|:---------:|
+| 5 | 2 | 2 | 1 |
+| 5 | -2 | -2 | 1 |
+| -5 | 2 | -2 | -1 |
+| -5 | -2 | 2 | -1 |
 
 Büyük tamsayı bölme ve mod işlemleri aynı şekilde çalışır.
 
@@ -156,14 +154,14 @@ Her iki `Int` ifade de `start` ve `stop` ifade verilen `start .. stop` bir Aral�
 
 Bazı örnek aralıklar şunlardır:
 
-- `1..3`1, 2, 3 aralığıdır.
-- `2..2..5`2, 4 aralığındadır.
-- `2..2..6`2, 4, 6 aralığıdır.
-- `6..-2..2`6, 4, 2 aralığıdır.
-- `2..1`boş aralıktır.
-- `2..6..7`Aralık 2 ' dir.
-- `2..2..1`boş aralıktır.
-- `1..-1..2`boş aralıktır.
+- `1..3` 1, 2, 3 aralığıdır.
+- `2..2..5` 2, 4 aralığındadır.
+- `2..2..6` 2, 4, 6 aralığıdır.
+- `6..-2..2` 6, 4, 2 aralığıdır.
+- `2..1` boş aralıktır.
+- `2..6..7` Aralık 2 ' dir.
+- `2..2..1` boş aralıktır.
+- `1..-1..2` boş aralıktır.
 
 ## <a name="qubit-expressions"></a>Qubit Ifadeleri
 
@@ -207,7 +205,7 @@ Diğer Kullanıcı tanımlı türler bakımından tanımlanan Kullanıcı tanım
 Bu nedenle, `WrappedPair` temel alınan türe sahip kullanıcı tanımlı bir türdür `IntPair` ve `t` değeri olan bir değişkense, `WrappedPair(IntPair(1,2))` `t!!` olur `(1,2)` .
 
 `!`İşleç, `[]` dizi dizini oluşturma ve dilimleme için dışındaki diğer işleçlerden daha yüksek önceliğe sahiptir.
-`!`ve, `[]` pozitif bir deyişle, `a[i]![3]` şöyle okunurdur `((a[i])!)[3]` : `i` . öğesini alın `a` , sarmalayın ve sarmalanmamış değerin 3. öğesini (bir dizi olması gerekir) alın.
+`!` ve, `[]` pozitif bir deyişle, `a[i]![3]` şöyle okunurdur `((a[i])!)[3]` : `i` . öğesini alın `a` , sarmalayın ve sarmalanmamış değerin 3. öğesini (bir dizi olması gerekir) alın.
 
 `!`İşlecin önceliği belirgin olmayan bir etkiye sahip olabilir.
 Bir işlev veya işlem sarmalanmamış bir değer döndürürse, bağımsız değişken grubu, sarmalama yerine çağrıya bağlamak için işlev veya işlem çağrısının parantez içine alınması gerekir.
@@ -253,7 +251,7 @@ Tür | Varsayılan
  `Qubit` | _geçersiz qubit_
  `Pauli` | `PauliI`
  `Result` | `Zero`
- `Range` | Boş Aralık,`1..1..0`
+ `Range` | Boş Aralık, `1..1..0`
  `Callable` | _geçersiz çağrılabilir_
  `Array['T]` | `'T[0]`
 
@@ -329,16 +327,16 @@ Var olan bir diziden, işleçlerini ve işlecini kullanan *kopyalama ve güncell
 Bir kopya ve güncelleştirme ifadesi formun bir ifadesidir `expression1 w/ expression2 <- expression3` , burada
 
 * `expression1``T[]`bir tür için tür olmalıdır `T` .
-* `expression2`' de belirtilen dizide hangi dizinlerin değiştirileceğini tanımlar `expression1` . `expression2`tür `Int` ya da tür olmalıdır `Range` .
+* `expression2` ' de belirtilen dizide hangi dizinlerin değiştirileceğini tanımlar `expression1` . `expression2` tür `Int` ya da tür olmalıdır `Range` .
 * `expression3``expression1`, içinde belirtilen indeksler temelinde içindeki öğeleri güncelleştirmek için kullanılan değerdir `expression2` . `expression2`Tür ise `Int` , tür olmalıdır `expression3` `T` . `expression2`Tür ise `Range` , tür olmalıdır `expression3` `T[]` .
 
 Örneğin, Copy ve Update ifadesi, ' `arr w/ idx <- value` `arr` `idx` deki değer (ler) e ayarlanan tarafından belirtilen öğe (ler) hariç, içindeki karşılık gelen öğelere ayarlanmış tüm öğeleri içeren yeni bir dizi oluşturur `value` . 
 
 Verilen `arr` diziyi içeriyorsa `[0,1,2,3]` , 
 
-- `arr w/ 0 <- 10`dizi `[10,1,2,3]` .
-- `arr w/ 2 <- 10`dizi `[0,1,10,3]` .
-- `arr w/ 0..2..3 <- [10,12]`dizi `[10,1,12,3]` .
+- `arr w/ 0 <- 10` dizi `[10,1,2,3]` .
+- `arr w/ 2 <- 10` dizi `[0,1,10,3]` .
+- `arr w/ 0..2..3 <- [10,12]` dizi `[10,1,12,3]` .
 
 #### <a name="copy-and-update-expressions-for-named-items"></a>Adlandırılmış öğeler için kopyalama ve güncelleştirme ifadeleri
 
@@ -376,11 +374,11 @@ Ayrıca, callables dizisi de oluşturabilirsiniz.
 * Ortak öğe türü bir işlem ya da işlev türü ise, tüm öğeler aynı giriş ve çıkış türlerine sahip olmalıdır.
 * Dizinin öğe türü tüm öğeleri tarafından [desteklenen tüm unsurları](xref:microsoft.quantum.guide.operationsfunctions) destekler.
 Örneğin,, `Op1` `Op2` ve `Op3` hepsi `Qubit[] => Unit` operasyonlardır, ancak `Op1` `Adjoint` `Op2` her ikisini de destekler, destekler `Controlled` ve `Op3` destekler:
-  * `[Op1, Op2]`, bir dizi `(Qubit[] => Unit)` işlemden oluşur.
-  * `[Op1, Op3]`, bir dizi `(Qubit[] => Unit is Adj)` işlemden oluşur.
-  * `[Op2, Op3]`, bir dizi `(Qubit[] => Unit is Ctl)` işlemden oluşur.
+  * `[Op1, Op2]` , bir dizi `(Qubit[] => Unit)` işlemden oluşur.
+  * `[Op1, Op3]` , bir dizi `(Qubit[] => Unit is Adj)` işlemden oluşur.
+  * `[Op2, Op3]` , bir dizi `(Qubit[] => Unit is Ctl)` işlemden oluşur.
 
-Ancak, işlemler `(Qubit[] => Unit is Adj)` ve `(Qubit[] => Unit is Ctl)` ortak temel türüne sahip olmakla birlikte `(Qubit[] => Unit)` , bu işlemlerin *dizileri* ortak bir temel türü paylaşmazlar.
+Ancak, işlemler `(Qubit[] => Unit is Adj)` ve  `(Qubit[] => Unit is Ctl)` ortak temel türüne sahip olmakla birlikte `(Qubit[] => Unit)` , bu işlemlerin *dizileri* ortak bir temel türü paylaşmazlar.
 
 Örneğin, `[[Op1], [Op2]]` Şu anda iki uyumsuz dizi türünden oluşan bir dizi oluşturmayı denediğinde bir hata oluşturur `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` .
 
@@ -395,9 +393,9 @@ Aynı türde ve bir Boolean ifadesinin iki ifadesi verildiğinde, soru işaretin
 Koşullu ifadeler, aynı girişlere ve çıkışlara sahip olan ancak farklı komik desteği olan işlemleri değerlendirebilir. Bu durumda, koşullu ifadenin türü, her iki ifade tarafından desteklenen tüm semantikleri destekleyen giriş ve çıkışlarla bir işlemdir.
 Örneğin,, ve hepsi ise,, `Op1` `Op2` ve `Op3` `Qubit[]=>Unit` `Op1` `Adjoint` `Op2` `Controlled` her ikisini de destekler, destekler ve `Op3` destekler:
 
-- `flag ? Op1 | Op2`bir `(Qubit[] => Unit)` işlemdir.
-- `flag ? Op1 | Op3`bir `(Qubit[] => Unit is Adj)` işlemdir.
-- `flag ? Op2 | Op3`bir `(Qubit[] => Unit is Ctl)` işlemdir.
+- `flag ? Op1 | Op2` bir `(Qubit[] => Unit)` işlemdir.
+- `flag ? Op1 | Op3` bir `(Qubit[] => Unit is Adj)` işlemdir.
+- `flag ? Op2 | Op3` bir `(Qubit[] => Unit is Ctl)` işlemdir.
 
 Olası iki sonuç ifadesinin herhangi biri bir işlev veya işlem çağrısını içeriyorsa, bu çağrı yalnızca çağrının değeri olan bir sonuç olduğunda gerçekleşir. Örneğin, bu durumda, `a==b ? C(qs) | D(qs)` `a==b` true ise `C` işlem çağrılır ve yanlış ise yalnızca `D` işlem çağrılır. Bu yaklaşım, diğer dillerdeki *kısa* devre 'ya benzer.
 
@@ -472,14 +470,14 @@ Tür belirtimi gereklidir çünkü `Op3` ve `Op1` farklı türlere sahip olur, b
 
 * İşlem ve işlev çağırma parantezleri aynı zamanda herhangi bir işleçten önce, ancak dizi dizinlemesi ve komik bir şekilde bağlanır.
 
-Q#en yüksekten en düşüğe göre öncelik sırasına göre işleçler:
+Q# en yüksekten en düşüğe göre öncelik sırasına göre işleçler:
 
-İşleç | Sayısına | Açıklama | İşlenen türleri
+Operatör | Sayısına | Açıklama | İşlenen türleri
 ---------|----------|---------|---------------
- arkasında`!` | Birli | Unwrap | Kullanıcı tanımlı herhangi bir tür
- `-`, `~~~`, `not` | Birli | Sayısal negatif, bit düzeyinde tamamlama, mantıksal değilleme | `Int`, için `BigInt` veya için `Double` `-` `Int` veya `BigInt` `~~~` `Bool` için`not`
+ arkasında `!` | Birli | Unwrap | Kullanıcı tanımlı herhangi bir tür
+ `-`, `~~~`, `not` | Birli | Sayısal negatif, bit düzeyinde tamamlama, mantıksal değilleme | `Int`, için `BigInt` veya için `Double` `-` `Int` veya `BigInt` `~~~` `Bool` için `not`
  `^` | İkili | Tamsayı güç | `Int`üs için veya `BigInt` taban için `Int`
- `/`, `*`, `%` | İkili | Bölme, çarpma, tamsayı mod | `Int`, `BigInt` veya `Double` için `/` `*` `Int` veya `BigInt` için`%`
+ `/`, `*`, `%` | İkili | Bölme, çarpma, tamsayı mod | `Int`, `BigInt` veya `Double` için `/` `*` `Int` veya `BigInt` için `%`
  `+`, `-` | İkili | Ekleme veya dize ve dizi birleştirme, çıkarma | `Int``BigInt`veya `Double` `String` için bir dizi türü veya`+`
  `<<<`, `>>>` | İkili | Sol SHIFT, sağa kaydırma | `Int` veya `BigInt`
  `<`, `<=`, `>`, `>=` | İkili | Küçüktür, küçüktür veya eşittir, büyüktür, büyüktür veya eşittir karşılaştırmaları | `Int``BigInt`veya`Double`
@@ -490,7 +488,7 @@ Q#en yüksekten en düşüğe göre öncelik sırasına göre işleçler:
  `and` | İkili | Mantıksal VE | `Bool`
  `or` | İkili | Mantıksal EĞER | `Bool`
  `..` | İkili/üçlü | Range işleci | `Int`
- `?` `|` | Üçlü | Koşullu | `Bool`Sol taraftaki
+ `?` `|` | Üçlü | Koşullu | `Bool` Sol taraftaki
 `w/` `<-` | Üçlü | Kopyala ve Güncelleştir | Bkz. [kopyalama ve güncelleştirme ifadeleri](#copy-and-update-expressions)
 
 ## <a name="next-steps"></a>Sonraki adımlar

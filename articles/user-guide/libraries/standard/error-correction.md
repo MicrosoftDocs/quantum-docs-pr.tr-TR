@@ -3,18 +3,18 @@ title: Standart kitaplıklarda hata düzeltme Q#
 description: Q#Qubits 'in durumunu korurken programlarınızda hata düzeltme kodlarını nasıl kullanacağınızı öğrenin.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8b1f008793281121bc547d1a6ac3b960feb082ab
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: dad0db4d2aab27e5ae46d4df10ee050f785d8bb8
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868500"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835562"
 ---
 # <a name="error-correction"></a>Hata Düzeltme #
 
@@ -78,7 +78,7 @@ Bu bölümde, bu Framework 'ü ve uygulamayı birkaç basit hisse hata düzeltme
 > Sabitleyici formalroni'ya tam giriş, bu bölümün kapsamının dışındadır.
 > [Gottesman 2009](https://arxiv.org/abs/0904.2557)' ye daha fazla bilgi edinmek isteyen okuyucular hakkında bilgi veririz.
 
-## <a name="representing-error-correcting-codes-in-no-locq"></a>İçindeki hata düzeltme kodlarını temsil etmeQ# ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a>İçindeki hata düzeltme kodlarını temsil etme Q# ##
 
 Canon, hata düzeltme kodları belirtmeye yardımcı olmak için Q# birkaç farklı Kullanıcı tanımlı tür sağlar:
 
@@ -120,6 +120,6 @@ using (scratch = Qubit[nScratch]) {
 }
 ```
 
-Bu, [bit çevirme kod örneğinde](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code)daha ayrıntılı bir şekilde araştırıyoruz.
+Bu, [bit çevirme kod örneğinde](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code)daha ayrıntılı bir şekilde araştırıyoruz.
 
 Bit çevirme kodundan başlayarak, Q# Canon, [beş qubit kusursuz kodun](https://arxiv.org/abs/quant-ph/9602019)uygulamalarıyla ve her ikisi de rastgele bir tek qubit hatayı düzeltebilen [yedi-qubit kod](https://arxiv.org/abs/quant-ph/9705052)uygulamalarıyla birlikte sağlanır.

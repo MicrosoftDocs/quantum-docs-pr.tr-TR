@@ -1,24 +1,24 @@
 ---
-title: İçindeki değişkenlerQ#
-description: Fill açıklaması
+title: İçindeki değişkenler Q#
+description: "' De farklı değişkenlerle çalışmayı öğrenin Q#"
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 00af0989cd5a1f9ccc7d9f2545acd0d256bc7eb9
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: bb87f36d3c9b7df195f64e85151e833d494ea945
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867854"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835885"
 ---
-# <a name="variables-in-no-locq"></a>İçindeki değişkenlerQ#
+# <a name="variables-in-no-locq"></a>İçindeki değişkenler Q#
 
-Q#değişebilir ve değişmez semboller ya da ifadelerle sınırlanan/atanan *değişkenler*arasında ayrım yapar.
+Q# değişebilir ve değişmez semboller ya da ifadelerle sınırlanan/atanan *değişkenler*arasında ayrım yapar.
 Genellikle, derleyicinin daha iyi iyileştirmeler gerçekleştirmesini sağladığından, değişmez sembollerin kullanılması önerilir.
 
 Bir bağlamanın sol tarafı bir sembol tanımlama grubu ve bir ifadenin sağ tarafından oluşur.
@@ -201,7 +201,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-reservedStorageGb
+ve
 
 ```qsharp
 if (a == b) {

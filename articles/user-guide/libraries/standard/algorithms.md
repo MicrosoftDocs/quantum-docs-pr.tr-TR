@@ -1,20 +1,20 @@
 ---
-title: İçindeki hisse algoritmalarıQ#
+title: İçindeki hisse algoritmaları Q#
 description: Genliği yükseltme, Fourier dönüşümü, Draper ve Beauregard adders ve aşama tahmini dahil olmak üzere temel hisse bilgi işlem algoritmaları hakkında bilgi edinin.
 author: QuantumWriter
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0b5972480061c460345057285bbfe53305acc122
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 7ce13c5df3795656156cccf28640c0a4b0dcba2e
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868823"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835681"
 ---
 # <a name="quantum-algorithms"></a>Hisse algoritmaları #
 
@@ -30,7 +30,7 @@ Genleştirme 'nın arkasındaki mantık, $Q $ ' ın Eigen ayrıştırma işlemin
 
 Bundan sonra gelen diğer yararlı bir özellik ise, eigenvalue $ \teta $, ilk durumun işaretleneceği olasılığa ($P _0 $ ' ın yalnızca ilk duruma kadar bir projektör olduğu durumlarda) doğrudan ilgilidir.  $Q $ 'nin ıdgenphase $2 \ teta = 2 \ sin ^ {-1} (\Sqrt{\pr (success)}) $ olduğundan, $Q $ öğesine aşama tahmini uyguladığımızda, bir Unitary yordamı için başarılı olma olasılığını öğreniyoruz.  Bu, daha az bir şekilde ihtiyaç duyulduğundan daha fazla bilgi edinmek için hisse prosedürü için en fazla sayıda daha az uygulama gerektirdiğinden yararlıdır.
 
-Q#zorunluluklığın en çok genliği bir özelleştirmesi olarak genliğini tanıtır.  Yükümlülüğü, ilk egenliği olan Projektörün başlangıç durumuna bir projektör olmaması gerektiğinden, bu bilinen adı ortadan kaldırmaz.  Bu anlamda protokol, ilk duruma kadar zorunluluvou olur.  Yükümlülüğü nesnelerin anahtar uygulaması, ilk durumun bilinmediği, ancak simülasyon protokolünde bir anliksel kayıt ile ayrılmış hale geldiği Unitary Hamiltonian benzetim yöntemlerinin belirli *Doğrusal birleşimleridir* .  Bu anyater kaydı sabit bir değer olacak şekilde ölçüldüğünde, $0 $ deyin, bu tür benzetim yöntemleri, kalan qubits 'e istenen Unitary dönüşümünü uygular (sistem kaydı adı verilir).  Diğer tüm ölçüm sonuçları hataya yol açabilir.  Yükümlülüğü, genlik düzeyini yükseltme, bu ölçümün başarısı, \\ Yukarıdaki düşünmelerin $100% $ ' üne artırılmasından izin verir.  Ayrıca, normal genileri, sistem kaydının boş olduğu durumuna karşılık gelir.  Bunun nedeni, Q# temel genliği yükseltme alt yordamı olarak yükümlülüğü en çok genliğini kullanır.
+Q# zorunluluklığın en çok genliği bir özelleştirmesi olarak genliğini tanıtır.  Yükümlülüğü, ilk egenliği olan Projektörün başlangıç durumuna bir projektör olmaması gerektiğinden, bu bilinen adı ortadan kaldırmaz.  Bu anlamda protokol, ilk duruma kadar zorunluluvou olur.  Yükümlülüğü nesnelerin anahtar uygulaması, ilk durumun bilinmediği, ancak simülasyon protokolünde bir anliksel kayıt ile ayrılmış hale geldiği Unitary Hamiltonian benzetim yöntemlerinin belirli *Doğrusal birleşimleridir* .  Bu anyater kaydı sabit bir değer olacak şekilde ölçüldüğünde, $0 $ deyin, bu tür benzetim yöntemleri, kalan qubits 'e istenen Unitary dönüşümünü uygular (sistem kaydı adı verilir).  Diğer tüm ölçüm sonuçları hataya yol açabilir.  Yükümlülüğü, genlik düzeyini yükseltme, bu ölçümün başarısı, \\ Yukarıdaki düşünmelerin $100% $ ' üne artırılmasından izin verir.  Ayrıca, normal genileri, sistem kaydının boş olduğu durumuna karşılık gelir.  Bunun nedeni, Q# temel genliği yükseltme alt yordamı olarak yükümlülüğü en çok genliğini kullanır.
 
 Genel yordamın ( `AmpAmpObliviousByReflectionPhases` ), ve çağırdığımız iki kaydı vardır `ancillaRegister` `systemRegister` . Ayrıca, gerekli yansıtımları için iki Oracles kabul eder. `ReflectionOracle`Yalnızca üzerinde çalışır, ancak `ancillaRegister` `ObliviousOracle` her iki kasada de çalışır. Giriş, `ancillaRegister` ilk yansıma işlecinin $ \ cıvas-2P_1 $ ' i-1 eigenstate olarak başlatılmalıdır.
 
@@ -58,7 +58,7 @@ Bu durumda, tüm $Z $-Ros $2 \ pi/2 ^ k $, $k > bir $, QFT devresi öğesinden k
 $K \ge \ log_2 (n) + \ log_2 (1/\epsilon) + $3 için şu şekilde bilinmektedir. biri $ \\ | \operatorname{QFT}-\operatorname{AQFT} \\ | < \epsilon $ ile bağlanabilir.
 Burada $ \\ | \cdot \\ | $, bu örnekte $ (\Operatorname{QFT}-\operatorname{AQFT}) (\Operatorname{QFT}-\operatorname{AQFT}) ^ \hanger $ en büyük [eigenvalue değerinin](xref:microsoft.quantum.concepts.matrix-advanced) karekökünü içeren bir işleçtir.
 
-## <a name="arithmetic"></a>Tiğinin ##
+## <a name="arithmetic"></a>Aritmetik ##
 
 Aritmetik olarak klasik bilgi işlem 'da merkezi bir rol oynadığında, bu da hisse olmazdır.  Shor 'ın düzenleme algoritması, hisse simülasyonu yöntemleri ve birçok Oracular algoritması gibi algoritmalar, tutarlı aritmetik işlemlere dayanır.  En çok bir aritmetik derleme, hisse açık bir devreden sonra.  En basit ekleyici, klasik bir giriş $b $ alır ve değeri $ \ket{a} $ tamsayı tutan bir hisse ma durumuna ekler.  Matematiksel olarak, bir Ekleyici (klasik giriş $b $ için $ \operatorname{Add} (b) $) değerini belirten bir özelliği vardır
 

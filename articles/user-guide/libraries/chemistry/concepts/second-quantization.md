@@ -1,20 +1,20 @@
 ---
 title: İkinci Quantitleştirme
 description: Hisse programlama aşamasında elektronik yapıların modellenmesi için Ikinci bir Quantileştirme yaklaşımı hakkında bilgi edinin.
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.secondquantization
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ba77c499d6830b1f78bba39e20b15c4ebe9433fc
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6becd348f7b3957cb60b16bbd5a28228527e1d4c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869469"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835817"
 ---
 # <a name="second-quantization"></a>İkinci Quantitleştirme
 
@@ -77,7 +77,7 @@ Hisse dili Mistry kitaplığı bu kuralları kullanabilir ve bu tür bir kodlama
 ```
 
 Fermıonic sistemleri için Pauli dışlama ilkesi, aynı anda herhangi bir döndürme/zaman için birden fazla elektron 'in bulunmasını engeller.
-Yani, $ \ psi_1 $ as \begin{Equation} \ psi_1 \ettarrow \begin{Cases} \tus& _1 için iki yasal durumu yazabildiğimiz anlamına gelir. {0} $ \ psi_1 $ boş değilse,}\\\
+Yani, $ \ psi_1 $ as \begin{Equation} \ psi_1 \ettarrow \begin{Cases} \tus& _1 için iki yasal durumu yazabildiğimiz anlamına gelir. {0} $ \ psi_1 $ boş değilse,} \\\
 {1}\tus_1 & \Text{If $ \ psi_1 $ dolu.} \end{Cases} \end{Equation} bu kodlama, farklı bir ücret bit olarak elektronik meslek depolayabileceği anlamına gelir.
 
 $2N $ $ $ $ $ $ $ $ $ $ $ $ $ $ $/bit

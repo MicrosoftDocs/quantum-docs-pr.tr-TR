@@ -3,17 +3,17 @@ title: Q#Standart kitaplıklarda tanılama
 description: Q#Standart kitaplıklarda bulunan ve hisse ve hataların hatalarını yakalamak için kullanılan tanılama işlevleri ve işlemleri hakkında bilgi edinin.
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4a98795b2459adaa4e47c888751121fffdc70971
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 11ce1bc86db0c5aa0f81ba7d0f2d6ec3463b178c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868551"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835579"
 ---
 # <a name="diagnostics"></a>Tanılama #
 
@@ -33,7 +33,7 @@ Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> `Message`imza içerir `(String -> Unit)` ve bir hata ayıklama günlüğü iletisinin yayılamıyor olduğunu temsil eder Q# .
+> `Message` imza içerir `(String -> Unit)` ve bir hata ayıklama günlüğü iletisinin yayılamıyor olduğunu temsil eder Q# .
 
 <xref:microsoft.quantum.diagnostics.dumpmachine>Ve <xref:microsoft.quantum.diagnostics.dumpregister> callables, hedef makinelere, geçerli olarak ayrılmış olan tüm qubits ve sırasıyla belirli bir qubit kaydı hakkında tanılama bilgileri sağlar.
 Her bir hedef makine, bir döküm yönergesine yanıt olarak hangi tanılama bilgilerinin sağlandığını farklılık gösterir.
@@ -67,16 +67,16 @@ Bu nedenle, donanıma dağıtım yapmadan önce tek tek işlemleri klasik Benzet
 Onayların değerlendirmesine izin verilmeyen hedef makinelerde, çağrıları <xref:microsoft.quantum.diagnostics.assertmeasurement> güvenle yoksayılabilir.
 
 Daha genel olarak, <xref:microsoft.quantum.diagnostics.assertmeasurement> işlem, verilen pabdtabanında verilen qubits 'leri ölçmeye her zaman verilen sonuca sahip olacağını onaylar.
-Onaylama başarısız olursa, yürütme, verilen iletiyle çağırarak sona erer `fail` .
+Onaylama başarısız olursa, çalıştırma, belirtilen iletiyle çağırarak sona erer `fail` .
 Varsayılan olarak, bu işlem uygulanmaz; Bunu destekleyebilen simülatörleri, çalışma zamanı denetimini gerçekleştiren bir uygulama sağlamalıdır.
-`AssertMeasurement`imza içeriyor `((Pauli[], Qubit[], Result, String) -> ())` .
+`AssertMeasurement` imza içeriyor `((Pauli[], Qubit[], Result, String) -> ())` .
 `AssertMeasurement`, Çıkış türü olarak boş bir tanımlama grubu olan bir işlev olduğundan, çağrılmasından hiçbir efekt `AssertMeasurement` bir program içinde observable değildir Q# .
 
 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability>İşlem işlevi, verilen pabdtabanında verilen qubits 'in belirli bir tolerans dahilinde verilen olasılığa sahip olduğunu ölçmeye yönelik onaylar.
-Tolerans eklenebilir (ör. `abs(expected-actual) < tol` ).
-Onaylama başarısız olursa, yürütme, verilen iletiyle çağırarak sona erer `fail` .
+Tolerans eklenebilir (örneğin, `abs(expected-actual) < tol` ).
+Onaylama başarısız olursa, çalıştırma, belirtilen iletiyle çağırarak sona erer `fail` .
 Varsayılan olarak, bu işlem uygulanmaz; Bunu destekleyebilen simülatörleri, çalışma zamanı denetimini gerçekleştiren bir uygulama sağlamalıdır.
-`AssertMeasurementProbability`imza içeriyor `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . `Double`Parametrelerin ilki, sonucun istenen olasılığını ve ikinci bir toleransı sağlar.
+`AssertMeasurementProbability` imza içeriyor `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . `Double`Parametrelerin ilki, sonucun istenen olasılığını ve ikinci bir toleransı sağlar.
 
 Tek bir ölçüm için bir Benzetici tarafından kullanılan klasik bilgilerin, bir qubit 'in iç durumunu temsil etmesi için kullanılan klasik bilgilerin kopyalanmaya, bu şekilde, fiticimizi test etmek için bir ölçüm gerçekleştirmeleri gerekmez.
 Özellikle, bu, gerçek donanım üzerinde mümkün olmayan, *uyumsuz* ölçümler hakkında nedenimizi olanaklı kılmaktadır.

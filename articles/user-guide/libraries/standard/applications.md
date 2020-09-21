@@ -3,18 +3,18 @@ title: Q#Standart kitaplıklardaki uygulamalar
 description: Hisse bilgi işlem-Hamiltonian simülasyonu ve Shor 'ın arama algoritmasındaki iki temel uygulama hakkında bilgi edinin.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4caacaad127f8a4d3b6f77efe35ebe7d3b97cacf
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 115cd65621afd8272887b36163b066a4e6a554d7
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868772"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835664"
 ---
 # <a name="applications"></a>Uygulamalar #
 
@@ -52,9 +52,9 @@ Hamiltonian, hermitian parçalarının toplamına işaret eden özel bir durumda
 
 > [!TIP]
 > Trour-Suzuki simülasyon algoritmasının uygulamaları örneklerde ele alınmıştır.
-> Yalnızca her bir hedef makine tarafından sunulan iç işlemleri kullanan, şaşırtıcı model için lütfen [ **simplefon** örneğine](https://github.com/microsoft/Quantum/blob/master/samples/simulation/ising/simple)bakın.
-> Trour-Suzuki kitaplık denetim yapısını kullanan, şaşırtıcı model için lütfen [ **ısingtrour** örneğine](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/trotter-evolution)bakın.
-> Trour-Suzuki kitaplık denetim yapısını kullanarak molesel Hydrogen için lütfen [ **H2 simülasyon** örneğine](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line)bakın.
+> Yalnızca her bir hedef makine tarafından sunulan iç işlemleri kullanan, şaşırtıcı model için lütfen [ **simplefon** örneğine](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple)bakın.
+> Trour-Suzuki kitaplık denetim yapısını kullanan, şaşırtıcı model için lütfen [ **ısingtrour** örneğine](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution)bakın.
+> Trour-Suzuki kitaplık denetim yapısını kullanarak molesel Hydrogen için lütfen [ **H2 simülasyon** örneğine](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)bakın.
 
 Çoğu durumda benzetim algoritmasını uygulamak istiyoruz, ancak uygulamasının ayrıntıları ile ilgilenmez. Örneğin, ikinci sipariş tümleştiricisi $ $ \begin{hizalaması} U (t) & = \left (e ^ {-iH \_ 0 t/2R} e ^ {-ih \_ 1 t/2R} \cnoktalar e ^ {-ih \_ {d-1} t/2R} e ^ {-ih \_ {d-1} t/2R} \cnoktalar e ^ {-ih \_ 1 t/2R} e ^ {-ih \_ 0 t/2R} \right) ^ {r} + \mathcal{O} (d ^ 3 \ max_j \\ | H \_ j \\ | ^ 3 t ^ 3/r ^ 2), \end{hizalaması} $ $ $2rd $ terimlerinin bir ürününü kullanıyor. Daha büyük siparişler daha fazla hüküm ve en iyi duruma getirilmiş varyantlar, üs lerde yüksek düzeyde önemsiz olmayan sıralar gerektirebilir. Ayrıca, diğer gelişmiş algoritmalar ara adımlarda anyala qubits kullanımını da içerebilir. Bu nedenle, Kullanıcı tanımlı tür olarak Canon 'daki benzetim algoritmalarını paketliyoruz
 
@@ -87,8 +87,8 @@ function TimeDependentTrotterSimulationAlgorithm(
 ```
 
 > [!TIP]
-> Simülasyon kitaplığının uygulamaları örneklerde ele alınmıştır. Kullanarak, elde eden modeldeki aşama tahmini için `SimulationAlgorithm` lütfen [ **ıingphasetahmine** örnek örneğine](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)bakın.
-> Kullanarak, şaşırtıcı modeldeki Adiabatik durum hazırlığı için `TimeDependentSimulationAlgorithm` lütfen bkz. [ **Adiabaticfon** örneği](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic).
+> Simülasyon kitaplığının uygulamaları örneklerde ele alınmıştır. Kullanarak, elde eden modeldeki aşama tahmini için `SimulationAlgorithm` lütfen [ **ıingphasetahmine** örnek örneğine](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)bakın.
+> Kullanarak, şaşırtıcı modeldeki Adiabatik durum hazırlığı için `TimeDependentSimulationAlgorithm` lütfen bkz. [ **Adiabaticfon** örneği](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic).
 
 
 ### <a name="adiabatic-state-preparation--phase-estimation"></a>Adiabatik durum hazırlığı & aşama tahmini ###
@@ -129,14 +129,14 @@ operation EstimateAdiabaticStateEnergy(
 }
 ```
 
-`nQubits`, ilk hisse durumu kodlamak için kullanılan qubits sayısıdır. `statePrepUnitary`başlangıç durumunu hesaplama tabanlı $ \ket{0\cnoktalar 0} $ ' dan hazırlar. `adiabaticUnitary`, işlev tarafından üretilen Adiabatik durum hazırlanmasını uygulayan Unitary işlemidir `InterpolatedEvolution` . `qpeUnitary`, sonuçta elde edilen hisse için aşama tahmini gerçekleştirmek üzere kullanılan Unitary işlemidir. `phaseEstAlgorithm`, aşama tahmini algoritması seçimimize ait.
+`nQubits` , ilk hisse durumu kodlamak için kullanılan qubits sayısıdır. `statePrepUnitary` başlangıç durumunu hesaplama tabanlı $ \ket{0\cnoktalar 0} $ ' dan hazırlar. `adiabaticUnitary` , işlev tarafından üretilen Adiabatik durum hazırlanmasını uygulayan Unitary işlemidir  `InterpolatedEvolution` . `qpeUnitary` , sonuçta elde edilen hisse için aşama tahmini gerçekleştirmek üzere kullanılan Unitary işlemidir. `phaseEstAlgorithm` , aşama tahmini algoritması seçimimize ait.
 
 > [!TIP]
-> Adiabatik durum hazırlığının uygulamaları örneklerde ele alınmıştır. İşlevi kullanarak Adiabatik durum hazırlığının el ile uygulanmasını kullanan, şaşırtıcı model için `AdiabaticEvolution` lütfen bkz. [ **Adiabaticfon** örneği](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic).
-> Şaşırtıcı modelde aşama tahmini ve Adiabatik durum hazırlığı için lütfen [ **ıingphasetahmine** örnek](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)bölümüne bakın.
+> Adiabatik durum hazırlığının uygulamaları örneklerde ele alınmıştır. İşlevi kullanarak Adiabatik durum hazırlığının el ile uygulanmasını kullanan, şaşırtıcı model için `AdiabaticEvolution` lütfen bkz. [ **Adiabaticfon** örneği](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic).
+> Şaşırtıcı modelde aşama tahmini ve Adiabatik durum hazırlığı için lütfen [ **ıingphasetahmine** örnek](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)bölümüne bakın.
 
 > [!TIP]
-> [Molesel Hydrogen benzetimi](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) , ilginç bir ve kısa bir örnektir. $ [Malley et. Al](https://arxiv.org/abs/1512.06860) içinde bildirilen model ve deneysel sonuçlar. yalnızca Pauli matrislerini gerektirir ve $ \hat H = g \_ {0} i \_ 0i \_ 1 + g \_ 1 {Z \_ 0} + g \_ 2 {Z \_ 1} + g \_ 3 {z \_ 0} {z \_ 1} + g \_ 4 {y \_ 0} {y \_ 1} + g \_ 5 {x \_ 0} {x \_ 1} $ biçimini alır. Bu geçerli bir Hamiltonian yalnızca yalnızca 2 qubit gerektirir; burada $g $ sabitleri, iki Hydrogen alar arasında $R $ ile hesaplanır. Canon işlevleri kullanılarak Paulıs, unitcihazlarına dönüştürülür ve sonra da Trour-Suzuki ayrıştırma kullanılarak kısa süreler üzerinde bulunur. $H _2 $ zemin durumunun bir önemi, Adiabatik durum hazırlığı kullanılmadan oluşturulabilir ve bu nedenle, Canon 'nin aşama tahmininden yararlanarak doğrudan devlet enerjisi bulunabilir.
+> [Molesel Hydrogen benzetimi](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) , ilginç bir ve kısa bir örnektir. $ [Malley et. Al](https://arxiv.org/abs/1512.06860) içinde bildirilen model ve deneysel sonuçlar. yalnızca Pauli matrislerini gerektirir ve $ \hat H = g \_ {0} i \_ 0i \_ 1 + g \_ 1 {Z \_ 0} + g \_ 2 {Z \_ 1} + g \_ 3 {z \_ 0} {z \_ 1} + g \_ 4 {y \_ 0} {y \_ 1} + g \_ 5 {x \_ 0} {x \_ 1} $ biçimini alır. Bu geçerli bir Hamiltonian yalnızca yalnızca 2 qubit gerektirir; burada $g $ sabitleri, iki Hydrogen alar arasında $R $ ile hesaplanır. Canon işlevleri kullanılarak Paulıs, unitcihazlarına dönüştürülür ve sonra da Trour-Suzuki ayrıştırma kullanılarak kısa süreler üzerinde bulunur. $H _2 $ zemin durumunun bir önemi, Adiabatik durum hazırlığı kullanılmadan oluşturulabilir ve bu nedenle, Canon 'nin aşama tahmininden yararlanarak doğrudan devlet enerjisi bulunabilir.
 
 ## <a name="shors-algorithm"></a>Shor Algoritması ##
 Shor 'nin algoritması, hisse ve şu anda sınıflardaki sorunları gidermek için hisse bilgisayarlarının kullanılabileceğini gösterdi, bu, hisse alım açısından en önemli geliştirmelerin birine sahiptir.

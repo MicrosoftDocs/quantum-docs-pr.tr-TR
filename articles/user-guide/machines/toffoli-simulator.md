@@ -2,19 +2,19 @@
 title: Hisse Toffoli simülatör-hisse geliştirme seti
 description: Milyonlarca qubitle kullanılabilecek özel bir amaç simülatörü olan Microsoft QDK Toffoli benzeticileri hakkında bilgi edinin.
 author: alan-geller
-ms.author: ageller@microsoft.com
+ms.author: ageller
 ms.date: 6/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6a0885035c12a99ae43533f04cdc95c5c529380a
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: 82882f01d1b5c036faee71f18a18b2595107ddb7
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992232"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835919"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Hisse geliştirme seti (QDK) Toffoli simülatör
 
@@ -77,7 +77,7 @@ Varsayılan olarak, bir `ToffoliSimulator` örnek 65.536 qubit için alan ayır�
 Algoritmanız bundan daha fazla qubit gerektiriyorsa, oluşturucuya parametresi için bir değer sağlayarak qubit sayısını belirtebilirsiniz `qubitCount` .
 Her ek qubit yalnızca bir baytlık bellek gerektirir, bu nedenle ihtiyaç duyacağınız qubit sayısını fazla tahmin etmek için önemli bir maliyet yoktur.
 
-Örneğin:
+Örnek:
 
 ```csharp
     var sim = new ToffoliSimulator(qubitCount: 1000000);

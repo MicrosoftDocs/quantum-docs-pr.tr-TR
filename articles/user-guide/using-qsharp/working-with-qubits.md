@@ -1,20 +1,20 @@
 ---
 title: Kubitlerle çalışma
-description: Fill açıklaması
+description: İle qubits ile çalışma hakkında bilgi edinin Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6808a852ee0de7d3a38ea44e9637eeaa6bea382a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: aa942a61280553ae4e51cd5ddcc85c0df935dab1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867871"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835868"
 ---
 # <a name="working-with-qubits"></a>Kubitlerle çalışma
 
@@ -150,7 +150,7 @@ Tek tek qubit ölçümleri, her biri [Bloch Sphere](xref:microsoft.quantum.gloss
 ### <a name="measure-a-single-qubit-in-the-pauliz-basis"></a>Temelde tek bir qubit ölçme `PauliZ`
 
 [`M`](xref:microsoft.quantum.intrinsic.m)Temelinde tek bir qubit ölçmek `PauliZ` ve sonuca bir klasik değer atamak için yerleşik bir içsel Unitary işlemi olan işlemi kullanın.
-`M`, `Result` yalnızca değer `Zero` `One` elde eden veya ölçülen durum $ \ket {0} $ veya $ \ket {1} $-sonucu yalnızca bir hisse
+`M` , `Result` yalnızca değer `Zero` `One` elde eden veya ölçülen durum $ \ket {0} $ veya $ \ket {1} $-sonucu yalnızca bir hisse
 
 Basit bir örnek, $ \ket $ durumunda bir qubit ayıran aşağıdaki işlemdir {0} , ardından buna bir Hadamard işlemi uygular `H` ve sonucu `PauliZ` temelde ölçer.
 

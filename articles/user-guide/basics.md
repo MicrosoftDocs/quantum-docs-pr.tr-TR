@@ -1,22 +1,22 @@
 ---
-title: Q#Temel bilgileri
-description: Temel kavramlarıQ#
+title: Q# Temel bilgileri
+description: Temel kavramları Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4f4a75cdaaa070fd763d7f75429b7c39357d25a5
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 86f6538cf383f4e7c14255b38cfb1c141c8f991b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869656"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835528"
 ---
-# <a name="no-locq-basics"></a>Q#Temel bilgileri
+# <a name="no-locq-basics"></a>Q# Temel bilgileri
 
 Bu makalede, uygulamasının temel yapı taşları hakkında kısa bir giriş sunulmaktadır Q# .
 
@@ -39,7 +39,7 @@ using (qubit = Qubit()) {
 ```
 Başlatma veya *ayırma*hakkında daha fazla bilgi için bkz. [qubits ile çalışma](xref:microsoft.quantum.guide.qubits).
 
-## <a name="quantum-states-in-no-locq"></a>Hisse ve ABDQ#
+## <a name="quantum-states-in-no-locq"></a>Hisse ve ABD Q#
 
 Daha önemlisi, önceki program içindeki duruma açıkça başvurmaz Q# ancak programımızın durumu nasıl *dönüştürdüğünü* açıklamaz.
 Bu yaklaşımda, her bir hedef makinede bile, makineye bağlı farklı yorumlamalar olabilecek, her bir bir hisse amadığına ilişkin olarak ne *kadar büyük bir işlem olduğu* hakkında tamamen belirsiz bir durum söz konusu olabilir. 
@@ -53,7 +53,7 @@ Ancak geleceğe bağlı olarak, hedef makine gerçek bir hisse bilgisayar olduğ
 Q#Program, bu işlemleri bir hedef makine tarafından tanımlandığı şekilde yeniden birleştirir. Express, hızlı bir şekilde yeni ve yüksek düzey işlemler oluşturur.
 Bu şekilde, Q# temel alınan hisse ve hibrit-klasik algoritmaların yanı sıra bir hedef makine ya da simülatör yapısına göre genel de olan mantıksal ve karma hisse
 
-## <a name="no-locq-operations-and-functions"></a>Q#işlemler ve işlevler
+## <a name="no-locq-operations-and-functions"></a>Q# işlemler ve işlevler
 
 Bir Q# Program, *işlemler*, *işlevler*ve Kullanıcı tanımlı türler içerir. 
 
@@ -65,13 +65,13 @@ Bu durumda, `Measure` hedef makinenin (gerçek veya sanal) qubit üzerinde bir �
 Birlikte, işlemler ve işlevler *callables*olarak bilinir. Temel yapısı ve davranışları, [Içindeki Q# Işlemler ve işlevlerde ](xref:microsoft.quantum.guide.operationsfunctions)tanıtılmıştır ve ayrıntılıdır.
 
 
-## <a name="no-locq-syntax-overview"></a>Q#sözdizimine genel bakış
+## <a name="no-locq-syntax-overview"></a>Q# sözdizimine genel bakış
 
 Bir dilin sözdizimi, sözdizimi doğru bir program oluşturan farklı sembol birleşimlerini tanımlar.
 ' De Q# , sözdizimi öğeleri üç farklı gruba sınıflandırılır: türler, ifadeler ve deyimler.
 
 ### <a name="types"></a>Türler
-Q#, türlerin iyi şekilde kullanılması derleyicinin derleme zamanında programlar hakkında güçlü garantiler sağlamasına yardımcı olabilir Q# .
+Q# , türlerin iyi şekilde kullanılması derleyicinin derleme zamanında programlar hakkında güçlü garantiler sağlamasına yardımcı olabilir Q# .
 Standart ve hisse özel yerleşik temel türlerin yanı sıra,,,, ve,,, `Int` , `Bool` `Qubit` ve, `Result` Q# Kullanıcı tanımlı türler için destek sağlar.
 
 Tüm ilkel türlerin açıklamaları, dizi ve demet türlerine ilişkin ayrıntılar ve bir dosya içinde yeni türler tanımlama adımları için Q# , bkz. [türleri Q# ](xref:microsoft.quantum.guide.types).
@@ -87,7 +87,7 @@ Ayrıca, bir ifade belirli işleçlerle birleştirilmiş diğer ifadelerden olu�
 İçindeki ifadeler ve uyumlu işleçler hakkında daha fazla bilgi için Q# bkz. [ Q# içinde tür ifadeleri ](xref:microsoft.quantum.guide.expressions). 
 
 ### <a name="statements"></a>Deyimler 
-Bir ifade, gerçekleştirilecek bir eylemi ifade eden bir zorunlu programlama dilinin sözdizimsel birimidir. Bu deyimlerdeki ifadelerle karşıtlık ifadesi sonuçları döndürmez ve yalnızca yan etkileri için yürütülür. Ancak, ifadesi her zaman bir sonuç döndürür ve genellikle yan etkileri yoktur. Kısaca, Q# ifadeler değerlendirildiğinde deyimler yürütülür.
+Bir ifade, gerçekleştirilecek bir eylemi ifade eden bir zorunlu programlama dilinin sözdizimsel birimidir. Bu deyimlerdeki ifadelerle karşıtlık ifadesi sonuçları döndürmez ve yalnızca yan etkileri için çalıştırılır. Ancak, ifadesi her zaman bir sonuç döndürür ve genellikle yan etkileri yoktur. Kısaca, Q# ifadeler değerlendirildiğinde deyimler çalıştırılır.
 
 İçindeki bir ifadeye basit bir örnek Q# , bir ifadeye sembol atanıyor:
 ```qsharp

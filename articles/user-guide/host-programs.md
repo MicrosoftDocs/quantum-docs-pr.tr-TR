@@ -2,19 +2,19 @@
 title: Program çalıştırma yolları Q#
 description: Programları çalıştırmanın farklı yollarına genel bakış Q# . Komut isteminden, Q# jupi Not defterleri ve Python veya bir .net dilinde klasik ana bilgisayar programları.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 05/15/2020
 ms.topic: article
 uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f24c608ffc6522cb50f512de1a02b3db4b290e83
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 2cb02617c81ee8b144ffe933f11b476ba6f4a23e
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759825"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835970"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Program çalıştırma yolları Q#
 
@@ -26,9 +26,9 @@ Birincil ayrım, çalıştırılabilir bir değer olabilir Q# :
 - tek başına bir uygulama olarak, Q# söz konusu tek dildir ve program doğrudan çağırılır. Bu kategoriye aslında iki yöntem yer almalıdır:
   - komut satırı arabirimi
   - Q# Jupyıter Not defterleri
-- daha sonra programı çağıran ve döndürülen sonuçları daha sonra işlemek için Python veya .NET dilinde (ör. C# veya F #) yazılmış ek bir *ana bilgisayar programı*ile.
+- ek bir *ana bilgisayar programıyla*, Python veya bir .net dilinde (örneğin, C# veya F #) yazılmış, daha sonra programı çağıran ve döndürülen sonuçları daha fazla işleyebilir.
 
-Bu işlemlerin ve bunların farklarının en iyi şekilde anlaşılması için, basit bir Q# programı ele alalım ve bunların yürütülme yollarını karşılaştırıyoruz.
+Bu işlemlerin ve bunların farklarının en iyi şekilde anlaşılması için, basit bir programı göz önünde bulunduruyoruz Q# ve çalıştırılabildikleri yolları karşılaştırıyoruz.
 
 ## <a name="basic-no-locq-program"></a>Temel Q# Program
 
@@ -44,8 +44,8 @@ Q#' De, bu, aşağıdaki kod tarafından gerçekleştirilir:
         }
 ```
 
-Ancak, bu kod yalnızca tarafından yürütülemez Q# .
-Bunun için, doğrudan ya da başka bir işlem tarafından---çağrıldığında yürütülen bir [işlemin](xref:microsoft.quantum.guide.basics#q-operations-and-functions)gövdesini yapması gerekir. Bu nedenle, aşağıdaki biçimde bir işlem yazabilirsiniz:
+Ancak, bu kod yalnızca tarafından çalıştırılamaz Q# .
+Bunun için, doğrudan veya başka bir işlem tarafından---çağrıldığında çalıştırılan bir [işlemin](xref:microsoft.quantum.guide.basics#q-operations-and-functions)gövdesini yapması gerekir. Bu nedenle, aşağıdaki biçimde bir işlem yazabilirsiniz:
 ```qsharp
     operation MeasureSuperposition() : Result {
         using (q = Qubit()) {
@@ -93,43 +93,46 @@ namespace NamespaceName {
 > Tüm bu tek istisna, [`Microsoft.Quantum.Core`](xref:microsoft.quantum.core) her zaman otomatik olarak açılan bir ad alanıdır.
 > Bu nedenle, callables, [`Length`](xref:microsoft.quantum.core.length) her zaman doğrudan kullanılabilir.
 
-### <a name="execution-on-target-machines"></a>Hedef makinelerde yürütme
+### <a name="running-on-target-machines"></a>Hedef makinelerde çalıştırma
 
-Artık bir programın genel yürütme modeli Q# açık hale gelir.
+Artık bir programın genel çalıştırma modeli Q# açık hale gelir.
 
 <br/>
 <img src="../media/hostprograms_general_execution_model.png" alt="Q# program execution diagram" width="400">
 
-İlk olarak, yürütülecek özel çağrılabilir, aynı ad alanında tanımlanan diğer tüm callables ve türlerine erişebilir.
+İlk olarak, çalıştırılacak olan özel çağrılabilir, aynı ad alanında tanımlanan diğer tüm callables ve türlerine erişim sağlar.
 Ayrıca, [ Q# kütüphanelerin](xref:microsoft.quantum.libraries)herhangi birinden bunlara erişir, ancak bunların tam adlarıyla veya yukarıda açıklanan deyimlerin kullanımı aracılığıyla başvurulmalıdır `open` .
 
-Çağrılabilir kendisi bir *[hedef makinede](xref:microsoft.quantum.machines)* yürütülür.
+Çağrılabilir bir *[hedef makine](xref:microsoft.quantum.machines)* üzerinde çalıştırılır.
 Bu tür hedef makineler gerçek hisse donanımı veya QDK 'nin bir parçası olarak kullanılabilir birden çok simülatörleri olabilir.
-Burada, bizim için en faydalı hedef makine, [full-state simulator](xref:microsoft.quantum.machines.full-state-simulator) `QuantumSimulator` bir gürültü ücretsiz hisse bilgisayarında yürütülene gibi programın davranışını hesaplayan tam durum simülatörü örneğidir.
+Burada, bizim için en faydalı hedef makine, [full-state simulator](xref:microsoft.quantum.machines.full-state-simulator) `QuantumSimulator` bir gürültü ücretsiz hisse bilgisayarında çalıştırılmakta gibi programın davranışını hesaplayan tam durum benzeticisinin bir örneğidir.
 
-Şimdiye kadar, belirli bir çağrılabilir yürütüldüğünde ne olduğunu açıklıyoruz Q# .
+Şimdiye kadar, belirli bir çağrılabilir çalıştırıldığında ne olduğunu açıklıyoruz Q# .
 Q#Tek başına bir uygulamada veya bir konak programıyla kullanılıp kullanılmadığına bakılmaksızın, bu genel işlem daha fazla veya daha az---, bu nedenle QDK 'nin esnekliği de aynıdır.
-Bu nedenle, hisse alma geliştirme paketine çağırmanın farklı yolları arasındaki farklılıklar, kendilerini çağrılabilir şekilde *nasıl* Q# çağrıldığına ve sonuçların ne şekilde döndürüldüğünden ortaya çıkar.
-Daha belirgin olarak, farklar ve etrafında 
-1. Hangi Q# çağrılabilir yürütülür olduğunu belirtir,
-2. çağrılabilir olabilecek bağımsız değişkenlerin nasıl sağlandığı
-3. üzerinde yürütüleceği hedef makineyi belirtme ve
-4. sonuçların nasıl döndürüldüğü.
+*Bu nedenle* , hisse alma geliştirme paketine çağırma yolları arasındaki farklılıklar Q# , bunların çağrılabilir şekilde çağrılması ve sonuçların ne şekilde döndürüldüğünden ortaya çıkar.
+Daha belirgin olarak, farklar şu şekilde döner:
+
+- Hangi Q# çağrılabilir çalıştırılacak olduğunu belirtir
+- Çağrılabilir olabilecek bağımsız değişkenlerin nasıl sağlandığı
+- Üzerinde çalıştırılacağı hedef makineyi belirtme
+- Sonuçların nasıl döndürüldüğü
 
 İlk olarak, komut isteminden tek başına uygulama ile bunun nasıl yapıldığını anladık Q# ve Python ve C# ana bilgisayar programlarını kullanmaya devam ediyoruz.
 Q#İlk üçünün aksine, birincil işlevselliği yerel bir dosya etrafında ortalamadığından, en son jupi Not defterlerinin tek başına uygulamasını ayırdık Q# .
 
 > [!NOTE]
-> Bu örneklerde anlamadığımızda, yürütme yöntemleriyle ilgili bir genel durumda, program içinden yazdırılan tüm iletiler Q# ( [`Message`](xref:microsoft.quantum.intrinsic.message) [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) Örneğin, veya) her zaman ilgili konsola yazdırılır.
+> Bu örneklerde anlamadığımızda, çalıştırma yöntemleri arasındaki bir genel durumda, programın içinden yazdırılan tüm iletiler Q# ( [`Message`](xref:microsoft.quantum.intrinsic.message) [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) Örneğin, veya) her zaman ilgili konsola yazdırılır.
 
 ## <a name="no-locq-from-the-command-prompt"></a>Q# komut isteminden
 Programları yazmaya başlamanın en kolay yollarından biri Q# , ayrı dosyalar ve ikinci bir dilin tamamen kaygılanmasından kaçınmaktır.
 Visual Studio Code veya Visual Studio 'Yu QDK uzantısıyla kullanmak, Q# tek bir dosyadan callables çalıştırdığımız sorunsuz bir iş akışına olanak sağlar Q# .
 
-Bunun için, son olarak programın yürütmesini şunu girerek çağıracağız
+Bunun için, bu programı sonunda şunu girerek çalıştırın
+
 ```dotnetcli
 dotnet run
 ```
+
 komut isteminde.
 En basit iş akışı, terminalin Dizin konumunun dosyayla aynı olduğu Q# , Q# Örneğin vs Code ' deki tümleşik Terminal kullanılarak dosya düzenlemeyle birlikte kolayca işlenebilen bir dosyadır.
 Ancak, [ `dotnet run` komut](https://docs.microsoft.com/dotnet/core/tools/dotnet-run) çok sayıda seçenek kabul eder ve yalnızca `--project <PATH>` dosyanın konumuyla birlikte sağlanarak program farklı bir konumdan da çalıştırılabilir Q# .
@@ -137,7 +140,7 @@ Ancak, [ `dotnet run` komut](https://docs.microsoft.com/dotnet/core/tools/dotnet
 
 ### <a name="add-entry-point-to-no-locq-file"></a>Dosyaya giriş noktası Ekle Q#
 
-Çoğu Q# dosya birden fazla çağrılabilir, *Bu* yüzden doğal olarak, komut sağlamamız durumunda derleyicinin hangi çağrılabilir yürütme yapacağını bilmesini sağlamamız gerekir `dotnet run` .
+Çoğu Q# dosya birden fazla çağrılabilir, *Bu* yüzden doğal olarak, komut sağlamamız durumunda derleyicinin hangi çağrılabilir çalıştırılacağını bilmesini sağlamamız gerekir `dotnet run` .
 Bu, dosyanın kendisinde basit bir değişiklik ile yapılır Q# : 
     - `@EntryPoint()`çağrılabilir öğesinden hemen önce gelen bir satır ekleyin.
 
@@ -228,7 +231,7 @@ BorrowedWidth   0
 
 Bu ölçümlerin neleri belirtebileceği hakkında ayrıntılı bilgi için bkz. [kaynak tahmini: raporlanan ölçümler](xref:microsoft.quantum.machines.resources-estimator#metrics-reported).
 
-### <a name="command-line-execution-summary"></a>Komut satırı yürütme Özeti
+### <a name="command-line-run-summary"></a>Komut satırı çalıştırma Özeti
 <br/>
 <img src="../media/hostprograms_command_line_diagram.png" alt="Q# program from command line" width="700">
 
@@ -236,19 +239,19 @@ Bu ölçümlerin neleri belirtebileceği hakkında ayrıntılı bilgi için bkz.
 
 Bu seçenekte kısaca bahsedilen gibi `--project` , [ `dotnet run` komut](https://docs.microsoft.com/dotnet/core/tools/dotnet-run) çağrılabilir bağımsız değişkenlerle ilgisi olmayan seçenekleri de kabul eder Q# .
 Her iki tür seçeneği de sağladıysanız, `dotnet` önce özel seçenekler önce, sonra da bir `--` Q# delil ve ardından özel seçenekler sağlanmalıdır.
-Örneğin, yukarıdaki işlem için bir sayı ile birlikte bir yolu belirtir, aracılığıyla yürütülür `dotnet run --project <PATH> -- -n <n>` .
+Örneğin, yukarıdaki işlem için bir sayı ile birlikte bir yol belirtmek aracılığıyla çalıştırılabilir `dotnet run --project <PATH> -- -n <n>` .
 
 ## <a name="no-locq-with-host-programs"></a>Q# Konak programları ile
 
 Dosya ile birlikte Q# , doğrudan komut isteminden bir işlem veya işlev çağırma alternatifi, bir *konak programını* başka bir klasik dilde kullanmaktır. Özellikle, bu, Python veya C# ya da F # gibi bir .NET diliyle yapılabilir (breçların sake 'ı için burada yalnızca c# ayrıntı alınacaktır).
 Birlikte çalışabilirliği etkinleştirmek için biraz daha fazla kurulum gerekir, ancak bu Ayrıntılar [yükleme kılavuzlarında](xref:microsoft.quantum.install)bulunabilir.
 
-Bir Nutshell 'de, durum artık, `*.py` `*.cs` dosya ile aynı konumda bir ana bilgisayar program dosyası (ör. veya) içeriyor Q# .
-Şimdi çalıştırılan *ana bilgisayar* programıdır ve yürütme sırasında, Q# dosyadaki belirli işlemleri ve işlevleri çağırabilir Q# .
+Bir Nutshell 'de, durum artık, `*.py` `*.cs` dosya ile aynı konumdaki bir ana bilgisayar program dosyası (örneğin, veya) içeriyor Q# .
+Şimdi çalıştırılan ve çalıştırılan bir *ana bilgisayar* programı olduğundan, Q# dosyadaki belirli işlemleri ve işlevleri çağırabilir Q# .
 Birlikte çalışabilirlik çekirdeği, Q# Q# bir dosyanın içeriğini ana bilgisayar programına erişilebilir hale getiren derleyiciye dayanır, böylece çağrılabilir.
 
 Ana bilgisayar programı kullanmanın başlıca avantajlarından biri, program tarafından döndürülen klasik verilerin Q# daha sonra konak dilinde daha fazla işlenebilir olması olabilir.
-Bu, bazı gelişmiş veri işlemeden (örneğin, içinde yerleşik olarak gerçekleştirilemediği bir şey Q# ) ve ardından Q# Bu sonuçlara göre daha fazla eylem veya sonuçları çizdirme kadar basit bir şey olabilir Q# .
+Bu, bazı gelişmiş veri işlemeden (örneğin, içinde yerleşik olarak gerçekleştirilemediği bir şey Q# ) ve ardından Q# Bu sonuçlara göre daha fazla eylem veya sonuçları çizmek kadar basit bir şey olabilir Q# .
 
 Genel düzen burada gösterilmektedir ve aşağıda Python ve C# için özel uygulamalar tartışıyoruz. F # ana bilgisayar programını kullanan bir örnek, [.net birlikte çalışabilirlik örneklerinde](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet)bulunabilir.
 
@@ -292,7 +295,7 @@ Bir Python ana bilgisayar programı şu şekilde oluşturulur:
 1. Modül `qsharp` yükleyicisini birlikte çalışabilirlik için kaydeden modülünü içeri aktarın Q# . 
     Bu Q# , ad alanlarının Python modülleri olarak görünmesine izin verir ve bu da "içeri aktarabilir" Q# .
     Teknik olarak Q# , içeri aktarılan ve bunlara çağrı sağlayan Python saplamalarının kendilerine ait olduğunu unutmayın.
-    Bunlar daha sonra Python sınıflarının nesneleri olarak davranır, bu durumda, yürütme için işlemi gönderecek hedef makineleri belirtmek için yöntemler kullanıyoruz.
+    Bunlar, Python sınıflarının nesneleri gibi davranır. Programı çalıştırırken işlemi gönderdiğimiz hedef makineleri belirtmek için bu nesneler üzerinde yöntemler kullanıyoruz.
 
 2. Q#Bu durumda---doğrudan çağıracağız bu callables 'yi içeri aktarın `MeasureSuperposition` ve `MeasureSuperpositionArray` .
     ```python
@@ -404,16 +407,16 @@ Daha sonra, her bir Q# callables veya içinde tanımlanan türler için bir equi
 ```csharp
 using System;
 using System.Threading.Tasks;
-using Microsoft.Quantum.Simulation.Simulators;    // contains the target machines (e.g. QuantumSimulator, ResourcesEstimator)
+using Microsoft.Quantum.Simulation.Simulators;    // contains the target machines (for example, QuantumSimulator, ResourcesEstimator)
 using NamespaceName;                              // make the Q# namespace available
 ```
 
-Daha sonra C# ad boşluğumuzu, diğer birkaç bit ve parçadan (örneğin, callables için bilgi işlem bağımsız değişkenleri) bildiririz Q# .
+Daha sonra C# ad boşluğumuzu, diğer birkaç bit ve parçadan (aşağıdaki tam kod bloğuna bakın) ve ardından beğendiğimiz tüm klasik programlama (örneğin, callables için işlem değişkenleri) bildiririz Q# .
 İkinci durumda gerekli değildir, ancak bu tür bir örnek  [.net birlikte çalışabilirlik örneğinde](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet)bulunabilir.
 
 #### <a name="target-machines"></a>Hedef makineler
 
-Uygulamasına geri döndüğünüzde Q# , üzerinde operasyonlarımızı yürütediğimiz her türlü hedef makinenin bir örneğini oluşturmamız gerekir.
+Uygulamasına geri döndüğünüzde Q# , üzerinde operasyonlarımızı çalıştıracağız her türlü hedef makinenin bir örneğini oluşturmamız gerekir.
 
 ```csharp
             using var sim = new QuantumSimulator();
@@ -431,9 +434,9 @@ Döndürülen sonuçlar daha sonra C# dilinde değişkenlere atanabilir:
 ```
 
 > [!NOTE]
-> `Run`Bu, gerçek hisse donanımı için durum olacağı için zaman uyumsuz olarak yürütülür ve bu nedenle `await` anahtar sözcüğü, görev tamamlanana kadar daha fazla yürütmeyi engeller.
+> `Run`Bu, gerçek hisse donanımı için durum olacağı ve bu nedenle `await` anahtar sözcüğünün, görev tamamlanana kadar daha fazla işlemeyi engellediği için zaman uyumsuz olarak çalıştırılır.
 
-Q#Çağrılabilir bir dönüşe sahip değilse (örneğin, dönüş türüne sahipse `Unit` ), yürütme yine de bir değişkene atamadan aynı şekilde yapılabilir.
+Q#Çağrılabilir bir dönüşe sahip değilse (örneğin, dönüş türüne sahipse `Unit` ), çalıştırma yine de bir değişkene atamadan aynı şekilde yapılabilir.
 Bu durumda, tüm satır yalnızca 
 ```csharp
 await <callable>.Run(<simulator>);
@@ -441,7 +444,7 @@ await <callable>.Run(<simulator>);
 
 #### <a name="arguments"></a>Arguments
 
-Çağrılabilir olan bağımsız değişkenler, Q# hedef makineyi Afren ek bağımsız değişkenler olarak geçirilir.
+Çağrılabilir bir bütün bağımsız değişkenler Q# , hedef makineden sonra ek bağımsız değişkenler olarak geçirilir.
 Bu nedenle, `MeasureSuperpositionArray` `n=4` qubits 'in sonuçları aracılığıyla getirilir 
 
 ```csharp
@@ -578,7 +581,7 @@ BorrowedWidth   0
 
 ## <a name="no-locq-jupyter-notebooks"></a>Q# Jupyıter Not defterleri
 Q# Jupyter Not defterleri, Q# Q# tüm yönergeler, notlar ve diğer içeriklerden---tek bir not defterinde callables tanımlamanızı, derlemenize ve çalıştırmanıza olanak tanıyan ı çekirdeğini kullanır.
-Bu, dosyaların içeriğini içeri ve dışarı aktarmak mümkün olsa `*.qs` Q# da, yürütme modelinde gerekli değildir anlamına gelir.
+Bu, dosyaların içeriğini içeri ve dışarı aktarmak mümkün olsa `*.qs` Q# da, çalıştırma modelinde gerekli değildir anlamına gelir.
 
 Burada, yukarıda tanımlanan işlemleri nasıl çalıştıracağınızı ayrıntılarız Q# , ancak Q# [giriş Q# ve jupi](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)Not defterleri Ile jupi not defterlerini kullanma hakkında daha geniş bir giriş sunulmaktadır.
 
@@ -590,7 +593,7 @@ Bu nedenle, ilgili ad alanları için deyimlerle [ Q# Standart kitaplıklardan](
 Bu tür bir deyime sahip bir hücreyi çalıştırırken, bu ad alanlarından alınan tanımlar çalışma alanı boyunca kullanılabilir.
 
 > [!NOTE]
-> [Microsoft. hisse. iç](xref:microsoft.quantum.intrinsic) ve [Microsoft. hisse. Canon](xref:microsoft.quantum.canon) (örn.) ile callables [`H`](xref:microsoft.quantum.intrinsic.h) [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) , Q# jupi Not defterlerindeki hücrelerde tanımlanan işlemler için otomatik olarak kullanılabilir.
+> [Microsoft. hisse. iç](xref:microsoft.quantum.intrinsic) ve [Microsoft. hisse. Canon](xref:microsoft.quantum.canon) 'nin (örneğin, ve) callables, [`H`](xref:microsoft.quantum.intrinsic.h) [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) Q# jupi Not defterlerindeki hücrelerde tanımlanan işlemler için otomatik olarak kullanılabilir.
 > Ancak, bu, dış Q# kaynak dosyalarından ( [giriş Q# ve jupi not defterlerine](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)göre gösterilen bir işlem) getirilen kod için doğru değildir. 
 > 
 
@@ -609,12 +612,12 @@ Belirli hedef makinelerde işlem çalıştırma işlevselliği [I Q# Magic komut
 
 ### <a name="passing-inputs-to-functions-and-operations"></a>İşlevlere ve işlemlere giriş geçirme
 
-Q#İşlemleri işlemlere geçirmek için bağımsız değişkenler `key=value` yürütme Magic komutuna çiftler olarak geçirilebilir.
+Q#İşlemleri işlemlere geçirmek için bağımsız değişkenler bir `key=value` Magic komutunu Çalıştır komutuna çiftler olarak geçirilebilir.
 Bu nedenle, `MeasureSuperpositionArray` dört qubit ile çalıştırmak için şunları çalıştırabiliriz `%simulate MeasureSuperpositionArray n=4` :
 
 <img src="../media/hostprograms_jupyter_args_sim_crop.png" alt="Jupyter cell simulating a Q# operation with arguments" width="773">
 
-Bu model, `%estimate` ve diğer yürütme komutlarıyla benzer şekilde kullanılabilir.
+Bu model, `%estimate` ve diğer çalıştırma komutlarıyla benzer şekilde kullanılabilir.
 
 ### <a name="using-no-locq-code-from-other-projects-or-packages"></a>Q#Diğer projelerden veya paketlerdeki kodu kullanma
 

@@ -1,31 +1,31 @@
 ---
-title: İçindeki türlerQ#
+title: İçindeki türler Q#
 description: Programlama dilinde kullanılan farklı türler hakkında bilgi edinin Q# .
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b034af0b1d3b967b5680403341813407e4412f93
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c4a3e6563b8cabee87d1db6b9cb1c1f1c1a7131b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869605"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835834"
 ---
-# <a name="types-in-no-locq"></a>İçindeki türlerQ#
+# <a name="types-in-no-locq"></a>İçindeki türler Q#
 
 Bu makalede Q# tür modeli ve türleri belirtmek ve bunlarla çalışmak için sözdizimi açıklanır. Bu türlerin ifadelerinde oluşturma ve üzerinde işlem yapma hakkında ayrıntılı bilgi için bkz. [tür ifadeleri](xref:microsoft.quantum.guide.expressions).
 
 Q#Bu tür dikkatle kullanılması derleyicinin derleme zamanında programlar hakkında güçlü garantiler sağlamasına yardımcı olabileceğini belirten, *kesin olarak belirlenmiş* bir dil olduğunu unutmayın Q# .
 Mümkün olan en güçlü garantiyi sağlamak için, içindeki türler arasındaki dönüştürmeler, Q# bu dönüştürmeyi ifade eden işlevlere yapılan çağrılar kullanılarak açık olmalıdır. 
-Q#ad alanının bir parçası olarak çeşitli işlevler sağlar <xref:microsoft.quantum.convert> .
+Q# ad alanının bir parçası olarak çeşitli işlevler sağlar <xref:microsoft.quantum.convert> .
 Diğer yandan, uyumlu türlere yönelik olarak yapılan yayınlar örtülü olarak gerçekleşir. 
 
-Q#, doğrudan kullanılan ilkel türler ve diğer türlerden yeni türler oluşturmak için çeşitli yollar sağlar.
+Q# , doğrudan kullanılan ilkel türler ve diğer türlerden yeni türler oluşturmak için çeşitli yollar sağlar.
 Bu makalenin geri kalanında anlatılmaktadır.
 
 ## <a name="primitive-types"></a>İlkel Türler
@@ -34,7 +34,7 @@ Q#Dil, hepsi doğrudan programlarda kullanabileceğiniz aşağıdaki *temel tür
 
 - `Int`Tür, 64 bitlik işaretli bir tamsayıyı temsil eder, örneğin,, `2` , `107` `-5` .
 - `BigInt`Türü, rastgele boyutun işaretli bir tamsayı temsil eder, örneğin,, `2L` , `107L` `-5L` .
-   Bu tür .NET tabanlıdır<xref:System.Numerics.BigInteger>
+   Bu tür .NET tabanlıdır <xref:System.Numerics.BigInteger>
    türüyle.
 
 - `Double`Tür, bir çift duyarlıklı kayan noktalı sayıyı temsil eder, örneğin,,, `0.0` `-1.3` `4e-7` .
@@ -53,7 +53,7 @@ Q#Dil, hepsi doğrudan programlarda kullanabileceğiniz aşağıdaki *temel tür
    Dört olası değeri olan numaralandırılmış bir türdür: `PauliI` ,, `PauliX` `PauliY` , ve `PauliZ` , türünde sabitler `Pauli` .
 - `Result`Tür, ölçümün sonucunu temsil eder.
    Bu, iki olası değeri olan `One` ve türünde sabitler olan numaralandırılmış bir türdür `Zero` `Result` .
-   `Zero`+ 1 eigenvalue değerinin ölçüldüğünü belirtir; `One`-1 eigenvalue değerinin ölçüldüğünü gösterir.
+   `Zero` + 1 eigenvalue değerinin ölçüldüğünü belirtir; `One` -1 eigenvalue değerinin ölçüldüğünü gösterir.
 
 ,,,,,, `true` `false` Ve sabitleri `PauliI` `PauliX` `PauliY` `PauliZ` `One` `Zero` içindeki tüm ayrılmış semboller Q# .
 
@@ -65,7 +65,7 @@ Q#Dil, hepsi doğrudan programlarda kullanabileceğiniz aşağıdaki *temel tür
 * Dizi dizisi de geçerlidir. Önceki örnekte genişletilen dizi dizisi `(Bool, Pauli)` gösterilir `(Bool, Pauli)[][]` .
 
 > [!NOTE] 
-> Bu örnek, `(Bool, Pauli)[][]` dikdörtgen bir iki boyutlu diziyi değil, potansiyel olarak pürüzlü dizi dizileri temsil eder. Q#dikdörtgen çok boyutlu dizileri desteklemez.
+> Bu örnek, `(Bool, Pauli)[][]` dikdörtgen bir iki boyutlu diziyi değil, potansiyel olarak pürüzlü dizi dizileri temsil eder. Q# dikdörtgen çok boyutlu dizileri desteklemez.
 
 * Bir dizi değeri Q# , içinde olduğu gibi bir dizinin öğeleri etrafında köşeli parantezler kullanılarak kaynak kodunda yazılabilir `[PauliI, PauliX, PauliY, PauliZ]` .
 Dizideki tüm öğelerin ortak temel türü bir dizi sabit değerinin türünü belirler. Bu nedenle, ortak temel türü olmayan öğelerle bir dizi oluşturmak bir hata oluşturur.  
@@ -98,7 +98,7 @@ Dizilerin alt simgeleri sıfır tabanlıdır ve tür `Int` ya da tür olmalıdı
 Tanımlama grupları Q# , değerleri tek bir değer toplamak için kullanılan güçlü bir kavramdır, bu da bunları bir araya getirmek daha kolay hale getirir.
 Özellikle, tanımlama grubu gösterimini kullanarak her işlemin ve çağrılabilir şekilde tam olarak bir giriş aldığını ve tam olarak bir çıkış döndürdüğünü ifade edebilirsiniz.
 
-* Sıfır veya daha fazla farklı tür (, `T0` `T1` ...) verildiğinde, `Tn` Yeni bir *demet türünü* olarak belirtebilirsiniz `(T0, T1, ..., Tn)` .
+* Sıfır veya daha fazla farklı tür (, `T0` `T1` ...) verildiğinde, `Tn` Yeni bir  *demet türünü* olarak belirtebilirsiniz `(T0, T1, ..., Tn)` .
 Yeni bir demet türü oluşturmak için kullanılan türler, içinde olduğu gibi kendi tanımlama grupları olabilir `(Int, (Qubit, Qubit))` .
 Bu iç içe geçme her zaman sınırlıdır, ancak demet türleri hiçbir koşulda kendilerini içeremez.
 
@@ -109,7 +109,7 @@ Tanımlama dizileri, dizi dizileri, alt tanımlama grupları ve benzeri diziler 
 * 0,3 itibariyle Q# , boş tanımlama grubunun `Unit` *türünün* adı, `()` boş tanımlama grubunun *değeri* için kullanılır.
 
 * Demet örnekleri sabittir.
-Q#, oluşturulduktan sonra bir kayıt düzeninin içeriğini değiştirme mekanizması sağlamaz.
+Q# , oluşturulduktan sonra bir kayıt düzeninin içeriğini değiştirme mekanizması sağlamaz.
 
 
 
@@ -155,10 +155,10 @@ newtype Complex = (Double, Double);
 ```
 Bu ifade, türünde iki anonim öğe içeren yeni bir tür oluşturur `Double` .   
 
-Anonim öğeler dışında, Kullanıcı tanımlı türler Ayrıca sürüm 0,7 veya üzeri olarak *adlandırılmış öğeleri* destekler Q# . Örneğin, `Re` bir karmaşık sayının gerçek bölümünü ve sanal parçayı temsil eden Double için öğeleri olarak adlandırın `Im` : 
+Anonim öğeler dışında, Kullanıcı tanımlı türler Ayrıca sürüm 0,7 veya üzeri olarak *adlandırılmış öğeleri* destekler Q# . Örneğin, `Real` bir karmaşık sayının gerçek bölümünü ve sanal parçayı temsil eden Double için öğeleri olarak adlandırın `Imag` : 
 
 ```qsharp
-newtype Complex = (Re : Double, Im : Double);
+newtype Complex = (Real : Double, Imag : Double);
 ```
 Kullanıcı tanımlı bir türdeki bir öğenin adlandırılması, tüm öğelerin adlandırılması gerektiğini göstermez; adlandırılmış ve adlandırılmamış öğelerin herhangi bir birleşimi desteklenir. Ayrıca, iç öğeler de adlandırılmış olabilir.
 `Nested`Örneğin, aşağıda tanımlandığı gibi türü, temel bir tür içerir `(Double, (Int, String))` ve yalnızca türü öğe olarak `Int` adlandırılır ve diğer tüm öğeler anonimdir. 
@@ -171,18 +171,18 @@ Adlandırılmış öğeler, *erişim operatörü* aracılığıyla doğrudan eri
 
 ```qsharp
 function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
-    return Complex(c1::Re + c2::Re, c1::Im + c2::Im);
+    return Complex(c1::Real + c2::Real, c1::Imag + c2::Imag);
 }
 ```
 
 Karmaşık tanımlama grubu türleri için kısa diğer adlar sağlamaya ek olarak, böyle türler tanımlamanın önemli bir avantajı, belirli bir değerin amacını belgelememelerdir.
-Örneğe dönerek `Complex` , bir Kullanıcı tanımlı tür olarak 2B kutupsal koordinatları de tanımlanabilir:
+Örneğe dönerek `Complex` , bir tane, Kullanıcı tanımlı tür olarak bir kutupsal koordinat gösterilemeyen de tanımlanabilir:
 
 ```qsharp
-newtype Polar = (Radius : Double, Phase : Double);
+newtype ComplexPolar = (Magnitude : Double, Argument : Double);
 ```
 
-Hem hem de `Complex` `Polar` her ikisi de temel bir türe sahip olsa da `(Double, Double)` , iki tür ' de tamamen uyumsuz Q# , yanlışlıkla bir karmaşık matematik işlevini kutupsal koordinatlarla çağırma riskini en aza indirir ve tam tersi de geçerlidir.
+Hem hem de `Complex` `ComplexPolar` her ikisi de temel bir türe sahip olsa da `(Double, Double)` , iki tür ' de tamamen uyumsuz Q# , yanlışlıkla bir karmaşık matematik işlevini kutupsal koordinatlarla çağırma riskini en aza indirir ve tam tersi de geçerlidir.
 
 #### <a name="access-anonymous-items-with-the-unwrap-operator"></a>Unwrap işleci ile anonim öğelere erişme
 
@@ -259,8 +259,8 @@ Daha genel olarak, Kullanıcı tanımlı türlerin birbirlerine döngüsel bağ�
 
 Türler `'Tinput` ve `'Tresult` :
 
-* `('Tinput => 'Tresult)`, örneğin, her bir *işlemin*temel türüdür `((Qubit, Pauli) => Result)` .
-* `('Tinput -> 'Tresult)`, örneğin, herhangi bir *işlevin*temel türüdür `(Int -> Int)` . 
+* `('Tinput => 'Tresult)` , örneğin, her bir *işlemin*temel türüdür `((Qubit, Pauli) => Result)` .
+* `('Tinput -> 'Tresult)` , örneğin, herhangi bir *işlevin*temel türüdür `(Int -> Int)` . 
 
 Bunlara çağrılabilir *imzası* denir.
 
@@ -274,13 +274,13 @@ Bunlara çağrılabilir *imzası* denir.
 *İşlev* türleri kendi imzasıyla tamamen belirtilir. Örneğin, bir açının sinüsünü hesaplayan bir işlev türünde olabilir `(Double -> Double)` . 
 
 *İşlemler* , işlem türünün bir parçası olarak ifade edilen bazı ek özelliklere sahiptir. Bu tür özellikler, işlemin desteklediği *komik* ilgili bilgileri içerir.
-Örneğin, işlemin yürütülmesi diğer qubits 'in durumuna dayanıyorsa, bu durumda `Controlled` functor 'ı desteklemelidir; işlemin bir ters olması halinde, functor 'ı desteklemesi gerekir `Adjoint` .
+Örneğin, işlemin çalıştırılması diğer qubits 'in durumuna dayanıyorsa, bu durumda `Controlled` functor 'ı desteklemelidir; işlemin bir ters olması halinde, functor 'ı desteklemesi gerekir `Adjoint` .
 
 > [!NOTE]
 > Bu makalede, yalnızca funörler işlem imzasını nasıl değiştirtiğiyle tartışılmaz. Komik ve işlemler hakkında daha fazla bilgi için bkz. [Içindeki Q# Işlemler ve işlevler ](xref:microsoft.quantum.guide.operationsfunctions). 
 
 `Controlled`Bir işlem türünde ve/veya functor desteğinin gerekli olmasını sağlamak için `Adjoint` , karşılık gelen özellikleri belirten bir ek açıklama eklemeniz gerekir.
-Ek açıklama `is Ctl` (örneğin, `(Qubit => Unit is Ctl)` ), işlemin denetlenebilir olduğunu gösterir. Diğer bir deyişle, yürütmesi başka bir qubit veya qubits 'in durumuna bağlıdır. Benzer şekilde, ek açıklama `is Adj` işlemin bir adeklem olduğunu, yani "ters" (bir işlem) ve ardından adjoint değerini bir durum olduğu gibi bırakır. 
+Ek açıklama `is Ctl` (örneğin, `(Qubit => Unit is Ctl)` ), işlemin denetlenebilir olduğunu gösterir. Diğer bir deyişle, çalıştırması başka bir qubit veya qubits 'in durumuna bağlıdır. Benzer şekilde, ek açıklama `is Adj` işlemin bir adeklem olduğunu, yani "ters" (bir işlem) ve ardından adjoint değerini bir durum olduğu gibi bırakır. 
 
 Bu tür bir işlemin hem hem de functor desteklediğinden emin olmak istiyorsanız `Adjoint` `Controlled` bunu olarak ifade edebilirsiniz `(Qubit => Unit is Adj + Ctl)` . Örneğin, yerleşik Pauli <xref:microsoft.quantum.intrinsic.x> işleminin türü vardır `(Qubit => Unit is Adj + Ctl)` . 
 
@@ -298,7 +298,7 @@ Benzer şekilde, iki işlemin birleşimini döndüren bir işlev imzaya sahiptir
 
 Parametreli bir tür türü çağırdığınızda, aynı tür parametresine sahip olan tüm bağımsız değişkenler aynı türde olmalıdır.
 
-Q#, bir kullanıcının bir tür parametresi için yerine geçecek olası türleri kısıtlayan bir mekanizma sağlamaz.
+Q# , bir kullanıcının bir tür parametresi için yerine geçecek olası türleri kısıtlayan bir mekanizma sağlamaz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

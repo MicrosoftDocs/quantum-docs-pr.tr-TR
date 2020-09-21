@@ -1,6 +1,6 @@
 ---
 Başlık: hisse bilgi işlem sözlüğü açıklaması: hisse kullanımı için kullanılan genel terimler, Eylemler ve nesneler sözlüğü.
-Yazar: nicelik yazıcı MS. Author: Alan.Geller@microsoft.com MS. Date: 12/11/2017 MS. Topic: article uid: Microsoft. hisse. sözlük No-loc:
+Yazar: bradben MS. Author: v-benköşeli MS. Date: 9/1/2020 MS. Topic: article uid: Microsoft. hisse. sözlük No-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -99,7 +99,7 @@ Bir hisse bilgisayarı için geçici bellek görevi gören ve gerektiğinde ayr�
 
 ## <a name="bloch-sphere"></a>Bloch küre
 
-Üç boyutlu bir birim Sphere öğesinde nokta olarak tek[qubit](xref:microsoft.quantum.glossary#qubit) [hisse durumunun](xref:microsoft.quantum.glossary#quantum-state) grafik gösterimi. Daha fazla bilgi için bkz. [Bloch Sphere kullanarak qubits ve dönüşümleri görselleştirme](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
+Üç boyutlu bir birim Sphere öğesinde nokta olarak tek[qubit](xref:microsoft.quantum.glossary#qubit) [hisse durumunun](xref:microsoft.quantum.glossary#quantum-state) grafik gösterimi. Daha fazla bilgi için bkz.  [Bloch Sphere kullanarak qubits ve dönüşümleri görselleştirme](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 ## <a name="callable"></a>Çağrılabilir
 
@@ -170,7 +170,7 @@ Değeri oluşturulduktan sonra değiştirilmiş olan bir değişken. ' De kesile
 
 ## <a name="operation"></a>İşlem
 
-İçindeki temel hisse yürütme birimi Q# . Bu, kabaca C, C++ veya Python içindeki bir işleve veya C# ya da Java 'daki statik bir yönteme eşdeğerdir. Daha fazla bilgi için bkz. [işlemler ve işlevler](xref:microsoft.quantum.guide.operationsfunctions).
+İçindeki temel hisse birimi hesaplaması Q# . Bu, kabaca C, C++ veya Python içindeki bir işleve veya C# ya da Java 'daki statik bir yönteme eşdeğerdir. Daha fazla bilgi için bkz. [işlemler ve işlevler](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="operator-application"></a>İşleç uygulaması
 

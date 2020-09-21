@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 332d9f3134f2b69113668629857af32c814d3263
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868534"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759893"
 ---
 # <a name="data-structures-and-modeling"></a>Veri yapıları ve modelleme #
 
@@ -160,8 +160,8 @@ Bu Unitary, geleneksel iki türden biri tarafından açıklanacaktır.
 
 > [!TIP]
 > Aşağıda açıklanan Oracle türlerinin her ikisi de örneklerde ele alınmıştır.
-> Sürekli sorgu Oracles hakkında daha fazla bilgi edinmek için lütfen [ **Phasetahmine** örnek](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation)bölümüne bakın.
-> Ayrık sorgu Oracles hakkında daha fazla bilgi edinmek için lütfen [ **ısingphasetahmine** örnek](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)bölümüne bakın.
+> Sürekli sorgu Oracles hakkında daha fazla bilgi edinmek için lütfen [ **Phasetahmine** örnek](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation)bölümüne bakın.
+> Ayrık sorgu Oracles hakkında daha fazla bilgi edinmek için lütfen [ **ısingphasetahmine** örnek](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)bölümüne bakın.
 
 Oracle 'ın ayrı bir sorgusunu çağırdığımız ve Kullanıcı tanımlı türle temsil ettiğimiz Oracle 'ın ilk türü <xref:microsoft.quantum.oracles.discreteoracle> , yalnızca Unitary matrisini içerir.
 $U $, eigenvalues değerlerini tahmin etmek istediğimiz Unitary ise, Oracle for $U $, $U $ uygulayan bir altyordam için yalnızca bir stand olur.
@@ -211,8 +211,8 @@ $r > $0 tamsayısı, yaklaşık hatayı denetler.
 Dinamik Oluşturucu modelleme kitaplığı, karmaşık oluşturucuları daha basit bir şekilde kodlamak için bir çerçeve sağlar. Bu tür bir açıklama daha sonra, otomatik olarak ele alınan birçok ayrıntıyı içeren bir simülasyon algoritması için zaman gelişini uygulamak üzere benzetim kitaplığı 'na iletilebilir.
 
 > [!TIP]
-> Aşağıda açıklanan dinamik Oluşturucu kitaplığı, örneklerde ele alınmıştır. Şaşırtıcı modele dayalı bir örnek için lütfen [ **ııngators** 'ın örneğine](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators)bakın.
-> Bir örnek için, [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) ve [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui) örneklerine bakın.
+> Aşağıda açıklanan dinamik Oluşturucu kitaplığı, örneklerde ele alınmıştır. Şaşırtıcı modele dayalı bir örnek için lütfen [ **ııngators** 'ın örneğine](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators)bakın.
+> Bir örnek için, [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) ve [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/gui) örneklerine bakın.
 
 ### <a name="complete-description-of-a-generator"></a>Oluşturucunun tüm açıklaması ###
 

@@ -2,19 +2,19 @@
 title: Test etme ve hata ayıklama
 description: Birim testlerini, olguları ve onayları ve döküm işlevlerini kullanarak hisse programlarını test etme ve hata ayıklama hakkında bilgi edinin.
 author: tcNickolas
-ms.author: mamykhai@microsoft.com
+ms.author: mamykhai
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2b5276da594ba263177d435c1153f6d96e29c4e8
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 2f2181d388a59c1c6c5a0f13c9aa49d5fa1e51ae
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867922"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833169"
 ---
 # <a name="testing-and-debugging"></a>Test etme ve hata ayıklama
 
@@ -26,7 +26,7 @@ Bu bölümde, Q# test ve hata ayıklama için tarafından sunulan araçları ele
 Klasik programları test etmeye yönelik yaygın bir yaklaşım, bir kitaplıktaki kodu çalıştıran ve çıktısını beklenen bir çıktı ile karşılaştıran *birim testleri*adlı küçük programları yazmaktır.
 Örneğin, `Square(2)` `4` $2 ^ 2 = $4 olan *bir priorı* öğrendiğinizden emin olabilirsiniz.
 
-Q#hisse programları için birim testleri oluşturmayı destekler ve bu, [xUnit](https://xunit.github.io/) birim test çerçevesi içinde testler olarak çalıştırılabilir.
+Q# hisse programları için birim testleri oluşturmayı destekler ve bu, [xUnit](https://xunit.github.io/) birim test çerçevesi içinde testler olarak çalıştırılabilir.
 
 ### <a name="creating-a-test-project"></a>Test projesi oluşturma
 
@@ -69,7 +69,7 @@ Q#Ve döndürmelerinin bağımsız değişkenini alan herhangi bir işlem veya i
 ```
 Dosyayı kaydedin ve tüm testleri çalıştırın. Artık iki birim testi olmalıdır, biri `AllocateQubit` üzerinde çalışır `QuantumSimulator` ve biri içinde çalıştığı yerdir `ResourcesEstimator` . 
 
-Q#Derleyici yerleşik hedefleri `"QuantumSimulator"` , `"ToffoliSimulator"` ve `"ResourcesEstimator"` birim testleri için geçerli yürütme hedefleri olarak tanır. Özel bir yürütme hedefi tanımlamak için herhangi bir tam adı belirtmek de mümkündür. 
+Q#Derleyici, `"QuantumSimulator"` birim testleri için yerleşik hedefleri, `"ToffoliSimulator"` ve `"ResourcesEstimator"` geçerli çalıştırma hedeflerini tanır. Özel bir çalışma hedefi tanımlamak için herhangi bir tam nitelikli ad belirtmek de mümkündür. 
 
 ### <a name="running-no-locq-unit-tests"></a>Q#Birim testlerini çalıştırma
 
@@ -113,7 +113,7 @@ Test Run Successful.
 Test execution time: 1.9607 Seconds
 ```
 
-Birim testleri adına veya yürütme hedefine göre filtrelenebilir:
+Birim testleri adına veya çalışma hedefine göre filtrelenebilir:
 
 ```bash 
 $ dotnet test --filter "Target=QuantumSimulator"
@@ -127,7 +127,7 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Test Gezgini 'nde bir testi çalıştırdıktan ve teste tıkladığınızda, test yürütmesi hakkında bilgi içeren bir panel görüntülenir: geçiş/başarısızlık durumu, geçen süre ve çıktının bağlantısı. Test çıkışını yeni bir pencerede açmak için **Çıkış** ' a tıklayın.
+Test Gezgini 'nde bir testi çalıştırdıktan ve teste tıkladığınızda, test çalıştırması hakkında bilgi içeren bir panel görüntülenir: geçiş/başarısızlık durumu, geçen süre ve çıktının bağlantısı. Test çıkışını yeni bir pencerede açmak için **Çıkış** ' a tıklayın.
 
 ![test çıktısı](~/media/unit-test-output.png)
 
@@ -177,7 +177,7 @@ operation AssertQubitsAreAvailable() : Unit
 ```
 
 Burada, <xref:microsoft.quantum.environment.getqubitsavailabletouse> kullanılabilecek qubits sayısını döndürmek için işlemini kullanıyoruz.
-Bu, programın ve yürütme ortamının genel durumuna bağlı olduğundan, tanımımız da `AssertQubitsAreAvailable` bir işlem olmalıdır.
+Bu, programın ve çalışma ortamının genel durumuna bağlı olduğundan, tanımımız da `AssertQubitsAreAvailable` bir işlem olmalıdır.
 Ancak, işleve giriş olarak basit bir değer sağlamak için bu genel durumu kullanabiliriz `Bool` `Fact` .
 
 [Prelude](xref:microsoft.quantum.libraries.standard.prelude), bu fikirleri oluşturmak için iki özellikle yararlı onay sağlar <xref:microsoft.quantum.diagnostics.assertmeasurement> ve <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> her ikisi de üzerinde işlem olarak modellenir `()` . Bu onayların her biri, belirli bir ölçümü, ölçümün gerçekleştirildiği bir hisse izini ve kuramsal bir sonucu açıklayan bir Pauli işleci alır.
@@ -333,7 +333,7 @@ namespace Samples {
 
 ### <a name="dumpregister"></a>DumpRegister
 
-<xref:microsoft.quantum.diagnostics.dumpregister>gibi çalışarak <xref:microsoft.quantum.diagnostics.dumpmachine> , bilgi miktarını yalnızca ilgili qubits ile ilgili olarak sınırlamak için bir qubit dizisi de alır.
+<xref:microsoft.quantum.diagnostics.dumpregister> gibi çalışarak <xref:microsoft.quantum.diagnostics.dumpmachine> , bilgi miktarını yalnızca ilgili qubits ile ilgili olarak sınırlamak için bir qubit dizisi de alır.
 
 İle olduğu gibi <xref:microsoft.quantum.diagnostics.dumpmachine> , tarafından oluşturulan bilgiler <xref:microsoft.quantum.diagnostics.dumpregister> hedef makineye göre değişir. Tam eyalet hisse simülatörü için, Wave işlevine, ile aynı biçimde belirtilen qubits tarafından oluşturulan küresel bir aşamaya kadar yazar <xref:microsoft.quantum.diagnostics.dumpmachine> .  Örneğin, yalnızca iki qubit ayrılmış bir makineye ve hisse durumu $ $ \begin{hizalaması} \ket{\psı} = \frac {1} {\sqrt {2} } {00} \tus-\frac{(1 + ı)} {2} {10} \tus=-e ^ {-i \ Pi/4} ((\frac {1} {\sqrt {2} } {0} \tus-\frac{(1 + i)} {2} \ket {1} ) \otimes \frac{-(1 + ı)} {\sqrt {2} } {0} \tus), \end{hizalaması} $ $ çağrısı <xref:microsoft.quantum.diagnostics.dumpregister> `qubit[0]` Bu çıktıyı oluşturur:
 
@@ -384,6 +384,6 @@ namespace app
 
 ## <a name="debugging"></a>Hata Ayıklama
 
-`Assert`Ve `Dump` işlevleri ve işlemleri üzerinde, Q# Standart Visual Studio hata ayıklama özellikleri alt kümesini destekler: [satır kesme noktaları ayarlama](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [F10 kullanarak kod üzerinden atlama](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)ve [Klasik değişkenlerin değerlerini inceleme](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) işlemi, simülatör üzerinde kod yürütme sırasında mümkün değildir.
+`Assert`Ve `Dump` işlevleri ve işlemleri üzerinde, Q# Standart Visual Studio hata ayıklama özellikleri alt kümesini destekler: [satır kesme noktaları ayarlama](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [F10 kullanarak kod üzerinden atlama](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)ve [Klasik değişkenlerin değerlerini inceleme](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) , kod simülatörü üzerinde çalışırken mümkündür.
 
 Visual Studio Code hata ayıklaması, C# tarafından desteklenen ve OmniSharp tarafından desteklenen Visual Studio Code uzantısı Için sağlanan hata ayıklama yeteneklerini kullanır ve [en son sürümü](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)yüklemeyi gerektirir. 

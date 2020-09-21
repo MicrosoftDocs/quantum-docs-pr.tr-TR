@@ -3,18 +3,18 @@ title: Q#Standart liçlerin akış denetimleri
 description: Microsoft standart kitaplığı 'ndaki Flow denetim işlemleri ve işlevleri hakkında bilgi edinin Q# .
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a440f1ef2b901b18593816ca27aeadf7ab827104
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 1cfef50cf2bbecd2043972a662edd8120c5570ec
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868585"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835630"
 ---
 # <a name="higher-order-control-flow"></a>Daha yüksek sıralı denetim akışı #
 
@@ -86,7 +86,7 @@ ApplyToEachCA(Adjoint U, register);
 Benzer şekilde, <xref:microsoft.quantum.canon.applytoeachindex> formun desenlerini temsil etmek için yararlıdır `U(0, targets[0]); U(1, targets[1]); ...` ve kendi girişi tarafından desteklenen her bir tek bir bileşim birleşimi için sürümler sağlar.
 
 > [!TIP]
-> `ApplyToEach`tür parametreli, dışında bir girişi olan işlemlerle kullanılabilmesi için `Qubit` .
+> `ApplyToEach` tür parametreli, dışında bir girişi olan işlemlerle kullanılabilmesi için `Qubit` .
 > Örneğin, `codeBlocks` kurtarılması gereken bir değer dizisi olduğunu varsayalım <xref:microsoft.quantum.errorcorrection.logicalregister> .
 > Ardından `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` , `code` `recoveryFn` her bloğa bağımsız olarak hata düzeltme kodu ve kurtarma işlevi uygular.
 > Bu, klasik girişler için bile geçerlidir: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` $ \pı/$2 yaklaşık $X $, ardından $Y $ hakkında $Pi/$3 dönüşü uygular.
@@ -120,7 +120,7 @@ Denetim işlemleri genel olarak pahalı olabildiğinden, gibi denetimli varyantl
 
 > [!NOTE]
 > Düzenleme out $U $ ' ın başka bir sonucu, functor 'un nasıl uygulanacağını de bilmelidir `Controlled` `U` .
-> `ApplyWithCA`Bu nedenle, beklenenden daha zayıf bir imzaya sahip olabilir:
+> `ApplyWithCA` Bu nedenle, beklenenden daha zayıf bir imzaya sahip olabilir:
 > ```qsharp
 > ApplyWithCA<'T> : (('T => Unit is Adj),
 >     ('T => Unit is Adj + Ctl), 'T) => Unit

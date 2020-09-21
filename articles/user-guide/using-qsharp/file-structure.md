@@ -1,22 +1,22 @@
 ---
-title: Q#Dosya yapısı
+title: Q# Dosya yapısı
 description: Bir dosyanın yapısını ve sözdizimini açıklar Q# .
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 98b3a2e35186989b8191cc566a5d5310bc26eafc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867939"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833304"
 ---
-# <a name="no-locq-file-structure"></a>Q#Dosya yapısı
+# <a name="no-locq-file-structure"></a>Q# Dosya yapısı
 
 Bir Q# Dosya, bir dizi *ad alanı bildirimi*içerir.
 Her ad alanı bildirimi, Kullanıcı tanımlı türler, işlemler ve işlevler için bildirimler içerir ve her bir tür bildirime ve herhangi bir sıraya sahip olabilir.
@@ -76,7 +76,7 @@ Geçerli ad alanında *açılmayan* başka bir ad alanında tanımlanan bir tür
 Bir yönergesi kullanarak bir ad alanı eklemek genellikle daha iyidir `open` .
 İki ad alanı aynı ada sahip yapıları tanımladıysa ve geçerli kaynak yapıları her ikisiyle kullanıyorsa, tam nitelikli ad kullanılması gerekir.
 
-Q#diğer .NET dilleri olarak adlandırmayla aynı kurallara uyar.
+Q# diğer .NET dilleri olarak adlandırmayla aynı kurallara uyar.
 Ancak, Q# ad alanlarına göreli başvuruları desteklemez.
 Örneğin, ad alanı `a.b` açıksa adlı bir işleme başvuru, `c.d` tam ada sahip bir işleme *çözümlenmez* `a.b.c.d` .
 
@@ -91,11 +91,11 @@ Birden çok deyimi tek bir satıra yerleştirmekten kaçının.
 
 ## <a name="statement-blocks"></a>Ekstre blokları
 
-Q#deyimler, küme ayraçları ile birlikte bulunan deyim blokları halinde gruplandırılır `{ }` . Bir ifade bloğu bir açma ile başlar `{` ve kapanış ile biter `}` .
+Q# deyimler, küme ayraçları ile birlikte bulunan deyim blokları halinde gruplandırılır `{ }` . Bir ifade bloğu bir açma ile başlar `{` ve kapanış ile biter `}` .
 
 Başka bir blok içinde Sözcüksel olarak bulunan bir ifade bloğu, kapsayan bloğun bir alt bloğu olarak kabul edilir; içerilen ve alt bloklara dış ve iç bloklar de denir.
 
-## <a name="comments"></a>Açıklamalar
+## <a name="comments"></a>Yorumlar
 
 Açıklamalar iki eğik çizgi ile başlar `//` ve satırın sonuna kadar devam eder.
 Bir yorum, kaynak dosyasında herhangi bir yerde görünebilir Q# .

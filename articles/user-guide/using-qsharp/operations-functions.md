@@ -2,19 +2,19 @@
 title: İçindeki işlemler ve işlevler Q#
 description: İşlem ve işlevlerin yanı sıra denetlenen ve Adjoint işlem uzmanlıklarını tanımlama ve çağırma.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c2ce999ea2a0fe7204f402fedb4cd3a3c15bd44b
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: e9a84de2753bc3293f441e66ee53e78559263e5c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759433"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833485"
 ---
 # <a name="operations-and-functions-in-no-locq"></a>İçindeki işlemler ve Işlevler Q#
 
@@ -73,9 +73,7 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 Bir işlem, içindeki birçok işlem için olduğu gibi bir Unitary dönüştürmesi uygularsa, Q# *adjointed* veya *denetimli*olduğunda işlemin nasıl davrandığını tanımlamak mümkündür. Bir işlemin *adjoint* özelleştirmesi işlemin nasıl davranması gerektiğini belirtir, *denetimli* bir özelleşme, uygulamanın belirli bir hisse kaydı durumunda olduğu durumlarda bir işlemin nasıl davranması gerektiğini belirtir.
 
-Hisse unsurlarının bir bölümünü, hisse bilgi işlem işlemlerinin birçok yönü için çok önemlidir. Faydalı programlama tekniğinin yanı sıra ele alınan bir örnek için Q# , bu makaledeki [conjugations](#conjugations) bakın. 
-
-Bir işlemin denetlenen sürümü, yalnızca tüm denetim qubits 'in belirtilen durumda olması durumunda temel işlemi etkili bir şekilde uygulayan yeni bir işlemdir.
+Hisse unsurlarının bir bölümünü, hisse bilgi işlem işlemlerinin birçok yönü için çok önemlidir. Faydalı programlama tekniğinin yanı sıra ele alınan bir durumla ilgili bir örnek için Q# bkz. [Denetim akışı: conjugations](xref:microsoft.quantum.guide.controlflow#conjugations). Bir işlemin denetlenen sürümü, yalnızca tüm denetim qubits 'in belirtilen durumda olması durumunda temel işlemi etkili bir şekilde uygulayan yeni bir işlemdir.
 Denetim qubitleri üst konumundayken, temel işlem üst konumun uygun bölümüne doğru şekilde uygulanır.
 Bu nedenle, denetimli işlemler genellikle entanglement oluşturmak için kullanılır.
 
@@ -151,7 +149,7 @@ Her özelleştirmenin gerçek uygulama *örtük* veya *Açık* bir şekilde tan�
 
 ### <a name="implicitly-specifying-implementations"></a>Örtük olarak uygulamaları belirtme
 
-Bu durumda, işlem bildiriminin gövdesi yalnızca varsayılan uygulamadan oluşur. Örneğin:
+Bu durumda, işlem bildiriminin gövdesi yalnızca varsayılan uygulamadan oluşur. Örnek:
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -364,46 +362,6 @@ function ConjugateUnitaryWith(
 
 Kullanıcı tanımlı türler, alt tür yerine temel alınan türün Sarmalanan bir sürümü olarak değerlendirilir.
 Bu, Kullanıcı tanımlı türün bir değerinin, temel alınan türün bir değerini beklediğinizi tahmin ettiğiniz durumlarda kullanılabilir olmadığı anlamına gelir.
-
-
-### <a name="conjugations"></a>Conjugations
-
-Klasik bitlerin aksine, qubits 'in hala bir daha açık olması durumunda qubits 'in kalan hesaplamada istenmeyen etkileri olabildiğinden, hisse bitlerinin serbest bırakılması biraz daha karmaşıktır. Belleği serbest bırakmadan önce, bu etkileri doğru "geri alma" sırasında gerçekleştirilen hesaplamaları önlenebilir. Bu nedenle, hisse kullanımı için genel bir model aşağıda verilmiştir: 
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    outerOperation(target);
-    innerOperation(target);
-    Adjoint outerOperation(target);
-}
-```
-
-0,9 sürümümüzden başlayarak, Q# önceki dönüştürmeyi uygulayan bir Birleşik bildirim bildirisini destekler. Bu ifadeyi kullanarak, işlem `ApplyWith` aşağıdaki şekilde uygulanabilir:
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    within{ 
-        outerOperation(target);
-    }
-    apply {
-        innerOperation(target);
-    }
-}
-```
-Bu tür bir birleşim deyimi, dış ve iç dönüşümler işlem olarak hazır değilse ancak birkaç deyimden oluşan bir blok tarafından daha kolay tanımlanmıyorsa daha kullanışlı hale gelir. 
-
-İçindeki blok içinde tanımlanan deyimler için ters dönüşüm, derleyici tarafından otomatik olarak oluşturulur ve Apply-Block tamamlandıktan sonra çalıştırılır.
-İçindeki blok içinde kullanılan herhangi bir değişebilir değişken, Apply-Block içinde yeniden bağlanamaz, oluşturulan dönüşümün, hesaplamanın içindeki adeklik olduğu garanti edilir. 
 
 
 ## <a name="defining-new-functions"></a>Yeni Işlevleri tanımlama
@@ -663,7 +621,7 @@ Diğer bir deyişle, bir işlem veya işlev kendisini çağırabilir veya çağr
 Ancak özyineleme kullanımı hakkında iki önemli yorum vardır:
 
 - İşlemlerde özyineleme kullanımı, bazı iyileştirmelere engel olabilir.
-  Bu girişim, algoritmanın yürütme süresi üzerinde önemli bir etkiye sahip olabilir.
+  Bu girişim, algoritmanın çalışma süresi üzerinde önemli bir etkiye sahip olabilir.
 - Gerçek bir hisse cihazında çalışırken yığın alanı sınırlı olabilir ve bu nedenle derin özyineleme bir çalışma zamanı hatasına neden olabilir.
   Özellikle, Q# derleyici ve çalışma zamanı Kuyruk özyineleme 'yi tanımlamaz ve iyileştirmez.
 

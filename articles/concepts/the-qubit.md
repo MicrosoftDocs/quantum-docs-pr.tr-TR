@@ -1,6 +1,6 @@
 ---
 Başlık: hisse bilgi işlem Için qubit bilgi: hisse kullanımı hakkında bilgi edinin.
-Yazar: Histumwriter uid: Microsoft. hisse. Concepts. qubit MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. Topic: article No-loc:
+Yazar: miktar Tumwriter uid: Microsoft. hisse. Concepts. qubit MS. Author: v-bendörtms. Date: 12/11/2017 MS. Topic: Makale No-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -100,7 +100,7 @@ Hisse durum vektörleri $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ ve $ \begin{b
 
 Bu iki hisse bitini, klasik bitin iki durumuna ( $ 0 ve 1) karşılık gelecek şekilde sunuyoruz $ $ $ . Standart kural şunları seçdir
 
-$$0 \equiv \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} , \qquad 1 \equiv \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} ,$$
+$$0 \equiv \begin{bmatrix} 1 \\\\  0 \end{bmatrix} , \qquad 1 \equiv \begin{bmatrix} 0 \\\\  1 \end{bmatrix} ,$$
 
 zıt seçim eşit olarak da yapılabilir. Bu nedenle, sınırsız sayıda olası tek qubit hisse kaybı vektörü dışında, yalnızca iki klasik bit durumuna karşılık gelir; diğer tüm hisse ama durumları değildir.
 
@@ -120,7 +120,7 @@ Qubits $ $ , [*Bloch Sphere*](https://en.wikipedia.org/wiki/Bloch_sphere) temsil
 ![Bloch küre](~/media/concepts_bloch.png)
 
 Bu diyagramdaki oklar, hisse devlet vektörünün işaret ettiği yönü gösterir ve okun her dönüştürmesi, Kardinal eksenlerden biri ile ilgili bir döndürme olarak düşünülebilir.
-Bir hisse atısyonın sırası olarak bir hisse atımı hesaplamayı düşünürken, algoritmaları tasarlamak ve anlatmak için bu ıntuun kullanılması zor bir araçtır. Q#Bu sorunu, bu tür döndürmeler hakkında bir dil sunarak konuma almayı azaltır.
+Bir hisse atısyonın sırası olarak bir hisse atımı hesaplamayı düşünürken, algoritmaları tasarlamak ve anlatmak için bu ıntuun kullanılması zor bir araçtır. Q# Bu sorunu, bu tür döndürmeler hakkında bir dil sunarak konuma almayı azaltır.
 
 ## <a name="single-qubit-operations"></a>Tek qubit Işlemler
 
@@ -128,7 +128,7 @@ Hisse bilgisayarları, hisse devlet vektörünün herhangi bir dönüşüyle öy
 Bu evrenlik kavramı, giriş bitlerinin her dönüştürmesi sonlu uzunlukta bir bağlantı kullanılarak gerçekleştirilürse, bir kapı kümesi 'nin evrensel olarak kabul edildiği geleneksel (ör. klasik) bilgi işlem için evrenlik kavramına yol açabilir.
 Hisse bilgi işlem ortamında, bir qubit üzerinde gerçekleştirmesine izin verilen geçerli dönüşümler, Unitary dönüştürmeleri ve ölçümdür.
 *Majoint işlemi* ya da karmaşık eşleniği devrik, hisse kullanımı için önemli öneme sahiptir çünkü hisse dönüştürmelerinin tersine çevirmek için gereklidir.
-Q#Bu işlemi, programcı 'nın birçok durumda bir yandan kod eklemek zorunda kalmasından tasarruf eden el ile geçit dizilerini otomatik olarak derlemeye yönelik yöntemler sunarak yansıtır. Buna bir örnek aşağıda verilmiştir:
+Q# Bu işlemi, programcı 'nın birçok durumda bir yandan kod eklemek zorunda kalmasından tasarruf eden el ile geçit dizilerini otomatik olarak derlemeye yönelik yöntemler sunarak yansıtır. Buna bir örnek aşağıda verilmiştir:
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -145,7 +145,7 @@ Klasik bir bilgisayarda bir bit ile bir bit arasında eşleme yapan yalnızca d�
 Diğer bir deyişle, herhangi bir Unitary dönüştürmesi bu kümeden bir kapı ürünü olarak yaklaşık olarak yazılmışsa, bir ağ geçidi kümesi evrensel bir kapı kümesidir. Herhangi bir önceden tanımlanmış hata varsa, $ { } ağ geçidi kümesinden G_ 1, g_ { 2 } , \lnoktalarla G_N var $ olan kapıları
 
 $$
-G_N G_ { N-1 } \cdots G_2 G_1 \yaklaşık U.$$
+G_N G_ { N-1 } \cdots G_2 G_1 \yaklaşık U. $$
 
 Matris çarpma kuralı, bu dizideki ilk kapı işleminin sağdan sola çarpılacağı $ G_N, $ gerçekten de hisse senedi durumu vektörüne uygulanan son bir şeydir. Daha basit bir şekilde, bu tür bir kapı kümesi, her hata toleransı için evrensel olduğunu biliyoruz: her bir hata toleransı için $ > $ $ G_1, \lnoktalar G_N, $ $ G_N \lnoktalar G_1 ve U arasındaki uzaklığın $ $ $ en fazla $ \epsilon $ olduğunu varsayalım. İdeal $ $ olarak, \epsilon 'nin bu uzaklığına ulaşmak için gereken N değeri, $ $ Poly-logaritmayı $ 1/\ Epsilon ile ölçeklendirmelidir $ .
 

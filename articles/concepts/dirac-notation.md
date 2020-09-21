@@ -1,6 +1,6 @@
 ---
 title: Dirac gösterimi açıklaması: hisse durumlarını göstermek ve hisse alma işlemlerinin benzetimini yapmak için Dirac gösterimini kullanma hakkında bilgi edinin.
-Yazar: Histumwriter uid: Microsoft. hisse. Concepts. Dirac MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. Topic: article No-loc:
+Yazar: Histumwriter uid: Microsoft. hisse. Concepts. Dirac MS. Author: v-benköşeli MS. Date: 12/11/2017 MS. Topic: Makale No-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -230,5 +230,5 @@ Durumu bir açıklama yerine matris olarak temsil eden bu kavram, genellikle yar
 Vektörlerden farklı olarak genel hisse alım işleçleri, bazı hisse bilgi işlem alanlarında ve alanın temel bilgilerini anlamak için gerekli değildir.
 İlgilendiğiniz okuyucu için, [daha fazla bilgi için](xref:microsoft.quantum.more-information)' de sunulan başvuru defterlerinden birini okumanızı öneririz.
 
-## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q#hisse devletlere eşdeğer kapı dizileri
+## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q# hisse devletlere eşdeğer kapı dizileri
 Hisse gösterimi ve programlama dili hakkında en son bir nokta Q# : Bu belgenin onkümesinde, hisse Eyaleti 'nin hisse bilgi işlem ortamında temel nesne olduğunu belirttik.  Daha sonra Q# , hisse bir değer kavramı olmadığında bir sürpriz olarak gelebilir.  Bunun yerine, tüm durumlar yalnızca bunları hazırlamak için kullanılan işlemler tarafından açıklanmıştır.  Önceki örnek bunun mükemmel bir çizimidir.  Bir kayıttaki her hisse bit dizesinde Tekdüzen üst konumunu ifade etmek yerine, sonucu $ H ^ { \otimes n } \ket { 0 } $ olarak temsil edebilirsiniz.  Bu durumun katlanarak daha kısa olan bu açıklaması yalnızca, bununla ilgili olarak neden olabilecek avantaja sahip olmakla kalmaz, Ayrıca öz, algoritmayı uygulamak için yazılım yığınında yayılması gereken işlemleri tanımlar.  Bu nedenle, Q# hisse durumlarından değil, kapı dizilerini göstermek için tasarlanmıştır; ancak, teorik düzeyinde iki perspektifte eşdeğerdir.

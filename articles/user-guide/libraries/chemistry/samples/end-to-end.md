@@ -2,18 +2,18 @@
 title: Örnek NWChem hisse programı
 description: Bir NWChem giriş destesi kullanarak, hisse kualem simülasyonu için geçit sayısı alma örneği üzerinden ilerleyin.
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 986ff2c2ff144c57bd01ddeea0467d0168fd9334
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759724"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835766"
 ---
 # <a name="end-to-end-with-nwchem"></a>NWChem ile uçtan uca #
 
@@ -46,14 +46,14 @@ Import-Module InvokeNWChem.psm1
 ```
 
 > [!NOTE]
-> Varsayılan olarak, Windows tüm betiklerin veya modüllerin güvenlik ölçüsü olarak yürütülmesini önler.
-> Windows 'da çalıştırmak gibi modüllere izin vermek için `Invoke-NWChem.psm1` , yürütme ilkesini değiştirmeniz gerekebilir.
+> Varsayılan olarak, Windows herhangi bir komut dosyası veya modülün güvenlik önlemi olarak çalıştırılmasını önler.
+> Windows 'da çalıştırmak gibi modüllere izin vermek için `Invoke-NWChem.psm1` ilkeyi değiştirmeniz gerekebilir.
 > Bunu yapmak için şu komutu çalıştırın `Set-ExecutionPolicy` :
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope Process
 > ```
-> Daha sonra, PowerShell 'den çıktığınızda yürütme ilkesi geri döndürülür.
-> Yürütme ilkesini kaydetmek isterseniz, şunun için farklı bir değer kullanın `-Scope` :
+> PowerShell 'den çıktığınızda ilke döndürülür.
+> İlkeyi kaydetmek istiyorsanız, için farklı bir değer kullanın `-Scope` :
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 > ```

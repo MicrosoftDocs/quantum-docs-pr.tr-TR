@@ -2,18 +2,18 @@
 title: I Q# Magic komutları
 description: Q#Jupyıter Not defterleri ile I Magic komutları için hızlı başvuru sayfası Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 uid: microsoft.quantum.guide.quickref.iqsharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1d2d092588e1a5c69d12e5d50377e3e26412c094
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 75a1e1820e5ca16268c9b11322eb5653094b1a3c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863689"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833566"
 ---
 # <a name="ino-locq-magic-commands"></a>I Q# Magic komutları
 
@@ -34,12 +34,12 @@ ms.locfileid: "88863689"
 ### <a name="azure-quantum-integration"></a>Azure hisse tümleştirme
 
 - [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect): Bir Azure hisse çalışma alanına bağlanır veya geçerli bağlantı durumunu görüntüler.
-- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Bir işi Azure hisse çalışma alanında yürütür.
+- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Bir Azure hisse çalışma alanında bir işi çalıştırır.
 - [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs): Geçerli Azure hisse çalışma alanındaki işlerin listesini görüntüler.
 - [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output): Geçerli Azure hisse çalışma alanındaki bir işin sonuçlarını görüntüler.
 - [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status): Geçerli Azure hisse çalışma alanındaki bir işin durumunu görüntüler.
 - [`%azure.submit`](xref:microsoft.quantum.iqsharp.magic-ref.azure.submit): Bir Azure hisse çalışma alanına iş gönderir.
-- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Q# Bir Azure hisse çalışma alanında iş gönderimi için etkin yürütme hedefini ayarlar veya görüntüler.
+- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Q# Bir Azure hisse çalışma alanında iş gönderimi için etkin çalışma hedefini ayarlar veya görüntüler.
 
 ### <a name="chemistry-from-microsoftquantumchemistry-package"></a>Chemistry (Microsoft. hisse. Chemistry paketinden)
 
@@ -51,6 +51,6 @@ ms.locfileid: "88863689"
 
 ### <a name="katas-from-microsoftquantumkatas-package"></a>Katas (Microsoft. hisse. katas paketinden)
 
-- [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata): Tek bir test yürütür ve testin başarıyla başarılı olup olmadığını bildirir.
+- [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata): Tek bir test çalıştırır ve testin başarıyla başarılı olup olmadığını bildirir.
 - [`%check_kata`](xref:microsoft.quantum.iqsharp.magic-ref.check_kata): Tek bir küta 'nın test için başvuru uygulamasını denetler.
     Özellikle, tek bir görev için başvuru uygulamasını hücreye koyar ve testin başarıyla başarılı olup olmadığını bildirir.

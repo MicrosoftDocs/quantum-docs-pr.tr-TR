@@ -1,6 +1,6 @@
 ---
 Başlık: Gelişmiş matris kavramları açıklaması: hisse algoritmalarından bahseve benzetimini yapmak için kullanılan temel araçlar olan eigenvektörler, eigenvalues ve matris üsleri hakkında bilgi edinin.
-Yazar: Histumwriter uid: Microsoft. hisse. Concepts. Matrix-Gelişmiş MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. Topic: article No-loc:
+Yazar: Histumwriter uid: Microsoft. hisse. Concepts. Matrix-Gelişmiş MS. Author: v-benköşeli MS. Date: 12/11/2017 MS. Topic: article No-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -93,7 +93,7 @@ Artık, bir dizi algoritmalarınızı anlatmak ve uygulamak için ihtiyaç duydu
 
 $ $ Bir kare matris ve $ v $ 'nin tüm sıfır olmayan vektör (yani, tüm girdileri 0 ' a eşit olan vektör) olmayan bir vektör $ $ olmasına izin verin.
 
-C 'nin $ $ bir sayı ise, f CV ise M 'nin [*eigenvector*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) olduğunu varsayalım $ $ $ = $ $ $ . $C $ 'nin eigenvector v öğesine karşılık gelen [*eigenvalue*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) olduğunu varsayalım $ $ . Genel olarak bir matris $ $ , bir vektörü başka bir vektöre dönüştürebilir, ancak bir sayı ile Çarpılmakta olduğu sürece değişmeden bırakıldığı için bir eigenvector özeldir. $V $ , eigenvalue c ile bir eigenvector ise $ $ , $ av $ 'nin $ $ aynı eigenvalue ile aynı zamanda bir eigenvector (sıfır olmayan a için) olduğunu unutmayın.
+C 'nin $ $ bir sayı ise, f CV ise M 'nin [*eigenvector*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) olduğunu varsayalım  $ $ $ = $ $ $ . $C $ 'nin eigenvector v öğesine karşılık gelen [*eigenvalue*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) olduğunu varsayalım $ $ . Genel olarak bir matris $ $ , bir vektörü başka bir vektöre dönüştürebilir, ancak bir sayı ile Çarpılmakta olduğu sürece değişmeden bırakıldığı için bir eigenvector özeldir. $V $ , eigenvalue c ile bir eigenvector ise $ $ , $ av $ 'nin $ $ aynı eigenvalue ile aynı zamanda bir eigenvector (sıfır olmayan a için) olduğunu unutmayın.
 
 Örneğin, kimlik matrisi için her vektör $ v, $ eigenvalue 1 içeren bir eigenvector değeridir $ $ .
 
@@ -108,7 +108,7 @@ Vektörler
 
 $$\begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix} , \begin{bmatrix} 0 \\\\ 1 \\\\ 0 \end{bmatrix} ve \begin{bmatrix} 0 \\\\ 0 \\\\ 1\end{bmatrix}$$
 
-Bu matrisin eigenvalues $ D_1 $ , $ d_2 $ ve $ D_3 $ sırasıyla. $D_1 $ , $ d_2 $ ve $ D_3 $ birbirinden farklı sayısa, bu vektörler (ve bunların katları) d matrisinin yalnızca emoji vektörleridir $ $ . Genel olarak, çapraz matris için, eigenvalues ve eigenvektörleri okumak kolaydır. Eigenvalues, köşegen üzerinde görünen tüm numaralardır ve ilgili eigenvektörlerini 1 ' e eşit olan birim vektörleridir $ $ ve kalan girişler 0 ' a eşittir $ $ .
+Bu matrisin eigenvalues  $ D_1 $ , $ d_2 $ ve $ D_3 $ sırasıyla. $D_1 $ , $ d_2 $ ve $ D_3 $ birbirinden farklı sayısa, bu vektörler (ve bunların katları) d matrisinin yalnızca emoji vektörleridir $ $ . Genel olarak, çapraz matris için, eigenvalues ve eigenvektörleri okumak kolaydır. Eigenvalues, köşegen üzerinde görünen tüm numaralardır ve ilgili eigenvektörlerini 1 ' e eşit olan birim vektörleridir $ $ ve kalan girişler 0 ' a eşittir $ $ .
 
 Yukarıdaki örnekte, D 'nin egenvektörler 'in $ $ $ 3 $ boyutlu vektörler için temel olduğunu unutmayın. Bu, herhangi bir Vector öğesinin doğrusal bir birleşimi olarak yazılabilmesini sağlayan bir vektör kümesidir. Daha açık, $ v_1 $ , $ v_2 $ ve $ v_3 $ bir vektör $ v $ $ = $ 'nin, v_1 $ $ , $ a_2 $ ve $ v_2 $ bazı sayılar için v A_1 a_3 + v_3 A_1 + a_2 a_3 olarak yazılabilmesini sağlayabilirsiniz.
 

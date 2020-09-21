@@ -2,19 +2,19 @@
 title: İçindeki denetim akışı Q#
 description: Döngüler, koşullar, vb.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e8c873868d6f697fc90b23a38c11f35e46b40c4f
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759671"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833519"
 ---
 # <a name="control-flow-in-no-locq"></a>İçindeki denetim akışı Q#
 
@@ -24,15 +24,16 @@ Ancak, denetim akışını üç farklı şekilde değiştirebilirsiniz:
 * `if` deyimler
 * `for` lerin
 * `repeat-until-success` lerin
+* conjugations ( `apply-within` deyimler)
 
-`if`Ve `for` Denetim akışı yapıları, çoğu klasik programlama diline tanıdık bir anlamda devam ediyor. [`Repeat-until-success`](#repeat-until-success-loop) döngüler Bu makalenin ilerleyen kısımlarında ele alınmıştır.
+`if`Ve `for` Denetim akışı yapıları, çoğu klasik programlama diline tanıdık bir anlamda devam ediyor. [`Repeat-until-success`](#repeat-until-success-loop) döngüler ve [conjugations](#conjugations) Bu makalenin ilerleyen kısımlarında ele alınmıştır.
 
 Daha önemlisi, `for` döngüler ve `if` deyimler, [özelleştirilmiş oluşturmaları](xref:microsoft.quantum.guide.operationsfunctions) otomatik olarak oluşturulan işlemlerde kullanılabilir. Bu senaryoda, bir döngünün adjoint `for` yönü tersine çevirir ve her yinelemenin adjoint değerini alır.
 Bu eylem, "ayakkabılar-ve-SOCKS" ilkesini izler: SOCKS 'yi almayı geri almak istiyorsanız, sonra da sholer ' i ve sonra da 
 
 ## <a name="if-else-if-else"></a>If, else-if, Else
 
-`if`İfade koşullu yürütmeyi destekler.
+`if`İfade, koşullu işlemeyi destekler.
 Anahtar sözcükten `if` , parantez içindeki bir Boole ifadesiyle ve bir deyim bloğundan ( _then_ bloğu) oluşur.
 İsteğe bağlı olarak, her biri anahtar sözcüğü `elif` , parantez içindeki bir Boole ifadesini ve bir deyim bloğunu ( _Else-If_ bloğu) içeren herhangi bir sayıda Else-If yan tümcesi izleyebilir.
 Son olarak, deyimi isteğe bağlı olarak `else` başka bir ifade bloğunun ( _Else_ bloğu) gelen anahtar sözcükten oluşan bir else yan tümcesi ile bitebileceğiniz anlamına gelir.
@@ -75,7 +76,7 @@ Deyimi, anahtar sözcüğünden `for` , ardından bir sembol veya sembol tanıml
 
 İfade bloğu (Döngünün gövdesi), Aralık veya dizideki her bir değere bağlanacak şekilde, tanımlanmış sembol (döngü değişkeni) ile tekrar tekrar çalışır.
 Aralık ifadesi boş bir aralığa veya diziye değerlendirilirse, gövdenin hiç çalıştırılmadığını unutmayın.
-İfade, döngü girilmeden önce tam olarak değerlendirilir ve döngü yürütülürken değişmez.
+İfade, döngü girilmeden önce tam olarak değerlendirilir ve döngü çalışırken değişmez.
 
 Döngü değişkeni, döngü gövdesinin her girişinde bağlanır ve gövdenin sonunda ilişkisiz olur.
 For döngüsü tamamlandıktan sonra döngü değişkeni bağlanmadı.
@@ -129,7 +130,7 @@ Döngü gövdesi çalışır ve ardından koşul değerlendirilir.
 Koşul doğru ise, ifade tamamlanır; Aksi takdirde, düzeltme çalışır ve ifade, döngü gövdesiyle başlayarak yeniden çalışır.
 
 Bir RUS döngüsünün üç bölümü (gövde, test ve düzeltme) *her yineleme için*tek bir kapsam olarak değerlendirilir, böylece gövdede bağlanan semboller hem testte hem de düzeltmede kullanılabilir.
-Ancak, düzeltme yürütme işlemini tamamlamak, deyimin kapsamını sonlandırır, böylece gövde veya Düzeltme sırasında yapılan simge bağlamaları sonraki tekrarlarda kullanılamaz.
+Ancak, düzeltme çalıştırmasının tamamlanması deyimin kapsamını sonlandırır, böylece gövde veya Düzeltme sırasında yapılan simge bağlamaları sonraki tekrarlarda kullanılamaz.
 
 Ayrıca, `fixup` ifade genellikle yararlı olur ancak her zaman gerekli değildir.
 Gerekli olmadığı durumlarda, yapı
@@ -150,9 +151,10 @@ Daha fazla örnek ve ayrıntı için, bu makaledeki [Yinele-Until-Success örnek
 
 ## <a name="while-loop"></a>while döngüsü
 
-Yinele-Success desenlerinin çok hisse özgü bir connotation vardır. Bu değerler, ' de adanmış dil yapısı olan belirli hisse algoritmaları sınıflarında yaygın olarak kullanılırlar Q# . Bununla birlikte, bir koşula göre kesintiye uğratır ve derleme zamanında yürütme uzunluğu bilinmiyor olan döngüler, bir hisse çalışma zamanında belirli bir ilgiyle işlenir. Ancak, işlevleri içindeki kullanımları sorunlu değildir çünkü bu döngüler yalnızca geleneksel (hisse olmayan) donanımda çalışan bir kod içerir. 
+Yinele-Success desenlerinin çok hisse özgü bir connotation vardır. Bu değerler, ' de adanmış dil yapısı olan belirli hisse algoritmaları sınıflarında yaygın olarak kullanılırlar Q# . Ancak, bir koşula göre kesintiye uğratır ve bu nedenle derleme zamanında çalışma uzunluğu bilinmiyor döngüsü, bir hisse çalışma zamanında belirli bir durumla işlenir. Ancak, işlevleri içindeki kullanımları sorunlu değildir çünkü bu döngüler yalnızca geleneksel (hisse olmayan) donanımda çalışan bir kod içerir. 
 
-Q#Bu nedenle, yalnızca işlevler içindeki while döngülerinin kullanımını destekler. Bir `while` deyim, anahtar sözcükten `while` , parantez içinde Boole ifadesiyle ve deyim bloğundan oluşur.
+Q#Bu nedenle, yalnızca işlevler içindeki while döngülerinin kullanımını destekler.
+Bir `while` deyim, anahtar sözcükten `while` , parantez içinde Boole ifadesiyle ve deyim bloğundan oluşur.
 Koşul bloğu (Döngünün gövdesi), koşulun değerlendirildiği sürece çalışır `true` .
 
 ```qsharp
@@ -163,6 +165,45 @@ while (index < Length(arr) && item < 0) {
     set index += 1;
 }
 ```
+
+## <a name="conjugations"></a>Conjugations
+
+Klasik bitlerin aksine, qubits 'in hala bir daha açık olması durumunda qubits 'in kalan hesaplamada istenmeyen etkileri olabildiğinden, hisse bitlerinin serbest bırakılması biraz daha karmaşıktır. Belleği serbest bırakmadan önce, bu etkileri doğru "geri alma" sırasında gerçekleştirilen hesaplamaları önlenebilir. Bu nedenle, hisse kullanımı için genel bir model aşağıda verilmiştir: 
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    outerOperation(target);
+    innerOperation(target);
+    Adjoint outerOperation(target);
+}
+```
+
+Q# önceki dönüştürmeyi uygulayan bir Birleşik veren ifadesini destekler. Bu ifadeyi kullanarak, işlem `ApplyWith` aşağıdaki şekilde uygulanabilir:
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    within{ 
+        outerOperation(target);
+    }
+    apply {
+        innerOperation(target);
+    }
+}
+```
+Bu tür bir birleşim deyimi, dış ve iç dönüşümler işlem olarak hazır değilse ancak birkaç deyimden oluşan bir blok tarafından daha kolay tanımlanmıyorsa yararlı olur. 
+
+İçindeki blok içinde tanımlanan deyimler için ters dönüşüm, derleyici tarafından otomatik olarak oluşturulur ve Apply-Block tamamlandıktan sonra çalıştırılır.
+İçindeki blok içinde kullanılan herhangi bir değişebilir değişken, Apply-Block içinde yeniden bağlanamaz, oluşturulan dönüşümün, hesaplamanın içindeki adeklik olduğu garanti edilir. 
 
 ## <a name="return-statement"></a>Return Deyimi
 
