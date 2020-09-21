@@ -2,19 +2,19 @@
 title: Microsoft Quantum Geliştirme Seti Sürüm Notları
 description: Microsoft Quantum Geliştirme Seti önizlemesinde yapılan son güncelleştirmeler hakkında bilgi edinin.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 70d0c9b61e49d4ee6142edbe2767310403885f01
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: 5036b4d401bb775a7fee2252ca26e7725bc19004
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992267"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834151"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -48,7 +48,7 @@ Bu sürüm aşağıdakileri içerir:
 
 Bu sürüm aşağıdakileri içerir:
 
-- Not defterlerinde açılan ad alanları Q# artık gelecekteki tüm hücre yürütmeleri için kullanılabilir. Bu, örneğin, ad alanlarının her kod hücresinde ilgili ad alanlarını açmak zorunda kalmadan, Not defterinin en üstündeki bir hücrede açılmasını sağlar. Yeni bir `%lsopen` Magic komutu, şu anda açık olan ad alanlarının listesini görüntüler.
+- Not defterlerinde açılan ad alanları Q# artık gelecekteki tüm hücre hesaplamaları için kullanılabilir. Bu, örneğin, ad alanlarının her kod hücresinde ilgili ad alanlarını açmak zorunda kalmadan, Not defterinin en üstündeki bir hücrede açılmasını sağlar. Yeni bir `%lsopen` Magic komutu, şu anda açık olan ad alanlarının listesini görüntüler.
 
 [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [ı Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) ve [katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)için kapalı PR 'ler tam listesine bakın.  
 
@@ -132,7 +132,7 @@ Bu sürüm aşağıdakileri içerir:
 
 Bu sürüm aşağıdakileri içerir:
 
-- Yeni Quantum Machine Learning kitaplığı, daha fazla bilgi için [QML belgeleri sayfamıza](https://docs.microsoft.com/quantum/libraries/machine-learning/?view=qsharp-preview) gidin
+- Yeni Quantum Machine Learning kitaplığı, daha fazla bilgi için [QML belgeleri sayfamıza](xref:microsoft.quantum.machine-learning.concepts.intro) gidin
 - Q#Hata düzeltmeleri, NuGet paketleri yüklenirken 10-20X performans artışına yol açar
 
 [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
@@ -144,7 +144,7 @@ Bu sürüm aşağıdakileri içerir:
 Bu sürüm aşağıdakileri içerir:
 
 - Yeni projeler oluştururken Microsoft.Quantum.Development.Kit NuGet paketinin yerini alacak yeni Microsoft.Quantum.SDK NuGet paketi. Microsoft.Quantum.Development.Kit NuGet paketi mevcut projeler için desteklenmeye devam edecek. 
-- Q#Yeni Microsoft. hisse. SDK NuGet packge tarafından etkinleştirilen derleyici uzantıları için destek daha fazla bilgi Için [GitHub](https://github.com/microsoft/qsharp-compiler/tree/master/src/QuantumSdk#extending-the-q-compiler), [derleyici uzantıları örneği](https://github.com/microsoft/qsharp-compiler/tree/master/examples/CompilerExtensions) ve [ Q# dev bloguna](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/) bakın.
+- Q#Yeni Microsoft. hisse. SDK NuGet packge tarafından etkinleştirilen derleyici uzantıları için destek daha fazla bilgi Için [GitHub](https://github.com/microsoft/qsharp-compiler/tree/main/src/QuantumSdk#extending-the-q-compiler), [derleyici uzantıları örneği](https://github.com/microsoft/qsharp-compiler/tree/main/examples/CompilerExtensions) ve [ Q# dev bloguna](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/) bakın.
 - .NET Core 3.1 desteği eklendi, daha eski .NET Core SDK sürümleriyle derleme işlemi sorunlara neden olabileceğinden 3.1.100 sürümünü yüklemeniz önemle önerilir
 - Microsoft.Quantum.QsCompiler.Experimental altında yeni derleyici dönüşümleri kullanılabilir
 - Çıkış durumu vektörlerinin I I 'de HTML olarak kullanıma sunulmasına yönelik yeni işlevsellikQ#
@@ -160,7 +160,7 @@ Bu sürüm aşağıdakileri içerir:
 Bu sürüm aşağıdakileri içerir:
 
 - Birim testi için yeni test özniteliği burada Q# GÜNCELLEŞTIRILMIŞ API belgelerine ve [here](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) test & hata ayıklama kılavuzuna bakın [here](xref:microsoft.quantum.guide.testingdebugging)
-- Program yürütme hatası durumunda yığın izlemesi eklendi Q#
+- Program çalıştırma hatası durumunda yığın izlemesi eklendi Q#
 - Visual Studio Code’da kesme noktaları desteğinin [OmniSharp C# Visual Studio Code uzantısında](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) güncelleştirilmesi gerekiyor
 
 [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
@@ -182,7 +182,7 @@ Bu sürüm aşağıdakileri içerir:
 
 Bu sürüm aşağıdakileri içerir:
 
-- Dil sunucusunu kendi içinde bir yürütülebilir dosya olarak dağıtmak ve .NET Core SDK sürüm bağımlılığını ortadan kaldırmak için Visual Studio Code ve Visual Studio uzantılarında yapılan güncelleştirmeler  
+- Visual Studio uzantıları & Visual Studio Code güncelleştirmeler, dil sunucusunu kendi içinde bulunan yürütülebilir dosya olarak dağıtmak için .NET Core SDK sürümü bağımlılığını ortadan kaldırır.  
 - .NET Core 3.0'a geçiş
 - Yeni `Fail` yönteminin kullanıma sunulmasıyla Microsoft.Quantum.Simulation.Core.IOperationFactory'de hataya neden olan değişiklik. Yalnızca SimulatorBase'e kadar yayılmayan özel simülatörleri etkiler. Diğer ayrıntılar için [GitHub'da çekme isteğine bakın](https://github.com/microsoft/qsharp-runtime/pull/59).
 - Kullanım dışı bırakılan öznitelikler için yeni destek
@@ -224,7 +224,7 @@ Mevcut programlarınızı yükseltmeye yönelik yönergelere ek olarak değişik
 Bu sürüm aşağıdakileri içerir:
 
 - Dilimleme dizileri için yeni dizinleme konumları eklendi. Daha fazla bilgi için [dil başvurusuna bakın](xref:microsoft.quantum.guide.expressions#array-slices).
-- [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry)barındırılan Dockerfile eklendi, [ Q# daha fazla bilgi için ı deposuna](https://github.com/microsoft/iqsharp/blob/master/README.md) bakın
+- [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry)barındırılan Dockerfile eklendi, [ Q# daha fazla bilgi için ı deposuna](https://github.com/microsoft/iqsharp/blob/main/README.md) bakın
 - [İzleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro) için hataya neden olan değişiklik, yapılandırma ayarları güncelleştirmesi, ad değişiklikleri. [Güncelleştirilmiş adlar için .NET API Tarayıcısına](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration) bakın.
 
 [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), ve [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) için tam kapsamlı kapalı PR’ler listesine bakın.  
@@ -252,14 +252,14 @@ Bu sürüm yeni Q# Dil sözdizimi ekler:
 
 ### <a name="library"></a>Kitaplık 
 
-Bu sürüm, sayısal bir kitaplık ekler: [Yeni sayısal kitaplığı kullanmayı](xref:microsoft.quantum.numerics.usage) öğrenin ve[yeni örnekleri](https://github.com/microsoft/quantum/tree/master/Numerics) deneyin.  [PR #102](https://github.com/Microsoft/QuantumLibraries/pull/102).  
+Bu sürüm, sayısal bir kitaplık ekler: [Yeni sayısal kitaplığı kullanmayı](xref:microsoft.quantum.numerics.usage) öğrenin ve[yeni örnekleri](https://github.com/microsoft/quantum/tree/main/Numerics) deneyin.  [PR #102](https://github.com/Microsoft/QuantumLibraries/pull/102).  
 
 Bu sürüm ile kimya kitaplığına yönelik genişletmeler ve güncelleştirmeler yeniden düzenlendi:
 * Bileşenlerin modülerliği, genişletilebilirliği ve genel kod temizleme işlemi geliştirildi.  [PR #58](https://github.com/microsoft/QuantumLibraries/pull/58).
 * Hem çok başvurulu dalga işlevleri hem de birleşik olarak bağlı kümeler olmak üzere [çok başvurulu dalga işlevlerine](xref:microsoft.quantum.chemistry.concepts.multireference) yönelik destek eklendi.  [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 * (Teşekkürler!) [1QBit](https://1qbit.com) için katkıda bulunan ([@valentinS4t1qbit](https://github.com/ValentinS4t1qbit)): Ansatz kullanılarak gerçekleştirilen enerji değerlendirmesi. [PR #120](https://github.com/Microsoft/QuantumLibraries/pull/120).
 * [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) şeması yeni [sürüm 0.2](xref:microsoft.quantum.libraries.chemistry.schema.spec_v_0_2)’ye yükseltildi ve birleşik ve bağlanmış küme belirtimi eklendi. [Sorun #65](https://github.com/microsoft/QuantumLibraries/issues/65).
-* Kimya kitaplığı işlevlerine Python ile birlikte çalışma özelliği ekleme. Bu [örneği](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration)deneyin. [Sorun #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
+* Kimya kitaplığı işlevlerine Python ile birlikte çalışma özelliği ekleme. Bu [örneği](https://github.com/microsoft/Quantum/tree/main/Chemistry/PythonIntegration)deneyin. [Sorun #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 
 ## <a name="version-061905"></a>Sürüm 0.6.1905
 
@@ -349,7 +349,7 @@ Bu sürüm aşağıdakileri içerir:
 
 - Hakkında bilgi edinmek için harika bir yol sunan Jupyter Notebook için destek ekler Q# .  [Yeni Jupyter Notebook örneklerine göz atın ve kendi Notebook’larınızı yazmayı öğrenin](xref:microsoft.quantum.install). 
 
-- Quantum Canon kitaplığına tamsayı ekleyici aritmetiğini ekler.  [Yeni tamsayı ekleyicilerini kullanmayı açıklayan](https://github.com/microsoft/Quantum/blob/master/samples/arithmetic/AdderExample.ipynb) Jupyter Notebook’una da bakın.
+- Quantum Canon kitaplığına tamsayı ekleyici aritmetiğini ekler.  [Yeni tamsayı ekleyicilerini kullanmayı açıklayan](https://github.com/microsoft/Quantum/blob/main/samples/arithmetic/AdderExample.ipynb) Jupyter Notebook’una da bakın.
 
 - Topluluk tarafından bildirilen DumpRegister sorununa yönelik hata düzeltmesi ([#148](https://github.com/Microsoft/Quantum/issues/148)).
 
@@ -635,7 +635,7 @@ Bu sürüm ile topluluk tarafından bildirilen bazı sorunları düzeltildi. Bu 
 
 #### <a name="testing"></a>Test Etme
 
-- Testler 64 bit modunda yürütülmelidir. Testleriniz BadImageFormatException hatasıyla başarısız olursa, Test menüsüne gidip Test Ayarları > Varsayılan İşlemci Mimarisi > X64’ü seçin.
+- Testlerin 64 bitlik modda çalıştırılması gerekir. Testleriniz BadImageFormatException hatasıyla başarısız olursa, Test menüsüne gidip Test Ayarları > Varsayılan İşlemci Mimarisi > X64’ü seçin.
 - Bazı testlerin çalıştırılması uzun sürebilir (bilgisayarınıza bağlı olarak 5 dakikaya kadar çıkabilir). Bazıları yirmiden fazla qubit kullandığı için bu normaldir. En büyük testimiz 23 qubit üzerinde çalışır.
 
 #### <a name="samples"></a>Örnekler

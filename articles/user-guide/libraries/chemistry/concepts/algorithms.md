@@ -1,20 +1,20 @@
 ---
 title: Hamiltonian Dynamics benzetimi
 description: Hamiltonian benzetimleriyle çalışmak için Trour-Suzuki formüllerini ve qubitişmeyi nasıl kullanacağınızı öğrenin.
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 40f79a66ae95e20a8b1c19af735eedca5e3c15ef
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 299eb1484a697ad9d1577aabb44ccb61e908bae3
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869551"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834015"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamiltonian Dynamics benzetimi
 
@@ -46,9 +46,9 @@ En basit Hamiltonians ailesi ve en çok faydalı olan, burada kullanabiliriz Pau
 Pauli işleçleri, Clienfford işlemleri (hisse bilgi işlem ortamında standart kapıları) kullanılarak diagonalized olabileceğinden kolayca benzetilir.
 Ayrıca, diagonalized olduktan sonra eigenvalues, üzerinde davranabilecekleri qubits 'in eşliği hesaplanırken bulunabilir.
 
-Örneğin, $ $ e ^ {-iX\otimes X t} = (H\otimes H) e ^ {-iZ\otimes Z t} (H\otimes H), $ $ burada $ $ e ^ {-ı Z \otimes Z t} = \begin{bmatrix} e ^ {-it} & 0 & 0 & 0\\\
-        0 & e ^ {i t} & 0 & 0\\\
-        0 & 0 & e ^ {it} & 0\\\
+Örneğin, $ $ e ^ {-iX\otimes X t} = (H\otimes H) e ^ {-iZ\otimes Z t} (H\otimes H), $ $ burada $ $ e ^ {-ı Z \otimes Z t} = \begin{bmatrix} e ^ {-it} & 0 & 0 & 0 \\\
+        0 & e ^ {i t} & 0 & 0 \\\
+        0 & 0 & e ^ {it} & 0 \\\
         0 & 0 & 0 & e ^ {-it} \end{bmatrix}.
 $ $ Burada, $e ^ {-iHt} {00} \tus= e ^ {it} {00} \tus$ ve $e ^ {-iht} {01} \tus= e ^ {-it} {01} \tus$, "$0 $, 1. bit $1 dizesinin eşliği $1 $ iken $0 $,
 
@@ -65,7 +65,7 @@ Pauli işleçleri 'nin üs öğeleri Q# , işlemi kullanarak doğrudan uygulanab
 
 Fermıonic Hamiltonians için, [Ürdün – Wigner ayrıştırma](xref:microsoft.quantum.chemistry.concepts.jordanwigner) , Hamiltonian 'Yi Pauli işleçleri toplamı ile eşleştirir.
 Bu, yukarıdaki yaklaşımın Chemistry benzetimi için kolayca uyarlanabilme anlamına gelir.
-Aşağıda, Ürdün-Wigner temsilindeki tüm Pauli terimleri üzerinde el ile döngü yapmak yerine, aşağıdaki gibi bir simülasyonu nasıl yürütüp bakacağından basit bir örnektir.
+Aşağıda, "Ürdün-Wigner" içindeki tüm Pauli terimleri üzerinde el ile döngü yerine, aşağıdaki gibi bir simülasyonu nasıl çalıştırdığına ilişkin basit bir örnektir.
 Başlangıç noktanızda, sınıfın bir örneği olarak kodda ifade edilen Fermıonic Hamiltonian 'in bir [Ürdün-Wigner kodlaması](xref:microsoft.quantum.chemistry.concepts.jordanwigner) vardır `JordanWignerEncoding` .
 
 ```csharp
@@ -90,7 +90,7 @@ Başlangıç noktanızda, sınıfın bir örneği olarak kodda ifade edilen Ferm
 ```
 
 Simülasyon algoritmaları tarafından tüketilebilir olan Ürdün-Wigner gösteriminin bu biçimi Q# Kullanıcı tanımlı bir türdür `JordanWignerEncodingData` .
-İçinde Q# , bu biçim, `TrotterStepOracle` yürütülmesi için gereken diğer parametrelere ek olarak, bir Işleci (Suzuki tümleştiricisi) kullanarak zaman elde eden bir operatör döndüren kolay bir işleve geçirilir.
+İçinde Q# , bu biçim, `TrotterStepOracle` çalışması için gereken diğer parametrelere ek olarak, bir Işleci (Suzuki tümleştirici) kullanarak zaman evrimini yaklaştıran bir operatör döndüren kolay bir işleve geçirilir.
 
 ```qsharp
 // qSharpData passed from driver
@@ -145,7 +145,7 @@ Bu, her bir $H _j $ Unitary ve hermitian olduğundan ve dolayısıyla ıdgenvalu
 
 İkinci altyordam $ \operatorname{Prepare} $ olarak adlandırılır.
 Select işlemi, her Hamiltonian terimlerinin her biri için tutarlı bir yol sağlarken $H _j $ Prepare alt yordamı $h _j $, \begin{Equation} \operatorname{Prepare}\ket {0} = \ sum_j \sqrt{\frac{h_j} {| H | _1}} \ket{j}'e erişmek için bir yöntem sunar.
-\end{Equation} ardından, çarpma kontrollü bir aşama kapısı kullanarak $ $ \Lambdad\ket {0} ^ {\otimes n} = \begin{Cases} \- \ket{x} & \Text{If} x = 0 olduğunu görüyoruz\\\
+\end{Equation} ardından, çarpma kontrollü bir aşama kapısı kullanarak $ $ \Lambdad\ket {0} ^ {\otimes n} = \begin{Cases} \- \ket{x} & \Text{If} x = 0 olduğunu görüyoruz \\\
         \ket{x} & \Text{otherwise} \end{Cases}.
 $$
 
@@ -157,10 +157,10 @@ $W $, yürüme işleci, $ \operatorname{Select} $ ve $R $ işlemleri $ $ W = \op
 Bu alt yordamlar ' de kolayca ayarlanabilir Q# .
 Örnek olarak, $H = X_1 + X_2 + Z_1 Z_2 $ ' nin bulunduğu basit qubit çapraz-şaşırtıcı Hamiltonian 'yi düşünün.
 Bu durumda, $ Q# \operatorname{Select} $ işlemini uygulayacak kod tarafından çağrılır <xref:microsoft.quantum.canon.multiplexoperations> , ancak $ \operatorname{Prepare} $ işlemi kullanılarak uygulanabilir <xref:microsoft.quantum.preparation.preparearbitrarystate> .
-Hubbard modelinin benzetimini içeren bir örnek, [ Q# örnek](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)olarak bulunabilir.
+Hubbard modelinin benzetimini içeren bir örnek, [ Q# örnek](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)olarak bulunabilir.
 
 Rastgele Kimya sorunları için bu adımları el ile belirtmek çok çaba gerektirir, bu da Kimya kitaplığı kullanmaktan kaçınılmaz.
-Yukarıdaki Trour – Suzuki simülasyon algoritmasına benzer şekilde,, `JordanWignerEncodingData` `QubitizationOracle` yürütülmesi için gereken diğer parametrelere ek olarak, yürüme işlecini döndüren kolaylık işlevine geçirilir.
+Yukarıdaki Trour – Suzuki simülasyon algoritmasına benzer şekilde,, `JordanWignerEncodingData` `QubitizationOracle` çalışması için gereken diğer parametrelere ek olarak, yürüme işlecini döndüren kolaylık işlevine geçirilir.
 
 ```qsharp
 // qSharpData passed from driver

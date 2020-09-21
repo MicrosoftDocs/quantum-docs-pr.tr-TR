@@ -1,6 +1,6 @@
 ---
 Başlık: hisse Oracles açıklaması: ile nasıl çalışacağınızı ve başka bir algoritmaya girdi olarak kullanılan hisse Oracles, kara Box işlemlerini nasıl tanımlayacağınızı öğrenin.
-Yazar: cgranade uid: Microsoft. hisse. Concepts. Oracles MS. Author: Christopher.Granade@microsoft.com MS. Date: 07/11/2018 MS. Topic: article No-loc:
+Yazar: cgranade uid: Microsoft. hisse. Concepts. Oracles MS. Author: chgranad MS. Date: 07/11/2018 MS. Topic: article No-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -140,7 +140,7 @@ O o \ket { \psi } & = \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ 
 $$
 
 ## <a name="phase-oracles"></a>Phase Oracles
-Alternatif olarak, $ $ $ $ O 'ya giriş temelinde bir _aşama_ uygulayarak bir Oracle 'a f $ 'yi kodlayabiliriz $ . Örneğin, $ o $ gibi$$
+Alternatif olarak, $ $ $ $ O 'ya giriş temelinde bir _aşama_ uygulayarak bir Oracle 'a f $ 'yi kodlayabiliriz $ . Örneğin, $ o $ gibi $$
 \begin{align}
     O \ket { x } = (-1) ^ { f (x) } \ket { x } .
 \end{align}
@@ -148,9 +148,9 @@ $$
 Bir evre, başlangıçta hesaplama tabanlı bir durum x 'te bir yazmaç üzerinde hareket eder $ \ket { } $ , bu aşama genel bir aşamadır ve bu nedenle observable değildir.
 Ancak bu tür bir Oracle, bir üst konuma veya denetimli bir işleme uygulandığında çok güçlü bir kaynak olabilir.
 Örneğin, $ $ tek bir-qubit işlevi için bir Oracle O_f aşaması düşünün $ $ .
-Ni$$
+Ni $$
 \begin{align}
-    O_f\ket{+}
+    O_f \ket{+}
         &=O_f ( \ket { 0 }  +  \ket { 1 } )/ \sqrt { 2 }\\\\
         &=((-1) ^ { f (0) } \ket { 0 } + (-1) ^ { f (1) } \ket { 1 } )/ \sqrt { 2 }\\\\
         &=(-1) ^ { f (0) } ( \ket { 0 } + (-1) ^ { f (1)-f (0) } \ket { 1 } )/ \sqrt { 2 }\\\\

@@ -2,19 +2,19 @@
 title: Entanglement 'i ile keşfet Q#
 description: "' De bir hisse programı yazmayı öğrenin Q# . Quantum Development Kit'i (QDK) kullanarak Bell Durumu uygulaması geliştirme"
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
-ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
+ms.openlocfilehash: 6fd7494d341a83a1354d23a283d21a7ae535e49f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90063249"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834032"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Öğretici: Q\# ile dolaşıklığı keşfetme
 
@@ -83,7 +83,7 @@ Bizim amamız, belirli bir hisse durumunda iki qubit hazırlanmaktır. Bu durumd
 
 ### <a name="initialize-qubit-using-measurement"></a>Ölçüyü kullanarak qubit Başlat
 
-Aşağıdaki ilk kodda, ' de qubits ile nasıl çalışacağız gösterilmektedir Q# .  İki işlem tanıtıyoruz [`M`](xref:microsoft.quantum.intrinsic.m) ve [`X`](xref:microsoft.quantum.intrinsic.x) bir qubit durumunu dönüştürecek. Bu kod parçacığında parametre olarak bir kubit ile kubitin içinde bulunmasını istediğimiz durumu temsil eden `desired` parametresini alan `SetQubitState` işlemi tanımlanmıştır.  `SetQubitState` işlemi, `M` işlemini kullanarak kubit üzerinde bir ölçüm gerçekleştirir.  Q#' De, bir qubit ölçümü her zaman `Zero` ya da döndürür `One` .  Ölçüm, istenen değere eşit olmayan bir değer döndürürse, `SetQubitState` "qubit" değerini çevirir; diğer bir deyişle, bir işlem yürütür ve bu, `X` qubit durumunu, bir ölçünün döndürdüğü ve geri döndürüldüğü yeni bir duruma geçirir `Zero` `One` . Bu şekilde, `SetQubitState` her zaman hedef qubit 'i istenen duruma geçirir.
+Aşağıdaki ilk kodda, ' de qubits ile nasıl çalışacağız gösterilmektedir Q# .  İki işlem tanıtıyoruz [`M`](xref:microsoft.quantum.intrinsic.m) ve [`X`](xref:microsoft.quantum.intrinsic.x) bir qubit durumunu dönüştürecek. Bu kod parçacığında parametre olarak bir kubit ile kubitin içinde bulunmasını istediğimiz durumu temsil eden `desired` parametresini alan `SetQubitState` işlemi tanımlanmıştır.  `SetQubitState` işlemi, `M` işlemini kullanarak kubit üzerinde bir ölçüm gerçekleştirir.  Q#' De, bir qubit ölçümü her zaman `Zero` ya da döndürür `One` .  Ölçüm, istenen değere eşit olmayan bir değer döndürürse, `SetQubitState` "qubit" değerini çevirir; diğer bir deyişle, bir işlem çalıştırır ve bu, `X` qubit durumunu döndürülen ve geri çevrilen bir ölçünün olasılıkların ne olduğu yeni bir duruma geçirir `Zero` `One` . Bu şekilde, `SetQubitState` her zaman hedef qubit 'i istenen duruma geçirir.
 
 İçeriğini `Program.qs` aşağıdaki kodla değiştirin:
 
@@ -104,7 +104,7 @@ Aşağıdaki ilk kodda, ' de qubits ile nasıl çalışacağız gösterilmektedi
 Bu işlem artık kubiti klasik bir duruma getirerek %100 `Zero` veya %100 `One` döndürmesi sağlanabilir.
 `Zero` ve `One`, bir kubit ölçümünün mümkün olan iki sonucunu gösteren sabitlerdir.
 
-`SetQubitState` işlemi kubiti ölçer. Kubit istediğimiz durumdaysa `SetQubitState` başka bir işlem gerçekleştirmez, değilse `X` işlemini çalıştırarak kubitin durumunu istediğimiz duruma getirebiliriz.
+`SetQubitState` işlemi kubiti ölçer. Qubit, istediğimiz durumdaysa, `SetQubitState` bunu tek başına bırakır; Aksi takdirde, `X` işlemi çalıştırarak qubit durumunu istenen duruma göre değiştirirsiniz.
 
 #### <a name="about-no-locq-operations"></a>Q#İşlemler hakkında
 
@@ -300,7 +300,7 @@ Bu **süper konum** olarak bilinir ve bize kuantum durumunun ilk gerçek görün
 ## <a name="prepare-entanglement"></a>Dolaşıklığı hazırlama
 
 Şimdi de Q# qubits 'e nasıl ifade vertığınızın yollarını inceleyelim.
-İlk olarak kubiti başlangıç durumuna getireceğiz ve ardından `H` işlemini kullanarak süper konuma alacağız.  Ardından, ilk qubit 'i ölçüyoruz, `CNOT` denetlenen-Not için temsil eden yeni bir işlem () kullanıyoruz.  Bu işlemi yürütmenin iki kubit üzerindeki sonucu, birinci kubitin `One` olması durumunda ikinci kubiti çevirmektir.  Şimdi iki kubit de dolaşık hale geldi.  İlk kubit için istatistiklerimiz değişmemiştir (ölçüm sonrasında `Zero` veya `One` olma olasılığı %50’dir) ama şimdi ikinci kubiti ölçtüğümüzde ilk kubitte ölçülenle __her zaman__ aynı olduğu görülür. `CNOT` geçidimiz iki kubiti dolaşık hale getirmiş, bu şekilde ilkine olanın aynısı diğerine de olmuştur. Ölçümleri ters çevirirseniz (ilk kubitten önce ikincisini yaparsanız), aynı durum ortaya çıkar. İlk ölçüm rastgele olacak ve ikincisi ilkinde bulunanla aynı yolu izleyecektir.
+İlk olarak kubiti başlangıç durumuna getireceğiz ve ardından `H` işlemini kullanarak süper konuma alacağız.  Ardından, ilk qubit 'i ölçüyoruz, `CNOT` *denetlenen-Not*için temsil eden yeni bir işlem () kullanıyoruz.  Bu işlemi iki qubit üzerinde çalıştırmanın sonucu, birinci qubit ise ikinci qubit 'i çevirmenize neden olur `One` .  Şimdi iki kubit de dolaşık hale geldi.  İlk kubit için istatistiklerimiz değişmemiştir (ölçüm sonrasında `Zero` veya `One` olma olasılığı %50’dir) ama şimdi ikinci kubiti ölçtüğümüzde ilk kubitte ölçülenle __her zaman__ aynı olduğu görülür. `CNOT` geçidimiz iki kubiti dolaşık hale getirmiş, bu şekilde ilkine olanın aynısı diğerine de olmuştur. Ölçümleri ters çevirirseniz (ilk kubitten önce ikincisini yaparsanız), aynı durum ortaya çıkar. İlk ölçüm rastgele olacak ve ikincisi ilkinde bulunanla aynı yolu izleyecektir.
 
 Yapacağımız ilk şey, bir yerine iki qubit ayırır `TestBellState` :
 

@@ -1,24 +1,24 @@
 ---
 title: Hisse Machine Learning kitaplığı ile temel sınıflandırma
-description: Q#Microsoft QDK 'Nin hisse Machine Learning kitaplığı kullanılarak yazılmış bir hisse ve sıralı sınıflandırıcının nasıl yürütüleceğini öğrenin.
+description: Q#Microsoft QDK 'Nin hisse Machine Learning kitaplığı kullanılarak yazılmış bir hisse ve sıralı sınıflandırıcının nasıl çalıştırılacağını öğrenin.
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f9c3e7ab85c0f0d1a6063e593607d35c5cb76936
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 5dc4614b9992e2c6b9f8ff4b839c0929ec8cab7c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868976"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833715"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Temel sınıflandırma: verileri QDK ile sınıflandırma
 
-Bu hızlı başlangıçta, Q# QDK 'Nin hisse Machine Learning kitaplığı kullanılarak yazılmış bir hisse ve sıralı sınıflandırıcının nasıl yürütüleceğini öğreneceksiniz. 
+Bu hızlı başlangıçta, Q# QDK 'Nin hisse Machine Learning kitaplığı kullanılarak yazılmış bir hisse ve sıralı sınıflandırıcının nasıl çalıştırılacağını öğreneceksiniz. 
 
 Bu kılavuzda, içinde tanımlanan bir sınıflandırıcı yapısını kullanarak yarı ay veri kümesini kullanacağız Q# .
 
@@ -32,7 +32,7 @@ Bu kılavuzda, içinde tanımlanan bir sınıflandırıcı yapısını kullanara
 Ana bilgisayar programınız üç bölümden oluşur:
 
 - Veri kümesini yükleyin ve modelinize yönelik bir başlangıç parametreleri kümesi seçin.
-- Modelin parametrelerini ve sapmasını öğrenmek için eğitimi yürütün.
+- Modelin parametrelerini ve sapmasını öğrenmek için eğitimi çalıştırın.
 - Doğru olduğunu öğrenmek için modeli doğrulayın
 
     ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Visual Studio Code veya Komut Satırı ile Python](#tab/tabid-python)
@@ -70,7 +70,7 @@ Ana bilgisayar programınız üç bölümden oluşur:
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
-    Ardından F5 tuşuna basın; program yürütülmeye başlayacak ve aşağıdaki sonuçları içeren yeni bir pencere açılacaktır: 
+    F5 tuşuna basın ve program çalışmaya başlar. Yeni bir pencere, aşağıdaki sonuçları görüntüler: 
 
     ```bash
     $ dotnet run
@@ -88,9 +88,9 @@ Aşağıdaki kodu adlı bir dosyaya kaydettik `Training.qs` .
 
 Yukarıdaki kodda tanımlanan en önemli işlevler ve işlemler şunlardır:
 
-- `ClassifierStructure() : ControlledRotation[]`: Bu işlevde, düşüntiğimiz denetimli kapıların katmanlarını ekleyerek devre modelimizin yapısını ayarlayacağız. Bu adım, sıralı bir ayrıntılı öğrenme modelinde, neurlanlar katmanlarının bir bildirimine benzerdir.
-- `TrainHalfMoonModel() : (Double[], Double)`: Bu işlem kodun temel kısmıdır ve eğitimi tanımlar. Burada, kitaplıkta yer alan veri kümesinden örnekleri yüklediğimiz için, eğitimin Hyper parametrelerini ve başlangıç parametrelerini ayarlayacağız ve kitaplığa dahil edilen işlemi çağırarak eğitime başladık `TrainSequentialClassifier` . Sınıflandırıcının belirlenmesi için parametreleri ve farkı verir.
-- `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: Bu işlem, modeli değerlendirmek için doğrulama işlemini tanımlar. Burada doğrulama için örnekleri, örnek başına ölçüm sayısını ve toleransı yükledik. Doğrulama için seçilen örnek toplu iş üzerindeki hatalı sınıflandırmaların sayısını verir.
+- `ClassifierStructure() : ControlledRotation[]` : Bu işlevde, düşüntiğimiz denetimli kapıların katmanlarını ekleyerek devre modelimizin yapısını ayarlayacağız. Bu adım, sıralı bir ayrıntılı öğrenme modelinde, neurlanlar katmanlarının bir bildirimine benzerdir.
+- `TrainHalfMoonModel() : (Double[], Double)` : Bu işlem kodun temel kısmıdır ve eğitimi tanımlar. Burada, kitaplıkta yer alan veri kümesinden örnekleri yüklediğimiz için, eğitimin Hyper parametrelerini ve başlangıç parametrelerini ayarlayacağız ve kitaplığa dahil edilen işlemi çağırarak eğitime başladık `TrainSequentialClassifier` . Sınıflandırıcının belirlenmesi için parametreleri ve farkı verir.
+- `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int` : Bu işlem, modeli değerlendirmek için doğrulama işlemini tanımlar. Burada doğrulama için örnekleri, örnek başına ölçüm sayısını ve toleransı yükledik. Doğrulama için seçilen örnek toplu iş üzerindeki hatalı sınıflandırmaların sayısını verir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

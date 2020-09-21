@@ -8,12 +8,12 @@ uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 78d6488ed5e3972f85f1e6cf1ba2d197596c4cc3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869316"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759724"
 ---
 # <a name="end-to-end-with-nwchem"></a>NWChem ile uçtan uca #
 
@@ -22,7 +22,7 @@ Bu örneğe devam etmeden önce, [yükleme ve doğrulama kılavuzunu](xref:micro
 
 Daha fazla bilgi için:
 - [NWChem giriş noktaları yapısı](https://github.com/nwchemgit/nwchem/wiki/Getting-Started#input-file-structure)
-    - [Hisse geliştirme seti ile kullanım için giriş destesi komutları](https://github.com/nwchemgit/nwchem/tree/master/contrib/quasar)
+    - [Hisse geliştirme seti ile kullanım için giriş destesi komutları](https://github.com/nwchemgit/nwchem/tree/main/contrib/quasar)
 - [Kimya kitaplığı ve bağımlılıklarını yükleme](xref:microsoft.quantum.chemistry.concepts.installation)
 - [Kaynak sayımı](xref:microsoft.quantum.chemistry.examples.resourcecounts)
 
@@ -65,7 +65,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 Daha sonra, `Get-GateCount` **Getgatecount** örneği ile birlikte gelen komutunu içeri aktaracağız.
-Tüm ayrıntılar için, [örnekle birlikte sunulan yönergelere](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount)bakın.
+Tüm ayrıntılar için, [örnekle birlikte sunulan yönergelere](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/GetGateCount)bakın.
 Ardından, `<runtime>` `win10-x64` `osx-x64` `linux-x64` işletim sisteminize bağlı olarak,, veya ile yerine şunu çalıştırın:
 
 ```powershell
@@ -95,7 +95,7 @@ Bu örnekte, NWChem ile birlikte gelen önceden oluşturulmuş giriş desteklerd
 git clone https://github.com/nwchemgit/nwchem --depth 1
 ```
 
-`nwchemgit/nwchem`Depo, [ `QA/chem_library_tests` klasör](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests)altında listelenen hisse kullanımı için tasarlanan çeşitli giriş noktaları ile gelir.
+`nwchemgit/nwchem`Depo, [ `QA/chem_library_tests` klasör](https://github.com/nwchemgit/nwchem/tree/main/QA/chem_library_tests)altında listelenen hisse kullanımı için tasarlanan çeşitli giriş noktaları ile gelir.
 Bu örnekte, `H4` giriş destesi kullanacağız:
 
 ```powershell
@@ -167,7 +167,7 @@ Buradan yapılacak çok sayıda şey vardır:
 - Farklı ön tanımlı giriş noktaları deneyin, örneğin, içindeki parametresini değiştirerek `alpha` `h4_sto6g_alpha.nw` 
 - NWChem Decks 'i doğrudan düzenleyerek, örneğin `STO-nG` farklı n, çeşitli seçenekler için modelleri inceleyerek 
 - ' De bulunan diğer önceden tanımlı NWChem giriş çklarını deneyin `nwchem/qa/chem_library_tests`
-- NWChem 'ten oluşturulan, önceden tanımlanmış bir Brombridge YAML değerlendirmeleri paketini deneyin ve [Microsoft/hisse deposu](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML)'nun bir parçası olarak kullanılabilir. Bu kıyaslamalar şunları içerir: 
+- NWChem 'ten oluşturulan, önceden tanımlanmış bir Brombridge YAML değerlendirmeleri paketini deneyin ve [Microsoft/hisse deposu](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/IntegralData/YAML)'nun bir parçası olarak kullanılabilir. Bu kıyaslamalar şunları içerir: 
     - molesel Hydrogen (H2), beryllium (be), Lityum hydride (LiH) gibi küçük molecules,
     - Ozone (O3), Beta-carotene, cytosinüs gibi daha büyük molecules ve çok daha fazlası. 
 - Microsoft Quantum Development Kit bir arabirimi sunan grafiksel ön uç [Emsl oklarını](https://arrows.emsl.pnnl.gov/api/qsharp_chem) deneyin. 
@@ -180,7 +180,7 @@ Web tabanlı ön uç EMSL oklarını kullanmaya başlamak için [burada](https:/
 > [!NOTE]
 > Web tarayıcısında EMSL oklarını çalıştırmak, JavaScript 'In etkinleştirilmesini gerektirir. Tarayıcınızda JavaScript 'ı etkinleştirme hakkında daha fazla bilgi için lütfen bu [yönergelere](https://www.enable-javascript.com/) bakın. 
 
-İlk olarak, sorgu kutusuna şöyle bir moleule girin``Enter an esmiles, esmiles reaction, or other Arrows input, then push the "Run Arrows" button.`` 
+İlk olarak, sorgu kutusuna şöyle bir moleule girin ``Enter an esmiles, esmiles reaction, or other Arrows input, then push the "Run Arrows" button.`` 
 
 "1, 3, 7-Trimethylxanthine" yerine "Caffeine" gibi, kendi collokual adına göre birçok motacules girebilirsiniz. 
 

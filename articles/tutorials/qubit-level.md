@@ -2,19 +2,19 @@
 title: İçindeki qubit düzeyi programları yazın ve benzetimini yapın Q#
 description: Bireysel qubit düzeyinde çalışan bir hisse programını yazma ve benzetimi yapma hakkında adım adım öğretici
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 0dbeee8e092c830576ba8f79733035cdeeac11de
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863345"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834967"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Öğretici: Q 'da qubit düzeyi programları yazma ve benzetimini yapma\#
 
@@ -116,7 +116,7 @@ Bizim Q# işlem dahilinde, öncelikle şu deyimle üç qubit kaydı ayırdık `u
 Daha sonra, işlemin kendisini oluşturan kapıları uyguladık.
 Q# , ad alanında işlem olarak birçok temel hisse kapısı zaten içeriyor [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) ve bunlar özel durum değildir. 
 
-Bir Q# işlem içinde, callables çağıran deyimler sıralı sırada yürütülür.
+Bir işlem içinde, Q# callables çağıran deyimler, tabii ki sıralı sırayla çalıştırılır.
 Bu nedenle, uygulanacak ilk kapı [`H`](xref:microsoft.quantum.intrinsic.h) ilk qubit 'e (Hadamard) sahiptir:
 
 <br/>
@@ -134,7 +134,7 @@ Bu nedenle, [`H`](xref:microsoft.quantum.intrinsic.h) kayıt yaptığımız ilk 
 
 #### <a name="controlled-operations"></a>Denetlenen işlemler
 
-Q# bir veya birden fazla denetim qubit üzerinde bir işlemin yürütülmesini çok kolay hale getirir.
+Q# bir veya birden fazla denetim qubit üzerinde bir işlemin çalıştırılmasına son derece kolay hale getirir.
 Genel olarak, yalnızca ile çağrıyı önliyoruz `Controlled` ve işlem bağımsız değişkenleri şu şekilde değişir:
 
  `Op(<normal args>)` $ \-$ `Controlled Op([<control qubits>], (<normal args>))` .
@@ -244,7 +244,7 @@ namespace NamespaceQFT {
 
 Q#Dosya ve işlem tamamlandıktan sonra, hisse mamızda program çağrılmaya ve benzetimine hazırlanmaktadır.
 
-## <a name="execute-the-program"></a>Programı yürütme
+## <a name="run-the-program"></a>Programı çalıştırma
 
 Q#İşleminizi bir `.qs` dosyada tanımladık, şimdi bu işlemi çağırmalı ve döndürülen klasik verileri gözlemleyeceğiz.
 Şimdilik, döndürülen hiçbir şey yok (daha sonra işlem tarafından tanımlanan işlemin döndürdüğü geri çek `Unit` ), ancak daha sonra işlemi daha sonra Q# ölçüm sonuçları dizisi döndürecek şekilde değiştirdiğimiz zaman, `Result[]` bunu ele alınacaktır.
@@ -269,7 +269,7 @@ Programı çalıştırmak için, terminali projenizin klasöründe açın ve şu
 dotnet run
 ```
 
-Yürütmeden sonra, `Message` `DumpMachine` aşağıda ve aşağıdaki çıktıları konsolunuza görmeniz gerekir.
+Tamamlandıktan sonra, `Message` `DumpMachine` aşağıda ve aşağıdaki çıktıları konsolunuza görmeniz gerekir.
 
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
@@ -314,9 +314,9 @@ C# ana bilgisayarının dört bölümü vardır:
     Bu örnekte hiçbiri yok.
 3. Kuantum algoritmasını çalıştırma. 
     Her Q# işlem aynı ada sahip bir C# sınıfı oluşturur. 
-    Bu sınıfın, işlemi **zaman uyumsuz** olarak yürüten bir `Run` yöntemi vardır.
-    Yürütmenin zaman uyumsuz olmasının nedeni gerçek donanım üzerindeki yürütmenin zaman uyumsuz yapılacağıdır. 
-    `Run`Yöntemi zaman uyumsuz olduğundan, yöntemi çağırıyoruz `Wait()` ; Bu, görev tamamlanana kadar yürütmeyi engeller ve sonucu zaman uyumlu olarak döndürür. 
+    Bu sınıfın `Run` işlemi **zaman uyumsuz**olarak çalıştıran bir yöntemi vardır.
+    Çalışma zaman uyumsuz çünkü gerçek donanımda çalıştırmak zaman uyumsuz olacaktır. 
+    `Run`Yöntemi zaman uyumsuz olduğundan, yöntemi çağırıyoruz `Wait()` ; Bu işlem, görev tamamlanana kadar çalışmayı engeller ve sonucu zaman uyumlu olarak döndürür. 
 4. İşlemin döndürülen sonucunu işleyin.
     Şimdilik işlem hiçbir şey döndürmez.
 
@@ -499,7 +499,7 @@ Son işlem kodu şöyle görünmelidir:
 }
 ```
 
-Komut isteminden çalışıyorsanız, döndürülen dizi yalnızca, yürütmenin sonunda konsola doğrudan yazdırılır.
+Komut isteminden çalışıyorsanız, döndürülen dizi yalnızca, çalıştırma sonunda konsola doğrudan görüntülenir.
 Aksi takdirde, döndürülen diziyi işlemek için ana bilgisayar programınızı güncelleştirin.
 
 #### <a name="command-prompt"></a>[Komut istemi](#tab/tabid-cmdline)

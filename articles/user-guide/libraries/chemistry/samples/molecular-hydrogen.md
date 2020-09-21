@@ -9,15 +9,15 @@ uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a2df4b829a3f4946c6de6e6b80ad72a5bc192b2c
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 05506f4099de754cd02d81fbd9200f2de091e37e
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869214"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759741"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Enerji düzeyi tahminleri edinme
-Enerji seviyelerinin değerlerini tahmin etmek, hisse Chemistry 'ın asıl uygulamalarından biridir. Bu makalede, bu işlemi, molesel Hydrogen 'nin kurallı örneği için nasıl gerçekleştirebileceğiniz özetlenmektedir. Bu bölümde başvurulan örnek, [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) Kimya örnekleri deposunda bulunur. Çıktıyı gösteren daha fazla görsel örnek [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) tanıtım olur.
+Enerji seviyelerinin değerlerini tahmin etmek, hisse Chemistry 'ın asıl uygulamalarından biridir. Bu makalede, bu işlemi, molesel Hydrogen 'nin kurallı örneği için nasıl gerçekleştirebileceğiniz özetlenmektedir. Bu bölümde başvurulan örnek, [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) Kimya örnekleri deposunda bulunur. Çıktıyı gösteren daha fazla görsel örnek [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) tanıtım olur.
 
 ## <a name="estimating-the-energy-values-of-molecular-hydrogen"></a>Molesel Hydrogen 'ın enerji değerlerini tahmin etme
 
@@ -65,7 +65,7 @@ Hamiltonian benzetimi yapmak, fermıon işleçlerini qubit işleçlerine dönü�
     var qSharpData = QSharpFormat.Convert.ToQSharpFormat(qSharpHamiltonianData, qSharpWavefunctionData);
 ```
 
-Daha sonra, `qSharpData` Hamiltonian 'yi temsil eden, `TrotterStepOracle` işlevine. `TrotterStepOracle`Hamiltonian 'ın gerçek zamanlı evrimini yaklaştırın bir hisse işlemi döndürür. Daha fazla bilgi için bkz. [Hamiltonian Dynamics benzetimi](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms).
+Daha sonra, `qSharpData` Hamiltonian 'yi temsil eden, `TrotterStepOracle` işlevine. `TrotterStepOracle` Hamiltonian 'ın gerçek zamanlı evrimini yaklaştırın bir hisse işlemi döndürür. Daha fazla bilgi için bkz. [Hamiltonian Dynamics benzetimi](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms).
 
 ```qsharp
 // qSharpData passed from driver
@@ -156,5 +156,5 @@ using (var qsim = new QuantumSimulator())
 
 İşlem iki parametre döndürür: 
 
-- `energyEst`, orta eyalet enerji tahminidir ve `-1.137` Ortalama üzerinde yakın olmalıdır. 
-- `phaseEst`, aşama tahmini algoritması tarafından döndürülen ham aşamadır. Bu, çok büyük bir değer nedeniyle ortaya çıktığında diğer ad tanılarken yararlı olur `trotterStep` .
+- `energyEst` , orta eyalet enerji tahminidir ve `-1.137` Ortalama üzerinde yakın olmalıdır. 
+- `phaseEst` , aşama tahmini algoritması tarafından döndürülen ham aşamadır. Bu, çok büyük bir değer nedeniyle ortaya çıktığında diğer ad tanılarken yararlı olur `trotterStep` .

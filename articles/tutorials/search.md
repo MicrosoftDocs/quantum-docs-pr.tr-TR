@@ -2,19 +2,19 @@
 title: Grover 'in arama algoritmasını Q# -hisse geliştirme seti 'nde Çalıştır
 description: Q#Kurallı hisse algoritmalarından biri olan Grover 'in algoritmasını gösteren bir proje oluşturun.
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f2ae56bdca893e8a317c16d0a993da15b9f021b5
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 86c6a651a117b788eb4c8fdd805ead7ab8f54dd7
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863116"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834814"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>Öğretici: Q\# dilinde Grover arama algoritmasını uygulama
 
@@ -58,9 +58,9 @@ Aşamalı artışların sayısı listedeki öğelerin sayısından azdır. İşt
 
 ### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a>Q# Visual Studio veya Visual Studio Code ile uygulamalar
 
-Yürütülebilir dosya, proje yapılandırmasına ve komut satırı seçeneklerine bağlı olarak simülatör veya kaynak tahmini aracında `@EntryPoint()` özniteliğiyle işaretlenmiş işlemi ya da işlevi çalıştırır.
+Program, `@EntryPoint()` Proje yapılandırmasına ve komut satırı seçeneklerine bağlı olarak, bir simülatör veya kaynak Estimator üzerinde özniteliğiyle işaretlenmiş işlem veya işlevi çalıştırır.
 
-Visual Studio’da betiği yürütmek için Ctrl + F5 tuşlarına basmanız yeterlidir.
+Visual Studio 'da, komut dosyasını çalıştırmak için CTRL + F5 tuşlarına basmanız yeterlidir.
 
 VS Code’da terminale aşağıdakileri yazarak `Program.qs` dosyasını ilk kez derleyin:
 
@@ -89,7 +89,7 @@ operations.qs [options] [command]
 Commands:
 ```
 
-Bu, kullanmak istediğiniz kubit sayısını belirtmemeniz nedeniyle terminalin yürütülebilir dosya için kullanılabilir olan komutları size bildirmesinden kaynaklanır. 5 kubit kullanmak istiyorsak şunu yazmamız gerekir:
+Bunun nedeni, kullanmak istediğiniz qubit sayısını belirtmediğinizden, Terminal, yürütülebilir program için kullanılabilen komutları gösterir. 5 qubit kullanmak istiyoruz, şunu yazmalıyım:
 
 ```Command line
 dotnet run --n-qubits 5
@@ -110,7 +110,7 @@ Reflecting about marked state...
 Bu öğreticiyi kullandıysanız, Q# kendi hisse ve uygulamalarınızı yazmak üzere nasıl kullanabileceğiniz hakkında daha fazla bilgi edinmek için aşağıdaki kaynaklara göz atın:
 
 - [QDK'yı Kullanmaya Başlama kılavuzuna dön](xref:microsoft.quantum.welcome)
-- Daha genel bir Grover arama algoritması [örneğini](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search) deneyin
+- Daha genel bir Grover arama algoritması [örneğini](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/database-search) deneyin
 - [Kuantum Katalarıyla Grover araması hakkında daha fazla bilgi edinin](xref:microsoft.quantum.overview.katas)
 - Grover arama algoritmasının arkasındaki kuantum bilişim tekniği olan [genliğini yükseltme][amplitude-amplification] hakkında daha fazla bilgi edinin
 - [Kuantum bilişimi kavramları](xref:microsoft.quantum.concepts.intro)

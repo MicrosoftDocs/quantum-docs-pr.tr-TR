@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.samples
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 20da0e1765a242c172cc595f03d7791a0e8b8d2d
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: ae29614cc9c8bf965ea3cb373dc17470aec21252
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867530"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759195"
 ---
 # <a name="contributing-samples-to-the-quantum-development-kit"></a>Hisse geliştirme paketine katkıda bulunan örnekler
 
@@ -46,12 +46,12 @@ Her bir konu alanının klasörü içinde her örnek, bir kullanıcının bu ör
 
 ## <a name="how-samples-are-structured"></a>Örnekler nasıl yapılandırılır?
 
-Her bir klasörü oluşturan dosyalara bakarak [`algorithms/chsh-game/`](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/chsh-game) örneğe bakalım.
+Her bir klasörü oluşturan dosyalara bakarak [`algorithms/chsh-game/`](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/chsh-game) örneğe bakalım.
 
-| Dosya              | Açıklama                                                |
+| Dosya              | Description                                                |
 |-------------------|------------------------------------------------------------|
-| `CHSHGame.csproj` | Q#.NET Core SDK örneği oluşturmak için kullanılan proje |
-| `Game.qs`         | Q#örnek için işlemler ve işlevler                 |
+| `CHSHGame.csproj` | Q# .NET Core SDK örneği oluşturmak için kullanılan proje |
+| `Game.qs`         | Q# örnek için işlemler ve işlevler                 |
 | `Host.cs`         | Örneği çalıştırmak için kullanılan C# ana bilgisayar programı                     |
 | `host.py`         | Örneği çalıştırmak için kullanılan Python konak programı                 |
 | `README.md`       | Örneğin ne yaptığını ve nasıl kullanılacağını gösteren belgeler    |

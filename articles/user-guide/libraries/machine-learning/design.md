@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 60e694e9f7c2f01a6679ef960f5a7774c8bd6a62
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c87a84654cda04f81115a83684f0e125d23a77bc
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868958"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759230"
 ---
 # <a name="design-your-own-classifier"></a>Kendi sınıflandırıcınızı tasarlama
 
@@ -30,7 +30,7 @@ Klasik derinlemesine öğrenime göre, belirli bir mimari seçmek için genel bi
 
 Bir sınıflandırıcı oluşturmak için, devre modelimizde parametrized kontrollü döndürmeler birleştirilecek. Bunu yapmak için, [`ControlledRotation`](xref:microsoft.quantum.machinelearning.controlledrotation) hisse Machine Learning kitaplığı 'nda tanımlanan türü kullanabiliriz. Bu tür, tanımlayan dört bağımsız değişkeni kabul eder: hedef qubit dizinini, denetim qubits 'in Dizin dizisini, döndürme eksenini ve modeli tanımlayan parametrelerin dizisindeki ilişkili parametrenin dizinini.
 
-Sınıflandırıcının bir örneğini görelim. [Yarım Moons örneğinde](https://github.com/microsoft/Quantum/tree/master/samples/machine-learning/half-moons), dosyasında tanımlı olan aşağıdaki sınıflandırıcıyı bulabiliriz `Training.qs` .
+Sınıflandırıcının bir örneğini görelim. [Yarım Moons örneğinde](https://github.com/microsoft/Quantum/tree/main/samples/machine-learning/half-moons), dosyasında tanımlı olan aşağıdaki sınıflandırıcıyı bulabiliriz `Training.qs` .
 
 ```qsharp
     function ClassifierStructure() : ControlledRotation[] {

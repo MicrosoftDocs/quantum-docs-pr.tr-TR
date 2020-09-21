@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1110f32a6486de1a346b115fa928a098749b6690
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 20e9f8126a290f52701b6b0e525d7669a605d4c9
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866885"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759688"
 ---
 # <a name="improving-documentation"></a>İyileştirme Belgeleri
 
@@ -52,7 +52,7 @@ Aşağıdaki çekme istekleri hakkında daha fazla bilgi edineceksiniz, ancak ş
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
 ```
 
-Bu komut, [ `Game.qs` dosyadaki `chsh-game` ](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)4 ' e kadar olan satırları, Q# söz dizimi vurgulamanın amacı için kod olarak işaretleyerek, örnekten içeri aktarır.
+Bu komut, [ `Game.qs` dosyadaki `chsh-game` ](https://github.com/microsoft/Quantum/blob/main/samples/algorithms/chsh-game/Game.qs)4 ' e kadar olan satırları, Q# söz dizimi vurgulamanın amacı için kod olarak işaretleyerek, örnekten içeri aktarır.
 Bu komutu kullanarak, kavramsal makaleler ve örnekler deposu arasında kodu çoğaltmaktan kaçınabilirsiniz. böylece, belgelerde örnek kod her zaman mümkün olduğunca güncel olur.
 
 ## <a name="contributing-to-the-api-references"></a>API başvurularına katkıda bulunma

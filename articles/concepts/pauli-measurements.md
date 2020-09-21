@@ -1,6 +1,6 @@
 ---
 Başlık: Pauli ölçümleri açıklaması: tek ve Multi-qubit Pauli ölçüm işlemleriyle nasıl çalışacağınızı öğrenin.
-Yazar: Histumwriter uid: Microsoft. hisse. Concepts. Pauli MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. Topic: article No-loc:
+Yazar: bradben uid: Microsoft. hisse. Concepts. Pauli MS. Author: v-benköşeli MS. Date: 12/11/2017 MS. Topic: Makale No-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -143,8 +143,8 @@ Ayrıca, $ HS ^ \dagger $ ' i hisse durumu vektörüne uygulamak ve ardından Z 
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {
-        H(q);
         Adjoint S(q);
+        H(q);
     } apply {
         set result = M(q);
     }
@@ -223,14 +223,14 @@ Tek bir ek notta: ölçü $ z z 'nin, \otimes $ $ z \otimes \mathbb { 1 } $ ve s
 Bunun nedeni, $ z \otimes z $ 'yi $ $ $ Bu operatörlerin + 1 veya-1 $ egeni olarak ölçmesini ölçmeye yönelik bir durumdur.
 $Z \otimes \mathbb { 1 } $ ve daha sonra $ \mathbb { 1 } \otimes z $ , hisse ve $ \otimes \mathbb { } $ sonra $ \mathbb { } \otimes $ 1 z bir yarı boşluk vektörü olan hisse Dört hesaplama tabanlı vektör olduğu için, her iki ölçüm de durum, durumu çeyrek boşluk olarak azaltır ve bu nedenle tek bir hesaplama tabanlı vektöre düşürür.
 
-## <a name="correlations-between-qubits"></a>Qubits arasında correlations
+## <a name="correlations-between-qubits"></a>Kubitler arasındaki bağıntılar
 X x veya z z gibi Pauli matrislerini ölçmeye yönelik başka bir $ Yöntem \otimes $ $ \otimes $ de, bu ölçümlerin iki qubit arasındaki bağıntılar içinde depolanan bilgilere bakmasına olanak tanır.
 $X ölçme \otimes \id $ , ilk qubit 'de yerel olarak saklanan bilgilere bakmanızı sağlar.
 Her iki ölçüm türü de hisse bilgi işlem ortamında eşit olmakla birlikte, önceki bir deyişle hisse bilgi işlem gücünü güçlendirin.
 Bu, bilgi işlem ortamında, genellikle öğrenmek istediğiniz bilgilerin herhangi bir tek qubit içinde depolanmadığını, ancak aynı anda tüm qubits 'de yerel olarak depolanmadığını ve bu nedenle yalnızca bir eklem ölçümü (örn. $ z \otimes z) üzerinden arayarak $ Bu bilgilerin bildirim haline gelmesini gösterir.
 
 Örneğin, hata düzeltilirken, korumamıza çalıştığımız durum hakkında hiçbir şey öğrenirken bir hata oluştuğunu öğrenmek istiyoruz.
-[Bit çevirme kod örneği](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code) , $ z z \otimes \otimes \id $ ve $ \id \otimes z \otimes z $ < gibi ölçümleri kullanarak bunu nasıl yapakullanabileceğinizi gösteren bir örnek gösterir. --TODO: bunu, bit-çevir kod örneği on-eklenmediyse olduğunda, Samples Browser bağlantısı olarak değiştirin. -->
+[Bit çevirme kod örneği](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code) , $ z z \otimes \otimes \id $ ve $ \id \otimes z \otimes z $ < gibi ölçümleri kullanarak bunu nasıl yapakullanabileceğinizi gösteren bir örnek gösterir. --TODO: bunu, bit-çevir kod örneği on-eklenmediyse olduğunda, Samples Browser bağlantısı olarak değiştirin. -->
 
 X Y Z gibi rastgele Pauli işleçleri $ \otimes \otimes \otimes \boldone $ de ölçülebilir.
 Pauli işleçlerinin tüm tencursor ürünlerinin her biri yalnızca iki eigenvalues $ \ pm 1 $ ve her ikisi de tüm vektör alanlarının yarı uzayını oluşturur.

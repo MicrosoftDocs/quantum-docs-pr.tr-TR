@@ -2,15 +2,15 @@
 title: Medya Benioku dosyası
 description: Görüntüleri karşıya yüklemeyle ilgili ipuçları
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 03/04/2020
 ms.topic: readme
-ms.openlocfilehash: a4922e28a8fc5ddfb4cbc80302e23869154234d8
-ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
+ms.openlocfilehash: bf28f57820e95bbbf81f5ac7ade582d89b945a26
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79024194"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834542"
 ---
 # <a name="readme"></a>BENIOKU
 **Önemli**: görüntülerin koyu modda düzgün bir şekilde işlemesini sağlamak için saydamlıkları kullanmaktan kaçınmalısınız.

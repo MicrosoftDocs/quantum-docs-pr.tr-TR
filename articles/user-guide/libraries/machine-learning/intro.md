@@ -1,19 +1,20 @@
 ---
 title: Kuantum makine öğrenimi kitaplığı
+description: Makine öğrenimi 'nin hisse sistemlerinde nasıl kullanıldığını öğrenin
 author: alexeib2
-ms.author: alexei.bocharov@microsoft.com
+ms.author: alexeib
 ms.date: 11/22/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 65b0aa6a7f385765933d4d89ce34901f77cf76ec
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 9f7f892fb2b76432942c86163497c22f0c73d51f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863095"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833796"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>Hisse Machine Learning giriş
 
@@ -74,4 +75,4 @@ RULE1 başına $x $ için gösterilen etiket aslında $y $ öğesinden farklıys
 
 Bu bilgiler, kodla yürütmeye başlamak için yeterli olmalıdır. Ancak, bu model hakkında daha fazla bilgi edinmek istiyorsanız lütfen orijinal teklifi okuyun: [ *' devre merkezli hisse ıcılar ', Maria Schuld, Alex Bocharov, Kronysta svore ve Nathan Wiebe*](https://arxiv.org/abs/1804.00633)
 
-Sonraki adımlarda göreceğiniz kod örneğine ek olarak, [Bu öğreticide](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/QuantumClassification) hisse sınıflandırması 'nı keşfetmeye de başlayabilirsiniz 
+Sonraki adımlarda göreceğiniz kod örneğine ek olarak, [Bu öğreticide](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/QuantumClassification) hisse sınıflandırması 'nı keşfetmeye de başlayabilirsiniz 

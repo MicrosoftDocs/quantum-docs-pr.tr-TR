@@ -4,18 +4,18 @@ description: Üçüncü taraf yazılım bildirimlerini ve bilgilerini Microsoft 
 services: service-name-with-dashes-AZURE-ONLY
 keywords: SEO uzmanınıza danışmadan anahtar sözcük eklemeyin veya anahtar sözcükleri düzenlemeyin.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1d76e9c8532dd7818941d182773a8f85a86becee
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 939dc681d6b9a89f02fd1f392b7fd84067d98e8f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869758"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834134"
 ---
 # <a name="third-party-software-notices-and-information"></a>ÜÇÜNCÜ TARAF YAZıLıM BILDIRIMLERI VE BILGILERI
 
@@ -268,7 +268,7 @@ YAZıLıM, SATıLABILIRLIK, BELIRLI BIR AMACA UYGUNLUK VE IHLAL GARANTISI DAHIL 
 
 Aksi belirtilmedikçe, kaynak ve ikili biçimdeki FParsec kitaplığı, Basitleştirilmiş BSD lisansı altında dağıtılır. Basitleştirilmiş BSD lisansı (deyişle "2 verilere erişme Clause BSD lisansı"), OSı verilere erişme uyumlu basit ve izin veren bir lisanstır. 
 
-FParsec, Unicode karakter veritabanı v 'den türetilmiş verileri içerir. 8.0.0, telif hakkı (c) 1991 \ u20122015 UNICODE, Inc., aşağıdaki şartlar altında dağıtılır:http://www.unicode.org/terms_of_use.html#Exhibit1 
+FParsec, Unicode karakter veritabanı v 'den türetilmiş verileri içerir. 8.0.0, telif hakkı (c) 1991 \ u20122015 UNICODE, Inc., aşağıdaki şartlar altında dağıtılır: http://www.unicode.org/terms_of_use.html#Exhibit1 
 
 Belge klasöründeki belgeler, Creative Commons Attribution verilere erişme NonCommercial 3,0 olmayan lisans kapsamında lisanslanır. Bu Creative Commons lisansı, izin vermeden belgeleri ticari amaçlar için kullanmanıza izin vermez. Bu, örneğin, belgeleri kar için kitap formu içinde satmayacağınıza veya reklamları bir para kazanmak için bir Web içeriği grubuna koyamayabileceğiniz anlamına gelir. Bununla birlikte, belgelerin metinden doğrudan ücret kazanmaya çalışmadığınız sürece, belgeleri ticari bir bağlamda (örn. bir ticari kuruluşun intranetine koyabilirsiniz) kullanabilirsiniz. 
 
@@ -284,6 +284,6 @@ Bu yazılım, "olduğu gibi" telif hakkı sahipleri tarafından sağlanır ve bu
 
 2,2 Creative Commons Attribution verilere erişme NonCommercial 3,0 olmayan lisans
 
-Özetlemehttps://creativecommons.org/licenses/by-nc/3.0/
+Özetleme https://creativecommons.org/licenses/by-nc/3.0/
 
-Tam lisans metni:https://creativecommons.org/licenses/by-nc/3.0/legalcode 
+Tam lisans metni: https://creativecommons.org/licenses/by-nc/3.0/legalcode 

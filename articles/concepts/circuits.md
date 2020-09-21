@@ -1,6 +1,6 @@
 ---
 Başlık: hisse devreleri açıklaması: hisse bağlantı diyagramlarında basit ve karmaşık hisse operasyonlarını görsel olarak nasıl temsil ettiğini öğrenin.
-Yazar: Nicetumwriter uid: Microsoft. hisse. Concepts. devreler MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. Topic: Makale No-loc:
+Yazar: Histumwriter uid: Microsoft. hisse. Concepts. devreler MS. Author: v-benköşeli MS. Date: 12/11/2017 MS. Topic: article No-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -156,7 +156,7 @@ $G = x $ ve $ g = Z $ 'nin denetlenen sürümünü (örneğin, denetlenen X Gate
 <!--Bunu kolayca ortalamak için bir yol bulamıyor... Muhtemelen gerekli bir uzantı:-->
 ![Denetlenen kapıların özel durumları için devre diyagramı](~/media/6.svg)
 
-Q#, programcının bu işlemleri ele almak zorunda kalmadan kaydeden bir işlemin denetlenen sürümünü otomatik olarak oluşturmak için yöntemler sağlar. Buna bir örnek aşağıda verilmiştir:
+Q# , programcının bu işlemleri ele almak zorunda kalmadan kaydeden bir işlemin denetlenen sürümünü otomatik olarak oluşturmak için yöntemler sağlar. Buna bir örnek aşağıda verilmiştir:
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -175,7 +175,7 @@ Devre diyagramlarında görselleştirilecek kalan işlem ölçümdür.
 <!--Bunu kolayca ortalamak için bir yol bulamıyor... Muhtemelen gerekli bir uzantı:-->
 ![Ölçüm işlemini temsil eden sembol](~/media/7.svg)
 
-Q#Bu amaçla bir [Ölçü işleci](xref:microsoft.quantum.intrinsic.measure) uygular.
+Q# Bu amaçla bir [Ölçü işleci](xref:microsoft.quantum.intrinsic.measure) uygular.
 Daha fazla bilgi için [ölçümlerle ilgili bölüme](xref:microsoft.quantum.libraries.standard.prelude#measurements) bakın.
 
 Benzer şekilde, subdevı

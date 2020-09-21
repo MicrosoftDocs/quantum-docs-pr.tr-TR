@@ -1,19 +1,20 @@
 ---
 title: Hisse makine öğrenimi kitaplığı sözlüğü
+description: Hisse makine öğrenimi terimleri sözlüğü
 author: alexeib2
-ms.author: alexei.bocharov@microsoft.com
+ms.author: alexeib
 ms.date: 2/27/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.training
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 068fc61d0d7c066df1270384679e13a3b3a8c878
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 39974af0121a5167f1965e508cd595535178548b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863038"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833908"
 ---
 # <a name="quantum-machine-learning-glossary"></a>Hisse Machine Learning sözlüğü
 
@@ -42,7 +43,7 @@ Tek bir Stokastik gradyanının tahmini için kaç veri örneği kullanıldığ�
 ### <a name="training-epochs-tolerance-gridlocks"></a>Eğitim dönemleri, tolerans, gridkilitleri
 
 "Dönem", zamanlanan eğitim verilerinden bir bütün geçiş anlamına gelir.
-Eğitim iş parçacığı başına maksimum dönemler sayısı (aşağıya bakın) Eğitim iş parçacığı, en fazla dönemler yürütüldüğünde, sonlanacak (en iyi bilinen aday parametreleriyle birlikte) için tanımlanır. Ancak, bu tür bir eğitim daha önce doğrulama zamanlamasında yanlış sınıflandırma oranı seçilen bir toleransın altına düştüğünde daha önce sonlandırılır. Örneğin, yanlış sınıflandırma toleransı 0,01 (%1%) olduğunu varsayalım; 2000 örnek doğrulama kümesinde 20 ' den az sınıflandırma gördüğünüzü kabul ediyorsanız, tolerans düzeyi elde edilir. Aday modelin doğrulama puanı birkaç ardışık dönemler (Gridlock) üzerinde herhangi bir geliştirme göstermezse, eğitim iş parçacığı de zamanından önce sonlanır. Sapmanızı sonlandırmasının mantığı şu anda sabit olarak kodlanmıştır.
+Eğitim iş parçacığı başına maksimum dönemler sayısı (aşağıya bakın) Eğitim iş parçacığı, en fazla dönemler çalıştırıldığında sonlanacak (en iyi bilinen aday parametreleriyle birlikte) sona erecek şekilde tanımlanır. Ancak, bu tür bir eğitim daha önce doğrulama zamanlamasında yanlış sınıflandırma oranı seçilen bir toleransın altına düştüğünde daha önce sonlandırılır. Örneğin, yanlış sınıflandırma toleransı 0,01 (%1%) olduğunu varsayalım; 2000 örnek doğrulama kümesinde 20 ' den az sınıflandırma gördüğünüzü kabul ediyorsanız, tolerans düzeyi elde edilir. Aday modelin doğrulama puanı birkaç ardışık dönemler (Gridlock) üzerinde herhangi bir geliştirme göstermezse, eğitim iş parçacığı de zamanından önce sonlanır. Sapmanızı sonlandırmasının mantığı şu anda sabit olarak kodlanmıştır.
 
 ### <a name="measurements-count"></a>Ölçüm sayısı
 

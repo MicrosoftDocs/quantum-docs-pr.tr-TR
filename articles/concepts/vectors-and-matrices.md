@@ -1,6 +1,6 @@
 ---
 Başlık: hisse bilgi işlem açıklamasında vektörler ve matrisler: vektörlerin ve matrislerle nasıl çalışacağınızı öğrenin.
-Yazar: Nicetumwriter uid: Microsoft. hisse. Concepts. vektörms. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. Topic: article No-loc:
+Yazar: Histumwriter uid: Microsoft. hisse. Concepts. vektörms. Author: v-benköşeli MS. Date: 12/11/2017 MS. Topic: article No-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -93,7 +93,7 @@ $$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \ sanal noktalar\\\\
-v_n\end{bmatrix}$$
+v_n \end{bmatrix}$$
 
 Vektör v 'nin norm $ $ $ \sqrt { \sum \_ i i & m | \_ | } $ ı %2 olarak tanımlanır. Bir Vector öğesinin normu 1 ise birim norm (ya da bir [*birim vektörü*](https://en.wikipedia.org/wiki/Unit_vector)olarak adlandırılır) olduğu söylenir $ $ . [*Vektör v 'nin adeki*](https://en.wikipedia.org/wiki/Adjoint_matrix) $ , $ $ v ^ olarak gösterilir \dagger $ ve $ \* $ karmaşık eşleniği gösterir,
 
@@ -114,12 +114,12 @@ u_1\\\\
 u_2\\\\
 \ sanal noktalar\\\\
 u_n \end{bmatrix} ~ \mathrm { ve}~
-Yönetim=\begin{bmatrix}
+Yönetim =\begin{bmatrix}
     v_1\\\\
     v_2\\\\
     \ sanal noktalar\\\\
     V_n \end{bmatrix} , ~ \mathrm { ardından}~
-Au + BV=\begin{bmatrix}
+Au + BV =\begin{bmatrix}
 au_1 + bv_1\\\\
 au_2 + bv_2\\\\
 \ sanal noktalar\\\\
@@ -128,7 +128,7 @@ $$
 
 A [*matrix*](https://en.wikipedia.org/wiki/Matrix_(mathematics)) n boyutundaki bir $ matris \times $ , $ $ $ $ $ aşağıda gösterildiği gibi, k satırı ve n $ sütunları halinde düzenlenmiş bir MN karmaşık sayı koleksiyonudur:
 
-$$M= 
+$$M = 
 \begin{bmatrix}
 M_ { 11 } ~~ m_ { 12 } ~~ \cdots ~~ m_ { 1n}\\\\
 M_ { 21 } ~~ m_ { 22 } ~~ \cdots ~~ m_ { 2n}\\\\
@@ -183,7 +183,7 @@ Bir matris $ d $ , [*hermitian*](https://en.wikipedia.org/wiki/Hermitian_matrix)
 Son olarak, m n ve n boyutudaki iki matrisin en büyük matris [*ürünü*](https://en.wikipedia.org/wiki/Tensor_product) (veya Kronecker ürünü), $ $ $ \times $ $ $ $ \times $ MP nq boyutunda daha büyük bir matris $ p = m \otimes $ $ \times $ ve h 'den elde edilir $ $ $ $ :
 
 \begin{align}
-    e \otimes N&=
+    e \otimes N &=
     \begin{bmatrix}
         M_ { 11 } ~~ \cdots ~~ m_ { 1n }\\\\
         \ddots\\\\
@@ -217,30 +217,30 @@ $$
     =\begin{bmatrix}c \\\\ a d \\\\ a \\\\ b c \\\\ b d \\\\ s\end{bmatrix}
 $$
 
-reservedStorageGb
+ve
 
 $$
     \begin{bmatrix}
-        a \ b \\\\ c \ d\end{bmatrix}
+        a \ b \\\\ c \ d \end{bmatrix}
     \otimes 
     \begin{bmatrix}
-        e \ f \\\\ g \ h\end{bmatrix}
+        e \ f \\\\ g \ h \end{bmatrix}
      =
     \begin{bmatrix}
     a\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     kenarı\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     \\\\[1em] c\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     TID\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     \end{bmatrix}
     =
     \begin{bmatrix}
-    AE \ AF \ olmalıdır \ BF\\\\
-    AG \ Ah \ bg \ BH\\\\
-    CE \ CF \ de \ df\\\\
+    AE \ AF \ olmalıdır \ BF \\\\
+    AG \ Ah \ bg \ BH \\\\
+    CE \ CF \ de \ df \\\\
     CG \/\ DG \ DH \end{bmatrix} .
 $$
 

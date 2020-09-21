@@ -1,5 +1,5 @@
 ---
-title: İçindeki işlemler ve işlevlerQ#
+title: İçindeki işlemler ve işlevler Q#
 description: İşlem ve işlevlerin yanı sıra denetlenen ve Adjoint işlem uzmanlıklarını tanımlama ve çağırma.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -9,14 +9,14 @@ uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 76437c83df894fa86409e680f961d97e267c6869
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c2ce999ea2a0fe7204f402fedb4cd3a3c15bd44b
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867888"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759433"
 ---
-# <a name="operations-and-functions-in-no-locq"></a>İçindeki işlemler ve IşlevlerQ#
+# <a name="operations-and-functions-in-no-locq"></a>İçindeki işlemler ve Işlevler Q#
 
 ## <a name="defining-new-operations"></a>Yeni Işlemleri tanımlama
 
@@ -43,12 +43,12 @@ operation BitFlip(target : Qubit) : Unit {
 Anahtar sözcüğü, `operation` işlem tanımını ve ardından adı ile başlar; burada, `BitFlip` .
 Sonra, giriş türü, `Qubit` `target` Yeni işlemdeki girişe başvurmak için bir adla birlikte tanımlanır ().
 Son olarak, `Unit` işlemin çıktısının boş olduğunu tanımlar.
-`Unit`, `void` C# ve diğer zorunlu dillerde aynı şekilde kullanılır ve `unit` F # ve diğer işlevsel dillerde eşdeğerdir.
+`Unit` , `void` C# ve diğer zorunlu dillerde aynı şekilde kullanılır ve `unit` F # ve diğer işlevsel dillerde eşdeğerdir.
 
 İşlemler Ayrıca, öğesinden daha ilginç türler de döndürebilir `Unit` .
 Örneğin, işlem, <xref:microsoft.quantum.intrinsic.m> `Result` ölçüm gerçekleştirmemiş olduğunu temsil eden türünde bir çıktı döndürür.  Bir işlemden başka bir işleme geçirebilirsiniz veya `let` Yeni bir değişken tanımlamak için anahtar sözcükle birlikte kullanabilirsiniz.
 
-Bu yaklaşım, en [yoğun kodlama](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding)gibi düşük bir düzeyde hisse uygun olan klasik hesaplamayı temsil etmenizi sağlar:
+Bu yaklaşım, en [yoğun kodlama](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding)gibi düşük bir düzeyde hisse uygun olan klasik hesaplamayı temsil etmenizi sağlar:
 
 ```qsharp
 operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
@@ -100,14 +100,14 @@ Yeni bir işlem döndüren bir işleme uygulayarak bir functor kullanın.
 Örneğin, `Adjoint` işlem için functor uygulandığında `Y` Yeni işlem döndürülür `Adjoint Y` . Yeni işlemi başka bir işlem gibi çağırabilirsiniz.
 Bir işlemin veya komik uygulamalarının uygulamasını desteklemesi için `Adjoint` `Controlled` dönüş türünün olması gerekir `Unit` . 
 
-#### <a name="adjoint-functor"></a>`Adjoint`functor
+#### <a name="adjoint-functor"></a>`Adjoint` functor
 
 Bu nedenle, `Adjoint Y(q1)` `Adjoint` `Y` Yeni bir işlem oluşturmak için functor işlemini uygular ve bu yeni işlemi öğesine uygular `q1` .
 Yeni işlem, temel işlemle aynı imzaya ve türe sahip `Y` .
 Özellikle, yeni işlem de destekler `Adjoint` ve `Controlled` yalnızca temel işlem olduysa, ve desteklenir.
 `Adjoint`Functor kendi tersidir; diğer bir deyişle, `Adjoint Adjoint Op` her zaman ile aynıdır `Op` .
 
-#### <a name="controlled-functor"></a>`Controlled`functor
+#### <a name="controlled-functor"></a>`Controlled` functor
 
 Benzer şekilde, `Controlled X(controls, target)` `Controlled` `X` Yeni bir işlem oluşturmak için functor işlemini uygular ve bu yeni işlemi ve için uygular `controls` `target` .
 
@@ -123,11 +123,11 @@ Yeni işlem `Controlled` ' i destekler ve `Adjoint` yalnızca özgün işlem old
 
 Özgün işlem yalnızca tek bir bağımsız değişken alıyorsa, tek [demet denklik](xref:microsoft.quantum.guide.types) , burada oynat olarak gelir.
 Örneğin, `Controlled X` işlemin denetlenen sürümüdür `X` . 
-`X`türüne sahip `(Qubit => Unit is Adj + Ctl)` , `Controlled X` Bu nedenle türüne sahip `((Qubit[], (Qubit)) => Unit is Adj + Ctl)` . tek kayıt düzeni denkliği nedeniyle bu, ile aynıdır `((Qubit[], Qubit) => Unit is Adj + Ctl)` .
+`X` türüne sahip `(Qubit => Unit is Adj + Ctl)` , `Controlled X` Bu nedenle türüne sahip `((Qubit[], (Qubit)) => Unit is Adj + Ctl)` . tek kayıt düzeni denkliği nedeniyle bu, ile aynıdır `((Qubit[], Qubit) => Unit is Adj + Ctl)` .
 
 Temel işlem birkaç bağımsız değişken alıyorsa, bu işlemin denetlenen sürümünün ilgili bağımsız değişkenlerini, bir tanımlama grubu içine dönüştürmek için parantez içine almayı unutmayın.
 Örneğin, `Controlled Rz` işlemin denetlenen sürümüdür `Rz` . 
-`Rz`türüne sahip `((Double, Qubit) => Unit is Adj + Ctl)` , bu nedenle `Controlled Rz` türüne sahip `((Qubit[], (Double, Qubit)) => Unit is Adj + Ctl)` .
+`Rz` türüne sahip `((Double, Qubit) => Unit is Adj + Ctl)` , bu nedenle `Controlled Rz` türüne sahip `((Qubit[], (Double, Qubit)) => Unit is Adj + Ctl)` .
 Bu nedenle, `Controlled Rz(controls, (0.1, target))` geçerli bir çağrısı olur `Controlled Rz` (etrafındaki ayraçları aklınızda bulunan `0.1, target` ).
 
 Başka bir örnek olarak, `CNOT(control, target)` olarak uygulanabilir `Controlled X([control], target)` . Bir hedefin iki denetim qubits (CCNOT) tarafından denetlenmesi gerekiyorsa, bir `Controlled X([control1, control2], target)` ifade kullanın.
@@ -151,7 +151,7 @@ Her özelleştirmenin gerçek uygulama *örtük* veya *Açık* bir şekilde tan�
 
 ### <a name="implicitly-specifying-implementations"></a>Örtük olarak uygulamaları belirtme
 
-Bu durumda, işlem bildiriminin gövdesi yalnızca varsayılan uygulamadan oluşur. Örnek:
+Bu durumda, işlem bildiriminin gövdesi yalnızca varsayılan uygulamadan oluşur. Örneğin:
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -192,7 +192,7 @@ Aşağıda, bazı açık özelleşmeye örnek olarak tüm olasılıklar verilmi�
 
 #### <a name="explicit-specialization-declarations"></a>Açık Özelleştirme bildirimleri
 
-Q#işlemler aşağıdaki açık özelleştirme bildirimlerini içerebilir:
+Q# işlemler aşağıdaki açık özelleştirme bildirimlerini içerebilir:
 
 - `body`Özelleşme, hiçbir komik uygulanmamış şekilde işlemin uygulanmasını belirtir.
 - `adjoint`Özelleşme, işlem için `Adjoint` functor uygulanmış olan uygulamayı belirtir.
@@ -329,9 +329,9 @@ Gövdesi denetimli bir adjoint sürümüne sahip olmayan diğer işlemlere çağ
 
 Daha az komik, ancak aynı imzaya sahip bir işlem kullandığınızda her yerde desteklenen ek komik bir işlem kullanın. Örneğin, türündeki bir işlemi kullandığınız her yerde türünde bir işlem kullanın `(Qubit => Unit is Adj)` `(Qubit => Unit)` .
 
-Q#çağrılabilir dönüş türlerine göre *birlikte değişken* : bir tür döndüren çağrılabilir, `'A` aynı giriş türüne ve ile uyumlu bir sonuç türüne sahip çağrılabilir ile uyumludur `'A` .
+Q# çağrılabilir dönüş türlerine göre *birlikte değişken* : bir tür döndüren çağrılabilir, `'A` aynı giriş türüne ve ile uyumlu bir sonuç türüne sahip çağrılabilir ile uyumludur `'A` .
 
-Q#, giriş türlerine göre *değişken karşıtı:* giriş olarak bir türü alan çağrılabilir, `'A` aynı sonuç türü ve ile uyumlu bir giriş türü olan çağrılabilir ile uyumludur `'A` .
+Q# , giriş türlerine göre *değişken karşıtı:* giriş olarak bir türü alan çağrılabilir, `'A` aynı sonuç türü ve ile uyumlu bir giriş türü olan çağrılabilir ile uyumludur `'A` .
 
 Diğer bir deyişle, aşağıdaki tanımlar verildiğinde,
 
@@ -360,7 +360,7 @@ function ConjugateUnitaryWith(
 - Türünden bir değer döndürür `(Qubit[] => Unit is Adj + Ctl)` `ConjugateInvertWith` .
 
 > [!IMPORTANT]
-> Q#0,3, Kullanıcı tanımlı türlerin davranışında önemli bir farklılık sunmuştur.
+> Q# 0,3, Kullanıcı tanımlı türlerin davranışında önemli bir farklılık sunmuştur.
 
 Kullanıcı tanımlı türler, alt tür yerine temel alınan türün Sarmalanan bir sürümü olarak değerlendirilir.
 Bu, Kullanıcı tanımlı türün bir değerinin, temel alınan türün bir değerini beklediğinizi tahmin ettiğiniz durumlarda kullanılabilir olmadığı anlamına gelir.
@@ -509,7 +509,7 @@ Bu, az sayıda işlev için daha fazla ve daha fazla işlev topladıkça, bu tü
 Bununla birlikte, bu zorluklar, derleyicinin farklı sürümlerinin nasıl ilişkili olduğunu tanıması için ihtiyaç duymamanızdan kaynaklanır `Map` .
 Etkin olarak, derleyicinin `Map` türlerden bir tür matematik işlevi olarak bir tür işlevi görmesini istersiniz Q# *types* Q# .
 
-Q#işlevlerin ve işlemlerin *tür parametrelerine*ve sıradan demet parametrelerine izin vererek bu kavramı şekillendirir.
+Q# işlevlerin ve işlemlerin *tür parametrelerine*ve sıradan demet parametrelerine izin vererek bu kavramı şekillendirir.
 Önceki örneklerde, `Map` `Int, Pauli` ilk durumda ve ikinci durumda tür parametrelerine sahip olacak şekilde düşünmek istersiniz `Double, String` .
 Çoğu bölüm için, bu tür parametrelerini sıradan türlermiş gibi kullanın. Dizi ve tanımlama oluşturmak, işlevleri ve işlemleri çağırmak ve sıradan ya da kesilebilir değişkenlere atamak için parametre türü değerlerini kullanın.
 
@@ -657,7 +657,7 @@ Prensibi, içindeki klasik mantık çok `SquareOperation` daha fazla olabilir, a
 
 ## <a name="recursion"></a>Özyineleme
 
-Q#callables 'in doğrudan veya dolaylı olarak özyinelemeli olmasına izin verilir.
+Q# callables 'in doğrudan veya dolaylı olarak özyinelemeli olmasına izin verilir.
 Diğer bir deyişle, bir işlem veya işlev kendisini çağırabilir veya çağrılabilir işlemi doğrudan veya dolaylı olarak çağıran başka bir çağrılabilir çağrısı yapabilir.
 
 Ancak özyineleme kullanımı hakkında iki önemli yorum vardır:

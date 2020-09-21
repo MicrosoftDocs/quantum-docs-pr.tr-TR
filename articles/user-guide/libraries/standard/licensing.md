@@ -2,30 +2,30 @@
 title: QDK için açık kaynak lisanslama
 description: Microsoft standart kitaplıkları ile lisans verme ve katkıda bulunma hakkında bilgi edinin Q# .
 author: martinro
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 2/16/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.licensing
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f964d5f4a4c20c8d53ceb4375c869030cd53ff07
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 4531d8c19e35f48f6e4c3cc2cebe3d82d6fa1025
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868466"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833688"
 ---
 # <a name="licensing"></a>Lisanslama #
 
-Hisse geliştirme kiti, [MIT Lisansı](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt)kapsamında lisanslanan kapsamlı bir açık kaynaklı işlevler ve işlemler koleksiyonuyla sağlanır.
+Hisse geliştirme kiti, [MIT Lisansı](https://github.com/Microsoft/Quantum/blob/main/LICENSE.txt)kapsamında lisanslanan kapsamlı bir açık kaynaklı işlevler ve işlemler koleksiyonuyla sağlanır.
 Standart kitaplığın hedef makineler arasında taşınabilir bölümleri, GitHub 'daki [Microsoft/miktarı](https://github.com/Microsoft/QuantumLibraries) ve diğer kitaplıklarla birlikte [hisse kuchemistry kitaplığı](xref:microsoft.quantum.chemistry.concepts.intro)gibi diğer kitaplıklardan elde edilebilir.
 
-Microsoft 'un hisse geliştirme seti, [Microsoft Research lisansı](https://github.com/Microsoft/Quantum-NC/blob/master/LICENSE)kapsamında lisanslanan özel kitaplık işlevleri ve işlemler de sağlar.
+Microsoft 'un hisse geliştirme seti, [Microsoft Research lisansı](https://github.com/Microsoft/Quantum-NC/blob/main/LICENSE)kapsamında lisanslanan özel kitaplık işlevleri ve işlemler de sağlar.
 Bunlar GitHub 'daki [Microsoft/hisse-NC](https://github.com/microsoft/quantum-nc) deposundan elde edilebilir.
 
 Ayrıca, standart kitaplıktan ve diğer kitaplıklardan işlevlerin ve işlemlerin kullanımını açıklayan ve gösteren birçok örnek vardır.
-Bu örnekler, [MIT Lisansı](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt)kapsamında lisanslanır.
+Bu örnekler, [MIT Lisansı](https://github.com/Microsoft/Quantum/blob/main/LICENSE.txt)kapsamında lisanslanır.
 Örnekler, GitHub 'daki [Microsoft/hisse](https://github.com/Microsoft/Quantum) deposundan elde edilebilir.
 
 ## <a name="contributing"></a>Katkıda bulunma ##

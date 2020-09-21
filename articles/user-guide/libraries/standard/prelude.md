@@ -2,19 +2,19 @@
 title: QDK 'deki iç işlemler ve işlevler
 description: Klasik işlevler ve Unitary, döndürme ve ölçüm işlemleri dahil olmak üzere QDK 'deki iç işlemler ve işlevler hakkında bilgi edinin.
 author: QuantumWriter
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4eb10e82a64381c503703be440be90e60f3a8622
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: dd507d0c644ae711a5e5a1dff9156f571cb0fa92
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863735"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833549"
 ---
 # <a name="the-prelude"></a>Prelude dili #
 
@@ -240,7 +240,7 @@ Yani, tek bir hedef makine, bu işlemleri söz konusu sistem için daha verimli 
 
 ### <a name="math"></a>Matematik ###
 
-<xref:microsoft.quantum.math>Ad alanı, .net temel sınıf kitaplığının [ `System.Math` sınıfından](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)birçok yararlı işlev sağlar.
+<xref:microsoft.quantum.math>Ad alanı, .net temel sınıf kitaplığının [ `System.Math` sınıfından](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true)birçok yararlı işlev sağlar.
 Bu işlevler, diğer işlevlerle aynı şekilde kullanılabilir Q# :
 
 ```qsharp

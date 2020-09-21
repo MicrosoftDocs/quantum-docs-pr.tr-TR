@@ -2,19 +2,19 @@
 title: Kuantum Rastgele Sayı Oluşturucusu Oluşturma
 description: Q#Hisse rastgele sayı Oluşturucu oluşturarak üst konum gibi temel hisse kavramları gösteren bir proje oluşturun.
 author: bromeg
-ms.author: megbrow@microsoft.com
+ms.author: megbrow
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d80f1c640ac7ddb0104ccbbb6de6d0e26ba05fd6
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: a0e8933e6a77d017db914e4bb969ea05f760a443
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863620"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834049"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Öğretici: Q\# dilinde Kuantum Rastgele Sayı Oluşturucusu uygulama
 
@@ -33,7 +33,7 @@ ms.locfileid: "88863620"
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-[Kuantum bilişimini anlama](xref:microsoft.quantum.overview.understanding) makalemizde de belirtildiği gibi kubit, süper konumda olabilen bir kuantum bilgi birimidir. Bir kubit ölçüldüğünde yalnızca 0 veya 1 olabilir. Ancak yürütme sırasında kubitin durumu bir ölçümle 0 veya 1 değerini elde etme olasılığını temsil eder. Olasılığa dayalı olan bu durum, süper konum olarak adlandırılır. Bu olasılığı kullanarak rastgele sayı oluşturabiliriz.
+[Kuantum bilişimini anlama](xref:microsoft.quantum.overview.understanding) makalemizde de belirtildiği gibi kubit, süper konumda olabilen bir kuantum bilgi birimidir. Bir kubit ölçüldüğünde yalnızca 0 veya 1 olabilir. Ancak, bir işlem çalışırken, qubit durumu bir 0 ya da bir ölçümle bir 1 okuma olasılığını temsil eder. Olasılığa dayalı olan bu durum, süper konum olarak adlandırılır. Bu olasılığı kullanarak rastgele sayı oluşturabiliriz.
 
 Bizim işlem sırasında, Q# `Qubit` yerel veri türüne Q# `Qubit` ayırmak için `using` deyimi kullanmamız gerekir. Ayrılan kubit her zaman `Zero` durumunda olur. 
 
@@ -74,11 +74,11 @@ Tam uygulamayı oluşturmak için Q# , aşağıdaki giriş noktasını Q# progra
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
-Yürütülebilir dosya, proje yapılandırmasına ve komut satırı seçeneklerine bağlı olarak simülatör veya kaynak tahmini aracında `@EntryPoint()` özniteliğiyle işaretlenmiş işlemi ya da işlevi çalıştırır.
+Program, `@EntryPoint()` Proje yapılandırmasına ve komut satırı seçeneklerine bağlı olarak, bir simülatör veya kaynak Estimator üzerinde özniteliğiyle işaretlenmiş işlem veya işlevi çalıştırır.
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-34":::
 
-Visual Studio’da betiği yürütmek için Ctrl + F5 tuşlarına basmanız yeterlidir.
+Visual Studio 'da, komut dosyasını çalıştırmak için CTRL + F5 tuşlarına basmanız yeterlidir.
 
 VS Code’da terminale aşağıdakileri yazarak Program.qs dosyasını ilk kez derleyin:
 

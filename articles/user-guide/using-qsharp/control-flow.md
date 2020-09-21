@@ -1,5 +1,5 @@
 ---
-title: İçindeki denetim akışıQ#
+title: İçindeki denetim akışı Q#
 description: Döngüler, koşullar, vb.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -9,23 +9,23 @@ uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: e8c873868d6f697fc90b23a38c11f35e46b40c4f
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867958"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759671"
 ---
-# <a name="control-flow-in-no-locq"></a>İçindeki denetim akışıQ#
+# <a name="control-flow-in-no-locq"></a>İçindeki denetim akışı Q#
 
 Bir işlem veya işlev içinde, her bir ifade, diğer genel zorunlu klasik dillere benzer şekilde sırayla çalışır.
 Ancak, denetim akışını üç farklı şekilde değiştirebilirsiniz:
 
-* `if`deyimler
-* `for`lerin
-* `repeat-until-success`lerin
+* `if` deyimler
+* `for` lerin
+* `repeat-until-success` lerin
 
-`if`Ve `for` Denetim akışı yapıları, çoğu klasik programlama diline tanıdık bir anlamda devam ediyor. [`Repeat-until-success`](#repeat-until-success-loop)döngüler Bu makalenin ilerleyen kısımlarında ele alınmıştır.
+`if`Ve `for` Denetim akışı yapıları, çoğu klasik programlama diline tanıdık bir anlamda devam ediyor. [`Repeat-until-success`](#repeat-until-success-loop) döngüler Bu makalenin ilerleyen kısımlarında ele alınmıştır.
 
 Daha önemlisi, `for` döngüler ve `if` deyimler, [özelleştirilmiş oluşturmaları](xref:microsoft.quantum.guide.operationsfunctions) otomatik olarak oluşturulan işlemlerde kullanılabilir. Bu senaryoda, bir döngünün adjoint `for` yönü tersine çevirir ve her yinelemenin adjoint değerini alır.
 Bu eylem, "ayakkabılar-ve-SOCKS" ilkesini izler: SOCKS 'yi almayı geri almak istiyorsanız, sonra da sholer ' i ve sonra da 
@@ -68,7 +68,7 @@ if (i == 1) {
 }
 ```
 
-## <a name="for-loop"></a>For döngüsü
+## <a name="for-loop"></a>for döngüsü
 
 `for`İfade, bir tamsayı aralığı veya dizi üzerinde yinelemeyi destekler.
 Deyimi, anahtar sözcüğünden `for` , ardından bir sembol veya sembol tanımlama anahtarından, anahtar sözcükten `in` ve Type `Range` ya da Array, All parantez içinde ve bir deyim bloğundan oluşur.
@@ -148,7 +148,7 @@ Daha fazla örnek ve ayrıntı için, bu makaledeki [Yinele-Until-Success örnek
 > [!TIP]   
 > İşlevler içinde yineleme-başarılı döngüleri kullanmaktan kaçının. İşlevler içinde karşılık gelen işlevleri sağlamak için *while* döngüleri kullanın. 
 
-## <a name="while-loop"></a>While döngüsü
+## <a name="while-loop"></a>while döngüsü
 
 Yinele-Success desenlerinin çok hisse özgü bir connotation vardır. Bu değerler, ' de adanmış dil yapısı olan belirli hisse algoritmaları sınıflarında yaygın olarak kullanılırlar Q# . Bununla birlikte, bir koşula göre kesintiye uğratır ve derleme zamanında yürütme uzunluğu bilinmiyor olan döngüler, bir hisse çalışma zamanında belirli bir ilgiyle işlenir. Ancak, işlevleri içindeki kullanımları sorunlu değildir çünkü bu döngüler yalnızca geleneksel (hisse olmayan) donanımda çalışan bir kod içerir. 
 
@@ -248,7 +248,7 @@ fixup {
 }
 ```
 
-### <a name="rus-without-fixup"></a>Şu olmadan RUS`fixup`
+### <a name="rus-without-fixup"></a>Şu olmadan RUS `fixup`
 
 Bu örnekte, düzeltme adımı olmadan bir RUS döngüsü gösterilmektedir. Kod, {5} ve kapılarını kullanarak önemli bir döndürme kapısı uygulayan $V _3 = (\cıvalation+ 2 ı Z)/\sqrt $ olan bir dayalı devresi `H` `T` .
 Döngü, ortalama $ \frac $ tekrarları içinde sona erer {8} {5} .
@@ -330,7 +330,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-Daha fazla bilgi için bkz. [Standart kitaplıkla birlikte sunulan birim testi örneği](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
+Daha fazla bilgi için bkz. [Standart kitaplıkla birlikte sunulan birim testi örneği](https://github.com/microsoft/Quantum/blob/main/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
