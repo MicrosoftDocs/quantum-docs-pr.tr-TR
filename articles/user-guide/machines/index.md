@@ -2,19 +2,19 @@
 title: Kuantum simülatörleri ve Q# programları
 description: Q# programları için hedef makineler olarak kullanılabilen kuantum simülatörlerini açıklar.
 author: QuantumWriter
-ms.author: Alan.Geller@microsoft.com
+ms.author: v-benbra
 ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 77401ca3642b89d708f338f852dc60bf7346b87b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6a2a4bb829301f9db9bd14f3240556a403b9a54f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868313"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833422"
 ---
 # <a name="quantum-simulators"></a>Kuantum simülatörleri
 
@@ -24,14 +24,14 @@ Kuantum simülatörleri, klasik bilgisayarlarda çalışıp bir Q# programı iç
 
 ## <a name="the-quantum-development-kit-qdk-quantum-simulators"></a>Quantum geliştirme seti (QDK) kuantum simülatörleri
 
-Kuantum simülatörü, algoritma için kuantum temel elemanlarının uygulanmasını sağlamaktan sorumludur. Buna `H`, `CNOT` ve `Measure` gibi temel eleman işlemlerinin yanı sıra kubit yönetimi ve izlemesi de dahildir. QDK, aynı kuantum algoritması için farklı yürütme modellerini temsil eden farklı kuantum simülatörü sınıflarını içerir. 
+Kuantum simülatörü, algoritma için kuantum temel elemanlarının uygulanmasını sağlamaktan sorumludur. Buna `H`, `CNOT` ve `Measure` gibi temel eleman işlemlerinin yanı sıra kubit yönetimi ve izlemesi de dahildir. QDK, aynı kuantum algoritması için farklı çalıştırma modellerini temsil eden farklı kuantum simülatörü sınıflarını içerir. 
 
 
 Her kuantum simülatörü türü, bu temel elemanların farklı uygulamalarını sağlayabilir. Örneğin, [tam durum simülatörü](xref:microsoft.quantum.machines.full-state-simulator), [kuantum durum vektörünün](xref:microsoft.quantum.glossary#quantum-state) tam simülasyonunu yaparak kuantum algoritmasını çalıştırırken, [kuantum bilgisayar izleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro) gerçek kuantum durumunu değerlendirmez. Bunun yerine algoritmaya ait geçit, kuantum bit ve diğer kaynak kullanımını izler.
 
 ### <a name="quantum-machine-classes"></a>Kuantum makine sınıfları
 
-Gelecekte QDK, diğer simülasyon türlerini ve kuantum donanım üzerinde yürütmeyi destekleyen başka kuantum makine sınıfları tanımlayacak. Temel alınan makine uygulamasını değiştirirken algoritmanın sabit kalmasına izin vermek, simülasyondaki bir algoritmayı test etme ve hata ayıklama işlemlerini kolaylaştırır ve sonra algoritmanın değişmediğinden emin olarak gerçek donanım üzerinde rahatça çalıştırılır.
+Gelecekte QDK, diğer simülasyon türlerini ve kuantum donanım üzerinde çalıştırmayı destekleyen başka kuantum makine sınıfları tanımlayacak. Temel alınan makine uygulamasını değiştirirken algoritmanın sabit kalmasına izin vermek, simülasyondaki bir algoritmayı test etme ve hata ayıklama işlemlerini kolaylaştırır ve sonra algoritmanın değişmediğinden emin olarak gerçek donanım üzerinde rahatça çalıştırılır.
 
 QDK, hepsi `Microsoft.Quantum.Simulation.Simulators` ad alanında tanımlanan çeşitli kuantum makine sınıfları içerir.
 

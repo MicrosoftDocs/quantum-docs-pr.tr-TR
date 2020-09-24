@@ -2,19 +2,19 @@
 title: Kuantum izleme simülatörü - Quantum geliştirme seti
 description: Klasik kodda hata ayıklamak ve bir Q# programının kaynak gereksinimlerini tahmin etmek için Microsoft kuantum bilgisayarı izleme simülatörünü nasıl kullanacağınızı öğrenin.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5d5efef037ff236bd040dfd88e94f7f3dd331aef
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 54a1f63461cfcc8146f7dc4d18d321238d77454d
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868228"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833363"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum geliştirme seti (QDK) kuantum izleme simülatörü
 
@@ -86,7 +86,7 @@ QDK, programlarınızda hata algılamak ve kuantum programı kaynak tahminleri g
 |-----| -----|
 |[Ayrı giriş denetleyicisi](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |Paylaşılan kubitlerle olası çakışmaları denetler |
 |[Geçersiz kılınan kubit kullanımı denetleyicisi](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |Programın zaten yayınlanmış olan bir kubite işlem uygulayıp uygulamadığını denetler |
-|[Temel işlem sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Kuantum programında çağrılan her işlem tarafından kullanılan temel yürütme sayısını verir  |
+|[Temel işlem sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Kuantum programında çağrılan her işlem tarafından kullanılan temel işleme sayısını verir  |
 |[Derinlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |Kuantum programında çağrılan her işlemin derinlik alt sınırını temsil eden sayıları toplar   |
 |[Genişlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |Kuantum programında her işlem tarafından ayrılan ve ödünç alınan kubit sayısını verir |
 
