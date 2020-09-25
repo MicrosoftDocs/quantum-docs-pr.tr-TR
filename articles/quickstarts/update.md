@@ -2,7 +2,7 @@
 title: Quantum geliştirme setini (QDK) güncelleştirme
 description: Q# projelerinizi ve Microsoft Quantum geliştirme setinizi güncel sürüme nasıl güncelleştirebileceğinizi açıklar.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
@@ -10,12 +10,12 @@ uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 84782d1628dd100c0939b2b12aa0a9aa8ab2b80e
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: d9678a61f5fe4ca466b6a84e9e4b68321c5baee3
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863637"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834933"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum geliştirme setini (QDK) güncelleştirme
 
@@ -41,7 +41,7 @@ Q# işlemlerini barındırmak için C# veya Python kullanmanızdan bağımsız o
 
 ### <a name="update-no-locq-projects-in-visual-studio"></a>Visual Studio'daki Q# projelerini güncelleştirme
  
-1. Visual Studio 2019’un en son sürümüne güncelleştirme hakkında yönergeler için [buraya](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) bakın.
+1. Visual Studio 2019’un en son sürümüne güncelleştirme hakkında yönergeler için [buraya](https://docs.microsoft.com/visualstudio/install/update-visual-studio) bakın.
 2. Çözümünüzü Visual Studio’da açın.
 3. Menüden **Derleme** -> **Çözümü Temizle**'yi seçin.
 4. .csproj dosyalarınızın her birinde, hedef Framework’ü `netcoreapp3.1` (veya bir kitaplık projesi ise `netstandard2.1`) olarak güncelleştirin.
