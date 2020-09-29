@@ -4,12 +4,13 @@ name: PrepareUniformSuperposition
 type: operation
 namespace: microsoft.quantum.preparation
 summary: >-
-  0 ile kodlayan durumlar üzerinde Tekdüzen üst konumu oluşturur `nIndices` .
+  0 ile kodlayan durumlar üzerinde Tekdüzen üst konumu oluşturur `nIndices - 1` .
 
 
   Diğer bir deyişle, bu Unitary $U $, $0 $ ile $M-$1 arasında tek bir üst konum oluşturarak bir giriş durumu $ \ket{0\cnoktalar 0} $ olarak sunulur. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket {0} = \frac {1} {\Sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
   \end{hizalaması} $ $.
+remarks: İşlem adjointable ' dır, ancak söz konusu `indexRegister` durumda ilk temel durumlar üzerinde bir Tekdüzen üst konumunda olmasını gerektirir `nIndices` .
 examples: >-
   Aşağıdaki örnek, {1} $3 $ qubits üzerinde $ \frac {\sqrt {6} } \ sum_ {j = 0} ^ {5} \ket{j} $ durumunu hazırlar.
 
@@ -20,6 +21,7 @@ examples: >-
 
   using(indexRegister = Qubit[3]) {
       PrepareUniformSuperposition(nIndices, LittleEndian(indexRegister));
+      // ...
   }
 
   ```
@@ -46,9 +48,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 442daa4affb6b59191af9117a8094f7bfbf71302
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: ff1e1e50992b209865c4e3b1c82e9faec9199d58
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89331339"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91485405"
