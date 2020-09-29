@@ -85,16 +85,16 @@ operations:
     $/Boldo/$2 durumunda verilen qubit $ $ \begin{hizalaması} \Omega (\rho) \mathrel{: =} \frac {1} {4} \ sum_ {\mu \{ \0 ' ı uygulayarak verilen qubit 'i hazırlar 1, 2, 3 \} } \sigma \_ {\mu} \rho \sigma \_ {\mu} ^ {\leger}, \end{hizalaması} $ $; $ \sigma \_ i $, $i $ TH Pauli işleci, ve $ \rho $, karışık bir durumu temsil eden bir yoğunluk operatöründür.
 - uid: microsoft.quantum.preparation.prepareuniformsuperposition
   summary: >-
-    0 ile kodlayan durumlar üzerinde Tekdüzen üst konumu oluşturur `nIndices` .
+    0 ile kodlayan durumlar üzerinde Tekdüzen üst konumu oluşturur `nIndices - 1` .
 
 
     Diğer bir deyişle, bu Unitary $U $, $0 $ ile $M-$1 arasında tek bir üst konum oluşturarak bir giriş durumu $ \ket{0\cnoktalar 0} $ olarak sunulur. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket {0} = \frac {1} {\Sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
     \end{hizalaması} $ $.
 metadata:
-  ms.openlocfilehash: 46bed785972355044c9ef9765ab957ca6d31e5f1
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 35645ba3566dbe0b8e9efa76fa4c3316ce7d5e47
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89339890"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464326"

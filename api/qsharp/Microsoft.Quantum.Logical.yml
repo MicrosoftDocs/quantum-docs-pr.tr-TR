@@ -45,6 +45,8 @@ functions:
   summary: Yalnızca bir sayı başka bir sayıdan küçük veya ona eşitse true değerini döndürür.
 - uid: microsoft.quantum.logical.lessthanorequall
   summary: Yalnızca bir sayı başka bir sayıdan küçük veya ona eşitse true değerini döndürür.
+- uid: microsoft.quantum.logical.lexographiccomparison
+  summary: Bir karşılaştırma işlevi verildiğinde, sözcüografiksel olarak iki diziyi karşılaştıran yeni bir işlev döndürür.
 - uid: microsoft.quantum.logical.nearlyequald
   summary: Yalnızca iki giriş neredeyse eşitse (yani, 1e-12 toleransı dahilinde) true değerini döndürür.
 - uid: microsoft.quantum.logical.not
@@ -70,9 +72,9 @@ functions:
 - uid: microsoft.quantum.logical.xor
   summary: İki değerin Boole dışlamalı bir ilişkisini döndürür.
 metadata:
-  ms.openlocfilehash: 0ab7077bc2cdf9bc76f3da701a88869f8bb9bf85
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 006100b659daedbcca30fe443756a185a965ee1e
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89340111"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464343"
