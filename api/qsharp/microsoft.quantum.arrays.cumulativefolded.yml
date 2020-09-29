@@ -1,0 +1,66 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.cumulativefolded
+name: CumulativeFolded
+type: function
+namespace: microsoft.quantum.arrays
+summary: >-
+  Eşlenmiş ve katlama işlevini tek bir işlevle birleştirir
+
+
+  Bu işlev, `fn` bir başlangıç durumundan başlayarak işlevi dizi üzerinden yineler `state` ve ilk durumu dahil etmez tüm ara değerlerini döndürür.
+examples: >-
+  ```Q#
+
+  // same as sums = [1, 3, 6, 10, 15]
+
+  let sums = CumulativeFolded(PlusI, 0, SequenceI(1, 5));
+
+  ```
+syntax: "function CumulativeFolded (fn : (('State, 'T) -> 'State), state : 'State, array : 'T[]) : 'State[]"
+input:
+  content: "(fn : (('State, 'T) -> 'State), state : 'State, array : 'T[])"
+  types:
+  - name: fn
+    summary: Dizi üzerinde katlanmak için bir işlev
+    isFunction: true
+    input:
+      types:
+      - uid: "'State"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'State"
+        isLocal: true
+  - name: state
+    summary: Katlanın ilk durumu
+    uid: "'State"
+    isLocal: true
+  - name: array
+    summary: Katlaneklenecek değer dizisi
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'State[]"
+  types:
+  - summary: >-
+      Son durum da dahil olmak üzere tüm ara durumlar, ilk durumu değil.
+
+      Çıktı dizisinin uzunluğu, ile aynı uzunluktadır `array` .
+    isArray: true
+    uid: "'State"
+    isLocal: true
+typeParameters:
+- uid: "'State"
+  summary: İşlevin üzerinde çalıştığı durumların türü, `fn` Yani, ilk giriş ve dönüş olarak kabul eder.
+- uid: "'T"
+  summary: '`array`Öğelerin türü.'
+metadata:
+  ms.openlocfilehash: 02779107bd5556a7f94e8a9ae2798cef98675221
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494742"
