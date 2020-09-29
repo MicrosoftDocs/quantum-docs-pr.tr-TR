@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5036b4d401bb775a7fee2252ca26e7725bc19004
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 28e880445bf61150d7940730009a5482298adae2
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834151"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91492362"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -23,6 +23,24 @@ Bu makale her Quantum Development Kit sürümüne ilişkin bilgileri içerir.
 Yükleme yönergeleri için bu [yükleme kılavuzuna](xref:microsoft.quantum.install) başvurun.
 
 Güncelleştirme yönergeleri için bu [güncelleştirme kılavuzuna](xref:microsoft.quantum.update) başvurun.
+
+## <a name="version-01220092803"></a>Sürüm 0.12.20092803
+
+*Yayın tarihi: 29 Eylül 2020*
+
+Bu sürüm aşağıdakileri içerir:
+
+- Farklı ön ve arka uçlar arasında ortak bir biçim olarak tasarlanan [hisse ara gösteriminin (QıR)](https://github.com/microsoft/qsharp-language/tree/main/Specifications/QIR#quantum-intermediate-representation-qir) duyurusu ve taslak belirtimi. Ayrıca bkz. QıR 'de [Blog gönderimiz](https://devblogs.microsoft.com/qsharp/introducing-quantum-intermediate-representation-qir) .
+- Ayrıca, tüm [ Q# belgeleri](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language#q-language)içeren yeni [ Q# dil](https://github.com/microsoft/qsharp-language) deponuzu başlatın.
+- Çok sayıda qubitleri kapsayan programlar için performans iyileştirmeleri: daha iyi geçit Fusion kararlar uygulaması; Linux sisteminde geliştirilmiş paralelleştirme; Kapı yürütmenin akıllı zamanlaması eklendi; hata düzeltmeleri.
+- IntelliSense özellikleri artık Q# Visual Studio 'daki dosyalar için ve proje dosyası olmadan bile Visual Studio Code desteklenir.
+- 2 Q# . sayısal veri türleri için daha iyi destek dahil olmak üzere çeşitli/Python birlikte çalışabilirlik geliştirmeleri ve hata düzeltmeleri.
+- Microsoft. hisse. Arrays ad alanı geliştirmeleri (bkz. [Microsoft/Nicetumlibraries # 313](https://github.com/microsoft/QuantumLibraries/issues/313)).
+- Yalnızca iki qubit kullanan yeni bir [Yinele-başarılı örneği](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/repeat-until-success) eklendi.
+
+Son sürümden itibaren, açık kaynak depolarımızın her birinde varsayılan dal olarak yeniden adlandırıldı `main` .
+
+[Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), [ı Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24) ve [katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24)için kapalı PR 'ler tam listesine bakın.
 
 ## <a name="version-01220082513"></a>Sürüm 0.12.20082513
 

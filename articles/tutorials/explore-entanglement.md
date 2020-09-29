@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6fd7494d341a83a1354d23a283d21a7ae535e49f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: ac9c060c157ba5ee3bc66852c42298ac8adcb3b3
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834032"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91492345"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Öğretici: Q\# ile dolaşıklığı keşfetme
 
@@ -83,7 +83,7 @@ Bizim amamız, belirli bir hisse durumunda iki qubit hazırlanmaktır. Bu durumd
 
 ### <a name="initialize-qubit-using-measurement"></a>Ölçüyü kullanarak qubit Başlat
 
-Aşağıdaki ilk kodda, ' de qubits ile nasıl çalışacağız gösterilmektedir Q# .  İki işlem tanıtıyoruz [`M`](xref:microsoft.quantum.intrinsic.m) ve [`X`](xref:microsoft.quantum.intrinsic.x) bir qubit durumunu dönüştürecek. Bu kod parçacığında parametre olarak bir kubit ile kubitin içinde bulunmasını istediğimiz durumu temsil eden `desired` parametresini alan `SetQubitState` işlemi tanımlanmıştır.  `SetQubitState` işlemi, `M` işlemini kullanarak kubit üzerinde bir ölçüm gerçekleştirir.  Q#' De, bir qubit ölçümü her zaman `Zero` ya da döndürür `One` .  Ölçüm, istenen değere eşit olmayan bir değer döndürürse, `SetQubitState` "qubit" değerini çevirir; diğer bir deyişle, bir işlem çalıştırır ve bu, `X` qubit durumunu döndürülen ve geri çevrilen bir ölçünün olasılıkların ne olduğu yeni bir duruma geçirir `Zero` `One` . Bu şekilde, `SetQubitState` her zaman hedef qubit 'i istenen duruma geçirir.
+Aşağıdaki ilk kod parçacığında ' de qubits ile nasıl çalışacağız gösterilmektedir Q# .  İki işlem tanıtıyoruz [`M`](xref:microsoft.quantum.intrinsic.m) ve [`X`](xref:microsoft.quantum.intrinsic.x) bir qubit durumunu dönüştürecek. Bu kod parçacığında parametre olarak bir kubit ile kubitin içinde bulunmasını istediğimiz durumu temsil eden `desired` parametresini alan `SetQubitState` işlemi tanımlanmıştır.  `SetQubitState` işlemi, `M` işlemini kullanarak kubit üzerinde bir ölçüm gerçekleştirir.  Q#' De, bir qubit ölçümü her zaman `Zero` ya da döndürür `One` .  Ölçüm, istenen değere eşit olmayan bir değer döndürürse, `SetQubitState` "qubit" değerini çevirir; diğer bir deyişle, bir işlem çalıştırır ve bu, `X` qubit durumunu döndürülen ve geri çevrilen bir ölçünün olasılıkların ne olduğu yeni bir duruma geçirir `Zero` `One` . Bu şekilde, `SetQubitState` her zaman hedef qubit 'i istenen duruma geçirir.
 
 İçeriğini `Program.qs` aşağıdaki kodla değiştirin:
 
@@ -112,7 +112,7 @@ Q#İşlem bir hisse alt yordamı. Diğer bir deyişle, diğer hisse işleme ça�
 
 İşlemin bağımsız değişkenleri parantez içinde tanımlama grubu olarak belirtilir.
 
-Bir iki nokta işareti eklendikten sonra işlemin dönüş türü belirtilir. Bu örnekte `SetQubitState` işleminin dönüşü yoktur, dolayısıyla `Unit` döndürüyor olarak işaret edilir. Bu, Q# C# ' de `unit` kabaca benzer olan `void` ve Python 'da boş bir tanımlama grubu olan ( `()` tür Ipucuyla temsil edilen) F # ' ın eşdeğeridir `Tuple[()]` .
+Bir iki nokta işareti eklendikten sonra işlemin dönüş türü belirtilir. Bu durumda, `SetQubitState` işlemin dönüş türü yoktur, bu nedenle döndürülen olarak işaretlenir `Unit` . Bu, Q# C# ' de `unit` kabaca benzer olan `void` ve Python 'da boş bir tanımlama grubu olan ( `()` tür Ipucuyla temsil edilen) F # ' ın eşdeğeridir `Tuple[()]` .
 
 İlk işlem sırasında iki hisse işlem kullandınız Q# :
 
@@ -159,7 +159,7 @@ Bu işlem (`TestBellState`) `count` yinelemeleri için döngü yapar, bir kubitt
 
 Varsayılan olarak, ' deki değişkenler Q# sabittir; bu değerler bağlandıktan sonra değiştirilemez. Sabit bir değişkenin bağlamasını göstermek için `let` anahtar sözcüğü kullanılır. İşlem bağımsız değişkenleri her zaman sabittir.
 
-Değeri değişebilen `numOnes` gibi bir değişkene ihtiyacınız varsa değişkeni `mutable` anahtar sözcüğüyle bildirebilirsiniz. Değişebilir değişkenin değeri `setQubitState` deyimi kullanılarak değiştirilebilir.
+Değeri değişebilen `numOnes` gibi bir değişkene ihtiyacınız varsa değişkeni `mutable` anahtar sözcüğüyle bildirebilirsiniz. Değişebilir değişkenin değeri `set` deyimi kullanılarak değiştirilebilir.
 
 Her iki durumda da, değişkenin türü derleyici tarafından çıkarsanır. Q# değişkenler için herhangi bir tür ek açıklaması gerektirmez.
 
@@ -169,7 +169,7 @@ Her iki durumda da, değişkenin türü derleyici tarafından çıkarsanır. Q# 
 
 ## <a name="run-the-code-from-the-command-prompt"></a>Komut isteminden kodu çalıştırma
 
-Kodu çalıştırmak için, komutunu sağlamamız durumunda, çağrılabilir olarak çalıştırılabilir *olan* derleyiciyi belirtmemiz gerekir `dotnet run` . Bu, Q# `@EntryPoint()` çağrılabilir: `TestBellState` Bu durumda işlem tarafından doğrudan bir satır eklenerek, dosyada basit bir değişiklik ile yapılır. Tam kod şu şekilde olmalıdır:
+Kodu çalıştırmak için, komut sağlamamız durumunda *, derleyicinin çalıştırılabilir olduğunu* söylememiz gerekir `dotnet run` . Bu, Q# `@EntryPoint()` çağrılabilir: `TestBellState` Bu durumda işlem tarafından doğrudan bir satır eklenerek, dosyada basit bir değişiklik ile yapılır. Tam kod şu şekilde olmalıdır:
 
 ```qsharp
 namespace Bell {
@@ -237,7 +237,7 @@ Test results (# of 0s, # of 1s):
 
 ### <a name="x-flips-qubit-state"></a>`X` qubit durumunu çevirir
 
-İlk olarak kubiti çevirmeyi deneyeceğiz. (Kubit `Zero` durumundaysa `One` durumuna çevireceğiz veya aksi halde işlemin tam tersini yapacağız.) Bu, kubiti `TestBellState` işleminde ölçmeden önce bir `X` işlemi gerçekleştirilerek yapılır:
+İlk olarak, qubit 'i (qubit durumunda ise bunun tersi) ters çevirmeyi deneyeceğiz `Zero` `One` . Bu, kubiti `TestBellState` işleminde ölçmeden önce bir `X` işlemi gerçekleştirilerek yapılır:
 
 ```qsharp
 X(qubit);
