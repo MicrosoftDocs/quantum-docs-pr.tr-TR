@@ -1,23 +1,24 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.applytoelementa
-name: ApplyToElementA
+uid: microsoft.quantum.canon.applytorestca
+name: ApplyToRestCA
 type: operation
 namespace: microsoft.quantum.canon
 summary: >-
-  Bir dizinin belirli bir öğesine bir işlem uygular.
+  Bir işlemi, bir dizinin ilk öğesi hariç tümüne uygular.
 
 
-  Bir işlem `op` , dizin ve bir `index` hedef dizisi verildiğinde `targets` , geçerlidir `op(targets[index])` .
-syntax: "operation ApplyToElementA (op : ('T => Unit is Adj), index : Int, targets : 'T[]) : Unit"
+  Bir işlem `op` ve bir hedef dizisi verildiğinde `targets` , geçerlidir `op(Rest(targets))` .
+syntax: "operation ApplyToRestCA (op : ('T[] => Unit is Adj + Ctl), targets : 'T[]) : Unit"
 input:
-  content: "(op : ('T => Unit is Adj), index : Int, targets : 'T[])"
+  content: "(op : ('T[] => Unit is Adj + Ctl), targets : 'T[])"
   types:
   - name: op
     summary: Uygulanacak bir işlem.
     isOperation: true
     input:
       types:
-      - uid: "'T"
+      - isArray: true
+        uid: "'T"
         isLocal: true
     output:
       types:
@@ -25,10 +26,7 @@ input:
         uid: Unit
     functors:
     - Adjoint
-  - name: index
-    summary: Hedef dizisine bir dizin.
-    isPrimitive: true
-    uid: Int
+    - Controlled
   - name: targets
     isArray: true
     uid: "'T"
@@ -43,14 +41,15 @@ typeParameters:
   summary: Uygulanacak işlemin giriş türü.
 functors:
 - Adjoint
+- Controlled
 seeAlso:
-- microsoft.quantum.canon.applytoelement
-- microsoft.quantum.canon.applytoelementc
-- microsoft.quantum.canon.applytoelementca
+- microsoft.quantum.canon.applytorest
+- microsoft.quantum.canon.applytoresta
+- microsoft.quantum.canon.applytorestc
 metadata:
-  ms.openlocfilehash: b900efeb7df4ee6f26837b269e7500878d78bf94
+  ms.openlocfilehash: 9bffb10b700a84b2c1d42468ad5ca969ae0c5ef5
   ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: tr-TR
   ms.lasthandoff: 09/29/2020
-  ms.locfileid: "91468609"
+  ms.locfileid: "91494390"
