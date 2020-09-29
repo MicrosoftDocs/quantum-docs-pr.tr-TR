@@ -1,0 +1,81 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.sorted
+name: Sorted
+type: function
+namespace: microsoft.quantum.arrays
+summary: Dizi verildiğinde, belirli bir karşılaştırma işlevine göre sıralanan bu dizinin öğelerini döndürür.
+remarks: >-
+  İşlevin `comparison` geçişli olduğu varsayılır, `comparison(a, b)` ve `comparison(b, c)` daha sonra `comparison(a, c)` varsayılır. Bu özellik tutmadıysanız, bu işlevin çıktısı yanlış olabilir.
+
+
+  Bu bir işlev olduğundan, iki öğe içinde eşit kabul edildiğinde bile sonuçlar tamamen belirleyici olur `comparison` ; Yani, `comparison(a, b)` ve `comparison(b, a)` her ikisi de olur `true` .
+
+  Özellikle, bu işlev tarafından gerçekleştirilen sıralamanın kararlı olduğu garanti edilir. böylece, iki öğe ve `a` `b` içinde bu sırada gerçekleşirse `array` `comparison` , ve sonrasında `a` da daha önce de görüntülenir `b` .
+
+
+  Örneğin:
+
+
+  ```Q#
+
+  function LastDigitLessThanOrEqual(left : Int, right : Int) : Bool {
+      return LessThanOrEqualI(
+          left % 10, right % 10
+      );
+  }
+
+
+  function SortedByLastDigit() : Int[] {
+      return Sorted(LastDigitLessThanOrEqual, [3, 37, 11, 17]);
+  }
+
+  // returns [11, 3, 37, 17].
+
+  ```
+examples: >-
+  Aşağıdaki kod parçacığı, bir tamsayılar dizisini artan sırada gerçekleşecek şekilde sıralar:
+
+
+  ```Q#
+
+  let sortedArray = Sorted(LessThanOrEqualI, [3, 17, 11, -201, -11]);
+
+  ```
+syntax: "function Sorted (comparison : (('T, 'T) -> Bool), array : 'T[]) : 'T[]"
+input:
+  content: "(comparison : (('T, 'T) -> Bool), array : 'T[])"
+  types:
+  - name: comparison
+    summary: İki öğeyi karşılaştıran bir işlev `a` , daha küçük veya eşittir olarak kabul edilir `b` `comparison(a, b)` `true` .
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array
+    summary: Sıralanacak dizi.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Her öğesinin türü `array` .
+metadata:
+  ms.openlocfilehash: d20fad7286845f21dbb7e609d2bec37ee14adb90
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494590"
