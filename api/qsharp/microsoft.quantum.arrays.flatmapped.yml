@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.flatmapped
+name: FlatMapped
+type: function
+namespace: microsoft.quantum.arrays
+summary: Bir dizi ve bir dizi öğesini bir çıktı dizisine eşleyen bir işlev verildiğinde, her dizi öğesi için birleştirilmiş çıkış dizilerini döndürür.
+examples: >-
+  ```Q#
+
+  let Numbers = SequenceI(1, _); // generates numbers starting from 1
+
+  let values = FlatMapped(Numbers, [1, 2, 3]);
+
+  // values = [1, 1, 2, 1, 2, 3]
+
+  ```
+syntax: "function FlatMapped (mapper : ('TInput -> 'TOutput[]), array : 'TInput[]) : 'TOutput[]"
+input:
+  content: "(mapper : ('TInput -> 'TOutput[]), array : 'TInput[])"
+  types:
+  - name: mapper
+    summary: Öğesinden `'TInput` öğesine `'TOutput[]` , dizi öğelerini eşlemek için kullanılan bir işlev.
+    isFunction: true
+    input:
+      types:
+      - uid: "'TInput"
+        isLocal: true
+    output:
+      types:
+      - isArray: true
+        uid: "'TOutput"
+        isLocal: true
+  - name: array
+    summary: Bir dizi öğe.
+    isArray: true
+    uid: "'TInput"
+    isLocal: true
+output:
+  content: "'TOutput[]"
+  types:
+  - summary: "`'TOutput[]`Eşleme işlevi tarafından oluşturulan tüm dizilerin bitiştirilmesi olan dizi."
+    isArray: true
+    uid: "'TOutput"
+    isLocal: true
+typeParameters:
+- uid: "'TInput"
+  summary: '`array`Öğelerin türü.'
+- uid: "'TOutput"
+  summary: '`mapper`İşlevi bu türün dizilerini döndürür.'
+metadata:
+  ms.openlocfilehash: 358e45ce25825b333def906411ff3b27607b1195
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494680"
