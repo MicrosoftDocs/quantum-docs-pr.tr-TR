@@ -2,19 +2,19 @@
 title: Kuantum bilgisayarlar ve kuantum simülatörleri
 description: Kuantum donanımı, kuantum simülatörleri ve kuantum işlemlerinin nasıl çalıştığı hakkında bilgi edinin.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.simulators
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 299baea75865a4f0ece6b490cef3301dd2a672ac
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8691838b2d6c54baa40042245eee8c901a7ca965
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867718"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835018"
 ---
 # <a name="quantum-computers-and-quantum-simulators"></a>Kuantum bilgisayarlar ve kuantum simülatörleri
 
@@ -33,7 +33,7 @@ Kuantum bilgisayarlar, doğru bir şekilde çalışmak üzere çok sayıda zorlu
 
 ## <a name="quantum-simulators"></a>Kuantum simülatörleri
 
-Klasik bilgisayarlarda çalışan kuantum simülatörleri, kuantum algoritmalarının bir kuantum sisteminde yürütülmesinin simülasyonunu yapmanıza olanak sağlar.  Microsoft Quantum geliştirme seti (QDK), diğer özelleştirilmiş kuantum simülatörlerinin yanı sıra tam durumlu bir vektör simülatörü içerir.
+Klasik bilgisayarlarda çalışan kuantum simülatörleri, kuantum algoritmalarının bir kuantum sisteminde hesaplanmasının simülasyonunu yapmanıza olanak sağlar.  Microsoft Quantum geliştirme seti (QDK), diğer özelleştirilmiş kuantum simülatörlerinin yanı sıra tam durumlu bir vektör simülatörü içerir.
 
 ## <a name="topological-qubit"></a>Topolojik kubit
 

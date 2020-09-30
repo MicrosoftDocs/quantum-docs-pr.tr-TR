@@ -1,20 +1,21 @@
 ---
 title: Q# ve Python ile geliştirme
+description: Python kullanarak Q# uygulaması oluşturmayı öğrenin.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 01a5c31a7a920a69f4f90701d370f3a772d2c4d2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f6a2a7d1888cfe458fa3989a27d71fcdeed0f01f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866749"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834168"
 ---
 # <a name="develop-with-no-locq-and-python"></a>Q# ve Python ile geliştirme
 
@@ -55,7 +56,7 @@ Q# işlemlerini çağırmak için Python konak programları geliştirmek üzere 
     pip install qsharp
     ```
 
-1. Jupyter ile Python tarafından kullanılan, Q# işlemlerinin derlenmesine ve yürütülmesine yönelik temel işlevselliği sağlayan IQ# çekirdeğini yükleyin.
+1. Jupyter ile Python tarafından kullanılan, Q# işlemlerinin derlenmesine ve çalıştırılmasına yönelik temel işlevselliği sağlayan IQ# çekirdeğini yükleyin.
 
     ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
@@ -73,7 +74,7 @@ Q# işlemlerini çağırmak için Python konak programları geliştirmek üzere 
     
 ***
 
-İşte bu kadar! Artık Jupyter için hem `qsharp` Python paketine hem de IQ# çekirdeğine sahipsiniz. Bu paket Python’dan Q# işlemlerini derlemek ve yürütmek üzere temel işlevselliği sağlar ve Q# Jupyter Not Defterlerini kullanmanıza olanak tanır.
+İşte bu kadar! Artık Jupyter için hem `qsharp` Python paketine hem de IQ# çekirdeğine sahipsiniz. Bu paket Python’dan Q# işlemlerini derleyip çalıştırmak için gereken temel işlevselliği sağlar ve Q# Jupyter Not Defterlerini kullanmanıza olanak tanır.
 
 ## <a name="choose-your-ide"></a>IDE’nizi seçin
 
@@ -88,7 +89,7 @@ Farklı bir düzenleyici kullanmak istiyorsanız, yukarıdaki yönergelerle gere
 
 ## <a name="write-your-first-no-locq-program"></a>İlk Q# programınızı yazma
 
-Artık basit bir Q# programı yazarak ve yürüterek `qsharp` Python paketi yüklemenizi doğrulamaya hazırsınız.
+Şimdi basit bir Q# programı yazıp çalıştırarak `qsharp` Python paketi yüklemenizi doğrulamaya hazırsınız.
 
 1. `Operation.qs` adlı bir dosya oluşturup dosyaya aşağıdaki kodu ekleyerek küçük bir Q# işlemi oluşturun:
 
@@ -109,11 +110,11 @@ Artık basit bir Q# programı yazarak ve yürüterek `qsharp` Python paketi yük
     python host.py
     ```
 
-1. Çağırdığınız işlemin sonucunu görmeniz gerekir. Bu durumda, işleminiz rastgele bir sonuç oluşturduğundan ekranda `0` veya `1` yazdırılmış olduğunu görürsünüz. Programı tekrar tekrar yürütürseniz, her sonucu yaklaşık olarak yarı sürede görmeniz gerekir.
+1. Çağırdığınız işlemin sonucunu görmeniz gerekir. Bu durumda, işleminiz rastgele bir sonuç oluşturduğundan ekranda `0` veya `1` yazdırılmış olduğunu görürsünüz. Programı tekrar tekrar çalıştırırsanız her sonucu yaklaşık olarak yarı sürede görmeniz gerekir.
 
 > [!NOTE]
 > * Python kodu yalnızca normal bir Python programıdır. Python programını yazmak ve Q# işlemlerini çağırmak için Python tabanlı Jupyter Not Defterleri dahil olmak üzere herhangi bir Python ortamını kullanabilirsiniz. Python programı, Python kodunun kendisi ile aynı klasörde bulunan tüm .qs dosyalarından Q# işlemlerini içeri aktarabilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Quantum geliştirme setini tercih ettiğiniz ortama yüklediğinize göre, [ilk kuantum programınızı](xref:microsoft.quantum.quickstarts.qrng) yazıp çalıştırmak için bu öğreticiyi izleyebilirsiniz.
+Quantum geliştirme setini tercih ettiğiniz ortamda test ettiğinize göre, [ilk kuantum programınızı](xref:microsoft.quantum.quickstarts.qrng) yazıp çalıştırmak için bu öğreticiyi izleyebilirsiniz.
