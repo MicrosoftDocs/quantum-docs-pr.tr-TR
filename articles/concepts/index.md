@@ -9,18 +9,18 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1b767313b7f421ddaba62ab2be99fe10b8d0430e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1523bfdfec08fd093f1c7ea999e23e85fc3cfc14
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834559"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91478945"
 ---
 # <a name="quantum-computing-history-and-background"></a>Kuantum bilişiminin geçmişi ve arka planı
 
 Son birkaç yıl içinde birkaç yeni bilgisayar teknolojisi ortaya çıktı ve kuantum bilişimi muhtemelen geliştiricilerin tarafında en büyük yaklaşım değişimini gerektiren teknoloji oldu.  Kuantum bilgisayarlar 1980’li yıllarda [Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) ve [Yuri Manin](https://en.wikipedia.org/wiki/Yuri_Manin) tarafından önerilmiştir.  Kuantum bilişiminin altında yatan sezgi, genellikle fiziğin en büyük sıkıntılarından biri olarak görülen şeydir: basit sistemleri bile modelleyememe sorunuyla karşı karşıya kalan dikkat çekici bilimsel ilerleme. Bildiğiniz gibi kuantum mekaniği 1900 ile 1925 arasında geliştirildi ve kimya, yoğun madde fiziği ve bilgisayar yongalarından LED aydınlatmaya varan teknolojilerin dayandığı mihenk taşı olmaya devam ediyor.  Bu başarılara karşın, en basit sistemlerin bazıları bile insanın kuantum mekaniğiyle modelleme becerisinin ötesinde görünmektedir.  Bunun nedeni, birbiriyle etkileşimde bulunan birkaç düzine parçacığın gerektirdiği bilgi işlem gücünün, geleneksel bir bilgisayarın yüzlerce yılda sağlayabileceğinden bile fazla olmasıdır.
 
-Kuantum mekaniğinin benzetimini yapmanın neden zor olduğunu anlamanın birçok yolu vardır.  Belki de en basit olanı, kuantum teorisinin kuantum düzeyinde bir maddenin eşzamanlı olarak birkaç farklı olası yapılandırma (*hal* olarak bilinir) halinde olduğunu söyleyen bir teori olarak yorumlanmasıdır.  Klasik olasılık teorisinin aksine, kuantum halinin potansiyel olarak gözlemlenebilecek bu çok sayıdaki yapılandırması bir dalga havuzundaki dalgalar gibi birbiriyle çakışabilir.  Bu çakışma, kuantum hal yapılandırmalarını elde etmek için istatistiksel örnekleme kullanmayı engeller.  Bunun yerine, kuantum evrimini anlamak istiyorsak bir kuantum sisteminin bulunması *mümkün olan her* yapılandırmayı izlememiz gerekir.  
+Kuantum mekaniğinin benzetimini yapmanın neden zor olduğunu anlamanın birçok yolu vardır.  Belki de en basit olanı, kuantum teorisinin, kuantum düzeyinde bir maddenin çok sayıda olası yapılandırma (*hal* olarak bilinir) halinde olduğunu söyleyen bir teori olarak yorumlanmasıdır.  Klasik olasılık teorisinin aksine, kuantum halinin potansiyel olarak gözlemlenebilecek bu çok sayıdaki yapılandırması bir dalga havuzundaki dalgalar gibi birbiriyle çakışabilir.  Bu çakışma, kuantum hal yapılandırmalarını elde etmek için istatistiksel örnekleme kullanmayı engeller.  Bunun yerine, kuantum evrimini anlamak istiyorsak bir kuantum sisteminin bulunması *mümkün olan her* yapılandırmayı izlememiz gerekir.  
 
 Elektronların $40$ konumdan birinde olabileceği bir elektron sistemi düşünün.  Bunun sonucunda elektronlar $2^{40}$ yapılandırmanın herhangi birinde olabilir (çünkü her konumda elektron olabilir veya olmayabilir). Elektronların kuantum halini geleneksel bir bilgisayar belleğinde depolamak $130$ GB’tan fazla bellek gerektirir!  Bu büyük bir boyut olmasına karşın bazı bilgisayarların erişmesi mümkündür.  Parçacıkların $41$ konumdan birinde olmasına izin verseydik $2^{41}$ konumunda iki kat yapılandırma olurdu ve sonuç olarak kuantum halin depolanması için $260$ GB’tan fazla bellek gerekirdi. Hali geleneksel olarak depolamak istiyorsak dünyanın en güçlü makinelerinin bellek kapasitesini hızlıca aşacağımız için, konum sayısını artırmaya yönelik bu oyun sonsuza kadar oynanamaz.  Birkaç yüz elektrona ulaşıldığında, sistemi depolamak için gereken bellek evrendeki parçacık sayısını aşar. Bu nedenle, geleneksel bilgisayarlarımızla kuantum dinamiklerini benzetmek mümkün değildir. Ancak doğada bu tür sistemler, geleneksel bilişim gücüyle evrimlerini tasarlayıp benzetme yetersizliğinin farkında olmadan, kuantum mekaniği kanunlarına uygun olarak zaman içinde evrilir.
 
