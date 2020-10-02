@@ -2,23 +2,23 @@
 title: Q# programlama dili ve QDK nedir?
 description: Microsoft Quantum geliştirme seti, Q# programlama dili ve kuantum programları oluşturma hakkında bilgi edinin.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5db574b0380ffa1616cb3959d84925854df4e321
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 21adfcc1c5321d87665adb39a3c838bbda0b8861
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863787"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834576"
 ---
 # <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Q# programlama dili ve QDK nedir?
 
-Q#, Microsoft'un kuantum algoritmaları geliştirmeye ve çalıştırmaya yönelik açık kaynak programlama dilidir. Bu, [Q# kitaplıklarını](xref:microsoft.quantum.libraries), [kuantum simülatörlerini](xref:microsoft.quantum.machines), [diğer programlama ortamlarına yönelik uzantıları](xref:microsoft.quantum.install) ve [API belgelerini](xref:microsoft.quantum.standardlibsintro) içeren Quantum geliştirme setinin (QDK) bir parçasıdır. QDK, Standart Q# kitaplığına ek olarak Kimya, Makine Öğrenmesi ve Sayısal kitaplıklarını da içerir.
+Q#, Microsoft'un kuantum algoritmaları geliştirmeye ve çalıştırmaya yönelik açık kaynak programlama dilidir. Bu, [Q# kitaplıklarını](xref:microsoft.quantum.libraries), [kuantum simülatörlerini](xref:microsoft.quantum.machines), [diğer programlama ortamlarına yönelik uzantıları](xref:microsoft.quantum.install) ve [API belgelerini](xref:microsoft.quantum.apiref-intro) içeren Quantum geliştirme setinin (QDK) bir parçasıdır. QDK, Standart Q# kitaplığına ek olarak Kimya, Makine Öğrenmesi ve Sayısal kitaplıklarını da içerir.
 
 Q#, bir programlama dili olarak Python, C# ve F# dillerindeki alışıldık öğeleri kullanır ve döngüler, if/then deyimleri ve ortak veri türleri içeren programlar yazmak için temel bir yordamsal modeli destekler. Ayrıca kuantum odaklı yeni veri yapıları ve işlemleri sunar.
 
@@ -54,7 +54,7 @@ Programı derleyip çalıştırdığınızda, bir kuantum simülatörü örneği
 
 Q# kodunu simülatörde yalıtmak, algoritmaların kuantum fiziği yasalarını izlemesini ve kuantum bilgisayarlarda doğru şekilde çalışmasını sağlar.
 
-![qsharp-code-flow](~/media/qsharp-code-flow.png)
+![Qsharp kod akışı](~/media/qsharp-code-flow.png)
 
 ## <a name="how-do-i-use-the-qdk"></a>QDK’yi nasıl kullanırım?
 

@@ -1,24 +1,27 @@
 ---
 title: Q# uygulamaları ile geliştirme
-author: KittyYeungQ
-ms.author: kitty
-ms.date: 4/24/2020
+description: Komut isteminden çalışan bir Q# uygulaması oluşturmayı öğrenin.
+author: bradben
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a630b2307f5d95321fb26f480d7a441ddba846fc
-ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+ms.openlocfilehash: 68f530d80e5c5f40dc2bcbb185879c3cb6f93f91
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358267"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834423"
 ---
 # <a name="develop-with-no-locq-applications"></a>Q# uygulamaları ile geliştirme
 
-Q# programları, C#, F# veya Python gibi bir konak dilinde sürücü olmadan kendi başına yürütülebilir.
+Ortamınıza karşılık gelen sekmedeki yönergeleri izleyin.
+
+Q# programları C#, F# veya Python gibi bir konak dilinde sürücü olmadan kendi başına çalışabilir.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
@@ -45,7 +48,7 @@ Visual Studio Codespaces’ı yapılandırmak için:
 3. Artık yeni ortamınızı başlatabilir ve [VS Codespaces Bulut IDE’si](https://online.visualstudio.com/environments) aracılığıyla tarayıcıda geliştirme yapmaya başlayabilirsiniz. Alternatif olarak, yerel VS Code yüklemenizi kullanmanız ve Codespaces’ı [uzak ortam](https://docs.microsoft.com/visualstudio/online/how-to/vscode) olarak kullanmanız da mümkündür.
 
 
-Başka bir ortam için QDK'yi yüklemek üzere komut istemine şunu girin:
+Başka bir ortam için QDK’yı yüklemek üzere komut istemine şunu girin:
 
 ```dotnetcli
 dotnet new -i Microsoft.Quantum.ProjectTemplates
@@ -63,14 +66,14 @@ Yeni bir proje oluşturmak için:
 2. **Bağımsız konsol uygulaması**’na tıklayın.
 3. Projenin kaydedileceği konuma gidin ve **Proje Oluştur**’a tıklayın.
 4. Proje başarıyla oluşturulduğunda, sağ alt kısımdaki **Yeni proje aç...** seçeneğine tıklayın.
-        
+
 Projeyi inceleyin. Konsola ileti yazdırmak için basit bir işlem tanımlayan bir Q# programı olan `Program.qs` adlı kaynak dosyayı görmeniz gerekir.
 
 Uygulamayı çalıştırmak için:
+
 1. **Terminal** -> **Yeni Terminal**’e tıklayın.
 2. Terminal isteminde `dotnet run` girin.
 3. Çıktı penceresinde aşağıdaki metni görürsünüz `Hello quantum world!`
-
 
 > [!NOTE]
 > Birden fazla kök klasörü içeren çalışma alanları şu anda VS Code Q# uzantısı tarafından desteklenmemektedir. Bir VS Code çalışma alanında birden çok projeniz varsa, tüm projelerin aynı kök klasörde yer alması gerekir.
@@ -80,6 +83,7 @@ Uygulamayı çalıştırmak için:
 Bir Q# `Hello World` uygulaması oluşturarak Visual Studio yüklemenizi doğrulayın.
 
 Yeni bir Q# uygulaması oluşturmak için:
+
 1. Visual Studio’yu açın ve **Dosya** -> **Yeni** -> **Proje**’ye tıklayın.
 2. Arama kutusuna `Q#` yazın, **Q# Uygulaması**’nı seçin ve **İleri**’ye tıklayın.
 3. Uygulamanız için bir ad ve konum girip **Oluştur**'a tıklayın.
@@ -88,6 +92,7 @@ Yeni bir Q# uygulaması oluşturmak için:
 Projeyi inceleyin. Konsola ileti yazdırmak için basit bir işlem tanımlayan bir Q# programı olan `Program.qs` adlı kaynak dosyayı görmeniz gerekir.
 
 Uygulamayı çalıştırmak için:
+
 1. **Hata Ayıklama** -> **Hata Ayıklamadan Başlat**’ı seçin.
 2. Bir konsol penceresinde yazdırılmış `Hello quantum world!` metni görmeniz gerekir.
 
@@ -105,11 +110,13 @@ Bir Q# `Hello World` uygulaması oluşturarak yüklemenizi doğrulayın.
     ```
 
 1. Yeni bir uygulama oluşturun:
+
     ```dotnetcli
     dotnet new console -lang Q# -o runSayHello
     ```
 
 1. Uygulama dizinine gidin:
+
     ```dotnetcli
     cd runSayHello
     ```
@@ -117,6 +124,7 @@ Bir Q# `Hello World` uygulaması oluşturarak yüklemenizi doğrulayın.
     Bu dizin şimdi, konsola ileti yazdırmak için basit bir işlem tanımlayan bir Q# programı olan `Program.qs` adlı dosyayı içermelidir. Bu şablonda bir metin düzenleyiciyle değişiklik yapabilir ve kendi kuantum uygulamalarınızla bu şablonun üzerine yazabilirsiniz. 
 
 1. Programı çalıştırın:
+
     ```dotnetcli
     dotnet run
     ```
