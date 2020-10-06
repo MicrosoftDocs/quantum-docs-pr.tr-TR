@@ -9,12 +9,12 @@ uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a0e8933e6a77d017db914e4bb969ea05f760a443
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: cefe35a10dd89c14d2f1abc3080d52ab125236d1
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834049"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771280"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Öğretici: Q\# dilinde Kuantum Rastgele Sayı Oluşturucusu uygulama
 
@@ -33,7 +33,7 @@ ms.locfileid: "90834049"
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-[Kuantum bilişimini anlama](xref:microsoft.quantum.overview.understanding) makalemizde de belirtildiği gibi kubit, süper konumda olabilen bir kuantum bilgi birimidir. Bir kubit ölçüldüğünde yalnızca 0 veya 1 olabilir. Ancak, bir işlem çalışırken, qubit durumu bir 0 ya da bir ölçümle bir 1 okuma olasılığını temsil eder. Olasılığa dayalı olan bu durum, süper konum olarak adlandırılır. Bu olasılığı kullanarak rastgele sayı oluşturabiliriz.
+[Kuantum bilişimini anlama](xref:microsoft.quantum.overview.understanding) makalemizde de belirtildiği gibi kubit, süper konumda olabilen bir kuantum bilgi birimidir. Bir kubit ölçüldüğünde yalnızca 0 veya 1 olabilir. Bununla birlikte, ölçüden önce, qubit durumu bir 0 ya da bir ölçümle bir 1 okuma olasılığını temsil eder. Olasılığa dayalı olan bu durum, süper konum olarak adlandırılır. Bu olasılığı kullanarak rastgele sayı oluşturabiliriz.
 
 Bizim işlem sırasında, Q# `Qubit` yerel veri türüne Q# `Qubit` ayırmak için `using` deyimi kullanmamız gerekir. Ayrılan kubit her zaman `Zero` durumunda olur. 
 

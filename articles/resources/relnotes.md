@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 28e880445bf61150d7940730009a5482298adae2
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 27038a86dc4854c397458d95529aca463d493fd6
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91492362"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771323"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -23,6 +23,12 @@ Bu makale her Quantum Development Kit sürümüne ilişkin bilgileri içerir.
 Yükleme yönergeleri için bu [yükleme kılavuzuna](xref:microsoft.quantum.install) başvurun.
 
 Güncelleştirme yönergeleri için bu [güncelleştirme kılavuzuna](xref:microsoft.quantum.update) başvurun.
+
+## <a name="version-01220100504"></a>Sürüm 0.12.20100504
+
+*Yayın tarihi: 5 Ekim 2020*
+
+Bu sürüm, not defterlerini yüklemeyi etkileyen bir hatayı düzeltir Q# (bkz. [ıqsharp # 331](https://github.com/microsoft/iqsharp/pull/331)).
 
 ## <a name="version-01220092803"></a>Sürüm 0.12.20092803
 
@@ -66,7 +72,7 @@ Bu sürüm aşağıdakileri içerir:
 
 Bu sürüm aşağıdakileri içerir:
 
-- Not defterlerinde açılan ad alanları Q# artık gelecekteki tüm hücre hesaplamaları için kullanılabilir. Bu, örneğin, ad alanlarının her kod hücresinde ilgili ad alanlarını açmak zorunda kalmadan, Not defterinin en üstündeki bir hücrede açılmasını sağlar. Yeni bir `%lsopen` Magic komutu, şu anda açık olan ad alanlarının listesini görüntüler.
+- Not defterlerinde açılan ad alanları Q# artık gelecekteki tüm hücreler çalıştırılırken kullanılabilir. Bu, örneğin, ad alanlarının her kod hücresinde ilgili ad alanlarını açmak zorunda kalmadan, Not defterinin en üstündeki bir hücrede açılmasını sağlar. Yeni bir `%lsopen` Magic komutu, şu anda açık olan ad alanlarının listesini görüntüler.
 
 [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [ı Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) ve [katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)için kapalı PR 'ler tam listesine bakın.  
 
