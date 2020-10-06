@@ -9,12 +9,12 @@ uid: microsoft.quantum.numerics.usage
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 474fc74b9c92fbf28c0618a3090905d025699d32
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: dfcb8e9e5a15d0881750d67cf58d7ad47cbecd3a
+ms.sourcegitcommit: 897ace8b506adb2331e911ee5633dceced566174
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868806"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91764134"
 ---
 # <a name="using-the-numerics-library"></a>Numerics kitaplığını kullanma
 
@@ -37,7 +37,7 @@ Numerics kitaplığı aşağıdaki türleri destekler
 
 1. **`LittleEndian`**: `qArr : Qubit[]` En az önemli bir bit belirten bir tamsayıyı temsil eden bir qubit dizisi `qArr[0]` .
 1. **`SignedLittleEndian`**: `LittleEndian` İki öğesinin tamamlayıcısı içinde depolanan işaretli bir tamsayıyı temsil ettiğinden olduğu gibi.
-1. **`FixedPoint`**: Bir qubit dizisi ve ikili nokta konumundan oluşan gerçek bir sayıyı temsil eder `qArr2 : Qubit[]` `pos` . Bu, ikili noktanın solundaki ikili basamak sayısını sayar. `qArr2`, ile aynı şekilde depolanır `SignedLittleEndian` .
+1. **`FixedPoint`**: Bir qubit dizisi ve ikili nokta konumundan oluşan gerçek bir sayıyı temsil eder `qArr2 : Qubit[]` `pos` . Bu, ikili noktanın solundaki ikili basamak sayısını sayar. `qArr2` , ile aynı şekilde depolanır `SignedLittleEndian` .
 
 ## <a name="operations"></a>İşlemler
 
@@ -120,7 +120,7 @@ Başlamak için depoyu kopyalayın ve `Numerics` alt klasörü açın:
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Numerics
+cd Quantum/samples/numerics
 ```
 
 Ardından, `cd` örnek klasörlerden birine ve örneği ile çalıştırın
