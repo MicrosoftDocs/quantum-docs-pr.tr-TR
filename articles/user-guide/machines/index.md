@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6a2a4bb829301f9db9bd14f3240556a403b9a54f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f40c63eed60379aa46a0cd9cfdd7d8de8c22c079
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833422"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771313"
 ---
 # <a name="quantum-simulators"></a>Kuantum simülatörleri
 
@@ -24,7 +24,7 @@ Kuantum simülatörleri, klasik bilgisayarlarda çalışıp bir Q# programı iç
 
 ## <a name="the-quantum-development-kit-qdk-quantum-simulators"></a>Quantum geliştirme seti (QDK) kuantum simülatörleri
 
-Kuantum simülatörü, algoritma için kuantum temel elemanlarının uygulanmasını sağlamaktan sorumludur. Buna `H`, `CNOT` ve `Measure` gibi temel eleman işlemlerinin yanı sıra kubit yönetimi ve izlemesi de dahildir. QDK, aynı kuantum algoritması için farklı çalıştırma modellerini temsil eden farklı kuantum simülatörü sınıflarını içerir. 
+Kuantum simülatörü, algoritma için kuantum temel elemanlarının uygulanmasını sağlamaktan sorumludur. Buna `H`, `CNOT` ve `Measure` gibi temel eleman işlemlerinin yanı sıra kubit yönetimi ve izlemesi de dahildir. QDK, aynı kuantum algoritması için farklı simülasyon yöntemlerini temsil eden farklı kuantum simülatörü sınıflarını içerir. 
 
 
 Her kuantum simülatörü türü, bu temel elemanların farklı uygulamalarını sağlayabilir. Örneğin, [tam durum simülatörü](xref:microsoft.quantum.machines.full-state-simulator), [kuantum durum vektörünün](xref:microsoft.quantum.glossary#quantum-state) tam simülasyonunu yaparak kuantum algoritmasını çalıştırırken, [kuantum bilgisayar izleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro) gerçek kuantum durumunu değerlendirmez. Bunun yerine algoritmaya ait geçit, kuantum bit ve diğer kaynak kullanımını izler.

@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 54a1f63461cfcc8146f7dc4d18d321238d77454d
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7f5e25aa7b58277642783e03d03854cd75ff4ca3
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833363"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771286"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum geliştirme seti (QDK) kuantum izleme simülatörü
 
@@ -86,7 +86,7 @@ QDK, programlarınızda hata algılamak ve kuantum programı kaynak tahminleri g
 |-----| -----|
 |[Ayrı giriş denetleyicisi](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |Paylaşılan kubitlerle olası çakışmaları denetler |
 |[Geçersiz kılınan kubit kullanımı denetleyicisi](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |Programın zaten yayınlanmış olan bir kubite işlem uygulayıp uygulamadığını denetler |
-|[Temel işlem sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Kuantum programında çağrılan her işlem tarafından kullanılan temel işleme sayısını verir  |
+|[Temel işlem sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Kuantum programında çağrılan her işlem tarafından kullanılan temel eleman sayısını verir  |
 |[Derinlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |Kuantum programında çağrılan her işlemin derinlik alt sınırını temsil eden sayıları toplar   |
 |[Genişlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |Kuantum programında her işlem tarafından ayrılan ve ödünç alınan kubit sayısını verir |
 
