@@ -1,0 +1,281 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Karmaşık bir tür sayının mutlak değerini döndürür `Complex` .
+  uid: Microsoft.Quantum.Math.AbsComplex
+- summary: Karmaşık bir tür sayının mutlak değerini döndürür `ComplexPolar` .
+  uid: Microsoft.Quantum.Math.AbsComplexPolar
+- summary: Çift duyarlıklı kayan noktalı sayının mutlak değerini döndürür.
+  uid: Microsoft.Quantum.Math.AbsD
+- summary: Bir tamsayının mutlak değerini döndürür.
+  uid: Microsoft.Quantum.Math.AbsI
+- summary: Büyük bir tamsayının mutlak değerini döndürür.
+  uid: Microsoft.Quantum.Math.AbsL
+- summary: Karmaşık türdeki sayının kare mutlak değerini döndürür `Complex` .
+  uid: Microsoft.Quantum.Math.AbsSquaredComplex
+- summary: Karmaşık türdeki sayının kare mutlak değerini döndürür `ComplexPolar` .
+  uid: Microsoft.Quantum.Math.AbsSquaredComplexPolar
+- summary: Bir değerin bit boyutunu yinelemeli olarak hesaplamak için kullanılan yardımcı işlev.
+  uid: Microsoft.Quantum.Math.AccumulatedBitsizeI
+- summary: Bir değerin bit boyutunu yinelemeli olarak hesaplamak için kullanılan yardımcı işlev.
+  uid: Microsoft.Quantum.Math.AccumulatedBitsizeL
+- summary: Kosinüsü belirtilen sayı olan açıyı döndürür.
+  uid: Microsoft.Quantum.Math.ArcCos
+- summary: Bir sayının ters hiperbolik kosinüsünü hesaplar.
+  uid: Microsoft.Quantum.Math.ArcCosh
+- summary: Sinüsü belirtilen sayı olan açıyı döndürür.
+  uid: Microsoft.Quantum.Math.ArcSin
+- summary: Bir sayının ters hiperbolik sinüsünü hesaplar.
+  uid: Microsoft.Quantum.Math.ArcSinh
+- summary: Tanjantı belirtilen sayı olan açıyı döndürür.
+  uid: Microsoft.Quantum.Math.ArcTan
+- summary: Tanjantı belirtilen iki sayının bölümü olan açıyı döndürür.
+  uid: Microsoft.Quantum.Math.ArcTan2
+- summary: Bir sayının ters hiperbolik tanjantını hesaplar.
+  uid: Microsoft.Quantum.Math.ArcTanh
+- summary: Karmaşık sayıda türden aşamayı döndürür `Complex` .
+  uid: Microsoft.Quantum.Math.ArgComplex
+- summary: Karmaşık sayıda türden aşamayı döndürür `ComplexPolar` .
+  uid: Microsoft.Quantum.Math.ArgComplexPolar
+- summary: >-
+    Negatif olmayan bir tamsayı için `a` , temsil etmesi gereken bitlerin sayısını döndürür `a` .
+
+    Diğer bir deyişle, $a < 2 ^ n $ gibi en küçük $n $ döndürür.
+  uid: Microsoft.Quantum.Math.BitSizeI
+- summary: >-
+    Negatif olmayan bir tamsayı için `a` , temsil etmesi gereken bitlerin sayısını döndürür `a` .
+
+    Diğer bir deyişle, $a < 2 ^ n $ gibi en küçük $n $ döndürür.
+  uid: Microsoft.Quantum.Math.BitSizeL
+- summary: Belirtilen sayıdan büyük veya eşit en küçük tamsayıyı döndürür.
+  uid: Microsoft.Quantum.Math.Ceiling
+- summary: Karmaşık sayıda türü karmaşık türde dönüştürür `Complex` `ComplexPolar` .
+  uid: Microsoft.Quantum.Math.ComplexAsComplexPolar
+- summary: Karmaşık sayıda türü karmaşık türde dönüştürür `ComplexPolar` `Complex` .
+  uid: Microsoft.Quantum.Math.ComplexPolarAsComplex
+- summary: "`fraction`Paydadan daha az veya eşit olan en yakın devam eden kesir convergent 'ı bulur`denominatorBound`"
+  uid: Microsoft.Quantum.Math.ContinuedFractionConvergentI
+- summary: "`fraction`Paydadan daha az veya eşit olan en yakın devam eden kesir convergent 'ı bulur`denominatorBound`"
+  uid: Microsoft.Quantum.Math.ContinuedFractionConvergentL
+- summary: Belirtilen açının kosinüsünü döndürür.
+  uid: Microsoft.Quantum.Math.Cos
+- summary: Belirtilen açının hiperbolik kosinüsünü döndürür.
+  uid: Microsoft.Quantum.Math.Cosh
+- summary: Bir BigInteger değerini diğerine böler, sonucu ve geri kalanı kayıt düzeni olarak döndürür.
+  uid: Microsoft.Quantum.Math.DivRemL
+- summary: İki giriş bölümünü döndürür.
+  uid: Microsoft.Quantum.Math.DividedByC
+- summary: İki giriş bölümünü döndürür.
+  uid: Microsoft.Quantum.Math.DividedByCP
+- summary: İki giriş bölümünü döndürür.
+  uid: Microsoft.Quantum.Math.DividedByD
+- summary: İki giriş bölümünü döndürür.
+  uid: Microsoft.Quantum.Math.DividedByI
+- summary: İki giriş bölümünü döndürür.
+  uid: Microsoft.Quantum.Math.DividedByL
+- summary: Doğal Logaritmik taban $e $ ' i döndürür.
+  uid: Microsoft.Quantum.Math.E
+- summary: Belirtilen kuvvete $e $ ' i döndürür.
+  uid: Microsoft.Quantum.Math.ExpD
+- summary: Belirli bir mod için verilen bir kuvvete verilen bir tamsayıyı döndürür.
+  uid: Microsoft.Quantum.Math.ExpModI
+- summary: Belirli bir mod için verilen bir kuvvete verilen bir tamsayıyı döndürür.
+  uid: Microsoft.Quantum.Math.ExpModL
+- summary: '\Cdot a + v \cdot b = \operatorname{GCD} (a, b) $ $u bir demet $ (u, v) $, burada $ \operatorname{GCD} $, $a $ ve $b $ $a $ en büyük ortak bölenini hesaplar. GCD her zaman pozitif olur.'
+  uid: Microsoft.Quantum.Math.ExtendedGreatestCommonDivisorI
+- summary: '\Cdot a + v \cdot b = \operatorname{GCD} (a, b) $ $u bir demet $ (u, v) $, burada $ \operatorname{GCD} $, $a $ ve $b $ $a $ en büyük ortak bölenini hesaplar. GCD her zaman pozitif olur.'
+  uid: Microsoft.Quantum.Math.ExtendedGreatestCommonDivisorL
+- summary: Belirtilen sayıdan küçük veya eşit en büyük tamsayıyı döndürür.
+  uid: Microsoft.Quantum.Math.Floor
+- summary: $A $ ve $b $ öğesinin en büyük ortak bölenini hesaplar. GCD her zaman pozitif olur.
+  uid: Microsoft.Quantum.Math.GreatestCommonDivisorI
+- summary: $A $ ve $b $ öğesinin en büyük ortak bölenini hesaplar. GCD her zaman pozitif olur.
+  uid: Microsoft.Quantum.Math.GreatestCommonDivisorL
+- summary: Belirtilen sayının bölümünün belirtilen başka bir sayı ile sonuçlanan kalan kalanı döndürür.
+  uid: Microsoft.Quantum.Math.IEEERemainder
+- summary: $A \cdot b = 1 (\operatorname{mod} \texttt{Modulus}) $ gibi $b $ döndürür.
+  uid: Microsoft.Quantum.Math.InverseModI
+- summary: $A \cdot b = 1 (\operatorname{mod} \texttt{Modulus}) $ gibi $b $ döndürür.
+  uid: Microsoft.Quantum.Math.InverseModL
+- summary: $A $ ve $b $ ortak ana ise true, aksi takdirde false döndürür.
+  uid: Microsoft.Quantum.Math.IsCoprimeI
+- summary: $A $ ve $b $ ortak ana ise true, aksi takdirde false döndürür.
+  uid: Microsoft.Quantum.Math.IsCoprimeL
+- summary: Bir sayının 2 tabanında logaritmasını hesaplar.
+  uid: Microsoft.Quantum.Math.Lg
+- summary: Belirtilen sayının doğal (Base $e $) logaritmasını döndürür.
+  uid: Microsoft.Quantum.Math.Log
+- summary: Belirtilen sayının 10 tabanında logaritmasını döndürür.
+  uid: Microsoft.Quantum.Math.Log10
+- summary: 2 ' nin doğal logaritmasını döndürür.
+  uid: Microsoft.Quantum.Math.LogOf2
+- summary: Tamsayılar dizisi verildiğinde, en büyük öğeyi döndürür.
+  uid: Microsoft.Quantum.Math.Max
+- summary: Belirtilen iki sayıdan daha büyük bir değer döndürür.
+  uid: Microsoft.Quantum.Math.MaxD
+- summary: Belirtilen iki sayıdan daha büyük bir değer döndürür.
+  uid: Microsoft.Quantum.Math.MaxI
+- summary: Belirtilen iki sayıdan daha büyük bir değer döndürür.
+  uid: Microsoft.Quantum.Math.MaxL
+- summary: Tamsayılar dizisi verildiğinde, en küçük öğeyi döndürür.
+  uid: Microsoft.Quantum.Math.Min
+- summary: Belirtilen iki sayıdan daha küçük bir değer döndürür.
+  uid: Microsoft.Quantum.Math.MinD
+- summary: Belirtilen iki sayıdan daha küçük bir değer döndürür.
+  uid: Microsoft.Quantum.Math.MinI
+- summary: Belirtilen iki sayıdan daha küçük bir değer döndürür.
+  uid: Microsoft.Quantum.Math.MinL
+- summary: İki giriş arasındaki farkı döndürür.
+  uid: Microsoft.Quantum.Math.MinusC
+- summary: İki giriş arasındaki farkı döndürür.
+  uid: Microsoft.Quantum.Math.MinusCP
+- summary: İki giriş arasındaki farkı döndürür.
+  uid: Microsoft.Quantum.Math.MinusD
+- summary: İki giriş arasındaki farkı döndürür.
+  uid: Microsoft.Quantum.Math.MinusI
+- summary: İki giriş arasındaki farkı döndürür.
+  uid: Microsoft.Quantum.Math.MinusL
+- summary: Bir sayının başka bir sayıya göre mod sayısını döndürür.
+  uid: Microsoft.Quantum.Math.ModI
+- summary: Bir sayının başka bir sayıya göre mod sayısını döndürür.
+  uid: Microsoft.Quantum.Math.ModL
+- summary: Başka bir sayının gücünden kaynaklanan bir sayı üzerinde modüler bölüm gerçekleştirir.
+  uid: Microsoft.Quantum.Math.ModPowL
+- summary: Modülden kaynaklanan kurallı bir şekilde `value` hesaplar `modulus` .
+  uid: Microsoft.Quantum.Math.ModulusI
+- summary: Modülden kaynaklanan kurallı bir şekilde `value` hesaplar `modulus` .
+  uid: Microsoft.Quantum.Math.ModulusL
+- summary: Bir girişin birli olumsuzunu döndürür.
+  uid: Microsoft.Quantum.Math.NegationC
+- summary: Bir girişin birli olumsuzunu döndürür.
+  uid: Microsoft.Quantum.Math.NegationCP
+- summary: Bir girişin birli olumsuzunu döndürür.
+  uid: Microsoft.Quantum.Math.NegationD
+- summary: Bir girişin birli olumsuzunu döndürür.
+  uid: Microsoft.Quantum.Math.NegationI
+- summary: Bir girişin birli olumsuzunu döndürür.
+  uid: Microsoft.Quantum.Math.NegationL
+- summary: Bir dairenin çapının, π sabiti tarafından belirtilen çapının oranını gösterir.
+  uid: Microsoft.Quantum.Math.PI
+- summary: >-
+    `L(p)`Bir vektörün vektörini döndürür `Double` .
+
+    Diğer bir deyişle, türünde bir dizi $x olarak belirtilen `Double[]` Bu, $-norm $ \| x \| \_ p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $ $p döndürür.
+  uid: Microsoft.Quantum.Math.PNorm
+- summary: >-
+    Norm içindeki bir vektörü normalleştirir `Double` `L(p)` .
+
+    Diğer bir deyişle, türünde bir dizi $x `Double[]` , bu, tüm öğelerin $p $-norm $ \| x _p $ tarafından bölündüğü bir dizi döndürür \| .
+  uid: Microsoft.Quantum.Math.PNormalized
+- summary: İki girişin toplamını (birleştirme) döndürür.
+  uid: Microsoft.Quantum.Math.PlusA
+- summary: İki giriş toplamını döndürür.
+  uid: Microsoft.Quantum.Math.PlusC
+- summary: İki giriş toplamını döndürür.
+  uid: Microsoft.Quantum.Math.PlusCP
+- summary: İki giriş toplamını döndürür.
+  uid: Microsoft.Quantum.Math.PlusD
+- summary: İki giriş toplamını döndürür.
+  uid: Microsoft.Quantum.Math.PlusI
+- summary: İki giriş toplamını döndürür.
+  uid: Microsoft.Quantum.Math.PlusL
+- summary: Verilen bir üsle oluşturulan bir sayı döndürür.
+  uid: Microsoft.Quantum.Math.PowC
+- summary: İç. Kartezyen biçiminde iki karmaşık sayının gücünü, kutupsal biçimde döndürülen şekilde tanımlamak en kolay olduğundan, bunu burada tanımladık ve gerektiğinde dönüştürüyoruz.
+  uid: Microsoft.Quantum.Math.PowCAsCP
+- summary: Verilen bir üsle oluşturulan bir sayı döndürür.
+  uid: Microsoft.Quantum.Math.PowCP
+- summary: X olarak x olarak, Power y sayısını döndürür.
+  uid: Microsoft.Quantum.Math.PowD
+- summary: Verilen bir üsle oluşturulan bir sayı döndürür.
+  uid: Microsoft.Quantum.Math.PowI
+- summary: Verilen bir üsle oluşturulan bir sayı döndürür.
+  uid: Microsoft.Quantum.Math.PowL
+- summary: İki gerçek sayı arasındaki mod sayısını hesaplar.
+  uid: Microsoft.Quantum.Math.RealMod
+- summary: Bir değeri en yakın tamsayıya yuvarlar.
+  uid: Microsoft.Quantum.Math.Round
+- summary: Bir sayının işaretini gösteren bir tamsayı döndürür.
+  uid: Microsoft.Quantum.Math.SignD
+- summary: Bir sayının işaretini gösteren bir tamsayı döndürür.
+  uid: Microsoft.Quantum.Math.SignI
+- summary: Bir sayının işaretini gösteren bir tamsayı döndürür.
+  uid: Microsoft.Quantum.Math.SignL
+- summary: Belirtilen açının sinüsünü döndürür.
+  uid: Microsoft.Quantum.Math.Sin
+- summary: Belirtilen açının hiperbolik sinüsünü döndürür.
+  uid: Microsoft.Quantum.Math.Sinh
+- summary: Belirtilen sayının kare kökünü döndürür.
+  uid: Microsoft.Quantum.Math.Sqrt
+- summary: Bir vektörün kare 2-normini döndürür.
+  uid: Microsoft.Quantum.Math.SquaredNorm
+- summary: Belirtilen açının tanjantını döndürür.
+  uid: Microsoft.Quantum.Math.Tan
+- summary: Belirtilen açının hiperbolik tanjantını döndürür.
+  uid: Microsoft.Quantum.Math.Tanh
+- summary: İki girişin çarpımını döndürür.
+  uid: Microsoft.Quantum.Math.TimesC
+- summary: İki girişin çarpımını döndürür.
+  uid: Microsoft.Quantum.Math.TimesCP
+- summary: İki girişin çarpımını döndürür.
+  uid: Microsoft.Quantum.Math.TimesD
+- summary: İki girişin çarpımını döndürür.
+  uid: Microsoft.Quantum.Math.TimesI
+- summary: İki girişin çarpımını döndürür.
+  uid: Microsoft.Quantum.Math.TimesL
+- summary: Bir sayının integral bölümünü hesaplar.
+  uid: Microsoft.Quantum.Math.Truncate
+- summary: Bir bağlantılı GCD 'yi hesaplamak için iç özyinelemeli çağrı
+  uid: Microsoft.Quantum.Math._ContinuedFractionConvergentI
+- summary: Bir bağlantılı GCD 'yi hesaplamak için iç özyinelemeli çağrı
+  uid: Microsoft.Quantum.Math._ContinuedFractionConvergentL
+- summary: GCD 'yi hesaplamak için iç özyinelemeli çağrı.
+  uid: Microsoft.Quantum.Math._ExtendedGreatestCommonDivisorI
+- summary: GCD 'yi hesaplamak için iç özyinelemeli çağrı.
+  uid: Microsoft.Quantum.Math._ExtendedGreatestCommonDivisorL
+name: Microsoft.Quantum.Math
+newtypes:
+- summary: Formun bir Rational numarasını temsil eder `p/q` . Tamsayı, `p` kayıt düzeninin ilk öğesidir ve `q` kayıt düzeninin ikinci öğesidir.
+  uid: Microsoft.Quantum.Math.BigFraction
+- summary: Gerçek ve sanal bileşenleriyle karmaşık bir sayıyı temsil eder. Kayıt düzeninin ilk öğesi, ikinci bir-sanal bileşen olan gerçek bileşendir.
+  uid: Microsoft.Quantum.Math.Complex
+- summary: >-
+    Kutupsal biçimdeki karmaşık bir sayıyı temsil eder.
+
+    Karmaşık bir sayının kutupsal gösterimi $c = r e ^ {ı t} $.
+  uid: Microsoft.Quantum.Math.ComplexPolar
+- summary: Formun bir Rational numarasını temsil eder `p/q` . Tamsayı, `p` kayıt düzeninin ilk öğesidir ve `q` kayıt düzeninin ikinci öğesidir.
+  uid: Microsoft.Quantum.Math.Fraction
+operations:
+- summary: >+
+    > [!WARNING]
+
+    > RandomInt kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Random.DrawRandomInt> bunun yerine kullanın.
+
+  uid: Microsoft.Quantum.Math.RandomInt
+- summary: >+
+    > [!WARNING]
+
+    > RandomIntPow2 kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Random.DrawRandomInt> bunun yerine kullanın.
+
+  uid: Microsoft.Quantum.Math.RandomIntPow2
+- summary: >+
+    > [!WARNING]
+
+    > Rasgelereal kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Random.DrawRandomDouble> bunun yerine kullanın.
+
+  uid: Microsoft.Quantum.Math.RandomReal
+- summary: >+
+    > [!WARNING]
+
+    > Randomsingliqubitpauli kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Random.DrawRandomPauli> bunun yerine kullanın.
+
+  uid: Microsoft.Quantum.Math.RandomSingleQubitPauli
+summary: Bu ad alanı klasik matematik işlevlerini ve veri türlerini içerir.
+uid: Microsoft.Quantum.Math
+metadata:
+  ms.openlocfilehash: 13ccb80ce78e7d9d6341d7b228e39b65026ab090
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92732874"

@@ -1,0 +1,24 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Bir tek değişkenli işlev için, altın Aralık araması kullanarak, bir ayırt eden değer için yerel minimum değeri döndürür.
+  uid: Microsoft.Quantum.Optimization.LocalUnivariateMinimum
+- summary: Bir Aralık için orta nokta döndürür.
+  uid: Microsoft.Quantum.Optimization.Midpoint
+- summary: Bir Aralık verildiğinde, altın oranın bir faktörüyle verilen aralığı veren bir araştırma aralığı döndürür.
+  uid: Microsoft.Quantum.Optimization.Probe
+- summary: Bir aralığın genişliğini döndürür.
+  uid: Microsoft.Quantum.Optimization.Width
+name: Microsoft.Quantum.Optimization
+newtypes:
+- summary: Bir tek değişkenli işlevi en iyi duruma getirme sonucunu temsil eder.
+  uid: Microsoft.Quantum.Optimization.UnivariateOptimizationResult
+operations: []
+summary: Mini bulma için işlevler ve iyileştirmeler içerir.
+uid: Microsoft.Quantum.Optimization
+metadata:
+  ms.openlocfilehash: 0271a658d625f9781b12a9659c80495200a9ba54
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92732871"

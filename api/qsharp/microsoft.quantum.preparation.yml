@@ -1,0 +1,107 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >-
+    Tek qubit durumu için Bloch Sphere koordinatlarını hesaplar.
+
+    Bu iki karmaşık sayı $a, qubit durumunu temsil eden 0, a1 $, $a 0 \ ayraç {0} + a1 \ {1} Tus= r e ^ {it} (e ^ {-ı \phi/2}\cos{(\ teta/2)} {0} \tus+ e ^ {ı \fi/2}\sin{(\ teta/2)} \ket {1} ) $.
+  uid: Microsoft.Quantum.Preparation.BlochSphereCoordinates
+- summary: >-
+    , Belirli bir yoğunluk matrisini göstermek için hisse ROM tekniğini kullanır.
+
+    $N $ katsayısı $ \ alpha_j $ olan bir liste verildiğinde bu işlem, $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| alpha_j |} için bir yaklaşık $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ değerini kullanan bir Unitary $U $ döndürür {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. Bu nedenle, $ \epsilon $ hatası $ | p_j-\frac{| alpha_j |} şeklindedir {\ sum_k | \ alpha_k |} | \le \ Epsilon/N $ ve $ \| \tilde\rho-\rho \| \le \ Epsilon $. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket {0} ^ {\lceil\ Log_2 N\rceıl} \ {0} Tus^ {k} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{Garbage} _j}. \end{hizalaması} $ $
+  uid: Microsoft.Quantum.Preparation.QuantumROM
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.QuantumROMBitStringWriterByIndex
+- summary: Tarafından döndürülen işleme ayrılması gereken qubits sayısının toplam sayısını döndürür `QuantumROM` .
+  uid: Microsoft.Quantum.Preparation.QuantumROMQubitCount
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.RangeLength
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.RoundedDiscretizationCoefficients
+- summary: >-
+    Belirli bir hisse durumu hazırlayan bir işlem döndürür.
+
+    Döndürülen $U $, $n $-qubit hesaplama tabanlı durum $ \ket{0...0} $ t_j _j $r karmaşık katlara sahip, rastgele bir hisse
+
+    Yeni ayrılmış bir kayıttaki U eylemi $ $ \begin{hizalaması} U\ket {0... tarafından verilir. 0} = \ket{\psı} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}. \end{hizalaması} $ $
+  uid: Microsoft.Quantum.Preparation.StatePreparationComplexCoefficients
+- summary: >-
+    Verilen hisse cıya durumunu hazırlayan bir işlem döndürür.
+
+    Döndürülen $U $ $-qubit hesaplama tabanlı durumu $ \ket{0...0} $ $n $ \ alpha_j \ge $0 pozitif katlarla rastgele bir hisse alma $ \ket{\psı} $ hazırlar.
+
+    Yeni ayrılmış bir kayıttaki U eylemi $ $ \begin{hizalaması} U \ket{0\cnoktalar 0} = \ket{\psı} = \frac{\ sum_ {j = 0 tarafından verilir} ^ {2 ^ n-1} \ alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ alpha_j | ^ 2}}. \end{hizalaması} $ $
+  uid: Microsoft.Quantum.Preparation.StatePreparationPositiveCoefficients
+- summary: Rastgele durum hazırlama yordamının uygulama adımı.
+  uid: Microsoft.Quantum.Preparation._ApproximatelyUnprepareArbitraryStatePlan
+- summary: ''
+  uid: Microsoft.Quantum.Preparation._CompileApproximateArbitraryStatePreparation
+- summary: ''
+  uid: Microsoft.Quantum.Preparation._QuantumROMDiscretization
+- summary: ''
+  uid: Microsoft.Quantum.Preparation._QuantumROMQubitManager
+- summary: Rastgele durum hazırlama yordamının uygulama adımı.
+  uid: Microsoft.Quantum.Preparation._StatePreparationSBMComputeCoefficients
+name: Microsoft.Quantum.Preparation
+newtypes: []
+operations:
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.ApplyGlobalRotationStep
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.ApplyMultiplexStep
+- summary: Temel alınan qubits 'e bir işlem uygular ve bu da az endian bir kayıt yapar. Bu işlem iç olarak işaretlenir, çünkü küçük endian bir kayıt, yalnızca bir uygulama ayrıntısı olduğu gibi "donuk" olması amaçlanmıştır.
+  uid: Microsoft.Quantum.Preparation.ApplyToLittleEndian
+- summary: Bir ölçü kümesi ve az endian kodlu bir hisse kayıt verildiğinde, verilen katsayıların belirli bir kabul toleransına göre tanımlanan bir durumu hazırlar.
+  uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryState
+- summary: Bir ölçü kümesi ve az endian kodlu bir hisse kayıt verildiğinde, söz konusu kayıt üzerinde verilen katsayıların açıklandığı bir durum hazırlar.
+  uid: Microsoft.Quantum.Preparation.PrepareArbitraryState
+- summary: Belirli bir işlem için CHOI – Jamiłkowski durumunu verilen başvuru ve hedef Yazmaçları üzerine hazırlar.
+  uid: Microsoft.Quantum.Preparation.PrepareChoiState
+- summary: Belirtilen bir işlem için Choi – Jamiłkowski durumu ' nu verilen başvuru ve hedef Yazmaçları üzerine hazırlar.
+  uid: Microsoft.Quantum.Preparation.PrepareChoiStateA
+- summary: Belirli bir işlem için CHOI – Jamiłkowski durumunu, belirtilen başvuru ve hedef Yazmaçları üzerine denetimli bir değişkenle hazırlar.
+  uid: Microsoft.Quantum.Preparation.PrepareChoiStateC
+- summary: Belirtilen başvuru ve hedef Yazmaçları üzerinde hem denetimli hem de adjoint türevlerine sahip belirli bir işlem için CHOI – Jamiłkowski durumunu hazırlar.
+  uid: Microsoft.Quantum.Preparation.PrepareChoiStateCA
+- summary: >-
+    İkili entangles iki qubit kaydı.
+
+    Diğer bir deyişle, iki kayıt söz konusu olduğunda, {1} {2} {00} {11} her kaydın $ \ket{0\cnoktalar 0} $ durumunda başlayacağını varsayarak, her bir kasadaki her bir qubit çifti arasında en yüksek düzeyde entangled State $ \frac {\sqrt} \left (\ment + \ket \ right) $ değerini hazırlar.
+  uid: Microsoft.Quantum.Preparation.PrepareEntangledState
+- summary: >-
+    Kayıt verildiğinde, bu kaydı, en yüksek düzeyde karışık durumda hazırlar.
+
+    Kayıt, her bir qubit 'e tüm depolarizing kanalını uygulayarak $ \ cıvadone/2 ^ N $ durumunda hazırlandı; burada $N $ kaydın uzunluğudur.
+  uid: Microsoft.Quantum.Preparation.PrepareIdentity
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.PrepareQuantumROMState
+- summary: >-
+    `Zero`Verilen Pauli işlecinin ıdgenstate ' i () ile bir qubit hazırlar. Identity işleci verilirse, qubit, yüksek ölçüde karışık duruma hazırlanır.
+
+    Qubit başlangıçta $ \ket {0} $ durumundaysa, bu işlem belirli bir Pauli işlecinin $ + $1 eigenstate veya için `PauliI` (bkz.) yerine en düşük karma durumunda qubit 'i hazırlar (bkz <xref:microsoft.quantum.preparation.preparesinglequbitidentity> .).
+
+    Qubit $ \ket $ dışında bir durumdaysa {0} , bu işlem şu kapıları uygular: $H $ for `PauliX` , $HS $ for `PauliY` , $I $ for `PauliZ` and for <xref:microsoft.quantum.preparation.preparesinglequbitidentity> `PauliI` .
+  uid: Microsoft.Quantum.Preparation.PrepareQubit
+- summary: >-
+    Yüksek ölçüde karışık durumda bir qubit hazırlar.
+
+    $/Boldo/$2 durumunda verilen qubit $ $ \begin{hizalaması} \Omega (\rho) \mathrel{: =} \frac {1} {4} \ sum_ {\mu \{ \0 ' ı uygulayarak verilen qubit 'i hazırlar 1, 2, 3 \} } \sigma \_ {\mu} \rho \sigma \_ {\mu} ^ {\leger}, \end{hizalaması} $ $; $ \sigma \_ i $, $i $ TH Pauli işleci, ve $ \rho $, karışık bir durumu temsil eden bir yoğunluk operatöründür.
+  uid: Microsoft.Quantum.Preparation.PrepareSingleQubitIdentity
+- summary: >-
+    0 ile kodlayan durumlar üzerinde Tekdüzen üst konumu oluşturur `nIndices - 1` .
+
+    Diğer bir deyişle, bu Unitary $U $, $0 $ ile $M-$1 arasında tek bir üst konum oluşturarak bir giriş durumu $ \ket{0\cnoktalar 0} $ olarak sunulur. Diğer bir deyişle, $ $ \begin{hizalaması} U\ket {0} = \frac {1} {\Sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}. \end{hizalaması} $ $.
+  uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition
+- summary: Uygulama adımı <xref:microsoft.quantum.canon.prepareuniformsuperposition>
+  uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition_
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.WriteQuantumROMBitString
+summary: Bu ad alanı, ara bitleri rastgele ilk durumlara hazırlama işlevlerini ve işlemlerini içerir.
+uid: Microsoft.Quantum.Preparation
+metadata:
+  ms.openlocfilehash: f8dc07d5fe1073f626eea41e6291d8cc919d93b6
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92732847"

@@ -1,0 +1,139 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpByOracle kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.AmplitudeAmplification.StandardAmplitudeAmplification> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.amplitudeamplification.standardamplitudeamplification" kullanın.
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpByOracle
+- summary: >+
+    > [!WARNING]
+
+    > Ampampbyoracliaşamalar kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.AmplitudeAmplification.AmplitudeAmplificationFromStatePreparation> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation" kullanın.
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpByOraclePhases
+- summary: >+
+    > [!WARNING]
+
+    > Ampampbyreflectionaşamaların kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.AmplitudeAmplification.AmplitudeAmplificationFromPartialReflections> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections" kullanın.
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpByReflectionPhases
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpObliviousByOraclePhases kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromStatePreparation> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation" kullanın.
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpObliviousByOraclePhases
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpObliviousByReflectionPhases kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromPartialReflections> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections" kullanın.
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpObliviousByReflectionPhases
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpPhasesFixedPoint kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.AmplitudeAmplification.FixedPointReflectionPhases> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases" kullanın.
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpPhasesFixedPoint
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpPhasesStandard kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.AmplitudeAmplification.StandardReflectionPhases> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.amplitudeamplification.standardreflectionphases" kullanın.
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpPhasesStandard
+- summary: >+
+    > [!WARNING]
+
+    > Ampamprotationtoreflectionaşamaların kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.AmplitudeAmplification.RotationPhasesAsReflectionPhases> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases" kullanın.
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpRotationToReflectionPhases
+- summary: Kısmi yansıtımları ile genliği yükseltme.
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmplitudeAmplificationFromPartialReflections
+- summary: Kısmi yansıtımları için Oracles tarafından bir aşağı yönlü yükseltme.
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmplitudeAmplificationFromStatePreparation
+- summary: Sabit nokta genliği yükseltme için kısmi yansıma aşamalarını hesaplar.
+  uid: Microsoft.Quantum.AmplitudeAmplification.FixedPointReflectionPhases
+- summary: Kısmi yansıtımları için belirterek, yükümlülüğü uygulayan gensliği gerçekleştiren bir Unitary döndürür.
+  uid: Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromPartialReflections
+- summary: Yükümlülüğü, kısmi yansıtımları için Oracles tarafından bir şekilde geliştirilmiştir.
+  uid: Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromStatePreparation
+- summary: Genlik için tipik giriş durumu olan | 0... 0 〉 dize hakkında bir yansıma oluşturur.
+  uid: Microsoft.Quantum.AmplitudeAmplification.ReflectionStart
+- summary: Tek qubit döndürmeler olarak belirtilen aşamaları kısmi yansıtılamalar olarak belirtilen aşamalara dönüştürür.
+  uid: Microsoft.Quantum.AmplitudeAmplification.RotationPhasesAsReflectionPhases
+- summary: Standart genliği yükseltme algoritması
+  uid: Microsoft.Quantum.AmplitudeAmplification.StandardAmplitudeAmplification
+- summary: Standart genliği yükseltme için kısmi yansıma aşamalarını hesaplar.
+  uid: Microsoft.Quantum.AmplitudeAmplification.StandardReflectionPhases
+- summary: >-
+    `ReflectionOracle`Benzersiz olarak bayrak qubit tarafından işaretlenen hedef durumu hakkında bir oluşturur.
+
+    Hedef durumu 1 olarak ayarlanmış tek bir qubit ve diğerleri 0: $ \ demet {1} _F $ şeklindedir.
+  uid: Microsoft.Quantum.AmplitudeAmplification.TargetStateReflectionOracle
+name: Microsoft.Quantum.AmplitudeAmplification
+newtypes:
+- summary: Genize göre kısmi yansıtımları dizisinin aşamaları.
+  uid: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
+- summary: Tek qubit döndürmeler dizisinin bir sırası için aşamalar yükseltme.
+  uid: Microsoft.Quantum.AmplitudeAmplification.RotationPhases
+operations:
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpRUSByOracle kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.AmplitudeAmplification.ApplyFixedPointAmplification> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.amplitudeamplification.applyfixedpointamplification" kullanın.
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpRUSByOracle
+- summary: İlk ve son durumları yansıtmak için belirli bir aşamalar ve Oracles kümesini kullanarak belirli bir kayıt üzerinde genliği yükseltme uygular.
+  uid: Microsoft.Quantum.AmplitudeAmplification.ApplyAmplitudeAmplification
+- summary: Fixed-Point genliği yükseltme algoritması
+  uid: Microsoft.Quantum.AmplitudeAmplification.ApplyFixedPointAmplification
+- summary: ', Kısmi yansımalar belirterek yükümlülüğü genliği bir şekilde yükseltme.'
+  uid: Microsoft.Quantum.AmplitudeAmplification.ApplyObliviousAmplitudeAmplification
+- summary: Uygulamasının uygulamasıdır <xref:microsoft.quantum.canon.targetstatereflectionoracle> .
+  uid: Microsoft.Quantum.AmplitudeAmplification.ApplyTargetStateReflectionOracle
+summary: Bu ad alanı, genliğini gerçekleştirmeye yönelik işlevler ve işlemler içerir.
+uid: Microsoft.Quantum.AmplitudeAmplification
+metadata:
+  ms.openlocfilehash: 7b95624eba1215e6b8be8f247c25a3931336b5fb
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92732330"
