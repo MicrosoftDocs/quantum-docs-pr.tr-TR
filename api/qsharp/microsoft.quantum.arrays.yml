@@ -1,0 +1,166 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Dizi öğeleri için tanımlanan bir dizi ve koşul verildiğinde, dizideki tüm öğelerin koşulu karşılayıp karşılamadığını denetler.
+  uid: Microsoft.Quantum.Arrays.All
+- summary: Dizi öğeleri için tanımlanan bir dizi ve koşul verildiğinde, dizinin en az bir öğesinin koşulu karşılayıp karşılamadığını denetler.
+  uid: Microsoft.Quantum.Arrays.Any
+- summary: Bir diziyi eşit uzunlukta birden çok parçaya böler.
+  uid: Microsoft.Quantum.Arrays.Chunks
+- summary: Bir matrisi bir sütundan ayıklar.
+  uid: Microsoft.Quantum.Arrays.ColumnAt
+- summary: Bu işlev, matris şeklini denetlemez
+  uid: Microsoft.Quantum.Arrays.ColumnAtUnchecked
+- summary: Verilen değere eşit tüm öğelerle verilen uzunlukta bir dizi oluşturur.
+  uid: Microsoft.Quantum.Arrays.ConstantArray
+- summary: Dizi öğeleri için tanımlanan bir dizi ve koşul verildiğinde, koşulu karşılayan öğelerden oluşan bir dizi öğe sayısını döndürür.
+  uid: Microsoft.Quantum.Arrays.Count
+- summary: Eşlenmiş ve katlama işlevini tek bir işlevle birleştirir
+  uid: Microsoft.Quantum.Arrays.CumulativeFolded
+- summary: 2 boyutlu bir dizinin köşegen öğelerinin dizisini döndürür
+  uid: Microsoft.Quantum.Arrays.Diagonal
+- summary: Bir dizinin verilen dizininde öğesini döndürür.
+  uid: Microsoft.Quantum.Arrays.ElementAt
+- summary: ''
+  uid: Microsoft.Quantum.Arrays.ElementAtDiagonal
+- summary: Dizinin öğelerini belirli bir dizin aralığında döndürür.
+  uid: Microsoft.Quantum.Arrays.ElementsAt
+- summary: Verilen türdeki boş diziyi döndürür.
+  uid: Microsoft.Quantum.Arrays.EmptyArray
+- summary: Bir dizi verildiğinde, orijinal dizinin öğelerini içeren yeni bir dizi döndürür ve her bir öğenin indisleriyle birlikte.
+  uid: Microsoft.Quantum.Arrays.Enumerated
+- summary: Aynı türde iki dizi ve dizilerin öğe çiftleri için tanımlanan bir koşul verildiğinde, dizilerin eşit olup olmadığını denetler.
+  uid: Microsoft.Quantum.Arrays.EqualA
+- summary: Belirli bir dizin listesindeki öğeleri dışlayarak başka bir dizinin öğelerini içeren bir dizi döndürür.
+  uid: Microsoft.Quantum.Arrays.Exclude
+- summary: Belirli bir dizin listesindeki öğeleri dışlayarak başka bir dizinin öğelerini içeren bir dizi döndürür.
+  uid: Microsoft.Quantum.Arrays.Excluding
+- summary: Dizi öğeleri için tanımlanan bir dizi ve koşul verildiğinde, koşulu karşılayan öğelerden oluşan bir dizi döndürür.
+  uid: Microsoft.Quantum.Arrays.Filtered
+- summary: Bir dizi ve bir dizi öğesini bir çıktı dizisine eşleyen bir işlev verildiğinde, her dizi öğesi için birleştirilmiş çıkış dizilerini döndürür.
+  uid: Microsoft.Quantum.Arrays.FlatMapped
+- summary: Dizi dizileri verildiğinde, tüm dizilerin birleştirmesini döndürür.
+  uid: Microsoft.Quantum.Arrays.Flattened
+- summary: Bir işlevi bir `f` dizi aracılığıyla yineler `array` , döndürür `f(f(f(initialState, array[0]), array[1]), ...)` .
+  uid: Microsoft.Quantum.Arrays.Fold
+- summary: Dizinin ilk öğesini döndürür.
+  uid: Microsoft.Quantum.Arrays.Head
+- summary: Dizinin ilk ve kalan öğelerinin bir listesini döndürür.
+  uid: Microsoft.Quantum.Arrays.HeadAndRest
+- summary: ''
+  uid: Microsoft.Quantum.Arrays.Identity
+- summary: Belirli bir koşulu karşılayan dizideki ilk öğenin ilk dizinini döndürür. Böyle bir öğe yoksa-1 döndürür.
+  uid: Microsoft.Quantum.Arrays.IndexOf
+- summary: Bir dizi verildiğinde, for döngüsünde kullanılmak üzere uygun olan, bu dizinin dizinlerinin üzerinde bir Aralık döndürür.
+  uid: Microsoft.Quantum.Arrays.IndexRange
+- summary: İki dizi (neredeyse) aynı boyutta bırakılır.
+  uid: Microsoft.Quantum.Arrays.Interleaved
+- summary: Yalnızca bir dizi boşsa true değerini döndürür.
+  uid: Microsoft.Quantum.Arrays.IsEmpty
+- summary: Yalnızca belirli bir dizi bir permütasyon temsil ediyorsa, true verir.
+  uid: Microsoft.Quantum.Arrays.IsPermutation
+- summary: Dizi verildiğinde, bu dizinin belirli bir karşılaştırma işlevi tarafından tanımlandığı şekilde sıralanıp sıralanmadığını döndürür.
+  uid: Microsoft.Quantum.Arrays.IsSorted
+- summary: ''
+  uid: Microsoft.Quantum.Arrays.IsValuePresent
+- summary: Dizi verildiğinde, bu dizinin öğelerini döndüren bir işlev döndürür.
+  uid: Microsoft.Quantum.Arrays.LookupFunction
+- summary: Dizi öğeleri için tanımlanan bir dizi ve bir işlev verildiğinde, işlevin altındaki orijinal dizinin görüntülerinden oluşan yeni bir dizi döndürür.
+  uid: Microsoft.Quantum.Arrays.Mapped
+- summary: Bir dizi ve dizinin dizinli öğeleri için tanımlanan bir işlev verildiğinde, işlevin altındaki orijinal dizinin görüntülerinden oluşan yeni bir dizi döndürür.
+  uid: Microsoft.Quantum.Arrays.MappedByIndex
+- summary: Bir Aralık ve girdi olarak tamsayı alan bir işlev verildiğinde, işlev altındaki Aralık değerlerinin görüntülerinden oluşan yeni bir dizi döndürür.
+  uid: Microsoft.Quantum.Arrays.MappedOverRange
+- summary: İki sıralanmış dizi verildiğinde, her ikisi de sıralanmış düzende öğelerinin bulunduğu tek bir dizi döndürür. Birleştirme sıralaması tarafından dahili olarak kullanılır.
+  uid: Microsoft.Quantum.Arrays.Merged
+- summary: Son dizi öğesinin bırakılmasının dışında, bir giriş dizisine eşit olan bir dizi oluşturur.
+  uid: Microsoft.Quantum.Arrays.Most
+- summary: Dizinin bir tanımlama grubu döndürür ve dizinin en son öğesidir.
+  uid: Microsoft.Quantum.Arrays.MostAndTail
+- summary: Belirtilen bir uzunluğa kadar belirtilen değerlerle doldurulmuş bir dizi döndürür.
+  uid: Microsoft.Quantum.Arrays.Padded
+- summary: Bir diziyi birden çok parçaya böler.
+  uid: Microsoft.Quantum.Arrays.Partitioned
+- summary: ''
+  uid: Microsoft.Quantum.Arrays.Prefix
+- summary: Bir dizi verildiğinde, tüm ön eklerini döndürür.
+  uid: Microsoft.Quantum.Arrays.Prefixes
+- summary: 2 boyutlu dizinin dikdörtgen şekline sahip olduğu koşulu temsil eder
+  uid: Microsoft.Quantum.Arrays.RectangularArrayFact
+- summary: İlk dizi öğesinin bırakılmasının dışında, bir giriş dizisine eşit olan bir dizi oluşturur.
+  uid: Microsoft.Quantum.Arrays.Rest
+- summary: Giriş dizisi ile aynı öğeleri içeren, ancak ters sırada olan bir dizi oluşturun.
+  uid: Microsoft.Quantum.Arrays.Reversed
+- summary: Verilen bir aralıktaki tamsayıların dizisini alır.
+  uid: Microsoft.Quantum.Arrays.SequenceI
+- summary: Verilen bir aralıktaki tamsayıların dizisini alır.
+  uid: Microsoft.Quantum.Arrays.SequenceL
+- summary: Dizi verildiğinde, belirli bir karşılaştırma işlevine göre sıralanan bu dizinin öğelerini döndürür.
+  uid: Microsoft.Quantum.Arrays.Sorted
+- summary: 2 boyutlu dizinin kare şekline sahip olduğu koşulu temsil eder
+  uid: Microsoft.Quantum.Arrays.SquareArrayFact
+- summary: Bir diziyi ve konumların bir listesini alır ve özgün dizinin öğelerinden belirtilen konumlara göre oluşturulmuş yeni bir dizi oluşturur.
+  uid: Microsoft.Quantum.Arrays.Subarray
+- summary: Bir dizide iki öğenin takas düzeyini uygular.
+  uid: Microsoft.Quantum.Arrays.Swapped
+- summary: Dizinin son öğesini döndürür.
+  uid: Microsoft.Quantum.Arrays.Tail
+- summary: Dizi dizisi olarak temsil edilen bir matrisin sırasını döndürür.
+  uid: Microsoft.Quantum.Arrays.Transposed
+- summary: 2 başlıkların listesini iç içe geçmiş bir diziye dönüştürür.
+  uid: Microsoft.Quantum.Arrays.TupleArrayAsNestedArray
+- summary: Eşit bitişik öğeleri olmayan yeni bir dizi döndürür.
+  uid: Microsoft.Quantum.Arrays.Unique
+- summary: 2 tanımlama grubu dizisi verildiğinde, her biri giriş dizisinin tanımlama gruplarının öğelerini içeren iki dizinin bir kümesini döndürür.
+  uid: Microsoft.Quantum.Arrays.Unzipped
+- summary: Koşul ve dizi verildiğinde, koşulun true olduğu bu dizinin dizinlerini döndürür.
+  uid: Microsoft.Quantum.Arrays.Where
+- summary: Tüm birbirini izleyen alt dizileri döndürür `size` .
+  uid: Microsoft.Quantum.Arrays.Windows
+- summary: >-
+    > [!WARNING]
+
+    > ZIP kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Arrays.Zipped> bunun yerine kullanın.
+
+
+    İki dizi verildiğinde, her bir çiftin her orijinal diziden bir öğe içermesi gibi yeni bir çift dizisi döndürür.
+  uid: Microsoft.Quantum.Arrays.Zip
+- summary: >-
+    > [!WARNING]
+
+    > Zip3 kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Arrays.Zipped3> bunun yerine kullanın.
+
+
+    Üç dizi verildiğinde, her bir 3 tanımlama grubu her bir orijinal diziden bir öğe içerdiği için, yeni bir 3-tanımlama dizisi döndürür.
+  uid: Microsoft.Quantum.Arrays.Zip3
+- summary: >-
+    > [!WARNING]
+
+    > Zip4 kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Arrays.Zipped4> bunun yerine kullanın.
+
+
+    Dört dizi verildiğinde, her 4 tanımlama grubu her bir orijinal diziden bir öğe içerdiği için, yeni bir 4-tanımlama dizisi dizisi döndürür.
+  uid: Microsoft.Quantum.Arrays.Zip4
+- summary: İki dizi verildiğinde, her bir çiftin her orijinal diziden bir öğe içermesi gibi yeni bir çift dizisi döndürür.
+  uid: Microsoft.Quantum.Arrays.Zipped
+- summary: Üç dizi verildiğinde, her bir 3 tanımlama grubu her bir orijinal diziden bir öğe içerdiği için, yeni bir 3-tanımlama dizisi döndürür.
+  uid: Microsoft.Quantum.Arrays.Zipped3
+- summary: Dört dizi verildiğinde, her 4 tanımlama grubu her bir orijinal diziden bir öğe içerdiği için, yeni bir 4-tanımlama dizisi dizisi döndürür.
+  uid: Microsoft.Quantum.Arrays.Zipped4
+- summary: Sıralı bir dizi oluşturmak için bir dizideki sıralama öğelerinin takas edilmesi gereken sırası döndürür. Değiştirmeleri bir yerde gerçekleşir.
+  uid: Microsoft.Quantum.Arrays._SwapOrderToPermuteArray
+name: Microsoft.Quantum.Arrays
+newtypes: []
+operations:
+- summary: Bir işlemi belirli sayıda örnek için yineler ve çıktılarını bir dizide toplar.
+  uid: Microsoft.Quantum.Arrays.DrawMany
+- summary: Dizi öğeleri için tanımlanan bir dizi ve bir işlem verildiğinde, işlem altındaki orijinal dizinin görüntülerinden oluşan yeni bir dizi döndürür.
+  uid: Microsoft.Quantum.Arrays.ForEach
+summary: Bu ad alanı veri dizilerini oluşturmak ve işlemek için işlevler içerir.
+uid: Microsoft.Quantum.Arrays
+metadata:
+  ms.openlocfilehash: aa551a5e9372bd63335a3a9ae3d817628722c09d
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92730354"

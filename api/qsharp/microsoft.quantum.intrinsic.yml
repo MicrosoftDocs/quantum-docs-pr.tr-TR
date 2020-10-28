@@ -1,0 +1,135 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Bir iletiyi günlüğe kaydeder.
+  uid: Microsoft.Quantum.Intrinsic.Message
+name: Microsoft.Quantum.Intrinsic
+newtypes: []
+operations:
+- summary: >+
+    > [!WARNING]
+
+    > Onaylama kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Diagnostics.AssertMeasurement> bunun yerine kullanın.
+
+  uid: Microsoft.Quantum.Intrinsic.Assert
+- summary: >+
+    > [!WARNING]
+
+    > AssertProb kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> bunun yerine kullanın.
+
+  uid: Microsoft.Quantum.Intrinsic.AssertProb
+- summary: Üçlü denetimli (CCNOT) kapısını üç qubit 'e uygular.
+  uid: Microsoft.Quantum.Intrinsic.CCNOT
+- summary: >-
+    Denetlenen-NOT (CNOT) kapısını bir qubit çiftiyle uygular.
+
+    \begin{hizalaması} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 0 & 1 & 0 & 0 0 & 0 & 0 & 1 0 & 0 & 1 & 0 1 \\ \\ \\ \\ \\ \\ \end{bmatrix}, \end{hizalaması}, satır ve sütun hisse kavramları kılavuzunda olduğu gibi sıralanır.
+  uid: Microsoft.Quantum.Intrinsic.CNOT
+- summary: >-
+    Multi-qubit Pauli işlecinin üstel değeri uygular.
+
+    \begin{hizalaması} e ^ {ı \teta [P_0 \otimes P_1 \cnoktalar P_ {N-1}]}, \end{hizalaması}; burada $P _i $, $i $ th öğesi `paulis` ve burada $N = $ `Length(paulis)` .
+  uid: Microsoft.Quantum.Intrinsic.Exp
+- summary: >-
+    Bir multi-qubit Pauli işlecinin üstel değeri bir dyadic kesri tarafından verilen bağımsız değişkenle uygular.
+
+    \begin{hizalaması} e ^ {ı \pı k [P_0 \otimes P_1 \cnoktalar P_ {N-1}]/2 ^ N}, \end{hizalaması}; burada $P _i $, $i $ th öğesi `paulis` ve burada $N = $ `Length(paulis)` .
+  uid: Microsoft.Quantum.Intrinsic.ExpFrac
+- summary: >-
+    Hadamard dönüşümünü tek bir qubit 'e uygular.
+
+    \begin{hizalaması} H \mathrel{: =} \frac {1} {\sqrt {2} } \begin{bmatrix} 1 & 1 \\ \\ 1 &-1 \end{bmatrix}. \end{hizalaması}
+  uid: Microsoft.Quantum.Intrinsic.H
+- summary: Tek bir qubit üzerinde kimlik işlemini (No-Op) gerçekleştirir.
+  uid: Microsoft.Quantum.Intrinsic.I
+- summary: >-
+    Pauli $Z $ temelinde tek bir qubit ölçümü gerçekleştirir.
+
+    Çıkış sonucu, < Begin{hizalaması} \Pr (\Texttt{dd} | \ket{\psı}) = \braket{\psı | 0} \braket{0 | \psı} dağıtımı tarafından verilir. \end{hizalaması}
+  uid: Microsoft.Quantum.Intrinsic.M
+- summary: >-
+    Belirtilen Pauli tabanlarında bir veya daha fazla qubits 'in Birleşik ölçüsünü gerçekleştirir.
+
+    Çıkış sonucu dağıtım tarafından verilir: \begin{hizalaması} \Pr (\Texttt{dd} | \ket{\psı}) = \frac12 \braket{\psı \ Mid | \left (\cıvadone + P_0 \otimes P_1 \otimes \cnoktalar \otimes P_ {N-1} \right) \mid | \psı}, \end{hizalaması}; burada $P _i $, $i $ TH öğesidir. `bases` ve burada $N = \texttt{Length} (\texttt{Bases}) $. Diğer bir deyişle, ölçüm, `Result` gözlemlenen ölçüm efektinin eigenvalue değeri $ (-1) ^ d $ olacak şekilde bir $d $ döndürür.
+  uid: Microsoft.Quantum.Intrinsic.Measure
+- summary: >-
+    Verilen Pauli ekseni hakkında bir döndürme uygular.
+
+    \begin{hizalaması} R_ {\mu} (\teta) \mathrel{: =} e ^ {-i \teta \ sigma_ {\mu}/2}, \end{hizalaması}; burada $ \mu \ in \{ i, X, Y, Z \} $.
+  uid: Microsoft.Quantum.Intrinsic.R
+- summary: >-
+    $ \Ket {1} $ durumu hakkında verilen bir açıda bir döndürme uygular.
+
+    \begin{hizalaması} R_1 (\teta) \mathrel{: =} \operatorname{diag} (1, e ^ {i\teta}). \end{hizalaması}
+  uid: Microsoft.Quantum.Intrinsic.R1
+- summary: >-
+    $ \Ket {1} $ durumu ile dyadic kesri olarak belirtilen bir açıda bir döndürme uygular.
+
+    \begin{hizalaması} R_1 (n, k) \mathrel{: =} \operatorname{diag} (1, e ^ {ı \ Pi k/2 ^ n}). \end{hizalaması}
+
+    > [!WARNING] > bu işlem, > **karşı oturum açma** kuralını kullanır @"microsoft.quantum.intrinsic.r" ve tarafından eklenen $1/2 $ > faktörünü içermez @"microsoft.quantum.intrinsic.r1" .
+  uid: Microsoft.Quantum.Intrinsic.R1Frac
+- summary: >-
+    Verilen Pauli ekseni ile dyadic kesri olarak belirtilen bir açıda bir döndürme uygular.
+
+    \begin{hizalaması} R_ {\mu} (n, k) \mathrel{: =} e ^ {ı \pi n \ sigma_ {\mu}/2 ^ k}, \end{hizalaması}; burada $ \mu \ in \{ i, X, Y, Z \} $.
+
+    > [!WARNING] > bu **işlem, > karşı oturum** açma kuralını kullanır @"microsoft.quantum.intrinsic.r" .
+  uid: Microsoft.Quantum.Intrinsic.RFrac
+- summary: >+
+    > [!WARNING]
+
+    > Rastgele kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Random.DrawCategorical> bunun yerine kullanın.
+
+  uid: Microsoft.Quantum.Intrinsic.Random
+- summary: Tek bir qubit verildiğinde, bunu ölçer ve güvenli bir şekilde yayımlanabilmesi için | 0 ⟩ durumunda olduğundan emin olun.
+  uid: Microsoft.Quantum.Intrinsic.Reset
+- summary: Bir qubit dizisi verildiğinde, bunları ölçecek ve bunları güvenli bir şekilde yayımlanabilmesi için | 0 ⟩ durumunda olduklarından emin olun.
+  uid: Microsoft.Quantum.Intrinsic.ResetAll
+- summary: >-
+    $X $-ekseni ile verilen bir açıda bir döndürme uygular.
+
+    \begin{hizalaması} R_x (\teta) \mathrel{: =} e ^ {-i \teta \ sigma_x/2} = \begin{bmatrix} \cos \frac{\theta} {2} &-ı\sin \ FRAC{\theta}-i\sin \ FRAC{\theta} {2} \\ \\ {2} & \cos \ FRAC{\theta} {2} \end{bmatrix}.   \end{hizalaması}
+  uid: Microsoft.Quantum.Intrinsic.Rx
+- summary: >-
+    $Y $-ekseni ile verilen bir açıda bir döndürme uygular.
+
+    \begin{hizalaması} R_y (\teta) \mathrel{: =} e ^ {-i \teta \ sigma_y/2} = \begin{bmatrix} \cos \frac{\theta} {2} &-\sin \ FRAC{\theta} {2} \\ \\ \sin \frac{\theta} {2} & \cos \frac{\theta} {2} \end{bmatrix}.   \end{hizalaması}
+  uid: Microsoft.Quantum.Intrinsic.Ry
+- summary: >-
+    $Z $-ekseni ile verilen bir açıda bir döndürme uygular.
+
+    \begin{hizalaması} R_z (\teta) \mathrel{: =} e ^ {-i \teta \ sigma_z/2} = \begin{bmatrix} e ^ {-i \teta/2} & 0 \\ \\ 0 & e ^ {ı \ teta/2} \end{bmatrix}. \end{hizalaması}
+  uid: Microsoft.Quantum.Intrinsic.Rz
+- summary: S geçidini tek bir qubit 'e uygular.
+  uid: Microsoft.Quantum.Intrinsic.S
+- summary: >-
+    DEĞIŞTIRME kapısını bir qubits çiftine uygular.
+
+    \begin{hizalaması} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 0 & 1 \\ \\ & 0 & 0 0 & 0 & 0 & \\ \\ 1 \end{bmatrix}, \end{hizalaması}, satır ve sütunların hisse kavramları kılavuzunda olduğu gibi sıralanır.
+  uid: Microsoft.Quantum.Intrinsic.SWAP
+- summary: T geçidini tek bir qubit 'e uygular.
+  uid: Microsoft.Quantum.Intrinsic.T
+- summary: >-
+    Pauli $X $ geçidini uygular.
+
+    \begin{hizalaması} \ sigma_x \mathrel{: =} \begin{bmatrix} 0 & 1 \\ \\ 1 & 0 \end{bmatrix}. \end{hizalaması}
+  uid: Microsoft.Quantum.Intrinsic.X
+- summary: >-
+    Pauli $Y $ geçidini uygular.
+
+    \begin{hizalaması} \ sigma_y \mathrel{: =} \begin{bmatrix} 0 &-ı \\ \\ i & 0 \ End{bmatrix}. \end{hizalaması}
+  uid: Microsoft.Quantum.Intrinsic.Y
+- summary: >-
+    Pauli $Z $ geçidini uygular.
+
+    \begin{hizalaması} \ sigma_z \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ 0 &-1 \end{bmatrix}. \end{hizalaması}
+  uid: Microsoft.Quantum.Intrinsic.Z
+summary: ''
+uid: Microsoft.Quantum.Intrinsic
+metadata:
+  ms.openlocfilehash: b88a931baa553d2e075bec01ce112b58b4fc913c
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92731703"
