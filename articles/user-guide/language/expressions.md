@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.expressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9bf28e3854eae1892692d7ca840e1860de2e2934
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e95a7cb9b74136ef9a6f51b4bbc32d1d93c43a0d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835851"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691596"
 ---
 # <a name="expressions-in-no-locq"></a>İçindeki ifadeler Q#
 
@@ -40,7 +40,7 @@ let bigOne = bigZero + 1L;
 Bunlar ondalık bir nokta veya ya da ya da " `.` e" ya da "e" ya da bir üstel bölüm (yalnızca olası bir negatif işaret ve ondalık basamakların geçerli olması) ile yazılmış veya olmadan yazılabilir.
 Aşağıdakiler geçerli `Double` değişmez değerler: `0.0` , `1.2e5` , `1e-5` .
 
-Herhangi bir öğe türünün dizi ifadesi verildiğinde, `Int` [`Length`](xref:microsoft.quantum.core.length) yerleşik işlevini kullanarak, dizi ifadesi parantez içine alınmış bir ifade oluşturabilirsiniz.
+Herhangi bir öğe türünün dizi ifadesi verildiğinde, `Int` [`Length`](xref:Microsoft.Quantum.Core.Length) yerleşik işlevini kullanarak, dizi ifadesi parantez içine alınmış bir ifade oluşturabilirsiniz.
 Örneğin, `a` bir diziye bağlıysa, bir `Length(a)` tamsayı ifadesidir.
 , `b` Tamsayıların dizilerindeki bir diziyse, `Int[][]` `Length(b)` içindeki alt dizilerin sayısıdır `b` ve `Length(b[1])` içindeki ikinci alt dizideki tamsayıların sayısıdır `b` .
 
@@ -64,7 +64,7 @@ Hem tamsayı hem de büyük tamsayı değerleri için, vardiyalar aritmetik değ
 Negatif bir değeri sol veya sağ olarak değiştirme negatif bir sayı ile sonuçlanır.
 Diğer bir deyişle, bir adım sola veya sağa kaydırma, sırasıyla 2 ile çarpılarak veya bölünerek aynıdır.
 
-Tamsayı bölme ve tamsayı mod, negatif sayılar için C# olarak aynı davranışı izler. Yani, `a % b` her zaman aynı işarete sahiptir `a` ve `b * (a / b) + a % b` her zaman eşittir `a` . Örnek:
+Tamsayı bölme ve tamsayı mod, negatif sayılar için C# olarak aynı davranışı izler. Yani, `a % b` her zaman aynı işarete sahiptir `a` ve `b * (a / b) + a % b` her zaman eşittir `a` . Örneğin:
 
 |`A` | `B` | `A / B` | `A % B`|
 |:---------:|:----------:|:---------:|:---------:|
@@ -111,13 +111,13 @@ Herhangi bir Boole ifadesi verildiğinde, `not` birli işleç yanlış olduğund
 
 ## <a name="string-expressions"></a>Dize ifadeleri
 
-Q#`fail`deyimde ( [Denetim akışında](xref:microsoft.quantum.guide.controlflow#fail-statement)açıklanmıştır) ve standart işlevde dizelerin kullanılmasına izin verir [`Message`](xref:microsoft.quantum.intrinsic.message) . İkinci öğesinin belirli davranışı kullanılan simülatöre bağlıdır, ancak genellikle bir program sırasında çağrıldığında ana bilgisayar konsoluna bir ileti yazar Q# .
+Q#`fail`deyimde ( [Denetim akışında](xref:microsoft.quantum.guide.controlflow#fail-statement)açıklanmıştır) ve standart işlevde dizelerin kullanılmasına izin verir [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) . İkinci öğesinin belirli davranışı kullanılan simülatöre bağlıdır, ancak genellikle bir program sırasında çağrıldığında ana bilgisayar konsoluna bir ileti yazar Q# .
 
 İçindeki dizeler Q# değişmez değerler ya da enterpolasyonlardır.
 
 Dize sabit değerleri çoğu dilde basit dize sabit değerlerine benzer: çift tırnak içine alınmış bir Unicode karakter dizisi `" "` .
 Bir dizenin içinde, `\` çift tırnak karakterini ( `\"` ) kaçış veya New-Line ( `\n` ), bir satır başı ( `\r` ) veya Tab ( `\t` ) eklemek için ters eğik çizgi karakterini kullanın.
-Örnek:
+Örneğin:
 
 ```qsharp
 "\"Hello world!\", she said.\n"
@@ -128,7 +128,7 @@ Q#Dize enterpolasyonları için sözdizimi, C# sözdiziminin bir alt kümesidir.
 
 * Bir dize sabit değerini, enterpolasyonlu bir dize olarak tanımlamak için, `$` simgeyi simgesiyle önüne ekleyin. `$`Ve arasında `"` bir dize sabiti Başlatan boşluk olamaz.
 
-* Aşağıdaki örnek, [`Message`](xref:microsoft.quantum.intrinsic.message) diğer ifadelerle birlikte, bir ölçünün sonucunu konsola yazmak için fonksiyonunu kullanan temel bir örnektir Q# .
+* Aşağıdaki örnek, [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) diğer ifadelerle birlikte, bir ölçünün sonucunu konsola yazmak için fonksiyonunu kullanan temel bir örnektir Q# .
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -189,7 +189,7 @@ Tanımlama grubu sabit değeri, virgülle ayrılmış şekilde, uygun türdeki �
 
 Değişmez değerler dışında, tek demet ifadeleri demet değerlerine, demet dizilerinin dizi öğelerine ve tanımlama grupları döndüren çağrılabilir çağırmaları olan sembollerdir.
 
-## <a name="user-defined-type-expressions"></a>Kullanıcı tanımlı tür Ifadeleri
+## <a name="user-defined-type-expressions"></a>User-Defined tür Ifadeleri
 
 Kullanıcı tanımlı bir türün sabit değeri tür adından, ardından türün temel demet türünün bir tanımlama grubu değişmez değerinden oluşur.
 Örneğin, `IntPair` temelli Kullanıcı tanımlı bir tür ise `(Int, Int)` , `IntPair(2, 3)` Bu türün geçerli bir sabit değeri olur.
@@ -209,7 +209,7 @@ Bu nedenle, `WrappedPair` temel alınan türe sahip kullanıcı tanımlı bir t�
 
 `!`İşlecin önceliği belirgin olmayan bir etkiye sahip olabilir.
 Bir işlev veya işlem sarmalanmamış bir değer döndürürse, bağımsız değişken grubu, sarmalama yerine çağrıya bağlamak için işlev veya işlem çağrısının parantez içine alınması gerekir.
-Örnek:
+Örneğin:
 
 ```qsharp
 let f = (Foo(arg))!;    // Calls Foo(arg), then unwraps the result
@@ -237,7 +237,7 @@ Yeni bir dizinin öğeleri, türe bağlı bir varsayılan değere başlatırlar.
 
 Varlıklara başvurular olan qubits ve callables için makul bir varsayılan değer yoktur.
 Bu nedenle, varsayılan olarak, bir çalışma zamanı hatasına neden olmadan, C# veya Java gibi dillerdeki bir null başvuruya benzer şekilde kullanamazsınız.
-, Öğelerini güvenli bir şekilde kullanabilmeniz için qubits veya callables içeren diziler varsayılan olmayan değerlerle başlatılmalıdır. Uygun başlatma yordamları için bkz <xref:microsoft.quantum.arrays> ..
+, Öğelerini güvenli bir şekilde kullanabilmeniz için qubits veya callables içeren diziler varsayılan olmayan değerlerle başlatılmalıdır. Uygun başlatma yordamları için bkz <xref:Microsoft.Quantum.Arrays> ..
 
 Her türün varsayılan değerleri şunlardır:
 
@@ -472,7 +472,7 @@ Tür belirtimi gereklidir çünkü `Op3` ve `Op1` farklı türlere sahip olur, b
 
 Q# en yüksekten en düşüğe göre öncelik sırasına göre işleçler:
 
-Operatör | Sayısına | Açıklama | İşlenen türleri
+İşleç | Sayısına | Açıklama | İşlenen türleri
 ---------|----------|---------|---------------
  arkasında `!` | Birli | Unwrap | Kullanıcı tanımlı herhangi bir tür
  `-`, `~~~`, `not` | Birli | Sayısal negatif, bit düzeyinde tamamlama, mantıksal değilleme | `Int`, için `BigInt` veya için `Double` `-` `Int` veya `BigInt` `~~~` `Bool` için `not`

@@ -9,16 +9,16 @@ uid: microsoft.quantum.guide.variables
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bb87f36d3c9b7df195f64e85151e833d494ea945
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 67c71c09e004d77360902360fefc7a7752e4a829
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835885"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690929"
 ---
 # <a name="variables-in-no-locq"></a>İçindeki değişkenler Q#
 
-Q# değişebilir ve değişmez semboller ya da ifadelerle sınırlanan/atanan *değişkenler*arasında ayrım yapar.
+Q# değişebilir ve değişmez semboller ya da ifadelerle sınırlanan/atanan *değişkenler* arasında ayrım yapar.
 Genellikle, derleyicinin daha iyi iyileştirmeler gerçekleştirmesini sağladığından, değişmez sembollerin kullanılması önerilir.
 
 Bir bağlamanın sol tarafı bir sembol tanımlama grubu ve bir ifadenin sağ tarafından oluşur.
@@ -40,7 +40,7 @@ Bu, belirli bir Pauli işleçleri dizisini değişken adına (veya "Symbol") ata
 > [!NOTE]
 > Önceki örnekte, deyimin sağ tarafındaki ifade `let` belirsiz olduğundan ve derleyici doğru türü kodcıdığı için, yeni değişkenin türünü açıkça belirtmeniz gerekmez. 
 
-Kullanılarak tanımlanan değişkenler `let` *sabittir*, yani tanımladıktan sonra herhangi bir şekilde artık değiştiremezsiniz.
+Kullanılarak tanımlanan değişkenler `let` *sabittir* , yani tanımladıktan sonra herhangi bir şekilde artık değiştiremezsiniz.
 Bu, bir işlemin türevini uygulamak için değişkenlerin yeniden sıralanmasında davranan klasik mantığın iyileştirmesi dahil olmak üzere birkaç yararlı iyileştirmede izin verir `Adjoint` .
 
 ## <a name="mutable-variables"></a>Değişebilir değişkenler
@@ -110,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-Diziler söz konusu olduğunda, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) Q# Standart kitaplıkta birçok yaygın dizi başlatma ve işleme ihtiyacı için gerekli araçlar sağlanır ve bu sayede dizi öğelerini ilk yerde güncelleştirmek zorunda kalmamak için yardımcı olur. 
+Diziler söz konusu olduğunda, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) Q# Standart kitaplıkta birçok yaygın dizi başlatma ve işleme ihtiyacı için gerekli araçlar sağlanır ve bu sayede dizi öğelerini ilk yerde güncelleştirmek zorunda kalmamak için yardımcı olur. 
 
 Update-ve-yeniden ata deyimleri gerekirse bir alternatif sağlar:
 
@@ -135,7 +135,7 @@ operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
 
 ```
 
-' De sağlanan diziler için kitaplık araçlarını kullanarak, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) Örneğin, `Pauli` dizindeki öğenin belirli bir değeri aldığı bir tür dizisi döndüren bir işlevi kolayca tanımlayabilir `i` `Pauli` ve diğer tüm girişler kimlik () olarak verilebilir `PauliI` .
+' De sağlanan diziler için kitaplık araçlarını kullanarak, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) Örneğin, `Pauli` dizindeki öğenin belirli bir değeri aldığı bir tür dizisi döndüren bir işlevi kolayca tanımlayabilir `i` `Pauli` ve diğer tüm girişler kimlik () olarak verilebilir `PauliI` .
 
 Bu tür bir işlevin, elden çıkarmada araçların avantajlarından faydalanarak iki tanımı vardır.
 
@@ -150,7 +150,7 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
 }
 ```
 
-Dizideki her dizin üzerinde yineleme yapmak ve bunu olarak veya verilen olarak ayarlamak yerine ' `PauliI` den ' ı `pauli` kullanarak `ConstantArray` [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) bir tür dizisi oluşturabilir `PauliI` ve sonra dizinde belirli bir değeri değiştirdiğiniz bir kopya ve güncelleştirme ifadesi döndürebilirsiniz `location` :
+Dizideki her dizin üzerinde yineleme yapmak ve bunu olarak veya verilen olarak ayarlamak yerine ' `PauliI` den ' ı `pauli` kullanarak `ConstantArray` [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) bir tür dizisi oluşturabilir `PauliI` ve sonra dizinde belirli bir değeri değiştirdiğiniz bir kopya ve güncelleştirme ifadesi döndürebilirsiniz `location` :
 
 ```qsharp
 function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
@@ -166,7 +166,7 @@ Bu formun bir ataması, bu kayıt düzeninin öğelerini *parçalara ayırmayı*
 Bağlamanın sağ tarafı bir tanımlama grubu ise, bu kayıt kümesini atama sırasında oluşturabilirsiniz.
 Bu tür ayrıştırmaları iç içe diziler içerebilir ve sağ taraftaki tanımlama grubunun şekli sembol tanımlama grubu şekli ile uyumlu olduğu sürece herhangi bir tam veya kısmi ayrıştırma geçerlidir.
 
-Örnek:
+Örneğin:
 
 ```qsharp
 let (i, f) = (5, 0.1); // i is bound to 5 and f to 0.1

@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2cb02617c81ee8b144ffe933f11b476ba6f4a23e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f1a4ef0616a8a3f1548b7a7207cf8cbb9dcc7260
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835970"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691695"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Program çalıştırma yolları Q#
 
@@ -26,7 +26,7 @@ Birincil ayrım, çalıştırılabilir bir değer olabilir Q# :
 - tek başına bir uygulama olarak, Q# söz konusu tek dildir ve program doğrudan çağırılır. Bu kategoriye aslında iki yöntem yer almalıdır:
   - komut satırı arabirimi
   - Q# Jupyıter Not defterleri
-- ek bir *ana bilgisayar programıyla*, Python veya bir .net dilinde (örneğin, C# veya F #) yazılmış, daha sonra programı çağıran ve döndürülen sonuçları daha fazla işleyebilir.
+- ek bir *ana bilgisayar programıyla* , Python veya bir .net dilinde (örneğin, C# veya F #) yazılmış, daha sonra programı çağıran ve döndürülen sonuçları daha fazla işleyebilir.
 
 Bu işlemlerin ve bunların farklarının en iyi şekilde anlaşılması için, basit bir programı göz önünde bulunduruyoruz Q# ve çalıştırılabildikleri yolları karşılaştırıyoruz.
 
@@ -56,16 +56,16 @@ Bunun için, doğrudan veya başka bir işlem tarafından---çağrıldığında 
 ```
 Bir işlem tanımladınız, ancak `MeasureSuperposition` hiçbir giriş yapılmaz ve [sonuç](xref:microsoft.quantum.guide.types)türünde bir değer döndürmez.
 
-Bu sayfadaki örnekler yalnızca Q# *işlemlerden*oluşurken, tartıştığımız kavramların hepsi işlevleri ile aynı şekilde ele alınacaktır Q# *functions*. bu nedenle, bunlara toplu olarak *callables*olarak başvuracağız. Bunların farklılıkları temel alınarak açıklanmaktadır [ Q# : işlemler ve işlevler](xref:microsoft.quantum.guide.basics#q-operations-and-functions)ve bunların tanımlanması hakkında daha fazla ayrıntı, [işlemler ve işlevlerde](xref:microsoft.quantum.guide.operationsfunctions)bulunabilir.
+Bu sayfadaki örnekler yalnızca Q# *işlemlerden* oluşurken, tartıştığımız kavramların hepsi işlevleri ile aynı şekilde ele alınacaktır Q# *functions* . bu nedenle, bunlara toplu olarak *callables* olarak başvuracağız. Bunların farklılıkları temel alınarak açıklanmaktadır [ Q# : işlemler ve işlevler](xref:microsoft.quantum.guide.basics#q-operations-and-functions)ve bunların tanımlanması hakkında daha fazla ayrıntı, [işlemler ve işlevlerde](xref:microsoft.quantum.guide.operationsfunctions)bulunabilir.
 
 ### <a name="callable-defined-in-a-no-locq-file"></a>Bir dosyada tanımlanmış çağrılabilir Q#
 
 Çağrılabilir, tam olarak aranan ve tarafından çalıştırılan şeydir Q# .
 Ancak, tam bir dosyayı oluşturacak birkaç ekleme daha vardır `*.qs` Q# .
 
-Tüm Q# türler ve callables (hem tanımladığınız hem de dile özgü olan) *ad alanları*içinde tanımlanır ve bu, daha sonra başvurulabilen her bir tam adı sağlar.
+Tüm Q# türler ve callables (hem tanımladığınız hem de dile özgü olan) *ad alanları* içinde tanımlanır ve bu, daha sonra başvurulabilen her bir tam adı sağlar.
 
-Örneğin, [`H`](xref:microsoft.quantum.intrinsic.h) ve işlemleri, [`MResetZ`](xref:microsoft.quantum.measurement.mresetz) [`Microsoft.Quantum.Instrinsic`](xref:microsoft.quantum.intrinsic) ve [`Microsoft.Quantum.Measurement`](xref:microsoft.quantum.measurement) ad alanlarında ( [ Q# standart kitaplıkların](xref:microsoft.quantum.qsharplibintro)bir parçası) bulunur.
+Örneğin, [`H`](xref:Microsoft.Quantum.Intrinsic.H) ve işlemleri, [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) ve [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) ad alanlarında ( [ Q# standart kitaplıkların](xref:microsoft.quantum.qsharplibintro)bir parçası) bulunur.
 Bu nedenle, her zaman *tam* adlarıyla çağrılabilir, `Microsoft.Quantum.Intrinsic.H(<qubit>)` `Microsoft.Quantum.Measurement.MResetZ(<qubit>)` ancak her zaman bunu yapmanız çok karışık koda yol açabilir.
 
 Bunun yerine, `open` deyimler, yukarıdaki işlem gövdesinde yaptığımız gibi, callables 'e daha kısa toplu ile başvurulmalıdır.
@@ -90,8 +90,8 @@ namespace NamespaceName {
 > Örneğin, `open Microsoft.Quantum.Instrinsic as NamespaceWithH;` Yukarıdaki ' ı kullanabilir ve ardından `H` aracılığıyla çağırabilirsiniz `NamespaceWithH.H(<qubit>)` .
 
 > [!NOTE]
-> Tüm bu tek istisna, [`Microsoft.Quantum.Core`](xref:microsoft.quantum.core) her zaman otomatik olarak açılan bir ad alanıdır.
-> Bu nedenle, callables, [`Length`](xref:microsoft.quantum.core.length) her zaman doğrudan kullanılabilir.
+> Tüm bu tek istisna, [`Microsoft.Quantum.Core`](xref:Microsoft.Quantum.Core) her zaman otomatik olarak açılan bir ad alanıdır.
+> Bu nedenle, callables, [`Length`](xref:Microsoft.Quantum.Core.Length) her zaman doğrudan kullanılabilir.
 
 ### <a name="running-on-target-machines"></a>Hedef makinelerde çalıştırma
 
@@ -121,7 +121,7 @@ Daha belirgin olarak, farklar şu şekilde döner:
 Q#İlk üçünün aksine, birincil işlevselliği yerel bir dosya etrafında ortalamadığından, en son jupi Not defterlerinin tek başına uygulamasını ayırdık Q# .
 
 > [!NOTE]
-> Bu örneklerde anlamadığımızda, çalıştırma yöntemleri arasındaki bir genel durumda, programın içinden yazdırılan tüm iletiler Q# ( [`Message`](xref:microsoft.quantum.intrinsic.message) [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) Örneğin, veya) her zaman ilgili konsola yazdırılır.
+> Bu örneklerde anlamadığımızda, çalıştırma yöntemleri arasındaki bir genel durumda, programın içinden yazdırılan tüm iletiler Q# ( [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) [`DumpMachine`](xref:Microsoft.Quantum.Diagnostics.DumpMachine) Örneğin, veya) her zaman ilgili konsola yazdırılır.
 
 ## <a name="no-locq-from-the-command-prompt"></a>Q# komut isteminden
 Programları yazmaya başlamanın en kolay yollarından biri Q# , ayrı dosyalar ve ikinci bir dilin tamamen kaygılanmasından kaçınmaktır.
@@ -180,7 +180,7 @@ Bu tür bir işlem şöyle yazılabilir
     }
 ```
 döndürülen değer ölçüm sonuçlarının bir dizisidir.
-Ve [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) [`ForEach`](xref:microsoft.quantum.arrays.foreach) ad alanlarında olduğunu ve [`Microsoft.Quantum.Canon`](xref:microsoft.quantum.canon) [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) `open` her biri için ek deyimler kullanılmasını unutmayın.
+Ve [`ApplyToEach`](xref:Microsoft.Quantum.Canon.ApplyToEach) [`ForEach`](xref:Microsoft.Quantum.Arrays.ForEach) ad alanlarında olduğunu ve [`Microsoft.Quantum.Canon`](xref:Microsoft.Quantum.Canon) [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) `open` her biri için ek deyimler kullanılmasını unutmayın.
 
 `@EntryPoint()`Özniteliği bu yeni işlemden önce (örneğin, bir dosyada yalnızca bir satır olabilir) taşıdığımızda, çalıştırmayı denemek yalnızca bir `dotnet run` hata mesajı ile sonuçlanmaya, hangi ek komut satırı seçeneklerinin gerekli olduğunu ve bunları nasıl ifade ettiğine ilişkin bir hata iletisiyle sonuçlanır.
 
@@ -593,7 +593,7 @@ Bu nedenle, ilgili ad alanları için deyimlerle [ Q# Standart kitaplıklardan](
 Bu tür bir deyime sahip bir hücreyi çalıştırırken, bu ad alanlarından alınan tanımlar çalışma alanı boyunca kullanılabilir.
 
 > [!NOTE]
-> [Microsoft. hisse. iç](xref:microsoft.quantum.intrinsic) ve [Microsoft. hisse. Canon](xref:microsoft.quantum.canon) 'nin (örneğin, ve) callables, [`H`](xref:microsoft.quantum.intrinsic.h) [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) Q# jupi Not defterlerindeki hücrelerde tanımlanan işlemler için otomatik olarak kullanılabilir.
+> [Microsoft. hisse. iç](xref:Microsoft.Quantum.Intrinsic) ve [Microsoft. hisse. Canon](xref:Microsoft.Quantum.Canon) 'nin (örneğin, ve) callables, [`H`](xref:Microsoft.Quantum.Intrinsic.H) [`ApplyToEach`](xref:Microsoft.Quantum.Canon.ApplyToEach) Q# jupi Not defterlerindeki hücrelerde tanımlanan işlemler için otomatik olarak kullanılabilir.
 > Ancak, bu, dış Q# kaynak dosyalarından ( [giriş Q# ve jupi not defterlerine](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)göre gösterilen bir işlem) getirilen kod için doğru değildir. 
 > 
 

@@ -9,14 +9,14 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1cfef50cf2bbecd2043972a662edd8120c5570ec
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835630"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690865"
 ---
-# <a name="higher-order-control-flow"></a>Daha yüksek sıralı denetim akışı #
+# <a name="higher-order-control-flow"></a>Denetim akışı Higher-Order #
 
 Standart kitaplığın birincil rollerinden biri, yüksek düzey algoritmik fikirlerinin [hisse programları](https://en.wikipedia.org/wiki/Quantum_programming)olarak hızlı bir şekilde yönetilmesini kolaylaştırmaktır.
 Bu nedenle, Q# Canon işlevlerin ve işlemlerin kısmi uygulaması kullanılarak uygulanan çeşitli farklı akış denetim yapıları sağlar.
@@ -38,7 +38,7 @@ for (idxQubit in 0..nQubits - 2) {
 }
 ```
 
-<xref:microsoft.quantum.canon.applytoeachca>Ancak, gibi dizi işleme işlevlerinde ifade edilir, <xref:microsoft.quantum.arrays.zip> ancak bu çok daha kısadır ve okunması daha kolaydır:
+<xref:Microsoft.Quantum.Canon.ApplyToEachCA>Ancak, gibi dizi işleme işlevlerinde ifade edilir, <xref:Microsoft.Quantum.Arrays.Zipped> ancak bu çok daha kısadır ve okunması daha kolaydır:
 
 ```qsharp
 ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
@@ -50,7 +50,7 @@ Bu bölümün geri kalanında, Canon to sıkı Express hisse programları taraf�
 
 Canon tarafından sunulan birincil soyutlamalar yinelemeden biridir.
 Örneğin, tek bir-qubit Unitary $U $ için $U \otimes U \otimes \cnoktalar \otimes U $ biçiminde bir Unitary değerini düşünün.
-Q#' De, <xref:microsoft.quantum.arrays.indexrange> bunu `for` bir yazmaç üzerinde döngü olarak göstermek için kullanabiliriz:
+Q#' De, <xref:Microsoft.Quantum.Arrays.IndexRange> bunu `for` bir yazmaç üzerinde döngü olarak göstermek için kullanabiliriz:
 
 ```qsharp
 /// # Summary
@@ -83,16 +83,16 @@ ApplyToEachCA(Adjoint U, register);
 ```
 
 Özellikle bu, ' `ApplyToEachCA` nin bir adjoint özelleştirmenin otomatik olarak oluşturulduğu işlemlerde görünebileceği anlamına gelir.
-Benzer şekilde, <xref:microsoft.quantum.canon.applytoeachindex> formun desenlerini temsil etmek için yararlıdır `U(0, targets[0]); U(1, targets[1]); ...` ve kendi girişi tarafından desteklenen her bir tek bir bileşim birleşimi için sürümler sağlar.
+Benzer şekilde, <xref:Microsoft.Quantum.Canon.ApplyToEachIndex> formun desenlerini temsil etmek için yararlıdır `U(0, targets[0]); U(1, targets[1]); ...` ve kendi girişi tarafından desteklenen her bir tek bir bileşim birleşimi için sürümler sağlar.
 
 > [!TIP]
 > `ApplyToEach` tür parametreli, dışında bir girişi olan işlemlerle kullanılabilmesi için `Qubit` .
-> Örneğin, `codeBlocks` kurtarılması gereken bir değer dizisi olduğunu varsayalım <xref:microsoft.quantum.errorcorrection.logicalregister> .
+> Örneğin, `codeBlocks` kurtarılması gereken bir değer dizisi olduğunu varsayalım <xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister> .
 > Ardından `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` , `code` `recoveryFn` her bloğa bağımsız olarak hata düzeltme kodu ve kurtarma işlevi uygular.
 > Bu, klasik girişler için bile geçerlidir: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` $ \pı/$2 yaklaşık $X $, ardından $Y $ hakkında $Pi/$3 dönüşü uygular.
 
 Q#Canon, işlevsel programlamaya tanıdık olan klasik numaralandırma desenleri için de destek sağlar.
-Örneğin, bir <xref:microsoft.quantum.arrays.fold> \_ \_ \_ liste üzerinde bir işlevi azaltmak için $f (f (f (s {\Text{Initial}}, x 0), \noktalar) $ düzenini uygular.
+Örneğin, bir <xref:Microsoft.Quantum.Arrays.Fold> \_ \_ \_ liste üzerinde bir işlevi azaltmak için $f (f (f (s {\Text{Initial}}, x 0), \noktalar) $ düzenini uygular.
 Bu model toplamları, ürünleri, Minima, MAXIMA ve diğer benzeri işlevleri uygulamak için kullanılabilir:
 
 ```qsharp
@@ -103,12 +103,12 @@ function Sum(xs : Int[]) {
 }
 ```
 
-Benzer şekilde, ve gibi işlevler ' <xref:microsoft.quantum.arrays.mapped> <xref:microsoft.quantum.arrays.mappedbyindex> de fonksiyonel programlama kavramlarını ifade etmek için kullanılabilir Q# .
+Benzer şekilde, ve gibi işlevler ' <xref:Microsoft.Quantum.Arrays.Mapped> <xref:Microsoft.Quantum.Arrays.MappedByIndex> de fonksiyonel programlama kavramlarını ifade etmek için kullanılabilir Q# .
 
 ## <a name="composing-operations-and-functions"></a>Işlemleri ve Işlevleri oluşturma ##
 
 Canon tarafından sunulan denetim akışı yapıları ve işlevleri, çeşitli işlemleri veya işlevleri tek bir çağrılabilir hale getirilebilmeme yararlı olacaktır.
-Örneğin, ^ {\abger} $ $UVU deseninin son derece ortak olduğu için, Canon <xref:microsoft.quantum.canon.applywith> Bu model için bir soyutlama olarak işlem sağlar.
+Örneğin, ^ {\abger} $ $UVU deseninin son derece ortak olduğu için, Canon <xref:Microsoft.Quantum.Canon.ApplyWith> Bu model için bir soyutlama olarak işlem sağlar.
 Bu soyutlama Ayrıca, `Controlled` sıranın üzerinde `U(qubit); V(qubit); Adjoint U(qubit);` işlem yapması gerekmiyorsa, devrelere daha etkili bir şekilde uyum sağlar `U` .
 Bunu görmek için, $c (U) $ 'nin Unitary temsil `Controlled U([control], target)` ettiği ve $c (V) $ ile aynı şekilde tanımlanmasına izin verin.
 Daha sonra, rastgele bir durum $ \ket{\psı} $, \begin{hizalaması} c (U) c (V) c (U) ^ \hanger \ demet {1} \otimes \ket{\psı} & = \ket {1} ^ {\abger} \ket{\psı}) \\ \\ & = (\cıvadone \otimes u) (c (V)) (\cıvadone \otimes u ^ \gesger) {1}
@@ -126,7 +126,7 @@ Denetim işlemleri genel olarak pahalı olabildiğinden, gibi denetimli varyantl
 >     ('T => Unit is Adj + Ctl), 'T) => Unit
 > ```
 
-Benzer şekilde, sırayla <xref:microsoft.quantum.canon.bound> başka işlemler uygulayan işlemleri üretir.
+Benzer şekilde, sırayla <xref:Microsoft.Quantum.Canon.Bound> başka işlemler uygulayan işlemleri üretir.
 Örneğin, aşağıdakiler eşdeğerdir:
 
 ```qsharp
@@ -141,7 +141,7 @@ Yineleme desenleriyle birleştirmek, bunu özellikle yararlı hale getirir:
 ApplyWith(ApplyToEach(Bound([H, X]), _), QFT, _);
 ```
 
-### <a name="time-ordered-composition"></a>Zaman içinde sıralı bileşim ###
+### <a name="time-ordered-composition"></a>Time-Ordered bileşimi ###
 
 Akış denetimini kısmi uygulama ve klasik işlevler açısından düşünerek yine de ilerleyebiliriz ve klasik akış denetimi açısından oldukça karmaşık bir kavram da modelleyebilir.
 Bu benzerleme vurguladı, diğer Unitary işleçleri gibi her türlü Unitary işlecinin, belirli bir Unitary işleci olarak davranacak şekilde yönergeler sunan klasik alt yordamlar için belirli bir arama dizisi oluşturma gibi, Unitary işleçlerinin yalnızca çağırma işlemlerinin yan etkilerine karşılık geldiği tanıma göre kesin hale getirilir.
@@ -162,9 +162,9 @@ U(1, time / Float(nSteps), target);
 // ...
 ```
 
-Bu noktada artık, *her şey için*ücretlendirilir – Suzuki genişletmesi olmadan bir sorun olabilir.
+Bu noktada artık, *her şey için* ücretlendirilir – Suzuki genişletmesi olmadan bir sorun olabilir.
 Genişleme, $ \eqref{EQ: Trour-Suzuki-0} $ tarafından bir çok özel yineleme düzeniyle rekabet altına alınmıştır.
-Bu yineleme deseninin uygulanma ölçütü <xref:microsoft.quantum.canon.decomposeintotimestepsca> :
+Bu yineleme deseninin uygulanma ölçütü <xref:Microsoft.Quantum.Canon.DecomposedIntoTimestepsCA> :
 
 ```qsharp
 // The 2 indicates how many terms we need to decompose,
@@ -180,7 +180,7 @@ DecomposeIntoTimeStepsCA((2, U), 1);
 Son olarak, Canon, `Controlled` koşullu işlem işlemlerine ek yollar sunarak, functor 'da oluşturulur.
 Özellikle de daha fazla hisse aritmetiğinde, hesaplama tabanlı durumlarda $ \ket{0\cnoktalar 0} $ dışındaki durum işlemleri için yaygın olarak kullanılır.
 Yukarıda tanıtılan denetim işlemlerini ve işlevleri kullanarak, tek bir bildirimde daha fazla genel hisse koşulumuz olabilir.
-<xref:microsoft.quantum.canon.controlledonbitstring>Bunu nasıl yapacağım (San türü parametreler), daha sonra parçaları bir tane olacak şekilde böleceğiz.
+<xref:Microsoft.Quantum.Canon.ControlledOnBitString>Bunu nasıl yapacağım (San türü parametreler), daha sonra parçaları bir tane olacak şekilde böleceğiz.
 Yapmanız gereken ilk şey, denetimi rastgele hesaplama esasına göre uygulamaya yönelik ağır bir kaldırma işlemi için gerçekten bir işlem tanımlamaktır.
 Bununla birlikte, bu işlemi doğrudan çağırmayacağız. bu nedenle, `_` başka bir yapının başka bir yerde bir uygulama olduğunu göstermek için adın başına ekliyoruz.
 
@@ -212,7 +212,7 @@ Bu oluşturma işlemi tam `ApplyWith` olarak, Yeni işlediğimiz gövdesini buna
 }
 ```
 
-Burada, ' nin <xref:microsoft.quantum.canon.applypaulifrombitstring> ile kullanım için kısmen uygulanması $P $ ' i uygulamak için kullandık `ApplyWith` .
+Burada, ' nin <xref:Microsoft.Quantum.Canon.ApplyPauliFromBitString> ile kullanım için kısmen uygulanması $P $ ' i uygulamak için kullandık `ApplyWith` .
 Ancak, *Denetim* kaydını istenen formumuza dönüştürmemiz gerektiğini unutmayın. bu nedenle, hedefte iç işlemi kısmen uygulayacağız `(Controlled oracle)` . *target*
 Bu, `ApplyWith` tam olarak istediğiniz gibi, denetim yazmacını $P $ ile birlikte bırakır.
 

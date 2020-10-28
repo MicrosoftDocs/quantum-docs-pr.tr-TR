@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.types
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c4a3e6563b8cabee87d1db6b9cb1c1f1c1a7131b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 349138984387cc564cca18ea09c7bf161524b0b6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835834"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691613"
 ---
 # <a name="types-in-no-locq"></a>İçindeki türler Q#
 
@@ -22,7 +22,7 @@ Bu makalede Q# tür modeli ve türleri belirtmek ve bunlarla çalışmak için s
 
 Q#Bu tür dikkatle kullanılması derleyicinin derleme zamanında programlar hakkında güçlü garantiler sağlamasına yardımcı olabileceğini belirten, *kesin olarak belirlenmiş* bir dil olduğunu unutmayın Q# .
 Mümkün olan en güçlü garantiyi sağlamak için, içindeki türler arasındaki dönüştürmeler, Q# bu dönüştürmeyi ifade eden işlevlere yapılan çağrılar kullanılarak açık olmalıdır. 
-Q# ad alanının bir parçası olarak çeşitli işlevler sağlar <xref:microsoft.quantum.convert> .
+Q# ad alanının bir parçası olarak çeşitli işlevler sağlar <xref:Microsoft.Quantum.Convert> .
 Diğer yandan, uyumlu türlere yönelik olarak yapılan yayınlar örtülü olarak gerçekleşir. 
 
 Q# , doğrudan kullanılan ilkel türler ve diğer türlerden yeni türler oluşturmak için çeşitli yollar sağlar.
@@ -30,7 +30,7 @@ Bu makalenin geri kalanında anlatılmaktadır.
 
 ## <a name="primitive-types"></a>İlkel Türler
 
-Q#Dil, hepsi doğrudan programlarda kullanabileceğiniz aşağıdaki *temel türleri*sağlar Q# . Bu temel türleri yeni türler oluşturmak için de kullanabilirsiniz.
+Q#Dil, hepsi doğrudan programlarda kullanabileceğiniz aşağıdaki *temel türleri* sağlar Q# . Bu temel türleri yeni türler oluşturmak için de kullanabilirsiniz.
 
 - `Int`Tür, 64 bitlik işaretli bir tamsayıyı temsil eder, örneğin,, `2` , `107` `-5` .
 - `BigInt`Türü, rastgele boyutun işaretli bir tamsayı temsil eder, örneğin,, `2L` , `107L` `-5L` .
@@ -126,14 +126,14 @@ Herhangi bir ifade verildiğinde, parantez içine alınmış aynı ifade aynı t
 
 Özellikle, bu, giriş tanımlama grubu veya çıktı kayıt türü türünde tek bir bağımsız değişken alan veya tek bir değer döndüren bir işlem veya işlevi görüntüleyebileceðiniz anlamına gelir.
 
-Bu özelliğe, _tek demet denklik_olarak başvurduk.
+Bu özelliğe, _tek demet denklik_ olarak başvurduk.
 
 
-## <a name="user-defined-types"></a>Kullanıcı tanımlı türler
+## <a name="user-defined-types"></a>User-Defined türleri
 
 Kullanıcı tanımlı tür bildirimi, anahtar sözcükten `newtype` , ardından Kullanıcı tanımlı türün adı, bir `=` , geçerli bir tür belirtimi ve sonlandırma noktalı virgülünden oluşur.
 
-Örnek:
+Örneğin:
 
 ```qsharp
 newtype PairOfInts = (Int, Int);
@@ -199,7 +199,7 @@ function PrintedMessage(value : Nested) : Unit {
 
 Tek sarmalama işleci bir sarmalama katmanının sarmalanmasını kaldırır. Çarpmadan kaydırılmış bir değere erişmek için birden çok sarmalama işleci kullanın.
 
-Örnek:
+Örneğin:
 
 ```qsharp
 newtype WrappedInt = Int;
@@ -259,8 +259,8 @@ Daha genel olarak, Kullanıcı tanımlı türlerin birbirlerine döngüsel bağ�
 
 Türler `'Tinput` ve `'Tresult` :
 
-* `('Tinput => 'Tresult)` , örneğin, her bir *işlemin*temel türüdür `((Qubit, Pauli) => Result)` .
-* `('Tinput -> 'Tresult)` , örneğin, herhangi bir *işlevin*temel türüdür `(Int -> Int)` . 
+* `('Tinput => 'Tresult)` , örneğin, her bir *işlemin* temel türüdür `((Qubit, Pauli) => Result)` .
+* `('Tinput -> 'Tresult)` , örneğin, herhangi bir *işlevin* temel türüdür `(Int -> Int)` . 
 
 Bunlara çağrılabilir *imzası* denir.
 
@@ -282,13 +282,13 @@ Bunlara çağrılabilir *imzası* denir.
 `Controlled`Bir işlem türünde ve/veya functor desteğinin gerekli olmasını sağlamak için `Adjoint` , karşılık gelen özellikleri belirten bir ek açıklama eklemeniz gerekir.
 Ek açıklama `is Ctl` (örneğin, `(Qubit => Unit is Ctl)` ), işlemin denetlenebilir olduğunu gösterir. Diğer bir deyişle, çalıştırması başka bir qubit veya qubits 'in durumuna bağlıdır. Benzer şekilde, ek açıklama `is Adj` işlemin bir adeklem olduğunu, yani "ters" (bir işlem) ve ardından adjoint değerini bir durum olduğu gibi bırakır. 
 
-Bu tür bir işlemin hem hem de functor desteklediğinden emin olmak istiyorsanız `Adjoint` `Controlled` bunu olarak ifade edebilirsiniz `(Qubit => Unit is Adj + Ctl)` . Örneğin, yerleşik Pauli <xref:microsoft.quantum.intrinsic.x> işleminin türü vardır `(Qubit => Unit is Adj + Ctl)` . 
+Bu tür bir işlemin hem hem de functor desteklediğinden emin olmak istiyorsanız `Adjoint` `Controlled` bunu olarak ifade edebilirsiniz `(Qubit => Unit is Adj + Ctl)` . Örneğin, yerleşik Pauli <xref:Microsoft.Quantum.Intrinsic.X> işleminin türü vardır `(Qubit => Unit is Adj + Ctl)` . 
 
 Herhangi bir belirtiyi desteklemeyen bir işlem türü, giriş ve çıkış türü ile tek başına, ek açıklama olmadan belirtilir.
 
-### <a name="type-parameterized-functions-and-operations"></a>Tür parametreli Işlevler ve Işlemler
+### <a name="type-parameterized-functions-and-operations"></a>Type-Parameterized Işlevleri ve Işlemler
 
-Çağrılabilir türler *tür parametreleri*içerebilir.
+Çağrılabilir türler *tür parametreleri* içerebilir.
 Bir tür parametresi belirtilen tek tırnak tarafından önekli bir sembol kullanın; Örneğin, `'A` yasal bir tür parametresidir.
 Tür parametreli callables tanımlama hakkında daha fazla bilgi ve Ayrıntılar için bkz. [Içindeki Q# Işlemler ve işlevler ](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables).
 

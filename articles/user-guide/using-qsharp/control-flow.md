@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: eca37202e5fe9b48dcfdec4eeb4ba6cafaac8723
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833519"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691092"
 ---
 # <a name="control-flow-in-no-locq"></a>İçindeki denetim akışı Q#
 
@@ -38,10 +38,10 @@ Anahtar sözcükten `if` , parantez içindeki bir Boole ifadesiyle ve bir deyim 
 İsteğe bağlı olarak, her biri anahtar sözcüğü `elif` , parantez içindeki bir Boole ifadesini ve bir deyim bloğunu ( _Else-If_ bloğu) içeren herhangi bir sayıda Else-If yan tümcesi izleyebilir.
 Son olarak, deyimi isteğe bağlı olarak `else` başka bir ifade bloğunun ( _Else_ bloğu) gelen anahtar sözcükten oluşan bir else yan tümcesi ile bitebileceğiniz anlamına gelir.
 
-`if`Koşul değerlendirilir ve *true*ise blok çalıştırılır. *then*
-Koşul *yanlışsa*, ilk else-if koşulu değerlendirilir; Bu doğruysa, *Else-If* bloğu çalıştırılır.
+`if`Koşul değerlendirilir ve *true* ise blok çalıştırılır. *then*
+Koşul *yanlışsa* , ilk else-if koşulu değerlendirilir; Bu doğruysa, *Else-If* bloğu çalıştırılır.
 Aksi takdirde, ikinci Else-If bloğu değerlendirilir ve ardından, doğru bir koşula sahip bir yan tümce ile karşılaşılana ya da başka bir else-if yan tümcesi bulunmadığından, üçüncü ve bu şekilde devam eder.
-*Eğer özgün If* koşulu ve tüm else-if yan tümceleri *yanlış*olarak değerlendirilmişse, varsa *Else* bloğu çalıştırılır.
+*Eğer özgün If* koşulu ve tüm else-if yan tümceleri *yanlış* olarak değerlendirilmişse, varsa *Else* bloğu çalıştırılır.
 
 Hangi bloğun çalıştığını, kendi kapsamında çalıştığını unutmayın.
 Bir, veya bloğunun içinde yapılan bağlamalar, `if` `elif` `else` blok bittikten sonra görünür değildir.
@@ -129,7 +129,7 @@ fixup {
 Döngü gövdesi çalışır ve ardından koşul değerlendirilir.
 Koşul doğru ise, ifade tamamlanır; Aksi takdirde, düzeltme çalışır ve ifade, döngü gövdesiyle başlayarak yeniden çalışır.
 
-Bir RUS döngüsünün üç bölümü (gövde, test ve düzeltme) *her yineleme için*tek bir kapsam olarak değerlendirilir, böylece gövdede bağlanan semboller hem testte hem de düzeltmede kullanılabilir.
+Bir RUS döngüsünün üç bölümü (gövde, test ve düzeltme) *her yineleme için* tek bir kapsam olarak değerlendirilir, böylece gövdede bağlanan semboller hem testte hem de düzeltmede kullanılabilir.
 Ancak, düzeltme çalıştırmasının tamamlanması deyimin kapsamını sonlandırır, böylece gövde veya Düzeltme sırasında yapılan simge bağlamaları sonraki tekrarlarda kullanılamaz.
 
 Ayrıca, `fixup` ifade genellikle yararlı olur ancak her zaman gerekli değildir.
@@ -324,7 +324,7 @@ Bu işlemde gösterilen Notable programlama özellikleri şunlardır:
 * Döngünün daha karmaşık bir `fixup` parçası olan ve bu da hisse işlemleri içerir. 
 * `AssertMeasurementProbability`Programın belirtilen belirli noktalarda hisse miktarını ölçme olasılığını belirlemek için deyimlerin kullanılması.
 
-Ve işlemleri hakkında daha fazla bilgi için [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) bkz. [test ve hata ayıklama](xref:microsoft.quantum.guide.testingdebugging).
+Ve işlemleri hakkında daha fazla bilgi için [`AssertMeasurement`](xref:Microsoft.Quantum.Diagnostics.assertmeasurement) [`AssertMeasurementProbability`](xref:Microsoft.Quantum.Diagnostics.assertmeasurementprobability) bkz. [test ve hata ayıklama](xref:microsoft.quantum.guide.testingdebugging).
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {

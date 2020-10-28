@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 82882f01d1b5c036faee71f18a18b2595107ddb7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 036896a33fa02db671a5fd07421160df164bd41d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835919"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690776"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Hisse geliştirme seti (QDK) Toffoli simülatör
 
@@ -67,7 +67,7 @@ Q#İşlemi çalıştırmak için I Magic komutu [% Toffoli](xref:microsoft.quant
 Toffoli simülatör şunları destekler:
 
 * `R` `Exp` Ortaya çıkan işlem, `X` ya da kimlik matrisine eşit olduğunda, ve gibi geçen Paulis 'ler.
-* Ölçüm ve [onaylama](xref:microsoft.quantum.diagnostics.assertmeasurement) işlemleri, ancak yalnızca Pauli `Z` temelinde. Ölçüm işleminin olasılığının her zaman **0** ya da **1**olduğunu unutmayın; Toffoli benzeticisinde rastgele bir değer yoktur.
+* Ölçüm ve [onaylama](xref:Microsoft.Quantum.Diagnostics.AssertMeasurement) işlemleri, ancak yalnızca Pauli `Z` temelinde. Ölçüm işleminin olasılığının her zaman **0** ya da **1** olduğunu unutmayın; Toffoli benzeticisinde rastgele bir değer yoktur.
 * `DumpMachine` ve `DumpRegister` işlevleri.
 Her iki işlev de `Z` her bir qubit, satır başına bir qubit olmak üzere, her bir qubit için geçerli
 
@@ -77,7 +77,7 @@ Varsayılan olarak, bir `ToffoliSimulator` örnek 65.536 qubit için alan ayır�
 Algoritmanız bundan daha fazla qubit gerektiriyorsa, oluşturucuya parametresi için bir değer sağlayarak qubit sayısını belirtebilirsiniz `qubitCount` .
 Her ek qubit yalnızca bir baytlık bellek gerektirir, bu nedenle ihtiyaç duyacağınız qubit sayısını fazla tahmin etmek için önemli bir maliyet yoktur.
 
-Örnek:
+Örneğin:
 
 ```csharp
     var sim = new ToffoliSimulator(qubitCount: 1000000);

@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.training
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39974af0121a5167f1965e508cd595535178548b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 476e93e3737dee6ad8f3a97e8ffbcfb9b0012ee1
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833908"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691510"
 ---
 # <a name="quantum-machine-learning-glossary"></a>Hisse Machine Learning sözlüğü
 
@@ -30,7 +30,7 @@ Bir aday parametresi vektörü ve bir sınıflandırıcı sapması verildiğinde
 
 ## <a name="hyperparameters"></a>Ayarlama hiperparametreleri
 
-Model eğitimi işlemi, *hiper parametreler*adlı bazı önceden ayarlanmış değerlere tabidir:
+Model eğitimi işlemi, *hiper parametreler* adlı bazı önceden ayarlanmış değerlere tabidir:
 
 ### <a name="learning-rate"></a>Öğrenme oranı
 
@@ -56,9 +56,10 @@ Sınıflandırıcı için eğitim yardımcı programı olan olasılık işlevi, 
 
 #### <a name="how-to-modify-the-hyperparameters"></a>Hiper parametreleri değiştirme
 
-QML kitaplığında, hiper parametreleri değiştirmek için en iyi yol UDT 'nin varsayılan değerlerini geçersiz kılmasından oluşur [`TrainingOptions`](xref:microsoft.quantum.machinelearning.trainingoptions) . Bunu yapmak için, işlevi ile çağırır [`DefaultTrainingOptions`](xref:microsoft.quantum.machinelearning.defaulttrainingoptions) ve `w/` varsayılan değerleri geçersiz kılmak için işlecini uygular. Örneğin, 100.000 ölçülerini ve 0,01 öğrenme oranını kullanmak için:
- ```qsharp
+QML kitaplığında, hiper parametreleri değiştirmek için en iyi yol UDT 'nin varsayılan değerlerini geçersiz kılmasından oluşur [`TrainingOptions`](xref:Microsoft.Quantum.MachineLearning.TrainingOptions) . Bunu yapmak için, işlevi ile çağırır [`DefaultTrainingOptions`](xref:Microsoft.Quantum.MachineLearning.DefaultTrainingOptions) ve `w/` varsayılan değerleri geçersiz kılmak için işlecini uygular. Örneğin, 100.000 ölçülerini ve 0,01 öğrenme oranını kullanmak için:
+
+```qsharp
 let options = DefaultTrainingOptions()
 w/ LearningRate <- 0.01
 w/ NMeasurements <- 100000;
- ```
+```

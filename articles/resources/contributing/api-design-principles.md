@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8714d3290e4099f901dab20a9ee9334699c4ad81
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 6b196cf1be584a3157c7a9eb8cf497fe1121dd7a
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834932"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691828"
 ---
 # <a name="no-locq-api-design-principles"></a>Q# API tasarım Ilkeleri
 
@@ -125,7 +125,7 @@ Bu makalede bu ilkeler listelenmekte ve API 'leri tasarlarken bunların nasıl u
       kısmi uygulamayla en tutarlı şekilde çalışır.
   - Genellikle, bu kılavuz, tüm klasik verilerin giriş tanımlama grupları 'ndaki tüm qugeler öncesine yerleştirilmesi anlamına gelir, ancak iyi bir deneyim kullanır ve API 'nizin uygulamada nasıl çağrıldığını inceleyin.
 
-## <a name="user-defined-types"></a>Kullanıcı tanımlı türler
+## <a name="user-defined-types"></a>User-Defined türleri
 
 **Anahtar ilkesi:** API 'leri daha açıklayıcı ve kullanımı kolay hale getirmenize yardımcı olması için Kullanıcı tanımlı türleri kullanın.
 
@@ -224,44 +224,44 @@ Bu makalede bu ilkeler listelenmekte ve API 'leri tasarlarken bunların nasıl u
 
   - **Eylemlerinin**
 
-    - Onay **: büyük**olasılıkla fiziksel olmayan kaynakları kullanarak bir hedef makinenin ve qubits 'in durumu hakkında bir varsayım olduğunu denetleyin. Bu fiili kullanan işlemler, kitaplıkların ve yürütülebilir programların işlevselliğini etkilemeden her zaman güvenli bir şekilde kaldırılabilir. Olguların aksine, genel olarak, bir qubit kayıt durumu, çalıştırma ortamı veya benzeri bir durum gibi, genel olarak, onay olabilir. Dış durum bağımlılığı bir tür yan etkildir, ancak onaylar işlevler yerine işlemler olarak gösterilmelidir.
+    - Onay **: büyük** olasılıkla fiziksel olmayan kaynakları kullanarak bir hedef makinenin ve qubits 'in durumu hakkında bir varsayım olduğunu denetleyin. Bu fiili kullanan işlemler, kitaplıkların ve yürütülebilir programların işlevselliğini etkilemeden her zaman güvenli bir şekilde kaldırılabilir. Olguların aksine, genel olarak, bir qubit kayıt durumu, çalıştırma ortamı veya benzeri bir durum gibi, genel olarak, onay olabilir. Dış durum bağımlılığı bir tür yan etkildir, ancak onaylar işlevler yerine işlemler olarak gösterilmelidir.
 
-    - **Tahmin**: bir veya daha fazla tekrarlanmış ölçüm kullanarak, ölçüm sonuçlarından bir klasik miktarı tahmin edin.
+    - **Tahmin** : bir veya daha fazla tekrarlanmış ölçüm kullanarak, ölçüm sonuçlarından bir klasik miktarı tahmin edin.
 
       *Örnekler:*
       - @"microsoft.quantum.characterization.estimatefrequency"
       - @"microsoft.quantum.characterization.estimateoverlapbetweenstates"
 
-    - **Hazırlama**: belirli bir başlangıç durumunda (genellikle $ \ket{00\cnoktalar 0} $) başlayan bir veya daha fazla qubits 'e bir hisse veya işlem dizisi uygulayın, bu qubits 'in durumunun istenen bir bitiş durumuna gelişmesine neden olur. Genel olarak, verili **başlangıç durumundan farklı** durumlara göre işlem, tanımsız bir Unitary dönüştürmesi ile sonuçlanabilir, ancak yine de bir işlemin ve kendi adjoint "iptal etmeyi" ve hiçbir op **uygulamamalıdır** .
+    - **Hazırlama** : belirli bir başlangıç durumunda (genellikle $ \ket{00\cnoktalar 0} $) başlayan bir veya daha fazla qubits 'e bir hisse veya işlem dizisi uygulayın, bu qubits 'in durumunun istenen bir bitiş durumuna gelişmesine neden olur. Genel olarak, verili **başlangıç durumundan farklı** durumlara göre işlem, tanımsız bir Unitary dönüştürmesi ile sonuçlanabilir, ancak yine de bir işlemin ve kendi adjoint "iptal etmeyi" ve hiçbir op **uygulamamalıdır** .
 
       *Örnekler:*
       - @"microsoft.quantum.preparation.preparearbitrarystate"
       - @"microsoft.quantum.preparation.prepareuniformsuperposition"
 
-    - **Measure**: bir veya daha fazla qubits 'e bir hisse veya işlem dizisi uygulayarak klasik veri geri alma işlemini okuyun.
+    - **Measure** : bir veya daha fazla qubits 'e bir hisse veya işlem dizisi uygulayarak klasik veri geri alma işlemini okuyun.
 
       *Örnekler:*
-      - @"microsoft.quantum.intrinsic.measure"
+      - @"Microsoft.Quantum.Intrinsic.Measure"
       - @"microsoft.quantum.arithmetic.measurefxp"
       - @"microsoft.quantum.arithmetic.measureinteger"
 
-    - **Uygula**: bir veya daha fazla qubits 'e hisse veya işlem dizisi uygulayın ve bu qubits 'in durumunun tutarlı bir şekilde değişmesine neden olur. Bu fiil, Q terminolojinin en genel fiildir \# ve daha **SHOULD NOT BE** belirli bir fiil daha doğrudan ilgili olduğunda kullanılmamalıdır.
+    - **Uygula** : bir veya daha fazla qubits 'e hisse veya işlem dizisi uygulayın ve bu qubits 'in durumunun tutarlı bir şekilde değişmesine neden olur. Bu fiil, Q terminolojinin en genel fiildir \# ve daha **SHOULD NOT BE** belirli bir fiil daha doğrudan ilgili olduğunda kullanılmamalıdır.
 
-  - **İsimler**:
+  - **İsimler** :
 
-    - **Olgu**: bir hedef makinenin, ortamının veya makine qubits 'in durumunda değil, yalnızca kendi girdilerine bağlı olan bir Boolean koşulu. Bir onaylama işlemi aksine, olgu yalnızca söz konusu olgusuna belirtilen *değerlere* duyarlıdır. Örnek:
+    - **Olgu** : bir hedef makinenin, ortamının veya makine qubits 'in durumunda değil, yalnızca kendi girdilerine bağlı olan bir Boolean koşulu. Bir onaylama işlemi aksine, olgu yalnızca söz konusu olgusuna belirtilen *değerlere* duyarlıdır. Örneğin:
 
       *Örnekler:*
       - @"microsoft.quantum.diagnostics.equalityfacti": iki tamsayı girişi hakkında bir eşitlik olgusu temsil eder; giriş olarak girilen tamsayılar birbirlerine eşittir ya da başka bir program durumundan bağımsız olarak değildir.
 
-    - **Seçenekler:** Bir işlev veya işleme "isteğe bağlı bağımsız değişkenler" gibi davranan, birkaç adlandırılmış öğe içeren bir UDT. Örnek:
+    - **Seçenekler:** Bir işlev veya işleme "isteğe bağlı bağımsız değişkenler" gibi davranan, birkaç adlandırılmış öğe içeren bir UDT. Örneğin:
 
       *Örnekler:*
       - @"microsoft.quantum.machinelearning.trainingoptions"Udt, öğrenme oranı, Mini toplu iş boyutu ve ml eğitimi için diğer yapılandırılabilir parametreler için adlandırılmış öğeler içerir.
 
-  - **Sıfatlar**:
+  - **Sıfatlar** :
 
-    - **yeni**⛔️: Bu sıfatıcı, birçok programlama dilinde (ör.: C++, C#, Java, TypeScript, PowerShell), kullanımıyla ilgili bir fiil olarak karışıklık oluşmasını önlemek **için kullanılmamalıdır.**
+    - **yeni** ⛔️: Bu sıfatıcı, birçok programlama dilinde (ör.: C++, C#, Java, TypeScript, PowerShell), kullanımıyla ilgili bir fiil olarak karışıklık oluşmasını önlemek **için kullanılmamalıdır.**
 
   - **Ön pozisyonlar:** Bazı durumlarda, işlev ve işlem adlarında isimler ve fiillerin rollerini daha fazla netleştirmek veya netleştirmek için ön pozisyonlar kullanılabilir. Bununla birlikte, dikkatli ve tutarlı şekilde yapılması gerekir.
 

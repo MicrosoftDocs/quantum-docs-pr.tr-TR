@@ -9,22 +9,22 @@ uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8ee9ce25e680112e2f3c68d82ae9267c1b0fb355
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: bf75eb94696a489a587316928bc3f33baa4a1785
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835987"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690946"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>Hisse izleme simülatörü: temel işlemler sayacı
 
 Temel işlem sayacı, hisse Geliştirme Seti [hisse izleme benzeticisinin](xref:microsoft.quantum.machines.qc-trace-simulator.intro)bir parçasıdır. Bir hisse bir programda çağrılan her işlem tarafından kullanılan temel işlem sayısını sayar. 
 
-Tüm <xref:microsoft.quantum.intrinsic> işlemler tek qubit döndürmeler, T işlemleri, tek qubit Clienfford işlemleri, CNOT işlemleri ve Multi-Qubitpauli gözlemlenenler ölçümleri bakımından ifade edilir. Temel Işlem sayacı, işlemin [çağrı grafiğinin](https://en.wikipedia.org/wiki/Call_graph)tüm kenarlarına ilişkin istatistikleri toplar ve toplar.
+Tüm <xref:Microsoft.Quantum.Intrinsic> işlemler tek qubit döndürmeler, T işlemleri, tek qubit Clienfford işlemleri, CNOT işlemleri ve Multi-Qubitpauli gözlemlenenler ölçümleri bakımından ifade edilir. Temel Işlem sayacı, işlemin [çağrı grafiğinin](https://en.wikipedia.org/wiki/Call_graph)tüm kenarlarına ilişkin istatistikleri toplar ve toplar.
 
 ## <a name="invoking-the-primitive-operation-counter"></a>Temel işlem sayacını çağırma
 
-Temel işlem sayacı ile hisse izi simülatörü çalıştırmak için bir <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> örnek oluşturmanız, `UsePrimitiveOperationsCounter` özelliği **true**olarak ayarlamanız ve sonra <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> parametresi olarak ile yeni bir örnek oluşturmanız gerekir `QCTraceSimulatorConfiguration` .
+Temel işlem sayacı ile hisse izi simülatörü çalıştırmak için bir <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> örnek oluşturmanız, `UsePrimitiveOperationsCounter` özelliği **true** olarak ayarlamanız ve sonra <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> parametresi olarak ile yeni bir örnek oluşturmanız gerekir `QCTraceSimulatorConfiguration` .
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -34,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>C# ana programında temel işlem sayacını kullanma
 
-<xref:microsoft.quantum.intrinsic.t> <xref:microsoft.quantum.intrinsic.ccnot> Aşağıdaki örnek koda bağlı olarak, bu bölümde aşağıdaki C# örneği, işlemi uygulamak için kaç işlem gerektiğini sayar Q# :
+<xref:Microsoft.Quantum.Intrinsic.T> <xref:Microsoft.Quantum.Intrinsic.ccnot> Aşağıdaki örnek koda bağlı olarak, bu bölümde aşağıdaki C# örneği, işlemi uygulamak için kaç işlem gerektiğini sayar Q# :
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

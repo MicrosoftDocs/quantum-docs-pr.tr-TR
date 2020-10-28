@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6138c098a4efe2797c7d7360573ddcb9cb70a6c1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835936"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691865"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Hisse geliştirme seti (QDK) kaynakları tahmin aracı
 
@@ -127,16 +127,43 @@ Tahmin aracı kaynakları aşağıdaki ölçümleri izler:
 |----|----|
 |__CNOT__    |İşlemlerin çalıştırma sayısı `CNOT` (denetlenen Pauli X işlemleri olarak da bilinir).|
 |__QubitClifford__ |Herhangi bir tek qubit Clienfford ve Pauli işlemlerinin çalıştırma sayısı.|
-|__Measure (Ölçü)__     |Ölçümlerin çalıştırma sayısı.  |
+|__Measure__    |Ölçümlerin çalıştırma sayısı.  |
 |__R__    |Tüm tek qubit döndürmeler, hariç tutulan `T` , clienfford ve Pauli işlemlerinin çalıştırma sayısı.  |
 |__T__    |İşlemler `T` `T` , T_x = H. T. H ve T_y = HY. t. HY dahil olmak üzere işlemlerin ve bunların Birleşik kapılarının çalıştırma sayısı.  |
-|__Derinliğini__|İşlem tarafından çalıştırılan hisse devdevlik derinliğine yönelik alt sınır Q# . Varsayılan olarak, derinlik ölçümü yalnızca kapıları sayar `T` . Daha ayrıntılı bilgi için bkz. [derinlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
-|__Genişlik__    |İşlemin çalıştırılması sırasında ayrılan en fazla qubit sayısı için alt sınır Q# . Aynı anda hem __derinlik__ hem de __Genişlik__ alt sınırlarına ulaşmak mümkün olmayabilir.  |
+|__Derinliğini__|İşlem tarafından çalıştırılan hisse devdevlik derinliği Q# ( [aşağıya](#depth-width-and-qubitcount)bakın). Varsayılan olarak, derinlik ölçümü yalnızca kapıları sayar `T` . Daha ayrıntılı bilgi için bkz. [derinlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__Genişlik__|İşlem tarafından çalıştırılan hisse devresi genişliği Q# ( [aşağıya](#depth-width-and-qubitcount)bakın). Varsayılan olarak, derinlik ölçümü yalnızca kapıları sayar `T` . Daha ayrıntılı bilgi için bkz. [derinlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__QubitCount__    |İşlemin çalıştırılması sırasında ayrılan en fazla qubit sayısı için alt sınır Q# . Bu ölçüm, __derinlemesine__ uyumlu olmayabilir (aşağıya bakın).  |
 |__Borrodilimlerin genişliği__    |İşlem içinde ödünç alınan en fazla qubits sayısı Q# .  |
+
+
+## <a name="depth-width-and-qubitcount"></a>Derinlik, genişlik ve QubitCount
+
+Bildirilen derinlik ve genişlik tahminleri birbirleriyle uyumludur.
+(Daha önce iki sayı ulaşılabilir vardı, ancak derinlik ve genişlik için farklı devreler gerekli olacaktır.) Şu anda bu çiftteki ölçümler aynı anda aynı bağlantı hattı tarafından elde edilebilir.
+
+Aşağıdaki ölçümler raporlanır:
+
+__Derinlik:__ Kök işlemi için-belirli bir kapı süresi varsayarak yürütülmesi gereken süre.
+Ya da işlem sırasında en son qubit kullanılabilirlik süresi arasında gerçekleştirilen işlemler veya sonraki işlemler için zaman farkı.
+
+__Genişlik:__ Kök işlemi için-gerçekten yürütmek için kullanılan qubits sayısı (ve çağrı yaptığı işlem).
+Ya da sonraki işlemleri çağıran işlemler için-işlemin başlangıcında zaten kullanılan qubits 'e ek olarak kaç tane daha fazla bilgi kullanılmıştır.
+
+Lütfen bu sayı ile yeniden kullanılan qubits 'in bu numaraya katkıda bulunduğunu unutmayın.
+Yani, işlem A 'dan önce birkaç qubit yayımlandıysa ve bu işlem tarafından (ve ' dan çağırılan işlemler) talep edilen tüm qubit, daha önce sürüm qubit yeniden kullanılmasıyla karşılandıysa, A işleminin genişliği 0 olarak bildirilir. Başarıyla ödünç alınan qubits, genişliğe katkıda bulunmuyor.
+
+__Qubitcount:__ Kök işlemi için-bu işlemi (ve öğesinden çağrılan işlemleri) yürütmek için yeterli olacak qubit sayısı alt sınırı.
+Veya sonraki işlemleri çağıran işlemler için-bu işlemi ayrı olarak yürütmek için yeterli olacak qubit sayısı alt sınırı. Bu sayı giriş qubitleri içermez. Ödünç alınan qubit içerir.
+
+İki işlem modu desteklenir. QCTraceSimulatorConfiguration. OptimizeDepth ayarlanarak mod seçilidir.
+
+__Optimizedepth = doğru:__ QubitManager 'ın qubit yeniden kullanımı önerilmez ve her sorulduğunda her istendiğinde yeni qubit 'i ayırır. Kök işlemi __derinliği__ için en düşük Derinlik (alt sınır) olur. Bu derinlik için uyumlu __Genişlik__ raporlanır (her ikisi de aynı anda elde edilebilir). Bu genişliğin büyük olasılıkla bu derinliğin en iyi şekilde verilmediğini unutmayın. __Qubitcount__ , yeniden kullanım varsaydığı için kök işlem genişliğinden daha düşük olabilir.
+
+__Optimizedepth = false:__ QubitManager 'ın qubit 'i yeniden kullanması önerilir ve yenilerini ayırmadan önce yayınlanmış qubits 'i yeniden kullanacaktır. Kök işlemi __genişliği__ için en az Genişlik (alt sınır) olur. Uyumluluk __derinliğine__ ulaşıldığı bildirilir. __Qubitcount__ , hiçbir ödünç alma kabul edildiğinde kök işlemin __genişliğiyle__ aynı olacak.
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Ölçüm sonuçlarının olasılığını sağlama
 
-<xref:microsoft.quantum.diagnostics.assertmeasurementprobability> <xref:microsoft.quantum.diagnostics> Ölçüm işleminin beklenen olasılığı hakkında bilgi sağlamak için ad alanından ' i kullanabilirsiniz. Daha fazla bilgi için bkz. [hisse Izi Izleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
+<xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> <xref:Microsoft.Quantum.Diagnostics> Ölçüm işleminin beklenen olasılığı hakkında bilgi sağlamak için ad alanından ' i kullanabilirsiniz. Daha fazla bilgi için bkz. [hisse Izi Izleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

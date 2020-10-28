@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: aa942a61280553ae4e51cd5ddcc85c0df935dab1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 9a3d7e03016332a04ac9d1610428b6fcd546d1f6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835868"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691589"
 ---
 # <a name="working-with-qubits"></a>Kubitlerle çalışma
 
@@ -29,14 +29,14 @@ Bu makalede, bir programda qubits 'in nasıl kullanılacağı ve bunlarla nasıl
 
 Fiziksel qugeler, bir hisse bilgisayarında değerli bir kaynak olduğundan, derleyicinin işinin bir parçası mümkün olduğunca verimli şekilde kullanıldıklarından emin olmak.
 Bu nedenle, Q# belirli bir ekstre bloğunda kullanmak üzere qubit *ayırmak* için söylemeniz gerekir.
-Qubits 'i tek bir qubit ya da *kayıt*olarak bilinen bir qubits dizisi olarak ayırabilirsiniz. 
+Qubits 'i tek bir qubit ya da *kayıt* olarak bilinen bir qubits dizisi olarak ayırabilirsiniz. 
 
 ### <a name="clean-qubits"></a>Qubit Temizleme
 
 Bildirim `using` bloğu sırasında kullanılmak üzere yeni qubit ayırmak için ifadesini kullanın.
 
 İfade, anahtar sözcüğünden `using` , ardından parantez içine alınmış bir bağlama `( )` ve qubits 'in kullanılabildiği ifade bloğunun bir öğesinden oluşur.
-Bağlama deyimlerle aynı düzeni izler `let` : tek bir sembol veya sembol kümesi, ardından eşittir işareti `=` ve tek bir değer ya da eşleşen *Başlatıcı*grubu.
+Bağlama deyimlerle aynı düzeni izler `let` : tek bir sembol veya sembol kümesi, ardından eşittir işareti `=` ve tek bir değer ya da eşleşen *Başlatıcı* grubu.
 
 Başlatıcılar tek bir qubit için, `Qubit()` veya bir qubit dizisi olarak belirtilir, `Qubit[n]` burada `n` bir `Int` ifadedir.
 Örneğin,
@@ -95,7 +95,7 @@ Bazı bir deyişle, bir Q# programın bir qubit ile yapamamaları, ancak gerçek
 Bu makalede, Q# qubits ile etkileşim kurmak için kullanabileceğiniz birkaç faydalı işlem ele alınmaktadır.
 Bunlar ve diğerleri hakkında daha fazla ayrıntı için bkz. [Iç işlemler ve işlevler](xref:microsoft.quantum.libraries.standard.prelude). 
 
-İlk olarak, tek qubit Pauli Operators $X $, $Y $ ve $Z $, Q# [`X`](xref:microsoft.quantum.intrinsic.x) [`Y`](xref:microsoft.quantum.intrinsic.y) [`Z`](xref:microsoft.quantum.intrinsic.z) her birinin türüne sahip olan iç işlemler, ve, ile temsil edilir `(Qubit => Unit is Adj + Ctl)` .
+İlk olarak, tek qubit Pauli Operators $X $, $Y $ ve $Z $, Q# [`X`](xref:Microsoft.Quantum.Intrinsic.X) [`Y`](xref:Microsoft.Quantum.Intrinsic.Y) [`Z`](xref:Microsoft.Quantum.Intrinsic.Z) her birinin türüne sahip olan iç işlemler, ve, ile temsil edilir `(Qubit => Unit is Adj + Ctl)` .
 
 [Iç işlemler ve işlevler](xref:microsoft.quantum.libraries.standard.prelude)bölümünde açıklandığı gibi, $X $ ve bu nedenle, `X` bir bit çevirme işlemi veya ağ geçidi değil olarak düşünün.
 `X`Bazı klasik bit dizeler için $ \ket{s_0 s_1 \noktalara S_N} $ biçimindeki durumları hazırlamak için bu işlemi kullanabilirsiniz $s $:
@@ -127,7 +127,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > Daha sonra, bu işlemi yazmak için el ile denetim akışı gerektirmeyen daha kompakt yollar görürsünüz.
 
-Ayrıca, $ \ket{+} = \left (\ket {0} + \ket {1} \ right)/\sqrt {2} $ ve $ \ket {-} = \left (\tus- {0} \ket {1} \ right)/\Sqrt $ gibi durumları, {2} Hadamard Transform $H $ kullanarak da hazırlayabilirsiniz. Q# iç işlem tarafından temsil edilen [`H`](xref:microsoft.quantum.intrinsic.h) (qubit => Unit, sıfatı + CTL) '):
+Ayrıca, $ \ket{+} = \left (\ket {0} + \ket {1} \ right)/\sqrt {2} $ ve $ \ket {-} = \left (\tus- {0} \ket {1} \ right)/\Sqrt $ gibi durumları, {2} Hadamard Transform $H $ kullanarak da hazırlayabilirsiniz. Q# iç işlem tarafından temsil edilen [`H`](xref:Microsoft.Quantum.Intrinsic.H) (qubit => Unit, sıfatı + CTL) '):
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -149,7 +149,7 @@ Tek tek qubit ölçümleri, her biri [Bloch Sphere](xref:microsoft.quantum.gloss
 
 ### <a name="measure-a-single-qubit-in-the-pauliz-basis"></a>Temelde tek bir qubit ölçme `PauliZ`
 
-[`M`](xref:microsoft.quantum.intrinsic.m)Temelinde tek bir qubit ölçmek `PauliZ` ve sonuca bir klasik değer atamak için yerleşik bir içsel Unitary işlemi olan işlemi kullanın.
+[`M`](xref:Microsoft.Quantum.Intrinsic.M)Temelinde tek bir qubit ölçmek `PauliZ` ve sonuca bir klasik değer atamak için yerleşik bir içsel Unitary işlemi olan işlemi kullanın.
 `M` , `Result` yalnızca değer `Zero` `One` elde eden veya ölçülen durum $ \ket {0} $ veya $ \ket {1} $-sonucu yalnızca bir hisse
 
 Basit bir örnek, $ \ket $ durumunda bir qubit ayıran aşağıdaki işlemdir {0} , ardından buna bir Hadamard işlemi uygular `H` ve sonucu `PauliZ` temelde ölçer.
@@ -175,7 +175,7 @@ operation MeasureOneQubit() : Result {
 
 ### <a name="measure-one-or-more-qubits-in-specific-bases"></a>Belirli tabanlarda bir veya daha fazla qubit ölçme
 
-Belirli tabanlarda bir veya daha fazla qubit dizisini ölçmek için, [`Measure`](xref:microsoft.quantum.intrinsic.measure) işlemini kullanabilirsiniz.
+Belirli tabanlarda bir veya daha fazla qubit dizisini ölçmek için, [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) işlemini kullanabilirsiniz.
 
 İçin girdiler, `Measure` türlerin bir dizisidir `Pauli` (örneğin, `[PauliX, PauliZ, PauliZ]` ) ve bir qubit dizisidir.
 

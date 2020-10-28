@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3515279dd4d03b2a512035af0b13e084dd91f9dc
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 221479e616ff7a03c4ac20e0062125660314e95b
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835715"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691157"
 ---
 # <a name="design-your-own-classifier"></a>Kendi sınıflandırıcınızı tasarlama
 
@@ -28,7 +28,7 @@ Klasik derinlemesine öğrenime göre, belirli bir mimari seçmek için genel bi
 
 ## <a name="how-to-build-a-classifier-with-q"></a>Soru-cevap ile bir sınıflandırıcı oluşturma\#
 
-Bir sınıflandırıcı oluşturmak için, devre modelimizde parametrized kontrollü döndürmeler birleştirilecek. Bunu yapmak için, [`ControlledRotation`](xref:microsoft.quantum.machinelearning.controlledrotation) hisse Machine Learning kitaplığı 'nda tanımlanan türü kullanabiliriz. Bu tür, tanımlayan dört bağımsız değişkeni kabul eder: hedef qubit dizinini, denetim qubits 'in Dizin dizisini, döndürme eksenini ve modeli tanımlayan parametrelerin dizisindeki ilişkili parametrenin dizinini.
+Bir sınıflandırıcı oluşturmak için, devre modelimizde parametrized kontrollü döndürmeler birleştirilecek. Bunu yapmak için, [`ControlledRotation`](xref:Microsoft.Quantum.MachineLearning.ControlledRotation) hisse Machine Learning kitaplığı 'nda tanımlanan türü kullanabiliriz. Bu tür, tanımlayan dört bağımsız değişkeni kabul eder: hedef qubit dizinini, denetim qubits 'in Dizin dizisini, döndürme eksenini ve modeli tanımlayan parametrelerin dizisindeki ilişkili parametrenin dizinini.
 
 Sınıflandırıcının bir örneğini görelim. [Yarım Moons örneğinde](https://github.com/microsoft/Quantum/tree/main/samples/machine-learning/half-moons), dosyasında tanımlı olan aşağıdaki sınıflandırıcıyı bulabiliriz `Training.qs` .
 
@@ -47,7 +47,7 @@ Sınıflandırıcının bir örneğini görelim. [Yarım Moons örneğinde](http
     }
  ```
 
-Burada tanımladığımız özellikler, bir dizi parametre ile birlikte bir dizi öğe döndüren bir işlev `ControlledRotation` ve bir sapma de tanımlayacağız [`SequentialModel`](xref:microsoft.quantum.machinelearning.sequentialmodel) . Bu tür, hisse Machine Learning kitaplığı 'nda temel ve sınıflandırıcının tanımlanandır. Yukarıdaki işlevde tanımlanan devre, veri kümesinin her bir örneğinin iki özellik içerdiği bir sınıflandırıcının parçasıdır. Bu nedenle, yalnızca iki qubit gerekir. Devresinin grafik gösterimi:
+Burada tanımladığımız özellikler, bir dizi parametre ile birlikte bir dizi öğe döndüren bir işlev `ControlledRotation` ve bir sapma de tanımlayacağız [`SequentialModel`](xref:Microsoft.Quantum.MachineLearning.SequentialModel) . Bu tür, hisse Machine Learning kitaplığı 'nda temel ve sınıflandırıcının tanımlanandır. Yukarıdaki işlevde tanımlanan devre, veri kümesinin her bir örneğinin iki özellik içerdiği bir sınıflandırıcının parçasıdır. Bu nedenle, yalnızca iki qubit gerekir. Devresinin grafik gösterimi:
 
  ![Devre modeli örneği](~/media/circuit_model_1.PNG)
 
@@ -55,11 +55,11 @@ Varsayılan olarak, hisse senedi Machine Learning kitaplığı işlemlerinin, s�
 
 ## <a name="use-the-library-functions-to-write-layers-of-gates"></a>Kapı katmanlarını yazmak için kitaplık işlevlerini kullanma
 
-Örnek başına 784 özelliklerine sahip bir veri kümeniz olduğunu varsayalım, örneğin, bir veri kümesi gibi 28 × 28 piksel görüntüler. Bu durumda, devreninin genişliği yeterince büyük hale gelir. böylece her bir kapı, her bir ağ geçidinin olası ancak pratik bir görev haline gelir. Bu nedenle hisse Machine Learning kitaplığı, otomatik olarak parametrized döndürmeler katmanları oluşturmak için bir araç kümesi sağlar. Örneğin, işlev, [`LocalRotationsLayer`](xref:microsoft.quantum.machinelearning.localrotationslayer) her bir qubit için tek bir dönüşle, her bir parametrized farklı bir model parametresi tarafından bir dönüşle, belirli bir eksen boyunca denetlenmeyen tek qubit döndürmeler dizisini döndürür. Örneğin, `LocalRotationsLayer(4, X)` Aşağıdaki kapı kümesini döndürür:
+Örnek başına 784 özelliklerine sahip bir veri kümeniz olduğunu varsayalım, örneğin, bir veri kümesi gibi 28 × 28 piksel görüntüler. Bu durumda, devreninin genişliği yeterince büyük hale gelir. böylece her bir kapı, her bir ağ geçidinin olası ancak pratik bir görev haline gelir. Bu nedenle hisse Machine Learning kitaplığı, otomatik olarak parametrized döndürmeler katmanları oluşturmak için bir araç kümesi sağlar. Örneğin, işlev, [`LocalRotationsLayer`](xref:Microsoft.Quantum.MachineLearning.LocalRotationsLayer) her bir qubit için tek bir dönüşle, her bir parametrized farklı bir model parametresi tarafından bir dönüşle, belirli bir eksen boyunca denetlenmeyen tek qubit döndürmeler dizisini döndürür. Örneğin, `LocalRotationsLayer(4, X)` Aşağıdaki kapı kümesini döndürür:
 
  ![Yerel döndürmeler katmanı](~/media/local_rotations_layer.PNG)
 
-Devre tasarımını kolaylaştırmak için kullanılabilen tüm araçları öğrenmek için [hisse Machine Learning kitaplığının API başvurusunu](xref:microsoft.quantum.machinelearning) araştırmanızı öneririz.
+Devre tasarımını kolaylaştırmak için kullanılabilen tüm araçları öğrenmek için [hisse Machine Learning kitaplığının API başvurusunu](xref:Microsoft.Quantum.MachineLearning) araştırmanızı öneririz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

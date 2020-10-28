@@ -9,12 +9,12 @@ ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0dbeee8e092c830576ba8f79733035cdeeac11de
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1bb66ae0fe7de785c417b0bef480e52adea5534d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834967"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691725"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Öğretici: Q 'da qubit düzeyi programları yazma ve benzetimini yapma\#
 
@@ -32,7 +32,7 @@ Bizim örneğimizde, Q# aşağıdaki gösterimi bir devre olarak bulunan tam ü�
 <br/>
 <img src="../media/qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 * [Install](xref:microsoft.quantum.install) Tercih ettiğiniz dil ve geliştirme ortamınızı kullanarak hisse geliştirme setini kullanın.
 * Makinenizde QDK zaten yüklüyse en son sürüme [güncelleştirdiğinizden](xref:microsoft.quantum.update) emin olun
@@ -58,7 +58,7 @@ Microsoft 'un hisse geliştirme seti ile bir hisse programın çalıştırılmas
 
 Bu öğreticinin ilk bölümü, Q# `Perform3qubitQFT` üç qubit üzerinde hisse Fourier dönüşümünü gerçekleştiren işlemi tanımlamayı içerir. 
 
-Ayrıca, [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) üç qubit sistemimizin benzetilen dalga işlevinin işlem genelinde geliştikçe, işlevini kullanacağız.
+Ayrıca, [`DumpMachine`](xref:Microsoft.Quantum.Diagnostics.DumpMachine) üç qubit sistemimizin benzetilen dalga işlevinin işlem genelinde geliştikçe, işlevini kullanacağız.
 
 İlk adım, Q# projenizi ve dosyanızı oluşturmaktır.
 Bunun adımları programı çağırmak için kullanacağınız ortama bağlıdır ve ilgili [yükleme kılavuzlarındaki](xref:microsoft.quantum.install)ayrıntıları bulabilirsiniz.
@@ -104,32 +104,32 @@ Bizim Q# işlem dahilinde, öncelikle şu deyimle üç qubit kaydı ayırdık `u
         }
 ```
 
-İle `using` , qubits $ \ket $ durumunda otomatik olarak ayrılır {0} . Bunu [`Message(<string>)`](xref:microsoft.quantum.intrinsic.message) [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) , ve ' ı kullanarak, bir dizeyi ve sistemin geçerli durumunu konsola yazdıracak şekilde doğrulayabiliriz.
+İle `using` , qubits $ \ket $ durumunda otomatik olarak ayrılır {0} . Bunu [`Message(<string>)`](xref:Microsoft.Quantum.Intrinsic.Message) [`DumpMachine()`](xref:Microsoft.Quantum.Diagnostics.DumpMachine) , ve ' ı kullanarak, bir dizeyi ve sistemin geçerli durumunu konsola yazdıracak şekilde doğrulayabiliriz.
 
 > [!NOTE]
-> `Message(<string>)`Ve `DumpMachine()` işlevleri ( [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) ve [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics) sırasıyla), her ikisi de doğrudan konsola yazdırılır. Tıpkı gerçek bir hisse hesaplamasına benzer şekilde, Q# qubit durumlarına doğrudan erişememize izin vermez.
+> `Message(<string>)`Ve `DumpMachine()` işlevleri ( [`Microsoft.Quantum.Intrinsic`](xref:Microsoft.Quantum.Intrinsic) ve [`Microsoft.Quantum.Diagnostics`](xref:Microsoft.Quantum.Diagnostics) sırasıyla), her ikisi de doğrudan konsola yazdırılır. Tıpkı gerçek bir hisse hesaplamasına benzer şekilde, Q# qubit durumlarına doğrudan erişememize izin vermez.
 > Ancak, `DumpMachine` hedef makinenin geçerli durumunu yazdırdığından, tam durum simülatörü ile birlikte kullanıldığında hata ayıklama ve öğrenimi için değerli öngörüler sağlayabilir.
 
 
 ### <a name="applying-single-qubit-and-controlled-gates"></a>Tek qubit ve denetimli kapıları uygulama
 
 Daha sonra, işlemin kendisini oluşturan kapıları uyguladık.
-Q# , ad alanında işlem olarak birçok temel hisse kapısı zaten içeriyor [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) ve bunlar özel durum değildir. 
+Q# , ad alanında işlem olarak birçok temel hisse kapısı zaten içeriyor [`Microsoft.Quantum.Intrinsic`](xref:Microsoft.Quantum.Intrinsic) ve bunlar özel durum değildir. 
 
 Bir işlem içinde, Q# callables çağıran deyimler, tabii ki sıralı sırayla çalıştırılır.
-Bu nedenle, uygulanacak ilk kapı [`H`](xref:microsoft.quantum.intrinsic.h) ilk qubit 'e (Hadamard) sahiptir:
+Bu nedenle, uygulanacak ilk kapı [`H`](xref:Microsoft.Quantum.Intrinsic.H) ilk qubit 'e (Hadamard) sahiptir:
 
 <br/>
 <img src="../media/qft_firstH.PNG" alt="Circuit diagram for three qubit QFT through first Hadamard" width="120">
 
 Bir kayıttaki belirli bir qubit 'e bir işlem uygulamak için (bir dizideki tek bir `Qubit` dizi `Qubit[]` ) standart dizin gösterimini kullanırız.
-Bu nedenle, [`H`](xref:microsoft.quantum.intrinsic.h) kayıt yaptığımız ilk qubit 'e uygulamak şu `qs` biçimdedir:
+Bu nedenle, [`H`](xref:Microsoft.Quantum.Intrinsic.H) kayıt yaptığımız ilk qubit 'e uygulamak şu `qs` biçimdedir:
 
 ```qsharp
             H(qs[0]);
 ```
 
-`H`(Hadamard) geçidini tek bir qubits 'e uygulamanın yanı sıra, QFT devresi öncelikle denetlenen döndürmeler ' i içerir [`R1`](xref:microsoft.quantum.intrinsic.r1) .
+`H`(Hadamard) geçidini tek bir qubits 'e uygulamanın yanı sıra, QFT devresi öncelikle denetlenen döndürmeler ' i içerir [`R1`](xref:Microsoft.Quantum.Intrinsic.R1) .
 `R1(θ, <qubit>)`Genel içindeki bir işlem {0} , qubit 'in $ \ket $ bileşenini $ \ket $ bileşenine bir $e dönüşü uygulanırken, aynı şekilde değişmeden bırakır {1} .
 
 #### <a name="controlled-operations"></a>Denetlenen işlemler
@@ -153,7 +153,7 @@ Bunları şu şekilde çağırır
             Controlled R1([qs[2]], (PI()/4.0, qs[0]));
 ```
 
-Bu [`PI()`](xref:microsoft.quantum.math.pi) işlevi, [`Microsoft.Quantum.Math`](xref:microsoft.quantum.math) ad alanından Pi radyana kadar olan işlevleri tanımlamak için kullandığımızda aklınızda olduğunu unutmayın.
+Bu [`PI()`](xref:Microsoft.Quantum.Math.PI) işlevi, [`Microsoft.Quantum.Math`](xref:microsoft.quantum.math) ad alanından Pi radyana kadar olan işlevleri tanımlamak için kullandığımızda aklınızda olduğunu unutmayın.
 Ayrıca, bir `Double` (örn.), bir `2.0` tamsayı ile bölmek bir `2` tür hatası oluşturacak. 
 
 > [!TIP]
@@ -171,7 +171,7 @@ Ayrıca, bir `Double` (örn.), bir `2.0` tamsayı ile bölmek bir `2` tür hatas
             H(qs[2]);
 ```
 
-[`SWAP`](xref:microsoft.quantum.intrinsic.swap)devresini tamamlamaya yönelik yalnızca bir geçit uygulamanız gerekir:
+[`SWAP`](xref:Microsoft.Quantum.Intrinsic.SWAP)devresini tamamlamaya yönelik yalnızca bir geçit uygulamanız gerekir:
 
 ```qsharp
             SWAP(qs[2], qs[0]);
@@ -188,7 +188,7 @@ Qubits 'lerimiz {0} , ayrıldığımızda $ \demet $ durumunda ve çok benzer ş
 
 ### <a name="deallocate-qubits"></a>Qubit serbest bırakma
 
-[`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine)İşlem sonrası durumunu görmek için yeniden çağrımız ve son olarak, [`ResetAll`](xref:microsoft.quantum.intrinsic.resetall) işlemi tamamlamadan önce qubits 'i $ \ket $ ile sıfırlamak için qubit kayıt için geçerlidir {0} :
+[`DumpMachine()`](xref:Microsoft.Quantum.Diagnostics.DumpMachine)İşlem sonrası durumunu görmek için yeniden çağrımız ve son olarak, [`ResetAll`](xref:Microsoft.Quantum.Intrinsic.resetall) işlemi tamamlamadan önce qubits 'i $ \ket $ ile sıfırlamak için qubit kayıt için geçerlidir {0} :
 
 ```qsharp
             Message("After:");
@@ -314,7 +314,7 @@ C# ana bilgisayarının dört bölümü vardır:
     Bu örnekte hiçbiri yok.
 3. Kuantum algoritmasını çalıştırma. 
     Her Q# işlem aynı ada sahip bir C# sınıfı oluşturur. 
-    Bu sınıfın `Run` işlemi **zaman uyumsuz**olarak çalıştıran bir yöntemi vardır.
+    Bu sınıfın `Run` işlemi **zaman uyumsuz** olarak çalıştıran bir yöntemi vardır.
     Çalışma zaman uyumsuz çünkü gerçek donanımda çalıştırmak zaman uyumsuz olacaktır. 
     `Run`Yöntemi zaman uyumsuz olduğundan, yöntemi çağırıyoruz `Wait()` ; Bu işlem, görev tamamlanana kadar çalışmayı engeller ve sonucu zaman uyumlu olarak döndürür. 
 4. İşlemin döndürülen sonucunu işleyin.
@@ -347,12 +347,12 @@ namespace NamespaceQFT
 ```
 Uygulamayı çalıştırın ve çıktın aşağıdaki ile eşleşmesi gerekir.
 Bir tuşa bastığınızda programdan çıkılır.
-***
+**_
 
 ```Output
 Initial state |000>:
 # wave function for qubits with ids (least to most significant): 0;1;2
-|0>:     1.000000 +  0.000000 i  ==     ******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|0>:     1.000000 +  0.000000 i  ==     _******************* [ 1.000000 ]     --- [  0.00000 rad ]
 |1>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |2>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |3>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
@@ -362,14 +362,14 @@ Initial state |000>:
 |7>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 After:
 # wave function for qubits with ids (least to most significant): 0;1;2
-|0>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|1>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|2>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|3>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|4>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|5>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|6>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|0>:     0.353553 +  0.000000 i  ==     **_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
 ```
 
 Tam durum simülatörü üzerinde çağrıldığında, `DumpMachine()` hisse Eyaleti 'nin dalga işlevinin bu çoklu gösterimlerini sağlar. Bir $n $-qubit sisteminin olası durumları, her biri karşılık gelen bir karmaşık katsayı (yalnızca genliği ve bir aşama) olan $2 ^ n $ hesaplama tabanlı durumlar ile temsil edilebilir.
@@ -380,14 +380,13 @@ Hesaplama tabanlı durumlar, {0} {1} her ikili basamağın tek bir qubit 'e kar�
 
 
 Satırların geri kalanı, hem Kartezyen hem de kutupsal biçimlerdeki temel eyalet vektörü $ \ket{i} $ ölçgenin olasılığını anlatmaktadır.
-Giriş durumumuz ilk satırı için ayrıntılı $ \ ayraç {000} $:
-* **`|0>:`** Bu satır, `0` Hesaplama esası durumuna karşılık gelir (ilk durum ayırma sonrası $ \ket {000} $ olur, bunun için bu noktada olasılık genliği olan tek durum olması beklenir).
-* **`1.000000 +  0.000000 i`**: Kartezyen biçiminde olasılık genliği.
-* **` == `**: `equal` işaret, her iki eşdeğer temsili de ayırır.
-* **`********************`**: Büyüklük grafik gösterimi, sayısı `*` Bu durum vektörünü ölçme olasılığının müşterinizin istekleriyle orantılı. 
-* **`[ 1.000000 ]`**: büyüklük sayısal değeri
-* **`    ---`**: Genin aşamasının grafik gösterimi.
-* **`[ 0.0000 rad ]`**: aşamanın sayısal değeri (radyan cinsinden).
+Giriş durumumuzın ilk satırına ilişkin ayrıntılar için $ \ demet {000} $: _ **`|0>:`** Bu satır, `0` Hesaplama matrahına karşılık gelir (ilk durum ayırma sonrası $ \ket {000} $, bu durumun bu noktada olasılığa göre tek durum olması beklenir).
+* **`1.000000 +  0.000000 i`** : Kartezyen biçiminde olasılık genliği.
+* **` == `** : `equal` işaret, her iki eşdeğer temsili de ayırır.
+* **`********************`** : Büyüklük grafik gösterimi, sayısı `*` Bu durum vektörünü ölçme olasılığının müşterinizin istekleriyle orantılı. 
+* **`[ 1.000000 ]`** : büyüklük sayısal değeri
+* **`    ---`** : Genin aşamasının grafik gösterimi.
+* **`[ 0.0000 rad ]`** : aşamanın sayısal değeri (radyan cinsinden).
 
 Büyüklük ve aşama bir grafik gösterimiyle birlikte görüntülenir. Büyüklük temsili basittir: bir çubuğu gösterir `*` ve olasılık arttıkça, çubuk ne kadar büyük olur. Aşama için bkz. [test ve hata ayıklama:](xref:microsoft.quantum.guide.testingdebugging#dump-functions) açı aralıklarına dayanan olası sembol temsilleri için döküm işlevleri.
 
@@ -437,7 +436,7 @@ Blok içindeki Fourier dönüştürme işlemlerinden sonra `using` aşağıdaki 
                 set resultArray w/= i <- M(qs[i]);
             }
 ```
-[`IndexRange`](xref:microsoft.quantum.arrays.indexrange)Bir dizide çağrılan işlev (örn. qubits dizimiz `qs` ) dizinin dizinlerinin üzerinde bir Aralık döndürür. Burada, `for` ifadesini kullanarak her bir qubit 'i sırayla ölçmek için döngüümüzde kullanırız `M(qs[i])` .
+[`IndexRange`](xref:Microsoft.Quantum.Arrays.IndexRange)Bir dizide çağrılan işlev (örn. qubits dizimiz `qs` ) dizinin dizinlerinin üzerinde bir Aralık döndürür. Burada, `for` ifadesini kullanarak her bir qubit 'i sırayla ölçmek için döngüümüzde kullanırız `M(qs[i])` .
 Her ölçülen `Result` tür ( `Zero` ya da `One` ), `resultArray` bir Update ve-yeniden atama ifadesiyle ilgili dizin konumuna eklenir.
 
 > [!NOTE]
@@ -517,19 +516,19 @@ Projeyi çalıştırın ve çıktımızda aşağıdakine benzer görünmelidir:
 Before measurement: 
 # wave function for qubits with ids (least to most significant): 0;1;2
 |0>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|1>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|2>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|3>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|4>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|5>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|6>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:     0.353553 +  0.000000 i  ==     **_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
 After measurement:
 # wave function for qubits with ids (least to most significant): 0;1;2
 |0>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |1>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |2>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
-|3>:     1.000000 +  0.000000 i  ==     ******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|3>:     1.000000 +  0.000000 i  ==     _******************* [ 1.000000 ]     --- [  0.00000 rad ]
 |4>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |5>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |6>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
@@ -565,20 +564,20 @@ Dosyasını çalıştırın ve çıktlarınızın aşağıdakine benzer olması 
 ```Output
 Before measurement: 
 # wave function for qubits with ids (least to most significant): 0;1;2
-|0>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|1>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|2>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|3>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|4>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|5>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|6>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|0>:     0.353553 +  0.000000 i  ==     **_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
 After measurement: 
 # wave function for qubits with ids (least to most significant): 0;1;2
 |0>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |1>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |2>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
-|3>:     1.000000 +  0.000000 i  ==     ******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|3>:     1.000000 +  0.000000 i  ==     _******************* [ 1.000000 ]     --- [  0.00000 rad ]
 |4>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |5>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |6>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
@@ -642,20 +641,20 @@ Projeyi çalıştırın ve çıktımızda aşağıdakine benzer görünmelidir:
 ```Output
 Before measurement: 
 # wave function for qubits with ids (least to most significant): 0;1;2
-|0>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|1>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|2>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|3>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|4>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|5>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|6>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|0>:     0.353553 +  0.000000 i  ==     **_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
 After measurement:
 # wave function for qubits with ids (least to most significant): 0;1;2
 |0>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |1>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |2>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
-|3>:     1.000000 +  0.000000 i  ==     ******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|3>:     1.000000 +  0.000000 i  ==     _******************* [ 1.000000 ]     --- [  0.00000 rad ]
 |4>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |5>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |6>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
@@ -677,7 +676,7 @@ Bu çıktı birkaç farklı şeyi gösterir:
 2. Ölçüm sonrası `DumpMachine` , ölçümün durumunun kendisini _değiştirmekte_ olduğunu görüyoruz ve bu ölçüyü, ilk üst konumdan temel durumlar üzerinden, ölçülen değere karşılık gelen tek başına duruma yansıdık.
 
 Bu işlemi birçok kez tekrarlıyoruz, sonuç istatistiklerinin, her bir görüntüsündeki rastgele sonuca artmaya yönelik QFT durumunun eşit ağırlıklı konumunu göstermeye başladığımızda görüyoruz.
-_Ancak_, verimsiz olmasının yanı sıra yine de, bu, aralarındaki göreli aşamalara göre değil, yalnızca temel durumların göreli bir şekilde yeniden oluşturulmasını ister.
+_Ancak_ , verimsiz olmasının yanı sıra yine de, bu, aralarındaki göreli aşamalara göre değil, yalnızca temel durumların göreli bir şekilde yeniden oluşturulmasını ister.
 İkincisi bu örnekteki bir sorun değildir, ancak QFT 'ye $ \ket $ ' den daha karmaşık bir giriş verildiyse, göreli aşamalar görüneceğiz {000} .
 
 #### <a name="partial-measurements"></a>Kısmi ölçümler 
@@ -701,13 +700,13 @@ Sonuçta elde edilen çıktıda, her bir qubit ölçülerek dereceli projeksiyon
 Giriş bölümünde bahsedildiği gibi, dünyanın çoğu, Q# bireysel qubits ile ilgilenme dünyadan yararlanın.
 Gerçekten de, tam ölçekli, uygun hisse programları geliştirmek istiyorsanız, `H` belirli bir dönüşten önce veya sonra bir işlemin, yalnızca sizi yavaşlatıp yavaşlamadığını endişelenmeniz gerekir. 
 
-Q#Kitaplıklar, herhangi bir sayıda qubit için uygulayabileceğiniz ve uygulayabileceğiniz [QFT](xref:microsoft.quantum.canon.qft) işlemini içerir.
+Q#Kitaplıklar, herhangi bir sayıda qubit için uygulayabileceğiniz ve uygulayabileceğiniz [QFT](xref:Microsoft.Quantum.Canon.QFT) işlemini içerir.
 Denemek için, Q# dosyanızda aynı içeriğe sahip olan `Perform3QubitQFT` , ancak ilk `H` `SWAP` yerine iki kolay satıra sahip olan her şeyi içeren yeni bir işlem tanımlayın:
 ```qsharp
             let register = BigEndian(qs);    //from Microsoft.Quantum.Arithmetic
             QFT(register);                   //from Microsoft.Quantum.Canon
 ```
-İlk satır yalnızca, [`BigEndian`](xref:microsoft.quantum.arithmetic.bigendian) `qs` [QFT](xref:microsoft.quantum.canon.qft) işleminin bağımsız değişken olarak aldığı bir qubit dizisinin ayrılmış dizisinin bir ifadesini oluşturur.
+İlk satır yalnızca, [`BigEndian`](xref:Microsoft.Quantum.Arithmetic.BigEndian) `qs` [QFT](xref:Microsoft.Quantum.Canon.QFT) işleminin bağımsız değişken olarak aldığı bir qubit dizisinin ayrılmış dizisinin bir ifadesini oluşturur.
 Bu, kayıttaki qubits 'in Dizin sıralamasına karşılık gelir.
 
 Bu işlemlere erişebilmek için, `open` dosyanın başlangıcında ilgili ad alanları için deyimler ekleyin Q# :
@@ -720,7 +719,7 @@ Bu işlemlere erişebilmek için, `open` dosyanın başlangıcında ilgili ad al
 
 Kitaplık işlemlerini kullanmanın gerçek avantajını görmek için Q# qubits sayısını şundan farklı bir şekilde değiştirin `3` :
 ```qsharp
-        mutable resultArray = new Result[4]; 
+        mutable resultArray = new Result[4];
 
         using (qs = Qubit[4]) {
             //...
@@ -729,16 +728,3 @@ Kitaplık işlemlerini kullanmanın gerçek avantajını görmek için Q# qubits
 Bu nedenle, `H` her bir qubit üzerinde yeni işlemler ve döndürmeler hakkında endişelenmenize gerek kalmadan, belirli sayıda qubit için uygun QFT 'leri uygulayabilirsiniz.
 
 Hisse senedi simülatörü, gerçek hisse donanımı için neden ilerletireceğiz kesin olarak---, tam olarak çalışır şekilde daha fazla zaman kaplar!
-
-
-
-
-
-
-
-
-
-
-
-
-

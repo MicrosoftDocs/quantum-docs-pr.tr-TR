@@ -107,7 +107,7 @@ Dildeki bir [işlem](xref:microsoft.quantum.glossary#operation) veya [işlev](xr
 
 ## <a name="clifford-group"></a>Clienfford grubu
 
-[Şişörün](xref:microsoft.quantum.glossary#bloch-sphere) [Küçlerini ve Pauli işleçleri](xref:microsoft.quantum.glossary#pauli-operators)için efekt permütasyonları kaplayan işlem kümesi. Bunlar [ $ $ X](xref:microsoft.quantum.intrinsic.x), [ $ Y $ ](xref:microsoft.quantum.intrinsic.y), [ $ Z $ ](xref:microsoft.quantum.intrinsic.z), [ $ H $ ](xref:microsoft.quantum.intrinsic.h) ve [ $ S $ ](xref:microsoft.quantum.intrinsic.s)işlemlerini içerir.
+[Şişörün](xref:microsoft.quantum.glossary#bloch-sphere) [Küçlerini ve Pauli işleçleri](xref:microsoft.quantum.glossary#pauli-operators)için efekt permütasyonları kaplayan işlem kümesi. Bunlar [ $ $ X](xref:Microsoft.Quantum.Intrinsic.X), [ $ Y $ ](xref:Microsoft.Quantum.Intrinsic.Y), [ $ Z $ ](xref:Microsoft.Quantum.Intrinsic.Z), [ $ H $ ](xref:Microsoft.Quantum.Intrinsic.H) ve [ $ S $ ](xref:Microsoft.Quantum.Intrinsic.S)işlemlerini içerir.
 
 ## <a name="controlled"></a>Tarafından
 
@@ -150,7 +150,7 @@ Klasik Logic Gates kavramına bağlı olarak, hisse için bir [işlem](xref:micr
 
 ## <a name="hadamard"></a>Hadamard
 
-Hadamard işlemi (Hadamard kapısı veya dönüştürme olarak da bilinir), tek bir [qubit](xref:microsoft.quantum.glossary#qubit) üzerinde çalışır ve [superposition](xref:microsoft.quantum.glossary#superposition) $ \ket { } $ $ \ket { } $ qubit başlangıçta $ \ket { 0 } $ durumundaysa, bunu 0 veya 1 ' in hatta bir üst konumuna koyar. Q#' De, bu işlem önceden tanımlı işlem tarafından uygulanır [`H`](xref:microsoft.quantum.intrinsic.h) .
+Hadamard işlemi (Hadamard kapısı veya dönüştürme olarak da bilinir), tek bir [qubit](xref:microsoft.quantum.glossary#qubit) üzerinde çalışır ve [superposition](xref:microsoft.quantum.glossary#superposition) $ \ket { } $ $ \ket { } $ qubit başlangıçta $ \ket { 0 } $ durumundaysa, bunu 0 veya 1 ' in hatta bir üst konumuna koyar. Q#' De, bu işlem önceden tanımlı işlem tarafından uygulanır [`H`](xref:Microsoft.Quantum.Intrinsic.H) .
 
 ## <a name="immutable"></a>Değişmez
 
@@ -182,11 +182,11 @@ Hisse bir işlem gerçekleştiriliyor. Bu, genellikle geçerli hisse durumu vekt
 
 ## <a name="partial-application"></a>Kısmi uygulama
 
-Tüm gerekli girişler olmadan bir [işlev](xref:microsoft.quantum.glossary#function) veya [işlem](xref:microsoft.quantum.glossary#operation) çağrılıyor. Bu, gelecekteki bir uygulama sırasında yalnızca eksik parametrelere (alt çizgiyle belirtilir) ihtiyacı olan yeni bir [çağrılabilir](xref:microsoft.quantum.glossary#callable) döndürüyor. Örneğin, işlevi verildiğinde `MyFunc(x : int, y : int) : int {return x + y;}` onu kısmen yeni bir işleve uygulayabilirsiniz `let NewFunc = MyFunc(_, 3)` . Daha sonra yeni işlevi, `NewFunc(2)` *5*değerini döndüren eksik parametre ile daha sonra çağırabilirsiniz.  Daha fazla bilgi için bkz. [kısmi uygulama](xref:microsoft.quantum.guide.operationsfunctions#partial-application).
+Tüm gerekli girişler olmadan bir [işlev](xref:microsoft.quantum.glossary#function) veya [işlem](xref:microsoft.quantum.glossary#operation) çağrılıyor. Bu, gelecekteki bir uygulama sırasında yalnızca eksik parametrelere (alt çizgiyle belirtilir) ihtiyacı olan yeni bir [çağrılabilir](xref:microsoft.quantum.glossary#callable) döndürüyor. Örneğin, işlevi verildiğinde `MyFunc(x : int, y : int) : int {return x + y;}` onu kısmen yeni bir işleve uygulayabilirsiniz `let NewFunc = MyFunc(_, 3)` . Daha sonra yeni işlevi, `NewFunc(2)` *5* değerini döndüren eksik parametre ile daha sonra çağırabilirsiniz.  Daha fazla bilgi için bkz. [kısmi uygulama](xref:microsoft.quantum.guide.operationsfunctions#partial-application).
 
 ## <a name="pauli-operators"></a>Pauli işleçleri
 
-`X` `Y` Ve hisse işlemleri olarak bilinen üç 2 x 2 Unitary matrisi kümesi `Z` . Kimlik matrisi, $ $ genellikle küme içinde de bulunur.  $I = \begin{bmatrix} 1 & 0 \\\\ 0 & 1 \end{bmatrix} $ , $ X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix} $ , $ Y = \begin{bmatrix} 0 & -i \\\\ ı & 0 \end{bmatrix} $ , $ Z = \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix} $ .   Daha fazla bilgi için bkz. [tek qubit işlemleri](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
+`X` `Y` Ve hisse işlemleri olarak bilinen 3 2 x 2 Unitary matrisi kümesi `Z` . Kimlik matrisi, $ $ genellikle küme içinde de bulunur.  $I = \begin{bmatrix} 1 & 0 \\\\ 0 & 1 \end{bmatrix} $ , $ X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix} $ , $ Y = \begin{bmatrix} 0 & -i \\\\ ı & 0 \end{bmatrix} $ , $ Z = \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix} $ .   Daha fazla bilgi için bkz. [tek qubit işlemleri](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
 
 ## <a name="quantum-circuit-diagram"></a>Hisse devre diyagramı
 

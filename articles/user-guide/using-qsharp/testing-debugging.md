@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.testingdebugging
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2f2181d388a59c1c6c5a0f13c9aa49d5fa1e51ae
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 5505086c5efac89f6940cde1ecae2ce629cfeda5
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833169"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690969"
 ---
 # <a name="testing-and-debugging"></a>Test etme ve hata ayıklama
 
@@ -23,7 +23,7 @@ Bu bölümde, Q# test ve hata ayıklama için tarafından sunulan araçları ele
 
 ## <a name="unit-tests"></a>Birim testleri
 
-Klasik programları test etmeye yönelik yaygın bir yaklaşım, bir kitaplıktaki kodu çalıştıran ve çıktısını beklenen bir çıktı ile karşılaştıran *birim testleri*adlı küçük programları yazmaktır.
+Klasik programları test etmeye yönelik yaygın bir yaklaşım, bir kitaplıktaki kodu çalıştıran ve çıktısını beklenen bir çıktı ile karşılaştıran *birim testleri* adlı küçük programları yazmaktır.
 Örneğin, `Square(2)` `4` $2 ^ 2 = $4 olan *bir priorı* öğrendiğinizden emin olabilirsiniz.
 
 Q# hisse programları için birim testleri oluşturmayı destekler ve bu, [xUnit](https://xunit.github.io/) birim test çerçevesi içinde testler olarak çalıştırılabilir.
@@ -32,7 +32,7 @@ Q# hisse programları için birim testleri oluşturmayı destekler ve bu, [xUnit
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Visual Studio 2019 ' i açın. **Dosya** menüsüne gidin ve **Yeni > proje...** öğesini seçin. Sağ üst köşede, `Q#` öğesini arayın ve ** Q# test projesi** şablonunu seçin.
+Visual Studio 2019 ' i açın. **Dosya** menüsüne gidin ve **Yeni > proje...** öğesini seçin. Sağ üst köşede, `Q#` öğesini arayın ve **Q# test projesi** şablonunu seçin.
 
 #### <a name="command-line--visual-studio-code"></a>[Komut Satırı / Visual Studio Code](#tab/tabid-vscode)
 
@@ -75,13 +75,13 @@ Q#Derleyici, `"QuantumSimulator"` birim testleri için yerleşik hedefleri, `"To
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Tek seferlik çözüm başına kurulum olarak, **Test** menüsüne gidin ve **x64 > varsayılan Işlemci mimarisi > test ayarları**' nı seçin.
+Tek seferlik çözüm başına kurulum olarak, **Test** menüsüne gidin ve **x64 > varsayılan Işlemci mimarisi > test ayarları** ' nı seçin.
 
 > [!TIP]
 > Visual Studio için varsayılan işlemci mimarisi ayarı, `.suo` her çözüm için çözüm seçenekleri () dosyasında depolanır.
 > Bu dosyayı silerseniz, İşlemci mimariniz olarak **x64** ' u yeniden seçmeniz gerekir.
 
-Projeyi derleyin, **Test** menüsünü açın ve **Windows > test Gezgini**' ni seçin. **Allocatequbit** , **çalıştırma testleri** grubundaki test listesinde görüntülenir. **Tümünü Çalıştır** ' ı veya bu bireysel Testi Çalıştır ' ı seçin.
+Projeyi derleyin, **Test** menüsünü açın ve **Windows > test Gezgini** ' ni seçin. **Allocatequbit** , **çalıştırma testleri** grubundaki test listesinde görüntülenir. **Tümünü Çalıştır** ' ı veya bu bireysel Testi Çalıştır ' ı seçin.
 
 #### <a name="command-line--visual-studio-code"></a>[Komut Satırı / Visual Studio Code](#tab/tabid-vscode)
 
@@ -121,13 +121,13 @@ $ dotnet test --filter "Name=AllocateQubit"
 ```
 
 
-***
+**_
 
-İç işlevin <xref:microsoft.quantum.intrinsic.message> türü vardır `(String -> Unit)` ve tanılama iletilerinin oluşturulmasına izin vermez.
+İç işlevin <xref:Microsoft.Quantum.Intrinsic.Message> türü vardır `(String -> Unit)` ve tanılama iletilerinin oluşturulmasına izin vermez.
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Test Gezgini 'nde bir testi çalıştırdıktan ve teste tıkladığınızda, test çalıştırması hakkında bilgi içeren bir panel görüntülenir: geçiş/başarısızlık durumu, geçen süre ve çıktının bağlantısı. Test çıkışını yeni bir pencerede açmak için **Çıkış** ' a tıklayın.
+Test Gezgini 'nde bir testi çalıştırdıktan ve teste tıkladığınızda, test çalıştırması hakkında bilgi içeren bir panel görüntülenir: geçiş/başarısızlık durumu, geçen süre ve çıktının bağlantısı. Test çıkışını yeni bir pencerede açmak için _ *output* * öğesine tıklayın.
 
 ![test çıktısı](~/media/unit-test-output.png)
 
@@ -136,7 +136,7 @@ Test Gezgini 'nde bir testi çalıştırdıktan ve teste tıkladığınızda, te
 Her test için başarılı/başarısız durumu konsola tarafından yazdırılır `dotnet test` .
 Başarısız testler için çıktılar, hatanın tanılanmasına yardımcı olmak üzere konsola da yazdırılır.
 
-***
+**_
 
 ## <a name="facts-and-assertions"></a>Olgular ve Onaylamalar
 
@@ -160,13 +160,13 @@ Burada anahtar sözcüğü, `fail` hesaplamanın devam olmayacağını ve progra
 Tanım olarak, Q# hedef makine artık Q# bir deyime ulaştıktan sonra kodu çalıştırmayacak olduğundan, bu türden bir hata içinden gözlemlenemez `fail` .
 Bu nedenle, çağrısına bir çağrı geçmemiz durumunda `PositivityFact` girişinin pozitif olduğundan emin olabilirsiniz.
 
-`PositivityFact`Ad alanından işlevini kullanarak aynı davranışı uygulayabileceğinizi unutmayın [`Fact`](xref:microsoft.quantum.diagnostics.fact) <xref:microsoft.quantum.diagnostics> :
+`PositivityFact`Ad alanından işlevini kullanarak aynı davranışı uygulayabileceğinizi unutmayın [`Fact`](xref:Microsoft.Quantum.Diagnostics.fact) <xref:Microsoft.Quantum.Diagnostics> :
 
 ```qsharp
     Fact(value > 0, "Expected a positive number.");
 ```
 
-Diğer yandan *onaylar,* olgulara benzer şekilde kullanılır ancak hedef makinenin durumuna bağlı olabilir. Bunlar işlem olarak tanımlandıklarında, olgular işlev olarak tanımlanır (önceki örnekte olduğu gibi).
+Diğer yandan _Assertions *, olgulara benzer şekilde kullanılır ancak hedef makinenin durumuna bağlı olabilir. Bunlar işlem olarak tanımlandıklarında, olgular işlev olarak tanımlanır (önceki örnekte olduğu gibi).
 Ayrımı anlamak için, bir onaylama içinde aşağıdaki olgunun kullanımını göz önünde bulundurun:
 
 ```qsharp
@@ -176,11 +176,11 @@ operation AssertQubitsAreAvailable() : Unit
 }
 ```
 
-Burada, <xref:microsoft.quantum.environment.getqubitsavailabletouse> kullanılabilecek qubits sayısını döndürmek için işlemini kullanıyoruz.
+Burada, <xref:Microsoft.Quantum.Environment.GetQubitsAvailableToUse> kullanılabilecek qubits sayısını döndürmek için işlemini kullanıyoruz.
 Bu, programın ve çalışma ortamının genel durumuna bağlı olduğundan, tanımımız da `AssertQubitsAreAvailable` bir işlem olmalıdır.
 Ancak, işleve giriş olarak basit bir değer sağlamak için bu genel durumu kullanabiliriz `Bool` `Fact` .
 
-[Prelude](xref:microsoft.quantum.libraries.standard.prelude), bu fikirleri oluşturmak için iki özellikle yararlı onay sağlar <xref:microsoft.quantum.diagnostics.assertmeasurement> ve <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> her ikisi de üzerinde işlem olarak modellenir `()` . Bu onayların her biri, belirli bir ölçümü, ölçümün gerçekleştirildiği bir hisse izini ve kuramsal bir sonucu açıklayan bir Pauli işleci alır.
+[Prelude](xref:microsoft.quantum.libraries.standard.prelude), bu fikirleri oluşturmak için iki özellikle yararlı onay sağlar <xref:Microsoft.Quantum.Diagnostics.AssertMeasurement> ve <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> her ikisi de üzerinde işlem olarak modellenir `()` . Bu onayların her biri, belirli bir ölçümü, ölçümün gerçekleştirildiği bir hisse izini ve kuramsal bir sonucu açıklayan bir Pauli işleci alır.
 Simülasyonu tarafından çalışan hedef makineler, [hiçbir kopya](https://en.wikipedia.org/wiki/No-cloning_theorem)olmayan kopyalarla bağlantılı değildir ve bu tür ölçümlere, bu tür onayları geçen kaydı etkilemeden gerçekleştirebilir.
 Daha sonra bir Benzetici, `PositivityFact` önceki işleve benzer şekilde, kuramsal sonuç uygulamada gözlemlenmeyen hesaplamayı durdurabilir:
 
@@ -197,15 +197,15 @@ using (register = Qubit())
 
 Fiziksel hisse donanımı ' nde, hiçbir kopya olmaması durumunda bir hisse durumunun incelediği, `AssertMeasurement` ve `AssertMeasurementProbability` işlemleri yalnızca `()` başka bir etkisi olmadan döndürülür.
 
-<xref:microsoft.quantum.diagnostics>Ad alanı, `Assert` ailede daha fazla gelişmiş koşul için daha fazla sayıda işlev sağlar. 
+<xref:Microsoft.Quantum.Diagnostics>Ad alanı, `Assert` ailede daha fazla gelişmiş koşul için daha fazla sayıda işlev sağlar. 
 
 ## <a name="dump-functions"></a>Döküm Işlevleri
 
-Ad alanı, hisse programlarının sorunlarını gidermeye yardımcı olmak için, <xref:microsoft.quantum.diagnostics> hedef makinenin geçerli durumu ile bir dosyanın dökümünü yapan iki işlev sunar: <xref:microsoft.quantum.diagnostics.dumpmachine> ve <xref:microsoft.quantum.diagnostics.dumpregister> . Her birinin üretilen çıktısı, hedef makineye bağlıdır.
+Ad alanı, hisse programlarının sorunlarını gidermeye yardımcı olmak için, <xref:Microsoft.Quantum.Diagnostics> hedef makinenin geçerli durumu ile bir dosyanın dökümünü yapan iki işlev sunar: <xref:Microsoft.Quantum.Diagnostics.DumpMachine> ve <xref:Microsoft.Quantum.Diagnostics.DumpRegister> . Her birinin üretilen çıktısı, hedef makineye bağlıdır.
 
 ### <a name="dumpmachine"></a>DumpMachine
 
-Hisse geliştirme seti 'nin bir parçası olarak dağıtılan tam eyalet hisse simülatörü, tüm hisse sisteminin [Wave işlevini](https://en.wikipedia.org/wiki/Wave_function) dosyaya yazar. tek boyutlu karmaşık sayıların dizisi olarak her bir öğenin hesaplama tabanlı durumu $ \ket{n} $ ölçü olasılığını temsil eden, $ \ket{n} = \ket{B_ {n-1}... BITS $ b_i $ için b_1b_0} $ \{ \} . Örneğin, yalnızca iki qubit ayrılmış bir makinede ve hisse durumu $ $ \begin{hizalaması} \ket{\psı} = \frac {1} {\sqrt {2} } {00} \tus-\frac{(1 + ı)} {2} {10} \tus, \end{hizalaması} $ $ çağıran <xref:microsoft.quantum.diagnostics.dumpmachine> Bu çıktıyı oluşturur:
+Hisse geliştirme seti 'nin bir parçası olarak dağıtılan tam eyalet hisse simülatörü, tüm hisse sisteminin [Wave işlevini](https://en.wikipedia.org/wiki/Wave_function) dosyaya yazar. tek boyutlu karmaşık sayıların dizisi olarak her bir öğenin hesaplama tabanlı durumu $ \ket{n} $ ölçü olasılığını temsil eden, $ \ket{n} = \ket{B_ {n-1}... BITS $ b_i $ için b_1b_0} $ \{ \} . Örneğin, yalnızca iki qubit ayrılmış bir makinede ve hisse durumu $ $ \begin{hizalaması} \ket{\psı} = \frac {1} {\sqrt {2} } {00} \tus-\frac{(1 + ı)} {2} {10} \tus, \end{hizalaması} $ $ çağıran <xref:Microsoft.Quantum.Diagnostics.DumpMachine> Bu çıktıyı oluşturur:
 
 ```
 # wave function for qubits with ids (least to most significant): 0;1
@@ -219,12 +219,12 @@ Hisse geliştirme seti 'nin bir parçası olarak dağıtılan tam eyalet hisse s
 Satırların geri kalanı, hem Kartezyen hem de kutupsal biçimlerdeki temel eyalet vektörü $ \ket{n} $ ölçgenin olasılığını anlatmaktadır. İlk satır için ayrıntılı:
 
 * **`∣0❭:`** Bu satır `0` Hesaplama esası durumuna karşılık gelir
-* **`0.707107 +  0.000000 i`**: Kartezyen biçiminde olasılık genliği.
-* **` == `**: `equal` işaret, her iki eşdeğer temsili de ayırır.
-* **`**********  `**: Büyüklük grafik gösterimi, sayısı `*` Bu durum vektörünü ölçme olasılığının müşterinizin istekleriyle orantılı.
-* **`[ 0.500000 ]`**: büyüklük sayısal değeri
-* **`    ---`**: Genin aşamasının grafik gösterimi (aşağıdaki çıktıya bakın).
-* **`[ 0.0000 rad ]`**: aşamanın sayısal değeri (radyan cinsinden).
+* **`0.707107 +  0.000000 i`** : Kartezyen biçiminde olasılık genliği.
+* **` == `** : `equal` işaret, her iki eşdeğer temsili de ayırır.
+* **`**********  `** : Büyüklük grafik gösterimi, sayısı `*` Bu durum vektörünü ölçme olasılığının müşterinizin istekleriyle orantılı.
+* **`[ 0.500000 ]`** : büyüklük sayısal değeri
+* **`    ---`** : Genin aşamasının grafik gösterimi (aşağıdaki çıktıya bakın).
+* **`[ 0.0000 rad ]`** : aşamanın sayısal değeri (radyan cinsinden).
 
 Büyüklük ve aşama bir grafik gösterimiyle birlikte görüntülenir. Büyüklük temsili düz bir şekilde görünür: bir çubuğunu gösterir, çubuğun ne kadar büyük olacağını daha `*` büyük hale gelir. Aşama için, aralıklara göre açıyı temsil etmek üzere aşağıdaki sembolleri göstereceğiz:
 
@@ -299,7 +299,7 @@ Aşağıdaki örneklerde `DumpMachine` bazı yaygın durumlar gösterilmektedir:
 #### <a name="command-line--visual-studio-code"></a>[Komut Satırı / Visual Studio Code](#tab/tabid-vscode)
 
   > [!TIP]
-  > İşlevi kullanarak bir qubit kimliği bulabilir <xref:microsoft.quantum.intrinsic.message> ve qubit değişkenini iletiye geçirerek, örneğin:
+  > İşlevi kullanarak bir qubit kimliği bulabilir <xref:Microsoft.Quantum.Intrinsic.Message> ve qubit değişkenini iletiye geçirerek, örneğin:
   >
   > ```qsharp
   > Message($"0={register2[0]}; 1={register2[1]}");
@@ -312,9 +312,9 @@ Aşağıdaki örneklerde `DumpMachine` bazı yaygın durumlar gösterilmektedir:
   > Yani, dizinindeki qubit, `0` `register2` ID = `3` , index ile qubit 'in `1` ID = `2` olduğu anlamına gelir.
 
 
-***
+**_
 
-<xref:microsoft.quantum.diagnostics.dumpmachine> <xref:microsoft.quantum.diagnostics> Ad alanının bir parçası olduğundan, `open` ona erişmek için bir ifade eklemeniz gerekir:
+<xref:Microsoft.Quantum.Diagnostics.DumpMachine> <xref:Microsoft.Quantum.Diagnostics> Ad alanının bir parçası olduğundan, `open` ona erişmek için bir ifade eklemeniz gerekir:
 
 ```qsharp
 namespace Samples {
@@ -333,17 +333,17 @@ namespace Samples {
 
 ### <a name="dumpregister"></a>DumpRegister
 
-<xref:microsoft.quantum.diagnostics.dumpregister> gibi çalışarak <xref:microsoft.quantum.diagnostics.dumpmachine> , bilgi miktarını yalnızca ilgili qubits ile ilgili olarak sınırlamak için bir qubit dizisi de alır.
+<xref:Microsoft.Quantum.Diagnostics.DumpRegister> gibi çalışarak <xref:Microsoft.Quantum.Diagnostics.DumpMachine> , bilgi miktarını yalnızca ilgili qubits ile ilgili olarak sınırlamak için bir qubit dizisi de alır.
 
-İle olduğu gibi <xref:microsoft.quantum.diagnostics.dumpmachine> , tarafından oluşturulan bilgiler <xref:microsoft.quantum.diagnostics.dumpregister> hedef makineye göre değişir. Tam eyalet hisse simülatörü için, Wave işlevine, ile aynı biçimde belirtilen qubits tarafından oluşturulan küresel bir aşamaya kadar yazar <xref:microsoft.quantum.diagnostics.dumpmachine> .  Örneğin, yalnızca iki qubit ayrılmış bir makineye ve hisse durumu $ $ \begin{hizalaması} \ket{\psı} = \frac {1} {\sqrt {2} } {00} \tus-\frac{(1 + ı)} {2} {10} \tus=-e ^ {-i \ Pi/4} ((\frac {1} {\sqrt {2} } {0} \tus-\frac{(1 + i)} {2} \ket {1} ) \otimes \frac{-(1 + ı)} {\sqrt {2} } {0} \tus), \end{hizalaması} $ $ çağrısı <xref:microsoft.quantum.diagnostics.dumpregister> `qubit[0]` Bu çıktıyı oluşturur:
+İle olduğu gibi <xref:Microsoft.Quantum.Diagnostics.DumpMachine> , tarafından oluşturulan bilgiler <xref:Microsoft.Quantum.Diagnostics.DumpRegister> hedef makineye göre değişir. Tam eyalet hisse simülatörü için, Wave işlevine, ile aynı biçimde belirtilen qubits tarafından oluşturulan küresel bir aşamaya kadar yazar <xref:Microsoft.Quantum.Diagnostics.DumpMachine> .  Örneğin, yalnızca iki qubit ayrılmış bir makineye ve hisse durumu $ $ \begin{hizalaması} \ket{\psı} = \frac {1} {\sqrt {2} } {00} \tus-\frac{(1 + ı)} {2} {10} \tus=-e ^ {-i \ Pi/4} ((\frac {1} {\sqrt {2} } {0} \tus-\frac{(1 + i)} {2} \ket {1} ) \otimes \frac{-(1 + ı)} {\sqrt {2} } {0} \tus), \end{hizalaması} $ $ çağrısı <xref:Microsoft.Quantum.Diagnostics.DumpRegister> `qubit[0]` Bu çıktıyı oluşturur:
 
 ```
 # wave function for qubits with ids (least to most significant): 0
-∣0❭:    -0.707107 + -0.707107 i  ==     ******************** [ 1.000000 ]  /      [ -2.35619 rad ]
+∣0❭:    -0.707107 + -0.707107 i  ==     _******************* [ 1.000000 ]  /      [ -2.35619 rad ]
 ∣1❭:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 ```
 
-ve <xref:microsoft.quantum.diagnostics.dumpregister> için çağrı `qubit[1]` Bu çıktıyı oluşturur:
+ve <xref:Microsoft.Quantum.Diagnostics.DumpRegister> için çağrı `qubit[1]` Bu çıktıyı oluşturur:
 
 ```
 # wave function for qubits with ids (least to most significant): 1
@@ -351,13 +351,13 @@ ve <xref:microsoft.quantum.diagnostics.dumpregister> için çağrı `qubit[1]` B
 ∣1❭:    -0.500000 + -0.500000 i  ==     ***********          [ 0.500000 ]  /      [ -2.35619 rad ]
 ```
 
-Genel olarak, başka bir yazmaç ile ayrılmış bir kaydın durumu saf bir durum değil, karışık bir durumdur. Bu durumda, <xref:microsoft.quantum.diagnostics.dumpregister> aşağıdaki iletiyi verir:
+Genel olarak, başka bir yazmaç ile ayrılmış bir kaydın durumu saf bir durum değil, karışık bir durumdur. Bu durumda, <xref:Microsoft.Quantum.Diagnostics.DumpRegister> aşağıdaki iletiyi verir:
 
 ```
 Qubits provided (0;) are entangled with some other qubit.
 ```
 
-Aşağıdaki örnek, kodunuzda ve birlikte nasıl kullanabileceğinizi gösterir <xref:microsoft.quantum.diagnostics.dumpregister> <xref:microsoft.quantum.diagnostics.dumpmachine> Q# :
+Aşağıdaki örnek, kodunuzda ve birlikte nasıl kullanabileceğinizi gösterir <xref:Microsoft.Quantum.Diagnostics.DumpRegister> <xref:Microsoft.Quantum.Diagnostics.DumpMachine> Q# :
 
 ```qsharp
 namespace app

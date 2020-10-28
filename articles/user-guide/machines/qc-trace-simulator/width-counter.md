@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 701c36dd8c8b087a2728cd935aee0c2ffc4f59f9
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e54e92cc4a76ce9f9c5aead84f2b64320d6b4f1c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835953"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691125"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a>Hisse izleme simülatörü: Genişlik sayacı
 
@@ -32,7 +32,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-width-counter-in-a-c-host-program"></a>C# ana programında Width sayacını kullanma
 
-Bu bölümde aşağıdaki C# örneği, <xref:microsoft.quantum.intrinsic.x> Aşağıdaki örnek koda bağlı olarak, çarpma denetimli bir işlemin uygulanmasıyla ayrılan ek qubits sayısını hesaplar Q# :
+Bu bölümde aşağıdaki C# örneği, <xref:Microsoft.Quantum.Intrinsic.X> Aşağıdaki örnek koda bağlı olarak, çarpma denetimli bir işlemin uygulanmasıyla ayrılan ek qubits sayısını hesaplar Q# :
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -44,7 +44,7 @@ operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
 }
 ```
 
-Çarpma kontrollü <xref:microsoft.quantum.intrinsic.x> işlemi, toplam beş qubit üzerinde çalışır, iki [anyaya bitleri](xref:microsoft.quantum.glossary#ancilla)ayırır ve bir giriş genişliğine **5**sahiptir. Sayıları doğrulamak için aşağıdaki C# programını kullanın:
+Çarpma kontrollü <xref:Microsoft.Quantum.Intrinsic.X> işlemi, toplam beş qubit üzerinde çalışır, iki [anyaya bitleri](xref:microsoft.quantum.glossary#ancilla)ayırır ve bir giriş genişliğine **5** sahiptir. Sayıları doğrulamak için aşağıdaki C# programını kullanın:
 
 ```csharp 
 var config = new QCTraceSimulatorConfiguration();

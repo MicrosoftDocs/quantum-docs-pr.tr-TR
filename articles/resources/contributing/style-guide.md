@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fef3cea1c11e4fef49ddbf63adb34e07675049d2
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7666974e255d537c8d611d0077b7f9b37a61f918
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834202"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691728"
 ---
 # <a name="no-locq-style-guide"></a>Q# Stil Kılavuzu #
 ## <a name="general-conventions"></a>Genel kurallar ##
@@ -52,7 +52,7 @@ Bu ayrım, işlemleri fiiller olarak ve işlevler olarak işlev olarak adı vere
 > Bu perspektiften, hem türün kendisi hem de Oluşturucu işlevinin tutarlı adlara sahip olması için Kullanıcı tanımlı türlerin adlarla adlandırılması gerekir.
 
 Makul yerlerde, işlem adlarının işlem tarafından gerçekleştirilen etkiyi açıkça belirten fiiller ile başlayıp başlamadığından emin olun.
-Örnek:
+Örneğin:
 
 - `MeasureInteger`
 - `EstimateEnergy`
@@ -113,7 +113,7 @@ Benzer şekilde, _Aracı isimleri_ , işlem adlarından Işlev ve udt adlarını
 
 ### <a name="entry-points"></a>Giriş Noktaları
 
-Bir programa giriş noktası tanımlarken Q# , Q# derleyici, giriş noktalarının belirli bir ada sahip olması yerine [ `@EntryPoint()` özniteliği](xref:microsoft.quantum.core.entrypoint) tanır (ör.: `main` , `Main` , veya `__main__` ).
+Bir programa giriş noktası tanımlarken Q# , Q# derleyici, giriş noktalarının belirli bir ada sahip olması yerine [ `@EntryPoint()` özniteliği](xref:Microsoft.Quantum.Core.EntryPoint) tanır (ör.: `main` , `Main` , veya `__main__` ).
 Diğer bir deyişle, bir Q# geliştiricinin perspektifinden giriş noktaları ile açıklanmış sıradan işlemlerdir `@EntryPoint()` .
 Ayrıca, Q# giriş noktaları uygulamanın tamamı için giriş noktaları olabilir (örneğin, Q# tek başına çalıştırılabilir programlar) veya bir Q# uygulama için bir program ve ana bilgisayar programı ( Q# Python veya .NET ile kullanılırken) arasında bir arabirim olabilir. bu şekilde, "Main" adı bir giriş noktasına uygulandığında yanıltıcı olabilir Q# .
 
@@ -134,7 +134,7 @@ Ayrıca, Q# giriş noktaları uygulamanın tamamı için giriş noktaları olabi
 | ☑ | `@EntryPoint() operation RunSimulation` | Giriş noktası amacını, işlem adı aracılığıyla açıkça iletir. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | Kullanımı `Main` , giriş noktası amacını açıkça iletmez ve özniteliğiyle birlikte gereksizdir `@EntryPoint()` . |
 
-***
+**_
 
 ### <a name="shorthand-and-abbreviations"></a>Özet ve kısaltmalar ###
 
@@ -181,7 +181,7 @@ is Adj + Ctl {
 
 
 
-***
+_*_
 
 
 ### <a name="proper-nouns-in-names"></a>Adlarda doğru adlar ###
@@ -208,14 +208,14 @@ Bu kullanım açısından gerekli olan doğru isimler kullanımını en aza indi
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-***
+_*_
 
 ### <a name="type-conversions"></a>Tür Dönüştürmeleri ###
 
 Q#Kesin ve statik olarak yazılmış bir dil olduğundan, bir tür değeri yalnızca bir tür dönüştürme işlevine açık bir çağrı kullanılarak başka bir türün değeri olarak kullanılabilir.
 Bu, değerlerin örtük olarak (ör. tür promosyonu) veya atama yoluyla türlerin değiştirilmesini sağlayan dillere karşılık gelir.
 Sonuç olarak, tür dönüştürme işlevleri kitaplık geliştirmede önemli bir rol oynar Q# ve adlandırma hakkında yaygın olarak karşılaşılan kararlardan birini içerir.
-Ancak, tür dönüştürmeleri her zaman _belirleyici_olduğundan, bunlar işlev olarak yazılabilecekleri ve bu nedenle yukarıdaki önerinin altına düşecek.
+Ancak, tür dönüştürmeleri her zaman _belirleyici_ olduğundan, bunlar işlev olarak yazılabilecekleri ve bu nedenle yukarıdaki önerinin altına düşecek.
 Özellikle, tür dönüştürme işlevlerinin hiçbir şekilde fiiller (ör.: `ConvertToX` ) veya duyurusu b önceden konumsal tümceleri () olarak adlandırılmaması önerilir `ToX` , ancak kaynak ve hedef türlerini belirten sıfatıcı önceden konumsal ifadeler olarak adlandırılmalıdır ( `XAsY` ).
 Tür dönüştürme işlevi adlarında dizi türleri listelenirken, Stenk önerilir `Arr` .
 Tüm tür dönüştürme işlevlerinin, `As` hızlı bir şekilde tanımlanabilmesi için kullanılarak adlandırılması önerilir.
@@ -235,7 +235,7 @@ Tüm tür dönüştürme işlevlerinin, `As` hızlı bir şekilde tanımlanabilm
 | ☒ | <s>`PauliArrFromBoolArr`</s> | Giriş ve çıkış türleri yanlış sırada görünüyor. |
 | ☑ | `ResultArrAsBoolArr` | Hem giriş türleri hem de çıkış türleri net. |
 
-***
+_*_
 
 ### <a name="private-or-internal-names"></a>Özel veya Iç adlar ###
 
@@ -256,7 +256,7 @@ Bir işlem veya işlev doğrudan kullanıma yönelik değildir, ancak bunun yeri
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | `_`Bu işlemin yalnızca iç kullanım için olduğunu göstermek için alt çizgi kullanmayın. |
 | ☑ | `internal operation ApplyDecomposedOperation` | `internal`Başındaki anahtar sözcük açıkça bu işlemin yalnızca iç kullanım için olduğunu gösterir. |
 
-***
+_*_
 ### <a name="variants"></a>Değişkenler ###
 
 Bu sınırlama gelecekteki sürümlerinde kalmayabilir, ancak bu durum genellikle, kendilerine ait oldukları ve onların Q# bağımsız değişkenlerinin somut türleri tarafından kendilerine ait olan ilgili işlem veya işlev grupları olacaktır.
@@ -280,7 +280,7 @@ Bu gruplar, kendisini belirten bir veya iki harften sonra aynı kök adı kullan
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-***
+_*_
 
 ### <a name="arguments-and-variables"></a>Bağımsız değişkenler ve değişkenler ###
 
@@ -305,9 +305,9 @@ Benzer şekilde, giriş ve tür bağımsız değişkenlerinin adları, bir işle
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-***
+_*_
 
-### <a name="user-defined-type-named-items"></a>Kullanıcı tanımlı tür öğeleri ###
+### <a name="user-defined-type-named-items"></a>User-Defined adlandırılan öğeler türü ###
 
 Kullanıcı tanımlı türlerdeki adlandırılmış öğeler `CamelCase` , udt oluşturucularının girişinde bile olarak adlandırılmalıdır.
 Bu, erişimci gösterimini (ör.: `callable::Apply` ) veya kopyalama ve güncelleştirme gösterimini () kullanırken, adlandırılmış öğeleri yerel kapsamlı değişkenlere göre açıkça ayırmak için yardımcı olur `set arr w/= Data <- newData` .
@@ -329,7 +329,7 @@ Bu, erişimci gösterimini (ör.: `callable::Apply` ) veya kopyalama ve güncell
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Adlandırılmış öğeler ilk büyük harfle başlamalıdır. |
 | ☒ | <s>`newtype Collection = (Length : Int, Get : Int -> (Qubit => Unit)) `</s> | İşlevlerine çözüm veren adlandırılmış öğeler, fiil ifadeleri olarak değil, ad ifadeleri olarak adlandırılmalıdır. |
 
-***
+_*_
 
 ## <a name="input-conventions"></a>Giriş kuralları ##
 
@@ -379,7 +379,7 @@ Bu nedenle, bir geliştirici, `ControlledOnInt` çağrılabilir 'in, en son dön
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-***
+_*_
 
 ## <a name="documentation-conventions"></a>Belge kuralları ##
 
@@ -451,7 +451,7 @@ is Adj + Ctl {
 }
 ```
 
-***
+_*_
 
 ## <a name="formatting-conventions"></a>Biçimlendirme kuralları ##
 
@@ -486,4 +486,4 @@ Bu kurallar, derleyici ile tümleşik biçimlendirme Aracı kullanılarak otomat
 | ☑ | `Example(a, b, c)` | Giriş kayıt girişinde öğeler okunabilirlik için doğru aralıklıdır. |
 | ☒ | <s>`Example (a, b, c)`</s> | Boşluklar, işlev, işlem veya UDT adlarından sonra bastırılmalıdır. |
 
-***
+_**

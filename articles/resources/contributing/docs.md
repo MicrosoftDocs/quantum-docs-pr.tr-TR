@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 20e9f8126a290f52701b6b0e525d7669a605d4c9
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 2debef858c38b9a8f11264858130ed7cb41543ae
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759688"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691789"
 ---
 # <a name="improving-documentation"></a>İyileştirme Belgeleri
 
@@ -46,7 +46,7 @@ Aşağıdaki çekme istekleri hakkında daha fazla bilgi edineceksiniz, ancak ş
 
 ### <a name="referencing-sample-code-from-conceptual-articles"></a>Kavramsal makalelerden örnek koda başvurma
 
-[Örnek deposundan](https://github.com/Microsoft/Quantum)kod eklemek istiyorsanız, özel bir docfx-flavored Marku komutunu kullanarak bunu yapabilirsiniz:
+[Örnek deposundan](https://github.com/Microsoft/Quantum)kod eklemek istiyorsanız, özel bir DocFX-Flavored Marku komutu kullanarak bunu yapabilirsiniz:
 
 ```markdown
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
@@ -138,7 +138,7 @@ Bu farklı bilgi parçalarının her biri, Q# belge açıklamasında özel olara
  }
 ```
 
-Yukarıdaki kodun işlenmiş sürümünü, [ `ControlledOnBitString` işlevin API belgelerinde](xref:microsoft.quantum.canon.controlledonbitstring)görebilirsiniz.
+Yukarıdaki kodun işlenmiş sürümünü, [ `ControlledOnBitString` işlevin API belgelerinde](xref:Microsoft.Quantum.Canon.ControlledOnBitString)görebilirsiniz.
 
 Belge yazma hakkında genel olarak, API belge açıklamalarını yazma bölümünde birkaç şeyi aklınızda tutmaya yardımcı olur:
 

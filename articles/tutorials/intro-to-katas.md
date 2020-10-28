@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.katas
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 097d7f70088b6ee84a1e91ee99be59149dd9e15b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 6b2eff2a457b809bd168b9b59ab013b7fc7541e6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834831"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691644"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Kuantum Kataları ile kuantum bilişimini öğrenin
 
@@ -55,7 +55,7 @@ Hisse bilgi işlem ve temel bilgilerin temellerini ve temellerini inceleyin. Kua
 |[Kuantum geçitlerini tanıma](https://github.com/microsoft/QuantumKatas/tree/main/BasicGates)|İçindeki temel hisse geçitlerini tanımanız için tasarlanan bir dizi alıştırmada Q# . Temel tek qubit ve Multi-qubit kapıları, adjoint ve kontrollü kapıları ve bir qubit durumunu değiştirmek için kapıları nasıl kullanacağınızı içerir.|
 |[Kuantum süper konumu oluşturma](https://github.com/microsoft/QuantumKatas/tree/main/Superposition)|' De üst konum ve programlama kavramı hakkında bilgi sahibi olmak için bu alýþtýrmalarý kullanın Q# . Temel tek qubit ve Multi-qubit kapıları, superposition ve Flow denetimi ve özyineleme için alıştırmaları içerir Q# .|
 |[Ölçümleri kullanarak kuantum durumlarını ayırt etme](https://github.com/microsoft/QuantumKatas/tree/main/Measurements)|Bu alýþtýrmalarý, hisse ölçümü ve dikgen olmayan durumlar hakkında bilgi alırken çözün. |
-|[Birleşik ölçümler](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|Birleşik eşlik ölçümleri hakkında bilgi edinin ve [ölçüm](xref:microsoft.quantum.intrinsic.measure) işleminin hisse bilgilerini ayırt etmek için nasıl kullanılacağını öğrenin.|
+|[Birleşik ölçümler](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|Birleşik eşlik ölçümleri hakkında bilgi edinin ve [ölçüm](xref:Microsoft.Quantum.Intrinsic.Measure) işleminin hisse bilgilerini ayırt etmek için nasıl kullanılacağını öğrenin.|
 
 ### <a name="algorithms"></a>Algoritmalar
 

@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 27038a86dc4854c397458d95529aca463d493fd6
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: fae603a81f8edc23ab8dc14277c5e3c4699f2cee
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771323"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691684"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -23,6 +23,16 @@ Bu makale her Quantum Development Kit sürümüne ilişkin bilgileri içerir.
 Yükleme yönergeleri için bu [yükleme kılavuzuna](xref:microsoft.quantum.install) başvurun.
 
 Güncelleştirme yönergeleri için bu [güncelleştirme kılavuzuna](xref:microsoft.quantum.update) başvurun.
+
+## <a name="version-01320102604"></a>Sürüm 0.13.20102604
+
+*Yayın tarihi: 6 Ekim 2020*
+
+Bu sürüm aşağıdakileri içerir:
+
+- Kaynak tahmini artık qubit sayımına ek olarak aynı anda ulaşılabilir derinlik ve genişlik tahminleri yayar. Ayrıntılar için [buraya](xref:microsoft.quantum.machines.resources-estimator#metrics-reported) bakın.
+
+[Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22), [ı Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22) ve [katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22)için kapalı PR 'ler tam listesine bakın.
 
 ## <a name="version-01220100504"></a>Sürüm 0.12.20100504
 
@@ -54,8 +64,8 @@ Son sürümden itibaren, açık kaynak depolarımızın her birinde varsayılan 
 
 Bu sürüm aşağıdakileri içerir:
 
-- Yeni [Microsoft. hisse. Random ad alanı](xref:microsoft.quantum.random), programlar içinden rastgele değerler örneklemek için daha uygun bir yol sağlar Q# . ([Niceno kitaplıkları # 311.864](https://github.com/microsoft/QuantumLibraries/pull/311), [qsharp-Runtime # üçaynumarası](https://github.com/microsoft/qsharp-runtime/pull/328))
-- Yeni [ `DumpOperation` Işlemle](xref:microsoft.quantum.diagnostics.dumpoperation)Iyileştirilmiş [Microsoft. hisse. Diagnostics ad alanı](xref:microsoft.quantum.diagnostics) ve qubit ayırmayı ve Oracle çağrılarını kısıtlamak için yeni işlemler. ([Hiskkitaplıkları # 302](https://github.com/microsoft/QuantumLibraries/pull/302))
+- Yeni [Microsoft. hisse. Random ad alanı](xref:Microsoft.Quantum.Random), programlar içinden rastgele değerler örneklemek için daha uygun bir yol sağlar Q# . ([Niceno kitaplıkları # 311.864](https://github.com/microsoft/QuantumLibraries/pull/311), [qsharp-Runtime # üçaynumarası](https://github.com/microsoft/qsharp-runtime/pull/328))
+- Yeni [ `DumpOperation` Işlemle](xref:Microsoft.Quantum.Diagnostics.DumpOperation)Iyileştirilmiş [Microsoft. hisse. Diagnostics ad alanı](xref:Microsoft.Quantum.Diagnostics) ve qubit ayırmayı ve Oracle çağrılarını kısıtlamak için yeni işlemler. ([Hiskkitaplıkları # 302](https://github.com/microsoft/QuantumLibraries/pull/302))
 - [ `%project` ](xref:microsoft.quantum.iqsharp.magic-ref.project) Q# [ `qsharp.projects` ](https://docs.microsoft.com/python/qsharp-core/qsharp.projects.projects) Q# Geçerli çalışma alanı klasörü dışındaki projelere yönelik başvuruları desteklemek için I ve Python 'daki API 'de yeni Magic komutu. Bu özelliğin geçerli sınırlamaları için bkz. [ıqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) . 
 - `.csproj` Q# Dış proje veya paket başvurularının başlatma sırasında yüklenmesine izin veren ı/Python konakları için dosyaları otomatik olarak yükleme desteği. Daha fazla bilgi için bkz. [ Q# Python ve jupi Not defterleri ile](xref:microsoft.quantum.guide.host-programs) kullanma kılavuzu.
 - Errordüzeltmesini eklendi. Syndrome örneği.
@@ -83,7 +93,7 @@ Bu sürüm aşağıdakileri içerir:
 Bu sürüm aşağıdakileri içerir:
 
 - `qdk-chem`Eski elektronik yapı sorun serileştirme biçimlerini (ör.: FCıDUMP) [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) 'e dönüştürmek için yeni araç
-- Ad alanındaki yeni işlevler ve işlemler, [`Microsoft.Quantum.Synthesis`](xref:microsoft.quantum.synthesis) dönüştürme ve ayrıştırma tabanlı senklik algoritmaları kullanılarak klasik Oracles uygulanıyor.
+- Ad alanındaki yeni işlevler ve işlemler, [`Microsoft.Quantum.Synthesis`](xref:Microsoft.Quantum.Synthesis) dönüştürme ve ayrıştırma tabanlı senklik algoritmaları kullanılarak klasik Oracles uygulanıyor.
 - Q#Artık `%simulate` ,, `%estimate` ve diğer sihirli komutlara bağımsız değişkenlerin kullanılmasına izin veriyor. Daha fazla bilgi için bkz. [ `%simulate` sihirli komut başvurusu](xref:microsoft.quantum.iqsharp.magic-ref.simulate) .
 - I 'de yeni aşama görüntüleme seçenekleri Q# . Daha fazla bilgi için bkz. [ `%config` sihirli komut başvurusu](xref:microsoft.quantum.iqsharp.magic-ref.config) .
 - I Q# ve `qsharp` Python paketi artık Conda paketleri ([qsharp](https://anaconda.org/quantum-engineering/qsharp) ve [ıqsharp](https://anaconda.org/quantum-engineering/iqsharp)) aracılığıyla, Q# JUPITER ve Python işlevlerinin yerel yüklemesini bir Conda ortamına basitleştirmeye yardımcı olur. Daha fazla ayrıntı için bkz. [ Q# jupi Not defterleri](xref:microsoft.quantum.install.jupyter) ve [ Q# Python yükleme kılavuzlarıyla birlikte](xref:microsoft.quantum.install.python) .
@@ -130,7 +140,7 @@ Bu sürüm aşağıdakileri içerir:
 - Q#Docker görüntülerinde performans iyileştirmeleri
 
 > [!NOTE]
-> Q# Yeni özniteliği kullanan uygulamalar, [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) Python veya .net konak programlarından Şu anda çağrılamaz.
+> Q# Yeni özniteliği kullanan uygulamalar, [`@EntryPoint()`](xref:Microsoft.Quantum.Core.EntryPoint) Python veya .net konak programlarından Şu anda çağrılamaz.
 > Daha fazla bilgi için [Python](xref:microsoft.quantum.install.python) ve [.NET birlikte çalışabilirlik](xref:microsoft.quantum.install.cs) kılavuzlarına göz atın.
 
 ## <a name="version-01120033107"></a>Sürüm 0.11.2003.3107
@@ -183,7 +193,7 @@ Bu sürüm aşağıdakileri içerir:
 
 Bu sürüm aşağıdakileri içerir:
 
-- Birim testi için yeni test özniteliği burada Q# GÜNCELLEŞTIRILMIŞ API belgelerine ve [here](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) test & hata ayıklama kılavuzuna bakın [here](xref:microsoft.quantum.guide.testingdebugging)
+- Birim testi için yeni test özniteliği burada Q# GÜNCELLEŞTIRILMIŞ API belgelerine ve [here](xref:Microsoft.Quantum.Diagnostics.Test) test & hata ayıklama kılavuzuna bakın [here](xref:microsoft.quantum.guide.testingdebugging)
 - Program çalıştırma hatası durumunda yığın izlemesi eklendi Q#
 - Visual Studio Code’da kesme noktaları desteğinin [OmniSharp C# Visual Studio Code uzantısında](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) güncelleştirilmesi gerekiyor
 
@@ -224,7 +234,7 @@ Bu sürüm aşağıdakileri içerir:
 
 [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
 
-## <a name="version-09-packagereference-0919082902"></a>Sürüm 0.9 (*PackageReference 0.9.1908.2902*)
+## <a name="version-09-packagereference-0919082902"></a>Sürüm 0.9 ( *PackageReference 0.9.1908.2902* )
 
 *Sürüm tarihi: 29 Ağustos 2019*
 
@@ -233,7 +243,7 @@ Bu sürüm aşağıdakileri içerir:
 - İçindeki Birleşik bir [ifade](xref:microsoft.quantum.guide.operationsfunctions#conjugations) için yeni destek Q#
 - Derleyiciye, “şununla değiştir”, “belge ekle”, ve tek dizili öğe güncelleştirmesi gibi yeni kod eylemleri eklendi
 - Visual Studio Code uzantısına yükleme şablonu ve yeni proje komutları eklendi
-- [Microsoft.Quantum.Canon.ApplyIfOne](xref:microsoft.quantum.canon.applyifone) gibi yeni ApplyIf birleştiricisi çeşitleri eklendi
+- [Microsoft.Quantum.Canon.ApplyIfOne](xref:Microsoft.Quantum.Canon.ApplyIfOne) gibi yeni ApplyIf birleştiricisi çeşitleri eklendi
 - Ek [Quantom Kata](https://github.com/Microsoft/QuantumKatas)’ları Jupyter Notebook’lara dönüştürüldü
 - Visual Studio Uzantısı artık Visual Studio 2019’u gerektiriyor
 
@@ -241,7 +251,7 @@ Bu sürüm aşağıdakileri içerir:
 
 Mevcut programlarınızı yükseltmeye yönelik yönergelere ek olarak değişiklikler de burada özetlendi.  [ Q# Geliştirme bloguna](https://devblogs.microsoft.com/qsharp)bu değişiklikler hakkında daha fazla bilgi edinin.
 
-## <a name="version-08-packagereference-0819071701"></a>Sürüm 0.8 (*PackageReference 0.8.1907.1701*)
+## <a name="version-08-packagereference-0819071701"></a>Sürüm 0.8 ( *PackageReference 0.8.1907.1701* )
 
 *Sürüm tarihi: 12 Temmuz 2019*
 
@@ -253,7 +263,7 @@ Bu sürüm aşağıdakileri içerir:
 
 [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), ve [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) için tam kapsamlı kapalı PR’ler listesine bakın.  
 
-## <a name="version-07-packagereference-0719053109"></a>Sürüm 0.7 (*PackageReference 0.7.1905.3109*)
+## <a name="version-07-packagereference-0719053109"></a>Sürüm 0.7 ( *PackageReference 0.7.1905.3109* )
 
 *Sürüm tarihi: 31 Mayıs 2019*
 
@@ -320,7 +330,7 @@ Bu değişiklik ile, program diğer yeni üç ad alanına taşınan işlemlere b
 
 * İçerdiği işlemler diğer ad alanlarına taşındığı için bazı ad alanları kullanım dışı bırakıldı. Bu ad alanlarını kullanan programlar çalışmaya devam eder ve derleme zamanı uyarısı ad alanını işlemin tanımlandığı yerde gösterir.  
 
-* Microsoft.Quantum.Arithmetic ad alanı, kullanıcı tanımlı <xref:microsoft.quantum.arithmetic.littleendian> türünü kullanması için normalleştirildi. Little endian’ın dönüştürülmesi gerektiğinde [BigEndianAsLittleEndian](xref:microsoft.quantum.arithmetic.bigendianaslittleendian) işlevini kullanın.  
+* Microsoft.Quantum.Arithmetic ad alanı, kullanıcı tanımlı <xref:Microsoft.Quantum.Arithmetic.LittleEndian> türünü kullanması için normalleştirildi. Little endian’ın dönüştürülmesi gerektiğinde [BigEndianAsLittleEndian](xref:Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian) işlevini kullanın.  
 
 * Çeşitli callables (işlevler ve işlemler) adları, [ Q# Stil kılavuzuna](xref:microsoft.quantum.contributing.style)uyacak şekilde değiştirilmiştir.  Eski çağrılabilir öğe adları kullanım dışı bırakıldı.  Eski çağrılabilir öğeleri kullanan programlar çalışmaya devam eder ancak bir derleme zamanı uyarısı oluşturulur. 
 
@@ -356,7 +366,7 @@ Q#Hisse geliştirme setinin 0,5 sürümünden mevcut projeler varsa, bu projeler
 > * 0\.6 sürümü için, Quantum Development Kit ile sunulan dil sunucusu birden fazla çalışma alanını desteklemez.
 > * Visual Studio Code’da bir proje üzerinde çalışmak için projeyi içeren kök klasörü ve başvurulan tüm projeleri açın.   
 > * Visual Studio Code’da bir çözüm üzerinde çalışmak için çözümde yer alan tüm projelerin çözüm ile aynı klasörde veya bunun bir alt klasöründe olması gerekir.  
-> * 0\.6 veya daha yeni bir sürüme geçirilen projeler ve eski paket sürümlerini kullanan projelerin arasındaki başvurular **desteklenmez**.
+> * 0\.6 veya daha yeni bir sürüme geçirilen projeler ve eski paket sürümlerini kullanan projelerin arasındaki başvurular **desteklenmez** .
 
 ## <a name="version-051904"></a>Sürüm 0.5.1904
 

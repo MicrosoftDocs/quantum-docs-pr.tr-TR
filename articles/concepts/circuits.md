@@ -89,7 +89,7 @@ Bu ağ geçidi sırası, en yüksek düzeyde bir entangled bit durumu oluşturdu
 
 $$\mathrm{Cnot } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } } \left ( \ket { 00 }  +  \ket { 11 } \right ),$$
 
-Bu ya da daha fazla karmaşıklığa sahip işlemler, hisse uygun bir şekilde bir hisse alım *Diyagramı*olarak adlandırılan görselleştirme için basit bir yöntem olduğundan harika bir sorun olması gerekir.
+Bu ya da daha fazla karmaşıklığa sahip işlemler, hisse uygun bir şekilde bir hisse alım *Diyagramı* olarak adlandırılan görselleştirme için basit bir yöntem olduğundan harika bir sorun olması gerekir.
 Bu en yüksek düzeyde değerlendirme için devre diyagramı şu şekilde hazırlanıyor:
 
 <!--- ![](.\media\1.svg) --->
@@ -109,7 +109,7 @@ Bir veya daha fazla qubit kayıt üzerinde işlem gören kapıları kutu olarak 
 <!--Bunu kolayca ortalamak için bir yol bulamıyor... Muhtemelen gerekli bir uzantı:-->
 ![Tek qubit kayıt üzerinde işlem gören Hadamard işlemi sembolü](~/media/2.svg)
 
-, tek qubit kayıt üzerinde işlem gören bir [Hadamard](xref:microsoft.quantum.intrinsic.h) işlemidir.
+, tek qubit kayıt üzerinde işlem gören bir [Hadamard](xref:Microsoft.Quantum.Intrinsic.H) işlemidir.
 
 Hisse kapıları, ilk olarak qubits 'e uygulanan kapıda en sol geçit ile kronolojik sırada sıralanır.
 Diğer bir deyişle, kapıların hisse durumunu tutan şekilde fotoğrafını yaparsanız, kablolar diyagramdaki her bir kapıdan, soldan sağa doğru hisse ma durumunu getirir.
@@ -150,7 +150,7 @@ Genel olarak, bu tür denetimli işlemleri devre diyagramlarında
 ![Listedir denetimli bir ağ geçidinin devre diyagramı](~/media/5.svg)
 
 Burada siyah daire, kapıdan denetlediğiniz ve dikey bir tel, denetim qubit 1 değerini alırken uygulanan Unitary 'ı gösterir $ $ .
-$G = x $ ve $ g = Z $ 'nin denetlenen sürümünü (örneğin, denetlenen X Gate 'nin [ $ cnot $ kapısı](xref:microsoft.quantum.intrinsic.cnot)olduğunu unutmayın) gösteren özel durumlar için aşağıdaki gösterimi sunuyoruz:
+$G = x $ ve $ g = Z $ 'nin denetlenen sürümünü (örneğin, denetlenen X Gate 'nin [ $ cnot $ kapısı](xref:Microsoft.Quantum.Intrinsic.CNOT)olduğunu unutmayın) gösteren özel durumlar için aşağıdaki gösterimi sunuyoruz:
 
 <!--- ![](.\media\6.svg) --->
 <!--Bunu kolayca ortalamak için bir yol bulamıyor... Muhtemelen gerekli bir uzantı:-->
@@ -175,7 +175,7 @@ Devre diyagramlarında görselleştirilecek kalan işlem ölçümdür.
 <!--Bunu kolayca ortalamak için bir yol bulamıyor... Muhtemelen gerekli bir uzantı:-->
 ![Ölçüm işlemini temsil eden sembol](~/media/7.svg)
 
-Q# Bu amaçla bir [Ölçü işleci](xref:microsoft.quantum.intrinsic.measure) uygular.
+Q# Bu amaçla bir [Ölçü işleci](xref:Microsoft.Quantum.Intrinsic.Measure) uygular.
 Daha fazla bilgi için [ölçümlerle ilgili bölüme](xref:microsoft.quantum.libraries.standard.prelude#measurements) bakın.
 
 Benzer şekilde, subdevı

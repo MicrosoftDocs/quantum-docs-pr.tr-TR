@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 86f6538cf383f4e7c14255b38cfb1c141c8f991b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: b3bc0841eabeac5d3968776f9dab3a02b1a1eef9
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835528"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691636"
 ---
 # <a name="no-locq-basics"></a>Q# Temel bilgileri
 
@@ -28,7 +28,7 @@ Teknik açıdan, hisse, çağrıldığında, belirli işlemleri bir hisse sistem
 Bu görünümün önemli bir sonucu Q# , bir programın yalnızca qubits 'i doğrudan modelleyemediğini, ancak bunun yerine, belirli bir şekilde denetlenen bilgisayarın bu qubits ile nasıl etkileşime gireceğini açıklar.
 Tasarıma göre, Q# doğrudan hisse tlar veya diğer hisse kutları özelliklerini tanımlamaz.
 Örneğin, hisse bilgi Işlem kavramları kılavuzunda $ \ket{+} = \left (\ket {0} + \ket {1} \ right)/\sqrt $ durumunu göz önünde bulundurun {2} . [Quantum Computing Concepts](xref:microsoft.quantum.concepts.intro)
-Bu durumu içinde hazırlamak için Q# , qubits 'in $ \ket $ durumunda başlatıldığı olgularla başlayın {0} ve bu $ \ket{+} = H\ket {0} $, burada $H $, [ `H` Işlem](xref:microsoft.quantum.intrinsic.h)tarafından uygulanan [Hadamard Transform](xref:microsoft.quantum.glossary#hadamard)şeklindedir. Q#Bir qubit başlatmak ve dönüştürmek için temel kod, ardından şöyle görünür:
+Bu durumu içinde hazırlamak için Q# , qubits 'in $ \ket $ durumunda başlatıldığı olgularla başlayın {0} ve bu $ \ket{+} = H\ket {0} $, burada $H $, [ `H` Işlem](xref:Microsoft.Quantum.Intrinsic.H)tarafından uygulanan [Hadamard Transform](xref:microsoft.quantum.glossary#hadamard)şeklindedir. Q#Bir qubit başlatmak ve dönüştürmek için temel kod, ardından şöyle görünür:
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -37,7 +37,7 @@ using (qubit = Qubit()) {
     // H is now applied, such that the qubit is in H|0⟩ = |+⟩, as desired.
 }
 ```
-Başlatma veya *ayırma*hakkında daha fazla bilgi için bkz. [qubits ile çalışma](xref:microsoft.quantum.guide.qubits).
+Başlatma veya *ayırma* hakkında daha fazla bilgi için bkz. [qubits ile çalışma](xref:microsoft.quantum.guide.qubits).
 
 ## <a name="quantum-states-in-no-locq"></a>Hisse ve ABD Q#
 
@@ -45,7 +45,7 @@ Daha önemlisi, önceki program içindeki duruma açıkça başvurmaz Q# ancak p
 Bu yaklaşımda, her bir hedef makinede bile, makineye bağlı farklı yorumlamalar olabilecek, her bir bir hisse amadığına ilişkin olarak ne *kadar büyük bir işlem olduğu* hakkında tamamen belirsiz bir durum söz konusu olabilir. 
 
 Bir Q# Program, qubit 'in durumuna introspect.
-Bunun yerine, bir program [`Measure`](xref:microsoft.quantum.intrinsic.measure) qubit 'ten bilgi almak için gibi işlemleri çağırabilir ve [`X`](xref:microsoft.quantum.intrinsic.x) [`H`](xref:microsoft.quantum.intrinsic.h) bir qubit durumu üzerinde işlem yapmak için ve gibi işlemleri çağırabilir.
+Bunun yerine, bir program [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) qubit 'ten bilgi almak için gibi işlemleri çağırabilir ve [`X`](xref:Microsoft.Quantum.Intrinsic.X) [`H`](xref:Microsoft.Quantum.Intrinsic.H) bir qubit durumu üzerinde işlem yapmak için ve gibi işlemleri çağırabilir.
 Bu *işlemler aslında yalnızca* belirli bir programı çalıştırmak için kullanılan hedef makine tarafından somut hale getirilir Q# .
 Örneğin, programı [tam durum benzeticimizde](xref:microsoft.quantum.machines.full-state-simulator)çalıştırırsanız simülatör, sanal hisse sisteme karşılık gelen matematiksel işlemleri gerçekleştirir.
 Ancak geleceğe bağlı olarak, hedef makine gerçek bir hisse bilgisayar olduğunda, bu tür işlemleri çağırmak, Q# hisse bilgisayarını *Gerçek* hisse sisteminde ilgili *Gerçek* işlemleri gerçekleştirmeye yönlendirir, örneğin, tam olarak zaman aşımına uğradı.
@@ -55,14 +55,14 @@ Bu şekilde, Q# temel alınan hisse ve hibrit-klasik algoritmaların yanı sıra
 
 ## <a name="no-locq-operations-and-functions"></a>Q# işlemler ve işlevler
 
-Bir Q# Program, *işlemler*, *işlevler*ve Kullanıcı tanımlı türler içerir. 
+Bir Q# Program, *işlemler* , *işlevler* ve Kullanıcı tanımlı türler içerir. 
 
 İşlemler, hisse sistemleri ve en temel yapı blobunun dönüştürmelerini anlatmak için kullanılır Q# . İçinde tanımlanan her işlem, Q# diğer birkaç işlemi çağırabilir.
 
 İşlemlere karşılık işlevler, yalnızca *belirleyici* klasik davranışı betimleyen ve klasik değerleri hesaplama konusunda herhangi bir etkiye sahip olmayan işlevler için kullanılır. Örneğin, bir programın sonundaki qubits 'i ölçmek istediğinizi ve ölçüm sonuçlarının bir diziye ekleneceğini varsayın.
 Bu durumda, `Measure` hedef makinenin (gerçek veya sanal) qubit üzerinde bir ölçü gerçekleştirmesini sağlayan bir *işlemdir* . Aynı zamanda *işlevler* , döndürülen sonuçları bir diziye eklemek için klasik işlemi işler.
 
-Birlikte, işlemler ve işlevler *callables*olarak bilinir. Temel yapısı ve davranışları, [Içindeki Q# Işlemler ve işlevlerde ](xref:microsoft.quantum.guide.operationsfunctions)tanıtılmıştır ve ayrıntılıdır.
+Birlikte, işlemler ve işlevler *callables* olarak bilinir. Temel yapısı ve davranışları, [Içindeki Q# Işlemler ve işlevlerde ](xref:microsoft.quantum.guide.operationsfunctions)tanıtılmıştır ve ayrıntılıdır.
 
 
 ## <a name="no-locq-syntax-overview"></a>Q# sözdizimine genel bakış
@@ -94,7 +94,7 @@ Bir ifade, gerçekleştirilecek bir eylemi ifade eden bir zorunlu programlama di
 let count = 5;
 ```
 
-Daha ilginç bir örnek, `for` yinelemeyi destekleyen ve bir *Ekstre bloğunu*içeren deyimdir.
+Daha ilginç bir örnek, `for` yinelemeyi destekleyen ve bir *Ekstre bloğunu* içeren deyimdir.
 `qubits`Bir qubits (Teknik olarak tür `Qubit[]` veya bir tür dizisi) kaydına yönelik simgenin olduğunu varsayalım `Qubit` . Ardından
 ```qsharp
 for (qubit in qubits) {

@@ -9,12 +9,12 @@ uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 05506f4099de754cd02d81fbd9200f2de091e37e
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 81fba0c52c854d61f9143659795fb4d3c3cee8b9
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759741"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691531"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Enerji düzeyi tahminleri edinme
 Enerji seviyelerinin değerlerini tahmin etmek, hisse Chemistry 'ın asıl uygulamalarından biridir. Bu makalede, bu işlemi, molesel Hydrogen 'nin kurallı örneği için nasıl gerçekleştirebileceğiniz özetlenmektedir. Bu bölümde başvurulan örnek, [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) Kimya örnekleri deposunda bulunur. Çıktıyı gösteren daha fazla görsel örnek [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) tanıtım olur.
@@ -44,7 +44,7 @@ Enerji seviyelerinin değerlerini tahmin etmek, hisse Chemistry 'ın asıl uygul
     var fermionHamiltonian = new OrbitalIntegralHamiltonian(orbitalIntegrals).ToFermionHamiltonian();
 ```
 
-Hamiltonian benzetimi yapmak, fermıon işleçlerini qubit işleçlerine dönüştürmeyi gerektirir. Bu dönüştürme, şu şekilde Ürdün-Wigner kodlaması aracılığıyla gerçekleştirilir:
+Hamiltonian benzetimi yapmak, fermıon işleçlerini qubit işleçlerine dönüştürmeyi gerektirir. Bu dönüştürme Jordan-Wigner kodlaması aracılığıyla aşağıdaki gibi gerçekleştirilir:
 
 ```csharp
     // The Jordan-Wigner encoding converts the fermion Hamiltonian, 
@@ -83,7 +83,7 @@ let integratorOrder = 4;
 let (nQubits, (rescale, oracle)) =  TrotterStepOracle (qSharpData, stepSize, integratorOrder);
 ```
 
-Bu noktada, önceki simülasyonu kullanarak kara eyalet enerji hakkında bilgi edinmek için standart kitaplığın [aşama tahmini algoritmalarını](xref:microsoft.quantum.libraries.characterization) kullanabilirsiniz. Bu, hisse zemin durumu için iyi bir yaklaşık hazırlama gerektirir. Bu tür bir ilgili önermeler [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) şemada verilmiştir. Ancak, Bu önerilerin karşılanmasına `hamiltonian.NElectrons` izin vermek için varsayılan yaklaşım, diyagonal tek bir elektron terim enerji düzeyini en aza indirmek için bir dizi elektricü ekler. Aşama tahmini işlevleri ve işlemleri, [Microsoft. hisse. karakterleştirme](xref:microsoft.quantum.characterization) ad alanındaki docfx gösteriminde verilmiştir.
+Bu noktada, önceki simülasyonu kullanarak kara eyalet enerji hakkında bilgi edinmek için standart kitaplığın [aşama tahmini algoritmalarını](xref:microsoft.quantum.libraries.characterization) kullanabilirsiniz. Bu, hisse zemin durumu için iyi bir yaklaşık hazırlama gerektirir. Bu tür bir ilgili önermeler [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) şemada verilmiştir. Ancak, Bu önerilerin karşılanmasına `hamiltonian.NElectrons` izin vermek için varsayılan yaklaşım, diyagonal tek bir elektron terim enerji düzeyini en aza indirmek için bir dizi elektricü ekler. Aşama tahmini işlevleri ve işlemleri, [Microsoft. hisse. karakterleştirme](xref:Microsoft.Quantum.Characterization) ad alanındaki docfx gösteriminde verilmiştir.
 
 Aşağıdaki kod parçacığında, kimya simülasyonu kitaplığı tarafından gerçek zamanlı evmin çıktısının hisse alma tahminiyle nasıl tümleştirildiğini gösterilmektedir.
 

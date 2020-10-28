@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7a258a915a807b8e1ee7c2c9c062017d90f6a454
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 47845c4f3520e8c50cf8aefd9bf9e8f086c42842
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91489774"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691811"
 ---
 # <a name="contributing-code"></a>Koda Katkıda Bulunma
 
@@ -36,7 +36,7 @@ Q#Canon gibi kitaplıkları oluşturan işlevler, işlemler ve Kullanıcı tanı
 
 En son Q# sürümde, birim testleri özniteliği kullanılarak tanımlanır `@Test("QuantumSimulator")` . Bağımsız değişken, "Histumsimülatör", "Toffzeytin", "Tracesimülatör" veya Run hedefini belirten tam nitelikli bir ad olabilir. Farklı çalışma hedeflerini tanımlayan birkaç öznitelik aynı çağrılabilir öğesine iliştirilebilir. Bazı testlerimizde, xUnit çerçevesine biten tüm işlevleri ve işlemleri sunan kullanım dışı [Microsoft. hisse. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) paketini kullanmaya devam edersiniz Q# `Test` . [xUnit](https://xunit.github.io/) Bu paket artık birim testlerini tanımlamak için gerekli değildir. 
 
-Aşağıdaki işlev, <xref:microsoft.quantum.canon.fst> ve <xref:microsoft.quantum.canon.snd> işlevlerinin her ikisinin de bir temsilci örneğinde doğru çıkışları döndürmesini sağlamak için kullanılır.
+Aşağıdaki işlev, <xref:Microsoft.Quantum.Canon.Fst> ve <xref:Microsoft.Quantum.Canon.Snd> işlevlerinin her ikisinin de bir temsilci örneğinde doğru çıkışları döndürmesini sağlamak için kullanılır.
 `Fst`Veya çıkışı `Snd` yanlışsa, `fail` test başarısız olmasına neden olması için ifade kullanılır.
 
 ```qsharp
@@ -57,7 +57,7 @@ function PairTest () : Unit {
 ```
 
 Standart kitaplıklar kılavuzunun [Test bölümündeki](xref:microsoft.quantum.libraries.diagnostics) teknikler kullanılarak daha karmaşık koşullar denetlenebilir.
-Örneğin, aşağıdaki test `H(q); X(q); H(q);` tarafından çağrılışını <xref:microsoft.quantum.canon.applywith> , ile aynı şeyi yapar `Z(q)` .
+Örneğin, aşağıdaki test `H(q); X(q); H(q);` tarafından çağrılışını <xref:Microsoft.Quantum.Canon.ApplyWith> , ile aynı şeyi yapar `Z(q)` .
 
 ```Q#
 @Test("QuantumSimulator")
