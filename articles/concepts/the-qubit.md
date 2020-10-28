@@ -96,7 +96,7 @@ Norm 1 olan gerçek veya karmaşık sayıların iki boyutlu bir sütun vektörü
 
 $$\begin{bmatrix}1 \\\\ 0 \end{bmatrix} , \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} , \begin{bmatrix} \frac { 1 } { \sqrt { 2 } } \\\\ \frac { 1 } { \sqrt { 2 } } \end{bmatrix} , \begin{bmatrix} \frac { 1 } { \sqrt { 2 } } \\\\ \frac { -1 2 } { \sqrt { } } \end{bmatrix} \text { ve } \begin{bmatrix} \frac { 1 } { \sqrt { 2 } } \\\\ \frac { ı } { \sqrt { 2 } } \end{bmatrix} .      $$
 
-Hisse durum vektörleri $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ ve $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ özel bir rol alır. Bu iki vektör, qubit durumunu açıklayan vektör alanı için bir temel oluşturur. Bu, tüm hisse devlet vektörünün bu temel vektörin toplamı olarak yazılabileceği anlamına gelir. Özellikle vektör $ \begin{bmatrix} x y, \\\\ \end{bmatrix} $ $ x \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} + y \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ olarak yazılabilir. Bu vektörin herhangi bir dönüşü qubit için tam olarak geçerli olsa da, bunu *Hesaplama temelinde*çağırarak bunu tercih ettik.
+Hisse durum vektörleri $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ ve $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ özel bir rol alır. Bu iki vektör, qubit durumunu açıklayan vektör alanı için bir temel oluşturur. Bu, tüm hisse devlet vektörünün bu temel vektörin toplamı olarak yazılabileceği anlamına gelir. Özellikle vektör $ \begin{bmatrix} x y, \\\\ \end{bmatrix} $ $ x \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} + y \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ olarak yazılabilir. Bu vektörin herhangi bir dönüşü qubit için tam olarak geçerli olsa da, bunu *Hesaplama temelinde* çağırarak bunu tercih ettik.
 
 Bu iki hisse bitini, klasik bitin iki durumuna ( $ 0 ve 1) karşılık gelecek şekilde sunuyoruz $ $ $ . Standart kural şunları seçdir
 
@@ -108,7 +108,7 @@ zıt seçim eşit olarak da yapılabilir. Bu nedenle, sınırsız sayıda olası
 
 Bir qubit 'i nasıl temsil ettiğini öğrendiğimiz için, [*ölçüm*](https://en.wikipedia.org/wiki/Measurement_in_quantum_mechanics)kavramını tartışarak bu durumların neleri temsil ettiğini öğrenmek için bazı ıntutik kazanıyoruz. Bir ölçü, bir qubit 'de "bakıma" göz atan fikrine karşılık gelir ve bu, hisse ışından iki klasik durumdan biri olan $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ veya $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ ' i hemen daraltır. Hisse durumu vektörü tarafından verilen bir qubit $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ ölçüldüğünde, sonucu $ 0, $ olasılık $ | \alpha | ^ 2 $ ve sonuç $ 1, $ olasılık $ | \beta | ^ 2 $ ile elde ediyoruz.   Sonuç $ 0 $ ' da, qubit 'in yeni durumu $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ ; Sonuç 1 ' de $ $ durum $ \begin{bmatrix} 0 1 ' \\\\ dir \end{bmatrix} $ . Bu olasılıkların $ $ , $ | \alpha | ^ 2 + | \beta | ^ 2 = 1 $ normalleştirme koşulu nedeniyle 1 ' e kadar toplam olduğunu unutmayın.
 
-Ölçümün özellikleri, hisse maeyalet vektörünün genel işaretinin ilgisiz olduğunu da ifade demektir. Bir vektörü $ \alpha \right \alpha $ negatifi, ok ve ok-ile eşdeğerdir $ \beta \right \beta $ . $0 $ ve $ 1 $ ölçmesinin olasılığı koşulların büyüklüğüne bağlı olduğundan, bu tür işaretleri eklemek, olasılıkların koşullarını değiştirmez. Bu tür aşamalar genellikle [ `` *genel aşamalar*' '](https://en.wikipedia.org/wiki/Phase_factor) olarak adlandırılır ve daha fazla genel olarak $ { \phi } $ yalnızca $ \pm 1 yerine $ e-t biçiminde olabilir.
+Ölçümün özellikleri, hisse maeyalet vektörünün genel işaretinin ilgisiz olduğunu da ifade demektir. Bir vektörü $ \alpha \right \alpha $ negatifi, ok ve ok-ile eşdeğerdir $ \beta \right \beta $ . $0 $ ve $ 1 $ ölçmesinin olasılığı koşulların büyüklüğüne bağlı olduğundan, bu tür işaretleri eklemek, olasılıkların koşullarını değiştirmez. Bu tür aşamalar genellikle [ `` *genel aşamalar* ' '](https://en.wikipedia.org/wiki/Phase_factor) olarak adlandırılır ve daha fazla genel olarak $ { \phi } $ yalnızca $ \pm 1 yerine $ e-t biçiminde olabilir.
 
 Ölçümün son önemli özelliği, tüm hisse maeyalet vektörlerine zarar vermeyedir. $ \begin{bmatrix} Klasik durum 0 ' a karşılık gelen 1 0 ' da bir qubit ile başladığımızda \\\\ \end{bmatrix} $ $ $ , bu durumun ölçülmesi her zaman 0 sonucunu verir $ $ ve hisse durumu değişmeden bırakır. Bu anlamda, yalnızca klasik bitleri ( $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ veya 0 1 olan qubit $ \begin{bmatrix} \\\\ ) varsa \end{bmatrix} $ ölçüm sisteme zarar vermez. Bu, klasik verileri çoğaltabilmemiz ve bir hisse bir bilgisayar üzerinde yalnızca klasik bir bilgisayarda olabileceği gibi işleyebilmemiz anlamına gelir. Ancak, bilgileri bir kerede her iki durumda da depolamak için, uygun şekilde ne kadar iyi bir şekilde veri depolama alanı ve diğer Robs hisse [bilgisayarları da sayısının fark gözetmeden](https://en.wikipedia.org/wiki/No-cloning_theorem)
 
@@ -122,7 +122,7 @@ Qubits $ $ , [*Bloch Sphere*](https://en.wikipedia.org/wiki/Bloch_sphere) temsil
 Bu diyagramdaki oklar, hisse devlet vektörünün işaret ettiği yönü gösterir ve okun her dönüştürmesi, Kardinal eksenlerden biri ile ilgili bir döndürme olarak düşünülebilir.
 Bir hisse atısyonın sırası olarak bir hisse atımı hesaplamayı düşünürken, algoritmaları tasarlamak ve anlatmak için bu ıntuun kullanılması zor bir araçtır. Q# Bu sorunu, bu tür döndürmeler hakkında bir dil sunarak konuma almayı azaltır.
 
-## <a name="single-qubit-operations"></a>Tek qubit Işlemler
+## <a name="single-qubit-operations"></a>Single-Qubit Işlemler
 
 Hisse bilgisayarları, hisse devlet vektörünün herhangi bir dönüşüyle öykünebileceği evrensel bir hisse kapısı kümesi uygulayarak verileri işler.
 Bu evrenlik kavramı, giriş bitlerinin her dönüştürmesi sonlu uzunlukta bir bağlantı kullanılarak gerçekleştirilürse, bir kapı kümesi 'nin evrensel olarak kabul edildiği geleneksel (ör. klasik) bilgi işlem için evrenlik kavramına yol açabilir.
@@ -137,7 +137,7 @@ is Adj { // Auto-generate the adjoint of the operation
 }
 ```
 
-Bu, önemsiz bir örnek olsa da ( < XREF: Microsoft. hisse. Intrinsic. h > işlemi Self-adjoint olarak), bunun daha karmaşık qubit işlemleri için nasıl değerli olduğunu görebilirsiniz.
+Bu, önemsiz bir örnek olsa da ( < XREF: Microsoft. hisse. Intrinsic. H > işlemi Self-adjoint olarak), bunun daha karmaşık qubit işlemleri için nasıl değerli olduğunu görebilirsiniz.
 Daha fazla bilgi için bkz. [işlemler ve işlevler](xref:microsoft.quantum.guide.operationsfunctions).
 
 Klasik bir bilgisayarda bir bit ile bir bit arasında eşleme yapan yalnızca dört işlev vardır. Buna karşılık, bir hisse bilgisayar üzerinde tek bir qubit üzerinde sonsuz sayıda Unitary dönüştürmesi vardır. Bu [*nedenle, kapıların adı verilen*](https://en.wikipedia.org/wiki/Quantum_logic_gate)sınırlı bir temel hisse işlem kümesi, hisse kullanımı için izin verilen sonsuz dizi dönüştürmelerinin tam olarak çoğaltılmasını sağlayabilir. Bu, klasik bilgi işlemin aksine, bir hisse bilgisayarın her olası hisse programını sınırlı sayıda kapı kullanarak tam olarak uygulaması olanaksız hale gelir. Bu nedenle, hisse bilgisayarları, klasik bilgisayarların aynı anlamda evrensel olamaz. Sonuç olarak, bir ağ geçidi kümesinin hisse kullanımı için *evrensel* olduğunu söylediğimiz zaman, klasik bilgi işlem ile karşılaştığımız için biraz daha zayıf bir şeydir.
@@ -176,7 +176,7 @@ Bu temel öğelerden Unitary dönüştürmelerinin nasıl derlenebilir bir örne
 
 En basit bu ilkel değer tek qubit Dönüştür. Üç adet tek qubit döndürme genellikle kabul edilir: $ R_x $ , $ R_y $ ve $ R_z $ . $Örneğin, döndürme R_x (\teta) eylemini görselleştirmek için, $ Örneğin, Bloch Sphere 'in x ekseninin yönü boyunca sağ Thumb 'ı işaret $ ettikten $ sonra vektörü, $ \ teta/2 $ radyanıyla birlikte döndürerek. 2. bu kafa karıştırıcı, $ $ Dikli vektörler $ $ Bloch Sphere üzerinde çizildiklerinde 180 ^ \circ, ancak aslında $ yalnızca 90 ^ \circ $ derece, geometrik olarak. Karşılık gelen Unitary matrisleri şunlardır:
 
-\begin{align* } 
+\begin{align *} 
  & R_z (\teta) = e ^ { -i\teta z/2 } = \begin{bmatrix} e ^ { -i \ teta/2 } & 0 \\\\ 0 & e ^ { i \ teta/2 } \end{bmatrix} , \\\\ 
  & R_x (\teta) = e ^ { -i\teta x/2 } = HR_z (\teta) H = \begin{bmatrix} \ cos (\ teta/2) & -i\sin (\ teta/2) \\\\ -i\sin (\ teta/2) & \cos (\ teta/2) \end{bmatrix} , \\\\ 
  & R_y (\teta) = e ^ { -i\teta y/2 } = SHR_z (\teta) HS ^ \dagger = \begin{bmatrix} \cos (\ teta/2)-\sin (\ teta/2) \sin (\ teta/2) & \\\\ & \cos (\ teta/2) \end{bmatrix} . \end { Hizala*}

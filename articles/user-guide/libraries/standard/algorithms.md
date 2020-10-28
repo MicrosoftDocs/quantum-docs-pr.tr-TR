@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.standard.algorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7ce13c5df3795656156cccf28640c0a4b0dcba2e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 982103876b00718aa3b42c6bc3a07d242cde7594
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835681"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692221"
 ---
 # <a name="quantum-algorithms"></a>Hisse algoritmaları #
 
@@ -49,8 +49,8 @@ Arka plan için [Standart genliği](https://arxiv.org/abs/quant-ph/0005055) yük
 Fourier Transform, klasik çözümlemenin temel bir aracıdır ve yalnızca hisse hesaplamalarında önemli bir araçtır.
 Buna ek olarak, *hisse* uygun bir şekilde bir hisse algoritması tasarımı yaparken, her ne kadar, bir klasik makinede ne kadar verimli hale gelir.
 
-QFT 'nin yaklaşık bir genelleştirme olarak, <xref:microsoft.quantum.canon.approximateqft> istenen algoritmik doğruluğu için kesinlikle gerekli olmayan döndürmeler ayıklanarak daha fazla iyileştirmeler sağlayan bir işlem sağlıyoruz.
-Yaklaşık QFT, dyadic $Z $-Rotation işleminin <xref:microsoft.quantum.intrinsic.rfrac> yanı sıra <xref:microsoft.quantum.intrinsic.h> işlemi gerektirir.
+QFT 'nin yaklaşık bir genelleştirme olarak, <xref:Microsoft.Quantum.Canon.ApproximateQft> istenen algoritmik doğruluğu için kesinlikle gerekli olmayan döndürmeler ayıklanarak daha fazla iyileştirmeler sağlayan bir işlem sağlıyoruz.
+Yaklaşık QFT, dyadic $Z $-Rotation işleminin <xref:Microsoft.Quantum.Intrinsic.RFrac> yanı sıra <xref:Microsoft.Quantum.Intrinsic.H> işlemi gerektirir.
 Giriş ve çıkışın big endian kodlamada kodlandığını kabul edilir---Yani, index ile qubit, `0` ikili tamsayı gösteriminin en solundaki (en yüksek) bit olarak kodlanır.
 Bu, [ayraç](xref:microsoft.quantum.concepts.dirac)ile hizalanır; $ \ket $ durumunda bulunan üç qubit kayıt olarak $ {100} \ket $, {1} $q _1 $ ve $q _2 $ her ikisi de $ \gre$ durumunda olan $q _0 $ {0} .
 $A $ yaklaşık parametresi, $Z $-döndürmeler, yani $a \içindeki [0.. n] $) ayıklama düzeyini belirler.
@@ -103,13 +103,13 @@ Daha fazla ayrıntı için lütfen [M. Roetteler, TH. Beth](http://doi.org/10.10
 
 ### <a name="quantum-phase-estimation"></a>Kuantum Aşama Tahmini ###
 
-Hisse daha önemli bir uygulama olan unitfourier dönüştürmesinin, *aşama tahmini*olarak bilinen bir sorun olan Unitary işleçlerinin eigendeğerlerini öğrenmesinin nedeni.
+Hisse daha önemli bir uygulama olan unitfourier dönüştürmesinin, *aşama tahmini* olarak bilinen bir sorun olan Unitary işleçlerinin eigendeğerlerini öğrenmesinin nedeni.
 Bir Unitary $U $ ve $ \ket{\phi} $ gibi bir State $ \ket{\phi} $, bilinmeyen eigenvalue $ \phi $, \begin{Equation} U\tus{\ Fi} = \phi\ket{\phi} ile $U $ öğesinin bir eigenstate olduğunu düşünün.
 \end{Equation} yalnızca bir Oracle olarak $U $ erişimi varsa, denetimli bir işlemin hedefine uygulanan $Z $ roetlerini denetimin üzerine geri yayarak $ \phi $ aşamasını öğreniyoruz.
 
 $V $ öğesinin denetlenen bir $U $ uygulaması olduğunu varsayalım. bu şekilde \begin{hizalaması} V (\ket \otimes {0} \ket{\phi}) & = {0} \tus\otimes \ket{\phi} \\ \\ \textrm{ve} V (\ket {1} \otimes \ket{\phi}) & = e ^ {ı \ Phi} \ket {1} \otimes \ket{\phi}.
 \end{hizalaması} sonra, şu şekilde, \begin{hizalaması} V (\ket{+} \otimes \ket{\phi}) & = \frac{( {0} \tus\otimes \ket{\phi}) + e ^ {ı \phi} (\demet {1} \otimes \ket{\phi})} {\sqrt {2} }.
-\end{hizalaması} Bu \ Begin{hizalaması} V (\ket{+} \otimes \ket{\phi}) öğesini bulmak için şartlar toplayabiliriz & = \frac{\tus+ {0} e ^ {ı \phi} {1} \tus} {\sqrt {2} } \otimes \ket{\phi} \\ \\ & = (R_1 (\fi) \ket{+}) \otimes \ket{\phi}, \end{hizalaması}; burada $R _1 $, işlem tarafından uygulanan Unitary <xref:microsoft.quantum.intrinsic.r1> .
+\end{hizalaması} Bu \ Begin{hizalaması} V (\ket{+} \otimes \ket{\phi}) öğesini bulmak için şartlar toplayabiliriz & = \frac{\tus+ {0} e ^ {ı \phi} {1} \tus} {\sqrt {2} } \otimes \ket{\phi} \\ \\ & = (R_1 (\fi) \ket{+}) \otimes \ket{\phi}, \end{hizalaması}; burada $R _1 $, işlem tarafından uygulanan Unitary <xref:Microsoft.Quantum.Intrinsic.R1> .
 Farklı şekilde, $V $ uygulamanın etkisi, yalnızca bir Oracle olarak $V $ erişimine sahip olduğumuz halde, bilinmeyen bir açıyla $R _1 $ ' ı uygulama ile tam olarak aynıdır.
 Bu nedenle, bu tartışmanın geri kalanı için aşama tahmini $R _1 (\phi) *$ olarak tartışıyoruz.*
 
@@ -119,4 +119,4 @@ Bu şekilde devam ederek, \begin{hizalaması} \ket{\psı} & = \ sum_ {j = 0} ^ n
 $ \Phi = 2 \ Pi p/2 ^ k $ ' ı bir tamsayı $p $ olarak kabul ediyorsanız, bunu $ \ket{\psı} = \operatorname{QFT} \ket{p_0 p_1 \noktalar p_n} $ olarak tanıyacağız; burada $p _j $, $j ^ {\textrm{TH}} $ bit/$2 \pi \phi $ şeklindedir.
 Bu nedenle, hisse dosyası miktarı olarak kodlanan aşamanın ikili gösterimini elde ettiğimiz için, bu nedenle hisse.
 
-' De Q# , bu işlem tarafından uygulanır <xref:microsoft.quantum.characterization.quantumphaseestimation> , bu, <xref:microsoft.quantum.oracles.discreteoracle> $m $ pozitif tamsayılar işlevi olarak $U ^ d $ uygulayan bir uygulama alır.
+' De Q# , bu işlem tarafından uygulanır <xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation> , bu, <xref:Microsoft.Quantum.Oracles.DiscreteOracle> $m $ pozitif tamsayılar işlevi olarak $U ^ d $ uygulayan bir uygulama alır.

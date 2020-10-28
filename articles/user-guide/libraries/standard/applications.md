@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 115cd65621afd8272887b36163b066a4e6a554d7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835664"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692163"
 ---
 # <a name="applications"></a>Uygulamalar #
 
@@ -48,13 +48,13 @@ En pratik uygulamalarda, bir hisse bilgisayarında uygulanacak olan bu siyah kut
 
 Bir hisse simülasyonu algoritması, bir Hamiltonian 'nin verilen açıklamasını, bir bütün olarak, yaklaşık olarak görünen Hamiltonian, yaklaşık bir zaman evrimi dizisine dönüştürür.
 
-Hamiltonian, hermitian parçalarının toplamına işaret eden özel bir durumda, Trour-Suzuki ayrıştırma, hermitian bileşenleri toplamını oluşturan Hamiltonians benzetimi için özellikle basit ve sezgisel bir algoritmadır. Örneğin, bu aileye ait ilk sipariş tümleştiricisi $ $ \begin{hizalaması} U (t) & = \left (e ^ {-iH \_ 0 t/r} e ^ {-ih \_ 1 t/r} \cnoktalar e ^ {-IH \_ {d-1} t/r} \ right) ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\ | H \_ j \\ | ^ 2 t ^ 2/r), \end{hizalaması} $ $ $r d $ terimlerinin bir ürününü kullanıyor. 
+Hamiltonian, hermitian parçaların toplamına işaret eden özel bir durumda, Trotter-Suzuki ayrıştırma, hermitian bileşenleri toplamını oluşturan Hamiltonians benzetimi için özellikle basit ve sezgisel bir algoritmadır. Örneğin, bu aileye ait ilk sipariş tümleştiricisi $ $ \begin{hizalaması} U (t) & = \left (e ^ {-iH \_ 0 t/r} e ^ {-ih \_ 1 t/r} \cnoktalar e ^ {-IH \_ {d-1} t/r} \ right) ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\ | H \_ j \\ | ^ 2 t ^ 2/r), \end{hizalaması} $ $ $r d $ terimlerinin bir ürününü kullanıyor. 
 
 > [!TIP]
-> Trour-Suzuki simülasyon algoritmasının uygulamaları örneklerde ele alınmıştır.
+> Trotter-Suzuki simülasyon algoritmasının uygulamaları örneklerde ele alınmıştır.
 > Yalnızca her bir hedef makine tarafından sunulan iç işlemleri kullanan, şaşırtıcı model için lütfen [ **simplefon** örneğine](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple)bakın.
-> Trour-Suzuki kitaplık denetim yapısını kullanan, şaşırtıcı model için lütfen [ **ısingtrour** örneğine](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution)bakın.
-> Trour-Suzuki kitaplık denetim yapısını kullanarak molesel Hydrogen için lütfen [ **H2 simülasyon** örneğine](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)bakın.
+> Trotter-Suzuki kitaplığı denetim yapısını kullanan, şaşırtıcı model için lütfen [ **ısingtrour** örneğine](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution)bakın.
+> Trotter-Suzuki kitaplığı denetim yapısını kullanarak molesel Hydrogen için lütfen [ **H2 simülasyon** örneğine](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)bakın.
 
 Çoğu durumda benzetim algoritmasını uygulamak istiyoruz, ancak uygulamasının ayrıntıları ile ilgilenmez. Örneğin, ikinci sipariş tümleştiricisi $ $ \begin{hizalaması} U (t) & = \left (e ^ {-iH \_ 0 t/2R} e ^ {-ih \_ 1 t/2R} \cnoktalar e ^ {-ih \_ {d-1} t/2R} e ^ {-ih \_ {d-1} t/2R} \cnoktalar e ^ {-ih \_ 1 t/2R} e ^ {-ih \_ 0 t/2R} \right) ^ {r} + \mathcal{O} (d ^ 3 \ max_j \\ | H \_ j \\ | ^ 3 t ^ 3/r ^ 2), \end{hizalaması} $ $ $2rd $ terimlerinin bir ürününü kullanıyor. Daha büyük siparişler daha fazla hüküm ve en iyi duruma getirilmiş varyantlar, üs lerde yüksek düzeyde önemsiz olmayan sıralar gerektirebilir. Ayrıca, diğer gelişmiş algoritmalar ara adımlarda anyala qubits kullanımını da içerebilir. Bu nedenle, Kullanıcı tanımlı tür olarak Canon 'daki benzetim algoritmalarını paketliyoruz
 
@@ -68,7 +68,7 @@ newtype SimulationAlgorithm = ((Double, EvolutionGenerator, Qubit[]) => Unit is 
 newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[]) => Unit : Adjoint, Controlled);
 ```
 
-Örnek olarak, Trour-Suzuki ayrıştırma aşağıdaki Canon işlevleri kullanılarak, `trotterStepSize` her bir üstel içindeki benzetimin süresini değiştiren parametrelerle ve `trotterOrder` istenen integral alanının sırası için çağrılabilir.
+Örnek olarak, Trotter-Suzuki ayrıştırma aşağıdaki Canon işlevleri kullanılarak çağrılabilir. bu parametreler, `trotterStepSize` her bir üstel içindeki benzetimin süresini ve `trotterOrder` istenen integral alanının sırasını değiştirir.
 
 ```qsharp
 function TrotterSimulationAlgorithm(
@@ -136,11 +136,11 @@ operation EstimateAdiabaticStateEnergy(
 > Şaşırtıcı modelde aşama tahmini ve Adiabatik durum hazırlığı için lütfen [ **ıingphasetahmine** örnek](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)bölümüne bakın.
 
 > [!TIP]
-> [Molesel Hydrogen benzetimi](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) , ilginç bir ve kısa bir örnektir. $ [Malley et. Al](https://arxiv.org/abs/1512.06860) içinde bildirilen model ve deneysel sonuçlar. yalnızca Pauli matrislerini gerektirir ve $ \hat H = g \_ {0} i \_ 0i \_ 1 + g \_ 1 {Z \_ 0} + g \_ 2 {Z \_ 1} + g \_ 3 {z \_ 0} {z \_ 1} + g \_ 4 {y \_ 0} {y \_ 1} + g \_ 5 {x \_ 0} {x \_ 1} $ biçimini alır. Bu geçerli bir Hamiltonian yalnızca yalnızca 2 qubit gerektirir; burada $g $ sabitleri, iki Hydrogen alar arasında $R $ ile hesaplanır. Canon işlevleri kullanılarak Paulıs, unitcihazlarına dönüştürülür ve sonra da Trour-Suzuki ayrıştırma kullanılarak kısa süreler üzerinde bulunur. $H _2 $ zemin durumunun bir önemi, Adiabatik durum hazırlığı kullanılmadan oluşturulabilir ve bu nedenle, Canon 'nin aşama tahmininden yararlanarak doğrudan devlet enerjisi bulunabilir.
+> [Molesel Hydrogen benzetimi](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) , ilginç bir ve kısa bir örnektir. $ [Malley et. Al](https://arxiv.org/abs/1512.06860) içinde bildirilen model ve deneysel sonuçlar. yalnızca Pauli matrislerini gerektirir ve $ \hat H = g \_ {0} i \_ 0i \_ 1 + g \_ 1 {Z \_ 0} + g \_ 2 {Z \_ 1} + g \_ 3 {z \_ 0} {z \_ 1} + g \_ 4 {y \_ 0} {y \_ 1} + g \_ 5 {x \_ 0} {x \_ 1} $ biçimini alır. Bu geçerli bir Hamiltonian yalnızca yalnızca 2 qubit gerektirir; burada $g $ sabitleri, iki Hydrogen alar arasında $R $ ile hesaplanır. Canon işlevlerini kullanarak Paulis, unitcihazlarına dönüştürülüp daha sonra Trotter-Suzuki ayrıştırma kullanılarak kısa sürelerden türetilmiştir. $H _2 $ zemin durumunun bir önemi, Adiabatik durum hazırlığı kullanılmadan oluşturulabilir ve bu nedenle, Canon 'nin aşama tahmininden yararlanarak doğrudan devlet enerjisi bulunabilir.
 
 ## <a name="shors-algorithm"></a>Shor Algoritması ##
 Shor 'nin algoritması, hisse ve şu anda sınıflardaki sorunları gidermek için hisse bilgisayarlarının kullanılabileceğini gösterdi, bu, hisse alım açısından en önemli geliştirmelerin birine sahiptir.
-Shor 'ın algoritması, *düzenleme*adlı bir sorun olan bir hisse bilgisayarı kullanarak büyük sayıları çarpanlarına yönelik hızlı bir yol sağlar.
+Shor 'ın algoritması, *düzenleme* adlı bir sorun olan bir hisse bilgisayarı kullanarak büyük sayıları çarpanlarına yönelik hızlı bir yol sağlar.
 Birçok mevcut günlük cryptosystems güvenliği, düzenleme için hızlı algoritma yok varsayımına dayanır.
 Bu nedenle, Shor 'nın algoritması, bir hisse alım dünyasının güvenliğini nasıl düşündüğimizi gösteren bir etkiye sahip oldu.
 
@@ -151,7 +151,7 @@ Bu iki adımı aşağıda gözden geçiririz.
 
 ### <a name="period-finding"></a>Süre bulma ###
 
-Hisse maadı ve aşama tahmini 'nin nasıl çalıştığını (bkz. [hisse algoritmaları](xref:microsoft.quantum.libraries.standard.algorithms)) gördük, bu araçları, *Dönem bulma*adlı bir sınıf olarak zor hesaplama sorununu çözmek için kullanabiliriz.  Sonraki bölümde, düzenleme ' ye nasıl bir süre bulmayı uygulayacağınızı inceleyeceğiz.
+Hisse maadı ve aşama tahmini 'nin nasıl çalıştığını (bkz. [hisse algoritmaları](xref:microsoft.quantum.libraries.standard.algorithms)) gördük, bu araçları, *Dönem bulma* adlı bir sınıf olarak zor hesaplama sorununu çözmek için kullanabiliriz.  Sonraki bölümde, düzenleme ' ye nasıl bir süre bulmayı uygulayacağınızı inceleyeceğiz.
 
 $A $ ve $N $ $ $a<N $, burada bulma sırası olarak da adlandırılan, bulma dönemi hedefi $r $ mod $a _$ $N $_ $r $, $a $ $. \equ1 \Text{mod} N $ gibi en az pozitif tamsayı olacak şekilde tanımlanır.  
 
@@ -178,8 +178,8 @@ Denetlenen-$U _a $ Gate $ \ket{x} $ $ \ket{x} $ to $ \ket{(AX) \Text{mod} N} $, 
 $ (A ^ NX) \Text{mod} N $ ' ı elde etmek için, yalnızca $a ^ n \Text{mod} N $ sınıfındaki $U.  
 Bu tür Modüler aritmetik elde etme [devreleri, özellikle](./algorithms.md#arithmetic)de denetlenen-$U \_ {a ^ ı} $ işlemlerini uygulamak için modüler bir üs bağlantı devresini gerektirir.
 
-Yukarıdaki devre, [hisse miktarı tahminine](xref:microsoft.quantum.characterization.quantumphaseestimation) karşılık gelir ve açıkça sıra bulma imkanı sağladığından, gereken qubits sayısını azaltabiliriz. Beauregard 'in [, Arxıv: Quant-pH/, 5095v3 sayfa 8](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)' de açıklandığı gibi sipariş bulma yöntemini takip edebilir ya da Microsoft. hisse. Örneğin, [sağlam aşama tahmini](xref:microsoft.quantum.characterization.robustphaseestimation) de bir ek qubit kullanır.
- 
+Yukarıdaki devre, [hisse miktarı tahminine](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) karşılık gelir ve açıkça sıra bulma imkanı sağladığından, gereken qubits sayısını azaltabiliriz. Beauregard 'in [, Arxıv: Quant-pH/, 5095v3 sayfa 8](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)' de açıklandığı gibi sipariş bulma yöntemini takip edebilir ya da Microsoft. hisse. Örneğin, [sağlam aşama tahmini](xref:microsoft.quantum.characterization.robustphaseestimation) de bir ek qubit kullanır.
+
 ### <a name="factoring"></a>Düzenleme ###
 Düzenleme 'in hedefi, $N $ tam sayı çarpanlarının belirlenmesi, burada $N $ bir $n $ bit sayıdır.  
 Düzenleme, aşağıda açıklanan adımlardan oluşur. Adımlar üç parçaya ayrılır: klasik bir ön işleme yordamı (1-4); $a \Text{mod} N $ (5); sırasını bulmak için bir hisse bilgi işlem yordamı ve sıra (6-9) ile aynı ana faktörleri türetmede bir klasik özelleştirmediğiniz yordamı.
