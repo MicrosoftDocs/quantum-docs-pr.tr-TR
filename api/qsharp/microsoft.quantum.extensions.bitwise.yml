@@ -1,0 +1,84 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >+
+    > [!WARNING]
+
+    > Ve kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Bitwise.And> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.bitwise.and" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.And
+- summary: >+
+    > [!WARNING]
+
+    > Kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Bitwise.Not> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.bitwise.not" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.Not
+- summary: >+
+    > [!WARNING]
+
+    > Veya kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Bitwise.Or> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.bitwise.or" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.Or
+- summary: >+
+    > [!WARNING]
+
+    > Eşlik kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Bitwise.Parity> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.bitwise.parity" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.Parity
+- summary: >+
+    > [!WARNING]
+
+    > XBits kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Bitwise.XBits> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.bitwise.xbits" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.XBits
+- summary: >+
+    > [!WARNING]
+
+    > XOR kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Bitwise.Xor> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.bitwise.xor" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.Xor
+- summary: >+
+    > [!WARNING]
+
+    > ZBits kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Bitwise.ZBits> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.bitwise.zbits" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.ZBits
+name: Microsoft.Quantum.Extensions.Bitwise
+newtypes: []
+operations: []
+summary: ''
+uid: Microsoft.Quantum.Extensions.Bitwise
+metadata:
+  ms.openlocfilehash: 4ae65fda1f41159bc876efbdade906c24892172c
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92727098"

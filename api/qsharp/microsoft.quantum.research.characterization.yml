@@ -1,0 +1,18 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.Research.Characterization
+newtypes: []
+operations:
+- summary: Belirli bir Oracle ve eigenstate 'teki klasik ölçüm sonuçlarında Bayeduyma çıkarımı için rastgele bir adım kullanarak yinelemeli aşama tahmini gerçekleştirir.
+  uid: Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation
+- summary: ''
+  uid: Microsoft.Quantum.Research.Characterization._PrepAndMeasurePhaseEst
+summary: Bu ad alanı, hisse uygun ve aşamalı tahmin için gelişmiş araştırma yöntemleri sağlar.
+uid: Microsoft.Quantum.Research.Characterization
+metadata:
+  ms.openlocfilehash: d5896b8fbe78a9142c3636422b2913f517ae3b91
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92726677"

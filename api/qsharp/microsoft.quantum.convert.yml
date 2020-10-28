@@ -1,0 +1,58 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Verilen büyük tamsayıyı bir Boole dizisine dönüştürür. Dizinin 0 öğesi, büyük tamsayının en az önemli bitidir.
+  uid: Microsoft.Quantum.Convert.BigIntAsBoolArray
+- summary: Verilen Boole dizisini eşdeğer bir büyük tamsayıya dönüştürür. Dizinin 0 öğesi, büyük tamsayının en az önemli bitidir.
+  uid: Microsoft.Quantum.Convert.BoolArrayAsBigInt
+- summary: Little endian biçimindeki bir bit dizesinden pozitif bir tamsayı üretir.
+  uid: Microsoft.Quantum.Convert.BoolArrayAsInt
+- summary: Bir bit dizesi verildiğinde, tek qubit Pauli işleçleri dizisi olarak temsil edilen bir multi-qubit Pauli işleci döndürür.
+  uid: Microsoft.Quantum.Convert.BoolArrayAsPauli
+- summary: Bir `Bool[]` türü `Result[]` türüne dönüştürür; burada `true` eşlenir ve ile `One` `false` eşlenir `Zero` .
+  uid: Microsoft.Quantum.Convert.BoolArrayAsResultArray
+- summary: Bir `Bool` türü `Result` türüne dönüştürür; burada `true` eşlenir ve ile `One` `false` eşlenir `Zero` .
+  uid: Microsoft.Quantum.Convert.BoolAsResult
+- summary: Verilen bir Boolean değeri eşdeğer dize gösterimine dönüştürür.
+  uid: Microsoft.Quantum.Convert.BoolAsString
+- summary: Verilen çift duyarlıklı kayan noktalı sayıyı eşdeğer dize gösterimine dönüştürür.
+  uid: Microsoft.Quantum.Convert.DoubleAsString
+- summary: Verilen biçimi kullanarak verilen bir çift duyarlıklı kayan noktalı sayıyı eşdeğer dize gösterimine dönüştürür.
+  uid: Microsoft.Quantum.Convert.DoubleAsStringWithFormat
+- summary: İşlevleri işlemlere dönüştürür.
+  uid: Microsoft.Quantum.Convert.FunctionAsOperation
+- summary: Verilen bir tamsayıyı eşdeğer bir büyük tamsayıya dönüştürür.
+  uid: Microsoft.Quantum.Convert.IntAsBigInt
+- summary: Döndürülen dizi için küçük endian gösterimini kullanarak pozitif bir tam sayının ikili gösterimini üretir.
+  uid: Microsoft.Quantum.Convert.IntAsBoolArray
+- summary: Verilen bir tamsayıyı eşdeğer bir çift duyarlıklı kayan noktalı sayıya dönüştürür.
+  uid: Microsoft.Quantum.Convert.IntAsDouble
+- summary: Verilen bir tamsayı sayısını eşdeğer dize gösterimine dönüştürür.
+  uid: Microsoft.Quantum.Convert.IntAsString
+- summary: Verilen biçimi kullanarak verilen bir tamsayı sayısını eşdeğer dize gösterimine dönüştürür.
+  uid: Microsoft.Quantum.Convert.IntAsStringWithFormat
+- summary: Mümkünse, verilen büyük tamsayıyı eşdeğer tamsayıya dönüştürür. İşlevi, sonuç tamsayısı ve yalnızca dönüştürme mümkün olduğunda true olan bir Boolean bayrağının çiftini döndürür.
+  uid: Microsoft.Quantum.Convert.MaybeBigIntAsInt
+- summary: Tek qubit Pauli işleçleri dizisi olarak temsil edilen bir multi-qubit Pauli işlecini tamsayı olarak kodlar.
+  uid: Microsoft.Quantum.Convert.PauliArrayAsInt
+- summary: '`arr`Start tarafından numaralandırılan tamsayılar dizisini oluşturur. adım.. erer.'
+  uid: Microsoft.Quantum.Convert.RangeAsIntArray
+- summary: Bir `Result[]` türü `Bool[]` türüne dönüştürür; burada `One` eşlenir ve ile `true` `Zero` eşlenir `false` .
+  uid: Microsoft.Quantum.Convert.ResultArrayAsBoolArray
+- summary: Little endian biçimindeki bir sonuç dizesinden pozitif bir tamsayı üretir.
+  uid: Microsoft.Quantum.Convert.ResultArrayAsInt
+- summary: Bir `Result` türü `Bool` türüne dönüştürür; burada `One` eşlenir ve ile `true` `Zero` eşlenir `false` .
+  uid: Microsoft.Quantum.Convert.ResultAsBool
+name: Microsoft.Quantum.Convert
+newtypes: []
+operations:
+- summary: Verilen bir girişi olan bir işlev çağırır.
+  uid: Microsoft.Quantum.Convert.Call
+summary: 'Bu ad alanı, çeşitli Q # veri türleri arasında dönüştürme işlevleri içerir.'
+uid: Microsoft.Quantum.Convert
+metadata:
+  ms.openlocfilehash: d22f0735b800d2e9a34f8c7ce58353850a4cdded
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92727692"

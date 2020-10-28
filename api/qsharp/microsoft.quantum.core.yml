@@ -1,0 +1,32 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Belirtilen türün varsayılan bir örneğini döndürür.
+  uid: Microsoft.Quantum.Core.Default
+- summary: Dizideki öğe sayısını döndürür.
+  uid: Microsoft.Quantum.Core.Length
+- summary: Belirtilen aralığın, dizideki son öğe olması gereken tanımlı bitiş değerini döndürür.
+  uid: Microsoft.Quantum.Core.RangeEnd
+- summary: Giriş aralığının tersine çevrilmiş yeni bir Aralık döndürür.
+  uid: Microsoft.Quantum.Core.RangeReverse
+- summary: Verilen aralığın tanımlanan başlangıç değerini döndürür.
+  uid: Microsoft.Quantum.Core.RangeStart
+- summary: Bir aralığın sonraki değerinin nasıl hesaplanacağını belirten tamsayıyı döndürür.
+  uid: Microsoft.Quantum.Core.RangeStep
+name: Microsoft.Quantum.Core
+newtypes:
+- summary: Kullanıcı tanımlı türleri öznitelik olarak işaretlemek için kullanılan derleyici tarafından tanınan öznitelik.
+  uid: Microsoft.Quantum.Core.Attribute
+- summary: Derleyiciyi tanınan bir tür veya çağrılabilir olarak işaretlemek için kullanılan öznitelik.
+  uid: Microsoft.Quantum.Core.Deprecated
+- summary: Bir yürütülebilir dosyanın giriş noktasını işaretlemek için kullanılan derleyici tarafından tanınan öznitelik.
+  uid: Microsoft.Quantum.Core.EntryPoint
+operations: []
+summary: 'Bu ad alanı, Q # Core işlevlerini ve işlemlerini içerir.'
+uid: Microsoft.Quantum.Core
+metadata:
+  ms.openlocfilehash: 12de9824c55c72651f5b29cc806058be14343ec5
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92727644"

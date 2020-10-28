@@ -1,0 +1,109 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: İki dizi Boole değerinin eşit olduğunu onaylar.
+  uid: Microsoft.Quantum.Diagnostics.AllEqualityFactB
+- summary: İki tamsayı değeri dizilerinin eşit olduğunu onaylar.
+  uid: Microsoft.Quantum.Diagnostics.AllEqualityFactI
+- summary: Klasik koşulun yanlış olduğunu bildirir.
+  uid: Microsoft.Quantum.Diagnostics.Contradiction
+- summary: Geçerli hedef makinenin durumunu döker.
+  uid: Microsoft.Quantum.Diagnostics.DumpMachine
+- summary: Geçerli hedef makinenin belirtilen qubits ile ilişkili durumunun dökümünü yapar.
+  uid: Microsoft.Quantum.Diagnostics.DumpRegister
+- summary: Klasik bir bool değişkeninin beklenen değere sahip olduğunu onaylar.
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactB
+- summary: Karmaşık bir sayının beklenen değere sahip olduğunu onaylar.
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactC
+- summary: Karmaşık bir sayının beklenen değere sahip olduğunu onaylar.
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactCP
+- summary: Klasik bir INT değişkeninin beklenen değere sahip olduğunu onaylar.
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactI
+- summary: Klasik bir BigInt değişkeninin beklenen değere sahip olduğunu onaylar.
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactL
+- summary: Klasik bir sonuç değişkeninin beklenen değere sahip olduğunu onaylar.
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactR
+- summary: Bir klasik kayan nokta değerinin, belirtilen mutlak tolerans için beklenen değere sahip olduğunu gösterir.
+  uid: Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact
+- summary: Klasik koşulun true olduğunu bildirir.
+  uid: Microsoft.Quantum.Diagnostics.Fact
+- summary: Anlamlı hata iletileriyle başarısız olmak için kullanılan iç işlev.
+  uid: Microsoft.Quantum.Diagnostics.FormattedFailure
+- summary: Klasik bir karmaşık sayının beklenen değerinin 1E-10 ' a kadar küçük bir toleransı olduğunu onaylar.
+  uid: Microsoft.Quantum.Diagnostics.NearEqualityFactC
+- summary: Klasik bir karmaşık sayının beklenen değerinin 1E-10 ' a kadar küçük bir toleransı olduğunu onaylar.
+  uid: Microsoft.Quantum.Diagnostics.NearEqualityFactCP
+- summary: Klasik bir kayan nokta değerinin, 1e-10 ' un küçük bir toleransına kadar beklenen değere sahip olduğunu onaylar.
+  uid: Microsoft.Quantum.Diagnostics.NearEqualityFactD
+name: Microsoft.Quantum.Diagnostics
+newtypes:
+- summary: Bir tür yüklenirken veya test amaçlı olarak çağrılabilir şekilde kullanılabilecek alternatif bir adın tanımlanabilmesi için, derleyici tarafından tanınan öznitelik.
+  uid: Microsoft.Quantum.Diagnostics.EnableTestingViaName
+- summary: Derleyici tarafından tanınan öznitelik bir birim testini işaretlemek için kullanılır.
+  uid: Microsoft.Quantum.Diagnostics.Test
+operations:
+- summary: Bu işleme ve Adjoint çağrısı arasında, belirli bir işlemin en çok birkaç kez çağrıldığını onaylar.
+  uid: Microsoft.Quantum.Diagnostics.AllowAtMostNCallsCA
+- summary: Bu işleme ve adeklem çağrısı arasında, using deyimleri ile verilen sayıda ek qubit için en fazla bir kaç sayının ayrıldığını onaylar.
+  uid: Microsoft.Quantum.Diagnostics.AllowAtMostNQubits
+- summary: Verilen qubits 'in hepsi $ \ket {0} $ durumunda olduğunu onaylayın.
+  uid: Microsoft.Quantum.Diagnostics.AssertAllZero
+- summary: Verilen qubits 'in, {0} belirli bir toleranstan kadar $ \gre$ durumunda olduğu onay.
+  uid: Microsoft.Quantum.Diagnostics.AssertAllZeroWithinTolerance
+- summary: Verilen Pauli tabanında verilen qubits ölçmeye yönelik onaylar, her zaman verilen sonuca sahip olur.
+  uid: Microsoft.Quantum.Diagnostics.AssertMeasurement
+- summary: Verilen Pabdtabanında verilen qubit 'leri ölçmeye yönelik onaylar, belirli bir tolerans dahilinde verilen olasılığa sahip olur.
+  uid: Microsoft.Quantum.Diagnostics.AssertMeasurementProbability
+- summary: >-
+    İki işlem söz konusu olduğunda, tüm giriş durumları için aynı hareket ettikleri onaylar.
+
+    Bu onaylama, formun tüm durumlarında işlem eylemi $V _0 \otimes... V_ {n-1} $, $V _k $ durumlardan biri $ \ket {0} $, $ \ket {1} $, $ \ket{+} $ ve $ \ket{i} $ (Pauli Y işlecinin 1 eigenstate)
+
+    Bu onaylama $n $ qubits kullanır ve karşılaştırılmakta olan işlemlere yönelik birden çok çağrı gerektirir.
+  uid: Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlace
+- summary: İşlemin `givenU` `expectedU` yalnızca işlem temelinde vektörlerdeki işlem eylemlerini denetleyerek verilen giriş boyutundaki işleme eşit olup olmadığını denetler. Bu, iki unitı 'nin eşitliğine yönelik gerekli, ancak yeterli olmayan bir durumdur.
+  uid: Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlaceCompBasis
+- summary: >-
+    İki işlem söz konusu olduğunda, tüm giriş durumları için aynı hareket ettikleri onaylar.
+
+    Bu onaylama işlemi, iki entanlı kasada bir qubit durum onaylamanın bir listesini azaltmak için Choi – Jamiołkowski isomorphism kullanılarak uygulanır. Bu nedenle, bu işlem yalnızca sınanan her bir işlem için tek bir çağrıya gerek duyar, ancak ayrılacak sayıda qubit için iki kez gerekir. Bu onaylama, örneğin, bir işlemin en iyi duruma getirilmiş bir sürümünün Naïve uygulamasına benzer bir şekilde davranması veya bir dizi hisse kullanım dışı girişleri üzerinde davranan bir işlemin bilinen durumları kabul ettiği bir işlem olduğundan emin olmak için kullanılabilir.
+  uid: Microsoft.Quantum.Diagnostics.AssertOperationsEqualReferenced
+- summary: Bir eşit üst konum durumunun beklenen değere sahip olduğunu onaylar.
+  uid: Microsoft.Quantum.Diagnostics.AssertPhase
+- summary: Qubitin `q` Pauli Z işlecinin beklenen eigenstate öğesinde olduğunu onaylar.
+  uid: Microsoft.Quantum.Diagnostics.AssertQubit
+- summary: >-
+    Beklenen durumda bir qubitin olduğunu onaylar.
+
+    `expected` karmaşık bir vektörü temsil eder, $ \ket{\psı} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $. $A $, $b $ her birini temsil eden başlıkların ilk öğesi, karmaşık sayının gerçek bölümüdür; ikinci tane ise sanal parçadır. Son bağımsız değişken, onaylama işlemi yapılan toleransı tanımlar.
+  uid: Microsoft.Quantum.Diagnostics.AssertQubitIsInStateWithinTolerance
+- summary: Qubit 'in `q` Pauli Z işlecinin, belirli bir toleransa kadar beklenen eigenstate olduğunu onaylar.
+  uid: Microsoft.Quantum.Diagnostics.AssertQubitWithinTolerance
+- summary: Bir işlem verildiğinde, geçerli yürütme hedefi tarafından kullanılabilir hale getirilen işlem hakkındaki tanılamayı görüntüler.
+  uid: Microsoft.Quantum.Diagnostics.DumpOperation
+- summary: Bir başvuru ve hedef kayıt durumunda tanılama sağlamak için DumpRegister kullanır. Tek bir Birleşik kayıt yerine ayrı kayıt olarak geçersiz kılma ve yorumlama sağlamak için ayrı bir işlem olarak yazılmıştır.
+  uid: Microsoft.Quantum.Diagnostics.DumpReferenceAndTarget
+- summary: İki işlem `givenU` ve bir temel duruma uygulamanın sonucunun aynı olup olmadığını denetler `expectedU` . Temel durum, `basis` parametresiyle açıklanır. <xref:microsoft.quantum.extensions.fliptobasis>Bu açıklama hakkında daha fazla bilgi için bkz. işlev.
+  uid: Microsoft.Quantum.Diagnostics._assertEqualOnBasisVector
+- summary: >-
+    $ \Ket {0} \otimes\cdots\tus$ {0} to $ \ket{\ psi_0} \otimes \ket{\ psi_ {n-1}} $, $ \ket{\ psi_k} $ öğesine bağlı olan unitçler uygular `basis[k]` .
+
+    `basis[k]`Ve $ \ket{\ psi_k} $ değeri arasındaki yazışmalar şunlardır:
+
+    - `basis[k]=0` $ \ sağtarsatır \ayraç {0} $. - `basis[k]=1` $ \ sağtarsatır \ayraç {1} $. - `basis[k]=2` $ \sağtarrow \ket{+} $. - `basis[k]=3` $ \sağtarrow \ket{i} $ (+ 1 Pauli Y).
+  uid: Microsoft.Quantum.Diagnostics._flipToBasis
+- summary: Bir değeri Kartezyen ürün [0, sınır [0]-1] × [0, sınır [1]-1] × [0, sınır [Uzunluk (sınır)-1]-1] ve Kartezyen ürünün her öğesi için op (ARR) çağrısı
+  uid: Microsoft.Quantum.Diagnostics._iterateThroughCartesianPower
+- summary: >-
+    İki kayıt verildiğinde, ilgili yazmaçlardaki her bir qubit çifti arasında en yüksek düzeyde bir durum hazırlar. Tüm qubits, | 0 ⟩ durumunda başlamalıdır.
+
+    Sonuç olarak her bir kayıttaki karşılık gelen qubit çiftleri $ \bra{\ beta_ {00} } \ket{\ beta_ {00} } $ içinde bulunur.
+  uid: Microsoft.Quantum.Diagnostics._prepareEntangledState
+summary: ''
+uid: Microsoft.Quantum.Diagnostics
+metadata:
+  ms.openlocfilehash: d39cd1cac6121bd411fc0c87024254599bbb0641
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92727445"
