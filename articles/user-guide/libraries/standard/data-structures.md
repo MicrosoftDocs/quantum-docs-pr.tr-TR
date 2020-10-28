@@ -9,21 +9,21 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51eb52d0b8ace972f6a425edba400ca9a8916d2e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835596"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692244"
 ---
 # <a name="data-structures-and-modeling"></a>Veri yapıları ve modelleme #
 
 ## <a name="classical-data-structures"></a>Klasik veri yapıları ##
 
 Diğer bir deyişle, örneğin, hisse kavramlarını temsil eden Kullanıcı tanımlı türlerin yanı sıra, Canon 'nin aynı zamanda, hisse sistemleri denetiminde kullanılan klasik verilerle çalışmaya yönelik işlemler, işlevler ve türler de sağlar.
-Örneğin, <xref:microsoft.quantum.arrays.reversed> işlev bir diziyi girdi olarak alır ve ters sırada aynı diziyi döndürür.
+Örneğin, <xref:Microsoft.Quantum.Arrays.Reversed> işlev bir diziyi girdi olarak alır ve ters sırada aynı diziyi döndürür.
 Bu daha sonra, `Qubit[]` tamsayıların hisse gösterimi arasında dönüştürme yaparken gereksiz $ \operatorname{Swap} $ kapıları uygulamak zorunda kalmamak için türünde bir dizide kullanılabilir.
-Benzer şekilde, önceki bölümde form türlerinin `(Int, Int -> T)` rastgele erişim koleksiyonlarını temsil eden yararlı olduğunu gördük. bu nedenle, <xref:microsoft.quantum.arrays.lookupfunction> işlev dizi türlerinden bu tür türleri oluşturmak için kullanışlı bir yol sağlar.
+Benzer şekilde, önceki bölümde form türlerinin `(Int, Int -> T)` rastgele erişim koleksiyonlarını temsil eden yararlı olduğunu gördük. bu nedenle, <xref:Microsoft.Quantum.Arrays.LookupFunction> işlev dizi türlerinden bu tür türleri oluşturmak için kullanışlı bir yol sağlar.
 
 ### <a name="pairs"></a>Çiftine ###
 
@@ -38,7 +38,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 
 Canon, dizileri işlemek için çeşitli işlevler sağlar.
 Bu işlevler tür parametreli parametreleridir ve bu nedenle herhangi bir türdeki dizilerle birlikte kullanılabilir Q# .
-Örneğin, işlevi, <xref:microsoft.quantum.arrays.reversed> öğeleri girişinden ters sırada olan yeni bir dizi döndürür.
+Örneğin, işlevi, <xref:Microsoft.Quantum.Arrays.Reversed> öğeleri girişinden ters sırada olan yeni bir dizi döndürür.
 Bu işlem, işlemler çağrılırken bir hisse kayıt 'nın nasıl temsil edileceğini değiştirmek için kullanılabilir:
 
 ```qsharp
@@ -49,14 +49,14 @@ QFT(BigEndian(Reversed(leRegister!)));
 QFT(LittleEndianAsBigEndian(leRegister));
 ```
 
-Benzer şekilde, <xref:microsoft.quantum.arrays.subarray> işlevi bir dizinin öğelerinin alt kümelerini düzenlemek veya almak için kullanılabilir:
+Benzer şekilde, <xref:Microsoft.Quantum.Arrays.Subarray> işlevi bir dizinin öğelerinin alt kümelerini düzenlemek veya almak için kullanılabilir:
 
 ```qsharp
 // Applies H to qubits 2 and 5.
 ApplyToEach(H, Subarray([2, 5], register));
 ```
 
-Flow denetimiyle birleştirildiğinde, gibi dizi işleme işlevleri, <xref:microsoft.quantum.arrays.zip> bir hızlı program Express için güçlü bir yol sağlayabilir:
+Flow denetimiyle birleştirildiğinde, gibi dizi işleme işlevleri, <xref:Microsoft.Quantum.Arrays.Zipped> bir hızlı program Express için güçlü bir yol sağlayabilir:
 
 ```qsharp
 // Applies X₃ Y₁ Z₇ to a register of any size.
@@ -64,7 +64,7 @@ ApplyToEach(
     ApplyPauli(_, register),
     Map(
         EmbedPauli(_, _, Length(register)),
-        Zip([PauliX, PauliY, PauliZ], [3, 1, 7])
+        Zipped([PauliX, PauliY, PauliZ], [3, 1, 7])
     )
 );
 ```
@@ -127,8 +127,8 @@ is Adj + Ctl {
 }
 ```
 
-Bu Oracle daha sonra işlemin özel bir durumdur ve bu da <xref:microsoft.quantum.canon.rall1> , yansıma durumu $ \phi = \pı $ yerine rastgele bir aşamaya göre döndürmeyi sağlar.
-Bu durumda, `RAll1` <xref:microsoft.quantum.intrinsic.r1> Prelude işlemine benzerdir. Bu, tek qubit durumu $ \ket $ yerine $ \ket{11\cdots1} $ hakkında daha fazla döner {1} .
+Bu Oracle daha sonra işlemin özel bir durumdur ve bu da <xref:Microsoft.Quantum.Canon.RAll1> , yansıma durumu $ \phi = \pı $ yerine rastgele bir aşamaya göre döndürmeyi sağlar.
+Bu durumda, `RAll1` <xref:Microsoft.Quantum.Intrinsic.R1> Prelude işlemine benzerdir. Bu, tek qubit durumu $ \ket $ yerine $ \ket{11\cdots1} $ hakkında daha fazla döner {1} .
 
 İlk alt boşluğu işaretleyen Oracle, benzer şekilde oluşturulabilir.
 Sözde kod içinde:
@@ -139,7 +139,7 @@ Sözde kod içinde:
 4. Her qubit 'e $X $ Gates uygulayın.
 5. Her qubit 'e $H $ Gates uygulayın.
 
-Bu kez, <xref:microsoft.quantum.canon.applywith> yukarıda açıklanan işlemle birlikte kullanmayı da göstermektedir <xref:microsoft.quantum.canon.rall1> :
+Bu kez, <xref:Microsoft.Quantum.Canon.ApplyWith> yukarıda açıklanan işlemle birlikte kullanmayı da göstermektedir <xref:Microsoft.Quantum.Canon.RAll1> :
 
 ```qsharp
 operation ReflectAboutInitial(register : Qubit[]) : Unit
@@ -163,7 +163,7 @@ Bu Unitary, geleneksel iki türden biri tarafından açıklanacaktır.
 > Sürekli sorgu Oracles hakkında daha fazla bilgi edinmek için lütfen [ **Phasetahmine** örnek](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation)bölümüne bakın.
 > Ayrık sorgu Oracles hakkında daha fazla bilgi edinmek için lütfen [ **ısingphasetahmine** örnek](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)bölümüne bakın.
 
-Oracle 'ın ayrı bir sorgusunu çağırdığımız ve Kullanıcı tanımlı türle temsil ettiğimiz Oracle 'ın ilk türü <xref:microsoft.quantum.oracles.discreteoracle> , yalnızca Unitary matrisini içerir.
+Oracle 'ın ayrı bir sorgusunu çağırdığımız ve Kullanıcı tanımlı türle temsil ettiğimiz Oracle 'ın ilk türü <xref:Microsoft.Quantum.Oracles.DiscreteOracle> , yalnızca Unitary matrisini içerir.
 $U $, eigenvalues değerlerini tahmin etmek istediğimiz Unitary ise, Oracle for $U $, $U $ uygulayan bir altyordam için yalnızca bir stand olur.
 Örneğin, bir tek $U $, genliği tahmin etmek için yukarıda tanımlanan Oracle $Q $ ' ı alabilir.
 Bu matrisin eigenvalues değeri, ilk ve hedef durumları arasındaki çakışmayı tahmin etmek için kullanılabilir, ancak daha az sayıda örnek kullanarak $ \sin ^ 2 (\teta) $, aksi halde bir kez daha gerekecektir.
@@ -173,7 +173,7 @@ Diğer bir deyişle, $R _z (\teta) $ biçiminde bilinmeyen bir döndürme kapıs
 Bu gibi durumlarda, ağ geçidi için bu sabit değer olan $ \teta $ değerini öğrenmek için etkileşimde yaptığımız altyordam $ $ \begin{hizalaması} U & = R_z (\teta) \\ \\ & = \begin{bmatrix} e ^ {-i \ teta/2} & 0 \\ \\ 0 & e ^ {ı \ teta/2} \end{bmatrix}.
 \end{hizalaması} $ $
 
-Aşama tahmini içinde kullanılan Oracle 'ın ikinci türü, türü tarafından temsil edilen sürekli sorgu Oracle ' dır <xref:microsoft.quantum.oracles.continuousoracle> .
+Aşama tahmini içinde kullanılan Oracle 'ın ikinci türü, türü tarafından temsil edilen sürekli sorgu Oracle ' dır <xref:Microsoft.Quantum.Oracles.ContinuousOracle> .
 Aşama tahmini için Oracle sürekli sorgusu, $U (t) $, $t $ ' in sınıfda bilinen gerçek bir sayıdır.
 $U $ 'in sabit bir Unitary olmasına izin vermemiz halinde sürekli sorgu Oracle, $U (t) = U ^ t $ biçimini alır.
 Bu, farklı sorgu modelinde doğrudan uygulanmayan $ \sqrt{U} $ gibi matrisleri sorgulamanızı sağlar.
@@ -261,7 +261,7 @@ newtype EvolutionUnitary = ((Double, Qubit[]) => Unit is Adj + Ctl);
 
 İlk parametre, Unitary evrimi 'nin içindeki katsayı ile çarpılacak bir zaman süresini temsil eder `GeneratorIndex` . İkinci parametre, Unitary 'ın üzerinde davrandığı qubit kayıt ' dir. 
 
-### <a name="time-dependent-generators"></a>Zamana bağımlı oluşturucular ###
+### <a name="time-dependent-generators"></a>Time-Dependent üreteçleri ###
 
 Birçok durumda, zamana bağlı oluşturanlar arasında modellemeyi de ilgileniyoruz, Schrödinger denklemi $ $ \begin{hizalaması} ı\frac {d \ket{\psı (t)}} {d t} & = \hat H (t) \ket{\psı (t)}, \end{hizalaması} $ $, Oluşturucu $ \hat H (t) $ ' ın artık zamana bağımlı olduğu gibi olabilir. Bu durum için yukarıdaki zamana bağımsız oluşturuculardan uzantı basittir. `GeneratorSystem`$T $, her zaman Için Hamiltonian 'ın açıklanmasına sahip olmak yerine, Kullanıcı tanımlı türe sahip olmamız gerekir `GeneratorSystemTimeDependent` .
 
