@@ -1,0 +1,56 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.HeadMeasurement
+name: Microsoft.Quantum.Characterization
+newtypes: []
+operations:
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.ApplyHadamardTest
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.ApplyHadamardTestOnSingleRegister
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.ApplySwapTest
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.ApplySwapTestOnSingleRegister
+- summary: Bir Unitary Oracle 'ın rastgele gerçek üslerinin kullanıldığı yinelemeli (sınıflı kontrollü) bir aşama tahmini algoritması için tek bir yineleme gerçekleştirir.
+  uid: Microsoft.Quantum.Characterization.ContinuousPhaseEstimationIteration
+- summary: Bir Unitary Oracle 'ın tamsayı üslerini kullanarak yinelemeli (sınıflı kontrollü) bir aşama tahmin algoritmasının tek bir yinelemesini gerçekleştirir.
+  uid: Microsoft.Quantum.Characterization.DiscretePhaseEstimationIteration
+- summary: Hazırlık ve ölçüm verildiğinde, `Zero` belirli bir deneme sayısı gerçekleştirerek, ölçümün başarılı olduğu sıklığı (döndürür) tahmin eder.
+  uid: Microsoft.Quantum.Characterization.EstimateFrequency
+- summary: Adjointable ve ölçüm olan bir hazırlık verildiğinde, `Zero` belirli bir deneme sayısı gerçekleştirerek, ölçümün başarılı olduğu sıklığı (döndürür) tahmin eder.
+  uid: Microsoft.Quantum.Characterization.EstimateFrequencyA
+- summary: Her birinin bir durum kopyasını hazırlayabileceği iki işlem, her bir işlem tarafından hazırlanan durumlar arasındaki çakışmadan oluşan sanal kısmını tahmin eder.
+  uid: Microsoft.Quantum.Characterization.EstimateImagOverlapBetweenStates
+- summary: Her birinin bir durum kopyasını hazırlayabileceği iki işlem, her bir işlem tarafından hazırlanan durumlar arasındaki kare Örtüşmeyi tahmin eder.
+  uid: Microsoft.Quantum.Characterization.EstimateOverlapBetweenStates
+- summary: Her birinin bir durum kopyasını hazırlayabileceği iki işlem, her bir işlem tarafından hazırlanan durumlar arasındaki örtüşme işleminin gerçek parçasını tahmin eder.
+  uid: Microsoft.Quantum.Characterization.EstimateRealOverlapBetweenStates
+- summary: >+
+    > [!WARNING]
+
+    > MeasureAllZ kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Measurement.MeasureAllZ> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.measurement.measureAllZ" kullanın.
+
+  uid: Microsoft.Quantum.Characterization.MeasureAllZ
+- summary: Qubits 'in bir kaydındaki kimlik işlecini ölçer.
+  uid: Microsoft.Quantum.Characterization.MeasureIdentity
+- summary: Belirli bir Oracle `U` ve `targetState` aşamayı bir büyük endian hisse kaydına okumak için hisse aşaması tahmin algoritmasını gerçekleştirir.
+  uid: Microsoft.Quantum.Characterization.QuantumPhaseEstimation
+- summary: ', Belirli bir Oracle ve eigenstate için dayanıklı ve dayanıklı olmayan dayanıklı bir tahmin algoritması gerçekleştirir `U` ve Heisenberg sınırında varyans ölçeklendirmesiyle aşamanın gerçek değerli tek bir tahminini sağlar.'
+  uid: Microsoft.Quantum.Characterization.RobustPhaseEstimation
+- summary: ', Belirli bir ilgi kanalı verildiğinde Pauli temelinde tek qubit işlem işlemleri gerçekleştirir.'
+  uid: Microsoft.Quantum.Characterization.SingleQubitProcessTomographyMeasurement
+summary: Bu ad alanı, tomografi ve aşama tahmini dahil olmak üzere hisse durumlarının ve işlemlerin öğrenme özelliklerinin işlevlerini ve işlemlerini içerir.
+uid: Microsoft.Quantum.Characterization
+metadata:
+  ms.openlocfilehash: a1d4837f03b6dff637c82d2c5b14823029bd2787
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92728484"
