@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7f5e25aa7b58277642783e03d03854cd75ff4ca3
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: 2e2d9f8494d8709fba34123793cecce4011b609a
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771286"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690833"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum geliştirme seti (QDK) kuantum izleme simülatörü
 
@@ -55,7 +55,7 @@ namespace Quantum.MyProgram
 
 Kuantum izleme simülatörü gerçek kuantum durumunun simülasyonunu yapmadığından, işlem içindeki ölçüm sonuçlarının olasılığını hesaplayamaz. 
 
-Bu nedenle, bir işlem ölçüm içeriyorsa, <xref:microsoft.quantum.diagnostics> ad alanındaki <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> işlemini kullanarak bu olasılıkları açıkça sağlamanız gerekir. Aşağıdaki örnekte bu gösterilmektedir:
+Bu nedenle, bir işlem ölçüm içeriyorsa, <xref:Microsoft.Quantum.Diagnostics> ad alanındaki <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> işlemini kullanarak bu olasılıkları açıkça sağlamanız gerekir. Aşağıdaki örnekte bu gösterilmektedir:
 
 ```qsharp
 operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
