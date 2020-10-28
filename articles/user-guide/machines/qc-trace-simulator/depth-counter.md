@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8280783adfcc2867c3a598a6f57d827125aadcfd
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 89d8a2c9f2ecd5c5332215cd4307bcf4a6422036
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833451"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692102"
 ---
 # <a name="quantum-trace-simulator-depth-counter"></a>Hisse izleme simülatörü: derinlik sayacı
 
@@ -23,9 +23,9 @@ Bu işlemi, bir hisse dosyasında çağrılan her işlemin derinliğine ait deri
 
 ## <a name="depth-values"></a>Derinlik değerleri
 
-Varsayılan olarak, tüm işlemler, **0** `T` **1**derinliğine sahip olan işlem haricinde 0 derinliğine sahiptir. Bu, varsayılan olarak yalnızca `T` işlemlerin derinliğini (çoğunlukla tercih edilir) hesaplandığı anlamına gelir. Derinlik sayacı, işlemin [çağrı grafiğinin](https://en.wikipedia.org/wiki/Call_graph)tüm kenarlarındaki istatistikleri toplar ve toplar.
+Varsayılan olarak, tüm işlemler, **0** `T` **1** derinliğine sahip olan işlem haricinde 0 derinliğine sahiptir. Bu, varsayılan olarak yalnızca `T` işlemlerin derinliğini (çoğunlukla tercih edilir) hesaplandığı anlamına gelir. Derinlik sayacı, işlemin [çağrı grafiğinin](https://en.wikipedia.org/wiki/Call_graph)tüm kenarlarındaki istatistikleri toplar ve toplar.
 
-Tüm <xref:microsoft.quantum.intrinsic> işlemler tek qubit döndürmeler, <xref:microsoft.quantum.intrinsic.t> işlemler, tek qubit Clienfford işlemleri, <xref:microsoft.quantum.intrinsic.cnot> işlemler ve Multi-Qubitpauli gözlemlenenler ölçümleri bakımından ifade edilir. Kullanıcılar, alanı aracılığıyla temel işlemlerin her biri için derinlik ayarlayabilir `gateTimes` <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .
+Tüm <xref:Microsoft.Quantum.Intrinsic> işlemler tek qubit döndürmeler, <xref:Microsoft.Quantum.Intrinsic.T> işlemler, tek qubit Clienfford işlemleri, <xref:Microsoft.Quantum.Intrinsic.CNOT> işlemler ve Multi-Qubitpauli gözlemlenenler ölçümleri bakımından ifade edilir. Kullanıcılar, alanı aracılığıyla temel işlemlerin her biri için derinlik ayarlayabilir `gateTimes` <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .
 
 ## <a name="invoking-the-depth-counter"></a>Derinlik sayacını çağırma
 
@@ -52,7 +52,7 @@ operation ApplySampleWithCCNOT() : Unit {
 }
 ```
 
-Bunun derinliğine sahip olup olmadığını denetlemek için `CCNOT` `T` **5** `ApplySampleWithCCNOT` `T` aşağıdaki **6**C# kodunu kullanın:
+Bunun derinliğine sahip olup olmadığını denetlemek için `CCNOT` `T` **5** `ApplySampleWithCCNOT` `T` aşağıdaki **6** C# kodunu kullanın:
 
 ```csharp
 using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;

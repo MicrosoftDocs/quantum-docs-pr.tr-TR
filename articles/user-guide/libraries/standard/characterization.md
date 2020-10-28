@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8dddc15354c32808e7ad1310bce233ee3dc93fe8
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835647"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692155"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Hisse ve Istatistik #
 
@@ -39,7 +39,7 @@ Bu, her adımın bir yinelemeli bir şekilde açıklandığı aşamayı daha son
 Aşağıda önerilen yöntemlerin her biri, aşamayı öğrenmek için denemeleri ve farklı veri işleme yöntemleri tasarlamak üzere farklı bir strateji kullanır.  Bunların her biri, ciddi bir hata sınırlarına sahip olmanın, önceki bilgileri birleştirme, hataları tolerans veya bellek için kabul edilen klasik bilgisayarlarda çalıştırma yeteneklerine kadar benzersiz bir avantajı vardır.
 
 Yinelemeli aşama tahminlerini tartışmak için, bir siyah kutu işlemi olarak verilen bir Unitary $U $ ' i düşüneceğiz.
-[Veri yapılarında](xref:microsoft.quantum.libraries.data-structures)Oracles bölümünde açıklandığı gibi, Q# Canon, <xref:microsoft.quantum.oracles.discreteoracle> kayıt türü tarafından tanımlanan Kullanıcı tanımlı türe göre bu işlemleri modelleyerek `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
+[Veri yapılarında](xref:microsoft.quantum.libraries.data-structures)Oracles bölümünde açıklandığı gibi, Q# Canon, <xref:Microsoft.Quantum.Oracles.DiscreteOracle> kayıt türü tarafından tanımlanan Kullanıcı tanımlı türe göre bu işlemleri modelleyerek `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
 `U : DiscreteOracle`Daha sonra, `U(m)` için $U ^ m $ uygular `m : Int` .
 
 Bu tanım söz konusu olduğunda, yinelemeli aşama tahmininin her adımı, $ \ket{+} $ durumunda bir yardımcı qubit, $U (m) $ ' nin [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) ' i olduğunu varsaydığımız ilk durum olan $ \ket{\phi} $, ör. $U (m) \ket{\phi} = e ^ {im\phi} \ demet {\ Fi} $.  
@@ -99,7 +99,7 @@ Tam Bayeme çıkarımı, uygulama ıntrackingtable içinde.
 Bu Imagine, bir $n $ bit değişkeni $x $ öğrenmek istiyoruz.
 Önceki dağıtım $ \Pr (x) $, $x $ değerinin $2 ^ n $ kuramsal değerlerini destekler.
 Bu, $x $ tam olarak doğru bir tahmine ihtiyaç duyduğumuz için Bayeme aşaması tahmininde, yüksek bellek ve işlem süresine ihtiyaç duyabileceği anlamına gelir.
-Örneğin, hisse kaybı benzetimi gibi bazı uygulamalar için, bu tür yöntemler, Shor 'ın algoritması gibi diğer uygulamaların, aşama tahmini adımı içinde tam Bayeduyma çıkarımı kullanamaz.  Bu nedenle, [rastgele yürüme aşaması Tahmini (RWPE)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) gibi yaklaşık bayeme yöntemlerine ve ayrıca [sağlam aşama tahmini](xref:microsoft.quantum.characterization.robustphaseestimation)gibi baysuz olmayan yaklaşımlara yönelik uygulamalar sunuyoruz.
+Örneğin, hisse kaybı benzetimi gibi bazı uygulamalar için, bu tür yöntemler, Shor 'ın algoritması gibi diğer uygulamaların, aşama tahmini adımı içinde tam Bayeduyma çıkarımı kullanamaz.  Bu nedenle, [rastgele yürüme aşaması Tahmini (RWPE)](xref:Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation) gibi yaklaşık bayeme yöntemlerine ve ayrıca [sağlam aşama tahmini](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation)gibi baysuz olmayan yaklaşımlara yönelik uygulamalar sunuyoruz.
 
 ### <a name="robust-phase-estimation"></a>Sağlam aşama tahmini ###
 
@@ -117,9 +117,9 @@ En önemli kapsamlı aşama tahmini özelliği, diğer birçok yararlı çeşitl
 
 ### <a name="continuous-oracles"></a>Sürekli Oracles ###
 
-Ayrıca, Canon türüne göre modellenen sürekli zamanlı Oracles izin vermek için yukarıda kullanılan Oracle modelinden genelleştireceğiz <xref:microsoft.quantum.oracles.continuousoracle> .
+Ayrıca, Canon türüne göre modellenen sürekli zamanlı Oracles izin vermek için yukarıda kullanılan Oracle modelinden genelleştireceğiz <xref:Microsoft.Quantum.Oracles.ContinuousOracle> .
 Tek bir Unitary işleci yerine $U $, $U (t) U (s) $ = $U (t + s) $ gibi $t \\mathbb{R} $ için bir Unitary işleçleri $U (t) $ olduğunu düşünün.
-Bu, ayrık bir durumdur çünkü <xref:microsoft.quantum.oracles.discreteoracle> \, bazı bir fixed $ \delta t $ için $t = d \ Delta t $ ' ı kısıtlayarak bir oluşturabileceğiz.
+Bu, ayrık bir durumdur çünkü <xref:Microsoft.Quantum.Oracles.DiscreteOracle> \, bazı bir fixed $ \delta t $ için $t = d \ Delta t $ ' ı kısıtlayarak bir oluşturabileceğiz.
 [Stone 'ın Theokal](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups), $U (t) = \exp (i H t) $ işleci, $H $, burada $ \exp $, [Gelişmiş matrislerde](xref:microsoft.quantum.concepts.matrix-advanced)açıklanan matris üstel.
 $H \ket{\phi} = \phi \ket{\phi} $ gibi bir eigenstate $ \ket{\phi} $H $, ayrıca tüm $t $ için bir $U (t) $, \begin{Equation} U (t) \ket{\phi} = e ^ {ı \phi t} \ket{\phi}.
 \end{Equation}
@@ -146,14 +146,14 @@ Geriye doğru ilerleyebilme özelliği, ilk önceki standart sapma inapropriatel
 
 Canon ile birlikte sunulan her aşama tahmin işlemi, Q# son tahmin $ \hat{\phi} $ ' i talep ettiğimiz kaliteyi karşılayan farklı bir giriş kümesi alır.
 Bununla birlikte, bu çeşitli girişler ortak bir şekilde yaygın bir şekilde yapılır, bu da kalite parametrelerinin üzerindeki kısmi uygulama ortak bir imzaya neden olur.
-Örneğin, <xref:microsoft.quantum.characterization.robustphaseestimation> sonraki bölümde ele alınan işlem aşağıdaki imzaya sahiptir:
+Örneğin, <xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation> sonraki bölümde ele alınan işlem aşağıdaki imzaya sahiptir:
 
 ```qsharp
 operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[])  : Double
 ```
 
 `bitsPrecision`Giriş, `RobustPhaseEstimation` ,, `oracle` ve `eigenstate` ortak olarak benzersizdir.
-Bu nedenle, **H2Sample**' de görüldüğü gibi bir işlem, `(DiscreteOracle, Qubit[]) => Unit` bir kullanıcının rastgele aşama tahmin algoritmaları belirtmesini sağlamak için formun bir girişi ile yinelemeli bir aşama tahmini algoritması kabul edebilir:
+Bu nedenle, **H2Sample** ' de görüldüğü gibi bir işlem, `(DiscreteOracle, Qubit[]) => Unit` bir kullanıcının rastgele aşama tahmin algoritmaları belirtmesini sağlamak için formun bir girişi ile yinelemeli bir aşama tahmini algoritması kabul edebilir:
 
 ```qsharp
 operation H2EstimateEnergy(

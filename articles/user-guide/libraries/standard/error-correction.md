@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dad0db4d2aab27e5ae46d4df10ee050f785d8bb8
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 94251e185cea65c5fc08ed70d5fba9b7b19501e3
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835562"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692034"
 ---
 # <a name="error-correction"></a>Hata Düzeltme #
 
@@ -61,7 +61,7 @@ Her ölçümün sonucunu, Q# `Result` `Zero` sırasıyla, ve değerlerine karş�
 | $X _2 $ | $ \ ayraç {001} $ | $ \ ayraç {110} $ | $+$ | $-$ |
 
 Bu nedenle, iki ölçümün sonuçları, hangi bit çevirme hatasının oluştuğunu benzersiz olarak belirler, ancak hangi durumu kodladığımızda bilgi vermeksizin.
-Bu sonuçlara bir *sendromu*çağrısı yaptık ve bir sendromu 'yi *Kurtarma*olarak neden olan hataya geri eşleme sürecine başvurduk.
+Bu sonuçlara bir *sendromu* çağrısı yaptık ve bir sendromu 'yi *Kurtarma* olarak neden olan hataya geri eşleme sürecine başvurduk.
 Özellikle, kurtarma işlemi, oluşan sendromu girişi olarak geçen bir *Klasik* çıkarım prosedürü ve oluşmuş olabilecek hataların nasıl düzeltileceğiyle ilgili bir hata döndürür.
 
 > [!NOTE]
@@ -82,14 +82,14 @@ Bu bölümde, bu Framework 'ü ve uygulamayı birkaç basit hisse hata düzeltme
 
 Canon, hata düzeltme kodları belirtmeye yardımcı olmak için Q# birkaç farklı Kullanıcı tanımlı tür sağlar:
 
-- <xref:microsoft.quantum.errorcorrection.logicalregister>`= Qubit[]`: Bir qubits kaydının bir hata düzeltme kodunun kod bloğu olarak yorumlanması gerektiğini gösterir.
-- <xref:microsoft.quantum.errorcorrection.syndrome>`= Result[]`: Bir ölçüm sonuçları dizisinin, bir kod bloğunda ölçülen sendromu olarak yorumlanması gerektiğini gösterir.
-- <xref:microsoft.quantum.errorcorrection.recoveryfn>`= (Syndrome -> Pauli[])`: Bir eşitleniyor işlevinin *classical* , bir sendromu yorumlamak ve uygulanması gereken bir düzeltme döndürmesi için kullanılması gerektiğini belirtir.
-- <xref:microsoft.quantum.errorcorrection.encodeop>`= ((Qubit[], Qubit[]) => LogicalRegister)`: Bir işlemin bir hata düzeltme kodunun kod bloğunu oluşturmak için, verileri yeni Andalla qubits ile birlikte temsil eden bir işlem olduğunu gösterir.
-- <xref:microsoft.quantum.errorcorrection.decodeop>`= (LogicalRegister => (Qubit[], Qubit[]))`: Bir işlemin kod bloğunu, verileri veri qubits 'e düzeltmede hata kodu bloğunu ve sendromu bilgilerini temsil etmek için kullanılan anetla qubits 'i temsil ettiğini belirtir.
-- <xref:microsoft.quantum.errorcorrection.syndromemeasop>`= (LogicalRegister => Syndrome)`: Kod tarafından korunan durumu etkilemeden, bir kod bloğunun sendromu bilgilerini ayıklamak için kullanılması gereken bir işlemi gösterir.
+- <xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister>`= Qubit[]`: Bir qubits kaydının bir hata düzeltme kodunun kod bloğu olarak yorumlanması gerektiğini gösterir.
+- <xref:Microsoft.Quantum.ErrorCorrection.Syndrome>`= Result[]`: Bir ölçüm sonuçları dizisinin, bir kod bloğunda ölçülen sendromu olarak yorumlanması gerektiğini gösterir.
+- <xref:Microsoft.Quantum.ErrorCorrection.RecoveryFn>`= (Syndrome -> Pauli[])`: Bir eşitleniyor işlevinin *classical* , bir sendromu yorumlamak ve uygulanması gereken bir düzeltme döndürmesi için kullanılması gerektiğini belirtir.
+- <xref:Microsoft.Quantum.ErrorCorrection.EncodeOp>`= ((Qubit[], Qubit[]) => LogicalRegister)`: Bir işlemin bir hata düzeltme kodunun kod bloğunu oluşturmak için, verileri yeni Andalla qubits ile birlikte temsil eden bir işlem olduğunu gösterir.
+- <xref:Microsoft.Quantum.ErrorCorrection.DecodeOp>`= (LogicalRegister => (Qubit[], Qubit[]))`: Bir işlemin kod bloğunu, verileri veri qubits 'e düzeltmede hata kodu bloğunu ve sendromu bilgilerini temsil etmek için kullanılan anetla qubits 'i temsil ettiğini belirtir.
+- <xref:Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp>`= (LogicalRegister => Syndrome)`: Kod tarafından korunan durumu etkilemeden, bir kod bloğunun sendromu bilgilerini ayıklamak için kullanılması gereken bir işlemi gösterir.
 
-Son olarak, Canon <xref:microsoft.quantum.errorcorrection.qecc> bir hisse hata düzeltme kodu tanımlamak için gereken diğer türleri toplamak üzere tür sağlar. Her bir sabitleyici hisse ıcı kodu ile ilişkili kod uzunluğu $n $, mantıksal qubit sayısı $k $, ve en düşük uzaklık $d $, genellikle ⟦ $n $, $k $, $d $ ⟧ gösteriminde kolay bir şekilde gruplanırlar. Örneğin, <xref:microsoft.quantum.errorcorrection.bitflipcode> işlevi ⟦ 3, 1, 1 ⟧ bit çevirme kodunu tanımlar:
+Son olarak, Canon <xref:Microsoft.Quantum.ErrorCorrection.QECC> bir hisse hata düzeltme kodu tanımlamak için gereken diğer türleri toplamak üzere tür sağlar. Her bir sabitleyici hisse ıcı kodu ile ilişkili kod uzunluğu $n $, mantıksal qubit sayısı $k $, ve en düşük uzaklık $d $, genellikle ⟦ $n $, $k $, $d $ ⟧ gösteriminde kolay bir şekilde gruplanırlar. Örneğin, <xref:Microsoft.Quantum.ErrorCorrection.BitFlipCode> işlevi ⟦ 3, 1, 1 ⟧ bit çevirme kodunu tanımlar:
 
 ```qsharp
 let encodeOp = EncodeOp(BitFlipEncoder);
@@ -104,7 +104,7 @@ let code = QECC(encodeOp, decodeOp, syndMeasOp);
 `QECC`Türün bir kurtarma işlevi içermediğinden *emin* olun.
 Bu, kodun kendi tanımını değiştirmeden hataları düzeltmek için kullanılan kurtarma işlevini değiştirememize olanak sağlar; Bu özellik, karakter seçme ölçümlerinden geri bildirim kurtarma tarafından kabul edilen modele dahil edildiğinde özellikle kullanışlıdır.
 
-Bir kod bu şekilde tanımlandıktan sonra, <xref:microsoft.quantum.errorcorrection.recover> hataları kurtarmak için işlemi kullanabiliriz:
+Bir kod bu şekilde tanımlandıktan sonra, <xref:Microsoft.Quantum.ErrorCorrection.Recover> hataları kurtarmak için işlemi kullanabiliriz:
 
 ```qsharp
 let code = BitFlipCode();

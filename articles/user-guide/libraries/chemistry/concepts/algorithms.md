@@ -1,6 +1,6 @@
 ---
 title: Hamiltonian Dynamics benzetimi
-description: Hamiltonian benzetimleriyle çalışmak için Trour-Suzuki formüllerini ve qubitişmeyi nasıl kullanacağınızı öğrenin.
+description: Hamiltonian benzetimleriyle çalışmak için Trotter-Suzuki formülleri ve qubitişleştirme kullanmayı öğrenin.
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
@@ -9,12 +9,12 @@ uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 299eb1484a697ad9d1577aabb44ccb61e908bae3
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: a303d54476e42b98a14c6b452227b0e1346567c8
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834015"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691895"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamiltonian Dynamics benzetimi
 
@@ -28,13 +28,13 @@ Trour – Suzuki formüllerinin arkasındaki fikir basittir: Hamiltonian 'ın, H
 Özellikle de $H = \ sum_ {j = 1} ^ m H_j $ Hamiltonian olmalıdır.
 Ardından, $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \ prod_ {j = 1} ^ m e ^ {-iH_j t} + O (m ^ 2 t ^ 2), $ $, bu değer $t \ll $1 olduğunda, bu yaklaşık olarak oluşan hata gözardı edilebilir hale gelir.
 $E ^ {-i H t} $ sıradan bir üstel ise, bu her bir hatanın $O (m ^ 2 t ^ 2) $: sıfır olacağını unutmayın.
-Bu hata oluşur $e çünkü ^ {-iHt} $, bir işleç üstel ve bunun sonucu olarak, $H _j $ koşullarının çalışmamasından dolayı bu formül kullanılırken bir hata oluştu (*Örneğin*, $H _j H_k H_k, genel olarak).
+Bu hata oluşur $e çünkü ^ {-iHt} $, bir işleç üstel ve bunun sonucu olarak, $H _j $ koşullarının çalışmamasından dolayı bu formül kullanılırken bir hata oluştu ( *Örneğin* , $H _j H_k H_k, genel olarak).
 
 $T $ büyükse, Trour – Suzuki formülleri, bir kısa saat adımları dizisine ayırarak Dynamics 'in doğru benzetimini yapmak için yine de kullanılabilir.
 $R $ ' ın evrimde geçen adım sayısı olmasına izin verin. bu nedenle, her adım $t/r $ için her seferinde çalışır. Daha sonra $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r), $ $ $r $, $m ^ 2 t ^ 2/\ Epsilon $ olarak ölçeklendirirken, bu hatanın herhangi bir $ \epsilon>$0 için en fazla $ \epsilon $ üzerinden yapılabilir olduğunu gösterir.
 
 Hata koşullarının iptal edildiğini belirten bir işleç üs sırası oluşturarak daha doğru yaklaşık bir daha yakın şekilde oluşturulabilir.
-En basit bu formül, ikinci sıra Trour-Suzuki formülü, $ $ U_2 (t) = \left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2R} \ prod_ {j = m} biçimini alır ^ 1 e ^ {-iH_j t/2R} \ right) ^ r = e ^ {-iHt} + O (m ^ 3 t ^ 3/r ^ 2), $ $ $m ^ {3/2} t ^ {3/2}/\sqrt {\ Epsilon} $ olarak ölçeklendirmek için $r $ ' i seçerek herhangi bir $ \epsilon>$0 ' den daha az bir hata olabilir.
+En basit bu formül, ikinci düzen Trotter-Suzuki formülü $ $ U_2 (t) = \left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2R} \ prod_ {j = m} biçimini alır ^ 1 e ^ {-iH_j t/2R} \ right) ^ r = e ^ {-iHt} + O (m ^ 3 t ^ 3/r ^ 2), $ $ $m ^ {3/2} t ^ {3/2}/\sqrt {\ Epsilon} $ olarak ölçeklendirmek için $r $ ' i seçerek herhangi bir $ \epsilon>$0 ' den daha az bir hata olabilir.
 
 Daha yüksek sıralı formüller, özellikle de ($ 2k $) $k>$0 için tek sıra, yinelemeli olarak oluşturulabilir: $ $ U_ {2k} (t) = [U_ {2k-2} (s_k \~ t)] ^ 2 u_ {2k-2} ([1-4s_k] t) [u_ {2k-2} (s_k \~ t)] ^ 2 = e ^ {-iht} + O ((m t) ^ {2k + 1}/r ^ {2k}), $ $ burada $s _K = (4-4 ^ {1/(2k-1)}) ^ {-1} $.
 
@@ -52,7 +52,7 @@ Ayrıca, diagonalized olduktan sonra eigenvalues, üzerinde davranabilecekleri q
         0 & 0 & 0 & e ^ {-it} \end{bmatrix}.
 $ $ Burada, $e ^ {-iHt} {00} \tus= e ^ {it} {00} \tus$ ve $e ^ {-iht} {01} \tus= e ^ {-it} {01} \tus$, "$0 $, 1. bit $1 dizesinin eşliği $1 $ iken $0 $,
 
-Pauli işleçleri 'nin üs öğeleri Q# , işlemi kullanarak doğrudan uygulanabilir <xref:microsoft.quantum.intrinsic.exp> :
+Pauli işleçleri 'nin üs öğeleri Q# , işlemi kullanarak doğrudan uygulanabilir <xref:Microsoft.Quantum.Intrinsic.Exp> :
 ```qsharp
     using(qubits = Qubit[2]){
         let pauliString = [PauliX, PauliX];
@@ -65,7 +65,7 @@ Pauli işleçleri 'nin üs öğeleri Q# , işlemi kullanarak doğrudan uygulanab
 
 Fermıonic Hamiltonians için, [Ürdün – Wigner ayrıştırma](xref:microsoft.quantum.chemistry.concepts.jordanwigner) , Hamiltonian 'Yi Pauli işleçleri toplamı ile eşleştirir.
 Bu, yukarıdaki yaklaşımın Chemistry benzetimi için kolayca uyarlanabilme anlamına gelir.
-Aşağıda, "Ürdün-Wigner" içindeki tüm Pauli terimleri üzerinde el ile döngü yerine, aşağıdaki gibi bir simülasyonu nasıl çalıştırdığına ilişkin basit bir örnektir.
+Jordan-Wigner temsilindeki tüm Pauli terimleri üzerinde el ile döngü yerine, aşağıdaki gibi bir simülasyonu nasıl çalıştırdığına ilişkin basit bir örnektir.
 Başlangıç noktanızda, sınıfın bir örneği olarak kodda ifade edilen Fermıonic Hamiltonian 'in bir [Ürdün-Wigner kodlaması](xref:microsoft.quantum.chemistry.concepts.jordanwigner) vardır `JordanWignerEncoding` .
 
 ```csharp
@@ -156,7 +156,7 @@ $W $, yürüme işleci, $ \operatorname{Select} $ ve $R $ işlemleri $ $ W = \op
 
 Bu alt yordamlar ' de kolayca ayarlanabilir Q# .
 Örnek olarak, $H = X_1 + X_2 + Z_1 Z_2 $ ' nin bulunduğu basit qubit çapraz-şaşırtıcı Hamiltonian 'yi düşünün.
-Bu durumda, $ Q# \operatorname{Select} $ işlemini uygulayacak kod tarafından çağrılır <xref:microsoft.quantum.canon.multiplexoperations> , ancak $ \operatorname{Prepare} $ işlemi kullanılarak uygulanabilir <xref:microsoft.quantum.preparation.preparearbitrarystate> .
+Bu durumda, $ Q# \operatorname{Select} $ işlemini uygulayacak kod tarafından çağrılır <xref:Microsoft.Quantum.Canon.MultiplexOperations> , ancak $ \operatorname{Prepare} $ işlemi kullanılarak uygulanabilir <xref:Microsoft.Quantum.Preparation.PrepareArbitraryState> .
 Hubbard modelinin benzetimini içeren bir örnek, [ Q# örnek](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)olarak bulunabilir.
 
 Rastgele Kimya sorunları için bu adımları el ile belirtmek çok çaba gerektirir, bu da Kimya kitaplığı kullanmaktan kaçınılmaz.
@@ -182,6 +182,6 @@ using(qubits = Qubit[nQubits]){
 }
 ```
 
-Daha da önemlisi, uygulama <xref:microsoft.quantum.chemistry.jordanwigner.qubitizationoracle> Pauli dizelerinin doğrusal bir birleşimi olarak belirtilen rastgele Hamiltonians için geçerlidir.
-Kimya benzetimleri için en iyi duruma getirilmiş bir sürüm kullanılarak çağrılır <xref:microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle> .
+Daha da önemlisi, uygulama <xref:Microsoft.Quantum.Chemistry.JordanWigner.QubitizationOracle> Pauli dizelerinin doğrusal bir birleşimi olarak belirtilen rastgele Hamiltonians için geçerlidir.
+Kimya benzetimleri için en iyi duruma getirilmiş bir sürüm kullanılarak çağrılır <xref:Microsoft.Quantum.Chemistry.JordanWigner.OptimizedQubitizationOracle> .
 Bu sürüm, [Doğrusal t karmaşıklığıyla, elektronik Spectra 'in, doğrusal bir şekilde kodlama](https://arxiv.org/abs/1805.03662)bölümünde ele alınan teknikleri kullanarak T geçitleri sayısını en iyi duruma getirdi.

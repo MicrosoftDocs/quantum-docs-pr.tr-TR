@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e9a84de2753bc3293f441e66ee53e78559263e5c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 55e6d3e1a242386c46213083692377520df83a80
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833485"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692143"
 ---
 # <a name="operations-and-functions-in-no-locq"></a>İçindeki işlemler ve Işlevler Q#
 
@@ -32,7 +32,7 @@ Her Q# kaynak dosya, herhangi bir sayıda işlem tanımlayabilir.
 
 Her işlem bir girdi alır, bir çıktı üretir ve bir veya daha fazla işlem uzmanlığını için uygulamayı belirtir.
 Olası Uzmanlıklar ve bunların nasıl tanımlanacağı ve çağrılacağını, bu makalenin farklı bölümlerinde ayrıntılı olarak açıklanmıştır.
-Şimdilik yalnızca bir varsayılan gövde özelleştirmesi tanımlayan ve giriş olarak tek bir qubit alan aşağıdaki işlemi göz önünde bulundurun ve sonra <xref:microsoft.quantum.intrinsic.x> Bu girişte yerleşik işlemi çağırır:
+Şimdilik yalnızca bir varsayılan gövde özelleştirmesi tanımlayan ve giriş olarak tek bir qubit alan aşağıdaki işlemi göz önünde bulundurun ve sonra <xref:Microsoft.Quantum.Intrinsic.X> Bu girişte yerleşik işlemi çağırır:
 
 ```qsharp
 operation BitFlip(target : Qubit) : Unit {
@@ -46,7 +46,7 @@ Son olarak, `Unit` işlemin çıktısının boş olduğunu tanımlar.
 `Unit` , `void` C# ve diğer zorunlu dillerde aynı şekilde kullanılır ve `unit` F # ve diğer işlevsel dillerde eşdeğerdir.
 
 İşlemler Ayrıca, öğesinden daha ilginç türler de döndürebilir `Unit` .
-Örneğin, işlem, <xref:microsoft.quantum.intrinsic.m> `Result` ölçüm gerçekleştirmemiş olduğunu temsil eden türünde bir çıktı döndürür.  Bir işlemden başka bir işleme geçirebilirsiniz veya `let` Yeni bir değişken tanımlamak için anahtar sözcükle birlikte kullanabilirsiniz.
+Örneğin, işlem, <xref:Microsoft.Quantum.Intrinsic.m> `Result` ölçüm gerçekleştirmemiş olduğunu temsil eden türünde bir çıktı döndürür.  Bir işlemden başka bir işleme geçirebilirsiniz veya `let` Yeni bir değişken tanımlamak için anahtar sözcükle birlikte kullanabilirsiniz.
 
 Bu yaklaşım, en [yoğun kodlama](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding)gibi düşük bir düzeyde hisse uygun olan klasik hesaplamayı temsil etmenizi sağlar:
 
@@ -65,13 +65,13 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 > [!NOTE]
 > İçindeki her işlem Q# tam olarak bir giriş alır ve tam olarak bir çıkış döndürür.
-> Birden çok giriş ve çıkış, birden çok değeri birlikte tek bir değerde depolayan *Tanımlama grupları*kullanılarak temsil edilir.
+> Birden çok giriş ve çıkış, birden çok değeri birlikte tek bir değerde depolayan *Tanımlama grupları* kullanılarak temsil edilir.
 > Bu şekilde, Q# "kayıt düzeni oluşturma" dilidir.
 > Bu kavramı takip eden bir dizi boş parantezler, `()` daha sonra türü olan "boş" kayıt düzeni olarak okunmalıdır `Unit` .
 
 ## <a name="controlled-and-adjoint-operations"></a>Denetlenen ve Adjoint Işlemleri
 
-Bir işlem, içindeki birçok işlem için olduğu gibi bir Unitary dönüştürmesi uygularsa, Q# *adjointed* veya *denetimli*olduğunda işlemin nasıl davrandığını tanımlamak mümkündür. Bir işlemin *adjoint* özelleştirmesi işlemin nasıl davranması gerektiğini belirtir, *denetimli* bir özelleşme, uygulamanın belirli bir hisse kaydı durumunda olduğu durumlarda bir işlemin nasıl davranması gerektiğini belirtir.
+Bir işlem, içindeki birçok işlem için olduğu gibi bir Unitary dönüştürmesi uygularsa, Q# *adjointed* veya *denetimli* olduğunda işlemin nasıl davrandığını tanımlamak mümkündür. Bir işlemin *adjoint* özelleştirmesi işlemin nasıl davranması gerektiğini belirtir, *denetimli* bir özelleşme, uygulamanın belirli bir hisse kaydı durumunda olduğu durumlarda bir işlemin nasıl davranması gerektiğini belirtir.
 
 Hisse unsurlarının bir bölümünü, hisse bilgi işlem işlemlerinin birçok yönü için çok önemlidir. Faydalı programlama tekniğinin yanı sıra ele alınan bir durumla ilgili bir örnek için Q# bkz. [Denetim akışı: conjugations](xref:microsoft.quantum.guide.controlflow#conjugations). Bir işlemin denetlenen sürümü, yalnızca tüm denetim qubits 'in belirtilen durumda olması durumunda temel işlemi etkili bir şekilde uygulayan yeni bir işlemdir.
 Denetim qubitleri üst konumundayken, temel işlem üst konumun uygun bölümüne doğru şekilde uygulanır.
@@ -139,7 +139,7 @@ Başka bir örnek olarak, `CNOT(control, target)` olarak uygulanabilir `Controll
 
 Önceki örneklerde ilk işlem bildiriminde, işlemler `BitFlip` ve `DecodeSuperdense` sırasıyla imzalar ve ile tanımlanmıştır `(Qubit => Unit)` `((Qubit, Qubit) => (Result, Result))` .
 `DecodeSuperdense`Ölçümler de dahil olmak üzere, Unitary bir işlem değildir ve bu nedenle hiçbir adeksel uzmanlık yok (Bu, bu tür bir işlemin döndürdüğü ilgili gereksinimi geri çağırır `Unit` ).
-Ancak, `BitFlip` yalnızca Unitary işlemini gerçekleştirdiğinden, <xref:microsoft.quantum.intrinsic.x> bunu her iki uzmanlıklarla tanımlamış olabilirsiniz.
+Ancak, `BitFlip` yalnızca Unitary işlemini gerçekleştirdiğinden, <xref:Microsoft.Quantum.Intrinsic.X> bunu her iki uzmanlıklarla tanımlamış olabilirsiniz.
 
 Bu bölümde, işlem bildirimlerinizde uzmanlıklarınızın nasıl dahil olduğu Q# , bu nedenle veya komik bir şekilde çağrılabilir `Adjoint` `Controlled` .
 Bazı durumlar hakkında daha fazla bilgi edinmek için geçerli olduğu veya bazı Uzmanlıkları bildirmek için geçerli olmayan durumlar hakkında daha fazla bilgi için, bu makaledeki [özelleştirilmiş oluşturmaları Ilgili koşullar](#circumstances-for-validly-defining-specializations) bölümüne bakın.
@@ -149,7 +149,7 @@ Her özelleştirmenin gerçek uygulama *örtük* veya *Açık* bir şekilde tan�
 
 ### <a name="implicitly-specifying-implementations"></a>Örtük olarak uygulamaları belirtme
 
-Bu durumda, işlem bildiriminin gövdesi yalnızca varsayılan uygulamadan oluşur. Örnek:
+Bu durumda, işlem bildiriminin gövdesi yalnızca varsayılan uygulamadan oluşur. Örneğin:
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -368,7 +368,7 @@ Bu, Kullanıcı tanımlı türün bir değerinin, temel alınan türün bir değ
 
 İşlevler, ' de, Q# bir çıkış değeri hesaplamasının ötesinde etkileri olmasına izin verilmediğinden işlemlerinden farklı olarak, ' de yalnızca belirleyici ve klasik yordamlardır.
 Özellikle, işlevler işlemleri çağıramaz; işlem yapın, ayırın veya ödünç alma; örnek rastgele sayılar; ya da diğer bir deyişle, giriş değerinin ötesine bir işleve bağımlı duruma bağlıdır.
-Sonuç olarak, Q# işlevler *saf*olduğundan, her zaman aynı giriş değerlerini aynı çıkış değerleriyle eşleştirirler.
+Sonuç olarak, Q# işlevler *saf* olduğundan, her zaman aynı giriş değerlerini aynı çıkış değerleriyle eşleştirirler.
 Bu davranış, Q# derleyicinin işlem uzmanlıklarını oluştururken işlevlerin nasıl ve ne zaman çağrılacağını güvenle yeniden oluşturmasını sağlar.
 
 Her Q# kaynak dosya, herhangi bir sayıda işlev tanımlayabilir.
@@ -401,7 +401,7 @@ function DotProduct(a : Double[], b : Double[]) : Double {
 
 ### <a name="classical-logic-in-functions--good"></a>İşlevlerde klasik mantık = = iyi
 
-Bunu yapmak mümkün olduğunda, işlemleri daha kolay kullanabilmek için işlemler yerine işlevler bakımından klasik mantığı yazmak yararlı olur. Örneğin, önceki `Square` bildirimi bir *işlem*olarak yazdıysanız, derleyici aynı girişe çağrı yapan aynı çıkışları tutarlı bir şekilde üretmesi gerektiğini garanti edemeyebilir.
+Bunu yapmak mümkün olduğunda, işlemleri daha kolay kullanabilmek için işlemler yerine işlevler bakımından klasik mantığı yazmak yararlı olur. Örneğin, önceki `Square` bildirimi bir *işlem* olarak yazdıysanız, derleyici aynı girişe çağrı yapan aynı çıkışları tutarlı bir şekilde üretmesi gerektiğini garanti edemeyebilir.
 
 İşlevler ve işlemler arasındaki farkı altı çizili yapmak için, bir işlemin içinden rastgele bir sayı örnekleme sorununu ele alalım Q# :
 
@@ -415,7 +415,7 @@ operation U(target : Qubit) : Unit {
 
 Her `U` çağrıldığında, üzerinde farklı bir eylem vardır `target` .
 Özellikle, derleyici ' `adjoint auto` a bir özelleştirme bildirimi eklerseniz `U` , `U(target); Adjoint U(target);` kimlik olarak davranır (yani, işlem dışı).
-Bu durum, [vektörlerin ve matrislerde](xref:microsoft.quantum.concepts.vectors)tanımlanan adekin tanımını ihlal eder, bu nedenle derleyicinin, işlemi çağırdığınız bir işlemde bir adjoint özelleşmesinin otomatik olarak oluşturmasını sağlayan bir işlem, <xref:microsoft.quantum.math.randomreal> derleyici tarafından sağlanmaları kesintiye uğratır; <xref:microsoft.quantum.math.randomreal> hiçbir adjoint veya kontrollü sürüm yok.
+Bu durum, [vektörlerin ve matrislerde](xref:microsoft.quantum.concepts.vectors)tanımlanan adekin tanımını ihlal eder, bu nedenle derleyicinin, işlemi çağırdığınız bir işlemde bir adjoint özelleşmesinin otomatik olarak oluşturmasını sağlayan bir işlem, <xref:Microsoft.Quantum.Math.RandomReal> derleyici tarafından sağlanmaları kesintiye uğratır; <xref:Microsoft.Quantum.Math.RandomReal> hiçbir adjoint veya kontrollü sürüm yok.
 
 Öte yandan, gibi işlev çağrılarına izin verme `Square` ve derleyicinin `Square` çıktısının kalıcı kalmasını sağlamak için yalnızca girdiyi korumasının gerektiği konusunda bir değer sağlar.
 Bu nedenle, işlevlerde mümkün olduğunca klasik mantığı yalıtmak, diğer işlevlerde ve işlemlerde bu mantığı yeniden kullanmayı kolaylaştırır.
@@ -467,7 +467,7 @@ Bu, az sayıda işlev için daha fazla ve daha fazla işlev topladıkça, bu tü
 Bununla birlikte, bu zorluklar, derleyicinin farklı sürümlerinin nasıl ilişkili olduğunu tanıması için ihtiyaç duymamanızdan kaynaklanır `Map` .
 Etkin olarak, derleyicinin `Map` türlerden bir tür matematik işlevi olarak bir tür işlevi görmesini istersiniz Q# *types* Q# .
 
-Q# işlevlerin ve işlemlerin *tür parametrelerine*ve sıradan demet parametrelerine izin vererek bu kavramı şekillendirir.
+Q# işlevlerin ve işlemlerin *tür parametrelerine* ve sıradan demet parametrelerine izin vererek bu kavramı şekillendirir.
 Önceki örneklerde, `Map` `Int, Pauli` ilk durumda ve ikinci durumda tür parametrelerine sahip olacak şekilde düşünmek istersiniz `Double, String` .
 Çoğu bölüm için, bu tür parametrelerini sıradan türlermiş gibi kullanın. Dizi ve tanımlama oluşturmak, işlevleri ve işlemleri çağırmak ve sıradan ya da kesilebilir değişkenlere atamak için parametre türü değerlerini kullanın.
 
@@ -536,9 +536,9 @@ Q#Standart kitaplıklar, daha yüksek sıralı denetim akışını Express 'in d
 Bunlar, [ Q# standart kitaplık kılavuzunda](xref:microsoft.quantum.libraries.standard.intro)daha ayrıntılı olarak ele alınmıştır.
 
 
-## <a name="callables-as-first-class-values"></a>Ilk sınıf değerleri olarak callables
+## <a name="callables-as-first-class-values"></a>First-Class değerler olarak callables
 
-İşlemler yerine işlevleri kullanarak denetim akışı ve klasik mantık hakkında önemli bir tekniktir, bu işlemleri ve işlevleri Q# *ilk sınıfındır*.
+İşlemler yerine işlevleri kullanarak denetim akışı ve klasik mantık hakkında önemli bir tekniktir, bu işlemleri ve işlevleri Q# *ilk sınıfındır* .
 Diğer bir deyişle, her bir değer kendi sağ tarafındaki dilde değerlerdir.
 Örneğin, daha az dolaylı bir değer varsa, aşağıdakiler tam olarak geçerli Q# koddur:
 
@@ -549,7 +549,7 @@ operation FirstClassExample(target : Qubit) : Unit {
 }
 ```
 
-`ourH`Önceki kod parçacığında değişkenin değeri, daha sonra <xref:microsoft.quantum.intrinsic.h> Bu değeri diğer tüm işlemler gibi çağırabilmeniz için işlem olur.
+`ourH`Önceki kod parçacığında değişkenin değeri, daha sonra <xref:Microsoft.Quantum.Intrinsic.H> Bu değeri diğer tüm işlemler gibi çağırabilmeniz için işlem olur.
 Bu özellik sayesinde, işlemleri girişin bir parçası olarak alan ve daha yüksek sıralı denetim akışı kavramları oluşturan işlemler yazabilirsiniz.
 Örneğin, aynı hedef qubit 'e iki kez uygulayarak bir işlemi "kare" olarak düşünün.
 
@@ -589,7 +589,7 @@ Diğer bir deyişle, bir işlev içindeki klasik mantık yalıtılmış ve bu, d
 
 ## <a name="partial-application"></a>Kısmi uygulama
 
-*Kısmi uygulama*kullanarak işlem döndüren işlevlerle çok daha fazlasını yapabilirsiniz. Bu, bir işleve veya işleme girişin bir veya daha fazla bölümünü gerçekten çağırmadan bir veya daha fazla şekilde sağlarsınız. Önceki örnekte, `ApplyTwice` giriş işleminin hangi qubit 'e uygulanacağını belirtmek istediğinizi belirtmek istemezsiniz:
+*Kısmi uygulama* kullanarak işlem döndüren işlevlerle çok daha fazlasını yapabilirsiniz. Bu, bir işleve veya işleme girişin bir veya daha fazla bölümünü gerçekten çağırmadan bir veya daha fazla şekilde sağlarsınız. Önceki örnekte, `ApplyTwice` giriş işleminin hangi qubit 'e uygulanacağını belirtmek istediğinizi belirtmek istemezsiniz:
 
 ```qsharp
 operation PartialApplicationExample(op : (Qubit => Unit), target : Qubit) : Unit {

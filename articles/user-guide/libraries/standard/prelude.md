@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dd507d0c644ae711a5e5a1dff9156f571cb0fa92
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 4d15226fe46be79b7d3e6f414f33f1debd691f40
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833549"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692121"
 ---
 # <a name="the-prelude"></a>Prelude dili #
 
@@ -24,7 +24,7 @@ Q#Hisse geliştirme paketine dahil edilen derleyici ve hedef makineler, ' de his
 
 Standart kitaplıkta tanımlanan iç işlemler kabaca birkaç kategoriden birine girer:
 
-- Ad alanında toplanan, önemli klasik işlevler <xref:microsoft.quantum.core> .
+- Ad alanında toplanan, önemli klasik işlevler <xref:Microsoft.Quantum.Core> .
 - [Clienfford ve $T $ Gates 'ten oluşan unitfıerlerini](xref:microsoft.quantum.concepts.qubit)temsil eden işlemler.
 - Çeşitli işleçlerle ilgili döndürmeler temsil eden işlemler.
 - Ölçümleri uygulayan işlemler.
@@ -35,16 +35,16 @@ Rosalar da sunarak, Q# Programcının tek qubit Unitary ve CNOT kapısı kitapl�
 Mümkün olduğu durumlarda, ilgeler üzerinde işlem yapan ve `Controlled` hedef makinenin uygun Ayrıştırma işlemini gerçekleştirmesini sağlayan, bu, ilgeler 'yi uygulamaya izin veren bir işlem.
 
 Prelude 'nun bu bölümünde tanımlanan işlevlerin ve işlemlerin birçoğu @"microsoft.quantum.intrinsic" ad alanında, çoğu Q# kaynak dosyanın `open Microsoft.Quantum.Intrinsic;` ilk ad alanı bildiriminden hemen sonra gelen bir yönergesi olacaktır.
-<xref:microsoft.quantum.core>Ad alanı otomatik olarak açılır, böylece gibi işlevler <xref:microsoft.quantum.core.length> hiç bir beyan olmadan kullanılabilir `open` .
+<xref:Microsoft.Quantum.Core>Ad alanı otomatik olarak açılır, böylece gibi işlevler <xref:Microsoft.Quantum.Core.Length> hiç bir beyan olmadan kullanılabilir `open` .
 
-### <a name="common-single-qubit-unitary-operations"></a>Yaygın tek qubit Unitary Işlemleri ###
+### <a name="common-single-qubit-unitary-operations"></a>Ortak Single-Qubit Unitary Işlemleri ###
 
 Prelude, birçok yaygın [tek qubit işlemini](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)de tanımlar.
 Bu işlemlerin tümü hem `Controlled` hem de `Adjoint` funlarına izin verir.
 
 #### <a name="pauli-operators"></a>Pauli Işleçleri ####
 
-<xref:microsoft.quantum.intrinsic.x>Işlem Pauli $X $ işlecini uygular.
+<xref:Microsoft.Quantum.Intrinsic.X>Işlem Pauli $X $ işlecini uygular.
 Bu, bazen ağ geçidi olarak da bilinir `NOT` .
 İmza içeriyor `(Qubit => Unit is Adj + Ctl)` .
 Tek qubit Unitary öğesine karşılık gelir:
@@ -52,14 +52,14 @@ Tek qubit Unitary öğesine karşılık gelir:
 \begin{Equation} \begin{bmatrix} 0 & 1 \\ \\ % fixme: Bu şu anda quadwhack Hack 'ı kullanıyor.
 1 & 0 \ End{bmatrix} \end{Equation}
 
-<xref:microsoft.quantum.intrinsic.y>Işlem Pauli $Y $ işlecini uygular.
+<xref:Microsoft.Quantum.Intrinsic.Y>Işlem Pauli $Y $ işlecini uygular.
 İmza içeriyor `(Qubit => Unit is Adj + Ctl)` .
 Tek qubit Unitary öğesine karşılık gelir:
 
 \begin{Equation} \begin{bmatrix} 0 &-ı \\ \\ % fixme: Bu şu anda quadwhack Hack 'ı kullanıyor.
 ı & 0 \ End{bmatrix} \end{Equation}
 
-<xref:microsoft.quantum.intrinsic.z>Işlem Pauli $Z $ işlecini uygular.
+<xref:Microsoft.Quantum.Intrinsic.Z>Işlem Pauli $Z $ işlecini uygular.
 İmza içeriyor `(Qubit => Unit is Adj + Ctl)` .
 Tek qubit Unitary öğesine karşılık gelir:
 
@@ -78,9 +78,9 @@ Bu, Bloch Sphere üzerinde görselleştirmelere neden olabilir:
 
 ![XX = I](~/media/prelude_blochIdentity.png)
 
-#### <a name="other-single-qubit-cliffords"></a>Diğer tek qubit Clienffords ####
+#### <a name="other-single-qubit-cliffords"></a>Diğer Single-Qubit Clienffords ####
 
-<xref:microsoft.quantum.intrinsic.h>Işlem Hadamard geçidini uygular.
+<xref:Microsoft.Quantum.Intrinsic.H>Işlem Hadamard geçidini uygular.
 Bu, hedef qubit 'in Pauli $X $ ve $Z $ eksenlerinin $H {0} \tus= \ket{+} \mathrel{: =} ( {0} \tus+ \ket {1} )/\sqrt {2} $ ve $H \ket{+} = \ket {0} $ olduğunu birbirine dönüştürür.
 İmzaya sahiptir `(Qubit => Unit is Adj + Ctl)` ve tek qubit Unitary öğesine karşılık gelir:
 
@@ -91,7 +91,7 @@ Hadamard geçidi, $ \ket {0} $ ve $ \ket $ durumlarının bir üst konumunu olu�
 
 ![Hadamard işlemi Bloch sphere üzerine eşlendi](~/media/prelude_hadamardBloch.png)
 
-<xref:microsoft.quantum.intrinsic.s>İşlem, $S $ aşama kapısını uygular.
+<xref:Microsoft.Quantum.Intrinsic.S>İşlem, $S $ aşama kapısını uygular.
 Bu, Pauli $Z $ işleminin matris kare köküdür.
 Yani, $S ^ 2 = Z $.
 İmzaya sahiptir `(Qubit => Unit is Adj + Ctl)` ve tek qubit Unitary öğesine karşılık gelir:
@@ -105,17 +105,17 @@ Yukarıdaki Pauli ve Clifford işlemlerine ek olarak, Q# Prelude, döndürmeler 
 [Tek qubit işlemlerinde](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)açıklandığı gibi, döndürme özelliği, hisse algoritması için kritik öneme sahiptir.
 
 $H $ ve $T $ kapıları kullanarak herhangi bir tek qubit işlemi hızlı bir şekilde ifade edebiliyoruz; $H burada \begin{Equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ % fixme: Bu, şu anda dörtlü geri Whack Hack 'ı kullanıyor.
-0 & e ^ {i \ Pi/4} \end{bmatrix} \end{Equation} bu, <xref:microsoft.quantum.intrinsic.s> işlemin karekökünü, yani $T ^ 2 = S $ olur.
-$T $ Gate, işlem tarafından uygulanır <xref:microsoft.quantum.intrinsic.t> ve `(Qubit => Unit is Adj + Ctl)` tek bir-qubit üzerinde Unitary işlemi olduğunu belirten imzaya sahiptir.
+0 & e ^ {i \ Pi/4} \end{bmatrix} \end{Equation} bu, <xref:Microsoft.Quantum.Intrinsic.S> işlemin karekökünü, yani $T ^ 2 = S $ olur.
+$T $ Gate, işlem tarafından uygulanır <xref:Microsoft.Quantum.Intrinsic.T> ve `(Qubit => Unit is Adj + Ctl)` tek bir-qubit üzerinde Unitary işlemi olduğunu belirten imzaya sahiptir.
 
 Bu, herhangi bir rastgele tek qubit işlemi açıklamaya yetecek olsa da, farklı hedef makineler Pauli işleçleri hakkında daha etkili temsiller olabilir. bu nedenle, Prelude, bu tür döndürmeler için çeşitli yollar içerir.
-Bunların en temel değeri, <xref:microsoft.quantum.intrinsic.r> belirtilen Pauli ekseninin etrafında bir döndürme uygulayan işlemdir. \begin{Equation} R (\sigma, \fi) \mathrel{: =} \exp (-i \phi \ Sigma/2), \end{Equation}; burada $ \sigma $ bir Pauli işleci, $ \phi $ bir açı ve $ \exp $, matris üstel değerini temsil eder.
+Bunların en temel değeri, <xref:Microsoft.Quantum.Intrinsic.r> belirtilen Pauli ekseninin etrafında bir döndürme uygulayan işlemdir. \begin{Equation} R (\sigma, \fi) \mathrel{: =} \exp (-i \phi \ Sigma/2), \end{Equation}; burada $ \sigma $ bir Pauli işleci, $ \phi $ bir açı ve $ \exp $, matris üstel değerini temsil eder.
 `((Pauli, Double, Qubit) => Unit is Adj + Ctl)`Girişin ilk iki bölümü, Unitary işleci $R (\sigma, \fi) $ ' i belirtmek için gereken klasik bağımsız değişkenleri $ \sigma $ ve $ \phi $ olarak temsil eden imzaya sahiptir.
 Türü tek qubit Unitary olan bir işlem elde etmek için $ \sigma $ ve $ \phi $ öğesini kısmen uygulayabiliriz.
 Örneğin, `R(PauliZ, PI() / 4, _)` türü vardır `(Qubit => Unit is Adj + Ctl)` .
 
 > [!NOTE]
-> <xref:microsoft.quantum.intrinsic.r>İşlem giriş açısını 2 ' ye böler ve-1 ile çarpar.
+> <xref:Microsoft.Quantum.Intrinsic.r>İşlem giriş açısını 2 ' ye böler ve-1 ile çarpar.
 > $Z $ döndürmeler için bu, $ \ket {0} $ eigenstate 'in $-\phi/$2 ile döndürüldüğü ve $ \ket $ eigenstate $ \phi/$2 tarafından döndürülerek $ \ket $ eigenstate 'in $ {1} {1} \ket $ eigenstate 'e göreli olarak $ \phi $ ile döndürüldüğü anlamına gelir {0} .
 >
 > Bu, özellikle de `T` `R(PauliZ, PI() / 8, _)` ilgisiz [küresel bir aşamaya](xref:microsoft.quantum.glossary#global-phase)göre farklılık gösterir.
@@ -124,29 +124,29 @@ Türü tek qubit Unitary olan bir işlem elde etmek için $ \sigma $ ve $ \phi $
 > Ayrıca, etrafında döndürme `PauliI` , $ \phi/$2 genel aşamasını uygular. Bu tür aşamalar ilgisiz olsa da, [kavramsal belgelerde](xref:microsoft.quantum.concepts.qubit)olduğu gibi, denetlenen döndürmeler için de uygundur `PauliI` .
 
 Hisse algoritmaları dahilinde, her zaman {\phi = \pi k/2 ^ n $ for \mathbb{Z} $ ve \mathbb{N} $ içinde $n \ $ adlı bazı $k \jyadic kesirleri olarak ifade etmek yararlı olur.
-<xref:microsoft.quantum.intrinsic.rfrac>İşlem, bu kuralı kullanarak belirtilen Pauli ekseninin etrafında bir döndürme uygular.
-Bu, <xref:microsoft.quantum.intrinsic.r> döndürme açısının, `Int` dyadic kesri olarak yorumlanan iki tür giriş olarak belirtildiğinden farklıdır.
+<xref:Microsoft.Quantum.Intrinsic.RFrac>İşlem, bu kuralı kullanarak belirtilen Pauli ekseninin etrafında bir döndürme uygular.
+Bu, <xref:Microsoft.Quantum.Intrinsic.R> döndürme açısının, `Int` dyadic kesri olarak yorumlanan iki tür giriş olarak belirtildiğinden farklıdır.
 Bu nedenle, `RFrac` imzası vardır `((Pauli, Int, Int, Qubit) => Unit is Adj + Ctl)` .
 Tek qubit Unitary $ \ exp (i \pı k \ Sigma/2 ^ n) $, burada $ \sigma $ ilk bağımsız değişkene karşılık gelen Pauli matrisi, $k $ ikinci bağımsız değişkendir ve $n $ üçüncü bağımsız değişkendir.
 `RFrac(_,k,n,_)` ile aynıdır `R(_,-πk/2^n,_)` ; açının kesirin *negatifi* olduğunu unutmayın.
 
-<xref:microsoft.quantum.intrinsic.rx>Işlem Pauli $X $ ekseninin etrafında bir döndürme uygular.
+<xref:Microsoft.Quantum.Intrinsic.Rx>Işlem Pauli $X $ ekseninin etrafında bir döndürme uygular.
 İmza içeriyor `((Double, Qubit) => Unit is Adj + Ctl)` .
 `Rx(_, _)` , ile aynıdır `R(PauliX, _, _)` .
 
-<xref:microsoft.quantum.intrinsic.ry>Işlem Pauli $Y $ ekseninin etrafında bir döndürme uygular.
+<xref:Microsoft.Quantum.Intrinsic.Ry>Işlem Pauli $Y $ ekseninin etrafında bir döndürme uygular.
 İmza içeriyor `((Double, Qubit) => Unit is Adj + Ctl)` .
 `Ry(_, _)` , ile aynıdır `R(PauliY,_ , _)` .
 
-<xref:microsoft.quantum.intrinsic.rz>Işlem Pauli $Z $ ekseninin etrafında bir döndürme uygular.
+<xref:Microsoft.Quantum.Intrinsic.Rz>Işlem Pauli $Z $ ekseninin etrafında bir döndürme uygular.
 İmza içeriyor `((Double, Qubit) => Unit is Adj + Ctl)` .
 `Rz(_, _)` , ile aynıdır `R(PauliZ, _, _)` .
 
-<xref:microsoft.quantum.intrinsic.r1>İşlem, {1} $Z $ $-$1 eigenstate of $ \ket $ etrafında verilen miktarda bir döndürme uygular.
+<xref:Microsoft.Quantum.Intrinsic.R1>İşlem, {1} $Z $ $-$1 eigenstate of $ \ket $ etrafında verilen miktarda bir döndürme uygular.
 İmza içeriyor `((Double, Qubit) => Unit is Adj + Ctl)` .
 `R1(phi,_)` , `R(PauliZ,phi,_)` ve ile aynıdır `R(PauliI,-phi,_)` .
 
-<xref:microsoft.quantum.intrinsic.r1frac>İşlem, Z = 1 eigenstate etrafında verilen miktarda kesirli bir döndürme uygular.
+<xref:Microsoft.Quantum.Intrinsic.R1Frac>İşlem, Z = 1 eigenstate etrafında verilen miktarda kesirli bir döndürme uygular.
 İmza içeriyor `((Int,Int, Qubit) => Unit is Adj + Ctl)` .
 `R1Frac(k,n,_)` , `RFrac(PauliZ,-k.n+1,_)` ve ile aynıdır `RFrac(PauliI,k,n+1,_)` .
 
@@ -158,16 +158,16 @@ Bloch sphere üzerine eşlenmiş bir döndürme işlemi (Bu örnekteki Pauli $Z 
 
 Yukarıdaki tek qubit işlemlerine ek olarak, Prelude birçok multi-qubit işlemini de tanımlar.
 
-İlk olarak, <xref:microsoft.quantum.intrinsic.cnot> işlem standart kontrollü bir- `NOT` kapısı, \begin{Equation} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 & 0 \\ \\ \\ \\ & 1 & 0 & 0 & 0 &
+İlk olarak, <xref:Microsoft.Quantum.Intrinsic.CNOT> işlem standart kontrollü bir- `NOT` kapısı, \begin{Equation} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 & 0 \\ \\ \\ \\ & 1 & 0 & 0 & 0 &
 \end{Equation} `((Qubit, Qubit) => Unit is Adj + Ctl)` , iki bireysel qubit üzerinde $ \operatorname{CNOT} $ davranır unitarily öğesini temsil eden imzaya sahip.
 `CNOT(q1, q2)` , ile aynıdır `(Controlled X)([q1], q2)` .
 `Controlled`Functor bir yazmaç üzerinde denetlemeye izin verdiğinden, `[q1]` yalnızca bir denetim isteytiğimiz belirten dizi değişmez değerini kullanırız.
 
-Bu <xref:microsoft.quantum.intrinsic.ccnot> işlem, bazen Toffoli kapısı olarak da bilinen, düzenli olarak denetlenen bir kapısı gerçekleştirir.
+Bu <xref:Microsoft.Quantum.Intrinsic.CCNOT> işlem, bazen Toffoli kapısı olarak da bilinen, düzenli olarak denetlenen bir kapısı gerçekleştirir.
 İmza içeriyor `((Qubit, Qubit, Qubit) => Unit is Adj + Ctl)` .
 `CCNOT(q1, q2, q3)` , ile aynıdır `(Controlled X)([q1, q2], q3)` .
 
-<xref:microsoft.quantum.intrinsic.swap>İşlem iki qubit 'in hisse durumlarını değiştirir.
+<xref:Microsoft.Quantum.Intrinsic.SWAP>İşlem iki qubit 'in hisse durumlarını değiştirir.
 Diğer bir deyişle, Unitary matrisi \begin{Equation} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 0 & \\ \\ 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{bmatrix} uygular.
 \end{Equation} öğesinde imza var `((Qubit, Qubit) => Unit is Adj + Ctl)` .
 `SWAP(q1,q2)` , `CNOT(q1, q2)` ve sonrasında ile eşdeğerdir `CNOT(q2, q1)` `CNOT(q1, q2)` .
@@ -179,10 +179,10 @@ Diğer bir deyişle, Unitary matrisi \begin{Equation} \operatorname{SWAP} \mathr
 > Fredkabağı kapısı olarak da bilinen denetimli-takas kapısı, tüm klasik hesaplamayı dahil etmek için yeterince güçlüdür.
 
 Son olarak, Prelude, Multi-qubit Pauli işleçlerinin üslerini temsil eden iki işlem sağlar.
-<xref:microsoft.quantum.intrinsic.exp>İşlem, çok-qubit Unitary \begin{Equation} \operatorname{exp} (\vec{\sigma}, \fi) \mathrel{: =} \exp\left (i \fi \ sigma_0 \otimes \ sigma_1 \otimes \cnoktalar \otimes \ sigma_n \right), \end{Equation}; burada $ \vec{\sigma} = (\ sigma_0, \ sigma_1, \noktalar, \ sigma_n) $ bir tek qubit Pauli işleçleri dizisi ve $ \phi $ bir açı.
+<xref:Microsoft.Quantum.Intrinsic.Exp>İşlem, çok-qubit Unitary \begin{Equation} \operatorname{exp} (\vec{\sigma}, \fi) \mathrel{: =} \exp\left (i \fi \ sigma_0 \otimes \ sigma_1 \otimes \cnoktalar \otimes \ sigma_n \right), \end{Equation}; burada $ \vec{\sigma} = (\ sigma_0, \ sigma_1, \noktalar, \ sigma_n) $ bir tek qubit Pauli işleçleri dizisi ve $ \phi $ bir açı.
 `Exp`Döndürme, imza içeren bir öğe dizisi olarak $ \vec{\sigma} $ öğesini temsil eder `Pauli` `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)` .
 
-<xref:microsoft.quantum.intrinsic.expfrac>İşlem, yukarıda açıklanan dyadic kesir gösterimini kullanarak aynı dönüşü gerçekleştirir.
+<xref:Microsoft.Quantum.Intrinsic.ExpFrac>İşlem, yukarıda açıklanan dyadic kesir gösterimini kullanarak aynı dönüşü gerçekleştirir.
 İmza içeriyor `((Pauli[], Int, Int, Qubit[]) => Unit is Adj + Ctl)` .
 
 > [!WARNING]
@@ -200,7 +200,7 @@ Son olarak, Prelude, Multi-qubit Pauli işleçlerinin üslerini temsil eden iki 
 
 Ölçüm işlemleri `Adjoint` ne ne de `Controlled` functor 'ı destekler.
 
-<xref:microsoft.quantum.intrinsic.measure>İşlem, belirtilen Pauli işleçleri üründe bir veya daha fazla qubits 'in Birleşik ölçüsünü gerçekleştirir.
+<xref:Microsoft.Quantum.Intrinsic.Measure>İşlem, belirtilen Pauli işleçleri üründe bir veya daha fazla qubits 'in Birleşik ölçüsünü gerçekleştirir.
 Pauli Array ve qubit dizisi farklı uzunluklardır, işlem başarısız olur.
 `Measure` imza içeriyor `((Pauli[], Qubit[]) => Result)` .
 
@@ -214,10 +214,10 @@ Hata düzeltmesini tartıştığımız için bu özellik daha sonra temel alına
 
 Kolaylık sağlaması için, Prelude, qubits 'i ölçmek için iki diğer işlem de sağlar.
 Birincisi, tek qubit ölçümleri gerçekleştirirken oldukça yaygın olduğundan, Prelude bu durum için bir toplu değer tanımlar.
-<xref:microsoft.quantum.intrinsic.m>Işlem Pauli $Z $ işlecini tek bir qubit üzerinde ölçer ve imza içeriyor `(Qubit => Result)` .
-`M(q)` değerine eşdeğerdir `Measure([PauliZ], [q])` .
+<xref:Microsoft.Quantum.Intrinsic.M>Işlem Pauli $Z $ işlecini tek bir qubit üzerinde ölçer ve imza içeriyor `(Qubit => Result)` .
+`M(q)`, `Measure([PauliZ], [q])` ile eşdeğerdir.
 
-<xref:microsoft.quantum.measurement.multim>Pauli $Z $ işlecini her bir qubit dizisi üzerinde *ayrı olarak* ölçer ve her bir *array* `Result` qubit için elde edilen değer dizisini döndürür.
+<xref:microsoft.quantum.measurement.MultiM>Pauli $Z $ işlecini her bir qubit dizisi üzerinde *ayrı olarak* ölçer ve her bir *array* `Result` qubit için elde edilen değer dizisini döndürür.
 Bazı durumlarda bu, iyileştirilebilir. İmza ( `Qubit[] => Result[])` .
 `MultiM(qs)` eşittir:
 
@@ -233,14 +233,14 @@ return rs;
 ## <a name="extension-functions-and-operations"></a>Uzantı Işlevleri ve Işlemler ##
 
 Ayrıca, Prelude, kod içinde kullanılmak üzere .NET düzeyinde zengin bir matematik ve tür dönüştürme işlevleri tanımlar Q# .
-Örneğin, <xref:microsoft.quantum.math> ad alanı ve gibi faydalı işlemleri tanımlar <xref:microsoft.quantum.math.sin> <xref:microsoft.quantum.math.log> .
+Örneğin, <xref:Microsoft.Quantum.Math> ad alanı ve gibi faydalı işlemleri tanımlar <xref:Microsoft.Quantum.Math.Sin> <xref:Microsoft.Quantum.Math.Log> .
 Hisse geliştirme seti tarafından sunulan uygulama klasik .NET temel sınıf kitaplığını kullanır ve bu nedenle hisse programları ve bunların klasik sürücüleri arasında ek bir iletişim gidiş gelişmesi içerebilir.
 Bu, yerel simülatör için bir sorun sunmadığından, bir hedef makine olarak uzak simülatör veya gerçek donanım kullanılırken bir performans sorunu olabilir.
 Yani, tek bir hedef makine, bu işlemleri söz konusu sistem için daha verimli olan sürümlerle geçersiz kılarak bu performans etkisini hafifletmeyebilir.
 
 ### <a name="math"></a>Matematik ###
 
-<xref:microsoft.quantum.math>Ad alanı, .net temel sınıf kitaplığının [ `System.Math` sınıfından](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true)birçok yararlı işlev sağlar.
+<xref:Microsoft.Quantum.Math>Ad alanı, .net temel sınıf kitaplığının [ `System.Math` sınıfından](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true)birçok yararlı işlev sağlar.
 Bu işlevler, diğer işlevlerle aynı şekilde kullanılabilir Q# :
 
 ```qsharp
@@ -259,5 +259,5 @@ let y = AbsD(-PI()); // y : Double = 3.1415...
 
 ### <a name="bitwise-operations"></a>Bit düzeyinde Işlemler ###
 
-Son olarak, <xref:microsoft.quantum.bitwise> ad alanı sayıların bit düzeyinde işleçler aracılığıyla işlenmesine yönelik çeşitli yararlı işlevler sağlar.
-Örneğin, <xref:microsoft.quantum.bitwise.parity> bir tamsayının bit düzeyinde eşlik sayısını başka bir tamsayı olarak döndürür.
+Son olarak, <xref:Microsoft.Quantum.Bitwise> ad alanı sayıların bit düzeyinde işleçler aracılığıyla işlenmesine yönelik çeşitli yararlı işlevler sağlar.
+Örneğin, <xref:Microsoft.Quantum.Bitwise.Parity> bir tamsayının bit düzeyinde eşlik sayısını başka bir tamsayı olarak döndürür.
