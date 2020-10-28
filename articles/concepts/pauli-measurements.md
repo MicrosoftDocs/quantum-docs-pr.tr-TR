@@ -87,7 +87,7 @@ Yazar: bradben uid: Microsoft. hisse. Concepts. Pauli MS. Author: v-benköşeli 
 
 Önceki tartışmalarda hesaplama tabanlı ölçümlere odaklandık.
 Aslında, notational perspektifinden, işlem tabanlı ölçümlerde hızlı bir şekilde ifade etmek için uygun olan, hisse kullanımı açısından oluşan diğer yaygın ölçümler vardır.
-İle çalışırken Q# , çalıştırdığınız en yaygın ölçüm türü, diğer tabanlarda ölçümleri dahil etmek üzere hesaplama tabanlı ölçümleri *Pauli measurements*genelleştirmesi ve farklı qugeler arasında eşlik olması olasıdır.
+İle çalışırken Q# , çalıştırdığınız en yaygın ölçüm türü, diğer tabanlarda ölçümleri dahil etmek üzere hesaplama tabanlı ölçümleri *Pauli measurements* genelleştirmesi ve farklı qugeler arasında eşlik olması olasıdır.
 Bu gibi durumlarda, bir Pauli işlecinin, genel olarak $ x, Y, z $ veya $ z \otimes z, x \otimes x, x \otimes Y $ , vb. gibi bir operatör ölçmesi konusunda tartışmak yaygındır.
 
 > [!TIP]
@@ -128,7 +128,7 @@ Bu ölçümler, kolaylık sağlamak için aşağıda verilmiştir.
 |$ $ X | $H               $                    |
 |$ $ Y | $HS ^               {\dagger}$         |
 
-Diğer bir deyişle, bu dil kullanıldığında, "ölçüm $ Y $ ", HS 'yi uygulama $ \dagger $ ve sonra hesaplama temelinde ölçme ile eşdeğerdir; burada [`S`](xref:microsoft.quantum.intrinsic.s) bazen "aşama kapısı" olarak adlandırılan ve Unitary matrisi tarafından benzetilen bir iç hisse dır
+Diğer bir deyişle, bu dil kullanıldığında, "ölçüm $ Y $ ", HS 'yi uygulama $ \dagger $ ve sonra hesaplama temelinde ölçme ile eşdeğerdir; burada [`S`](xref:Microsoft.Quantum.Intrinsic.S) bazen "aşama kapısı" olarak adlandırılan ve Unitary matrisi tarafından benzetilen bir iç hisse dır
 
 $$
 \begin{align}
@@ -194,7 +194,7 @@ Tek qubit çalışmasına benzer şekilde, tüm iki-qubit Pauli-ölçümleri $ \
 >         0 & 1 & 0 & 0 \\\\
 >0 & 0 & 0 & 1 > \end { matris } \right ) >     \end{align}
 > $$
-> iç işlemin benzetimini yapmak için kullanılır [`SWAP`](xref:microsoft.quantum.intrinsic) .
+> iç işlemin benzetimini yapmak için kullanılır [`SWAP`](xref:Microsoft.Quantum.Intrinsic) .
 
 |Pauli ölçüm     | Unitary dönüşümü  |
 |----------------------|------------------------|
@@ -214,7 +214,7 @@ Tek qubit çalışmasına benzer şekilde, tüm iki-qubit Pauli-ölçümleri $ \
 |$X \otimes Y $ | $ \operatorname { cnot } \_ { 10 } (H \otimes HS ^ \dagger ) $|
 |$Y \otimes Y $ | $ \operatorname { cnot } \_ { 10 } (HS ^ \dagger \otimes HS ^ \dagger ) $|
 
-Burada, [`CNOT`](xref:microsoft.quantum.intrinsic.cnot) işlem aşağıdaki nedenlerden dolayı görüntülenir.
+Burada, [`CNOT`](xref:Microsoft.Quantum.Intrinsic.CNOT) işlem aşağıdaki nedenlerden dolayı görüntülenir.
 Matrisi içermeyen her Pauli ölçümü, $ \boldone $ $ \otimes Yukarıdaki düşünyana bir Unitary ile z z arasında eşittir $ .
 Z z 'nin eigenvalues değeri $ \otimes $ yalnızca her bir hesaplama tabanlı vektörü oluşturan qubits 'e bağlıdır ve denetlenen işlemler bu eşliği hesaplamak ve ilk bit içinde saklamak için işlem yapar.
 İlk bit ölçülene kadar, elde edilen yarı alanın kimliğini kurtararak Pauli işlecinin ölçülesiyle eşdeğerdir.
@@ -240,16 +240,16 @@ Bu nedenle, yukarıda belirtilen gereksinimlere başvurırlar.
 İçinde yerleşik bir özellik olarak Pauli ölçümleri olması Q# yararlı olur, çünkü bu tür işleçler, $ $ işlemi bir Z ve bir Tensor ürünü olarak ifade etmek için gereken diagonalizing U geçidini açıklayan, denetimli olmayan ve temel dönüşümlerde uzun zincirler gerektirir $ $ $ \id $ .
 Önceden tanımlanmış Bu ölçülerden birini yapmak istediğinizi belirleyebilmeksizin, bir hesaplama tabanlı ölçüm için gerekli bilgileri sağlamak üzere temelinizi nasıl dönüştürebileceğinizi merak etmeniz gerekmez.
 Q# sizin için gerekli olan tüm temel dönüştürmeleri otomatik olarak işler.
-Daha fazla bilgi için bkz [`Measure`](xref:microsoft.quantum.intrinsic.measure) . ve [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) işlemleri.
+Daha fazla bilgi için bkz [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) . ve [`MeasurePaulis`](xref:Microsoft.Quantum.Measurement.MeasurePaulis) işlemleri.
 
-## <a name="the-no-cloning-theorem"></a>Kopyalama olmayan bu Üyeler
+## <a name="the-no-cloning-theorem"></a>No-Cloning theorem
 
 Hisse bilgileri güçlüdür.
 Faktör numaraları gibi harika şeyleri en iyi bilinen klasik algoritmalardan daha hızlı bir şekilde gerçekleştirebilmemizi veya düzgün bir şekilde benzetilmesini sağlayan bağıntılı elektron sistemlerinin verimli bir şekilde benzetimini yapmanızı sağlar.
 Ancak, hisse bilgi işlem gücüyle ilgili sınırlamalar vardır.
-Bu tür bir sınırlama, *hiçbir kopyalama olmayan kopya*tarafından verilir.
+Bu tür bir sınırlama, *hiçbir kopyalama olmayan kopya* tarafından verilir.
 
-Kopyalama yok, hiçbir şekilde adlandırılır.
+No-Cloning theorem olarak adlandırılır.
 Genel hisse durumlarının bir hisse bilgisayar tarafından kopyalanmasına izin vermez.
 Bunların kanıtı, genel olarak basittir.
 Bu konu başlığı altında, hiçbir ek yardımcı qubit, bizim tartışmamız için çok fazla teknik olmadığı için, kapsamımızda ek bir yardımcı qubitin olmaması durumunda (yardımcı qugeler, bir hesaplama sırasında karalama alanı için kullanılır ve içinde kolayca kullanılır ve yönetilir Q# , bkz. [ödünç alınan qubit](xref:microsoft.quantum.guide.qubits#borrowed-qubits)).
@@ -273,15 +273,15 @@ $$
 \end{align}
 $$
 
-Bu, kopya olmaması gereken temel ıntutiye sahiptir: bilinmeyen bir hisse lık durumunu kopyalayan tüm cihazlar, kopyalayan durumların en az bir kısmında yer almalıdır.
+Bu, No-Cloning ' nin arkasındaki temel ıntutiye sahiptir: bilinmeyen bir hisse lık durumunu kopyalayan tüm cihazlar, kopyalayan durumların en az birinde hata almalıdır.
 Cloner 'ın giriş durumunda herhangi bir şekilde hareket ederken, bu durum yardımcı qubits 'in eklenmesi ve ölçümü aracılığıyla ihlal edilebilir, ancak bu tür etkileşimler Ayrıca sistem hakkında ölçüm istatistikleri üzerinden bilgi sızıntısına ve bu gibi durumlarda tam kopyalamayı önler.
-Daha fazla [bilgi için](xref:microsoft.quantum.more-information), kopyalamanın olmaması için daha kapsamlı bir kanıt için bkz..
+No-Cloning daha kapsamlı bir kanıtı için, [daha fazla bilgi için](xref:microsoft.quantum.more-information)bkz..
 
-Hisse uygun olmayan bir şekilde büyük ölçüde bir şekilde klonlamanız için, parça olmayan bir bilgi işlem için önemli değildir. bu nedenle, hisse durumlarından daha fazla bilgi edinebilirsiniz.
+No-Cloning theorem, hisse anından çok büyük bir şekilde kopyalanabileceğinden, hisse durumlarından daha fazla bilgi edinmek için neredeyse yoğun bir özellik veriliyorsa, bu işlem, hisse hesaplamasından oluşan nitel 'yi anlamak için önemlidir.
 Aslında, Heısenberg 'nin vaunbelirsizlik ilkesini ihlal edebilirsiniz.
 Alternatif olarak, bir karmaşık hisse dağılımla tek bir örnek almak ve yalnızca bir örnekten bu dağıtım hakkında bilgi edinmek istediğiniz her şeyi öğrenmek için en uygun bir Cloner kullanabilirsiniz.
 Bu, bir para ve gözbaşları çevirmiş ve sonra yanıt vermeye yönelik bir arkadaşla karşılaşmanız durumunda "Ah 'nin dağıtımı $ p = 0.512643 \ Lnoktalarla Bernoulli olmalıdır $ !"  Bu tür bir ifade, bir veya daha fazla bilgi olmadan dağıtımı kodlamak için gereken pek çok bilgi sağlamadığı için sensik olmayan bir ifadedir.
 Benzer şekilde, önceki bilgiler olmadan, bu tür kodların her birini bilmeksizin bir şekilde hazırlayamazmız gibi, bir hisse bilgisini kusursuz bir şekilde klonlayamıyoruz $ $ .
 
 Bilgiler hisse bilgi işlem ortamında ücretsizdir.
-Ölçülen her bir qubit, tek bir bilgi verir ve kopyalama olmaması durumunda, sistem hakkında elde edilen bilgiler ve üzerinde çağrılan saldırgan arasındaki temel zorunluluğunu getirir etrafında elde etmek için kullanılabilecek bir biriktirme listesi olmadığını gösterir.
+Ölçülen her bir qubit, tek bir bilgi verir ve No-Cloning, bu, sistem hakkında elde edilen bilgiler ve üzerinde çağrılan rahatsız edici temel zorunluluğunu getirir etrafında elde etmek için kullanılabilecek bir arka kapı olmadığını gösterir.
