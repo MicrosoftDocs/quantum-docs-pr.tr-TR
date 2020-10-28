@@ -1,0 +1,374 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >+
+    > [!WARNING]
+
+    > AbsB kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.AbsL> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.absl" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.AbsB
+- summary: >+
+    > [!WARNING]
+
+    > AbsD kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.AbsD> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.absd" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.AbsD
+- summary: >+
+    > [!WARNING]
+
+    > Absı kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.AbsI> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.absi" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.AbsI
+- summary: >+
+    > [!WARNING]
+
+    > ArcCos kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.ArcCos> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.arccos" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcCos
+- summary: >+
+    > [!WARNING]
+
+    > ArcSin kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.ArcSin> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.arcsin" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcSin
+- summary: >+
+    > [!WARNING]
+
+    > ArcTan kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.ArcTan> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.arctan" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcTan
+- summary: >+
+    > [!WARNING]
+
+    > ArcTan2 kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.ArcTan2> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.arctan2" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcTan2
+- summary: >+
+    > [!WARNING]
+
+    > Tavan kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.Ceiling> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.ceiling" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.Ceiling
+- summary: >+
+    > [!WARNING]
+
+    > Cos kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.Cos> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.cos" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.Cos
+- summary: >+
+    > [!WARNING]
+
+    > Cosh kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.Cosh> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.cosh" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.Cosh
+- summary: >+
+    > [!WARNING]
+
+    > DivRemB kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.DivRemL> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.divreml" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.DivRemB
+- summary: >+
+    > [!WARNING]
+
+    > E kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.E> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.e" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.E
+- summary: >+
+    > [!WARNING]
+
+    > ExpD kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.ExpD> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.expd" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.ExpD
+- summary: >+
+    > [!WARNING]
+
+    > Kat kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.Floor> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.floor" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.Floor
+- summary: >+
+    > [!WARNING]
+
+    > IEEERemainder kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.IEEERemainder> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.ieeeremainder" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.IEEERemainder
+- summary: >+
+    > [!WARNING]
+
+    > Günlük kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.Log> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.log" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.Log
+- summary: >+
+    > [!WARNING]
+
+    > Log10 kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.Log10> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.log10" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.Log10
+- summary: >+
+    > [!WARNING]
+
+    > MaxB kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.MaxL> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.maxl" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.MaxB
+- summary: >+
+    > [!WARNING]
+
+    > MaxD kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.MaxD> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.maxd" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.MaxD
+- summary: >+
+    > [!WARNING]
+
+    > MAXI kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.MaxI> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.maxi" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.MaxI
+- summary: >+
+    > [!WARNING]
+
+    > MinB kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.MinL> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.minl" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.MinB
+- summary: >+
+    > [!WARNING]
+
+    > Göz önünde bulundurularak kullanım dışı bırakılmıştır. Lütfen <xref:Microsoft.Quantum.Math.MinD> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.mind" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.MinD
+- summary: >+
+    > [!WARNING]
+
+    > MinI kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.MinI> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.mini" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.MinI
+- summary: >+
+    > [!WARNING]
+
+    > Modpgb kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.ModPowL> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.modpowl" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.ModPowB
+- summary: >+
+    > [!WARNING]
+
+    > PI kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.PI> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.pi" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.PI
+- summary: >+
+    > [!WARNING]
+
+    > PMD kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.PowD> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.powd" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.PowD
+- summary: >+
+    > [!WARNING]
+
+    > Yuvarlak kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.Round> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.round" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.Round
+- summary: >+
+    > [!WARNING]
+
+    > SignB kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.SignL> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.signl" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.SignB
+- summary: >+
+    > [!WARNING]
+
+    > SignD kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.SignD> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.signd" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.SignD
+- summary: >+
+    > [!WARNING]
+
+    > Signı kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.SignI> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.signi" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.SignI
+- summary: >+
+    > [!WARNING]
+
+    > Sin kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.Sin> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.sin" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.Sin
+- summary: >+
+    > [!WARNING]
+
+    > Sinh kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.Sinh> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.sinh" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.Sinh
+- summary: >+
+    > [!WARNING]
+
+    > Sqrt kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.Sqrt> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.sqrt" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.Sqrt
+- summary: >+
+    > [!WARNING]
+
+    > Tan kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.Tan> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.tan" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.Tan
+- summary: >+
+    > [!WARNING]
+
+    > Tanh kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.Tanh> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.tanh" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.Tanh
+- summary: >+
+    > [!WARNING]
+
+    > Kesme kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Math.Truncate> bunun yerine kullanın.
+
+    >
+
+    > Lütfen @"microsoft.quantum.math.truncate" kullanın.
+
+  uid: Microsoft.Quantum.Extensions.Math.Truncate
+name: Microsoft.Quantum.Extensions.Math
+newtypes: []
+operations: []
+summary: ''
+uid: Microsoft.Quantum.Extensions.Math
+metadata:
+  ms.openlocfilehash: c07f137eaca95237d581691008c614025dd35a1d
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92726953"

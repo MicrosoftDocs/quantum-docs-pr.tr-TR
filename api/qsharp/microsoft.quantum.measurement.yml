@@ -1,0 +1,32 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.Measurement
+newtypes: []
+operations:
+- summary: ''
+  uid: Microsoft.Quantum.Measurement.BasisChangeZtoY
+- summary: X temelinde tek bir qubit ölçer ve ölçüyü izleyen sabit bir başlangıç durumuna sıfırlar.
+  uid: Microsoft.Quantum.Measurement.MResetX
+- summary: Y temelinde tek bir qubit ölçer ve ölçüyü izleyen sabit bir başlangıç durumuna sıfırlar.
+  uid: Microsoft.Quantum.Measurement.MResetY
+- summary: Z tabanında tek bir qubit ölçer ve ölçüyü izleyen sabit bir başlangıç durumuna sıfırlar.
+  uid: Microsoft.Quantum.Measurement.MResetZ
+- summary: Çiçek bir qubitlerin bir kaydını Pauli Z temelinde ölçer.
+  uid: Microsoft.Quantum.Measurement.MeasureAllZ
+- summary: Multi-qubitpauli işleçleri dizisi verildiğinde, her birini belirtilen ölçüm aracını kullanarak ölçer ve sonra sonuçların dizisini döndürür.
+  uid: Microsoft.Quantum.Measurement.MeasurePaulis
+- summary: Ölçüyü gerçekleştirmek için açık bir karalama qubit kullanarak verilen Pauli işlecini ölçer.
+  uid: Microsoft.Quantum.Measurement.MeasureWithScratch
+- summary: Belirli bir dizide her bir qubit ' i standart temelinde ölçer.
+  uid: Microsoft.Quantum.Measurement.MultiM
+- summary: Qubit ' i ölçerek ve gerekirse bir bit çevirme uygulayarak belirli bir hesaplama tabanlı duruma bir qubit ayarlar.
+  uid: Microsoft.Quantum.Measurement.SetToBasisState
+summary: ''
+uid: Microsoft.Quantum.Measurement
+metadata:
+  ms.openlocfilehash: f35f2867ca9fd68cbc0fbc0cf3d386d441adbaa7
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92726191"
