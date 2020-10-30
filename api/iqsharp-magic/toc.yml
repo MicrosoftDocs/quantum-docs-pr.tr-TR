@@ -26,6 +26,8 @@
   name: '%chemistry.inputstate.load magic komutu'
 - href: config.md
   name: '%config magic komutu'
+- href: debug.md
+  name: '%debug magic komutu'
 - href: estimate.md
   name: '%estimate magic komutu'
 - href: kata.md
