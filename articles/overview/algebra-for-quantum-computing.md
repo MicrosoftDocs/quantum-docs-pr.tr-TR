@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.algebra
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bff1da475f87278bc9e769805b3fe0fe8704d47a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 3e6700acc09adf9e2e771f6289c73ad51aa2cb90
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835137"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692249"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Kuantum bilişimi için doğrusal cebir
 
@@ -41,7 +41,7 @@ $$\begin{bmatrix} 1 \\\\  0 \end{bmatrix}, \begin{bmatrix} 0 \\\\  1 \end{bmatri
 Matris çarpımı ile temsil edilen iki yaygın kuantum işlemi aşağıda verilmiştir.
 
 
-[`X` işlemi](xref:microsoft.quantum.intrinsic.x), Pauli matrisi $X$,
+[`X` işlemi](xref:Microsoft.Quantum.Intrinsic.X), Pauli matrisi $X$,
 
 $$X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix},$$
     
@@ -49,7 +49,7 @@ ile temsil edilir ve bir kubitin durumunu 0'dan 1'e (veya tam tersi) çevirmek i
 
 $$\begin{bmatrix}0 &1\\\\ 1 &0\end{bmatrix}\begin{bmatrix} 1 \\\\  0 \end{bmatrix} = \begin{bmatrix} 0 \\\\  1 \end{bmatrix}.$$
 
-['H' işlemi](xref:microsoft.quantum.intrinsic.h), Hadamard dönüştürme $H$,
+['H' işlemi](xref:Microsoft.Quantum.Intrinsic.H), Hadamard dönüştürme $H$,
 
 $$H = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix},$$
 
@@ -57,7 +57,7 @@ $$H = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix},$$
 
 $$\frac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix}\begin{bmatrix} 1 \\\\  0 \end{bmatrix}=\frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\\\  1 \end{bmatrix}=\left(\frac{1}{\sqrt{2}}\right)^2=\frac{1}{2}.$$
 
-Bir kuantum işlemini temsil eden matrisin tek bir gereksinimi vardır: Bir **birim** matris olmalıdır. Matrisin **tersi**, matrisin **eşlenik devriğine** eşitse bu bir birim matristir.
+Bir kuantum işlemini temsil eden matrisin tek bir gereksinimi vardır: Bir **birim** matris olmalıdır. Matrisin **tersi** , matrisin **eşlenik devriğine** eşitse bu bir birim matristir.
 
 ## <a name="representing-two-qubit-states"></a>İki kubitli durumları temsil etme
 
