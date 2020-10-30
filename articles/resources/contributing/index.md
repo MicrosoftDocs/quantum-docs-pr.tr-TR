@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0fbbe127b9f4c6b98bdc2cf0e46098bf40a816e3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a8a527df59bd7ee038de71e04003cf456b094afb
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866868"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691762"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Quantum Development Kit’e katkı yapma
 
@@ -59,6 +59,7 @@ Bu farklı parçaların her birinin ana unsuru farklı bir depoda bulunur; bu ne
 - [**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler): Q# derleyicisi, Visual Studio uzantısı ve Visual Studio Code uzantısı.
 - [**microsoft/qsharp-runtime**](https://github.com/microsoft/qsharp-runtime): Quantum Development Kit için simülasyon çerçevesi, kod oluşturma ve simülasyon hedef makineleri.
 - [**microsoft/iqsharp**](https://github.com/microsoft/iqsharp): Q# için Jupyter çekirdeği ve Python konak işlevinin yanı sıra bulut ortamlarında IQ# kullanmak için Docker görüntüleri.
+- [**microsoft/qsharp-language**](https://github.com/microsoft/qsharp-language): Burası yeni Q# özelliklerinin geliştirilip belirtildiği, ayrıca Q# dilinin ve çekirdek kitaplıklarının gelecekteki evrimiyle ilgili fikirlerinizi ve önerilerinizi paylaşabileceğiniz yerdir.
 - [**MicrosoftDocs/quantum-docs-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr): https://docs.microsoft.com/quantum adresinde yayımlanan belgeler için kaynak kodu.
 
 > [!NOTE]
