@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fae603a81f8edc23ab8dc14277c5e3c4699f2cee
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d38482be17e67f180441440ee8ccc7f1f64ebc9d
+ms.sourcegitcommit: fb75d8f30f1d91f644b2a594f46867eb5968cfda
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691684"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94448353"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -23,6 +23,12 @@ Bu makale her Quantum Development Kit sürümüne ilişkin bilgileri içerir.
 Yükleme yönergeleri için bu [yükleme kılavuzuna](xref:microsoft.quantum.install) başvurun.
 
 Güncelleştirme yönergeleri için bu [güncelleştirme kılavuzuna](xref:microsoft.quantum.update) başvurun.
+
+## <a name="version-01320111004"></a>Sürüm 0.13.20111004
+
+*Yayın tarihi: 10 Kasım 2020*
+
+Bu sürüm, Visual Studio 'daki dosyalar için IntelliSense özelliklerini devre dışı bırakır Q# ve proje dosyası mevcut olmadığında Visual Studio Code. Bu, bir projeye yeni bir dosya eklendikten sonra IntelliSense özelliklerinin çalışmayı durdurulabileceği bir sorunu çözer Q# (bkz. [qsharp-Compiler # 720](https://github.com/microsoft/qsharp-compiler/issues/720)).
 
 ## <a name="version-01320102604"></a>Sürüm 0.13.20102604
 
@@ -366,7 +372,7 @@ Q#Hisse geliştirme setinin 0,5 sürümünden mevcut projeler varsa, bu projeler
 > * 0\.6 sürümü için, Quantum Development Kit ile sunulan dil sunucusu birden fazla çalışma alanını desteklemez.
 > * Visual Studio Code’da bir proje üzerinde çalışmak için projeyi içeren kök klasörü ve başvurulan tüm projeleri açın.   
 > * Visual Studio Code’da bir çözüm üzerinde çalışmak için çözümde yer alan tüm projelerin çözüm ile aynı klasörde veya bunun bir alt klasöründe olması gerekir.  
-> * 0\.6 veya daha yeni bir sürüme geçirilen projeler ve eski paket sürümlerini kullanan projelerin arasındaki başvurular **desteklenmez** .
+> * 0\.6 veya daha yeni bir sürüme geçirilen projeler ve eski paket sürümlerini kullanan projelerin arasındaki başvurular **desteklenmez**.
 
 ## <a name="version-051904"></a>Sürüm 0.5.1904
 
