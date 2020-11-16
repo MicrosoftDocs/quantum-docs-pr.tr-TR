@@ -1,14 +1,14 @@
 ---
-title: :::no-loc(Q#):::Standart liçlerin akış denetimleri
-description: "Microsoft standart kitaplığı 'ndaki Flow denetim işlemleri ve işlevleri hakkında bilgi edinin :::no-loc(Q#)::: ."
+title: Q#Standart liçlerin akış denetimleri
+description: "Microsoft standart kitaplığı 'ndaki Flow denetim işlemleri ve işlevleri hakkında bilgi edinin Q# ."
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -19,7 +19,7 @@ ms.locfileid: "92690865"
 # <a name="higher-order-control-flow"></a><span data-ttu-id="0a689-103">Denetim akışı Higher-Order</span><span class="sxs-lookup"><span data-stu-id="0a689-103">Higher-Order Control Flow</span></span> #
 
 <span data-ttu-id="0a689-104">Standart kitaplığın birincil rollerinden biri, yüksek düzey algoritmik fikirlerinin [hisse programları](https://en.wikipedia.org/wiki/Quantum_programming)olarak hızlı bir şekilde yönetilmesini kolaylaştırmaktır.</span><span class="sxs-lookup"><span data-stu-id="0a689-104">One of the primary roles of the standard library is to make it easier to express high-level algorithmic ideas as [quantum programs](https://en.wikipedia.org/wiki/Quantum_programming).</span></span>
-<span data-ttu-id="0a689-105">Bu nedenle, :::no-loc(Q#)::: Canon işlevlerin ve işlemlerin kısmi uygulaması kullanılarak uygulanan çeşitli farklı akış denetim yapıları sağlar.</span><span class="sxs-lookup"><span data-stu-id="0a689-105">Thus, the :::no-loc(Q#)::: canon provides a variety of different flow control constructs, each implemented using partial application of functions and operations.</span></span>
+<span data-ttu-id="0a689-105">Bu nedenle, Q# Canon işlevlerin ve işlemlerin kısmi uygulaması kullanılarak uygulanan çeşitli farklı akış denetim yapıları sağlar.</span><span class="sxs-lookup"><span data-stu-id="0a689-105">Thus, the Q# canon provides a variety of different flow control constructs, each implemented using partial application of functions and operations.</span></span>
 <span data-ttu-id="0a689-106">Bir örneğe hemen atlamak için, bir kasada "CNOT merdiveni" oluşturmak istediği durumu düşünün:</span><span class="sxs-lookup"><span data-stu-id="0a689-106">Jumping immediately into an example, consider the case in which one wants to construct a "CNOT ladder" on a register:</span></span>
 
 ```qsharp
@@ -50,7 +50,7 @@ ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
 
 <span data-ttu-id="0a689-111">Canon tarafından sunulan birincil soyutlamalar yinelemeden biridir.</span><span class="sxs-lookup"><span data-stu-id="0a689-111">One of the primary abstractions provided by the canon is that of iteration.</span></span>
 <span data-ttu-id="0a689-112">Örneğin, tek bir-qubit Unitary $U $ için $U \otimes U \otimes \cnoktalar \otimes U $ biçiminde bir Unitary değerini düşünün.</span><span class="sxs-lookup"><span data-stu-id="0a689-112">For instance, consider a unitary of the form $U \otimes U \otimes \cdots \otimes U$ for a single-qubit unitary $U$.</span></span>
-<span data-ttu-id="0a689-113">:::no-loc(Q#):::' De, <xref:Microsoft.Quantum.Arrays.IndexRange> bunu `for` bir yazmaç üzerinde döngü olarak göstermek için kullanabiliriz:</span><span class="sxs-lookup"><span data-stu-id="0a689-113">In :::no-loc(Q#):::, we might use <xref:Microsoft.Quantum.Arrays.IndexRange> to represent this as as a `for` loop over a register:</span></span>
+<span data-ttu-id="0a689-113">Q#' De, <xref:Microsoft.Quantum.Arrays.IndexRange> bunu `for` bir yazmaç üzerinde döngü olarak göstermek için kullanabiliriz:</span><span class="sxs-lookup"><span data-stu-id="0a689-113">In Q#, we might use <xref:Microsoft.Quantum.Arrays.IndexRange> to represent this as as a `for` loop over a register:</span></span>
 
 ```qsharp
 /// # Summary
@@ -91,7 +91,7 @@ ApplyToEachCA(Adjoint U, register);
 > <span data-ttu-id="0a689-124">Ardından `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` , `code` `recoveryFn` her bloğa bağımsız olarak hata düzeltme kodu ve kurtarma işlevi uygular.</span><span class="sxs-lookup"><span data-stu-id="0a689-124">Then `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` will apply the error-correcting code `code` and recovery function `recoveryFn` to each block independently.</span></span>
 > <span data-ttu-id="0a689-125">Bu, klasik girişler için bile geçerlidir: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` $ \pı/$2 yaklaşık $X $, ardından $Y $ hakkında $Pi/$3 dönüşü uygular.</span><span class="sxs-lookup"><span data-stu-id="0a689-125">This holds even for classical inputs: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` will apply a rotation of $\pi / 2$ about $X$ followed by a rotation of $pi / 3$ about $Y$.</span></span>
 
-<span data-ttu-id="0a689-126">:::no-loc(Q#):::Canon, işlevsel programlamaya tanıdık olan klasik numaralandırma desenleri için de destek sağlar.</span><span class="sxs-lookup"><span data-stu-id="0a689-126">The :::no-loc(Q#)::: canon also provides support for classical enumeration patterns familiar to functional programming.</span></span>
+<span data-ttu-id="0a689-126">Q#Canon, işlevsel programlamaya tanıdık olan klasik numaralandırma desenleri için de destek sağlar.</span><span class="sxs-lookup"><span data-stu-id="0a689-126">The Q# canon also provides support for classical enumeration patterns familiar to functional programming.</span></span>
 <span data-ttu-id="0a689-127">Örneğin, bir <xref:Microsoft.Quantum.Arrays.Fold> \_ \_ \_ liste üzerinde bir işlevi azaltmak için $f (f (f (s {\Text{Initial}}, x 0), \noktalar) $ düzenini uygular.</span><span class="sxs-lookup"><span data-stu-id="0a689-127">For instance, <xref:Microsoft.Quantum.Arrays.Fold> implements the pattern $f(f(f(s\_{\text{initial}}, x\_0), x\_1), \dots)$ for reducing a function over a list.</span></span>
 <span data-ttu-id="0a689-128">Bu model toplamları, ürünleri, Minima, MAXIMA ve diğer benzeri işlevleri uygulamak için kullanılabilir:</span><span class="sxs-lookup"><span data-stu-id="0a689-128">This pattern can be used to implement sums, products, minima, maxima and other such functions:</span></span>
 
@@ -103,7 +103,7 @@ function Sum(xs : Int[]) {
 }
 ```
 
-<span data-ttu-id="0a689-129">Benzer şekilde, ve gibi işlevler ' <xref:Microsoft.Quantum.Arrays.Mapped> <xref:Microsoft.Quantum.Arrays.MappedByIndex> de fonksiyonel programlama kavramlarını ifade etmek için kullanılabilir :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="0a689-129">Similarly, functions like <xref:Microsoft.Quantum.Arrays.Mapped> and <xref:Microsoft.Quantum.Arrays.MappedByIndex> can be used to express functional programming concepts in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="0a689-129">Benzer şekilde, ve gibi işlevler ' <xref:Microsoft.Quantum.Arrays.Mapped> <xref:Microsoft.Quantum.Arrays.MappedByIndex> de fonksiyonel programlama kavramlarını ifade etmek için kullanılabilir Q# .</span><span class="sxs-lookup"><span data-stu-id="0a689-129">Similarly, functions like <xref:Microsoft.Quantum.Arrays.Mapped> and <xref:Microsoft.Quantum.Arrays.MappedByIndex> can be used to express functional programming concepts in Q#.</span></span>
 
 ## <a name="composing-operations-and-functions"></a><span data-ttu-id="0a689-130">Işlemleri ve Işlevleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="0a689-130">Composing Operations and Functions</span></span> ##
 
@@ -173,7 +173,7 @@ U(1, time / Float(nSteps), target);
 DecomposeIntoTimeStepsCA((2, U), 1);
 ```
 
-<span data-ttu-id="0a689-159">' İn imzası `DecomposeIntoTimeStepsCA` , ' deki ortak bir örüntü :::no-loc(Q#)::: , burada, diziler tarafından desteklenen koleksiyonlar veya bir öğe, ilk öğeleri `Int` değerlerinin uzunluğunu belirten değerler olan tanımlama grupları tarafından temsil edilir.</span><span class="sxs-lookup"><span data-stu-id="0a689-159">The signature of `DecomposeIntoTimeStepsCA` follows a common pattern in :::no-loc(Q#):::, where collections that may be backed either by arrays or by something which compute elements on the fly are represented by tuples whose first elements are `Int` values indicating their lengths.</span></span>
+<span data-ttu-id="0a689-159">' İn imzası `DecomposeIntoTimeStepsCA` , ' deki ortak bir örüntü Q# , burada, diziler tarafından desteklenen koleksiyonlar veya bir öğe, ilk öğeleri `Int` değerlerinin uzunluğunu belirten değerler olan tanımlama grupları tarafından temsil edilir.</span><span class="sxs-lookup"><span data-stu-id="0a689-159">The signature of `DecomposeIntoTimeStepsCA` follows a common pattern in Q#, where collections that may be backed either by arrays or by something which compute elements on the fly are represented by tuples whose first elements are `Int` values indicating their lengths.</span></span>
 
 ## <a name="putting-it-together-controlling-operations"></a><span data-ttu-id="0a689-160">Birlikte yerleştirme: Işlemleri denetleme</span><span class="sxs-lookup"><span data-stu-id="0a689-160">Putting it Together: Controlling Operations</span></span> ##
 
@@ -218,7 +218,7 @@ operation _ControlledOnBitString(
 
 <span data-ttu-id="0a689-177">Bu noktada yapılabiliriz, ancak yeni operasyonumuzın, functor uygulama gibi "uygun değil" olarak karşılanmıyor `Controlled` .</span><span class="sxs-lookup"><span data-stu-id="0a689-177">At this point, we could be done, but it is somehow unsatisfying that our new operation does not "feel" like applying the `Controlled` functor.</span></span>
 <span data-ttu-id="0a689-178">Bu nedenle, Oracle 'ın denetlenmesi ve yeni bir işlem döndürmesi için geçen bir işlev yazarak yeni denetim akışı kavramımız tanımlamayı tamamlayacağız.</span><span class="sxs-lookup"><span data-stu-id="0a689-178">Thus, we finish defining our new control flow concept by writing a function that takes the oracle to be controlled and that returns a new operation.</span></span>
-<span data-ttu-id="0a689-179">Bu şekilde, yeni işlevimiz, `Controlled` ve Canon 'yi kullanarak güçlü yeni denetim akışı yapılarını kolayca tanımlayabiliriz :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="0a689-179">In this way, our new function looks and feels very much like `Controlled`, illustrating that we can easily define powerful new control flow constructs using :::no-loc(Q#)::: and the canon together:</span></span>
+<span data-ttu-id="0a689-179">Bu şekilde, yeni işlevimiz, `Controlled` ve Canon 'yi kullanarak güçlü yeni denetim akışı yapılarını kolayca tanımlayabiliriz Q# .</span><span class="sxs-lookup"><span data-stu-id="0a689-179">In this way, our new function looks and feels very much like `Controlled`, illustrating that we can easily define powerful new control flow constructs using Q# and the canon together:</span></span>
 
 ```qsharp
 function ControlledOnBitString(

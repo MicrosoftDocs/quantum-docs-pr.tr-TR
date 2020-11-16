@@ -1,14 +1,14 @@
 ---
-title: 'İçindeki değişkenler :::no-loc(Q#):::'
-description: "' De farklı değişkenlerle çalışmayı öğrenin :::no-loc(Q#):::"
+title: 'İçindeki değişkenler Q#'
+description: "' De farklı değişkenlerle çalışmayı öğrenin Q#"
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 67c71c09e004d77360902360fefc7a7752e4a829
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,16 +16,16 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92690929"
 ---
-# <a name="variables-in-no-locq"></a><span data-ttu-id="34fbd-103">İçindeki değişkenler :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="34fbd-103">Variables in :::no-loc(Q#):::</span></span>
+# <a name="variables-in-no-locq"></a><span data-ttu-id="34fbd-103">İçindeki değişkenler Q#</span><span class="sxs-lookup"><span data-stu-id="34fbd-103">Variables in Q#</span></span>
 
-<span data-ttu-id="34fbd-104">:::no-loc(Q#)::: değişebilir ve değişmez semboller ya da ifadelerle sınırlanan/atanan *değişkenler* arasında ayrım yapar.</span><span class="sxs-lookup"><span data-stu-id="34fbd-104">:::no-loc(Q#)::: distinguishes between mutable and immutable symbols, or *variables* , which are bound/assigned to expressions.</span></span>
+<span data-ttu-id="34fbd-104">Q# değişebilir ve değişmez semboller ya da ifadelerle sınırlanan/atanan *değişkenler* arasında ayrım yapar.</span><span class="sxs-lookup"><span data-stu-id="34fbd-104">Q# distinguishes between mutable and immutable symbols, or *variables* , which are bound/assigned to expressions.</span></span>
 <span data-ttu-id="34fbd-105">Genellikle, derleyicinin daha iyi iyileştirmeler gerçekleştirmesini sağladığından, değişmez sembollerin kullanılması önerilir.</span><span class="sxs-lookup"><span data-stu-id="34fbd-105">In general, the use of immutable symbols is encouraged because it allows the compiler to perform more optimizations.</span></span>
 
 <span data-ttu-id="34fbd-106">Bir bağlamanın sol tarafı bir sembol tanımlama grubu ve bir ifadenin sağ tarafından oluşur.</span><span class="sxs-lookup"><span data-stu-id="34fbd-106">The left-hand-side of a binding consists of a symbol tuple and the right-hand side of an expression.</span></span>
 
 ## <a name="immutable-variables"></a><span data-ttu-id="34fbd-107">Sabit değişkenler</span><span class="sxs-lookup"><span data-stu-id="34fbd-107">Immutable Variables</span></span>
 
-<span data-ttu-id="34fbd-108">İçinde herhangi bir türde bir değeri bir :::no-loc(Q#)::: işlem veya işlev içinde yeniden kullanmak için anahtar sözcüğünü kullanarak bir değişkene atayabilirsiniz `let` .</span><span class="sxs-lookup"><span data-stu-id="34fbd-108">You can assign a value of any type in :::no-loc(Q#)::: to a variable for reuse within an operation or function by using the `let` keyword.</span></span> 
+<span data-ttu-id="34fbd-108">İçinde herhangi bir türde bir değeri bir Q# işlem veya işlev içinde yeniden kullanmak için anahtar sözcüğünü kullanarak bir değişkene atayabilirsiniz `let` .</span><span class="sxs-lookup"><span data-stu-id="34fbd-108">You can assign a value of any type in Q# to a variable for reuse within an operation or function by using the `let` keyword.</span></span> 
 
 <span data-ttu-id="34fbd-109">Değişmez bir bağlama anahtar sözcükten `let` , ardından bir sembol veya sembol kümesi, eşittir işareti `=` , sembolleri bağlamak için bir ifade ve sondaki noktalı virgülden oluşur.</span><span class="sxs-lookup"><span data-stu-id="34fbd-109">An immutable binding consists of the keyword `let`, followed by a symbol or symbol tuple, an equals sign `=`, an expression to bind the symbol(s) to, and a terminating semicolon.</span></span>
 
@@ -110,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-<span data-ttu-id="34fbd-134">Diziler söz konusu olduğunda, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) :::no-loc(Q#)::: Standart kitaplıkta birçok yaygın dizi başlatma ve işleme ihtiyacı için gerekli araçlar sağlanır ve bu sayede dizi öğelerini ilk yerde güncelleştirmek zorunda kalmamak için yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="34fbd-134">In the case of arrays, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) in the :::no-loc(Q#)::: standard library provides the necessary tools for many common array initialization and manipulation needs, and thus helps avoid having to update array items in the first place.</span></span> 
+<span data-ttu-id="34fbd-134">Diziler söz konusu olduğunda, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) Q# Standart kitaplıkta birçok yaygın dizi başlatma ve işleme ihtiyacı için gerekli araçlar sağlanır ve bu sayede dizi öğelerini ilk yerde güncelleştirmek zorunda kalmamak için yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="34fbd-134">In the case of arrays, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) in the Q# standard library provides the necessary tools for many common array initialization and manipulation needs, and thus helps avoid having to update array items in the first place.</span></span> 
 
 <span data-ttu-id="34fbd-135">Update-ve-yeniden ata deyimleri gerekirse bir alternatif sağlar:</span><span class="sxs-lookup"><span data-stu-id="34fbd-135">Update-and-reassign statements provide an alternative if needed:</span></span>
 
@@ -239,4 +239,4 @@ if (a == b) {
 
 ## <a name="next-steps"></a><span data-ttu-id="34fbd-158">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="34fbd-158">Next steps</span></span>
 
-<span data-ttu-id="34fbd-159">' De [qubits Ile çalışma](xref:microsoft.quantum.guide.qubits) hakkında bilgi edinin :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="34fbd-159">Learn about [Working With Qubits](xref:microsoft.quantum.guide.qubits) in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="34fbd-159">' De [qubits Ile çalışma](xref:microsoft.quantum.guide.qubits) hakkında bilgi edinin Q# .</span><span class="sxs-lookup"><span data-stu-id="34fbd-159">Learn about [Working With Qubits](xref:microsoft.quantum.guide.qubits) in Q#.</span></span>

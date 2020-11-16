@@ -1,14 +1,14 @@
 ---
 title: Temel işlem sayacı-hisse geliştirme seti
-description: 'Bir programdaki işlemler tarafından kullanılan temel işlemleri izlemek için hisse izi simülatörü kullanan Microsoft QDK temel işlem sayacı hakkında bilgi edinin :::no-loc(Q#)::: .'
+description: 'Bir programdaki işlemler tarafından kullanılan temel işlemleri izlemek için hisse izi simülatörü kullanan Microsoft QDK temel işlem sayacı hakkında bilgi edinin Q# .'
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: bf75eb94696a489a587316928bc3f33baa4a1785
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -34,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a><span data-ttu-id="cff5f-110">C# ana programında temel işlem sayacını kullanma</span><span class="sxs-lookup"><span data-stu-id="cff5f-110">Using the primitive operation counter in a C# host program</span></span>
 
-<span data-ttu-id="cff5f-111"><xref:Microsoft.Quantum.Intrinsic.T> <xref:Microsoft.Quantum.Intrinsic.ccnot> Aşağıdaki örnek koda bağlı olarak, bu bölümde aşağıdaki C# örneği, işlemi uygulamak için kaç işlem gerektiğini sayar :::no-loc(Q#)::: :</span><span class="sxs-lookup"><span data-stu-id="cff5f-111">The C# example that follows in this section counts how many <xref:Microsoft.Quantum.Intrinsic.T> operations are needed to implement the <xref:Microsoft.Quantum.Intrinsic.ccnot> operation, based on the following :::no-loc(Q#)::: sample code:</span></span>
+<span data-ttu-id="cff5f-111"><xref:Microsoft.Quantum.Intrinsic.T> <xref:Microsoft.Quantum.Intrinsic.ccnot> Aşağıdaki örnek koda bağlı olarak, bu bölümde aşağıdaki C# örneği, işlemi uygulamak için kaç işlem gerektiğini sayar Q# :</span><span class="sxs-lookup"><span data-stu-id="cff5f-111">The C# example that follows in this section counts how many <xref:Microsoft.Quantum.Intrinsic.T> operations are needed to implement the <xref:Microsoft.Quantum.Intrinsic.ccnot> operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

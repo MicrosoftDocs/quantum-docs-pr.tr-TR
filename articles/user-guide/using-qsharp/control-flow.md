@@ -1,5 +1,5 @@
 ---
-title: 'İçindeki denetim akışı :::no-loc(Q#):::'
+title: 'İçindeki denetim akışı Q#'
 description: Döngüler, koşullar, vb.
 author: gillenhaalb
 ms.author: a-gibec
@@ -7,8 +7,8 @@ ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: eca37202e5fe9b48dcfdec4eeb4ba6cafaac8723
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,7 +16,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92691092"
 ---
-# <a name="control-flow-in-no-locq"></a><span data-ttu-id="ca2c2-103">İçindeki denetim akışı :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="ca2c2-103">Control flow in :::no-loc(Q#):::</span></span>
+# <a name="control-flow-in-no-locq"></a><span data-ttu-id="ca2c2-103">İçindeki denetim akışı Q#</span><span class="sxs-lookup"><span data-stu-id="ca2c2-103">Control flow in Q#</span></span>
 
 <span data-ttu-id="ca2c2-104">Bir işlem veya işlev içinde, her bir ifade, diğer genel zorunlu klasik dillere benzer şekilde sırayla çalışır.</span><span class="sxs-lookup"><span data-stu-id="ca2c2-104">Within an operation or function, each statement runs in order, similar to other common imperative classical languages.</span></span>
 <span data-ttu-id="ca2c2-105">Ancak, denetim akışını üç farklı şekilde değiştirebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="ca2c2-105">However, you can modify the flow of control in three distinct ways:</span></span>
@@ -108,12 +108,12 @@ for ((index, measured) in results) { // iterates over the tuple values in result
 
 ## <a name="repeat-until-success-loop"></a><span data-ttu-id="ca2c2-140">Yineleme-Until-başarılı döngüsü</span><span class="sxs-lookup"><span data-stu-id="ca2c2-140">Repeat-until-success loop</span></span>
 
-<span data-ttu-id="ca2c2-141">:::no-loc(Q#):::Dil klasik denetim akışının, qubits 'in ölçüleriyle sonuçlanmasına bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="ca2c2-141">The :::no-loc(Q#)::: language allows classical control flow to depend on the results of measuring qubits.</span></span>
+<span data-ttu-id="ca2c2-141">Q#Dil klasik denetim akışının, qubits 'in ölçüleriyle sonuçlanmasına bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="ca2c2-141">The Q# language allows classical control flow to depend on the results of measuring qubits.</span></span>
 <span data-ttu-id="ca2c2-142">Bu özellik, sırasıyla, birimlere uygulama için hesaplama maliyetini azaltabilecekleri güçlü dayalı araçları uygulamaya olanak tanıyor.</span><span class="sxs-lookup"><span data-stu-id="ca2c2-142">This capability, in turn, enables implementing powerful probabilistic gadgets that can reduce the computational cost for implementing unitaries.</span></span>
-<span data-ttu-id="ca2c2-143">Bunun örnekleri, içindeki *yineleme-başarılı* (Rus) desenlerdir :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="ca2c2-143">Examples of this are the *repeat-until-success* (RUS) patterns in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="ca2c2-143">Bunun örnekleri, içindeki *yineleme-başarılı* (Rus) desenlerdir Q# .</span><span class="sxs-lookup"><span data-stu-id="ca2c2-143">Examples of this are the *repeat-until-success* (RUS) patterns in Q#.</span></span>
 <span data-ttu-id="ca2c2-144">Bu RUS desenleri, temel kapıların bakımından *beklenen* düşük maliyetli dayalı programlarıdır; tahakkuk eden maliyet, gerçek çalıştırmaya ve çoklu olası Branch'in araya yerleştirmesine bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="ca2c2-144">These RUS patterns are probabilistic programs that have an *expected* low cost in terms of elementary gates; the incurred cost depends on the actual run and the interleaving of the multiple possible branchings.</span></span>
 
-<span data-ttu-id="ca2c2-145">Yinele-başarılı (RUS) desenleri kolaylaştırmak için :::no-loc(Q#)::: yapıları destekler</span><span class="sxs-lookup"><span data-stu-id="ca2c2-145">To facilitate repeat-until-success (RUS) patterns, :::no-loc(Q#)::: supports the constructs</span></span>
+<span data-ttu-id="ca2c2-145">Yinele-başarılı (RUS) desenleri kolaylaştırmak için Q# yapıları destekler</span><span class="sxs-lookup"><span data-stu-id="ca2c2-145">To facilitate repeat-until-success (RUS) patterns, Q# supports the constructs</span></span>
 
 ```qsharp
 repeat {
@@ -151,9 +151,9 @@ until (expression);
 
 ## <a name="while-loop"></a><span data-ttu-id="ca2c2-157">while döngüsü</span><span class="sxs-lookup"><span data-stu-id="ca2c2-157">While loop</span></span>
 
-<span data-ttu-id="ca2c2-158">Yinele-Success desenlerinin çok hisse özgü bir connotation vardır.</span><span class="sxs-lookup"><span data-stu-id="ca2c2-158">Repeat-until-success patterns have a very quantum-specific connotation.</span></span> <span data-ttu-id="ca2c2-159">Bu değerler, ' de adanmış dil yapısı olan belirli hisse algoritmaları sınıflarında yaygın olarak kullanılırlar :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="ca2c2-159">They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in :::no-loc(Q#):::.</span></span> <span data-ttu-id="ca2c2-160">Ancak, bir koşula göre kesintiye uğratır ve bu nedenle derleme zamanında çalışma uzunluğu bilinmiyor döngüsü, bir hisse çalışma zamanında belirli bir durumla işlenir.</span><span class="sxs-lookup"><span data-stu-id="ca2c2-160">However, loops that break based on a condition and whose run length is thus unknown at compile-time, are handled with particular care in a quantum runtime.</span></span> <span data-ttu-id="ca2c2-161">Ancak, işlevleri içindeki kullanımları sorunlu değildir çünkü bu döngüler yalnızca geleneksel (hisse olmayan) donanımda çalışan bir kod içerir.</span><span class="sxs-lookup"><span data-stu-id="ca2c2-161">However, their use within functions is unproblematic since these loops only contain code that runs on conventional (non-quantum) hardware.</span></span> 
+<span data-ttu-id="ca2c2-158">Yinele-Success desenlerinin çok hisse özgü bir connotation vardır.</span><span class="sxs-lookup"><span data-stu-id="ca2c2-158">Repeat-until-success patterns have a very quantum-specific connotation.</span></span> <span data-ttu-id="ca2c2-159">Bu değerler, ' de adanmış dil yapısı olan belirli hisse algoritmaları sınıflarında yaygın olarak kullanılırlar Q# .</span><span class="sxs-lookup"><span data-stu-id="ca2c2-159">They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in Q#.</span></span> <span data-ttu-id="ca2c2-160">Ancak, bir koşula göre kesintiye uğratır ve bu nedenle derleme zamanında çalışma uzunluğu bilinmiyor döngüsü, bir hisse çalışma zamanında belirli bir durumla işlenir.</span><span class="sxs-lookup"><span data-stu-id="ca2c2-160">However, loops that break based on a condition and whose run length is thus unknown at compile-time, are handled with particular care in a quantum runtime.</span></span> <span data-ttu-id="ca2c2-161">Ancak, işlevleri içindeki kullanımları sorunlu değildir çünkü bu döngüler yalnızca geleneksel (hisse olmayan) donanımda çalışan bir kod içerir.</span><span class="sxs-lookup"><span data-stu-id="ca2c2-161">However, their use within functions is unproblematic since these loops only contain code that runs on conventional (non-quantum) hardware.</span></span> 
 
-<span data-ttu-id="ca2c2-162">:::no-loc(Q#):::Bu nedenle, yalnızca işlevler içindeki while döngülerinin kullanımını destekler.</span><span class="sxs-lookup"><span data-stu-id="ca2c2-162">:::no-loc(Q#):::, therefore, supports to use of while loops within functions only.</span></span>
+<span data-ttu-id="ca2c2-162">Q#Bu nedenle, yalnızca işlevler içindeki while döngülerinin kullanımını destekler.</span><span class="sxs-lookup"><span data-stu-id="ca2c2-162">Q#, therefore, supports to use of while loops within functions only.</span></span>
 <span data-ttu-id="ca2c2-163">Bir `while` deyim, anahtar sözcükten `while` , parantez içinde Boole ifadesiyle ve deyim bloğundan oluşur.</span><span class="sxs-lookup"><span data-stu-id="ca2c2-163">A `while` statement consists of the keyword `while`, a Boolean expression in parentheses, and a statement block.</span></span>
 <span data-ttu-id="ca2c2-164">Koşul bloğu (Döngünün gövdesi), koşulun değerlendirildiği sürece çalışır `true` .</span><span class="sxs-lookup"><span data-stu-id="ca2c2-164">The statement block (the body of the loop) runs as long as the condition evaluates to `true`.</span></span>
 
@@ -183,7 +183,7 @@ operation ApplyWith<'T>(
 }
 ```
 
-<span data-ttu-id="ca2c2-169">:::no-loc(Q#)::: önceki dönüştürmeyi uygulayan bir Birleşik veren ifadesini destekler.</span><span class="sxs-lookup"><span data-stu-id="ca2c2-169">:::no-loc(Q#)::: supports a conjugation statement that implements the preceding transformation.</span></span> <span data-ttu-id="ca2c2-170">Bu ifadeyi kullanarak, işlem `ApplyWith` aşağıdaki şekilde uygulanabilir:</span><span class="sxs-lookup"><span data-stu-id="ca2c2-170">Using that statement, the operation `ApplyWith` can be implemented in the following way:</span></span>
+<span data-ttu-id="ca2c2-169">Q# önceki dönüştürmeyi uygulayan bir Birleşik veren ifadesini destekler.</span><span class="sxs-lookup"><span data-stu-id="ca2c2-169">Q# supports a conjugation statement that implements the preceding transformation.</span></span> <span data-ttu-id="ca2c2-170">Bu ifadeyi kullanarak, işlem `ApplyWith` aşağıdaki şekilde uygulanabilir:</span><span class="sxs-lookup"><span data-stu-id="ca2c2-170">Using that statement, the operation `ApplyWith` can be implemented in the following way:</span></span>
 
 ```qsharp
 operation ApplyWith<'T>(
@@ -249,7 +249,7 @@ fail $"Syndrome {syn} is incorrect";
 
 ### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a><span data-ttu-id="ca2c2-193">Irrational Axis hakkında tek qubit döndürme için RUS stili</span><span class="sxs-lookup"><span data-stu-id="ca2c2-193">RUS pattern for single-qubit rotation about an irrational axis</span></span> 
 
-<span data-ttu-id="ca2c2-194">Tipik bir kullanım durumunda aşağıdaki :::no-loc(Q#)::: işlem, {5} Bloch Sphere üzerinde $ (I + 2ı Z)/\sqrt $ bir ırrational ekseninin etrafında bir döndürme uygular.</span><span class="sxs-lookup"><span data-stu-id="ca2c2-194">In a typical use case, the following :::no-loc(Q#)::: operation implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere.</span></span> <span data-ttu-id="ca2c2-195">Uygulama, bilinen bir RUS modelini kullanır:</span><span class="sxs-lookup"><span data-stu-id="ca2c2-195">The implementation uses a known RUS pattern:</span></span>
+<span data-ttu-id="ca2c2-194">Tipik bir kullanım durumunda aşağıdaki Q# işlem, {5} Bloch Sphere üzerinde $ (I + 2ı Z)/\sqrt $ bir ırrational ekseninin etrafında bir döndürme uygular.</span><span class="sxs-lookup"><span data-stu-id="ca2c2-194">In a typical use case, the following Q# operation implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere.</span></span> <span data-ttu-id="ca2c2-195">Uygulama, bilinen bir RUS modelini kullanır:</span><span class="sxs-lookup"><span data-stu-id="ca2c2-195">The implementation uses a known RUS pattern:</span></span>
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -375,4 +375,4 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 
 ## <a name="next-steps"></a><span data-ttu-id="ca2c2-210">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="ca2c2-210">Next steps</span></span>
 
-<span data-ttu-id="ca2c2-211">' De [test ve hata ayıklama](xref:microsoft.quantum.guide.testingdebugging) hakkında bilgi edinin :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="ca2c2-211">Learn about [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging) in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="ca2c2-211">' De [test ve hata ayıklama](xref:microsoft.quantum.guide.testingdebugging) hakkında bilgi edinin Q# .</span><span class="sxs-lookup"><span data-stu-id="ca2c2-211">Learn about [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging) in Q#.</span></span>

@@ -1,14 +1,14 @@
 ---
-title: 'İçindeki ifadeler :::no-loc(Q#):::'
-description: "Sabitleri, değişkenleri, işleçleri, işlemleri ve işlevleri ' de ifade olarak belirtme, başvurma ve birleştirme işlemlerini anlayın :::no-loc(Q#)::: ."
+title: 'İçindeki ifadeler Q#'
+description: "Sabitleri, değişkenleri, işleçleri, işlemleri ve işlevleri ' de ifade olarak belirtme, başvurma ve birleştirme işlemlerini anlayın Q# ."
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: e95a7cb9b74136ef9a6f51b4bbc32d1d93c43a0d
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,17 +16,17 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92691596"
 ---
-# <a name="expressions-in-no-locq"></a><span data-ttu-id="8d9b3-103">İçindeki ifadeler :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="8d9b3-103">Expressions in :::no-loc(Q#):::</span></span>
+# <a name="expressions-in-no-locq"></a><span data-ttu-id="8d9b3-103">İçindeki ifadeler Q#</span><span class="sxs-lookup"><span data-stu-id="8d9b3-103">Expressions in Q#</span></span>
 
 ## <a name="numeric-expressions"></a><span data-ttu-id="8d9b3-104">Sayısal Ifadeler</span><span class="sxs-lookup"><span data-stu-id="8d9b3-104">Numeric Expressions</span></span>
 
 <span data-ttu-id="8d9b3-105">Sayısal ifadeler `Int` , veya türündeki ifadelerdir `BigInt` `Double` .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-105">Numeric expressions are expressions of type `Int`, `BigInt`, or `Double`.</span></span>
 <span data-ttu-id="8d9b3-106">Diğer bir deyişle, tamsayı veya kayan noktalı sayılardır.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-106">That is, they are either integer or floating-point numbers.</span></span>
 
-<span data-ttu-id="8d9b3-107">`Int` içindeki değişmez değerler :::no-loc(Q#)::: , bir dizi basamak olarak yazılmıştır.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-107">`Int` literals in :::no-loc(Q#)::: are written as a sequence of digits.</span></span>
+<span data-ttu-id="8d9b3-107">`Int` içindeki değişmez değerler Q# , bir dizi basamak olarak yazılmıştır.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-107">`Int` literals in Q# are written as a sequence of digits.</span></span>
 <span data-ttu-id="8d9b3-108">Onaltılık ve ikili tamsayılar desteklenir ve `0x` sırasıyla bir ve önekiyle yazılır `0b` .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-108">Hexadecimal and binary integers are supported and written with a `0x` and `0b` prefix, respectively.</span></span>
 
-<span data-ttu-id="8d9b3-109">`BigInt` içindeki değişmez değerler :::no-loc(Q#)::: sonunda `l` veya `L` soneke sahiptir.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-109">`BigInt` literals in :::no-loc(Q#)::: have a trailing `l` or `L` suffix.</span></span>
+<span data-ttu-id="8d9b3-109">`BigInt` içindeki değişmez değerler Q# sonunda `l` veya `L` soneke sahiptir.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-109">`BigInt` literals in Q# have a trailing `l` or `L` suffix.</span></span>
 <span data-ttu-id="8d9b3-110">Onaltılık büyük tamsayılar desteklenir ve "0x" önekiyle yazılır.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-110">Hexadecimal big integers are supported and written with a "0x" prefix.</span></span>
 <span data-ttu-id="8d9b3-111">Bu nedenle, tüm geçerli sabit değer kullanımları aşağıda verilmiştir `BigInt` :</span><span class="sxs-lookup"><span data-stu-id="8d9b3-111">Thus, the following are all valid uses of `BigInt` literals:</span></span>
 
@@ -36,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-<span data-ttu-id="8d9b3-112">`Double` içindeki değişmez değerler :::no-loc(Q#)::: , ondalık basamaklar kullanılarak yazılan kayan nokta sayılarıdır.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-112">`Double` literals in :::no-loc(Q#)::: are floating-point numbers written using decimal digits.</span></span>
+<span data-ttu-id="8d9b3-112">`Double` içindeki değişmez değerler Q# , ondalık basamaklar kullanılarak yazılan kayan nokta sayılarıdır.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-112">`Double` literals in Q# are floating-point numbers written using decimal digits.</span></span>
 <span data-ttu-id="8d9b3-113">Bunlar ondalık bir nokta veya ya da ya da " `.` e" ya da "e" ya da bir üstel bölüm (yalnızca olası bir negatif işaret ve ondalık basamakların geçerli olması) ile yazılmış veya olmadan yazılabilir.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-113">They can be written with or without a decimal point, `.`, or an exponential part indicated with 'e' or 'E' (after which only a possible negative sign and decimal digits are valid).</span></span>
 <span data-ttu-id="8d9b3-114">Aşağıdakiler geçerli `Double` değişmez değerler: `0.0` , `1.2e5` , `1e-5` .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-114">The following are valid `Double` literals: `0.0`, `1.2e5`, `1e-5`.</span></span>
 
@@ -87,7 +87,7 @@ let bigOne = bigZero + 1L;
 <span data-ttu-id="8d9b3-157">Aynı ilkel türdeki iki ifade verildiğinde, `==` ve `!=` ikili işleçler bir ifade oluşturmak için kullanılabilir `Bool` .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-157">Given any two expressions of the same primitive type, the `==` and `!=` binary operators may be used to construct a `Bool` expression.</span></span>
 <span data-ttu-id="8d9b3-158">İki ifade eşitse true, değilse false şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-158">The expression is true if the two expressions are equal and false if not.</span></span>
 
-<span data-ttu-id="8d9b3-159">Kullanıcı tanımlı türlerin değerleri karşılaştırılamayabilir, yalnızca sarmalanmamış değerler karşılaştırılabilir.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-159">Values of user-defined types may not be compared, only their unwrapped values can be compared.</span></span> <span data-ttu-id="8d9b3-160">Örneğin, "sarmalama" işlecini kullanma `!` ( [içindeki :::no-loc(Q#)::: türlerde ](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)ayrıntılı olarak açıklanmıştır)</span><span class="sxs-lookup"><span data-stu-id="8d9b3-160">For example, using the "unwrap" operator `!` (explained in detail at [Types in :::no-loc(Q#):::](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),</span></span>
+<span data-ttu-id="8d9b3-159">Kullanıcı tanımlı türlerin değerleri karşılaştırılamayabilir, yalnızca sarmalanmamış değerler karşılaştırılabilir.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-159">Values of user-defined types may not be compared, only their unwrapped values can be compared.</span></span> <span data-ttu-id="8d9b3-160">Örneğin, "sarmalama" işlecini kullanma `!` ( [içindeki Q# türlerde ](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)ayrıntılı olarak açıklanmıştır)</span><span class="sxs-lookup"><span data-stu-id="8d9b3-160">For example, using the "unwrap" operator `!` (explained in detail at [Types in Q#](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),</span></span>
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -111,9 +111,9 @@ let t = x == y;               // This will cause a compiler error.
 
 ## <a name="string-expressions"></a><span data-ttu-id="8d9b3-169">Dize ifadeleri</span><span class="sxs-lookup"><span data-stu-id="8d9b3-169">String expressions</span></span>
 
-<span data-ttu-id="8d9b3-170">:::no-loc(Q#):::`fail`deyimde ( [Denetim akışında](xref:microsoft.quantum.guide.controlflow#fail-statement)açıklanmıştır) ve standart işlevde dizelerin kullanılmasına izin verir [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-170">:::no-loc(Q#)::: allows strings to be used in the `fail` statement (explained in [Control Flow](xref:microsoft.quantum.guide.controlflow#fail-statement)) and in the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) standard function.</span></span> <span data-ttu-id="8d9b3-171">İkinci öğesinin belirli davranışı kullanılan simülatöre bağlıdır, ancak genellikle bir program sırasında çağrıldığında ana bilgisayar konsoluna bir ileti yazar :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-171">The specific behavior of the latter depends on the simulator used but typically writes a message to the host console when called during a :::no-loc(Q#)::: program.</span></span>
+<span data-ttu-id="8d9b3-170">Q#`fail`deyimde ( [Denetim akışında](xref:microsoft.quantum.guide.controlflow#fail-statement)açıklanmıştır) ve standart işlevde dizelerin kullanılmasına izin verir [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-170">Q# allows strings to be used in the `fail` statement (explained in [Control Flow](xref:microsoft.quantum.guide.controlflow#fail-statement)) and in the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) standard function.</span></span> <span data-ttu-id="8d9b3-171">İkinci öğesinin belirli davranışı kullanılan simülatöre bağlıdır, ancak genellikle bir program sırasında çağrıldığında ana bilgisayar konsoluna bir ileti yazar Q# .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-171">The specific behavior of the latter depends on the simulator used but typically writes a message to the host console when called during a Q# program.</span></span>
 
-<span data-ttu-id="8d9b3-172">İçindeki dizeler :::no-loc(Q#)::: değişmez değerler ya da enterpolasyonlardır.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-172">Strings in :::no-loc(Q#)::: are either literals or interpolated strings.</span></span>
+<span data-ttu-id="8d9b3-172">İçindeki dizeler Q# değişmez değerler ya da enterpolasyonlardır.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-172">Strings in Q# are either literals or interpolated strings.</span></span>
 
 <span data-ttu-id="8d9b3-173">Dize sabit değerleri çoğu dilde basit dize sabit değerlerine benzer: çift tırnak içine alınmış bir Unicode karakter dizisi `" "` .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-173">String literals are similar to simple string literals in most languages: a sequence of Unicode characters enclosed in double-quotes `" "`.</span></span>
 <span data-ttu-id="8d9b3-174">Bir dizenin içinde, `\` çift tırnak karakterini ( `\"` ) kaçış veya New-Line ( `\n` ), bir satır başı ( `\r` ) veya Tab ( `\t` ) eklemek için ters eğik çizgi karakterini kullanın.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-174">Inside of a string, use the backslash character `\` to escape a double-quote character (`\"`), or to insert a new-line ( `\n` ), a carriage return (`\r`), or a tab (`\t`).</span></span>
@@ -124,21 +124,21 @@ let t = x == y;               // This will cause a compiler error.
 ```
 ### <a name="interpolated-strings"></a><span data-ttu-id="8d9b3-176">Ara değerli dizeler</span><span class="sxs-lookup"><span data-stu-id="8d9b3-176">Interpolated strings</span></span>
 
-<span data-ttu-id="8d9b3-177">:::no-loc(Q#):::Dize enterpolasyonları için sözdizimi, C# sözdiziminin bir alt kümesidir.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-177">The :::no-loc(Q#)::: syntax for string interpolations is a subset of the C# syntax.</span></span> <span data-ttu-id="8d9b3-178">Aşağıdakiler ile ilgili önemli noktaları aşağıda verilmiştir :::no-loc(Q#)::: :</span><span class="sxs-lookup"><span data-stu-id="8d9b3-178">Following are the key points as they pertain to :::no-loc(Q#)::::</span></span>
+<span data-ttu-id="8d9b3-177">Q#Dize enterpolasyonları için sözdizimi, C# sözdiziminin bir alt kümesidir.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-177">The Q# syntax for string interpolations is a subset of the C# syntax.</span></span> <span data-ttu-id="8d9b3-178">Aşağıdakiler ile ilgili önemli noktaları aşağıda verilmiştir Q# :</span><span class="sxs-lookup"><span data-stu-id="8d9b3-178">Following are the key points as they pertain to Q#:</span></span>
 
 * <span data-ttu-id="8d9b3-179">Bir dize sabit değerini, enterpolasyonlu bir dize olarak tanımlamak için, `$` simgeyi simgesiyle önüne ekleyin.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-179">To identify a string literal as an interpolated string, prepend it with the `$` symbol.</span></span> <span data-ttu-id="8d9b3-180">`$`Ve arasında `"` bir dize sabiti Başlatan boşluk olamaz.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-180">There can be no white space between the `$` and the `"` that starts a string literal.</span></span>
 
-* <span data-ttu-id="8d9b3-181">Aşağıdaki örnek, [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) diğer ifadelerle birlikte, bir ölçünün sonucunu konsola yazmak için fonksiyonunu kullanan temel bir örnektir :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-181">The following is a basic example using the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) function to write the result of a measurement to the console, alongside other :::no-loc(Q#)::: expressions.</span></span>
+* <span data-ttu-id="8d9b3-181">Aşağıdaki örnek, [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) diğer ifadelerle birlikte, bir ölçünün sonucunu konsola yazmak için fonksiyonunu kullanan temel bir örnektir Q# .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-181">The following is a basic example using the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) function to write the result of a measurement to the console, alongside other Q# expressions.</span></span>
 
 ```qsharp
-    let num = 8;       // some :::no-loc(Q#)::: expression
+    let num = 8;       // some Q# expression
     let res = M(q);
     Message($"Number: {num}, Result: {res}");
 ```
 
-* <span data-ttu-id="8d9b3-182">Geçerli :::no-loc(Q#)::: bir ifade, enterpolasyonlu bir dizede görünebilir.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-182">Any valid :::no-loc(Q#)::: expression may appear in an interpolated string.</span></span>
+* <span data-ttu-id="8d9b3-182">Geçerli Q# bir ifade, enterpolasyonlu bir dizede görünebilir.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-182">Any valid Q# expression may appear in an interpolated string.</span></span>
 
-* <span data-ttu-id="8d9b3-183">Bir enterpolasyonlu dize içindeki ifadeler :::no-loc(Q#)::: C# söz dizimini değil söz dizimini izler.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-183">Expressions inside of an interpolated string follow :::no-loc(Q#)::: syntax, not C# syntax.</span></span> <span data-ttu-id="8d9b3-184">En önemli ayrım, tam :::no-loc(Q#)::: (çok satırlı) enterpolasyonlu dizeleri desteklemedir.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-184">The most notable distinction is that :::no-loc(Q#)::: does not support verbatim (multi-line) interpolated strings.</span></span>
+* <span data-ttu-id="8d9b3-183">Bir enterpolasyonlu dize içindeki ifadeler Q# C# söz dizimini değil söz dizimini izler.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-183">Expressions inside of an interpolated string follow Q# syntax, not C# syntax.</span></span> <span data-ttu-id="8d9b3-184">En önemli ayrım, tam Q# (çok satırlı) enterpolasyonlu dizeleri desteklemedir.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-184">The most notable distinction is that Q# does not support verbatim (multi-line) interpolated strings.</span></span>
 
 <span data-ttu-id="8d9b3-185">C# sözdizimi hakkında daha fazla bilgi için bkz. [*enterpolasyonlu dizeler*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).</span><span class="sxs-lookup"><span data-stu-id="8d9b3-185">For more details about the C# syntax, see [*Interpolated Strings*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).</span></span>
 
@@ -198,7 +198,7 @@ let t = x == y;               // This will cause a compiler error.
 
 ## <a name="unwrap-expressions"></a><span data-ttu-id="8d9b3-221">Ifade kaydırmayı geri al</span><span class="sxs-lookup"><span data-stu-id="8d9b3-221">Unwrap Expressions</span></span>
 
-<span data-ttu-id="8d9b3-222">:::no-loc(Q#):::' De, geri sarım işleci sondaki bir ünlem işaretidir `!` .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-222">In :::no-loc(Q#):::, the unwrap operator is a trailing exclamation mark `!`.</span></span>
+<span data-ttu-id="8d9b3-222">Q#' De, geri sarım işleci sondaki bir ünlem işaretidir `!` .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-222">In Q#, the unwrap operator is a trailing exclamation mark `!`.</span></span>
 <span data-ttu-id="8d9b3-223">Örneğin, `IntPair` temel alınan türe sahip kullanıcı tanımlı bir türdür `(Int, Int)` ve `s` değeri olan bir değişkense, `IntPair(2, 3)` `s!` olur `(2, 3)` .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-223">For example, if `IntPair` is a user-defined type with the underlying type `(Int, Int)` and `s` is a variable with value `IntPair(2, 3)`, then `s!` is `(2, 3)`.</span></span>
 
 <span data-ttu-id="8d9b3-224">Diğer Kullanıcı tanımlı türler bakımından tanımlanan Kullanıcı tanımlı türler için, Unwrap işlecini yineleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-224">For user-defined types defined in terms of other user-defined types, you can repeat the unwrap operator.</span></span> <span data-ttu-id="8d9b3-225">Örneğin, `s!!` paketlenmiş ve sarmalanmamış değeri gösterir `s` .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-225">For example, `s!!` indicates the doubly-unwrapped value of `s`.</span></span>
@@ -271,7 +271,7 @@ let g = Foo(arg)!;      // Syntax error
 (a + b)[13]
 ```
 
-<span data-ttu-id="8d9b3-261">İçindeki tüm diziler :::no-loc(Q#)::: sıfır tabanlıdır.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-261">All arrays in :::no-loc(Q#)::: are zero-based.</span></span>
+<span data-ttu-id="8d9b3-261">İçindeki tüm diziler Q# sıfır tabanlıdır.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-261">All arrays in Q# are zero-based.</span></span>
 <span data-ttu-id="8d9b3-262">Diğer bir deyişle, bir dizinin ilk öğesi `a` her zaman olur `a[0]` .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-262">That is, the first element of an array `a` is always `a[0]`.</span></span>
 
 
@@ -319,7 +319,7 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a><span data-ttu-id="8d9b3-281">Kopyalama ve güncelleştirme Ifadeleri</span><span class="sxs-lookup"><span data-stu-id="8d9b3-281">Copy-and-Update Expressions</span></span>
 
-<span data-ttu-id="8d9b3-282">Tüm :::no-loc(Q#)::: türler değer türleri olduğundan (biraz özel bir rol alan qubits ile), bir değer bir simgeye bağlandığında veya bir sembol yeniden bağlandığında bir "kopya" oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-282">Since all :::no-loc(Q#)::: types are value types (with the qubits taking a somewhat special role), formally a "copy" is created when a value is bound to a symbol or when a symbol is rebound.</span></span> <span data-ttu-id="8d9b3-283">Şöyle ki, davranışı :::no-loc(Q#)::: atama işleci kullanılarak oluşturulmuş bir kopya ile aynı olur.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-283">That is to say, the behavior of :::no-loc(Q#)::: is the same as if a copy were created using an assignment operator.</span></span> 
+<span data-ttu-id="8d9b3-282">Tüm Q# türler değer türleri olduğundan (biraz özel bir rol alan qubits ile), bir değer bir simgeye bağlandığında veya bir sembol yeniden bağlandığında bir "kopya" oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-282">Since all Q# types are value types (with the qubits taking a somewhat special role), formally a "copy" is created when a value is bound to a symbol or when a symbol is rebound.</span></span> <span data-ttu-id="8d9b3-283">Şöyle ki, davranışı Q# atama işleci kullanılarak oluşturulmuş bir kopya ile aynı olur.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-283">That is to say, the behavior of Q# is the same as if a copy were created using an assignment operator.</span></span> 
 
 <span data-ttu-id="8d9b3-284">Tabii ki, pratikte yalnızca ilgili parçalar gerektiği şekilde yeniden oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-284">Of course, in practice, only the relevant pieces are recreated as needed.</span></span> <span data-ttu-id="8d9b3-285">Bu, dizi öğelerini güncelleştirmek mümkün olmadığından dizileri kopyalamayı etkiler.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-285">This affects how you copy arrays because it is not possible to update array items.</span></span> <span data-ttu-id="8d9b3-286">Var olan bir diziyi değiştirmek için bir *kopyalama ve güncelleştirme* mekanizmasının kullanılmasını gerekir.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-286">To modify an existing array requires leveraging a *copy-and-update* mechanism.</span></span>
 
@@ -382,7 +382,7 @@ for (i in 1..N) {
 
 <span data-ttu-id="8d9b3-317">Örneğin, `[[Op1], [Op2]]` Şu anda iki uyumsuz dizi türünden oluşan bir dizi oluşturmayı denediğinde bir hata oluşturur `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-317">For example, `[[Op1], [Op2]]` would currently raise an error because it attempts to create an array of the two incompatible array types `(Qubit[] => Unit is Adj)[]` and `(Qubit[] => Unit is Ctl)[]`.</span></span>
 
-<span data-ttu-id="8d9b3-318">Callables hakkında daha fazla bilgi için bu sayfadaki veya [işlemler ve :::no-loc(Q#)::: işlevlerde ](xref:microsoft.quantum.guide.operationsfunctions) [çağrılabilir ifadeler](#callable-expressions) bölümüne bakın.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-318">For more information on callables, see [Callable expressions](#callable-expressions)  on this page or [Operations and Functions in :::no-loc(Q#):::](xref:microsoft.quantum.guide.operationsfunctions).</span></span>
+<span data-ttu-id="8d9b3-318">Callables hakkında daha fazla bilgi için bu sayfadaki veya [işlemler ve Q# işlevlerde ](xref:microsoft.quantum.guide.operationsfunctions) [çağrılabilir ifadeler](#callable-expressions) bölümüne bakın.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-318">For more information on callables, see [Callable expressions](#callable-expressions)  on this page or [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions).</span></span>
 
 ## <a name="conditional-expressions"></a><span data-ttu-id="8d9b3-319">Koşullu Ifadeler</span><span class="sxs-lookup"><span data-stu-id="8d9b3-319">Conditional Expressions</span></span>
 
@@ -447,7 +447,7 @@ SomeOtherFun(Fun);           // This also causes a compilation error.
 ```
 
 <span data-ttu-id="8d9b3-353">Bir [tür parametreli](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) çağrılabilir çağırılırken, çağrılabilir ifadeden sonra, açılı ayraç içinde gerçek tür parametrelerini belirtebilirsiniz `< >` .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-353">When invoking a [type-parameterized](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) callable, you can specify the actual type parameters within angle brackets `< >` after the callable expression.</span></span>
-<span data-ttu-id="8d9b3-354">Derleyici gerçek türleri olduğu için bu eylem genellikle gereksizdir :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-354">This action is usually unnecessary as the :::no-loc(Q#)::: compiler infers the actual types.</span></span>
+<span data-ttu-id="8d9b3-354">Derleyici gerçek türleri olduğu için bu eylem genellikle gereksizdir Q# .</span><span class="sxs-lookup"><span data-stu-id="8d9b3-354">This action is usually unnecessary as the Q# compiler infers the actual types.</span></span>
 <span data-ttu-id="8d9b3-355">Ancak, tür parametreli bir bağımsız değişken belirtilmemişse, [kısmi uygulama](xref:microsoft.quantum.guide.operationsfunctions#partial-application) *için gereklidir.*</span><span class="sxs-lookup"><span data-stu-id="8d9b3-355">However, it *is* required for [partial application](xref:microsoft.quantum.guide.operationsfunctions#partial-application) if a type-parameterized argument is left unspecified.</span></span>
 <span data-ttu-id="8d9b3-356">Aynı zamanda farklı bir functor ile işlemleri bir çağrılabilir hale geçirilerek de yararlıdır.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-356">It is also useful when passing operations with different functor supports to a callable.</span></span>
 
@@ -470,7 +470,7 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 * <span data-ttu-id="8d9b3-363">İşlem ve işlev çağırma parantezleri aynı zamanda herhangi bir işleçten önce, ancak dizi dizinlemesi ve komik bir şekilde bağlanır.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-363">Parentheses for operation and function invocation also bind before any operator but after array indexing and functors.</span></span>
 
-<span data-ttu-id="8d9b3-364">:::no-loc(Q#)::: en yüksekten en düşüğe göre öncelik sırasına göre işleçler:</span><span class="sxs-lookup"><span data-stu-id="8d9b3-364">:::no-loc(Q#)::: operators in order of precedence, from highest to lowest:</span></span>
+<span data-ttu-id="8d9b3-364">Q# en yüksekten en düşüğe göre öncelik sırasına göre işleçler:</span><span class="sxs-lookup"><span data-stu-id="8d9b3-364">Q# operators in order of precedence, from highest to lowest:</span></span>
 
 <span data-ttu-id="8d9b3-365">İşleç</span><span class="sxs-lookup"><span data-stu-id="8d9b3-365">Operator</span></span> | <span data-ttu-id="8d9b3-366">Sayısına</span><span class="sxs-lookup"><span data-stu-id="8d9b3-366">Arity</span></span> | <span data-ttu-id="8d9b3-367">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8d9b3-367">Description</span></span> | <span data-ttu-id="8d9b3-368">İşlenen türleri</span><span class="sxs-lookup"><span data-stu-id="8d9b3-368">Operand Types</span></span>
 ---------|----------|---------|---------------
@@ -493,4 +493,4 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 ## <a name="next-steps"></a><span data-ttu-id="8d9b3-423">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="8d9b3-423">Next steps</span></span>
 
-<span data-ttu-id="8d9b3-424">Artık içindeki ifadelerle :::no-loc(Q#)::: çalışacağınızı, işlemler ve işlevlerin nasıl tanımlanacağını ve çağrılacağını öğrenmek için [içindeki :::no-loc(Q#)::: işlemlere ve işlevlerine](xref:microsoft.quantum.guide.operationsfunctions) geçebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-424">Now that you can work with expressions in :::no-loc(Q#):::, move on to [Operations and Functions in :::no-loc(Q#):::](xref:microsoft.quantum.guide.operationsfunctions) to learn how to define and call operations and functions.</span></span>
+<span data-ttu-id="8d9b3-424">Artık içindeki ifadelerle Q# çalışacağınızı, işlemler ve işlevlerin nasıl tanımlanacağını ve çağrılacağını öğrenmek için [içindeki Q# işlemlere ve işlevlerine](xref:microsoft.quantum.guide.operationsfunctions) geçebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8d9b3-424">Now that you can work with expressions in Q#, move on to [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions) to learn how to define and call operations and functions.</span></span>

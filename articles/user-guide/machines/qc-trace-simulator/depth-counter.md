@@ -1,14 +1,14 @@
 ---
 title: Derinlik sayacı-hisse geliştirme seti
-description: 'Bir programda çağrılan her işlemin derinlik sayısını toplamak için hisse izi simülatörü kullanan Microsoft QDK derinlik sayacı hakkında bilgi edinin :::no-loc(Q#)::: .'
+description: 'Bir programda çağrılan her işlemin derinlik sayısını toplamak için hisse izi simülatörü kullanan Microsoft QDK derinlik sayacı hakkında bilgi edinin Q# .'
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 89d8a2c9f2ecd5c5332215cd4307bcf4a6422036
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -39,7 +39,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-depth-counter-in-a-c-host-program"></a><span data-ttu-id="901d2-114">C# ana programında derinlik sayacını kullanma</span><span class="sxs-lookup"><span data-stu-id="901d2-114">Using the depth counter in a C# host program</span></span>
 
-<span data-ttu-id="901d2-115">Bu bölümde takip edilen C# örneği `T` `CCNOT` , aşağıdaki örnek koda göre işlemin derinliğini hesaplar :::no-loc(Q#)::: :</span><span class="sxs-lookup"><span data-stu-id="901d2-115">The C# example that follows in this section computes the `T` depth of the `CCNOT` operation, based on the following :::no-loc(Q#)::: sample code:</span></span>
+<span data-ttu-id="901d2-115">Bu bölümde takip edilen C# örneği `T` `CCNOT` , aşağıdaki örnek koda göre işlemin derinliğini hesaplar Q# :</span><span class="sxs-lookup"><span data-stu-id="901d2-115">The C# example that follows in this section computes the `T` depth of the `CCNOT` operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

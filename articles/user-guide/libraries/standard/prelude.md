@@ -7,8 +7,8 @@ ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 4d15226fe46be79b7d3e6f414f33f1debd691f40
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -18,7 +18,7 @@ ms.locfileid: "92692121"
 ---
 # <a name="the-prelude"></a><span data-ttu-id="9935a-103">Prelude dili</span><span class="sxs-lookup"><span data-stu-id="9935a-103">The Prelude</span></span> #
 
-<span data-ttu-id="9935a-104">:::no-loc(Q#):::Hisse geliştirme paketine dahil edilen derleyici ve hedef makineler, ' de hisse programları yazılırken kullanılabilecek bir dizi iç işlev ve işlem sağlar :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="9935a-104">The :::no-loc(Q#)::: compiler and the target machines included with the Quantum Development Kit provide a set of intrinsic functions and operations that can be used when writing quantum programs in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="9935a-104">Q#Hisse geliştirme paketine dahil edilen derleyici ve hedef makineler, ' de hisse programları yazılırken kullanılabilecek bir dizi iç işlev ve işlem sağlar Q# .</span><span class="sxs-lookup"><span data-stu-id="9935a-104">The Q# compiler and the target machines included with the Quantum Development Kit provide a set of intrinsic functions and operations that can be used when writing quantum programs in Q#.</span></span>
 
 ## <a name="intrinsic-operations-and-functions"></a><span data-ttu-id="9935a-105">İç Işlemler ve Işlevler</span><span class="sxs-lookup"><span data-stu-id="9935a-105">Intrinsic Operations and Functions</span></span> ##
 
@@ -30,11 +30,11 @@ ms.locfileid: "92692121"
 - <span data-ttu-id="9935a-110">Ölçümleri uygulayan işlemler.</span><span class="sxs-lookup"><span data-stu-id="9935a-110">Operations implementing measurements.</span></span>
 
 <span data-ttu-id="9935a-111">Clienfford + $T $ Gate kümesi, hisse bilgi işlem için [evrensel](xref:microsoft.quantum.concepts.multiple-qubits) olduğundan, bu işlemler, eksik küçük bir hata içinde yaklaşık bir hisse algoritması uygulamak için yeterli olacaktır.</span><span class="sxs-lookup"><span data-stu-id="9935a-111">Since the Clifford + $T$ gate set is [universal](xref:microsoft.quantum.concepts.multiple-qubits) for quantum computing, these operations suffice to approximately implement any quantum algorithm within negligibly small error.</span></span>
-<span data-ttu-id="9935a-112">Rosalar da sunarak, :::no-loc(Q#)::: Programcının tek qubit Unitary ve CNOT kapısı kitaplığı içinde çalışmasına izin verir.</span><span class="sxs-lookup"><span data-stu-id="9935a-112">By providing rotations as well, :::no-loc(Q#)::: allows the programmer to work within the single qubit unitary and CNOT gate library.</span></span> <span data-ttu-id="9935a-113">Bu kitaplık, programcının Clienfford + $T $ ayrıştırma 'yı doğrudan hızlı bir şekilde ifade ettiğinden ve tek qubit birimlere Clienfford ve $T $ Gates 'e (daha fazla bilgi için bkz. [buraya](xref:microsoft.quantum.more-information) bakın) yönelik yüksek verimli yöntemler içerdiğinden düşünmek çok daha kolay.</span><span class="sxs-lookup"><span data-stu-id="9935a-113">This library is much easier to think about because it does not  require the programmer to directly express the Clifford + $T$ decomposition and because highly efficient methods exist for compiling single qubit unitaries into Clifford and $T$ gates (see [here](xref:microsoft.quantum.more-information) for more information).</span></span>
+<span data-ttu-id="9935a-112">Rosalar da sunarak, Q# Programcının tek qubit Unitary ve CNOT kapısı kitaplığı içinde çalışmasına izin verir.</span><span class="sxs-lookup"><span data-stu-id="9935a-112">By providing rotations as well, Q# allows the programmer to work within the single qubit unitary and CNOT gate library.</span></span> <span data-ttu-id="9935a-113">Bu kitaplık, programcının Clienfford + $T $ ayrıştırma 'yı doğrudan hızlı bir şekilde ifade ettiğinden ve tek qubit birimlere Clienfford ve $T $ Gates 'e (daha fazla bilgi için bkz. [buraya](xref:microsoft.quantum.more-information) bakın) yönelik yüksek verimli yöntemler içerdiğinden düşünmek çok daha kolay.</span><span class="sxs-lookup"><span data-stu-id="9935a-113">This library is much easier to think about because it does not  require the programmer to directly express the Clifford + $T$ decomposition and because highly efficient methods exist for compiling single qubit unitaries into Clifford and $T$ gates (see [here](xref:microsoft.quantum.more-information) for more information).</span></span>
 
 <span data-ttu-id="9935a-114">Mümkün olduğu durumlarda, ilgeler üzerinde işlem yapan ve `Controlled` hedef makinenin uygun Ayrıştırma işlemini gerçekleştirmesini sağlayan, bu, ilgeler 'yi uygulamaya izin veren bir işlem.</span><span class="sxs-lookup"><span data-stu-id="9935a-114">Where possible, the operations defined in the prelude which act on qubits allow for applying the `Controlled` variant, such that the target machine will perform the appropriate decomposition.</span></span>
 
-<span data-ttu-id="9935a-115">Prelude 'nun bu bölümünde tanımlanan işlevlerin ve işlemlerin birçoğu @"microsoft.quantum.intrinsic" ad alanında, çoğu :::no-loc(Q#)::: kaynak dosyanın `open Microsoft.Quantum.Intrinsic;` ilk ad alanı bildiriminden hemen sonra gelen bir yönergesi olacaktır.</span><span class="sxs-lookup"><span data-stu-id="9935a-115">Many of the functions and operations defined in this portion of the prelude are in the @"microsoft.quantum.intrinsic" namespace, such that most :::no-loc(Q#)::: source files will have an `open Microsoft.Quantum.Intrinsic;` directive immediately following the initial namespace declaration.</span></span>
+<span data-ttu-id="9935a-115">Prelude 'nun bu bölümünde tanımlanan işlevlerin ve işlemlerin birçoğu @"microsoft.quantum.intrinsic" ad alanında, çoğu Q# kaynak dosyanın `open Microsoft.Quantum.Intrinsic;` ilk ad alanı bildiriminden hemen sonra gelen bir yönergesi olacaktır.</span><span class="sxs-lookup"><span data-stu-id="9935a-115">Many of the functions and operations defined in this portion of the prelude are in the @"microsoft.quantum.intrinsic" namespace, such that most Q# source files will have an `open Microsoft.Quantum.Intrinsic;` directive immediately following the initial namespace declaration.</span></span>
 <span data-ttu-id="9935a-116"><xref:Microsoft.Quantum.Core>Ad alanı otomatik olarak açılır, böylece gibi işlevler <xref:Microsoft.Quantum.Core.Length> hiç bir beyan olmadan kullanılabilir `open` .</span><span class="sxs-lookup"><span data-stu-id="9935a-116">The <xref:Microsoft.Quantum.Core> namespace is automatically opened, so that functions such as <xref:Microsoft.Quantum.Core.Length> can be used without an `open` statement at all.</span></span>
 
 ### <a name="common-single-qubit-unitary-operations"></a><span data-ttu-id="9935a-117">Ortak Single-Qubit Unitary Işlemleri</span><span class="sxs-lookup"><span data-stu-id="9935a-117">Common Single-Qubit Unitary Operations</span></span> ###
@@ -101,7 +101,7 @@ ms.locfileid: "92692121"
 
 #### <a name="rotations"></a><span data-ttu-id="9935a-159">Rotasyonlar</span><span class="sxs-lookup"><span data-stu-id="9935a-159">Rotations</span></span> ####
 
-<span data-ttu-id="9935a-160">Yukarıdaki Pauli ve Clifford işlemlerine ek olarak, :::no-loc(Q#)::: Prelude, döndürmeler ifade etmenin çeşitli yollarını sağlar.</span><span class="sxs-lookup"><span data-stu-id="9935a-160">In addition to the Pauli and Clifford operations above, the :::no-loc(Q#)::: prelude provides a variety of ways of expressing rotations.</span></span>
+<span data-ttu-id="9935a-160">Yukarıdaki Pauli ve Clifford işlemlerine ek olarak, Q# Prelude, döndürmeler ifade etmenin çeşitli yollarını sağlar.</span><span class="sxs-lookup"><span data-stu-id="9935a-160">In addition to the Pauli and Clifford operations above, the Q# prelude provides a variety of ways of expressing rotations.</span></span>
 <span data-ttu-id="9935a-161">[Tek qubit işlemlerinde](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)açıklandığı gibi, döndürme özelliği, hisse algoritması için kritik öneme sahiptir.</span><span class="sxs-lookup"><span data-stu-id="9935a-161">As described in [single-qubit operations](xref:microsoft.quantum.concepts.qubit#single-qubit-operations), the ability to rotate is critical to quantum algorithms.</span></span>
 
 <span data-ttu-id="9935a-162">$H $ ve $T $ kapıları kullanarak herhangi bir tek qubit işlemi hızlı bir şekilde ifade edebiliyoruz; $H burada \begin{Equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ % fixme: Bu, şu anda dörtlü geri Whack Hack 'ı kullanıyor.</span><span class="sxs-lookup"><span data-stu-id="9935a-162">We start by recalling that we can express any single-qubit operation using the $H$ and $T$ gates, where $H$ is the Hadamard operation, and where \begin{equation} T \mathrel{:=} \begin{bmatrix} 1 & 0 \\\\ % FIXME: this currently uses the quad back whack hack.</span></span>
@@ -232,7 +232,7 @@ return rs;
 
 ## <a name="extension-functions-and-operations"></a><span data-ttu-id="9935a-247">Uzantı Işlevleri ve Işlemler</span><span class="sxs-lookup"><span data-stu-id="9935a-247">Extension Functions and Operations</span></span> ##
 
-<span data-ttu-id="9935a-248">Ayrıca, Prelude, kod içinde kullanılmak üzere .NET düzeyinde zengin bir matematik ve tür dönüştürme işlevleri tanımlar :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="9935a-248">In addition, the prelude defines a rich set of mathematical and type conversion functions at the .NET level for use within :::no-loc(Q#)::: code.</span></span>
+<span data-ttu-id="9935a-248">Ayrıca, Prelude, kod içinde kullanılmak üzere .NET düzeyinde zengin bir matematik ve tür dönüştürme işlevleri tanımlar Q# .</span><span class="sxs-lookup"><span data-stu-id="9935a-248">In addition, the prelude defines a rich set of mathematical and type conversion functions at the .NET level for use within Q# code.</span></span>
 <span data-ttu-id="9935a-249">Örneğin, <xref:Microsoft.Quantum.Math> ad alanı ve gibi faydalı işlemleri tanımlar <xref:Microsoft.Quantum.Math.Sin> <xref:Microsoft.Quantum.Math.Log> .</span><span class="sxs-lookup"><span data-stu-id="9935a-249">For instance, the <xref:Microsoft.Quantum.Math> namespace defines useful operations such as <xref:Microsoft.Quantum.Math.Sin> and <xref:Microsoft.Quantum.Math.Log>.</span></span>
 <span data-ttu-id="9935a-250">Hisse geliştirme seti tarafından sunulan uygulama klasik .NET temel sınıf kitaplığını kullanır ve bu nedenle hisse programları ve bunların klasik sürücüleri arasında ek bir iletişim gidiş gelişmesi içerebilir.</span><span class="sxs-lookup"><span data-stu-id="9935a-250">The implementation provided by the Quantum Development Kit uses the classical .NET base class library, and thus may involve an additional communications round trip between quantum programs and their classical drivers.</span></span>
 <span data-ttu-id="9935a-251">Bu, yerel simülatör için bir sorun sunmadığından, bir hedef makine olarak uzak simülatör veya gerçek donanım kullanılırken bir performans sorunu olabilir.</span><span class="sxs-lookup"><span data-stu-id="9935a-251">While this does not present a problem for a local simulator, this can be a performance issue when using a remote simulator or actual hardware as a target machine.</span></span>
@@ -241,7 +241,7 @@ return rs;
 ### <a name="math"></a><span data-ttu-id="9935a-253">Matematik</span><span class="sxs-lookup"><span data-stu-id="9935a-253">Math</span></span> ###
 
 <span data-ttu-id="9935a-254"><xref:Microsoft.Quantum.Math>Ad alanı, .net temel sınıf kitaplığının [ `System.Math` sınıfından](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true)birçok yararlı işlev sağlar.</span><span class="sxs-lookup"><span data-stu-id="9935a-254">The <xref:Microsoft.Quantum.Math> namespace provides many useful functions from the .NET base class library's [`System.Math` class](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true).</span></span>
-<span data-ttu-id="9935a-255">Bu işlevler, diğer işlevlerle aynı şekilde kullanılabilir :::no-loc(Q#)::: :</span><span class="sxs-lookup"><span data-stu-id="9935a-255">These functions can be used in the same manner as any other :::no-loc(Q#)::: functions:</span></span>
+<span data-ttu-id="9935a-255">Bu işlevler, diğer işlevlerle aynı şekilde kullanılabilir Q# :</span><span class="sxs-lookup"><span data-stu-id="9935a-255">These functions can be used in the same manner as any other Q# functions:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Math;
@@ -249,7 +249,7 @@ open Microsoft.Quantum.Math;
 let y = Sin(theta);
 ```
 
-<span data-ttu-id="9935a-256">.NET statik yönteminin bağımsız değişkenlerinin türüne göre aşırı yüklendiği yerlerde, karşılık gelen :::no-loc(Q#)::: işlev, girişinin türünü gösteren bir sonek ile açıklanmıştır:</span><span class="sxs-lookup"><span data-stu-id="9935a-256">Where a .NET static method has been overloaded based on the type of its arguments, the corresponding :::no-loc(Q#)::: function is annotated with a suffix indicating the type of its input:</span></span>
+<span data-ttu-id="9935a-256">.NET statik yönteminin bağımsız değişkenlerinin türüne göre aşırı yüklendiği yerlerde, karşılık gelen Q# işlev, girişinin türünü gösteren bir sonek ile açıklanmıştır:</span><span class="sxs-lookup"><span data-stu-id="9935a-256">Where a .NET static method has been overloaded based on the type of its arguments, the corresponding Q# function is annotated with a suffix indicating the type of its input:</span></span>
 
 ```qsharp
 let x = AbsI(-3); // x : Int = 3

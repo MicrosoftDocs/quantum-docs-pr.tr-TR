@@ -1,14 +1,14 @@
 ---
-title: 'Standart kitaplıklardaki veri yapıları :::no-loc(Q#):::'
-description: 'Microsoft standart kitaplıklarında veri yapıları, Oracles ve dinamik oluşturucuları hakkında bilgi edinin :::no-loc(Q#)::: .'
+title: 'Standart kitaplıklardaki veri yapıları Q#'
+description: 'Microsoft standart kitaplıklarında veri yapıları, Oracles ve dinamik oluşturucuları hakkında bilgi edinin Q# .'
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -37,7 +37,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ### <a name="arrays"></a><span data-ttu-id="f6c2c-111">Diziler</span><span class="sxs-lookup"><span data-stu-id="f6c2c-111">Arrays</span></span> ###
 
 <span data-ttu-id="f6c2c-112">Canon, dizileri işlemek için çeşitli işlevler sağlar.</span><span class="sxs-lookup"><span data-stu-id="f6c2c-112">The canon provides several functions for manipulating arrays.</span></span>
-<span data-ttu-id="f6c2c-113">Bu işlevler tür parametreli parametreleridir ve bu nedenle herhangi bir türdeki dizilerle birlikte kullanılabilir :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="f6c2c-113">These functions are type-parameterized, and thus can be used with arrays of any :::no-loc(Q#)::: type.</span></span>
+<span data-ttu-id="f6c2c-113">Bu işlevler tür parametreli parametreleridir ve bu nedenle herhangi bir türdeki dizilerle birlikte kullanılabilir Q# .</span><span class="sxs-lookup"><span data-stu-id="f6c2c-113">These functions are type-parameterized, and thus can be used with arrays of any Q# type.</span></span>
 <span data-ttu-id="f6c2c-114">Örneğin, işlevi, <xref:Microsoft.Quantum.Arrays.Reversed> öğeleri girişinden ters sırada olan yeni bir dizi döndürür.</span><span class="sxs-lookup"><span data-stu-id="f6c2c-114">For instance, the <xref:Microsoft.Quantum.Arrays.Reversed> function returns a new array whose elements are in reverse order from its input.</span></span>
 <span data-ttu-id="f6c2c-115">Bu işlem, işlemler çağrılırken bir hisse kayıt 'nın nasıl temsil edileceğini değiştirmek için kullanılabilir:</span><span class="sxs-lookup"><span data-stu-id="f6c2c-115">This can be used to change how a quantum register is represented when calling operations:</span></span>
 
@@ -75,7 +75,7 @@ ApplyToEach(
 <span data-ttu-id="f6c2c-120">Burada Oracle terimi, bir qubits kümesi üzerinde davranan ve yanıtı bir aşama olarak döndüren bir kara kutu hisse alt yordamını ifade eder.</span><span class="sxs-lookup"><span data-stu-id="f6c2c-120">Here the term oracle refers to a blackbox quantum subroutine that acts upon a set of qubits and returns the answer as a phase.</span></span>
 <span data-ttu-id="f6c2c-121">Bu alt yordam, genellikle Oracle 'ı kabul eden bir hisse algoritması girişi olarak düşünülebilir, diğer parametrelere ek olarak bir dizi hisse ve bir dizi işlem uygular ve bu hisse için bir çağrı, temel bir geçit gibi bir çağrı sağlar.</span><span class="sxs-lookup"><span data-stu-id="f6c2c-121">This subroutine often can be thought of as an input to a quantum algorithm that accepts the oracle, in addition to some other parameters, and applies a series of quantum operations and treating a call to this quantum subroutine as if it were a fundamental gate.</span></span>
 <span data-ttu-id="f6c2c-122">Kuşkusuz, büyük algoritmayı gerçekten uygulamak için, Oracle 'ın, temel kapıların somut bir şekilde ayrıştırma sağlanması gerekir, ancak Oracle 'ı çağıran algoritmayı anlamak için bu ayrıştırma gerekmez.</span><span class="sxs-lookup"><span data-stu-id="f6c2c-122">Obviously, in order to actually implement the larger algorithm a concrete decomposition of the oracle into fundamental gates must be provided but such a decomposition is not needed in order to understand the algorithm that calls the oracle.</span></span>
-<span data-ttu-id="f6c2c-123">' De :::no-loc(Q#)::: , bu soyutlama, bu işlemler ilk sınıf değerlerdir, örneğin, işlemler bir siyah kutu ile hisse algoritması uygulamalarına geçirilebilirler.</span><span class="sxs-lookup"><span data-stu-id="f6c2c-123">In :::no-loc(Q#):::, this abstraction is represented by using that operations are first-class values, such that operations can be passed to implementations of quantum algorithms in a black-box manner.</span></span>
+<span data-ttu-id="f6c2c-123">' De Q# , bu soyutlama, bu işlemler ilk sınıf değerlerdir, örneğin, işlemler bir siyah kutu ile hisse algoritması uygulamalarına geçirilebilirler.</span><span class="sxs-lookup"><span data-stu-id="f6c2c-123">In Q#, this abstraction is represented by using that operations are first-class values, such that operations can be passed to implementations of quantum algorithms in a black-box manner.</span></span>
 <span data-ttu-id="f6c2c-124">Ayrıca, Kullanıcı tanımlı türler, farklı Oracle temsillerini tür açısından güvenli bir şekilde etiketlemek için kullanılır. bu sayede, farklı siyah kutu işlemlerini yanlışlıkla daha kolay hale getirmeyi zorlaştırır.</span><span class="sxs-lookup"><span data-stu-id="f6c2c-124">Moreover, user-defined types are used to label the different oracle representations in a type-safe way, making it difficult to accidentally conflate different kinds of black box operations.</span></span>
 
 <span data-ttu-id="f6c2c-125">Bu tür Oracles, [Grover 'in arama](https://en.wikipedia.org/wiki/Grover%27s_algorithm) ve hisse simülasyonu algoritmaları gibi çok sayıda örnek de dahil olmak üzere çeşitli bağlamlarda görünür.</span><span class="sxs-lookup"><span data-stu-id="f6c2c-125">Such oracles appear in a number of different contexts, including famous examples such as [Grover's search](https://en.wikipedia.org/wiki/Grover%27s_algorithm) and quantum simulation algorithms.</span></span>
@@ -192,7 +192,7 @@ is Adj + Ctl {
 <span data-ttu-id="f6c2c-197">Bu bağlamda, tek bir $R _z $ kapısı kullanarak herhangi bir $t $ için $U (t) $ benzetimi yapabiliriz ve bu nedenle kendimize yalnızca Unitary ile ayrı sorgularla sınırlandırması gerekmez.</span><span class="sxs-lookup"><span data-stu-id="f6c2c-197">In this context, we can simulate $U(t)$ for any $t$ using a single $R_z$ gate and as such do not need to restrict ourselves to only discrete queries to the unitary.</span></span>
 <span data-ttu-id="f6c2c-198">Benzer bir şekilde, bu tür bir sürekli model, diğer bir deyişle, Logaritmik sorgular kullanan aşama tahmin işlemlerinden, diğer bir deyişle $t $ ' nin yorumsuz değerler üzerinde gerçekleştirilen denemeleri sonuçlarından ortaya çıkacak olan bir özellik elde edebilir.</span><span class="sxs-lookup"><span data-stu-id="f6c2c-198">Such a continuous model also has the property that frequencies greater than $2\pi$ can be learned from phase estimation processes that use continuous queries because phase information that would otherwise be masked by the branch-cuts of the logarithm function can be revealed from the results of experiments performed on non-commensurate values of $t$.</span></span>
 <span data-ttu-id="f6c2c-199">Bu nedenle, bu sürekli sorgu modelleri gibi sorunlar için Oracle yalnızca uygun değildir ancak ayrık sorgu modeli için de tercih edilir.</span><span class="sxs-lookup"><span data-stu-id="f6c2c-199">Thus for problems such as this continuous query models for the phase estimation oracle are not only appropriate but are also preferable to the discrete query model.</span></span>
-<span data-ttu-id="f6c2c-200">Bu nedenle, :::no-loc(Q#)::: her iki sorgu formu için de işlevselliğe sahiptir ve ihtiyaçlarını karşılamak için bir aşama tahmin algoritması ve kullanılabilir Oracle türü hakkında karar vermek için kullanıcıya bırakın.</span><span class="sxs-lookup"><span data-stu-id="f6c2c-200">For this reason :::no-loc(Q#)::: has functionality for both forms of queries and leave it to the user to decide upon a phase estimation algorithm to fit their needs and the type of oracle that is available.</span></span>
+<span data-ttu-id="f6c2c-200">Bu nedenle, Q# her iki sorgu formu için de işlevselliğe sahiptir ve ihtiyaçlarını karşılamak için bir aşama tahmin algoritması ve kullanılabilir Oracle türü hakkında karar vermek için kullanıcıya bırakın.</span><span class="sxs-lookup"><span data-stu-id="f6c2c-200">For this reason Q# has functionality for both forms of queries and leave it to the user to decide upon a phase estimation algorithm to fit their needs and the type of oracle that is available.</span></span>
 
 ## <a name="dynamical-generator-modeling"></a><span data-ttu-id="f6c2c-201">Dynamical Oluşturucu modelleme</span><span class="sxs-lookup"><span data-stu-id="f6c2c-201">Dynamical Generator Modeling</span></span> ##
 
