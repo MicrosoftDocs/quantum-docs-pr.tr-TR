@@ -10,12 +10,12 @@ uid: microsoft.quantum.install
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 74b9b3d8f694072f5b5f4d0eb520263387de8919
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f0c3df1998f9b64ff6544867b83a7afe52b6f46d
+ms.sourcegitcommit: fd57a845d013ae4578715d04b1ed1edc1c8ff6b4
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834491"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870869"
 ---
 # <a name="setting-up-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum geliştirme setini (QDK) ayarlama
 
@@ -40,12 +40,48 @@ QDK’yı üç şekilde kullanabilirsiniz:
 
 Q# kodunu sık kullandığınız IDE’lerin çoğunda geliştirebilir, aynı zamanda Q# ile Python ve .NET (C#, F#) gibi diğer dilleri tümleştirebilirsiniz.
 
-|&nbsp; | **VS Code<br>(2019 veya üzeri)**| **Visual Studio<br>(2019 veya üzeri)** | **Jupyter Notebooks** | **Komut satırı**|
-|:-----|:-----:|:-----:|:-----:|:-----:|
-|**İşletim sistemi** |Windows, macOS, Linux |Yalnızca Windows |Windows, macOS, Linux |Windows, macOS, Linux |
-|<br>**Q# tek başına** |<br>[Yükleme](xref:microsoft.quantum.install.standalone) |<br> [Yükleme](xref:microsoft.quantum.install.standalone)  |<br> [Yükleme](xref:microsoft.quantum.install.jupyter) |<br>[Yükleme](xref:microsoft.quantum.install.standalone)|
-|**Q# ve Python** |[Yükleme](xref:microsoft.quantum.install.python) |[Yükleme](xref:microsoft.quantum.install.python) |[Yükleme](xref:microsoft.quantum.install.jupyter) |[Yükleme](xref:microsoft.quantum.install.python) |
-|**Q# ve .NET (C#, F#)**|[Yükleme](xref:microsoft.quantum.install.cs) |[Yükleme](xref:microsoft.quantum.install.cs)|&#10006; |[Yükleme](xref:microsoft.quantum.install.cs) |
+<table>
+    <tr>
+        <th width=10%>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th align="center" width=18%><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 veya üzeri)</b></th>
+        <th align="center" width=18%><img src="~/media/vs_studio.png" alt="VS Studio" width="50"/><br><b>VS Studio<br>(2019 veya üzeri)</b></th>
+        <th align="center" width=18%><img src="~/media/jupyter-wht.png" alt="jupyter install" width="65"/><br><b>Jupyter Notebooks</b></th>
+        <th align="center" width=18%><img src="~/media/blank.png" alt="blank spacer" width="65"/><br><b>Komut satırı</b></th>
+    </tr>
+    <tr>
+        <th>&nbsp;</th>
+        <td align="left"><b>İşletim sistemi desteği:</b></td>
+        <td align="center">Windows, macOS, Linux</td>
+        <td align="center">Yalnızca Windows</td>
+        <td align="center">Windows, macOS, Linux</td>
+        <td align="center">Windows, macOS, Linux</td>
+    </tr>
+    <tr>
+        <td align="right"><img src="~/media/quantum-wht.png" alt="QDK" width="60"/></td>
+        <td align="left"><b>Q# tek başına</b></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.standalone">Yükleme</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.standalone">Yükleme</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.jupyter">Yükleme</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.standalone">Yükleme</a></td>
+    </tr>
+    <tr>
+        <td align="right"><img src="~/media/python.png" alt="python install" width="50"/></td>
+        <td align="left"><b>Q# ve Python</b></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">Yükleme</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">Yükleme</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.jupyter">Yükleme</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">Yükleme</a></td>
+    </tr>
+    <tr>
+        <td align="right"><img src="~/media/dot_net.png" alt="dotnet install" width="50"/></td>
+        <td align="left"><b>Q# ve .NET (C#, F#)</b></td> 
+        <td align="center"><a href="xref:microsoft.quantum.install.cs">Yükleme</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.cs">Yükleme</a></td>
+        <td align="center">&#10006;</td>
+        <td align="center"><a href="xref:microsoft.quantum.install.cs">Yükleme</a></td>
+   </tr>
+</table>
 
 ## <a name="use-the-qdk-online"></a>QDK’yı çevrimiçi olarak kullanma
 
