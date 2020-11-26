@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f1a4ef0616a8a3f1548b7a7207cf8cbb9dcc7260
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2c5bdebc826bb85f6d7e0ade6232e15e29e8fb19
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691695"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231698"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Program çalıştırma yolları Q#
 
@@ -26,7 +26,7 @@ Birincil ayrım, çalıştırılabilir bir değer olabilir Q# :
 - tek başına bir uygulama olarak, Q# söz konusu tek dildir ve program doğrudan çağırılır. Bu kategoriye aslında iki yöntem yer almalıdır:
   - komut satırı arabirimi
   - Q# Jupyıter Not defterleri
-- ek bir *ana bilgisayar programıyla* , Python veya bir .net dilinde (örneğin, C# veya F #) yazılmış, daha sonra programı çağıran ve döndürülen sonuçları daha fazla işleyebilir.
+- ek bir *ana bilgisayar programıyla*, Python veya bir .net dilinde (örneğin, C# veya F #) yazılmış, daha sonra programı çağıran ve döndürülen sonuçları daha fazla işleyebilir.
 
 Bu işlemlerin ve bunların farklarının en iyi şekilde anlaşılması için, basit bir programı göz önünde bulunduruyoruz Q# ve çalıştırılabildikleri yolları karşılaştırıyoruz.
 
@@ -45,7 +45,7 @@ Q#' De, bu, aşağıdaki kod tarafından gerçekleştirilir:
 ```
 
 Ancak, bu kod yalnızca tarafından çalıştırılamaz Q# .
-Bunun için, doğrudan veya başka bir işlem tarafından---çağrıldığında çalıştırılan bir [işlemin](xref:microsoft.quantum.guide.basics#q-operations-and-functions)gövdesini yapması gerekir. Bu nedenle, aşağıdaki biçimde bir işlem yazabilirsiniz:
+Bunun için, doğrudan veya başka bir işlem tarafından---çağrıldığında çalıştırılan bir [işlemin](xref:microsoft.quantum.qsharp.operationsandfunctions)gövdesini yapması gerekir. Bu nedenle, aşağıdaki biçimde bir işlem yazabilirsiniz:
 ```qsharp
     operation MeasureSuperposition() : Result {
         using (q = Qubit()) {
@@ -54,9 +54,9 @@ Bunun için, doğrudan veya başka bir işlem tarafından---çağrıldığında 
         }
     }
 ```
-Bir işlem tanımladınız, ancak `MeasureSuperposition` hiçbir giriş yapılmaz ve [sonuç](xref:microsoft.quantum.guide.types)türünde bir değer döndürmez.
+Bir işlem tanımladınız, ancak `MeasureSuperposition` hiçbir giriş yapılmaz ve [sonuç](xref:microsoft.quantum.qsharp.typesystem-index#available-types)türünde bir değer döndürmez.
 
-Bu sayfadaki örnekler yalnızca Q# *işlemlerden* oluşurken, tartıştığımız kavramların hepsi işlevleri ile aynı şekilde ele alınacaktır Q# *functions* . bu nedenle, bunlara toplu olarak *callables* olarak başvuracağız. Bunların farklılıkları temel alınarak açıklanmaktadır [ Q# : işlemler ve işlevler](xref:microsoft.quantum.guide.basics#q-operations-and-functions)ve bunların tanımlanması hakkında daha fazla ayrıntı, [işlemler ve işlevlerde](xref:microsoft.quantum.guide.operationsfunctions)bulunabilir.
+İşlemlere ek olarak, Q# belirleyici hesaplamaları işlevlere de kapsüllemek de sağlar. Qubits üzerinde işlem yapan hesaplamaların işlevler yerine işlemlere kapsüllenmesi gerektiğini belirten belirleyici garantiden farklı olarak, işlemler ve işlevler arasında küçük bir farklılık vardır. Bunlara toplu olarak *callables* olarak başvurduk.
 
 ### <a name="callable-defined-in-a-no-locq-file"></a>Bir dosyada tanımlanmış çağrılabilir Q#
 
@@ -65,7 +65,7 @@ Ancak, tam bir dosyayı oluşturacak birkaç ekleme daha vardır `*.qs` Q# .
 
 Tüm Q# türler ve callables (hem tanımladığınız hem de dile özgü olan) *ad alanları* içinde tanımlanır ve bu, daha sonra başvurulabilen her bir tam adı sağlar.
 
-Örneğin, [`H`](xref:Microsoft.Quantum.Intrinsic.H) ve işlemleri, [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) ve [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) ad alanlarında ( [ Q# standart kitaplıkların](xref:microsoft.quantum.qsharplibintro)bir parçası) bulunur.
+Örneğin, [`H`](xref:Microsoft.Quantum.Intrinsic.H) ve işlemleri, [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) ve [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) ad alanlarında ( [ Q# standart kitaplıkların](xref:microsoft.quantum.libraries.standard.intro)bir parçası) bulunur.
 Bu nedenle, her zaman *tam* adlarıyla çağrılabilir, `Microsoft.Quantum.Intrinsic.H(<qubit>)` `Microsoft.Quantum.Measurement.MResetZ(<qubit>)` ancak her zaman bunu yapmanız çok karışık koda yol açabilir.
 
 Bunun yerine, `open` deyimler, yukarıdaki işlem gövdesinde yaptığımız gibi, callables 'e daha kısa toplu ile başvurulmalıdır.
@@ -164,7 +164,7 @@ namespace NamespaceName {
 Bu nedenle, ya da `One` yazdırılmış görürsünüz `Zero` . 
 
 Aşağıda, daha fazla callabaldığınıza bakılmaksızın yalnızca `MeasureSuperposition` çalıştırılacağını unutmayın.
-Buna ek olarak, çağrılabilir bir sorun değildir. Bu, çağrılabilir bir [belge açıklamalarını](xref:microsoft.quantum.guide.filestructure#documentation-comments) kendi bildiriminden önce içeriyorsa, `@EntryPoint()` öznitelik üzerine basitçe eklenebilir.
+Buna ek olarak, çağrılabilir bir sorun değildir. Bu, çağrılabilir bir [belge açıklamalarını](xref:microsoft.quantum.qsharp.comments#documentation-comments) kendi bildiriminden önce içeriyorsa, `@EntryPoint()` öznitelik üzerine basitçe eklenebilir.
 
 ### <a name="callable-arguments"></a>Çağrılabilir bağımsız değişkenler
 
@@ -589,7 +589,7 @@ Burada, yukarıda tanımlanan işlemleri nasıl çalıştıracağınızı ayrın
 
 Bir Q# Jupyter Notebook, Q# kodu bir dosyanın ad alanının içinden yaptığımız gibi girersiniz Q# .
 
-Bu nedenle, ilgili ad alanları için deyimlerle [ Q# Standart kitaplıklardan](xref:microsoft.quantum.qsharplibintro) callables 'e erişimi etkinleştirebiliriz `open` .
+Bu nedenle, ilgili ad alanları için deyimlerle [ Q# Standart kitaplıklardan](xref:microsoft.quantum.libraries.standard.intro) callables 'e erişimi etkinleştirebiliriz `open` .
 Bu tür bir deyime sahip bir hücreyi çalıştırırken, bu ad alanlarından alınan tanımlar çalışma alanı boyunca kullanılabilir.
 
 > [!NOTE]

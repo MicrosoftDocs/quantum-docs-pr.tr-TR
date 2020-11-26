@@ -88,7 +88,7 @@ Yazar: bradben uid: Microsoft. hisse. Concepts. Pauli MS. Author: v-benköşeli 
 Önceki tartışmalarda hesaplama tabanlı ölçümlere odaklandık.
 Aslında, notational perspektifinden, işlem tabanlı ölçümlerde hızlı bir şekilde ifade etmek için uygun olan, hisse kullanımı açısından oluşan diğer yaygın ölçümler vardır.
 İle çalışırken Q# , çalıştırdığınız en yaygın ölçüm türü, diğer tabanlarda ölçümleri dahil etmek üzere hesaplama tabanlı ölçümleri *Pauli measurements* genelleştirmesi ve farklı qugeler arasında eşlik olması olasıdır.
-Bu gibi durumlarda, bir Pauli işlecinin, genel olarak $ x, Y, z $ veya $ z \otimes z, x \otimes x, x \otimes Y $ , vb. gibi bir operatör ölçmesi konusunda tartışmak yaygındır.
+Bu gibi durumlarda, bir Pauli işlecinin, genel olarak $ x, Y, z $ veya $ z \otimes z, x \otimes x, x \otimes Y $ , vb. gibi bir operatör ölçmesi konusunda tartışmak yaygındır. 
 
 > [!TIP]
 > ' De Q# , Multi-qubit Pauli işleçleri genellikle türündeki diziler tarafından temsil edilir `Pauli[]` .
@@ -252,7 +252,7 @@ Bu tür bir sınırlama, *hiçbir kopyalama olmayan kopya* tarafından verilir.
 No-Cloning theorem olarak adlandırılır.
 Genel hisse durumlarının bir hisse bilgisayar tarafından kopyalanmasına izin vermez.
 Bunların kanıtı, genel olarak basittir.
-Bu konu başlığı altında, hiçbir ek yardımcı qubit, bizim tartışmamız için çok fazla teknik olmadığı için, kapsamımızda ek bir yardımcı qubitin olmaması durumunda (yardımcı qugeler, bir hesaplama sırasında karalama alanı için kullanılır ve içinde kolayca kullanılır ve yönetilir Q# , bkz. [ödünç alınan qubit](xref:microsoft.quantum.guide.qubits#borrowed-qubits)).
+Kopyalamanın olmaması için tam bir teknik, bu konu başlığı altında ek bir yardımcı qubit olmadığından, kapsamımızda çok fazla teknik değildir.
 
 Bu tür bir hisse bilgisayar için kopyalama işlemi bir Unitary matrisi tarafından açıklanmalıdır.
 Klonlamamız denendiğimiz hisse TI durumunu bozduğundan ölçüme izin vermeiyoruz.

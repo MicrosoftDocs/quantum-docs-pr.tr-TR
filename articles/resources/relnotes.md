@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 93ece8cbaa2ac8e6e0c9bb417e8f40130cb8a3fa
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 1c3c502b6487482f06820e07425b8516f259fb0d
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192103"
+ms.locfileid: "96231800"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -173,7 +173,7 @@ Bu sürüm, 0.11.2003.2506 sürümü için küçük hata düzeltmeleri içerir.
 
 Bu sürüm aşağıdakileri içerir:
 
-- ' De erişim değiştiricileri için yeni destek Q# , daha fazla bilgi için bkz. [Dosya yapıları](xref:microsoft.quantum.guide.filestructure)
+- ' De erişim değiştiricileri için yeni destek Q# , daha fazla bilgi için bkz. [erişim değiştiriciler](xref:microsoft.quantum.qsharp.accessmodifiers)
 - .NET Core SDK 3.1’e güncelleştirildi
 
 [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
@@ -258,7 +258,7 @@ Bu sürüm aşağıdakileri içerir:
 
 Bu sürüm aşağıdakileri içerir:
 
-- İçindeki Birleşik bir [ifade](xref:microsoft.quantum.guide.operationsfunctions#conjugations) için yeni destek Q#
+- İçindeki Birleşik bir [ifade](xref:microsoft.quantum.qsharp.conjugations#conjugations) için yeni destek Q#
 - Derleyiciye, “şununla değiştir”, “belge ekle”, ve tek dizili öğe güncelleştirmesi gibi yeni kod eylemleri eklendi
 - Visual Studio Code uzantısına yükleme şablonu ve yeni proje komutları eklendi
 - [Microsoft.Quantum.Canon.ApplyIfOne](xref:Microsoft.Quantum.Canon.ApplyIfOne) gibi yeni ApplyIf birleştiricisi çeşitleri eklendi
@@ -275,7 +275,7 @@ Mevcut programlarınızı yükseltmeye yönelik yönergelere ek olarak değişik
 
 Bu sürüm aşağıdakileri içerir:
 
-- Dilimleme dizileri için yeni dizinleme konumları eklendi. Daha fazla bilgi için [dil başvurusuna bakın](xref:microsoft.quantum.guide.expressions#array-slices).
+- Dilimleme dizileri için yeni dizin oluşturma, daha fazla bilgi için [dil başvurusuna bakın](xref:microsoft.quantum.qsharp.contextualexpressions#contextual-and-omitted-expressions) .
 - [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry)barındırılan Dockerfile eklendi, [ Q# daha fazla bilgi için ı deposuna](https://github.com/microsoft/iqsharp/blob/main/README.md) bakın
 - [İzleme simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro) için hataya neden olan değişiklik, yapılandırma ayarları güncelleştirmesi, ad değişiklikleri. [Güncelleştirilmiş adlar için .NET API Tarayıcısına](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration) bakın.
 
@@ -296,10 +296,10 @@ Mevcut programlarınızı yükseltmeye yönelik yönergelere ek olarak değişik
 
 ### <a name="no-locq-language-syntax"></a>Q# Dil sözdizimi
 Bu sürüm yeni Q# Dil sözdizimi ekler:
-* [Kullanıcı tanımlı türler](xref:microsoft.quantum.guide.types#user-defined-types) için adlandırılmış öğeler eklendi.  
+* [Kullanıcı tanımlı türler] Microsoft. hisse. qsharp. typedeclarations # type-bildirimleri) için adlandırılmış öğeler ekleyin.  
 * Kullanıcı tanımlı tür oluşturucular artık işlev olarak kullanılabilir.
-* Kullanıcı tanımlı türlerde [kopyala ve güncelleştir](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) ve [uygula ve yeniden ata](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) için destek eklendi.
-* [Başarılı olana kadar yinele](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop) döngülerine yönelik düzeltme bloğu artık isteğe bağlıdır.
+* Kullanıcı tanımlı türlerde [kopyala ve güncelleştir](xref:microsoft.quantum.qsharp.copyandupdateexpressions#copy-and-update-expressions) ve [uygula ve yeniden ata](xref:microsoft.quantum.qsharp.variabledeclarationsandreassignments#evaluate-and-reassign-statements) için destek eklendi.
+* [Başarılı olana kadar yinele](xref:microsoft.quantum.qsharp.conditionalloops#repeat-statement) döngülerine yönelik düzeltme bloğu artık isteğe bağlıdır.
 * Artık işlevlerde while döngülerini destekliyoruz (işlemlerde desteklenmez).
 
 ### <a name="library"></a>Kitaplık 
@@ -327,10 +327,10 @@ Mevcut programlarınızı yükseltmeye yönelik yönergelere ek olarak değişik
 
 ### <a name="no-locq-language-syntax"></a>Q# Dil sözdizimi
 Bu sürüm yeni Q# Dil sözdizimi ekler:
-* `+` işleçleriyle [kuantum işlemlerinin özelleştirmelerini ifade etmek için kısaltılmış bir yol](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations) (denetim ve eklenikler) eklendi.  Eski söz dizimi kullanımdan kaldırıldı.  Eski söz dizimini kullanan programlar (örneğin, `: adjoint`) çalışmaya devam eder ancak derleme zamanı uyarısı oluşturulur.  
-* [copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) için yeni bir işleç olan `w/` eklendi. Bu, dizi oluşturmayı mevcut bir dizinin değiştirilmesi olarak ifade etmek için kullanılabilir.
-* Yaygın [uygula ve güncelleştir ifadesini](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) (örneğin, `+=`, `w/=`) ekleyin.
-* [Açık yönergelerdeki](xref:microsoft.quantum.guide.filestructure#open-directives) ad alanları için kısa ad belirtmeye yönelik yöntem eklendi.
+* `+` işleçleriyle [kuantum işlemlerinin özelleştirmelerini ifade etmek için kısaltılmış bir yol](xref:microsoft.quantum.qsharp.specializationdeclarations) (denetim ve eklenikler) eklendi.  Eski söz dizimi kullanımdan kaldırıldı.  Eski söz dizimini kullanan programlar (örneğin, `: adjoint`) çalışmaya devam eder ancak derleme zamanı uyarısı oluşturulur.  
+* [Kopyalama ve güncelleştirme](xref:microsoft.quantum.qsharp.copyandupdateexpressions#copy-and-update-expressions)için yeni bir üçlü operatör ekleyin, `w/` `<-` dizi oluşturmayı varolan bir dizinin bir değişikliği olarak ifade etmek için kullanılabilir.
+* Ortak [Apply-and-reassıgn ifadesini](xref:microsoft.quantum.qsharp.variabledeclarationsandreassignments#evaluate-and-reassign-statements)ekleyin, örneğin, `+=` `w/=` .
+* [Açık yönergelerdeki](xref:microsoft.quantum.qsharp.namespaces#open-directives) ad alanları için kısa ad belirtmeye yönelik yöntem eklendi.
 
 Bu sürümle birlikte, bir dizi öğesinin ayarlanan deyimin sol tarafında belirtilmesine izin verilmeyecek.  Bunu, bu söz diziminin dizilerin değiştirilebilir olduğunu ima ettiği için gerçekleştirdik. Öyle ki, işlem her zaman yeni bir dizinin oluşturulmasıyla sonuçlandı.  Bunun yerine, aynı sonucu almak için yeni `w/` copy-and-update işlecinin kullanılmasını öneren bir derleyici hatası oluşturulacak.  
 
@@ -405,7 +405,7 @@ Bu sürüm aşağıdakileri içerir:
 
 - Topluluk tarafından bildirilen DumpRegister sorununa yönelik hata düzeltmesi ([#148](https://github.com/Microsoft/Quantum/issues/148)).
 
-- [Using deyiminden](xref:microsoft.quantum.guide.qubits#allocating-qubits) dönme özelliği eklendi.
+- [Using ve ödünç alma ifadesinin](xref:microsoft.quantum.qsharp.quantummemorymanagement#quantum-memory-management)içinden dönüş özelliği eklendi.
 
 - [Başlangıç kılavuzu](xref:microsoft.quantum.install) yenilendi.
 
@@ -428,7 +428,7 @@ Bu sürüm aşağıdakileri içerir:
 
 Bu sürüm aşağıdakileri içerir:
 
-- Boyutu isteğe bağlı olarak değiştirilebilen bir işaretli tamsayıyı gösteren yeni temel öğe BigInt için destek eklendi.  [BigInt türü](xref:microsoft.quantum.guide.types) hakkında daha fazla bilgi edinin.
+- Boyutu isteğe bağlı olarak değiştirilebilen bir işaretli tamsayıyı gösteren yeni temel öğe BigInt için destek eklendi.  [BigInt](xref:microsoft.quantum.qsharp.valueliterals#bigint-literals)hakkında daha fazla bilgi edinin.
 - Çok fazla sayıda qubit ile X, CNOT ve birden fazla öğe tarafından denetlenen X kuantum işleminin simülasyonunu yapabilen özel amaçlı hızlı bir simülatör olan Toffoli simülatörü eklendi.  [Toffoli simülatörü hakkında](xref:microsoft.quantum.machines.toffoli-simulator) daha fazla bilgi edinin.
 - bir hisse bilgisayar üzerinde bir işlemin belirli bir ınstancee 'sini çalıştırmak için gereken kaynakları tahmin eden basit bir kaynak tahminleyicisi ekler Q# .  [Kaynak tahmin aracı](xref:microsoft.quantum.machines.resources-estimator) hakkında daha fazla bilgi edinin.
 

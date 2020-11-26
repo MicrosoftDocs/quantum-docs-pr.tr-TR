@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7666974e255d537c8d611d0077b7f9b37a61f918
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cfc201a16b1b42c82314220f77ae120076291759
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691728"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231664"
 ---
 # <a name="no-locq-style-guide"></a>Q# Stil Kılavuzu #
 ## <a name="general-conventions"></a>Genel kurallar ##
@@ -96,7 +96,7 @@ Benzer şekilde, _Aracı isimleri_ , işlem adlarından Işlev ve udt adlarını
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-| &nbsp;  | Ad | Açıklama |
+| &nbsp;  | Adı | Açıklama |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | İşlemin etkisini göstermek için bir fiil ("yansıtma") kullanımını temizleyin. |
 | ☒ | <s>`operation XRotation`</s> | İsim ifadesi kullanımı, işlem yerine Function önerisinde bulunur. |
@@ -129,7 +129,7 @@ Ayrıca, Q# giriş noktaları uygulamanın tamamı için giriş noktaları olabi
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-| &nbsp;  | Ad | Açıklama |
+| &nbsp;  | Adı | Açıklama |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | Giriş noktası amacını, işlem adı aracılığıyla açıkça iletir. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | Kullanımı `Main` , giriş noktası amacını açıkça iletmez ve özniteliğiyle birlikte gereksizdir `@EntryPoint()` . |
@@ -171,7 +171,7 @@ is Adj + Ctl {
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-| &nbsp;   | Ad | Açıklama |
+| &nbsp;   | Adı | Açıklama |
 |---|------|-------------|
 | ☑ | `X` | "Bir $X $ dönüşümü Uygula" için iyi anlaşılan toplu değer |
 | ☑ | `CNOT` | "Denetimli-NOT" için iyi anlaşılan toplu değer |
@@ -228,7 +228,7 @@ Tüm tür dönüştürme işlevlerinin, `As` hızlı bir şekilde tanımlanabilm
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-| &nbsp;   | Ad | Açıklama |
+| &nbsp;   | Adı | Açıklama |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | "To" ön konumu, bir işlevi değil bir işlem belirten bir fiil ifadesi içinde sonuçlanır. |
 | ☒ | <s>`AsDouble`</s> | Giriş türü, işlev adından net değildir. |
@@ -251,7 +251,7 @@ Bir işlem veya işlev doğrudan kullanıma yönelik değildir, ancak bunun yeri
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-| &nbsp;  | Ad | Açıklama |
+| &nbsp;  | Adı | Açıklama |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | `_`Bu işlemin yalnızca iç kullanım için olduğunu göstermek için alt çizgi kullanmayın. |
 | ☑ | `internal operation ApplyDecomposedOperation` | `internal`Başındaki anahtar sözcük açıkça bu işlemin yalnızca iç kullanım için olduğunu gösterir. |
@@ -390,7 +390,7 @@ Benzer şekilde, hisse geliştirme kiti ile sağlanan dil sunucusu, kullanıcıl
 Belge açıklamalarının kullanımı, bu belgedeki diğer kurallara göre kolayca ifade olmayan Ayrıntılar için yararlı bir başvuru sunarak kullanıcıların kod anlamlı olmasına yardımcı olabilir.
 
 > [!div class="nextstepaction"]
-> [Belge açıklaması sözdizimi başvurusu](xref:microsoft.quantum.guide.filestructure#documentation-comments).
+> [Belge açıklaması sözdizimi başvurusu](xref:microsoft.quantum.qsharp.comments#documentation-comments).
 
 Kullanıcılara yardımcı olmak üzere bu işlevselliği etkili bir şekilde kullanabilmek için, belge açıklamalarını yazarken göz önünde bulundurmanız önerilir.
 

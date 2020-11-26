@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6b196cf1be584a3157c7a9eb8cf497fe1121dd7a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b8623ba7e876c4ccda42d0ddaa07c0012a763292
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691828"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231783"
 ---
 # <a name="no-locq-api-design-principles"></a>Q# API tasarım Ilkeleri
 
@@ -215,7 +215,7 @@ Bu makalede bu ilkeler listelenmekte ve API 'leri tasarlarken bunların nasıl u
   *Örnekler:*
   - "Genver yineleme" olarak "genonu yineleme" olarak tercih edin.
 
-- ✅Bir çağrılabilir uygulamanın amaçlanan etkisini açıkça iletişim kuran işlemler ve işlev adları ' **nı seçin.** Uygulamanın [API belge açıklamalarında](xref:microsoft.quantum.guide.filestructure#documentation-comments)ve belgelendiğini unutmayın.
+- ✅Bir çağrılabilir uygulamanın amaçlanan etkisini açıkça iletişim kuran işlemler ve işlev adları ' **nı seçin.** Uygulamanın [API belge açıklamalarında](xref:microsoft.quantum.qsharp.comments#documentation-comments)ve belgelendiğini unutmayın.
 
   *Örnekler:*
   - "Hadamard test" için "tahmini örtüşme" yı tercih edin, ikincisi ise eski 'ın nasıl uygulandığını iletir.
@@ -226,30 +226,30 @@ Bu makalede bu ilkeler listelenmekte ve API 'leri tasarlarken bunların nasıl u
 
     - Onay **: büyük** olasılıkla fiziksel olmayan kaynakları kullanarak bir hedef makinenin ve qubits 'in durumu hakkında bir varsayım olduğunu denetleyin. Bu fiili kullanan işlemler, kitaplıkların ve yürütülebilir programların işlevselliğini etkilemeden her zaman güvenli bir şekilde kaldırılabilir. Olguların aksine, genel olarak, bir qubit kayıt durumu, çalıştırma ortamı veya benzeri bir durum gibi, genel olarak, onay olabilir. Dış durum bağımlılığı bir tür yan etkildir, ancak onaylar işlevler yerine işlemler olarak gösterilmelidir.
 
-    - **Tahmin** : bir veya daha fazla tekrarlanmış ölçüm kullanarak, ölçüm sonuçlarından bir klasik miktarı tahmin edin.
+    - **Tahmin**: bir veya daha fazla tekrarlanmış ölçüm kullanarak, ölçüm sonuçlarından bir klasik miktarı tahmin edin.
 
       *Örnekler:*
       - @"microsoft.quantum.characterization.estimatefrequency"
       - @"microsoft.quantum.characterization.estimateoverlapbetweenstates"
 
-    - **Hazırlama** : belirli bir başlangıç durumunda (genellikle $ \ket{00\cnoktalar 0} $) başlayan bir veya daha fazla qubits 'e bir hisse veya işlem dizisi uygulayın, bu qubits 'in durumunun istenen bir bitiş durumuna gelişmesine neden olur. Genel olarak, verili **başlangıç durumundan farklı** durumlara göre işlem, tanımsız bir Unitary dönüştürmesi ile sonuçlanabilir, ancak yine de bir işlemin ve kendi adjoint "iptal etmeyi" ve hiçbir op **uygulamamalıdır** .
+    - **Hazırlama**: belirli bir başlangıç durumunda (genellikle $ \ket{00\cnoktalar 0} $) başlayan bir veya daha fazla qubits 'e bir hisse veya işlem dizisi uygulayın, bu qubits 'in durumunun istenen bir bitiş durumuna gelişmesine neden olur. Genel olarak, verili **başlangıç durumundan farklı** durumlara göre işlem, tanımsız bir Unitary dönüştürmesi ile sonuçlanabilir, ancak yine de bir işlemin ve kendi adjoint "iptal etmeyi" ve hiçbir op **uygulamamalıdır** .
 
       *Örnekler:*
       - @"microsoft.quantum.preparation.preparearbitrarystate"
       - @"microsoft.quantum.preparation.prepareuniformsuperposition"
 
-    - **Measure** : bir veya daha fazla qubits 'e bir hisse veya işlem dizisi uygulayarak klasik veri geri alma işlemini okuyun.
+    - **Measure**: bir veya daha fazla qubits 'e bir hisse veya işlem dizisi uygulayarak klasik veri geri alma işlemini okuyun.
 
       *Örnekler:*
       - @"Microsoft.Quantum.Intrinsic.Measure"
       - @"microsoft.quantum.arithmetic.measurefxp"
       - @"microsoft.quantum.arithmetic.measureinteger"
 
-    - **Uygula** : bir veya daha fazla qubits 'e hisse veya işlem dizisi uygulayın ve bu qubits 'in durumunun tutarlı bir şekilde değişmesine neden olur. Bu fiil, Q terminolojinin en genel fiildir \# ve daha **SHOULD NOT BE** belirli bir fiil daha doğrudan ilgili olduğunda kullanılmamalıdır.
+    - **Uygula**: bir veya daha fazla qubits 'e hisse veya işlem dizisi uygulayın ve bu qubits 'in durumunun tutarlı bir şekilde değişmesine neden olur. Bu fiil, Q terminolojinin en genel fiildir \# ve daha **SHOULD NOT BE** belirli bir fiil daha doğrudan ilgili olduğunda kullanılmamalıdır.
 
-  - **İsimler** :
+  - **İsimler**:
 
-    - **Olgu** : bir hedef makinenin, ortamının veya makine qubits 'in durumunda değil, yalnızca kendi girdilerine bağlı olan bir Boolean koşulu. Bir onaylama işlemi aksine, olgu yalnızca söz konusu olgusuna belirtilen *değerlere* duyarlıdır. Örneğin:
+    - **Olgu**: bir hedef makinenin, ortamının veya makine qubits 'in durumunda değil, yalnızca kendi girdilerine bağlı olan bir Boolean koşulu. Bir onaylama işlemi aksine, olgu yalnızca söz konusu olgusuna belirtilen *değerlere* duyarlıdır. Örneğin:
 
       *Örnekler:*
       - @"microsoft.quantum.diagnostics.equalityfacti": iki tamsayı girişi hakkında bir eşitlik olgusu temsil eder; giriş olarak girilen tamsayılar birbirlerine eşittir ya da başka bir program durumundan bağımsız olarak değildir.
@@ -259,9 +259,9 @@ Bu makalede bu ilkeler listelenmekte ve API 'leri tasarlarken bunların nasıl u
       *Örnekler:*
       - @"microsoft.quantum.machinelearning.trainingoptions"Udt, öğrenme oranı, Mini toplu iş boyutu ve ml eğitimi için diğer yapılandırılabilir parametreler için adlandırılmış öğeler içerir.
 
-  - **Sıfatlar** :
+  - **Sıfatlar**:
 
-    - **yeni** ⛔️: Bu sıfatıcı, birçok programlama dilinde (ör.: C++, C#, Java, TypeScript, PowerShell), kullanımıyla ilgili bir fiil olarak karışıklık oluşmasını önlemek **için kullanılmamalıdır.**
+    - **yeni**⛔️: Bu sıfatıcı, birçok programlama dilinde (ör.: C++, C#, Java, TypeScript, PowerShell), kullanımıyla ilgili bir fiil olarak karışıklık oluşmasını önlemek **için kullanılmamalıdır.**
 
   - **Ön pozisyonlar:** Bazı durumlarda, işlev ve işlem adlarında isimler ve fiillerin rollerini daha fazla netleştirmek veya netleştirmek için ön pozisyonlar kullanılabilir. Bununla birlikte, dikkatli ve tutarlı şekilde yapılması gerekir.
 

@@ -87,7 +87,7 @@ Yazar: bradben MS. Author: v-benköşeli MS. Date: 9/1/2020 MS. Topic: article u
 
 ## <a name="adjoint"></a>Adjoint
 
-Bir [işlemin](xref:microsoft.quantum.glossary#operation)karmaşık eşleniği devrik. Bir [Unitary](xref:microsoft.quantum.glossary#unitary-operator) işleci uygulayan işlemler için, adjoint işlemin tersidir ve bir dağılım simgesiyle belirtilir. Örneğin, işlem `U` Unitary operatörünü temsil ediyorsa u 'yi $ $ `Adjoint U` temsil eder $ \dagger $ . Daha fazla bilgi için bkz. [adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).
+Bir [işlemin](xref:microsoft.quantum.glossary#operation)karmaşık eşleniği devrik. Bir [Unitary](xref:microsoft.quantum.glossary#unitary-operator) işleci uygulayan işlemler için, adjoint işlemin tersidir ve bir dağılım simgesiyle belirtilir. Örneğin, işlem `U` Unitary operatörünü temsil ediyorsa u 'yi $ $ `Adjoint U` temsil eder $ \dagger $ . Daha fazla bilgi için bkz. [functor uygulaması](xref:microsoft.quantum.qsharp.functorapplication#functor-application).
 
 ## <a name="ancilla"></a>Anek La
 
@@ -103,7 +103,8 @@ Bir hisse bilgisayarı için geçici bellek görevi gören ve gerektiğinde ayr�
 
 ## <a name="callable"></a>Çağrılabilir
 
-Dildeki bir [işlem](xref:microsoft.quantum.glossary#operation) veya [işlev](xref:microsoft.quantum.glossary#function) Q# . Daha fazla bilgi için bkz. [işlemler ve işlevler](xref:microsoft.quantum.guide.operationsfunctions).
+[ Q# Dildeki](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language#q-language)bir [işlem](xref:microsoft.quantum.glossary#operation) veya [işlev](xref:microsoft.quantum.glossary#function) .
+Daha fazla bilgi için bkz. [ Q# Programlar](xref:microsoft.quantum.guide.programs)
 
 ## <a name="clifford-group"></a>Clienfford grubu
 
@@ -111,7 +112,7 @@ Dildeki bir [işlem](xref:microsoft.quantum.glossary#operation) veya [işlev](xr
 
 ## <a name="controlled"></a>Tarafından
 
-Hedef işlem için bir veya daha fazla [qubit](xref:microsoft.quantum.glossary#qubit) , etkinleştiriciler [olarak alan bir hisse.](xref:microsoft.quantum.glossary#operation) Daha fazla bilgi için bkz. [denetlenen ve Adjoint işlemleri](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).
+Hedef işlem için bir veya daha fazla [qubit](xref:microsoft.quantum.glossary#qubit) , etkinleştiriciler [olarak alan bir hisse.](xref:microsoft.quantum.glossary#operation) Daha fazla bilgi için bkz. [functor uygulaması](xref:microsoft.quantum.qsharp.functorapplication#functor-application).
 
 ## <a name="dirac-notation"></a>Dirac gösterimi
 
@@ -138,11 +139,11 @@ Yönü, belirli bir dönüşüm tarafından değiştirilmeyen ve büyüklüğü,
 [Hisse](xref:microsoft.quantum.glossary#quantum-state) , zaman içinde nasıl değişir. Daha fazla bilgi için bkz. [matris üs öğeleri](xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials).
 
 ## <a name="function"></a>İşlev
-Q#Dilde tamamen klasik (hisse olmayan) bir altyordam türü. İşlevler, hisse algoritmaları içinde kullanıldığında, [qubits](xref:microsoft.quantum.glossary#qubit) veya çağrı [işlemleri](xref:microsoft.quantum.glossary#operation)üzerinde işlem yapılamaz. Daha fazla bilgi için bkz. [işlemler ve işlevler](xref:microsoft.quantum.guide.operationsfunctions).
+Q#Dilde yalnızca belirleyici olan bir altyordam türü. İşlevler, hisse algoritmaları içinde kullanıldığında, [qubits](xref:microsoft.quantum.glossary#qubit) veya çağrı [işlemleri](xref:microsoft.quantum.glossary#operation)üzerinde işlem yapılamaz. Daha fazla bilgi için bkz. [ Q# Programlar](xref:microsoft.quantum.guide.programs)
 
 ## <a name="gate"></a>Kapısı
 
-Klasik Logic Gates kavramına bağlı olarak, hisse için bir [işlem](xref:microsoft.quantum.glossary#operation)için eski bir terim. [Hisse](xref:microsoft.quantum.glossary#quantum-circuit-diagram) bağlantı, klasik mantık devrelerinin benzer kavramına bağlı olarak, kapıların (veya işlemlerin) bir ağı olur.
+Klasik Logic Gates kavramını temel alan belirli iç hisse [işlemleri](xref:microsoft.quantum.glossary#operation)için eski bir terim. [Hisse](xref:microsoft.quantum.glossary#quantum-circuit-diagram) bağlantı, klasik mantık devrelerinin benzer kavramına göre bir kapı ağı olur.
 
 ## <a name="global-phase"></a>Küresel aşama
 
@@ -166,15 +167,11 @@ Değeri oluşturulduktan sonra değiştirilmiş olan bir değişken. ' De kesile
 
 ## <a name="namespace"></a>Ad Alanı
 
-İlgili adların (yani, [işlemler](xref:microsoft.quantum.glossary#operation), [işlevler](xref:microsoft.quantum.glossary#function)ve [Kullanıcı tanımlı türler](xref:microsoft.quantum.glossary#user-defined-type)) toplanması için bir etiket. Örneğin, [Microsoft. hisse. hazırlama](xref:microsoft.quantum.preparation) ad alanı, standart kitaplıkta tanımlanan ve ilk durumları hazırlamaya yardımcı olan tüm sembolleri Etiketler.
+İlgili adların (yani, [işlemler](xref:microsoft.quantum.glossary#operation), [işlevler](xref:microsoft.quantum.glossary#function)ve [Kullanıcı tanımlı türler](xref:microsoft.quantum.glossary#user-defined-type)) toplanması için bir etiket. Örneğin, [Microsoft. hisse. hazırlama](xref:Microsoft.Quantum.Preparation) ad alanı, standart kitaplıkta tanımlanan ve ilk durumları hazırlamaya yardımcı olan tüm sembolleri Etiketler.
 
 ## <a name="operation"></a>İşlem
 
-İçindeki temel hisse birimi hesaplaması Q# . Bu, kabaca C, C++ veya Python içindeki bir işleve veya C# ya da Java 'daki statik bir yönteme eşdeğerdir. Daha fazla bilgi için bkz. [işlemler ve işlevler](xref:microsoft.quantum.guide.operationsfunctions).
-
-## <a name="operator-application"></a>İşleç uygulaması
-
-Hisse bir işlem gerçekleştiriliyor. Bu, genellikle geçerli hisse durumu vektörüne bir Unitary matrisi uygular.
+İçindeki temel hisse birimi hesaplaması Q# . Bu, kabaca C, C++ veya Python içindeki bir işleve veya C# ya da Java 'daki statik bir yönteme eşdeğerdir. Daha fazla bilgi için bkz. [ Q# Programlar](xref:microsoft.quantum.guide.programs).
 
 ## <a name="oracle"></a>Oracle
 
@@ -182,7 +179,7 @@ Hisse bir işlem gerçekleştiriliyor. Bu, genellikle geçerli hisse durumu vekt
 
 ## <a name="partial-application"></a>Kısmi uygulama
 
-Tüm gerekli girişler olmadan bir [işlev](xref:microsoft.quantum.glossary#function) veya [işlem](xref:microsoft.quantum.glossary#operation) çağrılıyor. Bu, gelecekteki bir uygulama sırasında yalnızca eksik parametrelere (alt çizgiyle belirtilir) ihtiyacı olan yeni bir [çağrılabilir](xref:microsoft.quantum.glossary#callable) döndürüyor. Örneğin, işlevi verildiğinde `MyFunc(x : int, y : int) : int {return x + y;}` onu kısmen yeni bir işleve uygulayabilirsiniz `let NewFunc = MyFunc(_, 3)` . Daha sonra yeni işlevi, `NewFunc(2)` *5* değerini döndüren eksik parametre ile daha sonra çağırabilirsiniz.  Daha fazla bilgi için bkz. [kısmi uygulama](xref:microsoft.quantum.guide.operationsfunctions#partial-application).
+Tüm gerekli girişler olmadan bir [işlev](xref:microsoft.quantum.glossary#function) veya [işlem](xref:microsoft.quantum.glossary#operation) çağrılıyor. Bu, gelecekteki bir uygulama sırasında yalnızca eksik parametrelere (alt çizgiyle belirtilir) ihtiyacı olan yeni bir [çağrılabilir](xref:microsoft.quantum.glossary#callable) döndürüyor. Daha fazla bilgi için bkz. [kısmi uygulama](xref:microsoft.quantum.qsharp.partialapplication).
 
 ## <a name="pauli-operators"></a>Pauli işleçleri
 
@@ -190,7 +187,7 @@ Tüm gerekli girişler olmadan bir [işlev](xref:microsoft.quantum.glossary#func
 
 ## <a name="quantum-circuit-diagram"></a>Hisse devre diyagramı
 
-Basit hisse programları için [işlem](xref:microsoft.quantum.glossary#operation) (veya [kapı](xref:microsoft.quantum.glossary#gate)) dizisini grafik olarak temsil eden bir Yöntem (örneğin, 
+Basit hisse programları için [kapı](xref:microsoft.quantum.glossary#gate) dizisini grafiksel olarak temsil eden bir yöntem, örneğin 
 
 ![Örnek devre diyagramı](~/media/qpe.png). 
 
@@ -210,7 +207,7 @@ Klasik bilgi işlem içindeki bir *bite* benzer temel bir hisse bilgisi birimi. 
 
 ## <a name="repeat-until-success"></a>Yineleme-Until-başarılı
 
-Bilsel olarak başarılı olan bir hisse algoritması. Hata sonrasında, yordam başarılı olana kadar yeniden dener (veya sınıra ulaşılmış olur). Daha fazla bilgi için bkz. [başarılı olana kadar Yinele (ru)](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop)
+Belirli bir koşul karşılanana kadar, bir hesaplamanın sürekli olarak uygulanmasını içeren bir kavram, genellikle her zaman bir hesaplamayı içerir. Koşul karşılanmıyorsa, bir sonraki yinelemeyi girerek yeniden denemeden önce bir düzeltme gerekir. Daha fazla bilgi için bkz. [ Q# Kullanıcı Kılavuzu](xref:microsoft.quantum.guide)
 
 ## <a name="standard-libraries"></a>Standart kitaplıklar
 
@@ -230,7 +227,7 @@ Soyut bir hisse programını donanım veya benzetim doğrultusunda alçalt bir d
 
 ## <a name="tuple"></a>Le
 
-Tek bir değer görevi gören virgülle ayrılmış değerler koleksiyonu. Tanımlama grubu *türü* , içerdiği değer türleri tarafından tanımlanır. ' De Q# , tanımlama grupları [sabittir](xref:microsoft.quantum.glossary#immutable) ve iç içe olabilir, diziler içerebilir veya bir dizide kullanılıyor olabilir. Daha fazla bilgi için bkz. [demet türleri](xref:microsoft.quantum.guide.types#tuple-types).
+Tek bir değer görevi gören virgülle ayrılmış değerler koleksiyonu. Tanımlama grubu *türü* , içerdiği değer türleri tarafından tanımlanır. ' De Q# , tanımlama grupları [sabittir](xref:microsoft.quantum.glossary#immutable) ve iç içe olabilir, diziler içerebilir veya bir dizide kullanılıyor olabilir. Daha fazla bilgi için bkz. [tanımlama](xref:microsoft.quantum.qsharp.valueliterals#tuple-literals)bilgileri.
 
 ## <a name="unitary-operator"></a>Unitary işleci
 
@@ -238,4 +235,4 @@ Ters, [adjoint](xref:microsoft.quantum.glossary#adjoint)değerine eşit olan bir
 
 ## <a name="user-defined-type"></a>Kullanıcı tanımlı tür
 
-Tek bir birim olarak başvurulabilen yerleşik veya önceden tanımlanmış türlerin bir koleksiyonu. Daha fazla bilgi için bkz. [Kullanıcı tanımlı türler](xref:microsoft.quantum.guide.types#user-defined-types).
+Bir veya daha fazla adlandırılmış veya anonim öğe içerebilen özel bir tür. Daha fazla bilgi için bkz. [tür bildirimleri] Microsoft. hisse. qsharp. typedeclarations # tür-bildirimleri).

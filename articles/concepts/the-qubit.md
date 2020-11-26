@@ -108,7 +108,7 @@ zıt seçim eşit olarak da yapılabilir. Bu nedenle, sınırsız sayıda olası
 
 Bir qubit 'i nasıl temsil ettiğini öğrendiğimiz için, [*ölçüm*](https://en.wikipedia.org/wiki/Measurement_in_quantum_mechanics)kavramını tartışarak bu durumların neleri temsil ettiğini öğrenmek için bazı ıntutik kazanıyoruz. Bir ölçü, bir qubit 'de "bakıma" göz atan fikrine karşılık gelir ve bu, hisse ışından iki klasik durumdan biri olan $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ veya $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ ' i hemen daraltır. Hisse durumu vektörü tarafından verilen bir qubit $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ ölçüldüğünde, sonucu $ 0, $ olasılık $ | \alpha | ^ 2 $ ve sonuç $ 1, $ olasılık $ | \beta | ^ 2 $ ile elde ediyoruz.   Sonuç $ 0 $ ' da, qubit 'in yeni durumu $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ ; Sonuç 1 ' de $ $ durum $ \begin{bmatrix} 0 1 ' \\\\ dir \end{bmatrix} $ . Bu olasılıkların $ $ , $ | \alpha | ^ 2 + | \beta | ^ 2 = 1 $ normalleştirme koşulu nedeniyle 1 ' e kadar toplam olduğunu unutmayın.
 
-Ölçümün özellikleri, hisse maeyalet vektörünün genel işaretinin ilgisiz olduğunu da ifade demektir. Bir vektörü $ \alpha \right \alpha $ negatifi, ok ve ok-ile eşdeğerdir $ \beta \right \beta $ . $0 $ ve $ 1 $ ölçmesinin olasılığı koşulların büyüklüğüne bağlı olduğundan, bu tür işaretleri eklemek, olasılıkların koşullarını değiştirmez. Bu tür aşamalar genellikle [ `` *genel aşamalar* ' '](https://en.wikipedia.org/wiki/Phase_factor) olarak adlandırılır ve daha fazla genel olarak $ { \phi } $ yalnızca $ \pm 1 yerine $ e-t biçiminde olabilir.
+Ölçümün özellikleri, hisse maeyalet vektörünün genel işaretinin ilgisiz olduğunu da ifade demektir. Bir vektörü $ \alpha \right \alpha $ negatifi, ok ve ok-ile eşdeğerdir $ \beta \right \beta $ . $0 $ ve $ 1 $ ölçmesinin olasılığı koşulların büyüklüğüne bağlı olduğundan, bu tür işaretleri eklemek, olasılıkların koşullarını değiştirmez. Bu tür aşamalar genellikle [ `` *genel aşamalar*' '](https://en.wikipedia.org/wiki/Phase_factor) olarak adlandırılır ve daha fazla genel olarak $ { \phi } $ yalnızca $ \pm 1 yerine $ e-t biçiminde olabilir.
 
 Ölçümün son önemli özelliği, tüm hisse maeyalet vektörlerine zarar vermeyedir. $ \begin{bmatrix} Klasik durum 0 ' a karşılık gelen 1 0 ' da bir qubit ile başladığımızda \\\\ \end{bmatrix} $ $ $ , bu durumun ölçülmesi her zaman 0 sonucunu verir $ $ ve hisse durumu değişmeden bırakır. Bu anlamda, yalnızca klasik bitleri ( $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ veya 0 1 olan qubit $ \begin{bmatrix} \\\\ ) varsa \end{bmatrix} $ ölçüm sisteme zarar vermez. Bu, klasik verileri çoğaltabilmemiz ve bir hisse bir bilgisayar üzerinde yalnızca klasik bir bilgisayarda olabileceği gibi işleyebilmemiz anlamına gelir. Ancak, bilgileri bir kerede her iki durumda da depolamak için, uygun şekilde ne kadar iyi bir şekilde veri depolama alanı ve diğer Robs hisse [bilgisayarları da sayısının fark gözetmeden](https://en.wikipedia.org/wiki/No-cloning_theorem)
 
@@ -128,17 +128,6 @@ Hisse bilgisayarları, hisse devlet vektörünün herhangi bir dönüşüyle öy
 Bu evrenlik kavramı, giriş bitlerinin her dönüştürmesi sonlu uzunlukta bir bağlantı kullanılarak gerçekleştirilürse, bir kapı kümesi 'nin evrensel olarak kabul edildiği geleneksel (ör. klasik) bilgi işlem için evrenlik kavramına yol açabilir.
 Hisse bilgi işlem ortamında, bir qubit üzerinde gerçekleştirmesine izin verilen geçerli dönüşümler, Unitary dönüştürmeleri ve ölçümdür.
 *Majoint işlemi* ya da karmaşık eşleniği devrik, hisse kullanımı için önemli öneme sahiptir çünkü hisse dönüştürmelerinin tersine çevirmek için gereklidir.
-Q# Bu işlemi, programcı 'nın birçok durumda bir yandan kod eklemek zorunda kalmasından tasarruf eden el ile geçit dizilerini otomatik olarak derlemeye yönelik yöntemler sunarak yansıtır. Buna bir örnek aşağıda verilmiştir:
-
-```qsharp
-operation PrepareSuperposition(qubit : Qubit) : Unit
-is Adj { // Auto-generate the adjoint of the operation
-    H(qubit);
-}
-```
-
-Bu, önemsiz bir örnek olsa da ( < XREF: Microsoft. hisse. Intrinsic. H > işlemi Self-adjoint olarak), bunun daha karmaşık qubit işlemleri için nasıl değerli olduğunu görebilirsiniz.
-Daha fazla bilgi için bkz. [işlemler ve işlevler](xref:microsoft.quantum.guide.operationsfunctions).
 
 Klasik bir bilgisayarda bir bit ile bir bit arasında eşleme yapan yalnızca dört işlev vardır. Buna karşılık, bir hisse bilgisayar üzerinde tek bir qubit üzerinde sonsuz sayıda Unitary dönüştürmesi vardır. Bu [*nedenle, kapıların adı verilen*](https://en.wikipedia.org/wiki/Quantum_logic_gate)sınırlı bir temel hisse işlem kümesi, hisse kullanımı için izin verilen sonsuz dizi dönüştürmelerinin tam olarak çoğaltılmasını sağlayabilir. Bu, klasik bilgi işlemin aksine, bir hisse bilgisayarın her olası hisse programını sınırlı sayıda kapı kullanarak tam olarak uygulaması olanaksız hale gelir. Bu nedenle, hisse bilgisayarları, klasik bilgisayarların aynı anlamda evrensel olamaz. Sonuç olarak, bir ağ geçidi kümesinin hisse kullanımı için *evrensel* olduğunu söylediğimiz zaman, klasik bilgi işlem ile karşılaştığımız için biraz daha zayıf bir şeydir.
 Üniverbir bilgisayar için, bir hisse bilgisayarının yalnızca sonlu bir uzunluk kapısı sırası kullanılarak sınırlı bir hata içindeki her Unitary matrisini *yaklaşık olarak yaklaşık olarak yaklaşık olarak yaklaşık olarak yaklaşık* olarak
