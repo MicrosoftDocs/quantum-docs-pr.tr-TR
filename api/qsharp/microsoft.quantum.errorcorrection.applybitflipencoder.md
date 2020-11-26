@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.ApplyBitFlipEncoder
 title: ApplyBitFlipEncoder işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Private operation used to implement both the bit flip encoder and decoder.
 
   Note that this encoder can make use of in-place coherent recovery, in which case it will "cause" the error described by the initial state of `auxQubits`. In particular, if `auxQubits` are initially in the state $\ket{10}$, this will cause an $X_1$ error on the encoded qubit.
-ms.openlocfilehash: 4d78cbb5892aabc600321185641bbf217bd4d745
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e56e84effa001f104bbd5e28e7181dbd39a4cf5e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92727134"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96201300"
 ---
 # <a name="applybitflipencoder-operation"></a>ApplyBitFlipEncoder işlemi
 
 Ad alanı: [Microsoft. hisse. Errordüzeltmesini](xref:Microsoft.Quantum.ErrorCorrection)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Hem bit çevir Kodlayıcısı hem de kod çözücü uygulamak için kullanılan özel işlem.
@@ -30,7 +30,7 @@ Bu kodlayıcı, ' nin ilk durumu tarafından tanımlanan hatanın "Neden" olmas�
 Özellikle `auxQubits` $ \tus$ durumunda başlangıçta {10} Bu durum, kodlanmış qubit üzerinde $X _1 $ hatasına neden olur.
 
 ```qsharp
-operation ApplyBitFlipEncoder (coherentRecovery : Bool, data : Qubit[], scratch : Qubit[]) : Unit
+operation ApplyBitFlipEncoder (coherentRecovery : Bool, data : Qubit[], scratch : Qubit[]) : Unit is Adj
 ```
 
 
@@ -56,6 +56,6 @@ operation ApplyBitFlipEncoder (coherentRecovery : Bool, data : Qubit[], scratch 
 
 
 
-## <a name="references"></a>Referanslar
+## <a name="references"></a>Başvurular
 
 - DOI: 10.1103/PhysRevA. 85.044302

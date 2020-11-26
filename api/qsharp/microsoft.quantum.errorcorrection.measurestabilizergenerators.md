@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.MeasureStabilizerGenerators
 title: MeasureStabilizerGenerators işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: MeasureStabilizerGenerators
 qsharp.summary: Measures the given set of generators of a stabilizer group.
-ms.openlocfilehash: a3f48ff24a39d13a57f7a144e21d4e41bb8a8b49
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6c048c17df21d1026dc671f30d72a13ed8d8b7f5
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92727026"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96200637"
 ---
 # <a name="measurestabilizergenerators-operation"></a>MeasureStabilizerGenerators işlemi
 
 Ad alanı: [Microsoft. hisse. Errordüzeltmesini](xref:Microsoft.Quantum.ErrorCorrection)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Bir sabitleyici grubun verilen Oluşturucu kümesini ölçer.
@@ -41,7 +41,7 @@ Multiqubit Pauli işleçleri dizisi.
 Sabitleyici kodun tanımlandığı bir qubits dizisi.
 
 
-### <a name="gadget--pauliqubit--__invalidresult__"></a>Araç: ( [Pauli](xref:microsoft.quantum.lang-ref.pauli)[], [qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => __geçersiz <Result>__ 
+### <a name="gadget--pauliqubit--__invalidresult__"></a>Araç: ([Pauli](xref:microsoft.quantum.lang-ref.pauli)[],[qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => __geçersiz <Result>__ 
 
 Multiqubit Pauli işlecinin nasıl ölçülmesi gerektiğini belirten bir işlem.
 

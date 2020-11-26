@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertPhase
 title: AssertPhase işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AssertPhase
 qsharp.summary: Asserts that the phase of an equal superposition state has the expected value.
-ms.openlocfilehash: e042c03d2a72d9ce4816a8cdb56603e175b22807
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9130d6c735d90abbc51989ef4a68a8eff8b41371
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92727320"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202269"
 ---
 # <a name="assertphase-operation"></a>AssertPhase işlemi
 
 Ad alanı: [Microsoft. hisse. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Bir eşit üst konum durumunun beklenen değere sahip olduğunu onaylar.
