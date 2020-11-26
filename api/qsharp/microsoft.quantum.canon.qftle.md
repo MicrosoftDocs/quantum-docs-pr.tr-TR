@@ -1,49 +1,49 @@
 ---
 uid: Microsoft.Quantum.Canon.QFTLE
 title: QFTLE işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: QFTLE
 qsharp.summary: Performs the Quantum Fourier Transform on a quantum register containing an integer in the little-endian representation.
-ms.openlocfilehash: f28f74d34fb4688739646da3dc12ae6734eb4ad4
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 460e43bc7997e9efad06c58ad14822e28cc45cdd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728472"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96205584"
 ---
-# <a name="qftle-operation"></a><span data-ttu-id="32240-102">QFTLE işlemi</span><span class="sxs-lookup"><span data-stu-id="32240-102">QFTLE operation</span></span>
+# <a name="qftle-operation"></a><span data-ttu-id="a0e60-102">QFTLE işlemi</span><span class="sxs-lookup"><span data-stu-id="a0e60-102">QFTLE operation</span></span>
 
-<span data-ttu-id="32240-103">Ad alanı: [Microsoft. hisse. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="32240-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="a0e60-103">Ad alanı: [Microsoft. hisse. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="a0e60-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="32240-104">Leyebilir [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="32240-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="a0e60-104">Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="a0e60-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="32240-105">Küçük endian gösteriminde bir tamsayı içeren bir hisse kayıt üzerinde hisse Fourier dönüşümü gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="32240-105">Performs the Quantum Fourier Transform on a quantum register containing an integer in the little-endian representation.</span></span>
+<span data-ttu-id="a0e60-105">Küçük endian gösteriminde bir tamsayı içeren bir hisse kayıt üzerinde hisse Fourier dönüşümü gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="a0e60-105">Performs the Quantum Fourier Transform on a quantum register containing an integer in the little-endian representation.</span></span>
 
 ```qsharp
-operation QFTLE (qs : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation QFTLE (qs : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
-## <a name="input"></a><span data-ttu-id="32240-106">Giriş</span><span class="sxs-lookup"><span data-stu-id="32240-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="a0e60-106">Giriş</span><span class="sxs-lookup"><span data-stu-id="a0e60-106">Input</span></span>
 
-### <a name="qs--littleendian"></a><span data-ttu-id="32240-107">QS: [Litttaendian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="32240-107">qs : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
+### <a name="qs--littleendian"></a><span data-ttu-id="a0e60-107">QS: [Litttaendian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="a0e60-107">qs : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
 
-<span data-ttu-id="32240-108">Hisse kayıt defteri</span><span class="sxs-lookup"><span data-stu-id="32240-108">Quantum register to which the Quantum Fourier Transform is applied</span></span>
-
-
-
-## <a name="output--unit"></a><span data-ttu-id="32240-109">Çıkış: [birim](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="32240-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+<span data-ttu-id="a0e60-108">Hisse kayıt defteri</span><span class="sxs-lookup"><span data-stu-id="a0e60-108">Quantum register to which the Quantum Fourier Transform is applied</span></span>
 
 
 
-## <a name="remarks"></a><span data-ttu-id="32240-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="32240-110">Remarks</span></span>
+## <a name="output--unit"></a><span data-ttu-id="a0e60-109">Çıkış: [birim](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="a0e60-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
-<span data-ttu-id="32240-111">Giriş ve çıkışın little endian kodlamada olduğu varsayılır.</span><span class="sxs-lookup"><span data-stu-id="32240-111">The input and output are assumed to be in little endian encoding.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="32240-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="32240-112">See Also</span></span>
 
-- [<span data-ttu-id="32240-113">Microsoft. hisse. Canon. QFT</span><span class="sxs-lookup"><span data-stu-id="32240-113">Microsoft.Quantum.Canon.QFT</span></span>](xref:Microsoft.Quantum.Canon.QFT)
+## <a name="remarks"></a><span data-ttu-id="a0e60-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a0e60-110">Remarks</span></span>
+
+<span data-ttu-id="a0e60-111">Giriş ve çıkışın little endian kodlamada olduğu varsayılır.</span><span class="sxs-lookup"><span data-stu-id="a0e60-111">The input and output are assumed to be in little endian encoding.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="a0e60-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a0e60-112">See Also</span></span>
+
+- [<span data-ttu-id="a0e60-113">Microsoft. hisse. Canon. QFT</span><span class="sxs-lookup"><span data-stu-id="a0e60-113">Microsoft.Quantum.Canon.QFT</span></span>](xref:Microsoft.Quantum.Canon.QFT)
