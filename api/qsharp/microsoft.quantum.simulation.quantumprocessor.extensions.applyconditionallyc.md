@@ -1,46 +1,46 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyConditionallyC
 title: ApplyConditionallyC işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyConditionallyC
 qsharp.summary: ''
-ms.openlocfilehash: fc1cf50b7befd40cf20720032329438715a9b856
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 963a85e0e442592c01a2e70fa0dc02d6048d8be7
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92730895"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229044"
 ---
 # <a name="applyconditionallyc-operation"></a>ApplyConditionallyC işlemi
 
 Ad alanı: [Microsoft. hisse. simülasyon. Histumprocessor. Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
 
 ```qsharp
-operation ApplyConditionallyC<'T, 'U> (measurementResults : Result[], resultsValues : Result[], (onEqualOp : ('T => Unit is Ctl), equalArg : 'T), (onNonEqualOp : ('U => Unit is Ctl), nonEqualArg : 'U)) : Unit
+operation ApplyConditionallyC<'T, 'U> (measurementResults : Result[], resultsValues : Result[], (onEqualOp : ('T => Unit is Ctl), equalArg : 'T), (onNonEqualOp : ('U => Unit is Ctl), nonEqualArg : 'U)) : Unit is Ctl
 ```
 
 
 ## <a name="input"></a>Giriş
 
-### <a name="measurementresults--__invalidresult__"></a>measurementResults: __geçersiz <Result>__ []
+### <a name="measurementresults--__invalidresult__"></a>measurementResults: __geçersiz <Result>__[]
 
 
 
 
-### <a name="resultsvalues--__invalidresult__"></a>resultsValues değerleri __: <Result> geçersiz__ []
+### <a name="resultsvalues--__invalidresult__"></a>resultsValues değerleri __: <Result> geçersiz__[]
 
 
 
 
-### <a name="onequalop--t--unit-ctl"></a>onEqualOp: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) CTL
+### <a name="onequalop--t--unit--is-ctl"></a>onEqualOp: 'T => [birim](xref:microsoft.quantum.lang-ref.unit)  CTL
 
 
 
@@ -50,7 +50,7 @@ operation ApplyConditionallyC<'T, 'U> (measurementResults : Result[], resultsVal
 
 
 
-### <a name="onnonequalop--u--unit-ctl"></a>onNonEqualOp: ' U => [birim](xref:microsoft.quantum.lang-ref.unit) CTL
+### <a name="onnonequalop--u--unit--is-ctl"></a>onNonEqualOp: ' U => [birimi](xref:microsoft.quantum.lang-ref.unit)  CTL
 
 
 

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyIfElseIntrinsicC
 title: ApplyIfElseIntrinsicC işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyIfElseIntrinsicC
 qsharp.summary: ''
-ms.openlocfilehash: 178d4b704d84090f1f8592b857c3da659e5c50bb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9cd58f2fd103237213ef386fc6af1451e48b7cec
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92733666"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228891"
 ---
 # <a name="applyifelseintrinsicc-operation"></a>ApplyIfElseIntrinsicC işlemi
 
 Ad alanı: [Microsoft. hisse. simülasyon. Histumprocessor. Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
 
 ```qsharp
-operation ApplyIfElseIntrinsicC (measurementResult : Result, onResultZeroOp : (Unit => Unit is Ctl), onResultOneOp : (Unit => Unit is Ctl)) : Unit
+operation ApplyIfElseIntrinsicC (measurementResult : Result, onResultZeroOp : (Unit => Unit is Ctl), onResultOneOp : (Unit => Unit is Ctl)) : Unit is Ctl
 ```
 
 
@@ -35,12 +35,12 @@ operation ApplyIfElseIntrinsicC (measurementResult : Result, onResultZeroOp : (U
 
 
 
-### <a name="onresultzeroop--unit--unit-ctl"></a>onresultsıfırlaması işleci: [birim](xref:microsoft.quantum.lang-ref.unit) => [birim](xref:microsoft.quantum.lang-ref.unit) CTL
+### <a name="onresultzeroop--unit--unit--is-ctl"></a>onresultsıfırlaması işleci: [birim](xref:microsoft.quantum.lang-ref.unit) => [birimi](xref:microsoft.quantum.lang-ref.unit)  CTL
 
 
 
 
-### <a name="onresultoneop--unit--unit-ctl"></a>onresultoneop: [birim](xref:microsoft.quantum.lang-ref.unit) => [birim](xref:microsoft.quantum.lang-ref.unit) CTL
+### <a name="onresultoneop--unit--unit--is-ctl"></a>onresultoneop: [birim](xref:microsoft.quantum.lang-ref.unit) => [birimi](xref:microsoft.quantum.lang-ref.unit)  CTL
 
 
 

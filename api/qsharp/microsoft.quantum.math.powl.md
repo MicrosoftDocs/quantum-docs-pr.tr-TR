@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.PowL
 title: PowL işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: PowL
 qsharp.summary: Returns a number raised to a given power.
-ms.openlocfilehash: 22c05cf85acf691490049ce9ac27a7c6b2a4899e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b3207d1854f6b69cdb5b68d354000a0b6746c0c2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92733647"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228330"
 ---
 # <a name="powl-function"></a>PowL işlevi
 
 Ad alanı: [Microsoft. hisse. Math](xref:Microsoft.Quantum.Math)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Verilen bir üsle oluşturulan bir sayı döndürür.

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.IEEERemainder
 title: IEEERemainder işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: IEEERemainder
 qsharp.summary: Returns the remainder resulting from the division of a specified number by another specified number.
-ms.openlocfilehash: 4547daafded317d110184a705c2adcd8ddff8136
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c6bbe902c1cc48b8fb9265405605113dbd4da9aa
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92730706"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228432"
 ---
 # <a name="ieeeremainder-function"></a>IEEERemainder işlevi
 
 Ad alanı: [Microsoft. hisse. Math](xref:Microsoft.Quantum.Math)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Belirtilen sayının bölümünün belirtilen başka bir sayı ile sonuçlanan kalan kalanı döndürür.

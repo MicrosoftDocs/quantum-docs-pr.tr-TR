@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.Min
 title: Min işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: Min
 qsharp.summary: Given an array of integers, returns the smallest element.
-ms.openlocfilehash: 9a66ef32cbab903e12edd5d87172779df1c3c744
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: aba573f2e8d135b86037bd845c154f910533ca11
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92733463"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96227990"
 ---
 # <a name="min-function"></a>Min işlevi
 
 Ad alanı: [Microsoft. hisse. Math](xref:Microsoft.Quantum.Math)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Tamsayılar dizisi verildiğinde, en küçük öğeyi döndürür.

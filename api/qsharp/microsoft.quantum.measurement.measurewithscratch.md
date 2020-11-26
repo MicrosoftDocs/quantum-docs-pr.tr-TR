@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Measurement.MeasureWithScratch
 title: Measurewithkaralama işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Measurement
 qsharp.name: MeasureWithScratch
 qsharp.summary: Measures the given Pauli operator using an explicit scratch qubit to perform the measurement.
-ms.openlocfilehash: 1ee25dbccd5bddde406cf8ed84dff77d96d7804e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c42316a811e0e4a81c7f244c093a2be88fe5c733
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92730986"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96227072"
 ---
 # <a name="measurewithscratch-operation"></a>Measurewithkaralama işlemi
 
 Ad alanı: [Microsoft. hisse. ölçümü](xref:Microsoft.Quantum.Measurement)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Ölçüyü gerçekleştirmek için açık bir karalama qubit kullanarak verilen Pauli işlecini ölçer.
