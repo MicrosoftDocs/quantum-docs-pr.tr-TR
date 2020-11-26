@@ -1,51 +1,51 @@
 ---
 uid: Microsoft.Quantum.Convert.IntAsBoolArray
 title: IntAsBoolArray işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: IntAsBoolArray
 qsharp.summary: Produces a binary representation of a positive integer, using the little-endian representation for the returned array.
-ms.openlocfilehash: 9783a49a77bdc39ffe8c7725196eb620f4cd0100
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f89cb3d7ca29d7deaaf49573b2670534166caded
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92727536"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224352"
 ---
-# <a name="intasboolarray-function"></a><span data-ttu-id="1fc14-102">IntAsBoolArray işlevi</span><span class="sxs-lookup"><span data-stu-id="1fc14-102">IntAsBoolArray function</span></span>
+# <a name="intasboolarray-function"></a><span data-ttu-id="ce5b2-102">IntAsBoolArray işlevi</span><span class="sxs-lookup"><span data-stu-id="ce5b2-102">IntAsBoolArray function</span></span>
 
-<span data-ttu-id="1fc14-103">Ad alanı: [Microsoft. hisse. Convert](xref:Microsoft.Quantum.Convert)</span><span class="sxs-lookup"><span data-stu-id="1fc14-103">Namespace: [Microsoft.Quantum.Convert](xref:Microsoft.Quantum.Convert)</span></span>
+<span data-ttu-id="ce5b2-103">Ad alanı: [Microsoft. hisse. Convert](xref:Microsoft.Quantum.Convert)</span><span class="sxs-lookup"><span data-stu-id="ce5b2-103">Namespace: [Microsoft.Quantum.Convert](xref:Microsoft.Quantum.Convert)</span></span>
 
-<span data-ttu-id="1fc14-104">Leyebilir [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="1fc14-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="ce5b2-104">Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="ce5b2-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="1fc14-105">Döndürülen dizi için küçük endian gösterimini kullanarak pozitif bir tam sayının ikili gösterimini üretir.</span><span class="sxs-lookup"><span data-stu-id="1fc14-105">Produces a binary representation of a positive integer, using the little-endian representation for the returned array.</span></span>
+<span data-ttu-id="ce5b2-105">Döndürülen dizi için küçük endian gösterimini kullanarak pozitif bir tam sayının ikili gösterimini üretir.</span><span class="sxs-lookup"><span data-stu-id="ce5b2-105">Produces a binary representation of a positive integer, using the little-endian representation for the returned array.</span></span>
 
 ```qsharp
 function IntAsBoolArray (number : Int, bits : Int) : Bool[]
 ```
 
 
-## <a name="input"></a><span data-ttu-id="1fc14-106">Giriş</span><span class="sxs-lookup"><span data-stu-id="1fc14-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="ce5b2-106">Giriş</span><span class="sxs-lookup"><span data-stu-id="ce5b2-106">Input</span></span>
 
-### <a name="number--int"></a><span data-ttu-id="1fc14-107">Sayı: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="1fc14-107">number : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="number--int"></a><span data-ttu-id="ce5b2-107">Sayı: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="ce5b2-107">number : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
-<span data-ttu-id="1fc14-108">Boole değerleri dizisine dönüştürülecek pozitif bir tamsayı.</span><span class="sxs-lookup"><span data-stu-id="1fc14-108">A positive integer to be converted to an array of boolean values.</span></span>
-
-
-### <a name="bits--int"></a><span data-ttu-id="1fc14-109">bit: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="1fc14-109">bits : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
-
-<span data-ttu-id="1fc14-110">Öğesinin ikili temsilindeki bit sayısı `number` .</span><span class="sxs-lookup"><span data-stu-id="1fc14-110">The number of bits in the binary representation of `number`.</span></span>
+<span data-ttu-id="ce5b2-108">Boole değerleri dizisine dönüştürülecek pozitif bir tamsayı.</span><span class="sxs-lookup"><span data-stu-id="ce5b2-108">A positive integer to be converted to an array of boolean values.</span></span>
 
 
+### <a name="bits--int"></a><span data-ttu-id="ce5b2-109">bit: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="ce5b2-109">bits : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
-## <a name="output--bool"></a><span data-ttu-id="1fc14-111">Çıkış: [bool](xref:microsoft.quantum.lang-ref.bool)[]</span><span class="sxs-lookup"><span data-stu-id="1fc14-111">Output : [Bool](xref:microsoft.quantum.lang-ref.bool)[]</span></span>
+<span data-ttu-id="ce5b2-110">Öğesinin ikili temsilindeki bit sayısı `number` .</span><span class="sxs-lookup"><span data-stu-id="ce5b2-110">The number of bits in the binary representation of `number`.</span></span>
 
-<span data-ttu-id="1fc14-112">Temsil eden bir Boole değerleri dizisi `number` .</span><span class="sxs-lookup"><span data-stu-id="1fc14-112">An array of boolean values representing `number`.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="1fc14-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1fc14-113">Remarks</span></span>
 
-<span data-ttu-id="1fc14-114">Giriş `bits` 0 ile 63 arasında olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="1fc14-114">The input `bits` must be between 0 and 63.</span></span>
-<span data-ttu-id="1fc14-115">Giriş `number` 0 ile $2 ^ {\texttt{bits}}-$1 arasında olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="1fc14-115">The input `number` must be between 0 and $2^{\texttt{bits}} - 1$.</span></span>
+## <a name="output--bool"></a><span data-ttu-id="ce5b2-111">Çıkış: [bool](xref:microsoft.quantum.lang-ref.bool)[]</span><span class="sxs-lookup"><span data-stu-id="ce5b2-111">Output : [Bool](xref:microsoft.quantum.lang-ref.bool)[]</span></span>
+
+<span data-ttu-id="ce5b2-112">Temsil eden bir Boole değerleri dizisi `number` .</span><span class="sxs-lookup"><span data-stu-id="ce5b2-112">An array of boolean values representing `number`.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="ce5b2-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ce5b2-113">Remarks</span></span>
+
+<span data-ttu-id="ce5b2-114">Giriş `bits` 0 ile 63 arasında olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="ce5b2-114">The input `bits` must be between 0 and 63.</span></span>
+<span data-ttu-id="ce5b2-115">Giriş `number` 0 ile $2 ^ {\texttt{bits}}-$1 arasında olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="ce5b2-115">The input `number` must be between 0 and $2^{\texttt{bits}} - 1$.</span></span>
