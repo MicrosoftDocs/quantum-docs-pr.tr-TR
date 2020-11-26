@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.CarryOutCoreCDKM
 title: Carrzı Corecdkm işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: CarryOutCoreCDKM
 qsharp.summary: The core operation in the RippleCarryAdderCDKM, used with the above ApplyOuterCDKMAdder operation, i.e. conjugated with this operation to obtain the inner operation of the RippleCarryAdderCDKM. This operation computes the carry out qubit and applies a sequence of NOT gates on part of the input `ys`.
-ms.openlocfilehash: 6a292e66f6d9911d2a9075f6397f4f5ba97ec64d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 19a692a3b54a413f25a474c361e773ab6c65579e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92731639"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223553"
 ---
 # <a name="carryoutcorecdkm-operation"></a>Carrzı Corecdkm işlemi
 
 Ad alanı: [Microsoft. hisse. aritmetik](xref:Microsoft.Quantum.Arithmetic)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 En yukarıdaki ApplyOuterCDKMAdder işlemiyle birlikte kullanılan Rippmacarryaddercdkm içindeki temel işlem, yani Ripplicarryaddercdkm 'nin iç işlemini elde etmek için bu işlemle birlikte kullanılır. Bu işlem, alma qubit ' i hesaplar ve girişin bir bölümünde bir kapı yok dizisi uygular `ys` .
 
 ```qsharp
-operation CarryOutCoreCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, ancilla : Qubit, carry : Qubit) : Unit
+operation CarryOutCoreCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, ancilla : Qubit, carry : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -55,7 +55,7 @@ Ripptacarryaddercdkm işleminde qubit ' i çalıştırır.
 
 
 
-## <a name="references"></a>Referanslar
+## <a name="references"></a>Başvurular
 
 - Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutın, David Petrie Moulton: "yeni bir 2004 hisse
   https://arxiv.org/abs/quant-ph/0410184v1

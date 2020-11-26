@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics._prepareEntangledState
 title: _prepareEntangledState işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Given two registers, prepares the maximally entangled state between each pair of qubits on the respective registers. All qubits must start in the |0⟩ state.
 
   The result is that corresponding pairs of qubits from each register are in the $\bra{\beta_{00}}\ket{\beta_{00}}$.
-ms.openlocfilehash: 384dad5905cec50b500028e1bc352a742122b299
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 97a55b4bb85095c7d8e8432dfcd1c6d6f7e93cdc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92727398"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223944"
 ---
 # <a name="_prepareentangledstate-operation"></a>_prepareEntangledState işlemi
 
 Ad alanı: [Microsoft. hisse. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 İki kayıt verildiğinde, ilgili yazmaçlardaki her bir qubit çifti arasında en yüksek düzeyde bir durum hazırlar.
@@ -30,7 +30,7 @@ Tüm qubits, | 0 ⟩ durumunda başlamalıdır.
 Sonuç olarak her bir kayıttaki karşılık gelen qubit çiftleri $ \bra{\ beta_ {00} } \ket{\ beta_ {00} } $ içinde bulunur.
 
 ```qsharp
-operation _prepareEntangledState (left : Qubit[], right : Qubit[]) : Unit
+operation _prepareEntangledState (left : Qubit[], right : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
