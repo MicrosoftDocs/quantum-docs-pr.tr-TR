@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._NegativeLocations
 title: _NegativeLocations işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: _NegativeLocations
 qsharp.summary: ''
-ms.openlocfilehash: 53b05a0cd7c5366cbbb93ba9cc818c54e8b9dabf
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: bb00749452ed6b132fc20ea8e17bc86ea3e42c6b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92732391"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196812"
 ---
-# <a name="_negativelocations-function"></a><span data-ttu-id="cb582-102">_NegativeLocations işlevi</span><span class="sxs-lookup"><span data-stu-id="cb582-102">_NegativeLocations function</span></span>
+# <a name="_negativelocations-function"></a><span data-ttu-id="26b73-102">_NegativeLocations işlevi</span><span class="sxs-lookup"><span data-stu-id="26b73-102">_NegativeLocations function</span></span>
 
-<span data-ttu-id="cb582-103">Ad alanı: [Microsoft. hisse. Machinöğrenim](xref:Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="cb582-103">Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span></span>
+<span data-ttu-id="26b73-103">Ad alanı: [Microsoft. hisse. Machinöğrenim](xref:Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="26b73-103">Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span></span>
 
-<span data-ttu-id="cb582-104">Leyebilir [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="cb582-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="26b73-104">Paket: [Microsoft. hisse. Machine-öğrenim](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="26b73-104">Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span></span>
 
 
 
@@ -28,18 +28,18 @@ function _NegativeLocations (cNegative : Int, coefficients : Microsoft.Quantum.M
 ```
 
 
-## <a name="input"></a><span data-ttu-id="cb582-105">Giriş</span><span class="sxs-lookup"><span data-stu-id="cb582-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="26b73-105">Giriş</span><span class="sxs-lookup"><span data-stu-id="26b73-105">Input</span></span>
 
-### <a name="cnegative--int"></a><span data-ttu-id="cb582-106">cNegative: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="cb582-106">cNegative : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
-
-
-
-
-### <a name="coefficients--complexpolar"></a><span data-ttu-id="cb582-107">katsayılar: [Complexkutupsal](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span><span class="sxs-lookup"><span data-stu-id="cb582-107">coefficients : [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span></span>
+### <a name="cnegative--int"></a><span data-ttu-id="26b73-106">cNegative: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="26b73-106">cNegative : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
 
+### <a name="coefficients--complexpolar"></a><span data-ttu-id="26b73-107">katsayılar: [Complexkutupsal](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span><span class="sxs-lookup"><span data-stu-id="26b73-107">coefficients : [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span></span>
 
-## <a name="output--int"></a><span data-ttu-id="cb582-108">Çıkış: [Int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="cb582-108">Output : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
+
+
+
+
+## <a name="output--int"></a><span data-ttu-id="26b73-108">Çıkış: [Int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="26b73-108">Output : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
 
