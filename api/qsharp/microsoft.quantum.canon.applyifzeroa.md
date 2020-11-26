@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfZeroA
 title: Applyifsıfırlama bir işlem
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfZeroA
 qsharp.summary: Applies an adjointable operation conditioned on a classical result value being zero.
-ms.openlocfilehash: d324cd970e8df49ceb51b6bf5c9f3c9c3ff142f9
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ab5b05791213da7c8bee5915764c342cb0bed851
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92729509"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218504"
 ---
 # <a name="applyifzeroa-operation"></a>Applyifsıfırlama bir işlem
 
 Ad alanı: [Microsoft. hisse. Canon](xref:Microsoft.Quantum.Canon)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Klasik sonuç değeri sıfır olan bir adjointable işlemi uygular.
 
 ```qsharp
-operation ApplyIfZeroA<'T> (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit
+operation ApplyIfZeroA<'T> (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit is Adj
 ```
 
 
@@ -40,7 +40,7 @@ Sonek, `A` uygulanacak işlemin adjointable olduğunu gösterir.
 Op 'ın uygulanıp uygulanmadığını denetleyen ölçüm sonucu.
 
 
-### <a name="op--t--unit-adj"></a>Op: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ayarlaması
+### <a name="op--t--unit--is-adj"></a>Op: 'T => [birim](xref:microsoft.quantum.lang-ref.unit)  sıfatı
 
 Koşullu olarak uygulanacak bir işlem.
 
