@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.ApplySequentialClassifier
 title: ApplySequentialClassifier işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: ApplySequentialClassifier
 qsharp.summary: Given the structure and parameterization of a sequential classifier, applies the classifier to a register of qubits.
-ms.openlocfilehash: 1b4b4853491489f11f222507bb14b48e941e7859
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fe1ca5717f18cc0816b96ddd29ce89c568571791
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92731135"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96212027"
 ---
 # <a name="applysequentialclassifier-operation"></a>ApplySequentialClassifier işlemi
 
 Ad alanı: [Microsoft. hisse. Machinöğrenim](xref:Microsoft.Quantum.MachineLearning)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Machine-öğrenim](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Sıralı bir sınıflandırıcının yapısı ve parametreleştirmesi verildiğinde, sınıflandırıcının bir qubits kaydına uygulanması.
 
 ```qsharp
-operation ApplySequentialClassifier (model : Microsoft.Quantum.MachineLearning.SequentialModel, qubits : Qubit[]) : Unit
+operation ApplySequentialClassifier (model : Microsoft.Quantum.MachineLearning.SequentialModel, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
