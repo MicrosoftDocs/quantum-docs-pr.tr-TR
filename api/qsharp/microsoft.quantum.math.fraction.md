@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.Fraction
 title: Kesir Kullanıcı tanımlı türü
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: Fraction
 qsharp.summary: Represents a rational number of the form `p/q`. Integer `p` is the first element of the tuple and `q` is the second element of the tuple.
-ms.openlocfilehash: 350d470c374fc8e0a3f4c4a9a68ad8566ab88727
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1838bb2b605b109742948ec0633b08ca01baea98
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92733023"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210684"
 ---
 # <a name="fraction-user-defined-type"></a>Kesir Kullanıcı tanımlı türü
 
 Ad alanı: [Microsoft. hisse. Math](xref:Microsoft.Quantum.Math)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Formun bir Rational numarasını temsil eder `p/q` . Tamsayı, `p` kayıt düzeninin ilk öğesidir ve `q` kayıt düzeninin ikinci öğesidir.

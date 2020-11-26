@@ -1,0 +1,66 @@
+---
+uid: Microsoft.Quantum.Preparation.PrepareArbitraryStateD
+title: Hazırlık Earbitrarna belirtilen işlem
+ms.date: 11/25/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: operation
+qsharp.namespace: Microsoft.Quantum.Preparation
+qsharp.name: PrepareArbitraryStateD
+qsharp.summary: Given a set of coefficients and a little-endian encoded quantum register, prepares an state on that register described by the given coefficients.
+ms.openlocfilehash: cca0ea16dca3f3da8ce76a43f1012ffa0e4a72e0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210616"
+---
+# <a name="preparearbitrarystated-operation"></a>Hazırlık Earbitrarna belirtilen işlem
+
+Ad alanı: [Microsoft. hisse. hazırlık](xref:Microsoft.Quantum.Preparation)
+
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
+
+
+Bir ölçü kümesi ve az endian kodlu bir hisse kayıt verildiğinde, söz konusu kayıt üzerinde verilen katsayıların açıklandığı bir durum hazırlar.
+
+```qsharp
+operation PrepareArbitraryStateD (coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
+```
+
+
+## <a name="description"></a>Açıklama
+
+Bu işlem, $n $-qubit hesaplama tabanlı durumu $ \ket{0 \cnoktalar 0} $ T_J _j e ^ {i} $ $r karmaşık katlarla rastgele bir hisse ma(Fe{\psi} $ hazırlar.
+Özellikle, bu işlemin eylemi bir unitöğeli dönüşüm $U $ tarafından benzetimi yapılabilir ve bu durum,
+
+$ $ \begin{hizalaması} U\ket {0... 0} & = \ket{\psı} \\ \\ & = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i T_J} \ket{j}} {\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
+\end{hizalaması} $ $
+
+## <a name="input"></a>Giriş
+
+### <a name="coefficients--double"></a>katsayılar: [Double](xref:microsoft.quantum.lang-ref.double)[]
+
+En fazla $2 ^ n $ gerçek katsayısıdır. $J $ TH katsayısı, küçük endian biçiminde $ \ket{j} $ kodlu durum sayısını dizine ekler.
+
+
+### <a name="qubits--littleendian"></a>qubits: [Litttaendian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)
+
+Qubit kodlama numarası durumlarını küçük endian biçiminde kaydeder. Bu durumun, $ \ket{0...0} $ hesaplama tabanlı durumunda başlatılması beklenir.
+
+
+
+## <a name="output--unit"></a>Çıkış: [birim](xref:microsoft.quantum.lang-ref.unit)
+
+
+
+## <a name="remarks"></a>Açıklamalar
+
+_J < $0 $r negatif giriş katsayılarını $ | r_j | $ değeri ile pozitif kabul edilir. `coefficients` $2 ^ n $ değerinden azı belirtilmişse $ (r_j, t_j) = (0,0, 0,0) $ öğeleri ile doldurulur.
+
+## <a name="references"></a>Başvurular
+
+- Senişce Logic devreleri Vivek V. ShENdE, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176
+
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Microsoft. hisse. hazırlık. yaklaşık Telypreparearbitrari durumu](xref:Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryState)
