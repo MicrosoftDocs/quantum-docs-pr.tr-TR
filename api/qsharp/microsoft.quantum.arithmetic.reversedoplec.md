@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ReversedOpLEC
 title: ReversedOpLEC işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ReversedOpLEC
 qsharp.summary: Given an operation that takes a little-endian input, returns a new operation that takes a big-endian input.
-ms.openlocfilehash: 3a4872be6b81498c26ab9a14134940c5ef8628b1
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8c91391691b23786df02ae2a35264b578dccad41
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92730527"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96222091"
 ---
 # <a name="reversedoplec-function"></a>ReversedOpLEC işlevi
 
 Ad alanı: [Microsoft. hisse. aritmetik](xref:Microsoft.Quantum.Arithmetic)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Küçük endian girişi alan bir işlem verildiğinde, büyük endian girişi alan yeni bir işlem döndürür.
@@ -30,13 +30,13 @@ function ReversedOpLEC (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit 
 
 ## <a name="input"></a>Giriş
 
-### <a name="op--littleendian--unit-ctl"></a>Op: [littliendian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [birim](xref:microsoft.quantum.lang-ref.unit) CTL
+### <a name="op--littleendian--unit--is-ctl"></a>Op: [litttaendian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [birimi](xref:microsoft.quantum.lang-ref.unit)  CTL
 
 Girişi geri çevrilme işlemi.
 
 
 
-## <a name="output--bigendian--unit-ctl"></a>Çıkış: [bigenyen](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [birim](xref:microsoft.quantum.lang-ref.unit) CTL
+## <a name="output--bigendian--unit--is-ctl"></a>Çıkış: [bigenyen](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [birimi](xref:microsoft.quantum.lang-ref.unit)  CTL 'dir
 
 Girişini büyük endian kaydı olarak kabul eden yeni bir işlem.
 

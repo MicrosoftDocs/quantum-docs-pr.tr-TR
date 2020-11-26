@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ReversedOpBEA
 title: ReversedOpBEA işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ReversedOpBEA
 qsharp.summary: Given an operation that takes a big-endian input, returns a new operation that takes a little-endian input.
-ms.openlocfilehash: b2418911e71c0b98e1a78247b2ae066887d89cd8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 69fd4401e6862a3a6afaa51fb5b8a3592768bb42
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92730567"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96222312"
 ---
 # <a name="reversedopbea-function"></a>ReversedOpBEA işlevi
 
 Ad alanı: [Microsoft. hisse. aritmetik](xref:Microsoft.Quantum.Arithmetic)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Büyük endian girişi alan bir işlem verildiğinde, küçük endian girişi alan yeni bir işlem döndürür.
@@ -30,13 +30,13 @@ function ReversedOpBEA (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is 
 
 ## <a name="input"></a>Giriş
 
-### <a name="op--bigendian--unit-adj"></a>Op: [bigenyen](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [birimi](xref:microsoft.quantum.lang-ref.unit) ayarlaması
+### <a name="op--bigendian--unit--is-adj"></a>Op: [bigenyen](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [birimi](xref:microsoft.quantum.lang-ref.unit)  sıfatı
 
 Girişi geri çevrilme işlemi.
 
 
 
-## <a name="output--littleendian--unit-adj"></a>Çıkış: [litttaendian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [birimi](xref:microsoft.quantum.lang-ref.unit) ayarlama
+## <a name="output--littleendian--unit--is-adj"></a>Çıkış: [litttaendian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [birimi](xref:microsoft.quantum.lang-ref.unit)  sıfatdır
 
 Girişini küçük endian kaydı olarak kabul eden yeni bir işlem.
 

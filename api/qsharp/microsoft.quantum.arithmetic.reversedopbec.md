@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ReversedOpBEC
 title: ReversedOpBEC işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ReversedOpBEC
 qsharp.summary: Given an operation that takes a big-endian input, returns a new operation that takes a little-endian input.
-ms.openlocfilehash: 5e9aa6e6dfef74bca004170cf2b1cd91aa13f0b1
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5bafe71b665eda082eafbe06be1308d6b042db2c
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92730554"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96222278"
 ---
 # <a name="reversedopbec-function"></a>ReversedOpBEC işlevi
 
 Ad alanı: [Microsoft. hisse. aritmetik](xref:Microsoft.Quantum.Arithmetic)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Büyük endian girişi alan bir işlem verildiğinde, küçük endian girişi alan yeni bir işlem döndürür.
@@ -30,13 +30,13 @@ function ReversedOpBEC (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is 
 
 ## <a name="input"></a>Giriş
 
-### <a name="op--bigendian--unit-ctl"></a>Op: [bigenyen](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [birim](xref:microsoft.quantum.lang-ref.unit) CTL
+### <a name="op--bigendian--unit--is-ctl"></a>Op: [bigenyen](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [birimi](xref:microsoft.quantum.lang-ref.unit)  CTL
 
 Girişi geri çevrilme işlemi.
 
 
 
-## <a name="output--littleendian--unit-ctl"></a>Çıkış: [litttaendian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [birim](xref:microsoft.quantum.lang-ref.unit) CTL
+## <a name="output--littleendian--unit--is-ctl"></a>Çıkış: [litttaendian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [birimi](xref:microsoft.quantum.lang-ref.unit)  CTL
 
 Girişini küçük endian kaydı olarak kabul eden yeni bir işlem.
 

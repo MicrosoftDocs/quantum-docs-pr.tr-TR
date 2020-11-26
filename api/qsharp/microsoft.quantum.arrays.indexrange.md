@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.IndexRange
 title: Indexrange işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: IndexRange
 qsharp.summary: Given an array, returns a range over the indices of that array, suitable for use in a for loop.
-ms.openlocfilehash: 7f9779acd4a781c50388217aa780710bd0b99ff3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5afd4cc260ac3e384d2736bf7b43d941afd9ef73
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92730202"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220952"
 ---
 # <a name="indexrange-function"></a>Indexrange işlevi
 
 Ad alanı: [Microsoft. hisse. dizileri](xref:Microsoft.Quantum.Arrays)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Bir dizi verildiğinde, for döngüsünde kullanılmak üzere uygun olan, bu dizinin dizinlerinin üzerinde bir Aralık döndürür.

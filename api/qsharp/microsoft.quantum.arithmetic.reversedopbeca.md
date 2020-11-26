@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ReversedOpBECA
 title: ReversedOpBECA işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ReversedOpBECA
 qsharp.summary: Given an operation that takes a big-endian input, returns a new operation that takes a little-endian input.
-ms.openlocfilehash: 5617e191260903ac25effc8b922810932b7dc505
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: da21b09110400ad4ee862f662d45e166a49e7bd8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92730546"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96222210"
 ---
 # <a name="reversedopbeca-function"></a>ReversedOpBECA işlevi
 
 Ad alanı: [Microsoft. hisse. aritmetik](xref:Microsoft.Quantum.Arithmetic)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Büyük endian girişi alan bir işlem verildiğinde, küçük endian girişi alan yeni bir işlem döndürür.
@@ -30,13 +30,13 @@ function ReversedOpBECA (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is
 
 ## <a name="input"></a>Giriş
 
-### <a name="op--bigendian--unit-adj--ctl"></a>Op: [bigenyen](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [birimi](xref:microsoft.quantum.lang-ref.unit) ayarlama ve CTL
+### <a name="op--bigendian--unit--is-adj--ctl"></a>Op: [bigenyen](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [birimi](xref:microsoft.quantum.lang-ref.unit)  , sıfatı + CTL
 
 Girişi geri çevrilme işlemi.
 
 
 
-## <a name="output--littleendian--unit-adj--ctl"></a>Çıkış: [litttaendian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [birimi](xref:microsoft.quantum.lang-ref.unit) ayarlama + CTL
+## <a name="output--littleendian--unit--is-adj--ctl"></a>Çıkış: [litttaendian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [birimi](xref:microsoft.quantum.lang-ref.unit)  ayarlama ve CTL
 
 Girişini küçük endian kaydı olarak kabul eden yeni bir işlem.
 

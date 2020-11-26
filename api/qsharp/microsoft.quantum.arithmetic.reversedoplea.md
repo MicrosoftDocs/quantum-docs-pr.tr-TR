@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ReversedOpLEA
 title: ReversedOpLEA işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ReversedOpLEA
 qsharp.summary: Given an operation that takes a little-endian input, returns a new operation that takes a big-endian input.
-ms.openlocfilehash: eabeb8e068ef32cf6717efd6e818271a667b39b2
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 71b6b87a44f541e5379d8de8a3562febbfa49e1d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92730530"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96222176"
 ---
 # <a name="reversedoplea-function"></a>ReversedOpLEA işlevi
 
 Ad alanı: [Microsoft. hisse. aritmetik](xref:Microsoft.Quantum.Arithmetic)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Küçük endian girişi alan bir işlem verildiğinde, büyük endian girişi alan yeni bir işlem döndürür.
@@ -30,13 +30,13 @@ function ReversedOpLEA (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit 
 
 ## <a name="input"></a>Giriş
 
-### <a name="op--littleendian--unit-adj"></a>Op: [litttaendian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [birimi](xref:microsoft.quantum.lang-ref.unit) ayarlama
+### <a name="op--littleendian--unit--is-adj"></a>Op: [litttaendian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [birimi](xref:microsoft.quantum.lang-ref.unit)  sıfatdır
 
 Girişi geri çevrilme işlemi.
 
 
 
-## <a name="output--bigendian--unit-adj"></a>Çıkış: [bigenyen](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [birimi](xref:microsoft.quantum.lang-ref.unit) ayarlaması
+## <a name="output--bigendian--unit--is-adj"></a>Çıkış: [bigenyen](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [birimi](xref:microsoft.quantum.lang-ref.unit)  sıfatı
 
 Girişini büyük endian kaydı olarak kabul eden yeni bir işlem.
 
