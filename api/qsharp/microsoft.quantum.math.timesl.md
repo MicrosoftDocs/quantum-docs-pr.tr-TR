@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.TimesL
 title: TimesL işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: TimesL
 qsharp.summary: Returns the product of two inputs.
-ms.openlocfilehash: 749999af8f34b65bb43c7f99b304531c095cfacb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 095d408c674cae5f46a6fb1c1d8f4d7dba0d84e7
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725850"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194296"
 ---
 # <a name="timesl-function"></a>TimesL işlevi
 
 Ad alanı: [Microsoft. hisse. Math](xref:Microsoft.Quantum.Math)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 İki girişin çarpımını döndürür.
