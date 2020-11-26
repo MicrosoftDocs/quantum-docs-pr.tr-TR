@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.DefaultTrainingOptions
 title: Defaulttraıningoptions işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: DefaultTrainingOptions
 qsharp.summary: Returns a default set of options for training classifiers.
-ms.openlocfilehash: aa70c8e592b69f3aba81f7d2697478bf930ad8aa
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fd72b7ed73aca675bc82042ce5df79a4fb3269f3
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92731090"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196456"
 ---
 # <a name="defaulttrainingoptions-function"></a>Defaulttraıningoptions işlevi
 
 Ad alanı: [Microsoft. hisse. Machinöğrenim](xref:Microsoft.Quantum.MachineLearning)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Machine-öğrenim](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Eğitim sınıflandırıcıları için varsayılan seçenek kümesini döndürür.

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.PlusA
 title: PlusA işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: PlusA
 qsharp.summary: Returns the sum (concatenation) of two inputs.
-ms.openlocfilehash: 0c6fdcf7c59dc5d89bf83e285339046b5ad5a57e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fe19c5d2e075624516376a5d5fa49014acb295ec
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725886"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194840"
 ---
 # <a name="plusa-function"></a>PlusA işlevi
 
 Ad alanı: [Microsoft. hisse. Math](xref:Microsoft.Quantum.Math)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 İki girişin toplamını (birleştirme) döndürür.

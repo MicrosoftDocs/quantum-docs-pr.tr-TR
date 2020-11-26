@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.ArcTan
 title: ArcTan işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ArcTan
 qsharp.summary: Returns the angle whose tangent is the specified number.
-ms.openlocfilehash: 9f8b3220ff01f286324855c92f1102d02c68818e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 87c6690355ca38ed702c04b464d22c2d58b77b40
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92733466"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96195842"
 ---
 # <a name="arctan-function"></a>ArcTan işlevi
 
 Ad alanı: [Microsoft. hisse. Math](xref:Microsoft.Quantum.Math)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Tanjantı belirtilen sayı olan açıyı döndürür.

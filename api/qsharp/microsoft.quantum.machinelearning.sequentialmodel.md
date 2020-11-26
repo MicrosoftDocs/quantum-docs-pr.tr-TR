@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.SequentialModel
 title: SequentialModel Kullanıcı tanımlı tür
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: SequentialModel
 qsharp.summary: Describes a quantum classifier model composed of a sequence of parameterized and controlled rotations, an assignment of rotation angles, and a bias between the two classes recognized by the model.
-ms.openlocfilehash: a425d2155489384ca81ef1c00a5e842bcfb40ae7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3afdb8dafe0179535fe5d8c3dff668f1f3de2f7d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92732298"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196183"
 ---
 # <a name="sequentialmodel-user-defined-type"></a>SequentialModel Kullanıcı tanımlı tür
 
 Ad alanı: [Microsoft. hisse. Machinöğrenim](xref:Microsoft.Quantum.MachineLearning)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Machine-öğrenim](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Parametreli ve denetimli bir döndürmeler dizisinin, döndürme açılarından oluşan bir atamanın ve model tarafından tanınan iki sınıf arasındaki bir sapıcının oluşan bir hisse
@@ -42,6 +42,6 @@ Verilen sınıflandırma yapısına döndürme açıların atanması.
 
 Bu sınıflandırıcı tarafından tanınan iki sınıf arasındaki sapma.
 
-## <a name="references"></a>Referanslar
+## <a name="references"></a>Başvurular
 
 - [Arxıv: 1804.00633](https://arxiv.org/abs/1804.00633)
