@@ -1,46 +1,46 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyConditionallyA
 title: ApplyConditionallyA işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyConditionallyA
 qsharp.summary: ''
-ms.openlocfilehash: b6f7e7d6d51e531b0ec9e7e4f2f5772038421933
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8117fd632b78c24c9ecb8545274eaf296645b645
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92726282"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96230421"
 ---
 # <a name="applyconditionallya-operation"></a>ApplyConditionallyA işlemi
 
 Ad alanı: [Microsoft. hisse. simülasyon. Histumprocessor. Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
 
 ```qsharp
-operation ApplyConditionallyA<'T, 'U> (measurementResults : Result[], resultsValues : Result[], (onEqualOp : ('T => Unit is Adj), equalArg : 'T), (onNonEqualOp : ('U => Unit is Adj), nonEqualArg : 'U)) : Unit
+operation ApplyConditionallyA<'T, 'U> (measurementResults : Result[], resultsValues : Result[], (onEqualOp : ('T => Unit is Adj), equalArg : 'T), (onNonEqualOp : ('U => Unit is Adj), nonEqualArg : 'U)) : Unit is Adj
 ```
 
 
 ## <a name="input"></a>Giriş
 
-### <a name="measurementresults--__invalidresult__"></a>measurementResults: __geçersiz <Result>__ []
+### <a name="measurementresults--__invalidresult__"></a>measurementResults: __geçersiz <Result>__[]
 
 
 
 
-### <a name="resultsvalues--__invalidresult__"></a>resultsValues değerleri __: <Result> geçersiz__ []
+### <a name="resultsvalues--__invalidresult__"></a>resultsValues değerleri __: <Result> geçersiz__[]
 
 
 
 
-### <a name="onequalop--t--unit-adj"></a>onEqualOp: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ayarlaması
+### <a name="onequalop--t--unit--is-adj"></a>onEqualOp: 'T => [birim](xref:microsoft.quantum.lang-ref.unit)  sıfatı
 
 
 
@@ -50,7 +50,7 @@ operation ApplyConditionallyA<'T, 'U> (measurementResults : Result[], resultsVal
 
 
 
-### <a name="onnonequalop--u--unit-adj"></a>onNonEqualOp: ' U => [birim](xref:microsoft.quantum.lang-ref.unit) ayarlama
+### <a name="onnonequalop--u--unit--is-adj"></a>onNonEqualOp: ' U => [birimi](xref:microsoft.quantum.lang-ref.unit)  sıfatı
 
 
 
