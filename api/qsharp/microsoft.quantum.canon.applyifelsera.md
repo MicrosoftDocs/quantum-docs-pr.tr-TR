@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseRA
 title: ApplyIfElseRA işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseRA
 qsharp.summary: Applies one of two adjointable operations, depending on the value of a classical result.
-ms.openlocfilehash: d0181d98a9867f71d8a8f8dea4331e5a13f9e59c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3ebd09b1e5876ff397f3524ba828ba26a271e91e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92729546"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218606"
 ---
 # <a name="applyifelsera-operation"></a>ApplyIfElseRA işlemi
 
 Ad alanı: [Microsoft. hisse. Canon](xref:Microsoft.Quantum.Canon)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Klasik sonucun değerine bağlı olarak iki adjointable işlemlerinden birini uygular.
 
 ```qsharp
-operation ApplyIfElseRA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U)) : Unit
+operation ApplyIfElseRA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U)) : Unit is Adj
 ```
 
 
@@ -39,7 +39,7 @@ Sonuç verildiğinde `result` , `zeroOp` `zeroInput` öğesine eşit olduğu zam
 Ölçüm sonucu, veya uygulanmış olup olmadığını tespit etmek için kullanılır `zeroOp` `oneOp` .
 
 
-### <a name="zeroop--t--unit-adj"></a>Sıfırlama Işleci: 'T => [birim](xref:microsoft.quantum.lang-ref.unit) ayarlama
+### <a name="zeroop--t--unit--is-adj"></a>Sıfırlama işlemi: 'T => [birimi](xref:microsoft.quantum.lang-ref.unit)  sıfatı
 
 Ne zaman uygulanacak adjointable işlemi `result == Zero` .
 
@@ -49,7 +49,7 @@ Ne zaman uygulanacak adjointable işlemi `result == Zero` .
 `zeroOp`Ne zaman sağlanacak giriş `result == Zero` .
 
 
-### <a name="oneop--u--unit-adj"></a>oneOp: ' U => [birimi](xref:microsoft.quantum.lang-ref.unit) ayarlaması
+### <a name="oneop--u--unit--is-adj"></a>oneOp: ' U => [birimi](xref:microsoft.quantum.lang-ref.unit)  sıfatı
 
 Ne zaman uygulanacak adjointable işlemi `result == One` .
 

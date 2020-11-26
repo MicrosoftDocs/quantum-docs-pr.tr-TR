@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Bitwise.ZBits
 title: ZBits işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: ZBits
 qsharp.summary: Returns an integer representing the Z bits of an array of Pauli operators.
-ms.openlocfilehash: f66b8ef0370e898dd1d095ff2840c91566f32cb8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3ded981dc53236a48f1fb8f6ae12e39c17469447
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92729791"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219456"
 ---
 # <a name="zbits-function"></a>ZBits işlevi
 
 Ad alanı: [Microsoft. hisse. bit düzeyinde](xref:Microsoft.Quantum.Bitwise)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Pauli işleçleri dizisinin Z bitlerini temsil eden bir tamsayı döndürür.

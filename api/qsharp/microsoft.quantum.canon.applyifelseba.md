@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseBA
 title: ApplyIfElseBA işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseBA
 qsharp.summary: Applies one of two adjointable operations, depending on the value of a classical bit.
-ms.openlocfilehash: ce08907646c3210f76244f29aa0d936e2bd6ee43
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 74d43344481c5a808e84ce9c9e36fa3e83cd0d89
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92729570"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218674"
 ---
 # <a name="applyifelseba-operation"></a>ApplyIfElseBA işlemi
 
 Ad alanı: [Microsoft. hisse. Canon](xref:Microsoft.Quantum.Canon)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Klasik bir bit değerine bağlı olarak iki adjointable işlemden birini uygular.
 
 ```qsharp
-operation ApplyIfElseBA<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Adj), trueInput : 'T), (falseOp : ('U => Unit is Adj), falseInput : 'U)) : Unit
+operation ApplyIfElseBA<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Adj), trueInput : 'T), (falseOp : ('U => Unit is Adj), falseInput : 'U)) : Unit is Adj
 ```
 
 
@@ -39,7 +39,7 @@ Bir bit verildiğinde, `bit` `trueOp` `trueInput` ,, olduğu zaman girişi olara
 `trueOp`Veya uygulanıp uygulanmadığını belirlemede kullanılan Boolean değeri `falseOp` .
 
 
-### <a name="trueop--t--unit-adj"></a>trueOp: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ayarlaması
+### <a name="trueop--t--unit--is-adj"></a>trueOp: 'T => [birimi](xref:microsoft.quantum.lang-ref.unit)  sıfatı
 
 Olduğunda uygulanacak adjointable işlemi `bit` `true` .
 
@@ -49,7 +49,7 @@ Olduğunda uygulanacak adjointable işlemi `bit` `true` .
 Olduğunda olarak sağlanacak giriş `trueOp` `bit` `true` .
 
 
-### <a name="falseop--u--unit-adj"></a>Yanlışop: ' U => [birimi](xref:microsoft.quantum.lang-ref.unit) ayarlaması
+### <a name="falseop--u--unit--is-adj"></a>Yanlışop: ' U => [birimi](xref:microsoft.quantum.lang-ref.unit)  sıfatı
 
 Olduğunda uygulanacak adjointable işlemi `bit` `false` .
 
