@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.HTermToGenIdx
 title: HTermToGenIdx işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry
 qsharp.name: HTermToGenIdx
 qsharp.summary: Converts a Hamiltonian term in `HTerm` data format to a GeneratorIndex.
-ms.openlocfilehash: dd72355adb32f9a0d109ee36b24be2d445f3fa66
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 59391a882fdbc55172ee93a7428c1735bbb29500
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728129"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216039"
 ---
 # <a name="htermtogenidx-function"></a>HTermToGenIdx işlevi
 
 Ad alanı: [Microsoft. hisse. Chemistry](xref:Microsoft.Quantum.Chemistry)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Veri biçimindeki Hamiltonian terimini `HTerm` bir Generatorındex öğesine dönüştürür.
