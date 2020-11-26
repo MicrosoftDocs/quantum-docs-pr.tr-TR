@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._EstimateDerivativeWithParameterShift
 title: _EstimateDerivativeWithParameterShift işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: _EstimateDerivativeWithParameterShift
 qsharp.summary: ''
-ms.openlocfilehash: 66451cb34dfce9073cdfeb5dd593e31eee5a2eca
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 729e1b43f2efb8a512a6283f33846ea6eba88c79
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92731202"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96212316"
 ---
-# <a name="_estimatederivativewithparametershift-operation"></a><span data-ttu-id="63016-102">_EstimateDerivativeWithParameterShift işlemi</span><span class="sxs-lookup"><span data-stu-id="63016-102">_EstimateDerivativeWithParameterShift operation</span></span>
+# <a name="_estimatederivativewithparametershift-operation"></a><span data-ttu-id="9c6e3-102">_EstimateDerivativeWithParameterShift işlemi</span><span class="sxs-lookup"><span data-stu-id="9c6e3-102">_EstimateDerivativeWithParameterShift operation</span></span>
 
-<span data-ttu-id="63016-103">Ad alanı: [Microsoft. hisse. Machinöğrenim](xref:Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="63016-103">Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span></span>
+<span data-ttu-id="9c6e3-103">Ad alanı: [Microsoft. hisse. Machinöğrenim](xref:Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="9c6e3-103">Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span></span>
 
-<span data-ttu-id="63016-104">Leyebilir [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="63016-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="9c6e3-104">Paket: [Microsoft. hisse. Machine-öğrenim](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="9c6e3-104">Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span></span>
 
 
 
@@ -28,33 +28,33 @@ operation _EstimateDerivativeWithParameterShift (inputEncoder : Microsoft.Quantu
 ```
 
 
-## <a name="input"></a><span data-ttu-id="63016-105">Giriş</span><span class="sxs-lookup"><span data-stu-id="63016-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="9c6e3-105">Giriş</span><span class="sxs-lookup"><span data-stu-id="9c6e3-105">Input</span></span>
 
-### <a name="inputencoder--stategenerator"></a><span data-ttu-id="63016-106">ınputencoder: [Stategenerator](xref:Microsoft.Quantum.MachineLearning.StateGenerator)</span><span class="sxs-lookup"><span data-stu-id="63016-106">inputEncoder : [StateGenerator](xref:Microsoft.Quantum.MachineLearning.StateGenerator)</span></span>
-
-
-
-
-### <a name="model--sequentialmodel"></a><span data-ttu-id="63016-107">Model: [SequentialModel](xref:Microsoft.Quantum.MachineLearning.SequentialModel)</span><span class="sxs-lookup"><span data-stu-id="63016-107">model : [SequentialModel](xref:Microsoft.Quantum.MachineLearning.SequentialModel)</span></span>
+### <a name="inputencoder--stategenerator"></a><span data-ttu-id="9c6e3-106">ınputencoder: [Stategenerator](xref:Microsoft.Quantum.MachineLearning.StateGenerator)</span><span class="sxs-lookup"><span data-stu-id="9c6e3-106">inputEncoder : [StateGenerator](xref:Microsoft.Quantum.MachineLearning.StateGenerator)</span></span>
 
 
 
 
-### <a name="parameters--doubledouble"></a><span data-ttu-id="63016-108">Parametreler: ([Double](xref:microsoft.quantum.lang-ref.double)[],[Double](xref:microsoft.quantum.lang-ref.double)[])</span><span class="sxs-lookup"><span data-stu-id="63016-108">parameters : ([Double](xref:microsoft.quantum.lang-ref.double)[],[Double](xref:microsoft.quantum.lang-ref.double)[])</span></span>
+### <a name="model--sequentialmodel"></a><span data-ttu-id="9c6e3-107">Model: [SequentialModel](xref:Microsoft.Quantum.MachineLearning.SequentialModel)</span><span class="sxs-lookup"><span data-stu-id="9c6e3-107">model : [SequentialModel](xref:Microsoft.Quantum.MachineLearning.SequentialModel)</span></span>
 
 
 
 
-### <a name="nqubits--int"></a><span data-ttu-id="63016-109">nQubits: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="63016-109">nQubits : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="parameters--doubledouble"></a><span data-ttu-id="9c6e3-108">Parametreler: ([Double](xref:microsoft.quantum.lang-ref.double)[],[Double](xref:microsoft.quantum.lang-ref.double)[])</span><span class="sxs-lookup"><span data-stu-id="9c6e3-108">parameters : ([Double](xref:microsoft.quantum.lang-ref.double)[],[Double](xref:microsoft.quantum.lang-ref.double)[])</span></span>
 
 
 
 
-### <a name="nmeasurements--int"></a><span data-ttu-id="63016-110">Nölçümler: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="63016-110">nMeasurements : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="nqubits--int"></a><span data-ttu-id="9c6e3-109">nQubits: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="9c6e3-109">nQubits : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+
+
+
+
+### <a name="nmeasurements--int"></a><span data-ttu-id="9c6e3-110">Nölçümler: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="9c6e3-110">nMeasurements : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
 
 
-## <a name="output--double"></a><span data-ttu-id="63016-111">Çıkış: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="63016-111">Output : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+## <a name="output--double"></a><span data-ttu-id="9c6e3-111">Çıkış: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="9c6e3-111">Output : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
