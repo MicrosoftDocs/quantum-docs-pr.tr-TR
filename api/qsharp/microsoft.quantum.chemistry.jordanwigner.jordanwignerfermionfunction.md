@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerFermionFunction
 title: JordanWignerFermionFunction işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: JordanWignerFermionFunction
 qsharp.summary: Represents a dynamical generator as a set of simulatable gates and an expansion in the JordanWigner basis.
-ms.openlocfilehash: 7d29393293acfc1748a1805f339951b1ff0f9b10
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e1eeed0dcd4084401e2680ff1188db4225ee85ca
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92727782"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96214764"
 ---
 # <a name="jordanwignerfermionfunction-function"></a>JordanWignerFermionFunction işlevi
 
 Ad alanı: [Microsoft. hisse. Chemistry. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Bir dinamik üreticisini bir simulatable Gates kümesi ve JordanWigner temelinde bir genişletme olarak temsil eder.
