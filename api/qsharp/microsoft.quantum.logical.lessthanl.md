@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.LessThanL
 title: Lessbir l işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: LessThanL
 qsharp.summary: Returns true if and only if a number is less than another number.
-ms.openlocfilehash: fde57bcd9960056461bddac54300c298def8f7d5
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9a0678569596ac188c87c3944f3759783fcc77ee
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92726036"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197730"
 ---
 # <a name="lessthanl-function"></a>Lessbir l işlevi
 
 Ad alanı: [Microsoft. hisse. Logical](xref:Microsoft.Quantum.Logical)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Yalnızca bir sayı başka bir sayıdan küçükse true değerini döndürür.

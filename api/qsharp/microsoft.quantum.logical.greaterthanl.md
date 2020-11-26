@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.GreaterThanL
 title: GreaterThanL işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: GreaterThanL
 qsharp.summary: Returns true if and only if a number is greater than another number.
-ms.openlocfilehash: 676defa7824e53578504c559c6d8f24b2ffc1a88
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5e1b2adab36b7937c83ea912b8a9cb148b626ee5
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92726648"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197986"
 ---
 # <a name="greaterthanl-function"></a>GreaterThanL işlevi
 
 Ad alanı: [Microsoft. hisse. Logical](xref:Microsoft.Quantum.Logical)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Yalnızca bir sayı başka bir sayıdan daha büyükse true değerini döndürür.

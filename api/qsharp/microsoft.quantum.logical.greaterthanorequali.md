@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.GreaterThanOrEqualI
 title: GreaterThanOrEqualI işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: GreaterThanOrEqualI
 qsharp.summary: Returns true if and only if a number is greater than or equal to another number.
-ms.openlocfilehash: 292599c18d2aac44cef8f0eecca38eb1fbe22061
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 0435aae4a824bd19d972e9f6b331260bbe21f692
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92732930"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197798"
 ---
 # <a name="greaterthanorequali-function"></a>GreaterThanOrEqualI işlevi
 
 Ad alanı: [Microsoft. hisse. Logical](xref:Microsoft.Quantum.Logical)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Yalnızca bir sayı başka bir sayıdan büyük veya buna eşitse true değerini döndürür.

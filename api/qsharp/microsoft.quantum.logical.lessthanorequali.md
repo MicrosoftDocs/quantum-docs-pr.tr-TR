@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.LessThanOrEqualI
 title: Lesskıdan Okarşılandığından ali işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: LessThanOrEqualI
 qsharp.summary: Returns true if and only if a number is less than or equal to another number.
-ms.openlocfilehash: dd934fde3fae9c1a43032b4b08ac03afa72798d1
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b2974c9bc84d0b4366767f47682ab542f85063e2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92726029"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197575"
 ---
 # <a name="lessthanorequali-function"></a>Lesskıdan Okarşılandığından ali işlevi
 
 Ad alanı: [Microsoft. hisse. Logical](xref:Microsoft.Quantum.Logical)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Yalnızca bir sayı başka bir sayıdan küçük veya ona eşitse true değerini döndürür.
