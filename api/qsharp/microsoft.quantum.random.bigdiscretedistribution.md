@@ -1,27 +1,27 @@
 ---
 uid: Microsoft.Quantum.Random.BigDiscreteDistribution
 title: BigDiscreteDistribution Kullanıcı tanımlı tür
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: BigDiscreteDistribution
 qsharp.summary: Represents a univariate probability distribution over integers of arbitrary size.
-ms.openlocfilehash: d3aba17c8bb4d49f09279b6910e0e56a8e20a6d2
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: add39f057b209bb19336a2af3d08aefcf8e1e11e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92732562"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96193208"
 ---
-# <a name="bigdiscretedistribution-user-defined-type"></a><span data-ttu-id="71b95-102">BigDiscreteDistribution Kullanıcı tanımlı tür</span><span class="sxs-lookup"><span data-stu-id="71b95-102">BigDiscreteDistribution user defined type</span></span>
+# <a name="bigdiscretedistribution-user-defined-type"></a><span data-ttu-id="07e71-102">BigDiscreteDistribution Kullanıcı tanımlı tür</span><span class="sxs-lookup"><span data-stu-id="07e71-102">BigDiscreteDistribution user defined type</span></span>
 
-<span data-ttu-id="71b95-103">Ad alanı: [Microsoft. hisse. Random](xref:Microsoft.Quantum.Random)</span><span class="sxs-lookup"><span data-stu-id="71b95-103">Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)</span></span>
+<span data-ttu-id="07e71-103">Ad alanı: [Microsoft. hisse. Random](xref:Microsoft.Quantum.Random)</span><span class="sxs-lookup"><span data-stu-id="07e71-103">Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)</span></span>
 
-<span data-ttu-id="71b95-104">Leyebilir [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="71b95-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="07e71-104">Paket: [Microsoft. hisse. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="07e71-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
-<span data-ttu-id="71b95-105">Rastgele boyuttaki tamsayıların üzerinde tek bir olasılık dağılımı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="71b95-105">Represents a univariate probability distribution over integers of arbitrary size.</span></span>
+<span data-ttu-id="07e71-105">Rastgele boyuttaki tamsayıların üzerinde tek bir olasılık dağılımı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="07e71-105">Represents a univariate probability distribution over integers of arbitrary size.</span></span>
 
 ```qsharp
 
@@ -30,14 +30,14 @@ newtype BigDiscreteDistribution = (Sample : (Unit => BigInt));
 
 
 
-## <a name="named-items"></a><span data-ttu-id="71b95-106">Adlandırılmış öğeler</span><span class="sxs-lookup"><span data-stu-id="71b95-106">Named Items</span></span>
+## <a name="named-items"></a><span data-ttu-id="07e71-106">Adlandırılmış öğeler</span><span class="sxs-lookup"><span data-stu-id="07e71-106">Named Items</span></span>
 
-### <a name="sample--unit--bigint"></a><span data-ttu-id="71b95-107">Örnek: [Unit](xref:microsoft.quantum.lang-ref.unit) => [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="71b95-107">Sample : [Unit](xref:microsoft.quantum.lang-ref.unit) => [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span> 
+### <a name="sample--unit--bigint"></a><span data-ttu-id="07e71-107">Örnek: [Unit](xref:microsoft.quantum.lang-ref.unit) => [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="07e71-107">Sample : [Unit](xref:microsoft.quantum.lang-ref.unit) => [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span> 
 
 
 
-## <a name="see-also"></a><span data-ttu-id="71b95-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="71b95-108">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="07e71-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="07e71-108">See Also</span></span>
 
-- [<span data-ttu-id="71b95-109">Microsoft. hisse. Random. ContinuousDistribution</span><span class="sxs-lookup"><span data-stu-id="71b95-109">Microsoft.Quantum.Random.ContinuousDistribution</span></span>](xref:Microsoft.Quantum.Random.ContinuousDistribution)
-- [<span data-ttu-id="71b95-110">Microsoft. hisse. Random. ComplexDistribution</span><span class="sxs-lookup"><span data-stu-id="71b95-110">Microsoft.Quantum.Random.ComplexDistribution</span></span>](xref:Microsoft.Quantum.Random.ComplexDistribution)
-- [<span data-ttu-id="71b95-111">Microsoft. hisse. Random. DiscreteDistribution</span><span class="sxs-lookup"><span data-stu-id="71b95-111">Microsoft.Quantum.Random.DiscreteDistribution</span></span>](xref:Microsoft.Quantum.Random.DiscreteDistribution)
+- [<span data-ttu-id="07e71-109">Microsoft. hisse. Random. ContinuousDistribution</span><span class="sxs-lookup"><span data-stu-id="07e71-109">Microsoft.Quantum.Random.ContinuousDistribution</span></span>](xref:Microsoft.Quantum.Random.ContinuousDistribution)
+- [<span data-ttu-id="07e71-110">Microsoft. hisse. Random. ComplexDistribution</span><span class="sxs-lookup"><span data-stu-id="07e71-110">Microsoft.Quantum.Random.ComplexDistribution</span></span>](xref:Microsoft.Quantum.Random.ComplexDistribution)
+- [<span data-ttu-id="07e71-111">Microsoft. hisse. Random. DiscreteDistribution</span><span class="sxs-lookup"><span data-stu-id="07e71-111">Microsoft.Quantum.Random.DiscreteDistribution</span></span>](xref:Microsoft.Quantum.Random.DiscreteDistribution)
