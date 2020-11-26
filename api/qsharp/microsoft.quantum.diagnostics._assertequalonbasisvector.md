@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics._assertEqualOnBasisVector
 title: _assertEqualOnBasisVector işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: _assertEqualOnBasisVector
 qsharp.summary: Checks if the result of applying two operations `givenU` and `expectedU` to a basis state is the same. The basis state is described by `basis` parameter. See <xref:microsoft.quantum.extensions.fliptobasis> function for more details on this description.
-ms.openlocfilehash: 01b6d5aede102e47df86ea70d071d81eba1ade6f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d8f2195f75de49918032053dc8d1fa4fb4eba840
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92727409"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96213778"
 ---
 # <a name="_assertequalonbasisvector-operation"></a>_assertEqualOnBasisVector işlemi
 
 Ad alanı: [Microsoft. hisse. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 İki işlem `givenU` ve bir temel duruma uygulamanın sonucunun aynı olup olmadığını denetler `expectedU` . Temel durum, `basis` parametresiyle açıklanır.
@@ -41,7 +41,7 @@ Her $n $ qubit için tek qubit tabanlı bir durum KIMLIĞI (0 <= kimlik <= 3) ta
 $N $ qubits üzerinde işlem denetlenecek.
 
 
-### <a name="expectedu--qubit--unit-adj"></a>expectedU: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [birim](xref:microsoft.quantum.lang-ref.unit) ayarlama
+### <a name="expectedu--qubit--unit--is-adj"></a>expectedU: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [birimi](xref:microsoft.quantum.lang-ref.unit)  sıfatı
 
 GivenU 'nin karşılaştırılacağı $n $ qubits üzerinde başvuru işlemi.
 
