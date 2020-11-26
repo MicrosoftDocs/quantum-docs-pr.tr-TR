@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseBC
 title: ApplyIfElseBC işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseBC
 qsharp.summary: Applies one of two controllable operations, depending on the value of a classical bit.
-ms.openlocfilehash: 032d92484dc96481cb981d9d8acfeed248a9116d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ea06b0a0a07659407e13caa2baa4f3e37ca2a0f7
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92729578"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209528"
 ---
 # <a name="applyifelsebc-operation"></a>ApplyIfElseBC işlemi
 
 Ad alanı: [Microsoft. hisse. Canon](xref:Microsoft.Quantum.Canon)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Klasik bir bitin değerine bağlı olarak, iki denetlenebilir işlemden birini uygular.
 
 ```qsharp
-operation ApplyIfElseBC<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U)) : Unit
+operation ApplyIfElseBC<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U)) : Unit is Ctl
 ```
 
 
@@ -39,7 +39,7 @@ Bir bit verildiğinde, `bit` `trueOp` `trueInput` ,, olduğu zaman girişi olara
 `trueOp`Veya uygulanıp uygulanmadığını belirlemede kullanılan Boolean değeri `falseOp` .
 
 
-### <a name="trueop--t--unit-ctl"></a>trueOp: 'T => [birim](xref:microsoft.quantum.lang-ref.unit) CTL
+### <a name="trueop--t--unit--is-ctl"></a>trueOp: 'T => [birim](xref:microsoft.quantum.lang-ref.unit)  CTL
 
 Olduğunda uygulanacak denetlenebilir işlem `bit` `true` .
 
@@ -49,7 +49,7 @@ Olduğunda uygulanacak denetlenebilir işlem `bit` `true` .
 Olduğunda olarak sağlanacak giriş `trueOp` `bit` `true` .
 
 
-### <a name="falseop--u--unit-ctl"></a>Yanlışop: ' U => [birim](xref:microsoft.quantum.lang-ref.unit) CTL
+### <a name="falseop--u--unit--is-ctl"></a>Yanlışop: ' U => [birimi](xref:microsoft.quantum.lang-ref.unit)  CTL
 
 Olduğunda uygulanacak denetlenebilir işlem `bit` `false` .
 
