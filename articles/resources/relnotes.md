@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d38482be17e67f180441440ee8ccc7f1f64ebc9d
-ms.sourcegitcommit: fb75d8f30f1d91f644b2a594f46867eb5968cfda
+ms.openlocfilehash: 93ece8cbaa2ac8e6e0c9bb417e8f40130cb8a3fa
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94448353"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192103"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -23,6 +23,18 @@ Bu makale her Quantum Development Kit sürümüne ilişkin bilgileri içerir.
 Yükleme yönergeleri için bu [yükleme kılavuzuna](xref:microsoft.quantum.install) başvurun.
 
 Güncelleştirme yönergeleri için bu [güncelleştirme kılavuzuna](xref:microsoft.quantum.update) başvurun.
+
+## <a name="version-0142011120240"></a>Sürüm 0.14.2011120240
+
+*Yayın tarihi: 25 Kasım, 2020*
+
+- Daha hızlı başvuru yüklemesi nedeniyle derleyici performansı geliştirildi.
+- Dil belirtimine [için Q# bir ANTLR dilbilgisi](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language/5_Grammar) eklendi Q# .
+- [ `Microsoft.Quantum.Preparation` Ad alanını](xref:Microsoft.Quantum.Preparation) stıl Kılavuzu ve API tasarım ilkeleri ile daha tutarlı olacak şekilde güncelleştirildi ve ek verilerle önceden açıklanan karışık durumları desteklemek için (bkz. [öneri](https://github.com/microsoft/QuantumLibraries/issues/344), [notları gözden geçirme](https://github.com/microsoft/QuantumLibraries/blob/main/Design/meetings/2020/api-design-2020-11-05.md) ve pr 'ler [#212](https://github.com/microsoft/QuantumLibraries/pull/212), [#322](https://github.com/microsoft/QuantumLibraries/pull/322), [#375](https://github.com/microsoft/QuantumLibraries/pull/375), [#376](https://github.com/microsoft/QuantumLibraries/pull/376)).
+- Yinelenen çağrı ifadelerinin etrafındaki parantezler artık isteğe bağlıdır: `(Foo(x))(y)` olarak yazılabilir `Foo(x)(y)` .
+- .NET 5 veya Visual Studio 16,8 ' i yüklemiş olan Visual Studio veya Visual Studio Code uzantılarının kullanıcılarına, uzantılarla çalışmaya devam etmek için .NET Core 3,1 ' i yüklemeleri istenebilir.
+
+[Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [ı Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18) ve [katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18)için kapalı PR 'ler tam listesine bakın.
 
 ## <a name="version-01320111004"></a>Sürüm 0.13.20111004
 
@@ -240,7 +252,7 @@ Bu sürüm aşağıdakileri içerir:
 
 [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [derleyici](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [çalışma zamanı](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) ve [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)’lar için tam kapsamlı kapalı PR’ler listesine bakın.  
 
-## <a name="version-09-packagereference-0919082902"></a>Sürüm 0.9 ( *PackageReference 0.9.1908.2902* )
+## <a name="version-09-packagereference-0919082902"></a>Sürüm 0.9 (*PackageReference 0.9.1908.2902*)
 
 *Sürüm tarihi: 29 Ağustos 2019*
 
@@ -257,7 +269,7 @@ Bu sürüm aşağıdakileri içerir:
 
 Mevcut programlarınızı yükseltmeye yönelik yönergelere ek olarak değişiklikler de burada özetlendi.  [ Q# Geliştirme bloguna](https://devblogs.microsoft.com/qsharp)bu değişiklikler hakkında daha fazla bilgi edinin.
 
-## <a name="version-08-packagereference-0819071701"></a>Sürüm 0.8 ( *PackageReference 0.8.1907.1701* )
+## <a name="version-08-packagereference-0819071701"></a>Sürüm 0.8 (*PackageReference 0.8.1907.1701*)
 
 *Sürüm tarihi: 12 Temmuz 2019*
 
@@ -269,7 +281,7 @@ Bu sürüm aşağıdakileri içerir:
 
 [Kitaplıklar](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), ve [örnekler](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) için tam kapsamlı kapalı PR’ler listesine bakın.  
 
-## <a name="version-07-packagereference-0719053109"></a>Sürüm 0.7 ( *PackageReference 0.7.1905.3109* )
+## <a name="version-07-packagereference-0719053109"></a>Sürüm 0.7 (*PackageReference 0.7.1905.3109*)
 
 *Sürüm tarihi: 31 Mayıs 2019*
 

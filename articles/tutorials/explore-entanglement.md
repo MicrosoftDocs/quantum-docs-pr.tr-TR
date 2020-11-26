@@ -9,25 +9,25 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7a1a49e18ac9330ca6e3cc89b3e58c96eccb91db
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4c73a070fea2ce69a0bce9bf293a4679727e27bc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691663"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192041"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Öğretici: Q\# ile dolaşıklığı keşfetme
 
-Bu öğreticide, Q# qubits 'i işleyen ve ölçtüğünden ve üst konum ve entanglement 'in etkilerini gösteren bir programı nasıl yazacağınız gösterilmektedir.
+Bu öğreticide, Q# qubits 'i işleyen ve ölçtüğünden ve üst konum ve entanglement 'in etkilerini gösteren bir programı nasıl yazacağınız gösterilmektedir. 
 
 Kuantum dolaşıklığı göstermek için Bell adında bir uygulama yazacaksınız.
 Bell adı, en basit süper konum ve kuantum dolaşıklığı örneklerini göstermek için kullanılan iki kubitin belirli kuantum durumları olan Bell durumlarını ifade eder.
 
 ## <a name="pre-requisites"></a>Ön koşullar
 
-Kodlamaya başlamaya hazırsanız devam etmeden önce şu adımları izleyin: 
+Kodlamaya başlamaya hazırsanız devam etmeden önce şu adımları izleyin:
 
-* [Install](xref:microsoft.quantum.install) Tercih ettiğiniz dil ve geliştirme ortamınızı kullanarak hisse geliştirme setini kullanın.
+* [Install](xref:microsoft.quantum.install) Tercih ettiğiniz dil ve geliştirme ortamınızı kullanarak hisse geliştirme setini kullanın. 
 * Makinenizde QDK zaten yüklüyse en son sürüme [güncelleştirdiğinizden](xref:microsoft.quantum.update) emin olun
 
 Ayrıca, QDK 'yi yüklemeden anlatıcı olarak, programlama dilinin genel bakışlarını Q# ve hisse bilgi işlem kavramlarının ilk kavramlarını gözden geçirerek da izleyebilirsiniz.
@@ -41,7 +41,7 @@ Ayrıca, QDK 'yi yüklemeden anlatıcı olarak, programlama dilinin genel bakı�
 
 ## <a name="demonstrating-qubit-behavior-with-the-qdk"></a>QDK ile qubit davranışı gösterme
 
-Klasik bitler 0 veya 1 gibi tek bir ikili değeri barındırırken, [kubitin](xref:microsoft.quantum.glossary#qubit) durumu 0 ve 1’in bir **süper konumunda** olabilir.  Kavramsal olarak, bir qubit durumu soyut bir alanda (vektör olarak da bilinir) bir yön olarak düşünülebilir.  Bir qubit durumu olası yönlere ait olabilir. İki **klasik durum** , iki yöndür. Bu da %100 oranında 0 ölçme şansını ve %100 oranında 1 ölçme şansını gösterir.
+Klasik bitler 0 veya 1 gibi tek bir ikili değeri barındırırken, [kubitin](xref:microsoft.quantum.glossary#qubit) durumu 0 ve 1’in bir **süper konumunda** olabilir.  Kavramsal olarak, bir qubit durumu soyut bir alanda (vektör olarak da bilinir) bir yön olarak düşünülebilir.  Bir qubit durumu olası yönlere ait olabilir. İki **klasik durum**, iki yöndür. Bu da %100 oranında 0 ölçme şansını ve %100 oranında 1 ölçme şansını gösterir.
 
 Ölçüm işlemi ikili sonuç üretir ve bir kubit durumunu değiştirir.
 Ölçüm, 0 veya 1 olan bir ikili değer üretir.  Kubit, süper konumdan (herhangi bir yöne) klasik durumlardan birine geçer.  Bundan sonra aynı ölçümün başka bir işlemle müdahale edilmeden yinelenmesi durumunda aynı ikili sonuç ortaya çıkar.  
@@ -56,9 +56,9 @@ Yapmanız gereken ilk şey yeni bir Q# Proje oluşturmaktır. Bu öğreticide, [
 
 Yeni bir proje oluşturmak için VS Code: 
 
-1. **Görünüm** -> **Komut Paleti** ’ne tıklayın ve **Q#: Yeni Proje Oluştur** ’u seçin.
-2. **Bağımsız konsol uygulaması** ’na tıklayın.
-3. Projenin kaydedileceği konuma gidin ve **Proje Oluştur** ’a tıklayın.
+1. **Görünüm** -> **Komut Paleti**’ne tıklayın ve **Q#: Yeni Proje Oluştur**’u seçin.
+2. **Bağımsız konsol uygulaması**’na tıklayın.
+3. Projenin kaydedileceği konuma gidin ve **Proje Oluştur**’a tıklayın.
 4. Proje başarıyla oluşturulduğunda, sağ alt kısımdaki **Yeni proje aç...** seçeneğine tıklayın.
 
 Bu durumda proje çağırılır `Bell` . Bu iki dosya oluşturur: `Bell.csproj` , proje dosyası ve `Program.qs` Q# uygulamamızı yazmak için kullandığımız bir uygulamanın şablonu. İçeriği şu `Program.qs` olmalıdır:
@@ -83,7 +83,7 @@ Bizim amamız, belirli bir hisse durumunda iki qubit hazırlanmaktır. Bu durumd
 
 ### <a name="initialize-qubit-using-measurement"></a>Ölçüyü kullanarak qubit Başlat
 
-Aşağıdaki ilk kod parçacığında ' de qubits ile nasıl çalışacağız gösterilmektedir Q# .  İki işlem tanıtıyoruz [`M`](xref:Microsoft.Quantum.Intrinsic.m) ve [`X`](xref:Microsoft.Quantum.Intrinsic.X) bir qubit durumunu dönüştürecek. Bu kod parçacığında parametre olarak bir kubit ile kubitin içinde bulunmasını istediğimiz durumu temsil eden `desired` parametresini alan `SetQubitState` işlemi tanımlanmıştır.  `SetQubitState` işlemi, `M` işlemini kullanarak kubit üzerinde bir ölçüm gerçekleştirir.  Q#' De, bir qubit ölçümü her zaman `Zero` ya da döndürür `One` .  Ölçüm, istenen değere eşit olmayan bir değer döndürürse, `SetQubitState` "qubit" değerini çevirir; diğer bir deyişle, bir işlem çalıştırır ve bu, `X` qubit durumunu döndürülen ve geri çevrilen bir ölçünün olasılıkların ne olduğu yeni bir duruma geçirir `Zero` `One` . Bu şekilde, `SetQubitState` her zaman hedef qubit 'i istenen duruma geçirir.
+Aşağıdaki ilk kod parçacığında ' de qubits ile nasıl çalışacağız gösterilmektedir Q# .  İki işlem tanıtıyoruz [`M`](xref:Microsoft.Quantum.Intrinsic.M) ve [`X`](xref:Microsoft.Quantum.Intrinsic.X) bir qubit durumunu dönüştürecek. Bu kod parçacığında parametre olarak bir kubit ile kubitin içinde bulunmasını istediğimiz durumu temsil eden `desired` parametresini alan `SetQubitState` işlemi tanımlanmıştır.  `SetQubitState` işlemi, `M` işlemini kullanarak kubit üzerinde bir ölçüm gerçekleştirir.  Q#' De, bir qubit ölçümü her zaman `Zero` ya da döndürür `One` .  Ölçüm, istenen değere eşit olmayan bir değer döndürürse, `SetQubitState` "qubit" değerini çevirir; diğer bir deyişle, bir işlem çalıştırır ve bu, `X` qubit durumunu döndürülen ve geri çevrilen bir ölçünün olasılıkların ne olduğu yeni bir duruma geçirir `Zero` `One` . Bu şekilde, `SetQubitState` her zaman hedef qubit 'i istenen duruma geçirir.
 
 İçeriğini `Program.qs` aşağıdaki kodla değiştirin:
 
@@ -116,7 +116,7 @@ Bir iki nokta işareti eklendikten sonra işlemin dönüş türü belirtilir. Bu
 
 İlk işlem sırasında iki hisse işlem kullandınız Q# :
 
-* [`M`](xref:Microsoft.Quantum.Intrinsic.m)Qubit durumunu ölçen işlem
+* [`M`](xref:Microsoft.Quantum.Intrinsic.M)Qubit durumunu ölçen işlem
 * [`X`](xref:Microsoft.Quantum.Intrinsic.X)Bir qubit durumunu ters döndüren işlem
 
 Kuantum işlemi, kubitin durumunu dönüştürür. Bazen kuantum işlemleri, klasik mantıksal geçitlere benzetildiğinden geçit olarak adlandırılır. Bu kullanım kuantum bilgisayarların ilk dönemlerine dayanır. Bu dönemde algoritmaların yalnızca teorik yapılardı ve klasik bilgi işlem devre şemalarına benzer şekilde görselleştirilirdi.

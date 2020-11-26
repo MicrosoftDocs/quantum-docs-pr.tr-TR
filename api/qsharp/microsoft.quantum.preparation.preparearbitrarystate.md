@@ -1,30 +1,39 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareArbitraryState
 title: Hazırlık Earbitraryıstate işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: PrepareArbitraryState
-qsharp.summary: Given a set of coefficients and a little-endian encoded quantum register, prepares an state on that register described by the given coefficients.
-ms.openlocfilehash: 18f45da601b02fc5f83936b086323e31a66fc20b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+qsharp.summary: >-
+  > [!WARNING]
+
+  > PrepareArbitraryState has been deprecated. Please use <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateCP> instead.
+
+
+  Given a set of coefficients and a little-endian encoded quantum register, prepares an state on that register described by the given coefficients.
+ms.openlocfilehash: 18a1e86f8e110a8f48d7dd50961e1f1f471ffc4e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92733242"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190709"
 ---
 # <a name="preparearbitrarystate-operation"></a>Hazırlık Earbitraryıstate işlemi
 
 Ad alanı: [Microsoft. hisse. hazırlık](xref:Microsoft.Quantum.Preparation)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
+
+> [!WARNING]
+> Hazırlık durumu kullanım dışı bırakıldı. Lütfen <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateCP> bunun yerine kullanın.
 
 Bir ölçü kümesi ve az endian kodlu bir hisse kayıt verildiğinde, söz konusu kayıt üzerinde verilen katsayıların açıklandığı bir durum hazırlar.
 
 ```qsharp
-operation PrepareArbitraryState (coefficients : Microsoft.Quantum.Math.ComplexPolar[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation PrepareArbitraryState (coefficients : Microsoft.Quantum.Math.ComplexPolar[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -57,7 +66,7 @@ Qubit kodlama numarası durumlarını küçük endian biçiminde kaydeder. Bu du
 
 _J < $0 $r negatif giriş katsayılarını $ | r_j | $ değeri ile pozitif kabul edilir. `coefficients` $2 ^ n $ değerinden azı belirtilmişse $ (r_j, t_j) = (0,0, 0,0) $ öğeleri ile doldurulur.
 
-## <a name="references"></a>Referanslar
+## <a name="references"></a>Başvurular
 
 - Senişce Logic devreleri Vivek V. ShENdE, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176
 

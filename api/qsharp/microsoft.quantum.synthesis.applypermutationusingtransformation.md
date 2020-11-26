@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation
 title: Applyperdeğiştirici Tionusingtransformation işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyPermutationUsingTransformation
 qsharp.summary: Permutes the amplitudes in a quantum state given a permutation using transformation-based synthesis.
-ms.openlocfilehash: b7196c592690a00da49b17f52b30536ba97b6035
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a05b433eae2612bbf5c87522c4ef251976184aa8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92733954"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192069"
 ---
 # <a name="applypermutationusingtransformation-operation"></a>Applyperdeğiştirici Tionusingtransformation işlemi
 
 Ad alanı: [Microsoft. hisse. sensıs](xref:Microsoft.Quantum.Synthesis)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 , Dönüştürme tabanlı senklik kullanarak bir PERMÜTASYONA, bir hisse cıklarca rekabet eden bir permütasyon.
 
 ```qsharp
-operation ApplyPermutationUsingTransformation (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ApplyPermutationUsingTransformation (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -53,10 +53,10 @@ Permütasyonun uygulandığı $n $ qubits listesi.
 
 
 
-## <a name="references"></a>Referanslar
+## <a name="references"></a>Başvurular
 
-- [*D. Michael Miller* , *Dmitrı Maslov* , *Gerhard W. Dueck* , proc. dac 2003, ıeee, PP. 318-323, 2003](https://doi.org/10.1145/775832.775915)
-- [*Mathias Soeken* , *Gerhard W. Dueck* , *D. MICHAEL Miller* , proc. RC 2016, sprçe, PP. 307-321, 2016](https://doi.org/10.1007/978-3-319-40578-0_22)
+- [*D. Michael Miller*, *Dmitrı Maslov*, *Gerhard W. Dueck*, proc. dac 2003, ıeee, PP. 318-323, 2003](https://doi.org/10.1145/775832.775915)
+- [*Mathias Soeken*, *Gerhard W. Dueck*, *D. MICHAEL Miller*, proc. RC 2016, sprçe, PP. 307-321, 2016](https://doi.org/10.1007/978-3-319-40578-0_22)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 

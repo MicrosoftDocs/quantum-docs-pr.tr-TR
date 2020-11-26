@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.ReflectionStart
 title: ReflectionStart işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: ReflectionStart
 qsharp.summary: Constructs a reflection about the all-zero string |0...0〉, which is the typical input state to amplitude amplification.
-ms.openlocfilehash: ad3b4ddc1a653428bacc6efd941fa4703218dd34
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 56fcd1cf2231ae1cf4c0e6b8eddb93a0d12d06b9
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92731959"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191338"
 ---
 # <a name="reflectionstart-function"></a>ReflectionStart işlevi
 
 Ad alanı: [Microsoft. hisse. yükseltilmiş Tudeamplif](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Genlik için tipik giriş durumu olan | 0... 0 〉 dize hakkında bir yansıma oluşturur.

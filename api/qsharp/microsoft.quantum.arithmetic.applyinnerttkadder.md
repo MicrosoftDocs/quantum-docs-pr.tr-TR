@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyInnerTTKAdder
 title: ApplyInnerTTKAdder işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ApplyInnerTTKAdder
 qsharp.summary: Implements the inner addition function for the operation RippleCarryAdderTTK. This is the inner operation that is conjugated with the outer operation to construct the full adder.
-ms.openlocfilehash: 23c1f6dcdf3894cf1b416efd922c9eed01ac8f85
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1de0248066aec531d78130703414067603ffd34d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92731874"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191015"
 ---
 # <a name="applyinnerttkadder-operation"></a>ApplyInnerTTKAdder işlemi
 
 Ad alanı: [Microsoft. hisse. aritmetik](xref:Microsoft.Quantum.Arithmetic)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Ripptacarryadderttk işlemi için iç Toplama işlevini uygular. Bu, tam Adder oluşturmak için dıştaki işlemle Birleşik işlem olan iç işlemdir.
 
 ```qsharp
-operation ApplyInnerTTKAdder (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit
+operation ApplyInnerTTKAdder (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -54,7 +54,7 @@ Qubit ' i taşır, toplamın en önemli biti ile XORed.
 
 Belirtilen denetlenen işlem, her işleme bir denetim ekleyen varsayılan uygulamada geliştirme yapmak için simetri ve karşılıklı işlem iptali kullanımını sağlar.
 
-## <a name="references"></a>Referanslar
+## <a name="references"></a>Başvurular
 
 - Yasuhiro Takahashi, Seiichiro tani, Noboru Kunihiro: "hisse toplama devreleri ve sınırlandırılmamış fan-Out", hisse bilgisi ve hesaplama, Vol. 10, 2010.
   https://arxiv.org/abs/0910.2530
