@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.CascadeCCNOT
 title: Basamaklı bir işlem
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -10,18 +10,18 @@ qsharp.summary: >-
   > [!WARNING]
 
   > CascadeCCNOT has been deprecated. Please use <xref:Microsoft.Quantum.Canon.ApplyCCNOTChain> instead.
-ms.openlocfilehash: 14f81a0e0397f149e9110c7c71fa051349f6bfa8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 81d31d4c0e1ed80c28f95e758b3ebf71e0bd17a5
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728897"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207505"
 ---
 # <a name="cascadeccnot-operation"></a>Basamaklı bir işlem
 
 Ad alanı: [Microsoft. hisse. Canon](xref:Microsoft.Quantum.Canon)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]
@@ -30,7 +30,7 @@ Leyebilir [](https://nuget.org/packages/)
 
 
 ```qsharp
-operation CascadeCCNOT (register : Qubit[], targets : Qubit[]) : Unit
+operation CascadeCCNOT (register : Qubit[], targets : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

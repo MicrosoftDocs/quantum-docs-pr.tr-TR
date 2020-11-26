@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.DelayCA
 title: DelayCA işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DelayCA
 qsharp.summary: Applies a given operation with a delay.
-ms.openlocfilehash: 4b4be55436d6619511a12c6fb7fbd0f23989152a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a32a4f4a3f5d0f253a4c4eaf28c67db8da978b0b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728742"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207097"
 ---
 # <a name="delayca-operation"></a>DelayCA işlemi
 
 Ad alanı: [Microsoft. hisse. Canon](xref:Microsoft.Quantum.Canon)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Bir gecikmeyle belirli bir işlem uygular.
 
 ```qsharp
-operation DelayCA<'T> (op : ('T => Unit is Ctl + Adj), arg : 'T, aux : Unit) : Unit
+operation DelayCA<'T> (op : ('T => Unit is Ctl + Adj), arg : 'T, aux : Unit) : Unit is Adj + Ctl
 ```
 
 
@@ -36,7 +36,7 @@ Bir işlem ve bu işlem için bir giriş verildiğinde, ek bir giriş sağlandı
 
 ## <a name="input"></a>Giriş
 
-### <a name="op--t--unit-ctl--adj"></a>Op: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) CTL + sıfatı
+### <a name="op--t--unit--is-adj--ctl"></a>Op: 'T => [birim](xref:microsoft.quantum.lang-ref.unit)  ayarlama ve CTL
 
 Uygulanacak bir işlem.
 

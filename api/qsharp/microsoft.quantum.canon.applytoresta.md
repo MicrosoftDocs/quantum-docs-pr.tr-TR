@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToRestA
 title: ApplyToRestA işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToRestA
 qsharp.summary: Applies an operation to all but the first element of an array.
-ms.openlocfilehash: 99a18e835115491cc3451a4e3b44a6ff70e9dc6c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 34cb5071dd939d0831e39bb8f1670670ae1fad31
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92729090"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208321"
 ---
 # <a name="applytoresta-operation"></a>ApplyToRestA işlemi
 
 Ad alanı: [Microsoft. hisse. Canon](xref:Microsoft.Quantum.Canon)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Bir işlemi, bir dizinin ilk öğesi hariç tümüne uygular.
 
 ```qsharp
-operation ApplyToRestA<'T> (op : ('T[] => Unit is Adj), targets : 'T[]) : Unit
+operation ApplyToRestA<'T> (op : ('T[] => Unit is Adj), targets : 'T[]) : Unit is Adj
 ```
 
 
@@ -34,7 +34,7 @@ Bir işlem `op` ve bir hedef dizisi verildiğinde `targets` , geçerlidir `op(Re
 
 ## <a name="input"></a>Giriş
 
-### <a name="op--t--unit-adj"></a>Op: 'T [] => [Unit](xref:microsoft.quantum.lang-ref.unit) ayarlaması
+### <a name="op--t--unit--is-adj"></a>Op: 'T [] => [birimi](xref:microsoft.quantum.lang-ref.unit)  sıfatı
 
 Uygulanacak bir işlem.
 

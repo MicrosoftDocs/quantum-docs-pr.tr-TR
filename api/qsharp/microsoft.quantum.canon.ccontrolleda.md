@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.CControlledA
 title: Ccontroltada işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: CControlledA
 qsharp.summary: Given an operation op, returns a new operation which applies the op if a classical control bit is true. If `false`, nothing happens. The modifier `A` indicates that the operation is adjointable.
-ms.openlocfilehash: 30b5e3408fa6e5a79b2f3d63cccc11899c0405ef
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cb72ca5b3dab99b9ee8a994ba9fde46e0eae5594
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728879"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207522"
 ---
 # <a name="ccontrolleda-function"></a>Ccontroltada işlevi
 
 Ad alanı: [Microsoft. hisse. Canon](xref:Microsoft.Quantum.Canon)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Bir işlem işlemi verildiğinde, bir klasik denetim biti doğru ise op 'yi uygulayan yeni bir işlem döndürür. Yoksa `false` , hiçbir şey olmaz.
@@ -31,13 +31,13 @@ function CControlledA<'T> (op : ('T => Unit is Adj)) : ((Bool, 'T) => Unit is Ad
 
 ## <a name="input"></a>Giriş
 
-### <a name="op--t--unit-adj"></a>Op: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ayarlaması
+### <a name="op--t--unit--is-adj"></a>Op: 'T => [birim](xref:microsoft.quantum.lang-ref.unit)  sıfatı
 
 Koşullu olarak uygulanacak bir işlem.
 
 
 
-## <a name="output--boolt--unit-adj"></a>Çıkış: ([bool](xref:microsoft.quantum.lang-ref.bool), 't) => [Unit](xref:microsoft.quantum.lang-ref.unit) ayarlaması
+## <a name="output--boolt--unit--is-adj"></a>Çıkış: ([bool](xref:microsoft.quantum.lang-ref.bool), 't) => [birim](xref:microsoft.quantum.lang-ref.unit)  sıfatı
 
 Klasik denetim biti doğru ise op olan yeni bir işlem.
 

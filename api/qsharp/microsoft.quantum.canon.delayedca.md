@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.DelayedCA
 title: DelayedCA işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DelayedCA
 qsharp.summary: Returns an operation that applies given operation with given argument.
-ms.openlocfilehash: 8ee55e2ca7ec2cff9618b5dc66e19d88779d39ce
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fe2babb87d716185286b0864745f7ff6e637f8a1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728723"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207029"
 ---
 # <a name="delayedca-function"></a>DelayedCA işlevi
 
 Ad alanı: [Microsoft. hisse. Canon](xref:Microsoft.Quantum.Canon)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Verilen bağımsız değişkenle belirli bir işlem uygulayan bir işlem döndürür.
@@ -30,7 +30,7 @@ function DelayedCA<'T> (op : ('T => Unit is Ctl + Adj), arg : 'T) : (Unit => Uni
 
 ## <a name="input"></a>Giriş
 
-### <a name="op--t--unit-ctl--adj"></a>Op: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) CTL + sıfatı
+### <a name="op--t--unit--is-adj--ctl"></a>Op: 'T => [birim](xref:microsoft.quantum.lang-ref.unit)  ayarlama ve CTL
 
 Dönüş değeri uygulama sonucu olarak uygulanacak bir işlem
 
@@ -41,7 +41,7 @@ Dönüş değeri uygulama sonucu olarak uygulanacak bir işlem
 
 
 
-## <a name="output--unit--unit-ctl--adj"></a>Çıkış: [birim](xref:microsoft.quantum.lang-ref.unit) => [birim](xref:microsoft.quantum.lang-ref.unit) CTL + ayarlanabilir
+## <a name="output--unit--unit--is-adj--ctl"></a>Çıkış: [birim](xref:microsoft.quantum.lang-ref.unit) => [birimi](xref:microsoft.quantum.lang-ref.unit)  ayarlama ve CTL
 
 Giriş ile uygulanan yeni bir işlem `op``arg`
 
