@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation._PauliBlockEncoding
 title: _PauliBlockEncoding işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Creates a block-encoding unitary for a Hamiltonian.
 
   The Hamiltonian $H=\sum_{j}\alpha_j P_j$ is described by a sum of Pauli terms $P_j$, each with real coefficient $\alpha_j$.
-ms.openlocfilehash: ba30a7e87bd970961dc87f048aa586ff5c512e2a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6ad3e692f68ec2d405e19a7e467ef8fe33d449fc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92726341"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96225576"
 ---
 # <a name="_pauliblockencoding-function"></a>_PauliBlockEncoding işlevi
 
 Ad alanı: [Microsoft. hisse. benzetim](xref:Microsoft.Quantum.Simulation)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Hamiltonian için blok kodlama Unitary oluşturur.
@@ -40,12 +40,12 @@ function _PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.Gen
 `GeneratorSystem`Pauli koşullarının toplamı olarak $H $ tanımlayan bir.
 
 
-### <a name="stateprepunitary--double---littleendian--unit-adj--ctl"></a>stateprepunitary: [Double](xref:microsoft.quantum.lang-ref.double)[]-> [littliendian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [birimi](xref:microsoft.quantum.lang-ref.unit) ayarlama + CTL
+### <a name="stateprepunitary--double---littleendian--unit--is-adj--ctl"></a>stateprepunitary: [Double](xref:microsoft.quantum.lang-ref.double)[]-> [littliendian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [birimi](xref:microsoft.quantum.lang-ref.unit)  ayarlama ve CTL
 
 $ \Ket{j} $ dizininde bulunan Unitary $V _j $ kontrollü bir işlev $f: j\tim Tarrow V_j $ olan Unitary işlemi $V $.
 
 
-### <a name="multiplexer--intint---qubit--unit-adj--ctl---littleendianqubit--unit-adj--ctl"></a>Çoğullayıcı: ([int](xref:microsoft.quantum.lang-ref.int),[int](xref:microsoft.quantum.lang-ref.int) -> [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) ayarlaması + CTL)-> ([litttaendian](xref:Microsoft.Quantum.Arithmetic.LittleEndian),[qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [birimi](xref:microsoft.quantum.lang-ref.unit) ayarlama ve CTL
+### <a name="multiplexer--intint---qubit--unit--is-adj--ctl---littleendianqubit--unit--is-adj--ctl"></a>çoğullama: ([int](xref:microsoft.quantum.lang-ref.int),[int](xref:microsoft.quantum.lang-ref.int) -> [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit)  , sıfatı + CTL)-> ([littliendian](xref:Microsoft.Quantum.Arithmetic.LittleEndian),[qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [birimi](xref:microsoft.quantum.lang-ref.unit)  ayarlama ve CTL
 
 
 

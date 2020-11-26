@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEXY
 title: OptimizedBEXY işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: OptimizedBEXY
 qsharp.summary: A unitary $U$ that applies the Pauli string on $(X^{z+1}\_pY^{z}\_p)Z\_{p-1}...Z_0$ on qubits $0..p$ conditioned on an index $z\in\{0,1\}$ and $p$. That is, $$ \begin{align} U\ket{z}\ket{p}\ket{\psi} = \ket{z}\ket{p}(X^{z+1}\_pY^{z}\_p)Z\_{p-1}...Z_0\ket{\psi} \end{align} $$
-ms.openlocfilehash: 359d347fc57be46200a218646911a7a400b4a96d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3530e62671e16cfb5500c56c8e5e477dbb56e67e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92727733"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224862"
 ---
 # <a name="optimizedbexy-operation"></a>OptimizedBEXY işlemi
 
 Ad alanı: [Microsoft. hisse. Chemistry. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 $ (X ^ {z + 1} \_ Kopyala ^ {z} \_ p) z \_ {p-1} üzerinde Pauli dizesini uygulayan bir Unitary $U $... " \{ 0, 1 \} $ ve $p $ içinde $z bir dizin üzerinde bulunan qubits $0... p $ Z_0 $. Yani, $ $ \begin{hizalaması} U\ket {z} \ ayraç {p} \ Tus{\ PSI} = \ket{z}\ket{p} (X ^ {z + 1} \_ Kopyala ^ {z} \_ p) z \_ {p-1}... Z_0 \ket{\psı} \end{hizalaması} $ $
 
 ```qsharp
-operation OptimizedBEXY (pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit
+operation OptimizedBEXY (pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
@@ -50,6 +50,6 @@ Pauli işleçlerinin uygulandığı qubits 'in kaydı.
 
 
 
-## <a name="references"></a>Referanslar
+## <a name="references"></a>Başvurular
 
 - Doğrusal T karmaşıklığı olan elektronik Spectra 'yi, doğrusal T karmaşıklığı, Craig Bebush, Craig Gidney, Dominic W. Braz, Nathan Wiebe, Jarrod McClean, Alexandru paler, Austin Fowler, Hartmut Neven ile kodlama https://arxiv.org/abs/1805.03662
