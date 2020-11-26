@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._PrepareSingleConfigurationalStateSingleSiteOccupation
 title: _PrepareSingleConfigurationalStateSingleSiteOccupation işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _PrepareSingleConfigurationalStateSingleSiteOccupation
 qsharp.summary: ''
-ms.openlocfilehash: 12091d34375b2dc22c057c650821f164457e6bfe
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 664973e0690c3007f6934691ec69a60212ed5f45
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92727902"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96215359"
 ---
-# <a name="_preparesingleconfigurationalstatesinglesiteoccupation-function"></a><span data-ttu-id="0c36a-102">_PrepareSingleConfigurationalStateSingleSiteOccupation işlevi</span><span class="sxs-lookup"><span data-stu-id="0c36a-102">_PrepareSingleConfigurationalStateSingleSiteOccupation function</span></span>
+# <a name="_preparesingleconfigurationalstatesinglesiteoccupation-function"></a><span data-ttu-id="68139-102">_PrepareSingleConfigurationalStateSingleSiteOccupation işlevi</span><span class="sxs-lookup"><span data-stu-id="68139-102">_PrepareSingleConfigurationalStateSingleSiteOccupation function</span></span>
 
-<span data-ttu-id="0c36a-103">Ad alanı: [Microsoft. hisse. Chemistry. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span><span class="sxs-lookup"><span data-stu-id="0c36a-103">Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span></span>
+<span data-ttu-id="68139-103">Ad alanı: [Microsoft. hisse. Chemistry. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span><span class="sxs-lookup"><span data-stu-id="68139-103">Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span></span>
 
-<span data-ttu-id="0c36a-104">Leyebilir [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="0c36a-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="68139-104">Paket: [Microsoft. hisse. Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="68139-104">Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span></span>
 
 
 
@@ -28,13 +28,13 @@ function _PrepareSingleConfigurationalStateSingleSiteOccupation (qubitIndices : 
 ```
 
 
-## <a name="input"></a><span data-ttu-id="0c36a-105">Giriş</span><span class="sxs-lookup"><span data-stu-id="0c36a-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="68139-105">Giriş</span><span class="sxs-lookup"><span data-stu-id="68139-105">Input</span></span>
 
-### <a name="qubitindices--int"></a><span data-ttu-id="0c36a-106">Qubitdizinler: [Int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="0c36a-106">qubitIndices : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
-
-
+### <a name="qubitindices--int"></a><span data-ttu-id="68139-106">Qubitdizinler: [Int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="68139-106">qubitIndices : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
 
 
 
-## <a name="output--qubit--unit-adj--ctl"></a><span data-ttu-id="0c36a-107">Output: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [birim](xref:microsoft.quantum.lang-ref.unit) ayarlama ve CTL</span><span class="sxs-lookup"><span data-stu-id="0c36a-107">Output : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl</span></span>
+
+
+## <a name="output--qubit--unit--is-adj--ctl"></a><span data-ttu-id="68139-107">Output: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [birimi](xref:microsoft.quantum.lang-ref.unit)  ayarlama ve CTL</span><span class="sxs-lookup"><span data-stu-id="68139-107">Output : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
 
