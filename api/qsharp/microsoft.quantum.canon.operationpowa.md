@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.OperationPowA
 title: OperationPowA işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Raises an operation to a power. The modifier `A` indicates that the operation is adjointable.
 
   That is, given an operation representing a gate $U$, returns a new operation $U^m$ for a power $m$.
-ms.openlocfilehash: 66df354c6de7e48624712276882759043b78466c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 35dc76a06fd4e8c819b785fd4c588f108c918326
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728507"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96205788"
 ---
 # <a name="operationpowa-function"></a>OperationPowA işlevi
 
 Ad alanı: [Microsoft. hisse. Canon](xref:Microsoft.Quantum.Canon)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Bir işlemi bir güce yükseltir.
@@ -36,7 +36,7 @@ function OperationPowA<'T> (op : ('T => Unit is Adj), power : Int) : ('T => Unit
 
 ## <a name="input"></a>Giriş
 
-### <a name="op--t--unit-adj"></a>Op: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ayarlaması
+### <a name="op--t--unit--is-adj"></a>Op: 'T => [birim](xref:microsoft.quantum.lang-ref.unit)  sıfatı
 
 Tekrarlanması için kullanılacak ağ geçidini temsil eden bir işlem $U.
 
@@ -47,7 +47,7 @@ $U $ öğesinin tekrarlanması için kaç kez yineleneceğini.
 
 
 
-## <a name="output--t--unit-adj"></a>Çıkış: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ayarlaması
+## <a name="output--t--unit--is-adj"></a>Çıkış: 'T => [birim](xref:microsoft.quantum.lang-ref.unit)  sıfatı
 
 $U ^ d $ temsil eden yeni bir işlem; burada $m = \texttt{Power} $.
 

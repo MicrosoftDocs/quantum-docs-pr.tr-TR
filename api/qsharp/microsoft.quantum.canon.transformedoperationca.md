@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.TransformedOperationCA
 title: TransformedOperationCA işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: TransformedOperationCA
 qsharp.summary: Given a function and an operation, returns a new operation whose input is transformed by the given function.
-ms.openlocfilehash: 21c9cdfc3b5b266cb3b93e52ee2fa4c655caf795
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fa204433dc8195dd27fa40980fb2262f8a3848bb
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728334"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204853"
 ---
 # <a name="transformedoperationca-function"></a>TransformedOperationCA işlevi
 
 Ad alanı: [Microsoft. hisse. Canon](xref:Microsoft.Quantum.Canon)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Bir işlev ve bir işlem verildiğinde, girişi verilen işlev tarafından dönüştürülen yeni bir işlem döndürür.
@@ -35,13 +35,13 @@ function TransformedOperationCA<'T, 'U> (fn : ('U -> 'T), op : ('T => Unit is Ad
 Verilen girişi işlem tarafından beklenen bir biçimde dönüştüren bir işlev.
 
 
-### <a name="op--t--unit-adj--ctl"></a>Op: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) ayarlaması + CTL
+### <a name="op--t--unit--is-adj--ctl"></a>Op: 'T => [birim](xref:microsoft.quantum.lang-ref.unit)  ayarlama ve CTL
 
 Dönüştürülecek işlem.
 
 
 
-## <a name="output--u--unit-adj--ctl"></a>Çıkış: ' U => [Unit](xref:microsoft.quantum.lang-ref.unit) ayarlaması + CTL
+## <a name="output--u--unit--is-adj--ctl"></a>Çıkış: ' U => [birimi](xref:microsoft.quantum.lang-ref.unit)  ayarlama ve CTL
 
 Yeni bir işlem olan tbat `fn` , girişiyle birlikte çağrı yapar ve sonuç çıktısını öğesine geçirir `op` .
 

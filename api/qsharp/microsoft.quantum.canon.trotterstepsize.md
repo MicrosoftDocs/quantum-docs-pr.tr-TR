@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.TrotterStepSize
 title: Troesstepsize işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: TrotterStepSize
 qsharp.summary: Computes Trotter step size in recursive implementation of Trotter simulation algorithm.
-ms.openlocfilehash: fabfbff74572b3c96c701de5443e4265a0468d78
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: aa5b63e058e1ea726b0d4c6eca73078831daaf3b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728297"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204700"
 ---
 # <a name="trotterstepsize-function"></a>Troesstepsize işlevi
 
 Ad alanı: [Microsoft. hisse. Canon](xref:Microsoft.Quantum.Canon)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 , Trour benzetim algoritmasının özyinelemeli uygulamasında araba adım boyutunu hesaplar.

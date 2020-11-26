@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.UncurriedOpA
 title: UncurriedOpA işlevi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: UncurriedOpA
 qsharp.summary: Given a function which returns operations, returns a new operation which takes both inputs as a tuple. The modifier `A` indicates that the operations are adjointable.
-ms.openlocfilehash: 21df20354ad2388891f32b1bf1c7781287904983
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e535d017d2665ddb76e5f422e18b8656c73171c6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728292"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204632"
 ---
 # <a name="uncurriedopa-function"></a>UncurriedOpA işlevi
 
 Ad alanı: [Microsoft. hisse. Canon](xref:Microsoft.Quantum.Canon)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 İşlemleri döndüren bir işlev verildiğinde, her iki girişi de tanımlama grubu olarak alan yeni bir işlem döndürür.
@@ -31,13 +31,13 @@ function UncurriedOpA<'T, 'U> (curriedOp : ('T -> ('U => Unit is Adj))) : (('T, 
 
 ## <a name="input"></a>Giriş
 
-### <a name="curriedop--t---u--unit-adj"></a>curriedOp: 'T-> ' U => [Unit](xref:microsoft.quantum.lang-ref.unit) ayarlaması
+### <a name="curriedop--t---u--unit--is-adj"></a>curriedOp: 'T-> ' U => [birimi](xref:microsoft.quantum.lang-ref.unit)  sıfatı
 
 İşlemleri döndüren bir işlev.
 
 
 
-## <a name="output--tu--unit-adj"></a>Çıkış: ('T, ' U) => [Unit](xref:microsoft.quantum.lang-ref.unit) ayarlaması
+## <a name="output--tu--unit--is-adj"></a>Çıkış: ('T, ' U) => [birimi](xref:microsoft.quantum.lang-ref.unit)  sıfatı
 
 `op`İle eşdeğer olan yeni bir işlem `op(t, u)` `(curriedOp(t))(u)` .
 
