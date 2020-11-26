@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Characterization.MeasureIdentity
 title: Measureıdentity işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: MeasureIdentity
 qsharp.summary: Measures the identity operator on a register of qubits.
-ms.openlocfilehash: 71a103fddb3a27703318975bea94bc7a22a9ce81
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4a169355d0669c67f0eb14c80e8554b2f24b035a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728184"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216124"
 ---
 # <a name="measureidentity-operation"></a>Measureıdentity işlemi
 
 Ad alanı: [Microsoft. hisse. karakterleştirme](xref:Microsoft.Quantum.Characterization)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Qubits 'in bir kaydındaki kimlik işlecini ölçer.

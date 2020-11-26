@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplySeriesOfOps
 title: ApplySeriesOfOps işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplySeriesOfOps
 qsharp.summary: Applies a list of ops and their targets sequentially on an array.
-ms.openlocfilehash: aff0bcb831960153166e88aef1f05e000125d5d8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b8810e7d31689046e72905195a3a25ef80fc8d67
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92729342"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218011"
 ---
 # <a name="applyseriesofops-operation"></a>ApplySeriesOfOps işlemi
 
 Ad alanı: [Microsoft. hisse. Canon](xref:Microsoft.Quantum.Canon)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Bir dizi üzerinde sırayla Ops ve hedefleri listesini uygular.

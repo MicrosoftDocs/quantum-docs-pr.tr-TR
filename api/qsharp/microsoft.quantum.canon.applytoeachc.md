@@ -1,37 +1,37 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToEachC
 title: ApplyToEachC işlemi
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToEachC
 qsharp.summary: Applies a single-qubit operation to each element in a register. The modifier `C` indicates that the single-qubit operation is controllable.
-ms.openlocfilehash: dfa18b6eb7a2c42fa2982994a2fc92170b52599c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 535f815503e20b5cee35f3f273a714203a4baf12
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92729299"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217790"
 ---
 # <a name="applytoeachc-operation"></a>ApplyToEachC işlemi
 
 Ad alanı: [Microsoft. hisse. Canon](xref:Microsoft.Quantum.Canon)
 
-Leyebilir [](https://nuget.org/packages/)
+Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Bir kayıttaki her öğeye bir tek qubit işlemi uygular.
 Değiştirici, `C` tek qubit işleminin denetlenebilir olduğunu gösterir.
 
 ```qsharp
-operation ApplyToEachC<'T> (singleElementOperation : ('T => Unit is Ctl), register : 'T[]) : Unit
+operation ApplyToEachC<'T> (singleElementOperation : ('T => Unit is Ctl), register : 'T[]) : Unit is Ctl
 ```
 
 
 ## <a name="input"></a>Giriş
 
-### <a name="singleelementoperation--t--unit-ctl"></a>singleElementOperation: 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) CTL
+### <a name="singleelementoperation--t--unit--is-ctl"></a>singleElementOperation: 'T => [birim](xref:microsoft.quantum.lang-ref.unit)  CTL
 
 Her bir qubit için uygulanacak işlem.
 
