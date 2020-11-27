@@ -1,4 +1,12 @@
-- name: Q# dilindeki türler
-  href: types.md
+- name: Genel Bakış
+  href: index.md
+- name: Program yapısı
+  href: programstructure/toc.yml
+- name: Deyimler
+  href: statements/toc.yml
 - name: İfadeler
-  href: expressions.md
+  href: expressions/toc.yml
+- name: Tür sistemi
+  href: typesystem/toc.yml
+- name: Dilbilgisi
+  href: grammar.md
