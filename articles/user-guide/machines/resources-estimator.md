@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 57f6602effd25fff353a8fee7f27acc529ce82af
+ms.sourcegitcommit: c3c892ef35eae6926d0c4339d9d26bfd8be77e9a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691865"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96318499"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Hisse geliştirme seti (QDK) kaynakları tahmin aracı
 
@@ -123,7 +123,7 @@ namespace Quantum.MyProgram
 
 Tahmin aracı kaynakları aşağıdaki ölçümleri izler:
 
-|Ölçüm|Açıklama|
+|Metric|Açıklama|
 |----|----|
 |__CNOT__    |İşlemlerin çalıştırma sayısı `CNOT` (denetlenen Pauli X işlemleri olarak da bilinir).|
 |__QubitClifford__ |Herhangi bir tek qubit Clienfford ve Pauli işlemlerinin çalıştırma sayısı.|
@@ -131,7 +131,7 @@ Tahmin aracı kaynakları aşağıdaki ölçümleri izler:
 |__R__    |Tüm tek qubit döndürmeler, hariç tutulan `T` , clienfford ve Pauli işlemlerinin çalıştırma sayısı.  |
 |__T__    |İşlemler `T` `T` , T_x = H. T. H ve T_y = HY. t. HY dahil olmak üzere işlemlerin ve bunların Birleşik kapılarının çalıştırma sayısı.  |
 |__Derinliğini__|İşlem tarafından çalıştırılan hisse devdevlik derinliği Q# ( [aşağıya](#depth-width-and-qubitcount)bakın). Varsayılan olarak, derinlik ölçümü yalnızca kapıları sayar `T` . Daha ayrıntılı bilgi için bkz. [derinlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
-|__Genişlik__|İşlem tarafından çalıştırılan hisse devresi genişliği Q# ( [aşağıya](#depth-width-and-qubitcount)bakın). Varsayılan olarak, derinlik ölçümü yalnızca kapıları sayar `T` . Daha ayrıntılı bilgi için bkz. [derinlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__Width__|İşlem tarafından çalıştırılan hisse devresi genişliği Q# ( [aşağıya](#depth-width-and-qubitcount)bakın). Varsayılan olarak, derinlik ölçümü yalnızca kapıları sayar `T` . Daha fazla ayrıntı için bkz. [Genişlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter).   |
 |__QubitCount__    |İşlemin çalıştırılması sırasında ayrılan en fazla qubit sayısı için alt sınır Q# . Bu ölçüm, __derinlemesine__ uyumlu olmayabilir (aşağıya bakın).  |
 |__Borrodilimlerin genişliği__    |İşlem içinde ödünç alınan en fazla qubits sayısı Q# .  |
 
