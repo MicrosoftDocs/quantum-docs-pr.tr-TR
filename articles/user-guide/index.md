@@ -9,44 +9,26 @@ uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 81f31a531a1b50ead332bb578ccf392ddced9e8d
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: 979e468cc743bd9125eaba0b71f794977c914447
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771380"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231766"
 ---
 # <a name="the-no-locq-user-guide"></a>Q# Kullanıcı Kılavuzu
 
 Q# Kullanıcı Kılavuzu’na hoş geldiniz! 
 
-Bu kılavuzun farklı konularında, Q# diline ait temel kavramların ve kuantum programları yazmak için ihtiyaç duyduğunuz bilgilerin ayrıntılarını paylaşıyoruz.
+Bu kılavuzdaki farklı konularda, Q# kullanarak kuantum programları geliştirmeye yönelik bazı temel bilgiler sunulmaktadır.
+
+Q# kuantum bilgisayar diline yönelik tam belirtim ve belgeler için [Q# dil kılavuzuna](xref:microsoft.quantum.qsharp.index) başvuracağız. 
 
 ## <a name="user-guide-contents"></a>Kullanıcı Kılavuzu İçeriği
 
-- [Q# Temel Bilgileri](xref:microsoft.quantum.guide.basics): Q# programlama dilinin amacı ve işlevselliğine yönelik tanıtıcı bir genel bakış. 
+- [Q# programları](xref:microsoft.quantum.guide.programs): Q# içinde kuantum programlarına hızlı bir giriş. 
 
 - [Q# programı çalıştırmanın yolları](xref:microsoft.quantum.guide.host-programs): Q# programının nasıl çalıştırılacağını açıklar ve programı çağırabileceğiniz çeşitli yöntemlere ilişkin bir genel bakış sunar. Komut satırından, Q# Jupyter Not Defterleri içinde veya Python ya da bir .NET dilinde yazılmış klasik konak programından çalıştırma seçenekleri bu yöntemler arasındadır.
-
-### <a name="no-locq-language"></a>Q# Dili
-
-- [Q# dilindeki türler](xref:microsoft.quantum.guide.types): Q# tür modeline açıklık getirir ve türleri belirtip bunlarla çalışmaya yönelik söz dizimini açıklar.
-
-- [Tür İfadeleri](xref:microsoft.quantum.guide.expressions): Q# dilindeki her türdeki değerleri belirtme, birleştirme ve bu değerlere başvurup üzerlerinde çalışmayı ayrıntılarıyla açıklar. 
-
-### <a name="using-no-locq"></a>Q# kullanma
-
-- [Q# Dosya Yapısı](xref:microsoft.quantum.guide.filestructure): `*.qs` Q# dosyasının yapısını ve söz dizimini açıklar.
-
-- [İşlemler ve İşlevler](xref:microsoft.quantum.guide.operationsfunctions): Q# dilinin çağrılabilir iki türü hakkında ayrıntılar sağlar: *işlemler*, kubit yazmaçları üzerindeki eylemleri içerir ve *işlevler*, yalnızca klasik bilgilerle çalışır. 
-    Burada, kuantum işlemlerinin eklenik ve denetlenmiş sürümleri dahil olmak üzere bunları nasıl tanımlayıp çağıracağınızı göreceksiniz.
-
-- [Değişkenler](xref:microsoft.quantum.guide.variables): Q# programlarındaki değişkenlerin rolünü ve bunların nasıl etkili bir şekilde kullanılacağını açıklar. 
-    Örneğin, bağlama kapsamlarının yanı sıra, sabit ve değişebilen değişkenler arasındaki fark ve bunları atayıp atamalarını kaldırma hakkında bilgiler bulabilirsiniz.
-
-- [Kubitlerle çalışma](xref:microsoft.quantum.guide.qubits): Tek tek kubitleri ve kubit sistemlerini adreslemek için kullanılan Q# özelliklerini, özellikle bunları ayırmayı, bunlar üzerinde işlem gerçekleştirmeyi ve bunları ölçmeyi açıklar. 
-
-- [Denetim Akışı](xref:microsoft.quantum.guide.controlflow): Çok sayıda standart tekniğin (koşullu işleme, *for* döngüleri, *while* döngüleri gibi) yanı sıra kuantuma özgü *Başarılı Olana Kadar Yinele* desenini de içeren, Q# dilindeki kullanılabilir programlama denetim akışı desenlerini ayrıntılarıyla açıklar.
 
 - [Test etme ve hata ayıklama](xref:microsoft.quantum.guide.testingdebugging): Kodunuzun istendiği şekilde çalıştığından emin olmaya yönelik bazı teknikleri ayrıntılarıyla açıklar. 
     Kuantum bilgilerinin genel opaklığı nedeniyle, bir kuantum programında hata ayıklamak için özel teknikler gerekebilir. 

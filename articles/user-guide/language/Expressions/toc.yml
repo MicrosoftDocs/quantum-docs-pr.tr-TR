@@ -1,0 +1,32 @@
+- name: Q# dilindeki ifadeler
+  href: index.md
+- name: Öncelik ve ilişkisellik
+  href: precedenceandassociativity.md
+- name: İşleçler
+  items:
+    - name: Kopyalama ve güncelleştirme ifadeleri
+      href: copyandupdateexpressions.md
+    - name: Koşullu ifadeler
+      href: conditionalexpressions.md
+    - name: Karşılaştırmalı ifadeler
+      href: comparativeexpressions.md
+    - name: Mantıksal ifadeler
+      href: logicalexpressions.md
+    - name: Bit düzeyinde ifadeler
+      href: bitwiseexpressions.md
+    - name: Aritmetik ifadeler
+      href: arithmeticexpressions.md
+    - name: Birleştirmeler
+      href: concatenation.md
+- name: Değiştiriciler ve birleştiriciler
+  items:
+    - name: Kısmi uygulama
+      href: partialapplication.md
+    - name: Fonktör uygulaması
+      href: functorapplication.md
+    - name: Öğe erişimi ifadeleri
+      href: itemaccessexpressions.md
+- name: Bağlamsal ifadeler
+  href: contextualexpressions.md
+- name: Değer değişmez değerleri ve varsayılan değerler
+  href: valueliterals.md

@@ -10,12 +10,12 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a6823888dcbe8cf79f0045d2615fe8b889dcc7c3
-ms.sourcegitcommit: a13c7c86fd52a05cbf129b8dd713d6586ca1cc2c
+ms.openlocfilehash: eeb567dedc1b8123b32faf7ed3a42bb51f16a7d2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93376431"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228738"
 ---
 # <a name="develop-with-no-locq-applications-in-an-ide"></a>Bir IDE içinde Q# uygulamaları ile geliştirme
 
@@ -61,16 +61,16 @@ Geliştirme ortamınıza karşılık gelen sekmedeki yönergeleri izleyin.
 
 Yeni bir proje oluşturmak için:
 
-1. **Görünüm** -> **Komut Paleti** ’ne tıklayın ve **Q#: Yeni Proje Oluştur** ’u seçin.
-2. **Bağımsız konsol uygulaması** ’na tıklayın.
-3. Projenin kaydedileceği konuma gidin ve **Proje Oluştur** ’a tıklayın.
+1. **Görünüm** -> **Komut Paleti**’ne tıklayın ve **Q#: Yeni Proje Oluştur**’u seçin.
+2. **Bağımsız konsol uygulaması**’na tıklayın.
+3. Projenin kaydedileceği konuma gidin. Proje adını girin ve **Proje Oluştur**’a tıklayın.
 4. Proje başarıyla oluşturulduğunda, sağ alt kısımdaki **Yeni proje aç...** seçeneğine tıklayın.
 
 Projeyi inceleyin. Konsola ileti yazdırmak için basit bir işlem tanımlayan bir Q# programı olan `Program.qs` adlı kaynak dosyayı görmeniz gerekir.
 
 Uygulamayı çalıştırmak için:
 
-1. **Terminal** -> **Yeni Terminal** ’e tıklayın.
+1. **Terminal** -> **Yeni Terminal**’e tıklayın.
 2. Terminal isteminde `dotnet run` girin.
 3. Çıktı penceresinde aşağıdaki metni görürsünüz `Hello quantum world!`
 
@@ -83,16 +83,16 @@ Bir Q# `Hello World` uygulaması oluşturarak Visual Studio yüklemenizi doğrul
 
 Yeni bir Q# uygulaması oluşturmak için:
 
-1. Visual Studio’yu açın ve **Dosya** -> **Yeni** -> **Proje** ’ye tıklayın.
-2. Arama kutusuna `Q#` yazın, **Q# Uygulaması** ’nı seçin ve **İleri** ’ye tıklayın.
-3. Uygulamanız için bir ad ve konum girip **Oluştur** 'a tıklayın.
+1. Visual Studio’yu açın ve **Dosya** -> **Yeni** -> **Proje**’ye tıklayın.
+2. Arama kutusuna `Q#` yazın, **Q# Uygulaması**’nı seçin ve **İleri**’ye tıklayın.
+3. Uygulamanız için bir ad ve konum girip **Oluştur**'a tıklayın.
 
 
 Projeyi inceleyin. Konsola ileti yazdırmak için basit bir işlem tanımlayan bir Q# programı olan `Program.qs` adlı kaynak dosyayı görmeniz gerekir.
 
 Uygulamayı çalıştırmak için:
 
-1. **Hata Ayıklama** -> **Hata Ayıklamadan Başlat** ’ı seçin.
+1. **Hata Ayıklama** -> **Hata Ayıklamadan Başlat**’ı seçin.
 2. Bir konsol penceresinde yazdırılmış `Hello quantum world!` metni görmeniz gerekir.
 
 > [!NOTE]

@@ -1,13 +1,13 @@
 - name: Genel Bakış/İçerik
   href: index.md
-- name: Q# temel bilgileri
-  href: basics.md
+- name: Q# programları
+  href: programs.md
 - name: Q# programını çalıştırma yolları
   href: host-programs.md
-- name: Q# dili
+- name: Test etme ve hata ayıklama
+  href: testing-debugging.md
+- name: Q# dil kılavuzu
   href: language/toc.yml
-- name: Q# kullanma
-  href: using-qsharp/toc.yml
 - name: Simülatörler ve kaynak tahmin araçları
   href: machines/toc.yml
 - name: Q# kitaplıkları
