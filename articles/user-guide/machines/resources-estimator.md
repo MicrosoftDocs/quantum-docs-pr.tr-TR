@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 57f6602effd25fff353a8fee7f27acc529ce82af
-ms.sourcegitcommit: c3c892ef35eae6926d0c4339d9d26bfd8be77e9a
+ms.openlocfilehash: de425c2d91c6528b13c3bedd81acb4b4273ed711
+ms.sourcegitcommit: 7c687495a79d75ae9e029e5a41baec84d9e07bb0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96318499"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96604652"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Hisse geliştirme seti (QDK) kaynakları tahmin aracı
 
@@ -28,9 +28,9 @@ Herhangi bir işlemi çalıştırmak için kaynaklar tahmin Aracı ' nı kullana
 
 ### <a name="invoking-the-resources-estimator-from-c"></a>C 'den kaynak tahmin aracı çağrılıyor # 
 
-Diğer hedef makinelerde olduğu gibi, önce `ResourceEstimator` sınıfının bir örneğini oluşturup ardından bunu bir işlemin `Run` metodunun ilk parametresi olarak geçirirsiniz.
+Diğer hedef makinelerde olduğu gibi, önce `ResourcesEstimator` sınıfının bir örneğini oluşturup ardından bunu bir işlemin `Run` metodunun ilk parametresi olarak geçirirsiniz.
 
-`QuantumSimulator` sınıfının aksine, `ResourceEstimator` sınıfının <xref:System.IDisposable> arabirimini uygulamadığını ve bu nedenle bunu bir `using` deyimi içine almanız gerekmediğini unutmayın.
+`QuantumSimulator` sınıfının aksine, `ResourcesEstimator` sınıfının <xref:System.IDisposable> arabirimini uygulamadığını ve bu nedenle bunu bir `using` deyimi içine almanız gerekmediğini unutmayın.
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -123,7 +123,7 @@ namespace Quantum.MyProgram
 
 Tahmin aracı kaynakları aşağıdaki ölçümleri izler:
 
-|Metric|Açıklama|
+|Ölçüm|Açıklama|
 |----|----|
 |__CNOT__    |İşlemlerin çalıştırma sayısı `CNOT` (denetlenen Pauli X işlemleri olarak da bilinir).|
 |__QubitClifford__ |Herhangi bir tek qubit Clienfford ve Pauli işlemlerinin çalıştırma sayısı.|
