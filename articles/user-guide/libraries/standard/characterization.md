@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 72af3f5517b272d6d8159b158103b5af91d266b5
+ms.sourcegitcommit: c48cdafccb3487bf93d67fa80cdc64768445b691
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692155"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940895"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Hisse ve Istatistik #
 
@@ -22,7 +22,7 @@ Yararlı hisse algoritmaları geliştirmek için işlemlerin etkilerini niteleye
 Bu, bir hisse sisteminin her ölçümü en fazla bir bilgi elde ettiği için bu zor bir değer.
 Bir eigenvalue öğrenmek için, tek başına bir hisse alım durumunda, kullanıcının bu kavramları temsil etmek için gereken pek çok bilgi bitini bir araya getirmek için birçok ölçüm sonucunun birlikte kullanılması gerekir.
 Her [şey, bu](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) durum kopyasının tek bir kopyasından rastgele bir hisse alım durumu öğrenmenin bir yolu olmadığını ve bu nedenle durumun kopyalarını oluşturmanıza olanak sağladığından, hisse alma işlemleri özellikle sanal olarak kullanılır.
-Bu hisse Sayın Kullanıcı tarafından bu şekilde gösterilmesi, Q# bir durumun hisse amayan programlar için ne olduğunu ortaya çıkaran ya da tanımlamayan bir *is* olgusuna yansıtılmıştır.
+Bu hisse Sayın Kullanıcı tarafından bu şekilde gösterilmesi, Q# bir durumun hisse amayan programlar için ne olduğunu ortaya çıkaran ya da tanımlamayan bir  olgusuna yansıtılmıştır.
 Bu nedenle, işlemleri ve durumları siyah kutu olarak düşünerek hisse uygun hale getirme yaklaşıyoruz; Bu yaklaşım, hisse uygun, doğrulama ve doğrulamanın (QCVV) deneysel uygulaması ile ortak olarak çok daha yaygın bir şekilde paylaşır.
 
 Daha önce ele alınan diğer kitaplıkların birçoğu karakter ayırma farklıdır.
@@ -56,7 +56,7 @@ Bunu, bu Q# Klasik çıkarım sorununu çözmek için Canon 'de sunulan istatist
 
 Eğer $U (m) \ket{\phi \_ j} = e ^ {im\phi \_ j} $ olduğunda, aşama tahmini süreci her bir enerji egeninin doğru şekilde hisse ansız bir şekilde rehberlik eden bir giriş durumu sağlanırsa  Son olarak, gözegenlerin oluşma olasılığı en yüksek olan eigenstate `Result` .
 
-Özellikle, tek bir adım, şu Unitary olmayan dönüştürmeyi bir durum olan \begin{hizalaması} \ sum_j \sqrt{\Pr (\phi \_ j)} \ket{\phi \_ j} \mapsto \sum \_ j\frac {\ sqrt {\ PR (\phi \_ j)} \sqrt{\Pr (\text{Result} | \phi \_ j)} \ket{\phi \_ j}} {\sqrt{\pr (\phj \_ ) \Sum \_ j \pr (\Text{Result} | \phi \_ j)}}.
+Özellikle, tek bir adım, şu Unitary olmayan dönüştürmeyi bir durum olan \begin{hizalaması} \ sum_j \sqrt{\Pr (\phi \_ j)} \ket{\phi \_ j} \mapsto \sum \_ j\frac {\ sqrt {\ PR (\phi \_ j)} \sqrt{\Pr (\Text{Result} | \phi \_ j)} \ket{\phi \_ j}} {\sqrt{\pr (\phj \_ ) \Sum \_ k \pr (\Text{Result} | \phi \_ k)}}.
 \end{hizalaması} bu işlem birden çok değer üzerinde yinelendiğinden `Result` , $ \ prod_k \Pr (\text{Result} \_ k | \phi j) $ değerinin maxhayvan değeri olmayan eigenstates, \_ katlanarak bastırılır.
 Sonuç olarak, denemeleri düzgün şekilde seçildiyse, çıkarım işlemi tek bir eigenvalue ile duruma yakınsama eğilimi gösterir.
 
@@ -153,7 +153,7 @@ operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, ei
 ```
 
 `bitsPrecision`Giriş, `RobustPhaseEstimation` ,, `oracle` ve `eigenstate` ortak olarak benzersizdir.
-Bu nedenle, **H2Sample** ' de görüldüğü gibi bir işlem, `(DiscreteOracle, Qubit[]) => Unit` bir kullanıcının rastgele aşama tahmin algoritmaları belirtmesini sağlamak için formun bir girişi ile yinelemeli bir aşama tahmini algoritması kabul edebilir:
+Bu nedenle, **H2Sample**' de görüldüğü gibi bir işlem, `(DiscreteOracle, Qubit[]) => Unit` bir kullanıcının rastgele aşama tahmin algoritmaları belirtmesini sağlamak için formun bir girişi ile yinelemeli bir aşama tahmini algoritması kabul edebilir:
 
 ```qsharp
 operation H2EstimateEnergy(
