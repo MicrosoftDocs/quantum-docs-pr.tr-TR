@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.Sorted
 title: Sıralanmış işlev
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Sorted
 qsharp.summary: Given an array, returns the elements of that array sorted by a given comparison function.
-ms.openlocfilehash: bd8b869e03c7f4687c456a944e07a811ae0d2ce2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: cb8a1ef438d798c8201ed9f52677e253770df1d3
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96220238"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845438"
 ---
 # <a name="sorted-function"></a>Sıralanmış işlev
 
@@ -51,6 +51,14 @@ Sıralanacak dizi.
 
 Her öğesinin türü `array` .
 
+## <a name="example"></a>Örnek
+
+Aşağıdaki kod parçacığı, bir tamsayılar dizisini artan sırada gerçekleşecek şekilde sıralar:
+
+```qsharp
+let sortedArray = Sorted(LessThanOrEqualI, [3, 17, 11, -201, -11]);
+```
+
 ## <a name="remarks"></a>Açıklamalar
 
 İşlevin `comparison` geçişli olduğu varsayılır, `comparison(a, b)` ve `comparison(b, c)` daha sonra `comparison(a, c)` varsayılır. Bu özellik tutmadıysanız, bu işlevin çıktısı yanlış olabilir.
@@ -60,7 +68,7 @@ Bu bir işlev olduğundan, iki öğe içinde eşit kabul edildiğinde bile sonu�
 
 Örnek:
 
-```Q#
+```qsharp
 function LastDigitLessThanOrEqual(left : Int, right : Int) : Bool {
     return LessThanOrEqualI(
         left % 10, right % 10

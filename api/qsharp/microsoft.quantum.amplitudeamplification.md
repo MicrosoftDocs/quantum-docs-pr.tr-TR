@@ -1,17 +1,17 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification
 title: Microsoft. hisse. yükseltilmiş Tudeamplifi ad alanı
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/23/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.AmplitudeAmplification
 qsharp.summary: This namespace contains functions and operations for performing amplitude amplification.
-ms.openlocfilehash: f265f1f8b41513f9201a758f85451e768b7564e2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: a014f923de62c5e660c1c0fc839fbe60e80f8ba9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191423"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845840"
 ---
 # <a name="microsoftquantumamplitudeamplification-namespace"></a>Microsoft. hisse. yükseltilmiş Tudeamplifi ad alanı
 
@@ -19,7 +19,7 @@ Bu ad alanı, genliğini gerçekleştirmeye yönelik işlevler ve işlemler içe
 
 
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 Kısmi yansıtımları ile yükümlülüğü uygulayan, burada uygulanan en genel genme biçimidir.
 

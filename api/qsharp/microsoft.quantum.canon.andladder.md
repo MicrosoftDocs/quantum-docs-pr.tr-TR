@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.AndLadder
 title: AndLadder işlemi
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: AndLadder
 qsharp.summary: Performs a controlled "AND ladder" on a register of target qubits.
-ms.openlocfilehash: 2c6114ec8a5caabdeea8ab7e26a4877e1633671c
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: d44c462c7a9fc9521bdecfe2ca7f607e90482baf
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209732"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845217"
 ---
 # <a name="andladder-operation"></a>AndLadder işlemi
 
@@ -28,7 +28,7 @@ operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[]
 ```
 
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 Bu işlem, aşağıdaki hesaplama tabanlı eşleme tarafından tanımlanan bir dönüşüm uygular, $ $ \begin{hizalaması} \ket{x \_ 1, \noktalar, x \_ n} \ket{y \_ 1, \noktalar, y \_ {n-1}} \mapsto \ket{x \_ 1, \noktalar, x \_ n} \ket{y \_ 1 \oplus (x \_ 1 \land x \_ 2), \noktalar, y \_ {n-1} \oplus (x \_ 1 \land x \_ 2 \land \cnoktalar \land x \_ {n-1}}, \end{hizalaması} $ $, $ \ket{x \_ 1, \noktalar, x \_ n} $, ' nin hesaplama tabanlı durumlarına `controls` ve $ \ket{y \_ 1, \noktalar, y \_ {n-1}} $ öğesinin hesaplama tabanlı durumlarına başvurur `targets` .
 
