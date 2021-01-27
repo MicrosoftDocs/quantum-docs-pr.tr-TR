@@ -1,6 +1,6 @@
 ---
 title: Dirac gösterimi açıklaması: hisse durumlarını göstermek ve hisse alma işlemlerinin benzetimini yapmak için Dirac gösterimini kullanma hakkında bilgi edinin.
-Yazar: Histumwriter uid: Microsoft. hisse. Concepts. Dirac MS. Author: v-benköşeli MS. Date: 12/11/2017 MS. Topic: Makale No-loc:
+Yazar: miktar Tumwriter uid: Microsoft. hisse. Concepts. Dirac MS. Author: v-benköşeli MS. Date: 12/11/2017 MS. Topic: kavramsal No-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -120,7 +120,8 @@ $$
 $$
 
 ### <a name="computational-basis-vectors"></a>Hesaplama tabanlı vektörler
-Bu durum, bu durumların neden genellikle *Hesaplama tabanlı*olarak çağrıldığını gösterir: her hisse maç durumu her zaman hesaplama tabanlı vektörlerin toplamı olarak ifade edilebilir ve bu tür toplamların adı, Dirac gösterimi kullanılarak kolayca ifade edilir  Aynı zamanda bu durum da aynı zamanda geçerlidir $ \ket { + } $ ve hisse Adaları $ \ket { - } $ için de bir temel oluşturur.  Bunu şu şekilde görebilirsiniz:
+
+Bu durum, bu durumların neden genellikle *Hesaplama tabanlı* olarak çağrıldığını gösterir: her hisse maç durumu her zaman hesaplama tabanlı vektörlerin toplamı olarak ifade edilebilir ve bu tür toplamların adı, Dirac gösterimi kullanılarak kolayca ifade edilir  Aynı zamanda bu durum da aynı zamanda geçerlidir $ \ket { + } $ ve hisse Adaları $ \ket { - } $ için de bir temel oluşturur.  Bunu şu şekilde görebilirsiniz:
 
 $$
 \ket{0 } = \frac { 1 } { \sqrt { 2 } } ( \ket { + }  +  \ket { - } ), \qquad \ket { 1 } = \frac { 1 } { \sqrt { 2 } } ( \ket { + }  -  \ket { - } ).
@@ -128,14 +129,20 @@ $$
 
 Dirac gösterimi örneği olarak, $ \braket { | } $ $ 0 $ ile 1 arasında iç ürün $ $ olan braket 0 1 ' i düşünün.  Bu, şöyle yazılabilir 
 
-$$\braket{0 | 1 } = \begin{bmatrix} 1 & 0 \end{bmatrix} \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} = 0.$$
+$$
+\braket{0 | 1 } = \begin{bmatrix} 1 & 0 \end{bmatrix} \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} = 0.
+$$
 
-Bu $ \ket { } $ , 0 ve $ \ket { 1 } $ ' in birbirine dik bir vektör olduğunu, yani $ \braket { 0 | 1 } = \braket { 1 | 0 } = 0 $ olduğunu söyler.  Ayrıca, tanım $ \braket { 0 | 0 1 1 1, bu da } = \braket { | } = $ iki hesaplama tabanlı vektörün de *orthonormal*olarak çağrılabilir olması anlamına gelir.
-Bu orthonormal özellikleri aşağıdaki örnekte yararlı olacaktır. Durum $ \ket { \psi } = { \frac { 3 } { 5 } } \ket { 1 }  +  { \frac { 4 5 0 ise, } { } } \ket { } $ $ \braket { 1 | 0 0 ' ın 1 } = $ . ölçüm olasılığı $ $  
+Bu $ \ket { } $ , 0 ve $ \ket { 1 } $ ' in birbirine dik bir vektör olduğunu, yani $ \braket { 0 | 1 } = \braket { 1 | 0 } = 0 $ olduğunu söyler.  Ayrıca, tanım $ \braket { 0 | 0 1 1 1, bu da } = \braket { | } = $ iki hesaplama tabanlı vektörün de *orthonormal* olarak çağrılabilir olması anlamına gelir.
 
-$$\big|\braket{1 | \psi } \big | ^ 2 = \left | \frac { 3 } { 5 } \braket { 1 | 1 }  + \frac { 4 } { 5 } \braket { 1 | 0 } \right | ^ 2 = \frac { 9 } { 25 } .$$ 
+Bu orthonormal özellikleri aşağıdaki örnekte yararlı olacaktır. Durum $ \ket { \psi } = { \frac { 3 } { 5 } } \ket { 1 }  +  { \frac { 4 5 0 ise, } { } } \ket { } $ $ \braket { 1 | 0 0 ' ın 1 } = $ . ölçüm olasılığı $ $ 
+
+$$
+\big|\braket{1 | \psi } \big | ^ 2 = \left | \frac { 3 } { 5 } \braket { 1 | 1 }  + \frac { 4 } { 5 } \braket { 1 | 0 } \right | ^ 2 = \frac { 9 } { 25 } .
+$$
 
 ### <a name="tensor-product-notation"></a>Tensor ürün gösterimi
+
 Dirac gösterimi Ayrıca, içindeki örtük bir Tensor ürün yapısını da içerir.  Bu, hisse alma sırasında iki ilişkili hisse al kaydı tarafından tanımlanan eyalet vektörünün, iki durumlu vektörün tencursor ürünleri olduğundan önemlidir.  Bir hisse veya daha fazla öneme sahip olmak isterseniz, öz, Tensor ürün yapısını açıklayan veya önem taşıyan bir hesaplama açıklanmıştır.  Tensor ürün yapısı, $ \psi \otimes \phi $ her iki hisse alım vektörü için yazabildiğimiz $ \phi $ ve $ \psi $ farklı olarak $ \ket { \psi } \ket { \phi } $ olarak yazılmış, $ \ket { \psi } \otimes \ket { \phi } $ ancak $ \otimes $ vektörler arasında yazma kuralları gereksiz olduğundan, bu, bazen açıkça yazılmış bir durumdur.  Örneğin, sıfır duruma göre başlatılan iki qubits ile durum şu şekilde verilir
 
 $$
@@ -155,6 +162,7 @@ $$
 $$
 
 ### <a name="example-describing-superposition-with-dirac-notation"></a>Örnek: Dirac gösterimi ile süper konumu açıklama
+
 Bir hisse düzeyini anlatmak için Dirac gösterimini nasıl kullanabileceğinizi gösteren başka bir örnek olarak, her bir olası bit dizesi için eşit bir süper konum olan bir hisse $$
 
 $$
@@ -165,6 +173,7 @@ Burada, toplamın 0 ' dan $ $ $ 2 ^ { n } -1 ' i $ $ n $ bit için neden olduğu
 Yan bir not olarak, bu $ \ket { + } ^ { \otimes } = \ket { + } $ $ \ket { } ^ { \otimes } = \ket { } $ notational kuralı genellikle her bir qubit, sıfıra başlatıldığından hesaplama bazlı durum için ayrılmış olduğundan, bu örnekte benzerleme vurguladı ile 0 ' a n 0 ' ı kullandık.  Böyle bir kural bu durumda denenirken, hisse bilgi işlem belgelerinde işe alınamaz.
 
 ### <a name="expressing-linearity-with-dirac-notation"></a>Dirac gösterimi ile doğrity belirtme
+
 Daha iyi bir Dirac gösterimi özelliği, doğrusal olduğu olgusaldır.  Dört hisse alım durumu vektörü için yazmak istiyorsanız, 
 
 $$( \alpha \ket { \psi }  + \beta \ket { \phi } ) \otimes ( \gamma \ket { \çi }  +  \delta \ket { \omega } ) = \alpha \gamma \ket { \psi } \ket { \ çi }  +  \alpha \delta \ket { \psi } \ket { \omega } + \beta \gamma \ket { \phi } \ket { \ çi } + \beta \delta \ket { \phi } \ket { \omega } .$$
@@ -180,6 +189,7 @@ $$|\braket{- |\psi}| ^ 2 = \left | \frac { 1 } { \sqrt { 2 } } ( \bra { 0 }  -  
 Negatif işaretin olasılık hesaplamasında görünmesi, hisse alma 'nın klasik bilgi işlem üzerinden daha fazla avantaj elde eden mekanizmalardan biridir.
 
 ## <a name="ketbra-or-outer-product"></a>ketya veya dış ürün
+
 Dirac gösterimi ile tartışmak için en son öğe, *ketya* veya dış üründür.  Dış ürün, Dirac gösterimler içinde olarak temsil edilir $ \ket { \psi } \bra { \phi } $ ve bazen, Bras ve kets, brakets olarak ters sırada yapıldığından, bazı durumlarda ketbras olarak adlandırılır.  Dış ürün, $ \ket { \psi } \bra { \phi } = \psi \phi ^ \dagger $ hisse durum vektörleri $ \psi $ ve için $ \phi $ matris çarpma aracılığıyla tanımlanır.  Bu gösterimi en basit ve en sık kullanılan örnek,
 
 $$
@@ -224,11 +234,12 @@ Multi-qubit ölçüm tartışmayla eşleşir.  Ancak, bu sonucun Multi-qubit ör
 
 ## <a name="density-operators"></a>Yoğunluk işleçleri
 
-Dirac gösterimini kullanarak hızlı bir şekilde başka bir yararlı operatör de *durum işleci*olarak da bilinen bir *yoğunluk işleçtir*.
+Dirac gösterimini kullanarak hızlı bir şekilde başka bir yararlı operatör de *durum işleci* olarak da bilinen bir *yoğunluk işleçtir*.
 Hisse bir devlet vektörü için bir yoğunluk işleci, $ \rho biçimini alır = \ket { \psi } \bra { \psi } $ .
 Durumu bir açıklama yerine matris olarak temsil eden bu kavram, genellikle yararlı olur, çünkü olasılık hesaplamalarını temsil etmek için kullanışlı bir yöntem sunar ve ayrıca bir birinin aynı formalronizde aynı şekilde hem istatistiksel olmayan belirsizlik hem de aynı şekilde, aynı şekilde, aynı şekilde, hem istatistiksel unilkliği hem de
 Vektörlerden farklı olarak genel hisse alım işleçleri, bazı hisse bilgi işlem alanlarında ve alanın temel bilgilerini anlamak için gerekli değildir.
 İlgilendiğiniz okuyucu için, [daha fazla bilgi için](xref:microsoft.quantum.more-information)' de sunulan başvuru defterlerinden birini okumanızı öneririz.
 
 ## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q# hisse devletlere eşdeğer kapı dizileri
+
 Hisse gösterimi ve programlama dili hakkında en son bir nokta Q# : Bu belgenin onkümesinde, hisse Eyaleti 'nin hisse bilgi işlem ortamında temel nesne olduğunu belirttik.  Daha sonra Q# , hisse bir değer kavramı olmadığında bir sürpriz olarak gelebilir.  Bunun yerine, tüm durumlar yalnızca bunları hazırlamak için kullanılan işlemler tarafından açıklanmıştır.  Önceki örnek bunun mükemmel bir çizimidir.  Bir kayıttaki her hisse bit dizesinde Tekdüzen üst konumunu ifade etmek yerine, sonucu $ H ^ { \otimes n } \ket { 0 } $ olarak temsil edebilirsiniz.  Bu durumun katlanarak daha kısa olan bu açıklaması yalnızca, bununla ilgili olarak neden olabilecek avantaja sahip olmakla kalmaz, Ayrıca öz, algoritmayı uygulamak için yazılım yığınında yayılması gereken işlemleri tanımlar.  Bu nedenle, Q# hisse durumlarından değil, kapı dizilerini göstermek için tasarlanmıştır; ancak, teorik düzeyinde iki perspektifte eşdeğerdir.

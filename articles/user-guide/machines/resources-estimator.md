@@ -1,20 +1,20 @@
 ---
 title: Hisse kaynakları tahmin aracı-hisse geliştirme seti
 description: Bir hisse bilgisayar üzerinde bir işlemin belirli bir örneğini çalıştırmak için gereken kaynakları tahmin eden Microsoft QDK kaynakları Estimator hakkında bilgi edinin Q# .
-author: anpaz-msft
+author: anpaz
 ms.author: anpaz
 ms.date: 06/26/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: de425c2d91c6528b13c3bedd81acb4b4273ed711
-ms.sourcegitcommit: 7c687495a79d75ae9e029e5a41baec84d9e07bb0
+ms.openlocfilehash: c3aa94c8b34ad7247fbdeab4bf4dcb96ce746014
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96604652"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847472"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Hisse geliştirme seti (QDK) kaynakları tahmin aracı
 
@@ -123,7 +123,7 @@ namespace Quantum.MyProgram
 
 Tahmin aracı kaynakları aşağıdaki ölçümleri izler:
 
-|Ölçüm|Açıklama|
+|Metric|Açıklama|
 |----|----|
 |__CNOT__    |İşlemlerin çalıştırma sayısı `CNOT` (denetlenen Pauli X işlemleri olarak da bilinir).|
 |__QubitClifford__ |Herhangi bir tek qubit Clienfford ve Pauli işlemlerinin çalıştırma sayısı.|
@@ -131,7 +131,7 @@ Tahmin aracı kaynakları aşağıdaki ölçümleri izler:
 |__R__    |Tüm tek qubit döndürmeler, hariç tutulan `T` , clienfford ve Pauli işlemlerinin çalıştırma sayısı.  |
 |__T__    |İşlemler `T` `T` , T_x = H. T. H ve T_y = HY. t. HY dahil olmak üzere işlemlerin ve bunların Birleşik kapılarının çalıştırma sayısı.  |
 |__Derinliğini__|İşlem tarafından çalıştırılan hisse devdevlik derinliği Q# ( [aşağıya](#depth-width-and-qubitcount)bakın). Varsayılan olarak, derinlik ölçümü yalnızca kapıları sayar `T` . Daha ayrıntılı bilgi için bkz. [derinlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
-|__Width__|İşlem tarafından çalıştırılan hisse devresi genişliği Q# ( [aşağıya](#depth-width-and-qubitcount)bakın). Varsayılan olarak, derinlik ölçümü yalnızca kapıları sayar `T` . Daha fazla ayrıntı için bkz. [Genişlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter).   |
+|__Genişlik__|İşlem tarafından çalıştırılan hisse devresi genişliği Q# ( [aşağıya](#depth-width-and-qubitcount)bakın). Varsayılan olarak, derinlik ölçümü yalnızca kapıları sayar `T` . Daha fazla ayrıntı için bkz. [Genişlik sayacı](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter).   |
 |__QubitCount__    |İşlemin çalıştırılması sırasında ayrılan en fazla qubit sayısı için alt sınır Q# . Bu ölçüm, __derinlemesine__ uyumlu olmayabilir (aşağıya bakın).  |
 |__Borrodilimlerin genişliği__    |İşlem içinde ödünç alınan en fazla qubits sayısı Q# .  |
 
@@ -143,8 +143,8 @@ Bildirilen derinlik ve genişlik tahminleri birbirleriyle uyumludur.
 
 Aşağıdaki ölçümler raporlanır:
 
-__Derinlik:__ Kök işlemi için-belirli bir kapı süresi varsayarak yürütülmesi gereken süre.
-Ya da işlem sırasında en son qubit kullanılabilirlik süresi arasında gerçekleştirilen işlemler veya sonraki işlemler için zaman farkı.
+__Derinlik:__ Kök işlem için, yapılandırılan ağ geçidi süreleri varsayarak yürütülmesi gereken süre.
+İşlemin başındaki ve sonundaki en son qubit kullanılabilirlik süresi arasında veya sonraki işlem zamanı farkı olarak çağrılan işlemler için.
 
 __Genişlik:__ Kök işlemi için-gerçekten yürütmek için kullanılan qubits sayısı (ve çağrı yaptığı işlem).
 Ya da sonraki işlemleri çağıran işlemler için-işlemin başlangıcında zaten kullanılan qubits 'e ek olarak kaç tane daha fazla bilgi kullanılmıştır.
@@ -157,9 +157,9 @@ Veya sonraki işlemleri çağıran işlemler için-bu işlemi ayrı olarak yür�
 
 İki işlem modu desteklenir. QCTraceSimulatorConfiguration. OptimizeDepth ayarlanarak mod seçilidir.
 
-__Optimizedepth = doğru:__ QubitManager 'ın qubit yeniden kullanımı önerilmez ve her sorulduğunda her istendiğinde yeni qubit 'i ayırır. Kök işlemi __derinliği__ için en düşük Derinlik (alt sınır) olur. Bu derinlik için uyumlu __Genişlik__ raporlanır (her ikisi de aynı anda elde edilebilir). Bu genişliğin büyük olasılıkla bu derinliğin en iyi şekilde verilmediğini unutmayın. __Qubitcount__ , yeniden kullanım varsaydığı için kök işlem genişliğinden daha düşük olabilir.
+__Optimizedepth = false:__ Bu varsayılan moddur. QubitManager 'ın qubit 'i yeniden kullanması önerilir ve yenilerini ayırmadan önce yayınlanmış qubits 'i yeniden kullanacaktır. Kök işlemi __genişliği__ için en az Genişlik (alt sınır) olur. Uyumluluk __derinliğine__ ulaşıldığı bildirilir. __Qubitcount__ , hiçbir ödünç alma kabul edildiğinde kök işlemin __genişliğiyle__ aynı olacak.
 
-__Optimizedepth = false:__ QubitManager 'ın qubit 'i yeniden kullanması önerilir ve yenilerini ayırmadan önce yayınlanmış qubits 'i yeniden kullanacaktır. Kök işlemi __genişliği__ için en az Genişlik (alt sınır) olur. Uyumluluk __derinliğine__ ulaşıldığı bildirilir. __Qubitcount__ , hiçbir ödünç alma kabul edildiğinde kök işlemin __genişliğiyle__ aynı olacak.
+__Optimizedepth = doğru:__ QubitManager 'ın qubit yeniden kullanımı önerilmez ve yürütme sırasında ve sonrasında qubit yeniden kullanımı için buluşsal-tabanlı iyileştirme gerçekleştirilir. Kök işlemi __derinliği__ için en düşük Derinlik (alt sınır) olur. Bu derinlik için uyumlu __Genişlik__ raporlanır (her ikisi de aynı anda elde edilebilir). Genişliği iyileştirmek için, programda daha sonra karşılaşılan kapılar programda daha önce kullanılmadan önce zamanlanabilir, ancak qubits, derinlik en az kalacak şekilde yeniden kullanılmak üzere zamanlandı. Qubits, zaman değerlerine göre yeniden kullanıldığı için, geçit sürelerinin tamsayı değerler olacak şekilde yapılandırılması önerilir. __Genişliğin__ en iyi şekilde garanti edilmez. Daha fazla bilgi için, [izleme sırasında teknik Inceleme genişliği ve derinliğinde](https://github.com/microsoft/qsharp-runtime/tree/main/src/Simulation/Simulators/QCTraceSimulator/Docs)bulabilirsiniz.
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Ölçüm sonuçlarının olasılığını sağlama
 

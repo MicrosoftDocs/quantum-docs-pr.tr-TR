@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Random.DrawCategorical
 title: DrawCategorical işlemi
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: DrawCategorical
 qsharp.summary: Draws a random sample from a categorical distribution specified by a list of probablities.
-ms.openlocfilehash: a5826aa5f658fea766db0ca5ccbb9c0d7d056d4c
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: a9fe1b08e80abc65a5c4b803f0cb8a5e7a62759c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96193004"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98851162"
 ---
 # <a name="drawcategorical-operation"></a>DrawCategorical işlemi
 
@@ -28,7 +28,7 @@ operation DrawCategorical (probs : Double[]) : Int
 ```
 
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 Belirli bir dizini seçme olasılığı, bu dizindeki dizi öğesinin değeri ile orantılıdır.
 Sıfıra eşit dizi öğeleri yok sayılır ve bunların dizinleri hiçbir şekilde döndürülmez. Herhangi bir dizi öğesi sıfırdan küçükse veya hiçbir dizi öğesi sıfırdan büyükse, işlem başarısız olur.

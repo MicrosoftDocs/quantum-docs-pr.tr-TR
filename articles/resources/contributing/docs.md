@@ -4,17 +4,17 @@ description: Kavramsal veya API içeriğinin Microsoft hisse belgesi kümesine n
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2debef858c38b9a8f11264858130ed7cb41543ae
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8602705d2dd071e822e2ff58a9a44cd0684f77f1
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691789"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857354"
 ---
 # <a name="improving-documentation"></a>İyileştirme Belgeleri
 
@@ -54,6 +54,19 @@ Aşağıdaki çekme istekleri hakkında daha fazla bilgi edineceksiniz, ancak ş
 
 Bu komut, [ `Game.qs` dosyadaki `chsh-game` ](https://github.com/microsoft/Quantum/blob/main/samples/algorithms/chsh-game/Game.qs)4 ' e kadar olan satırları, Q# söz dizimi vurgulamanın amacı için kod olarak işaretleyerek, örnekten içeri aktarır.
 Bu komutu kullanarak, kavramsal makaleler ve örnekler deposu arasında kodu çoğaltmaktan kaçınabilirsiniz. böylece, belgelerde örnek kod her zaman mümkün olduğunca güncel olur.
+
+### <a name="contributing-image-files"></a>Katkıda bulunan görüntü dosyaları
+
+**Önemli**: görüntülerin koyu modda düzgün bir şekilde işlemesini sağlamak için saydamlıkları kullanmaktan kaçınmalısınız.
+
+- . Jpg dosyaları için. . jpg biçimi saydam öğeleri desteklemediğinden hiçbir şey yapmanız gerekmez.
+- . Png dosyaları için, bir beyaz arka plan eklemeniz veya Alfa kanalının değerini **100** olarak değiştirmeniz gerekir. Bunu Windows 'da yapmanın en kolay yolu, **Paint** 'te dosyayı açmak ve özgün dosyanın üzerine yazarak dosyayı kaydetmek için kullanılır.
+- . SVG dosyaları için en düşük katmana beyaz dikdörtgen eklemeniz gerekir. Bunu **Inkscape** ile yapabilirsiniz:
+  1. . SVG dosyasını açın.
+  1. Kare Oluşturucu aracını seçin ve orijinal şeklin üzerine bir beyaz dikdörtgen çizin.
+  1. Koyu oka tıklayarak veya **F1** tuşuna basarak **nesneleri seçin ve dönüştürün '** ı seçin.
+  1. Dikdörtgenin seçili olmasına karşın, alt araç öğesini alt kısımdaki **Seçime (End)** tıklayın.
+  1. Dikdörtgeni farenizle veya ok tuşlarıyla ayarlayın.
 
 ## <a name="contributing-to-the-api-references"></a>API başvurularına katkıda bulunma
 

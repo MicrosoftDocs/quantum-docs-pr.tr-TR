@@ -1,6 +1,6 @@
 ---
 Başlık: birden çok qubits açıklaması: iki veya daha fazla qubit üzerinde işlem gerçekleştirmeyi öğrenin.
-Yazar: bradben uid: Microsoft. hisse. Concepts. Multiple-qubitleri MS. Author: v-bendörtms. Date: 12/11/2017 MS. Topic: article No-loc:
+Yazar: bradben uid: Microsoft. hisse. Concepts. Multiple-qubitleri MS. Author: v-bendörtms. Date: 12/11/2017 MS. Topic: kavramsal No-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -105,10 +105,10 @@ Bunun nedeni, iki-qubit durumlarının hesaplama temelinin, tek qubit durumları
 $ $ Bu oluşturma kullanılarak, n qubits 'in hisse boyutunun, 2 ^ n boyutlu bir birim vektörü ile temsil edildiği kolayca görüyordu $ $ .  Vektör
 
 $$
-\begin{bmatrix}\alpha _ { 00 } 01 \\\\ 10 \alpha   _ { } \\\\ \alpha _ { 11 } \\\\ \alpha   _ { }  \end{bmatrix}
+\begin{bmatrix}\alpha _{ 00 } 01 \\\\ 10 \alpha_ { } \\\\ \alpha _{ 11 } \\\\ \alpha_ { }  \end{bmatrix}
 $$
 
-$ | \alpha _ { 00 } | ^ 2 | + \alpha _ { 01 } | ^ 2 + | \alpha _ { 10 } | ^ 2 | + \alpha _ { 11 } | ^ 2 = 1 $ ise iki qubit üzerinde bir hisse durumu temsil eder. Tek qubit 'de olduğu gibi, birden çok qubit için hisse durum vektörü, sistemin davranışını anlatmak için gereken tüm bilgileri tutar.
+$ | \alpha _{ 00 } | ^ 2 | + \alpha_ { 01 } | ^ 2 + | \alpha _{ 10 } | ^ 2 | + \alpha_ { 11 } | ^ 2 = 1 $ ise iki qubit üzerinde bir hisse durumu temsil eder. Tek qubit 'de olduğu gibi, birden çok qubit için hisse durum vektörü, sistemin davranışını anlatmak için gereken tüm bilgileri tutar.
 
 Bir diğeri durumunda iki ayrı qubit verildiyse, $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ $ \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} $ buna karşılık gelen iki-qubit durumu    
 
@@ -124,17 +124,17 @@ $$\psi\otimes\phi = \begin{bmatrix} 1/ \sqrt { 2 } \\\\ 0 \\\\ 0 \\\\ 1/ \sqrt {
 
 Bu tür bir iki-qubit durumu, tek qubit durumlarının tencursor ürünü olarak yazılamaz, "entangled State" olarak adlandırılır; iki qubit, [*bağımsız olarak kabul edilir.*](https://en.wikipedia.org/wiki/Quantum_entanglement)  Gevşekle, hisse Eyaleti tek qubit durumları için bir Tensor ürünü olarak düşünülmediği için, durumun tuttuğu bilgiler tek tek qubits 'e göre sınırlandırmaz.  Bunun yerine, bilgiler, iki durum arasındaki eş ilişkilerdeki yerel olmayan bir şekilde depolanır.  Bu bilgilerin yer aldığı, klasik bilgi işlem üzerinden hisse bilgi işlem özelliklerinin büyük ayrım özelliklerinden biridir ve [hisse maporsyon](https://github.com/microsoft/Quantum/tree/main/samples/getting-started/teleportation) ve hisse ansız [hata düzeltmesi](xref:microsoft.quantum.libraries.error-correction)dahil olmak üzere bir dizi hisse protokolde gereklidir.
 
-## <a name="measuring-two-qubit-states"></a>Iki-qubit durumu ölçme ##
+## <a name="measuring-two-qubit-states"></a>Two-Qubit durumlarını ölçme ##
 İki-qubit durumu ölçme, tek qubit ölçümlerine çok benzer. Durumu ölçme
 
 $$
     \begin{bmatrix}
-        \alpha_ { 00 } 01 \\\\ \alpha _ { }\\\\ 
-        \alpha_ { 10 } 11 \\\\ \alpha _ {}
+        \alpha_{ 00 } 01 \\\\ \alpha_ { }\\\\ 
+        \alpha_{ 10 } 11 \\\\ \alpha_ {}
     \end{bmatrix}
 $$
 
-, olasılık 01 ^ 2, 1 olasılık 1 $ $ ^ 2 $ | \alpha _ { } | $ $ $ ve 11 olasılık 11 ^ 2 ile 10. $ | \alpha _ { } | $ $ $ $ | \alpha _ { } | $ $ $ $ | \alpha _ { } | $ $ \alpha _ { 00 } , \alpha _ { 01 } , \alpha _ { 10 } $ ve $ 11 değişkenleri bu bağlantıyı açık hale getirmek için kasıtlı olarak adlandırılmıştı \alpha _ { } $ . Ölçüden sonra, sonuç 00 ise, $ $ iki-qubit sisteminin hisse TI durumu daraltıldı ve şu anda
+, olasılık 01 ^ 2, 1 olasılık 1 $ $ ^ 2 $ | \alpha _{ } | $ $ $ ve 11 olasılık 11 ^ 2 ile 10. $ | \alpha_ { } | $ $ $ $ | \alpha _{ } | $ $ $ $ | \alpha_ { } | $ $ \alpha _{ 00 } , \alpha_ { 01 } , \alpha _{ 10 } $ ve $ 11 değişkenleri bu bağlantıyı açık hale getirmek için kasıtlı olarak adlandırılmıştı \alpha_ { } $ . Ölçüden sonra, sonuç 00 ise, $ $ iki-qubit sisteminin hisse TI durumu daraltıldı ve şu anda
 
 $$
     oluşturun \equiv
@@ -193,7 +193,7 @@ $$
 
 ıntuize uygun olarak tekrar.
 
-## <a name="two-qubit-operations"></a>İki-qubit Işlemleri
+## <a name="two-qubit-operations"></a>Two-Qubit Işlemler
 Tek qubit durumunda olduğu gibi, herhangi bir Unitary dönüştürmesi qubits üzerinde geçerli bir işlemdir. Genel olarak, n qubit üzerindeki bir Unitary dönüştürmesi $ $ $ $ $ , 2 ^ n 2 ^ n boyutundaki bir matris u \times $ $ $ ve $ u ^ { -1 } = u ^ \dagger $ gibi,% n boyutundaki vektörlerde çalışır.
 Örneğin, CNOT (denetlenen) geçidi, yaygın olarak kullanılan iki-qubit kapısı ve aşağıdaki Unitary matrisi tarafından temsil edilir:
 
@@ -240,7 +240,7 @@ Kapılar, klasik bilgiler kullanılarak da denetlenebilir.  Sınıf denetimli ol
 Tek qubit durumunda olduğu gibi, $ 4 \times 4 $ unitöğeli bir matrisin, bu kümeden rastgele duyarlığa kadar olan bir kapı ürünüyle ilgili olması halinde, iki-qubit kapısı kümesi Universal olur.
 Bir Evrensel kapı kümesi örneği, Hadamard kapısı, T kapısı ve CNOT kapısı. Bu kapıların ürünlerini alarak, iki qubit üzerinde her türlü Unitary matrisini yaklaşık olarak kullanabiliriz.
 
-## <a name="many-qubit-systems"></a>Birçok-qubit sistem
+## <a name="many-qubit-systems"></a>Many-Qubit sistemleri
 Daha küçük sistemlerden birçok qubit hisse durumu oluşturmak için iki-qubit durumunda araştırılan aynı desenleri izliyoruz.  Bu tür durumlar, daha küçük durumlardan oluşan tencursor ürünleri kullanılarak oluşturulmuştur.  Örneğin, 1011001 bit dizesini $ $ bir hisse bilgisayar bilgisayarında kodlamayı göz önünde bulundurun.  Bunu şöyle kodlayabiliriz
 
 $$

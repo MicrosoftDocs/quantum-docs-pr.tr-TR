@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumWalkByQubitization
 title: Miktar Tumwalkbyqubitişleştirme işlevi
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: QuantumWalkByQubitization
 qsharp.summary: Converts a block-encoding reflection into a quantum walk.
-ms.openlocfilehash: ccef1bbf400e01800053777d0010acb7addaef53
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 8ffb6eb77a3f910d3064c4a3c90215d5d9a694aa
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192494"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98851050"
 ---
 # <a name="quantumwalkbyqubitization-function"></a>Miktar Tumwalkbyqubitişleştirme işlevi
 
@@ -28,7 +28,7 @@ function QuantumWalkByQubitization (blockEncoding : Microsoft.Quantum.Simulation
 ```
 
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 Belirli bir `BlockEncodingReflection` operatör $H $ ' i kodlayan bir Unitary $U $ tarafından temsil edilen bir işlem, bu dosyayı $ \pm e ^ {\pm i\sin ^ {-1} (H)} $ alanını içeren bir hisse alım $W $ değerine dönüştürür.
 

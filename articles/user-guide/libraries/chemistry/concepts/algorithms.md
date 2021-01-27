@@ -4,17 +4,17 @@ description: Hamiltonian benzetimleriyle çalışmak için Trotter-Suzuki formü
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a303d54476e42b98a14c6b452227b0e1346567c8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eeaa13b99ab07ce22f8a3306a756bf7ac7cde65b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691895"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857606"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamiltonian Dynamics benzetimi
 
@@ -28,7 +28,7 @@ Trour – Suzuki formüllerinin arkasındaki fikir basittir: Hamiltonian 'ın, H
 Özellikle de $H = \ sum_ {j = 1} ^ m H_j $ Hamiltonian olmalıdır.
 Ardından, $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \ prod_ {j = 1} ^ m e ^ {-iH_j t} + O (m ^ 2 t ^ 2), $ $, bu değer $t \ll $1 olduğunda, bu yaklaşık olarak oluşan hata gözardı edilebilir hale gelir.
 $E ^ {-i H t} $ sıradan bir üstel ise, bu her bir hatanın $O (m ^ 2 t ^ 2) $: sıfır olacağını unutmayın.
-Bu hata oluşur $e çünkü ^ {-iHt} $, bir işleç üstel ve bunun sonucu olarak, $H _j $ koşullarının çalışmamasından dolayı bu formül kullanılırken bir hata oluştu ( *Örneğin* , $H _j H_k H_k, genel olarak).
+Bu hata oluşur $e çünkü ^ {-iHt} $, bir işleç üstel ve bunun sonucu olarak, $H _j $ koşullarının çalışmamasından dolayı bu formül kullanılırken bir hata oluştu (*Örneğin*, $H _j H_k H_k, genel olarak).
 
 $T $ büyükse, Trour – Suzuki formülleri, bir kısa saat adımları dizisine ayırarak Dynamics 'in doğru benzetimini yapmak için yine de kullanılabilir.
 $R $ ' ın evrimde geçen adım sayısı olmasına izin verin. bu nedenle, her adım $t/r $ için her seferinde çalışır. Daha sonra $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r), $ $ $r $, $m ^ 2 t ^ 2/\ Epsilon $ olarak ölçeklendirirken, bu hatanın herhangi bir $ \epsilon>$0 için en fazla $ \epsilon $ üzerinden yapılabilir olduğunu gösterir.
