@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Bitwise.Not
 title: Not işlevi
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Bitwise
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.bitwise.not".
-ms.openlocfilehash: f4fc36a6a6391e4d4ef73e9d6f2a66cf6470d6f0
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 4ac193a24a490f7ff461a61d357701b593ecf062
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96200246"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850001"
 ---
-# <a name="not-function"></a><span data-ttu-id="9f6da-102">Not işlevi</span><span class="sxs-lookup"><span data-stu-id="9f6da-102">Not function</span></span>
+# <a name="not-function"></a><span data-ttu-id="09203-102">Not işlevi</span><span class="sxs-lookup"><span data-stu-id="09203-102">Not function</span></span>
 
-<span data-ttu-id="9f6da-103">Ad alanı: [Microsoft. hisse. Extensions. bit düzeyinde](xref:Microsoft.Quantum.Extensions.Bitwise)</span><span class="sxs-lookup"><span data-stu-id="9f6da-103">Namespace: [Microsoft.Quantum.Extensions.Bitwise](xref:Microsoft.Quantum.Extensions.Bitwise)</span></span>
+<span data-ttu-id="09203-103">Ad alanı: [Microsoft. hisse. Extensions. bit düzeyinde](xref:Microsoft.Quantum.Extensions.Bitwise)</span><span class="sxs-lookup"><span data-stu-id="09203-103">Namespace: [Microsoft.Quantum.Extensions.Bitwise](xref:Microsoft.Quantum.Extensions.Bitwise)</span></span>
 
-<span data-ttu-id="9f6da-104">Paket: [Microsoft. hisse. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="9f6da-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="09203-104">Paket: [Microsoft. hisse. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="09203-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="9f6da-105">Kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="9f6da-105">Not has been deprecated.</span></span> <span data-ttu-id="9f6da-106">Lütfen <xref:Microsoft.Quantum.Bitwise.Not> bunun yerine kullanın.</span><span class="sxs-lookup"><span data-stu-id="9f6da-106">Please use <xref:Microsoft.Quantum.Bitwise.Not> instead.</span></span>
+> <span data-ttu-id="09203-105">Kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="09203-105">Not has been deprecated.</span></span> <span data-ttu-id="09203-106">Lütfen <xref:Microsoft.Quantum.Bitwise.Not> bunun yerine kullanın.</span><span class="sxs-lookup"><span data-stu-id="09203-106">Please use <xref:Microsoft.Quantum.Bitwise.Not> instead.</span></span>
 >
-> <span data-ttu-id="9f6da-107">Lütfen @"microsoft.quantum.bitwise.not" kullanın.</span><span class="sxs-lookup"><span data-stu-id="9f6da-107">Please use @"microsoft.quantum.bitwise.not".</span></span>
+> <span data-ttu-id="09203-107">Lütfen @"microsoft.quantum.bitwise.not" kullanın.</span><span class="sxs-lookup"><span data-stu-id="09203-107">Please use @"microsoft.quantum.bitwise.not".</span></span>
 
 
 
@@ -40,13 +40,13 @@ function Not (a : Int) : Int
 ```
 
 
-## <a name="input"></a><span data-ttu-id="9f6da-108">Giriş</span><span class="sxs-lookup"><span data-stu-id="9f6da-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="09203-108">Giriş</span><span class="sxs-lookup"><span data-stu-id="09203-108">Input</span></span>
 
-### <a name="a--int"></a><span data-ttu-id="9f6da-109">y: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="9f6da-109">a : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
-
-
+### <a name="a--int"></a><span data-ttu-id="09203-109">y: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="09203-109">a : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
-## <a name="output--int"></a><span data-ttu-id="9f6da-110">Çıkış: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="9f6da-110">Output : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+
+
+## <a name="output--int"></a><span data-ttu-id="09203-110">Çıkış: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="09203-110">Output : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
