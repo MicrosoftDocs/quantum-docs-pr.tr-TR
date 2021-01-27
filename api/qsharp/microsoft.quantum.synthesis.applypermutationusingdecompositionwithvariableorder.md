@@ -1,60 +1,70 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecompositionWithVariableOrder
 title: Applyperdeğiştirici Tionusingdekompozisyontionwithvariableorder işlemi
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyPermutationUsingDecompositionWithVariableOrder
 qsharp.summary: Permutes the amplitudes in a quantum state given a permutation using decomposition-based synthesis.
-ms.openlocfilehash: a5ca9b366f7ff477070e21fea047ff04b425439c
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: f33d2980ff1775b1ae8d2e2e7a4fa1e5cbe7d5ba
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96203442"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858874"
 ---
-# <a name="applypermutationusingdecompositionwithvariableorder-operation"></a><span data-ttu-id="cb63a-102">Applyperdeğiştirici Tionusingdekompozisyontionwithvariableorder işlemi</span><span class="sxs-lookup"><span data-stu-id="cb63a-102">ApplyPermutationUsingDecompositionWithVariableOrder operation</span></span>
+# <a name="applypermutationusingdecompositionwithvariableorder-operation"></a><span data-ttu-id="7bff9-102">Applyperdeğiştirici Tionusingdekompozisyontionwithvariableorder işlemi</span><span class="sxs-lookup"><span data-stu-id="7bff9-102">ApplyPermutationUsingDecompositionWithVariableOrder operation</span></span>
 
-<span data-ttu-id="cb63a-103">Ad alanı: [Microsoft. hisse. sensıs](xref:Microsoft.Quantum.Synthesis)</span><span class="sxs-lookup"><span data-stu-id="cb63a-103">Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)</span></span>
+<span data-ttu-id="7bff9-103">Ad alanı: [Microsoft. hisse. sensıs](xref:Microsoft.Quantum.Synthesis)</span><span class="sxs-lookup"><span data-stu-id="7bff9-103">Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)</span></span>
 
-<span data-ttu-id="cb63a-104">Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="cb63a-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="7bff9-104">Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="7bff9-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="cb63a-105">Bir hisse cıklarca, ayrıştırma tabanlı senklerde bir PERMÜTASYONA göre rekabet eden bir değer sağlar.</span><span class="sxs-lookup"><span data-stu-id="cb63a-105">Permutes the amplitudes in a quantum state given a permutation using decomposition-based synthesis.</span></span>
+<span data-ttu-id="7bff9-105">Bir hisse cıklarca, ayrıştırma tabanlı senklerde bir PERMÜTASYONA göre rekabet eden bir değer sağlar.</span><span class="sxs-lookup"><span data-stu-id="7bff9-105">Permutes the amplitudes in a quantum state given a permutation using decomposition-based synthesis.</span></span>
 
 ```qsharp
 operation ApplyPermutationUsingDecompositionWithVariableOrder (perm : Int[], variableOrder : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
-## <a name="description"></a><span data-ttu-id="cb63a-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="cb63a-106">Description</span></span>
+## <a name="description"></a><span data-ttu-id="7bff9-106">Description</span><span class="sxs-lookup"><span data-stu-id="7bff9-106">Description</span></span>
 
-<span data-ttu-id="cb63a-107">Bu işlem, @"microsoft.quantum.synthesis.applypermutationusingdecomposition" değişken sırasının belirtibileceği daha genel bir sürümdür.</span><span class="sxs-lookup"><span data-stu-id="cb63a-107">This operation is a more general version of @"microsoft.quantum.synthesis.applypermutationusingdecomposition" in which the variable order can be specified.</span></span> <span data-ttu-id="cb63a-108">Farklı bir değişken sırası, ayrıştırma dizisini ve kontrollü kapılar için kullanılan Truth tablolarını değiştirir @"microsoft.quantum.intrinsic.x" .</span><span class="sxs-lookup"><span data-stu-id="cb63a-108">A different variable order changes the decomposition sequence and the truth tables used for the controlled @"microsoft.quantum.intrinsic.x" gates.</span></span>  <span data-ttu-id="cb63a-109">Bu nedenle, değişken sırasını değiştirmek, permütasyon sağlamak için kullanılan toplam kapı sayısını değiştirir.</span><span class="sxs-lookup"><span data-stu-id="cb63a-109">Therefore, changing the variable order changes the number of overall gates used to realize the permutation.</span></span>
+<span data-ttu-id="7bff9-107">Bu işlem, @"microsoft.quantum.synthesis.applypermutationusingdecomposition" değişken sırasının belirtibileceği daha genel bir sürümdür.</span><span class="sxs-lookup"><span data-stu-id="7bff9-107">This operation is a more general version of @"microsoft.quantum.synthesis.applypermutationusingdecomposition" in which the variable order can be specified.</span></span> <span data-ttu-id="7bff9-108">Farklı bir değişken sırası, ayrıştırma dizisini ve kontrollü kapılar için kullanılan Truth tablolarını değiştirir @"microsoft.quantum.intrinsic.x" .</span><span class="sxs-lookup"><span data-stu-id="7bff9-108">A different variable order changes the decomposition sequence and the truth tables used for the controlled @"microsoft.quantum.intrinsic.x" gates.</span></span>  <span data-ttu-id="7bff9-109">Bu nedenle, değişken sırasını değiştirmek, permütasyon sağlamak için kullanılan toplam kapı sayısını değiştirir.</span><span class="sxs-lookup"><span data-stu-id="7bff9-109">Therefore, changing the variable order changes the number of overall gates used to realize the permutation.</span></span>
 
-## <a name="input"></a><span data-ttu-id="cb63a-110">Giriş</span><span class="sxs-lookup"><span data-stu-id="cb63a-110">Input</span></span>
+## <a name="input"></a><span data-ttu-id="7bff9-110">Giriş</span><span class="sxs-lookup"><span data-stu-id="7bff9-110">Input</span></span>
 
-### <a name="perm--int"></a><span data-ttu-id="cb63a-111">izin: [Int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="cb63a-111">perm : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
+### <a name="perm--int"></a><span data-ttu-id="7bff9-111">izin: [Int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="7bff9-111">perm : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
 
-<span data-ttu-id="cb63a-112">0 ' dan başlayarak $2 ^ n $ öğe için bir permütasyon.</span><span class="sxs-lookup"><span data-stu-id="cb63a-112">A permutation of $2^n$ elements starting from 0.</span></span>
-
-
-### <a name="variableorder--int"></a><span data-ttu-id="cb63a-113">variableOrder: [Int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="cb63a-113">variableOrder : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
-
-<span data-ttu-id="cb63a-114">0 ' dan başlayarak $n $ öğelerinden oluşan bir permütasyon.</span><span class="sxs-lookup"><span data-stu-id="cb63a-114">A permutation of $n$ elements starting from 0.</span></span>
+<span data-ttu-id="7bff9-112">0 ' dan başlayarak $2 ^ n $ öğe için bir permütasyon.</span><span class="sxs-lookup"><span data-stu-id="7bff9-112">A permutation of $2^n$ elements starting from 0.</span></span>
 
 
-### <a name="qubits--littleendian"></a><span data-ttu-id="cb63a-115">qubits: [Litttaendian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="cb63a-115">qubits : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
+### <a name="variableorder--int"></a><span data-ttu-id="7bff9-113">variableOrder: [Int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="7bff9-113">variableOrder : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
 
-<span data-ttu-id="cb63a-116">Permütasyonun uygulandığı $n $ qubits listesi.</span><span class="sxs-lookup"><span data-stu-id="cb63a-116">A list of $n$ qubits to which the permutation is applied to.</span></span>
+<span data-ttu-id="7bff9-114">0 ' dan başlayarak $n $ öğelerinden oluşan bir permütasyon.</span><span class="sxs-lookup"><span data-stu-id="7bff9-114">A permutation of $n$ elements starting from 0.</span></span>
 
 
+### <a name="qubits--littleendian"></a><span data-ttu-id="7bff9-115">qubits: [Litttaendian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="7bff9-115">qubits : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
 
-## <a name="output--unit"></a><span data-ttu-id="cb63a-117">Çıkış: [birim](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="cb63a-117">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+<span data-ttu-id="7bff9-116">Permütasyonun uygulandığı $n $ qubits listesi.</span><span class="sxs-lookup"><span data-stu-id="7bff9-116">A list of $n$ qubits to which the permutation is applied to.</span></span>
 
 
 
-## <a name="see-also"></a><span data-ttu-id="cb63a-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="cb63a-118">See Also</span></span>
+## <a name="output--unit"></a><span data-ttu-id="7bff9-117">Çıkış: [birim](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="7bff9-117">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
-- [<span data-ttu-id="cb63a-119">Microsoft. hisse. Sensıs. Applyperdeğiştirici Tionusingayrıştırma</span><span class="sxs-lookup"><span data-stu-id="cb63a-119">Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecomposition</span></span>](xref:Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecomposition)
-- [<span data-ttu-id="cb63a-120">Microsoft. hisse. Sensıs. Applyperdeğiştirici Tionusingtransformation</span><span class="sxs-lookup"><span data-stu-id="cb63a-120">Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation</span></span>](xref:Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation)
+
+
+## <a name="example"></a><span data-ttu-id="7bff9-118">Örnek</span><span class="sxs-lookup"><span data-stu-id="7bff9-118">Example</span></span>
+
+<span data-ttu-id="7bff9-119">Bir işlemi sentezleştirmek için `SWAP` :</span><span class="sxs-lookup"><span data-stu-id="7bff9-119">To synthesize a `SWAP` operation:</span></span>
+
+```qsharp
+using (qubits = Qubit[2]) {
+  ApplyPermutationUsingDecompositionWithVariableOrder([0, 2, 1, 3], [1, 0], LittleEndian(qubits));
+}
+```
+
+## <a name="see-also"></a><span data-ttu-id="7bff9-120">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="7bff9-120">See Also</span></span>
+
+- [<span data-ttu-id="7bff9-121">Microsoft. hisse. Sensıs. Applyperdeğiştirici Tionusingayrıştırma</span><span class="sxs-lookup"><span data-stu-id="7bff9-121">Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecomposition</span></span>](xref:Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecomposition)
+- [<span data-ttu-id="7bff9-122">Microsoft. hisse. Sensıs. Applyperdeğiştirici Tionusingtransformation</span><span class="sxs-lookup"><span data-stu-id="7bff9-122">Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation</span></span>](xref:Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation)
