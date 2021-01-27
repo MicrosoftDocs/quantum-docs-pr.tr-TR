@@ -1,45 +1,45 @@
 ---
 uid: Microsoft.Quantum.Preparation.StatePreparationSBMComputeCoefficients
 title: StatePreparationSBMComputeCoefficients işlevi
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: StatePreparationSBMComputeCoefficients
 qsharp.summary: Implementation step of arbitrary state preparation procedure.
-ms.openlocfilehash: 221acae3751a729ca69c308783405aef2f7cfd3c
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 2689224f0ef5f0097c9986332ca034318b2e857c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96210344"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855823"
 ---
-# <a name="statepreparationsbmcomputecoefficients-function"></a><span data-ttu-id="2e1c0-102">StatePreparationSBMComputeCoefficients işlevi</span><span class="sxs-lookup"><span data-stu-id="2e1c0-102">StatePreparationSBMComputeCoefficients function</span></span>
+# <a name="statepreparationsbmcomputecoefficients-function"></a><span data-ttu-id="37010-102">StatePreparationSBMComputeCoefficients işlevi</span><span class="sxs-lookup"><span data-stu-id="37010-102">StatePreparationSBMComputeCoefficients function</span></span>
 
-<span data-ttu-id="2e1c0-103">Ad alanı: [Microsoft. hisse. hazırlık](xref:Microsoft.Quantum.Preparation)</span><span class="sxs-lookup"><span data-stu-id="2e1c0-103">Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)</span></span>
+<span data-ttu-id="37010-103">Ad alanı: [Microsoft. hisse. hazırlık](xref:Microsoft.Quantum.Preparation)</span><span class="sxs-lookup"><span data-stu-id="37010-103">Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)</span></span>
 
-<span data-ttu-id="2e1c0-104">Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="2e1c0-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="37010-104">Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="37010-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="2e1c0-105">Rastgele durum hazırlama yordamının uygulama adımı.</span><span class="sxs-lookup"><span data-stu-id="2e1c0-105">Implementation step of arbitrary state preparation procedure.</span></span>
+<span data-ttu-id="37010-105">Rastgele durum hazırlama yordamının uygulama adımı.</span><span class="sxs-lookup"><span data-stu-id="37010-105">Implementation step of arbitrary state preparation procedure.</span></span>
 
 ```qsharp
 function StatePreparationSBMComputeCoefficients (coefficients : Microsoft.Quantum.Math.ComplexPolar[]) : (Double[], Double[], Microsoft.Quantum.Math.ComplexPolar[])
 ```
 
 
-## <a name="input"></a><span data-ttu-id="2e1c0-106">Giriş</span><span class="sxs-lookup"><span data-stu-id="2e1c0-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="37010-106">Giriş</span><span class="sxs-lookup"><span data-stu-id="37010-106">Input</span></span>
 
-### <a name="coefficients--complexpolar"></a><span data-ttu-id="2e1c0-107">katsayılar: [Complexkutupsal](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span><span class="sxs-lookup"><span data-stu-id="2e1c0-107">coefficients : [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span></span>
-
-
+### <a name="coefficients--complexpolar"></a><span data-ttu-id="37010-107">katsayılar: [Complexkutupsal](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span><span class="sxs-lookup"><span data-stu-id="37010-107">coefficients : [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span></span>
 
 
 
-## <a name="output--doubledoublecomplexpolar"></a><span data-ttu-id="2e1c0-108">Çıkış: ([Double](xref:microsoft.quantum.lang-ref.double)[],[Double](xref:microsoft.quantum.lang-ref.double)[],[complexkutupsal](xref:Microsoft.Quantum.Math.ComplexPolar)[])</span><span class="sxs-lookup"><span data-stu-id="2e1c0-108">Output : ([Double](xref:microsoft.quantum.lang-ref.double)[],[Double](xref:microsoft.quantum.lang-ref.double)[],[ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[])</span></span>
+
+
+## <a name="output--doubledoublecomplexpolar"></a><span data-ttu-id="37010-108">Çıkış: ([Double](xref:microsoft.quantum.lang-ref.double)[],[Double](xref:microsoft.quantum.lang-ref.double)[],[complexkutupsal](xref:Microsoft.Quantum.Math.ComplexPolar)[])</span><span class="sxs-lookup"><span data-stu-id="37010-108">Output : ([Double](xref:microsoft.quantum.lang-ref.double)[],[Double](xref:microsoft.quantum.lang-ref.double)[],[ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[])</span></span>
 
 
 
-## <a name="see-also"></a><span data-ttu-id="2e1c0-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2e1c0-109">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="37010-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="37010-109">See Also</span></span>
 
-- [<span data-ttu-id="2e1c0-110">Microsoft. hisse. hazırlık. hazırlık Earbitrari durumu</span><span class="sxs-lookup"><span data-stu-id="2e1c0-110">Microsoft.Quantum.Preparation.PrepareArbitraryState</span></span>](xref:Microsoft.Quantum.Preparation.PrepareArbitraryState)
+- [<span data-ttu-id="37010-110">Microsoft. hisse. hazırlık. hazırlık Earbitrari durumu</span><span class="sxs-lookup"><span data-stu-id="37010-110">Microsoft.Quantum.Preparation.PrepareArbitraryState</span></span>](xref:Microsoft.Quantum.Preparation.PrepareArbitraryState)

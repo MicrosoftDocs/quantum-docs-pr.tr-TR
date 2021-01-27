@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpObliviousByReflectionPhases
 title: AmpAmpObliviousByReflectionPhases işlevi
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections".
-ms.openlocfilehash: 58701d7718e0d3b982dc8721eab625f90526973f
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c20c84195f84e759a6332a3c8689daa0fe23c6e5
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191729"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846729"
 ---
-# <a name="ampampobliviousbyreflectionphases-function"></a><span data-ttu-id="531eb-102">AmpAmpObliviousByReflectionPhases işlevi</span><span class="sxs-lookup"><span data-stu-id="531eb-102">AmpAmpObliviousByReflectionPhases function</span></span>
+# <a name="ampampobliviousbyreflectionphases-function"></a><span data-ttu-id="48822-102">AmpAmpObliviousByReflectionPhases işlevi</span><span class="sxs-lookup"><span data-stu-id="48822-102">AmpAmpObliviousByReflectionPhases function</span></span>
 
-<span data-ttu-id="531eb-103">Ad alanı: [Microsoft. hisse. yükseltilmiş Tudeamplif](xref:Microsoft.Quantum.AmplitudeAmplification)</span><span class="sxs-lookup"><span data-stu-id="531eb-103">Namespace: [Microsoft.Quantum.AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)</span></span>
+<span data-ttu-id="48822-103">Ad alanı: [Microsoft. hisse. yükseltilmiş Tudeamplif](xref:Microsoft.Quantum.AmplitudeAmplification)</span><span class="sxs-lookup"><span data-stu-id="48822-103">Namespace: [Microsoft.Quantum.AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)</span></span>
 
-<span data-ttu-id="531eb-104">Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="531eb-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="48822-104">Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="48822-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="531eb-105">AmpAmpObliviousByReflectionPhases kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="531eb-105">AmpAmpObliviousByReflectionPhases has been deprecated.</span></span> <span data-ttu-id="531eb-106">Lütfen <xref:Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromPartialReflections> bunun yerine kullanın.</span><span class="sxs-lookup"><span data-stu-id="531eb-106">Please use <xref:Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromPartialReflections> instead.</span></span>
+> <span data-ttu-id="48822-105">AmpAmpObliviousByReflectionPhases kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="48822-105">AmpAmpObliviousByReflectionPhases has been deprecated.</span></span> <span data-ttu-id="48822-106">Lütfen <xref:Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromPartialReflections> bunun yerine kullanın.</span><span class="sxs-lookup"><span data-stu-id="48822-106">Please use <xref:Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromPartialReflections> instead.</span></span>
 >
-> <span data-ttu-id="531eb-107">Lütfen @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections" kullanın.</span><span class="sxs-lookup"><span data-stu-id="531eb-107">Please use @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections".</span></span>
+> <span data-ttu-id="48822-107">Lütfen @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections" kullanın.</span><span class="sxs-lookup"><span data-stu-id="48822-107">Please use @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections".</span></span>
 
 
 
@@ -40,28 +40,28 @@ function AmpAmpObliviousByReflectionPhases (phases : Microsoft.Quantum.Amplitude
 ```
 
 
-## <a name="input"></a><span data-ttu-id="531eb-108">Giriş</span><span class="sxs-lookup"><span data-stu-id="531eb-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="48822-108">Giriş</span><span class="sxs-lookup"><span data-stu-id="48822-108">Input</span></span>
 
-### <a name="phases--reflectionphases"></a><span data-ttu-id="531eb-109">Aşamalar: [Reflectionaşamalar](xref:Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases)</span><span class="sxs-lookup"><span data-stu-id="531eb-109">phases : [ReflectionPhases](xref:Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases)</span></span>
-
-
-
-
-### <a name="startstatereflection--reflectionoracle"></a><span data-ttu-id="531eb-110">Startstatereftaction: [Reflectionoracle](xref:Microsoft.Quantum.Oracles.ReflectionOracle)</span><span class="sxs-lookup"><span data-stu-id="531eb-110">startStateReflection : [ReflectionOracle](xref:Microsoft.Quantum.Oracles.ReflectionOracle)</span></span>
+### <a name="phases--reflectionphases"></a><span data-ttu-id="48822-109">Aşamalar: [Reflectionaşamalar](xref:Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases)</span><span class="sxs-lookup"><span data-stu-id="48822-109">phases : [ReflectionPhases](xref:Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases)</span></span>
 
 
 
 
-### <a name="targetstatereflection--reflectionoracle"></a><span data-ttu-id="531eb-111">Targetstatereftaction: [Reflectionoracle](xref:Microsoft.Quantum.Oracles.ReflectionOracle)</span><span class="sxs-lookup"><span data-stu-id="531eb-111">targetStateReflection : [ReflectionOracle](xref:Microsoft.Quantum.Oracles.ReflectionOracle)</span></span>
+### <a name="startstatereflection--reflectionoracle"></a><span data-ttu-id="48822-110">Startstatereftaction: [Reflectionoracle](xref:Microsoft.Quantum.Oracles.ReflectionOracle)</span><span class="sxs-lookup"><span data-stu-id="48822-110">startStateReflection : [ReflectionOracle](xref:Microsoft.Quantum.Oracles.ReflectionOracle)</span></span>
 
 
 
 
-### <a name="signaloracle--obliviousoracle"></a><span data-ttu-id="531eb-112">signalOracle: [ObliviousOracle](xref:Microsoft.Quantum.Oracles.ObliviousOracle)</span><span class="sxs-lookup"><span data-stu-id="531eb-112">signalOracle : [ObliviousOracle](xref:Microsoft.Quantum.Oracles.ObliviousOracle)</span></span>
+### <a name="targetstatereflection--reflectionoracle"></a><span data-ttu-id="48822-111">Targetstatereftaction: [Reflectionoracle](xref:Microsoft.Quantum.Oracles.ReflectionOracle)</span><span class="sxs-lookup"><span data-stu-id="48822-111">targetStateReflection : [ReflectionOracle](xref:Microsoft.Quantum.Oracles.ReflectionOracle)</span></span>
+
+
+
+
+### <a name="signaloracle--obliviousoracle"></a><span data-ttu-id="48822-112">signalOracle: [ObliviousOracle](xref:Microsoft.Quantum.Oracles.ObliviousOracle)</span><span class="sxs-lookup"><span data-stu-id="48822-112">signalOracle : [ObliviousOracle](xref:Microsoft.Quantum.Oracles.ObliviousOracle)</span></span>
 
 
 
 
 
-## <a name="output--qubitqubit--unit--is-adj--ctl"></a><span data-ttu-id="531eb-113">Çıkış: ([qubit](xref:microsoft.quantum.lang-ref.qubit)[],[qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [birimi](xref:microsoft.quantum.lang-ref.unit)  ayarlama ve CTL</span><span class="sxs-lookup"><span data-stu-id="531eb-113">Output : ([Qubit](xref:microsoft.quantum.lang-ref.qubit)[],[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
+## <a name="output--qubitqubit--unit--is-adj--ctl"></a><span data-ttu-id="48822-113">Çıkış: ([qubit](xref:microsoft.quantum.lang-ref.qubit)[],[qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [birimi](xref:microsoft.quantum.lang-ref.unit)  ayarlama ve CTL</span><span class="sxs-lookup"><span data-stu-id="48822-113">Output : ([Qubit](xref:microsoft.quantum.lang-ref.qubit)[],[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
 

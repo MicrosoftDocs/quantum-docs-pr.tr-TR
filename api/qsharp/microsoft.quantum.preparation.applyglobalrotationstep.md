@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Preparation.ApplyGlobalRotationStep
 title: ApplyGlobalRotationStep işlemi
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: ApplyGlobalRotationStep
 qsharp.summary: ''
-ms.openlocfilehash: 2af65344a37fbb3efb0421880b2868740f9c05fb
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: ef8971bc9ee74d860fae90c1cba7e00f368337a4
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96226562"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855912"
 ---
-# <a name="applyglobalrotationstep-operation"></a><span data-ttu-id="dd6a5-102">ApplyGlobalRotationStep işlemi</span><span class="sxs-lookup"><span data-stu-id="dd6a5-102">ApplyGlobalRotationStep operation</span></span>
+# <a name="applyglobalrotationstep-operation"></a><span data-ttu-id="f56a4-102">ApplyGlobalRotationStep işlemi</span><span class="sxs-lookup"><span data-stu-id="f56a4-102">ApplyGlobalRotationStep operation</span></span>
 
-<span data-ttu-id="dd6a5-103">Ad alanı: [Microsoft. hisse. hazırlık](xref:Microsoft.Quantum.Preparation)</span><span class="sxs-lookup"><span data-stu-id="dd6a5-103">Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)</span></span>
+<span data-ttu-id="f56a4-103">Ad alanı: [Microsoft. hisse. hazırlık](xref:Microsoft.Quantum.Preparation)</span><span class="sxs-lookup"><span data-stu-id="f56a4-103">Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)</span></span>
 
-<span data-ttu-id="dd6a5-104">Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="dd6a5-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="f56a4-104">Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="f56a4-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 
@@ -28,23 +28,23 @@ operation ApplyGlobalRotationStep (angle : Double, idxTarget : Int, register : Q
 ```
 
 
-## <a name="input"></a><span data-ttu-id="dd6a5-105">Giriş</span><span class="sxs-lookup"><span data-stu-id="dd6a5-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="f56a4-105">Giriş</span><span class="sxs-lookup"><span data-stu-id="f56a4-105">Input</span></span>
 
-### <a name="angle--double"></a><span data-ttu-id="dd6a5-106">açı: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="dd6a5-106">angle : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
-
-
-
-
-### <a name="idxtarget--int"></a><span data-ttu-id="dd6a5-107">ıdxtarget: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="dd6a5-107">idxTarget : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="angle--double"></a><span data-ttu-id="f56a4-106">açı: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="f56a4-106">angle : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
 
 
 
-### <a name="register--qubit"></a><span data-ttu-id="dd6a5-108">kaydol: [qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="dd6a5-108">register : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
+### <a name="idxtarget--int"></a><span data-ttu-id="f56a4-107">ıdxtarget: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="f56a4-107">idxTarget : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+
+
+
+
+### <a name="register--qubit"></a><span data-ttu-id="f56a4-108">kaydol: [qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="f56a4-108">register : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
 
 
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="dd6a5-109">Çıkış: [birim](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="dd6a5-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+## <a name="output--unit"></a><span data-ttu-id="f56a4-109">Çıkış: [birim](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="f56a4-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
