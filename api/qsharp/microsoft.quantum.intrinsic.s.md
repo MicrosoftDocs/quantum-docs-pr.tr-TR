@@ -1,45 +1,45 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.S
 title: S işlemi
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
 qsharp.name: S
 qsharp.summary: Applies the S gate to a single qubit.
-ms.openlocfilehash: c697408c4efe1963787b5aee8f0d3bb6b9e64dd5
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: be9078dfdcc4eecf317b0542b1c42a8d60466a5f
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96198461"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98817525"
 ---
-# <a name="s-operation"></a><span data-ttu-id="77cd4-102">S işlemi</span><span class="sxs-lookup"><span data-stu-id="77cd4-102">S operation</span></span>
+# <a name="s-operation"></a><span data-ttu-id="07998-102">S işlemi</span><span class="sxs-lookup"><span data-stu-id="07998-102">S operation</span></span>
 
-<span data-ttu-id="77cd4-103">Ad alanı: [Microsoft. hisse. iç](xref:Microsoft.Quantum.Intrinsic)</span><span class="sxs-lookup"><span data-stu-id="77cd4-103">Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)</span></span>
+<span data-ttu-id="07998-103">Ad alanı: [Microsoft. hisse. iç](xref:Microsoft.Quantum.Intrinsic)</span><span class="sxs-lookup"><span data-stu-id="07998-103">Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)</span></span>
 
-<span data-ttu-id="77cd4-104">Paket: [Microsoft. hisse. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="77cd4-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="07998-104">Paket: [Microsoft. hisse. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="07998-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
-<span data-ttu-id="77cd4-105">S geçidini tek bir qubit 'e uygular.</span><span class="sxs-lookup"><span data-stu-id="77cd4-105">Applies the S gate to a single qubit.</span></span>
+<span data-ttu-id="07998-105">S geçidini tek bir qubit 'e uygular.</span><span class="sxs-lookup"><span data-stu-id="07998-105">Applies the S gate to a single qubit.</span></span>
 
 ```qsharp
 operation S (qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 
-## <a name="description"></a><span data-ttu-id="77cd4-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="77cd4-106">Description</span></span>
+## <a name="description"></a><span data-ttu-id="07998-106">Description</span><span class="sxs-lookup"><span data-stu-id="07998-106">Description</span></span>
 
-<span data-ttu-id="77cd4-107">Bu işlem Unitary matrisi \ Begin{hizalaması} S \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ 0 & i \end{bmatrix} tarafından benzetilir.</span><span class="sxs-lookup"><span data-stu-id="77cd4-107">This operation can be simulated by the unitary matrix \begin{align} S \mathrel{:=} \begin{bmatrix} 1 & 0 \\\\ 0 & i \end{bmatrix}.</span></span>
-<span data-ttu-id="77cd4-108">\end{hizalaması}</span><span class="sxs-lookup"><span data-stu-id="77cd4-108">\end{align}</span></span>
+<span data-ttu-id="07998-107">Bu işlem Unitary matrisi \ Begin{hizalaması} S \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ 0 & i \end{bmatrix} tarafından benzetilir.</span><span class="sxs-lookup"><span data-stu-id="07998-107">This operation can be simulated by the unitary matrix \begin{align} S \mathrel{:=} \begin{bmatrix} 1 & 0 \\\\ 0 & i \end{bmatrix}.</span></span>
+<span data-ttu-id="07998-108">\end{hizalaması}</span><span class="sxs-lookup"><span data-stu-id="07998-108">\end{align}</span></span>
 
-## <a name="input"></a><span data-ttu-id="77cd4-109">Giriş</span><span class="sxs-lookup"><span data-stu-id="77cd4-109">Input</span></span>
+## <a name="input"></a><span data-ttu-id="07998-109">Giriş</span><span class="sxs-lookup"><span data-stu-id="07998-109">Input</span></span>
 
-### <a name="qubit--qubit"></a><span data-ttu-id="77cd4-110">qubit: [qubit](xref:microsoft.quantum.lang-ref.qubit)</span><span class="sxs-lookup"><span data-stu-id="77cd4-110">qubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span></span>
+### <a name="qubit--qubit"></a><span data-ttu-id="07998-110">qubit: [qubit](xref:microsoft.quantum.lang-ref.qubit)</span><span class="sxs-lookup"><span data-stu-id="07998-110">qubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span></span>
 
-<span data-ttu-id="77cd4-111">Gate 'in uygulanması gereken qubit.</span><span class="sxs-lookup"><span data-stu-id="77cd4-111">Qubit to which the gate should be applied.</span></span>
+<span data-ttu-id="07998-111">Gate 'in uygulanması gereken qubit.</span><span class="sxs-lookup"><span data-stu-id="07998-111">Qubit to which the gate should be applied.</span></span>
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="77cd4-112">Çıkış: [birim](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="77cd4-112">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+## <a name="output--unit"></a><span data-ttu-id="07998-112">Çıkış: [birim](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="07998-112">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
