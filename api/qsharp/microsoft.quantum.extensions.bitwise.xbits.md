@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Bitwise.XBits
 title: XBits işlevi
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Bitwise
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.bitwise.xbits".
-ms.openlocfilehash: 3972fba6794173ea8a1245c2f6f154bb30d7aafd
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 4814121a667bf7f8f3c7a4851d774ed48ca51778
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96213540"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852976"
 ---
-# <a name="xbits-function"></a><span data-ttu-id="13cb2-102">XBits işlevi</span><span class="sxs-lookup"><span data-stu-id="13cb2-102">XBits function</span></span>
+# <a name="xbits-function"></a><span data-ttu-id="89e50-102">XBits işlevi</span><span class="sxs-lookup"><span data-stu-id="89e50-102">XBits function</span></span>
 
-<span data-ttu-id="13cb2-103">Ad alanı: [Microsoft. hisse. Extensions. bit düzeyinde](xref:Microsoft.Quantum.Extensions.Bitwise)</span><span class="sxs-lookup"><span data-stu-id="13cb2-103">Namespace: [Microsoft.Quantum.Extensions.Bitwise](xref:Microsoft.Quantum.Extensions.Bitwise)</span></span>
+<span data-ttu-id="89e50-103">Ad alanı: [Microsoft. hisse. Extensions. bit düzeyinde](xref:Microsoft.Quantum.Extensions.Bitwise)</span><span class="sxs-lookup"><span data-stu-id="89e50-103">Namespace: [Microsoft.Quantum.Extensions.Bitwise](xref:Microsoft.Quantum.Extensions.Bitwise)</span></span>
 
-<span data-ttu-id="13cb2-104">Paket: [Microsoft. hisse. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="13cb2-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="89e50-104">Paket: [Microsoft. hisse. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="89e50-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="13cb2-105">XBits kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="13cb2-105">XBits has been deprecated.</span></span> <span data-ttu-id="13cb2-106">Lütfen <xref:Microsoft.Quantum.Bitwise.XBits> bunun yerine kullanın.</span><span class="sxs-lookup"><span data-stu-id="13cb2-106">Please use <xref:Microsoft.Quantum.Bitwise.XBits> instead.</span></span>
+> <span data-ttu-id="89e50-105">XBits kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="89e50-105">XBits has been deprecated.</span></span> <span data-ttu-id="89e50-106">Lütfen <xref:Microsoft.Quantum.Bitwise.XBits> bunun yerine kullanın.</span><span class="sxs-lookup"><span data-stu-id="89e50-106">Please use <xref:Microsoft.Quantum.Bitwise.XBits> instead.</span></span>
 >
-> <span data-ttu-id="13cb2-107">Lütfen @"microsoft.quantum.bitwise.xbits" kullanın.</span><span class="sxs-lookup"><span data-stu-id="13cb2-107">Please use @"microsoft.quantum.bitwise.xbits".</span></span>
+> <span data-ttu-id="89e50-107">Lütfen @"microsoft.quantum.bitwise.xbits" kullanın.</span><span class="sxs-lookup"><span data-stu-id="89e50-107">Please use @"microsoft.quantum.bitwise.xbits".</span></span>
 
 
 
@@ -40,13 +40,13 @@ function XBits (paulies : Pauli[]) : Int
 ```
 
 
-## <a name="input"></a><span data-ttu-id="13cb2-108">Giriş</span><span class="sxs-lookup"><span data-stu-id="13cb2-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="89e50-108">Giriş</span><span class="sxs-lookup"><span data-stu-id="89e50-108">Input</span></span>
 
-### <a name="paulies--pauli"></a><span data-ttu-id="13cb2-109">pauda 'lar: [Pauli](xref:microsoft.quantum.lang-ref.pauli)[]</span><span class="sxs-lookup"><span data-stu-id="13cb2-109">paulies : [Pauli](xref:microsoft.quantum.lang-ref.pauli)[]</span></span>
-
-
+### <a name="paulies--pauli"></a><span data-ttu-id="89e50-109">pauda 'lar: [Pauli](xref:microsoft.quantum.lang-ref.pauli)[]</span><span class="sxs-lookup"><span data-stu-id="89e50-109">paulies : [Pauli](xref:microsoft.quantum.lang-ref.pauli)[]</span></span>
 
 
 
-## <a name="output--int"></a><span data-ttu-id="13cb2-110">Çıkış: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="13cb2-110">Output : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+
+
+## <a name="output--int"></a><span data-ttu-id="89e50-110">Çıkış: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="89e50-110">Output : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 

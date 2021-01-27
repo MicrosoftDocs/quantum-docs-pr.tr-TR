@@ -4,17 +4,17 @@ description: Programlama dilinde hisse veri türleri hakkında bilgi edinin Q# .
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.quantumdatatypes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bf52557151f96f7e490786e42d0b5451ac2e1387
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 1c251dff98b7e37c5630a1237a7560dd4fdc929f
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96234084"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858455"
 ---
 <!---
 # Quantum data types in Q#
