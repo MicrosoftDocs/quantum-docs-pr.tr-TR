@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpPhasesFixedPoint
 title: AmpAmpPhasesFixedPoint işlevi
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
@@ -16,24 +16,24 @@ qsharp.summary: >-
   > Please use
 
   > @"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases".
-ms.openlocfilehash: 32724f832fa87631deeaa5a698d9a0d932f5ca47
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 30d52cdfc0b4ec4d7325ea7ea6edd2ac65c74272
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191746"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847242"
 ---
-# <a name="ampampphasesfixedpoint-function"></a><span data-ttu-id="354de-102">AmpAmpPhasesFixedPoint işlevi</span><span class="sxs-lookup"><span data-stu-id="354de-102">AmpAmpPhasesFixedPoint function</span></span>
+# <a name="ampampphasesfixedpoint-function"></a><span data-ttu-id="9a862-102">AmpAmpPhasesFixedPoint işlevi</span><span class="sxs-lookup"><span data-stu-id="9a862-102">AmpAmpPhasesFixedPoint function</span></span>
 
-<span data-ttu-id="354de-103">Ad alanı: [Microsoft. hisse. yükseltilmiş Tudeamplif](xref:Microsoft.Quantum.AmplitudeAmplification)</span><span class="sxs-lookup"><span data-stu-id="354de-103">Namespace: [Microsoft.Quantum.AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)</span></span>
+<span data-ttu-id="9a862-103">Ad alanı: [Microsoft. hisse. yükseltilmiş Tudeamplif](xref:Microsoft.Quantum.AmplitudeAmplification)</span><span class="sxs-lookup"><span data-stu-id="9a862-103">Namespace: [Microsoft.Quantum.AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)</span></span>
 
-<span data-ttu-id="354de-104">Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="354de-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="9a862-104">Paket: [Microsoft. hisse. Standart](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="9a862-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="354de-105">AmpAmpPhasesFixedPoint kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="354de-105">AmpAmpPhasesFixedPoint has been deprecated.</span></span> <span data-ttu-id="354de-106">Lütfen <xref:Microsoft.Quantum.AmplitudeAmplification.FixedPointReflectionPhases> bunun yerine kullanın.</span><span class="sxs-lookup"><span data-stu-id="354de-106">Please use <xref:Microsoft.Quantum.AmplitudeAmplification.FixedPointReflectionPhases> instead.</span></span>
+> <span data-ttu-id="9a862-105">AmpAmpPhasesFixedPoint kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="9a862-105">AmpAmpPhasesFixedPoint has been deprecated.</span></span> <span data-ttu-id="9a862-106">Lütfen <xref:Microsoft.Quantum.AmplitudeAmplification.FixedPointReflectionPhases> bunun yerine kullanın.</span><span class="sxs-lookup"><span data-stu-id="9a862-106">Please use <xref:Microsoft.Quantum.AmplitudeAmplification.FixedPointReflectionPhases> instead.</span></span>
 >
-> <span data-ttu-id="354de-107">Lütfen @"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases" kullanın.</span><span class="sxs-lookup"><span data-stu-id="354de-107">Please use @"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases".</span></span>
+> <span data-ttu-id="9a862-107">Lütfen @"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases" kullanın.</span><span class="sxs-lookup"><span data-stu-id="9a862-107">Please use @"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases".</span></span>
 
 
 
@@ -42,18 +42,18 @@ function AmpAmpPhasesFixedPoint (nQueries : Int, successMin : Double) : Microsof
 ```
 
 
-## <a name="input"></a><span data-ttu-id="354de-108">Giriş</span><span class="sxs-lookup"><span data-stu-id="354de-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="9a862-108">Giriş</span><span class="sxs-lookup"><span data-stu-id="9a862-108">Input</span></span>
 
-### <a name="nqueries--int"></a><span data-ttu-id="354de-109">nQueries: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="354de-109">nQueries : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
-
-
-
-
-### <a name="successmin--double"></a><span data-ttu-id="354de-110">Başarılı smın: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="354de-110">successMin : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+### <a name="nqueries--int"></a><span data-ttu-id="9a862-109">nQueries: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="9a862-109">nQueries : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
 
+### <a name="successmin--double"></a><span data-ttu-id="9a862-110">Başarılı smın: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="9a862-110">successMin : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
-## <a name="output--reflectionphases"></a><span data-ttu-id="354de-111">Çıkış: [Reflectionaşamalar](xref:Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases)</span><span class="sxs-lookup"><span data-stu-id="354de-111">Output : [ReflectionPhases](xref:Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases)</span></span>
+
+
+
+
+## <a name="output--reflectionphases"></a><span data-ttu-id="9a862-111">Çıkış: [Reflectionaşamalar](xref:Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases)</span><span class="sxs-lookup"><span data-stu-id="9a862-111">Output : [ReflectionPhases](xref:Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases)</span></span>
 
