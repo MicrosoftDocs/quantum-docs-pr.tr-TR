@@ -1,6 +1,6 @@
 ---
 title: "koşullu dallanma Q# " açıklaması: koşullu dallanma ve programlama dilindeki ' if ' Ifadesini öğrenin Q# .
-Yazar: bettinaheim MS. Author: beheim MS. Date: 10/07/2020 MS. Topic: article uid: Microsoft. hisse. qsharp. conditionaldallandırma No-loc:
+Yazar: bettinaheim MS. Author: beheim MS. Date: 10/07/2020 MS. Topic: başvuru uid: Microsoft. hisse. qsharp. conditionaldallandırma No-loc:
 - "Q#"
 - "$$v"
 

@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 214d584840f235868c66a1fb3ee24d0acab49630
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692163"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857235"
 ---
 # <a name="applications"></a>Uygulamalar #
 
@@ -155,7 +155,7 @@ Hisse maadı ve aşama tahmini 'nin nasıl çalıştığını (bkz. [hisse algor
 
 $A $ ve $N $ $ $a<N $, burada bulma sırası olarak da adlandırılan, bulma dönemi hedefi $r $ mod $a _$ $N $_ $r $, $a $ $. \equ1 \Text{mod} N $ gibi en az pozitif tamsayı olacak şekilde tanımlanır.  
 
-Bir hisse bilgisayarı kullanarak siparişi bulmak için şu Unitary işlecine uygulanan aşama tahmini algoritmasını kullanabiliriz $U _a $: $ $ U_a \ket{x} \equteket{(AX) \Text{mod} N}. $ $ $U _a $ öğesinin eigenvektörler tamsayı $s $ ve $0 \ LEQ s \leq r-$1, $ $ \ket{x_s} \equ1/\sqrt{r} \sum \_ {k = 0} ^ {r-1} e ^ {\frac{-2\pı i SK} {r}} \ket{a ^ k\text {mod} N}, $ $ $U _a $. _eigenstates_
+Bir hisse bilgisayarı kullanarak siparişi bulmak için şu Unitary işlecine uygulanan aşama tahmini algoritmasını kullanabiliriz $U _a $: $ $ U_a \ket{x} \equteket{(AX) \Text{mod} N}. $ $ $U _a $ öğesinin eigenvektörler tamsayı $s $ ve $0 \ LEQ s \leq r-$1, $ $ \ket{x_s} \equ1/\sqrt{r} \sum \_ {k = 0} ^ {r-1} e ^ {\frac{-2\pı i SK} {r}} \ket{a ^ k\text {mod} N}, $ $ $U _a $. 
 $U _a $ öğesinin eigenvalues değeri $ $ U \_ a \ket{x \_ s} = e ^ {2 \ Pi i s/r} \ket{x \_ s} şeklindedir. $$
 
 Bu nedenle, aşama tahmini, $s/r $ ' den [devam eden kesirleri](https://en.wikipedia.org/wiki/Continued_fraction) kullanarak $r $ tarafından verimli bir şekilde öğrenildiği ^ {2 \ Pi i s/r} $ $e eigenvalues verir.
@@ -178,7 +178,7 @@ Denetlenen-$U _a $ Gate $ \ket{x} $ $ \ket{x} $ to $ \ket{(AX) \Text{mod} N} $, 
 $ (A ^ NX) \Text{mod} N $ ' ı elde etmek için, yalnızca $a ^ n \Text{mod} N $ sınıfındaki $U.  
 Bu tür Modüler aritmetik elde etme [devreleri, özellikle](./algorithms.md#arithmetic)de denetlenen-$U \_ {a ^ ı} $ işlemlerini uygulamak için modüler bir üs bağlantı devresini gerektirir.
 
-Yukarıdaki devre, [hisse miktarı tahminine](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) karşılık gelir ve açıkça sıra bulma imkanı sağladığından, gereken qubits sayısını azaltabiliriz. Beauregard 'in [, Arxıv: Quant-pH/, 5095v3 sayfa 8](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)' de açıklandığı gibi sipariş bulma yöntemini takip edebilir ya da Microsoft. hisse. Örneğin, [sağlam aşama tahmini](xref:microsoft.quantum.characterization.robustphaseestimation) de bir ek qubit kullanır.
+Yukarıdaki devre, [hisse miktarı tahminine](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) karşılık gelir ve açıkça sıra bulma imkanı sağladığından, gereken qubits sayısını azaltabiliriz. Beauregard 'in [, Arxıv: Quant-pH/, 5095v3 sayfa 8](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)' de açıklandığı gibi sipariş bulma yöntemini takip edebilir ya da Microsoft. hisse. Örneğin, [sağlam aşama tahmini](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation) de bir ek qubit kullanır.
 
 ### <a name="factoring"></a>Düzenleme ###
 Düzenleme 'in hedefi, $N $ tam sayı çarpanlarının belirlenmesi, burada $N $ bir $n $ bit sayıdır.  

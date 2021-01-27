@@ -1,6 +1,6 @@
 ---
 Başlık: hisse bilgi işlem Için qubit bilgi: hisse kullanımı hakkında bilgi edinin.
-Yazar: miktar Tumwriter uid: Microsoft. hisse. Concepts. qubit MS. Author: v-bendörtms. Date: 12/11/2017 MS. Topic: Makale No-loc:
+Yazar: miktar Tumwriter uid: Microsoft. hisse. Concepts. qubit MS. Author: v-bendörtms. Date: 12/11/2017 MS. Topic: kavramsal No-loc:
 - "Q#"
 - "$$v"
 - "$$"
