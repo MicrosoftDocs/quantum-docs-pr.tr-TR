@@ -4,17 +4,17 @@ description: Programlar ve kitaplıklar için adlandırma, giriş, belge ve biç
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: cfc201a16b1b42c82314220f77ae120076291759
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 2edd6baf7375415e395d15bac422168216bcff9a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231664"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852753"
 ---
 # <a name="no-locq-style-guide"></a>Q# Stil Kılavuzu #
 ## <a name="general-conventions"></a>Genel kurallar ##
@@ -96,7 +96,7 @@ Benzer şekilde, _Aracı isimleri_ , işlem adlarından Işlev ve udt adlarını
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-| &nbsp;  | Adı | Açıklama |
+| &nbsp;  | Ad | Açıklama |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | İşlemin etkisini göstermek için bir fiil ("yansıtma") kullanımını temizleyin. |
 | ☒ | <s>`operation XRotation`</s> | İsim ifadesi kullanımı, işlem yerine Function önerisinde bulunur. |
@@ -129,7 +129,7 @@ Ayrıca, Q# giriş noktaları uygulamanın tamamı için giriş noktaları olabi
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-| &nbsp;  | Adı | Açıklama |
+| &nbsp;  | Ad | Açıklama |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | Giriş noktası amacını, işlem adı aracılığıyla açıkça iletir. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | Kullanımı `Main` , giriş noktası amacını açıkça iletmez ve özniteliğiyle birlikte gereksizdir `@EntryPoint()` . |
@@ -171,7 +171,7 @@ is Adj + Ctl {
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-| &nbsp;   | Adı | Açıklama |
+| &nbsp;   | Ad | Açıklama |
 |---|------|-------------|
 | ☑ | `X` | "Bir $X $ dönüşümü Uygula" için iyi anlaşılan toplu değer |
 | ☑ | `CNOT` | "Denetimli-NOT" için iyi anlaşılan toplu değer |
@@ -228,7 +228,7 @@ Tüm tür dönüştürme işlevlerinin, `As` hızlı bir şekilde tanımlanabilm
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-| &nbsp;   | Adı | Açıklama |
+| &nbsp;   | Ad | Açıklama |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | "To" ön konumu, bir işlevi değil bir işlem belirten bir fiil ifadesi içinde sonuçlanır. |
 | ☒ | <s>`AsDouble`</s> | Giriş türü, işlev adından net değildir. |
@@ -251,7 +251,7 @@ Bir işlem veya işlev doğrudan kullanıma yönelik değildir, ancak bunun yeri
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-| &nbsp;  | Adı | Açıklama |
+| &nbsp;  | Ad | Açıklama |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | `_`Bu işlemin yalnızca iç kullanım için olduğunu göstermek için alt çizgi kullanmayın. |
 | ☑ | `internal operation ApplyDecomposedOperation` | `internal`Başındaki anahtar sözcük açıkça bu işlemin yalnızca iç kullanım için olduğunu gösterir. |
@@ -323,7 +323,7 @@ Bu, erişimci gösterimini (ör.: `callable::Apply` ) veya kopyalama ve güncell
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-| &nbsp;  | Kod Parçacığı | Açıklama |
+| &nbsp;  | Kod Parçacığı | Description |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | Ad, `Apply` `CamelCase` adlandırılmış öğenin bir işlem olmasını öneren, biçimli bir fiil tümceciktir. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Adlandırılmış öğeler ilk büyük harfle başlamalıdır. |
@@ -479,7 +479,7 @@ Bu kurallar, derleyici ile tümleşik biçimlendirme Aracı kullanılarak otomat
 
 # <a name="examples"></a>[Örnekler](#tab/examples)
 
-| &nbsp; | Kod Parçacığı | Açıklama |
+| &nbsp; | Kod Parçacığı | Description |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | İkili işleçler etrafında boşluklar kullanın. |
 | ☒ | <s>`target:Qubit`</s> | Tür ek açıklaması etrafında boşluklar kullanın. |

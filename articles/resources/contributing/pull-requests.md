@@ -4,17 +4,17 @@ description: Microsoft Quantum Development Kit kod veya belge katkıda bulunmak 
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.pulls
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8e04e6502e0a6005dfdf0f93450bf3ffd5aaa672
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a936283f3e51da9b97b8145bad3ab765b6423458
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866936"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858465"
 ---
 # <a name="opening-pull-requests"></a>Çekme İsteklerini Açma #
 
@@ -38,7 +38,7 @@ Her çekme isteğinin sayfasında katkılarınızı oluşturan tüm değişiklik
 
 ## <a name="what-is-a-pull-request"></a>Çekme Isteği nedir? ##
 
-Yukarıdakileri söylediğinizde, bir çekme isteğinin ne **olduğunu**söylemek için birkaç dakika sürer.
+Yukarıdakileri söylediğinizde, bir çekme isteğinin ne **olduğunu** söylemek için birkaç dakika sürer.
 Git ile çalışırken tüm değişiklikler, bu değişikliklerin, bu değişikliklerden önce deponun durumuyla nasıl ilişkili olduğunu betimleyen _işlemeler_ olarak gösterilir.
 Genellikle yürütmelerin, önceki işlemelerden oklarla daireler olarak çizildiğini gösteren diyagramlar çizeceğiz.
 
