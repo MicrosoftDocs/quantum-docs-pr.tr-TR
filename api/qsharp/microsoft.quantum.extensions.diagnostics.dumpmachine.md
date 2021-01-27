@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Diagnostics.DumpMachine
 title: DumpMachine işlevi
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Diagnostics
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.diagnostics.dumpmachine".
-ms.openlocfilehash: 0c933294c1c57d690c0df338aa2ccd8824b33c24
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 4f1015ffd3a31335d1904bfce59c8551476d479f
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96213319"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98823080"
 ---
-# <a name="dumpmachine-function"></a><span data-ttu-id="aeacf-102">DumpMachine işlevi</span><span class="sxs-lookup"><span data-stu-id="aeacf-102">DumpMachine function</span></span>
+# <a name="dumpmachine-function"></a><span data-ttu-id="ec3ec-102">DumpMachine işlevi</span><span class="sxs-lookup"><span data-stu-id="ec3ec-102">DumpMachine function</span></span>
 
-<span data-ttu-id="aeacf-103">Ad alanı: [Microsoft. hisse. Extensions. Diagnostics](xref:Microsoft.Quantum.Extensions.Diagnostics)</span><span class="sxs-lookup"><span data-stu-id="aeacf-103">Namespace: [Microsoft.Quantum.Extensions.Diagnostics](xref:Microsoft.Quantum.Extensions.Diagnostics)</span></span>
+<span data-ttu-id="ec3ec-103">Ad alanı: [Microsoft. hisse. Extensions. Diagnostics](xref:Microsoft.Quantum.Extensions.Diagnostics)</span><span class="sxs-lookup"><span data-stu-id="ec3ec-103">Namespace: [Microsoft.Quantum.Extensions.Diagnostics](xref:Microsoft.Quantum.Extensions.Diagnostics)</span></span>
 
-<span data-ttu-id="aeacf-104">Paket: [Microsoft. hisse. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="aeacf-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="ec3ec-104">Paket: [Microsoft. hisse. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="ec3ec-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="aeacf-105">DumpMachine kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="aeacf-105">DumpMachine has been deprecated.</span></span> <span data-ttu-id="aeacf-106">Lütfen <xref:Microsoft.Quantum.Diagnostics.DumpMachine> bunun yerine kullanın.</span><span class="sxs-lookup"><span data-stu-id="aeacf-106">Please use <xref:Microsoft.Quantum.Diagnostics.DumpMachine> instead.</span></span>
+> <span data-ttu-id="ec3ec-105">DumpMachine kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="ec3ec-105">DumpMachine has been deprecated.</span></span> <span data-ttu-id="ec3ec-106">Lütfen <xref:Microsoft.Quantum.Diagnostics.DumpMachine> bunun yerine kullanın.</span><span class="sxs-lookup"><span data-stu-id="ec3ec-106">Please use <xref:Microsoft.Quantum.Diagnostics.DumpMachine> instead.</span></span>
 >
-> <span data-ttu-id="aeacf-107">Lütfen @"microsoft.quantum.diagnostics.dumpmachine" kullanın.</span><span class="sxs-lookup"><span data-stu-id="aeacf-107">Please use @"microsoft.quantum.diagnostics.dumpmachine".</span></span>
+> <span data-ttu-id="ec3ec-107">Lütfen @"microsoft.quantum.diagnostics.dumpmachine" kullanın.</span><span class="sxs-lookup"><span data-stu-id="ec3ec-107">Please use @"microsoft.quantum.diagnostics.dumpmachine".</span></span>
 
 
 
@@ -40,19 +40,19 @@ function DumpMachine<'T> (location : 'T) : Unit
 ```
 
 
-## <a name="input"></a><span data-ttu-id="aeacf-108">Giriş</span><span class="sxs-lookup"><span data-stu-id="aeacf-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="ec3ec-108">Giriş</span><span class="sxs-lookup"><span data-stu-id="ec3ec-108">Input</span></span>
 
-### <a name="location--t"></a><span data-ttu-id="aeacf-109">Konum: 'T</span><span class="sxs-lookup"><span data-stu-id="aeacf-109">location : 'T</span></span>
-
-
+### <a name="location--t"></a><span data-ttu-id="ec3ec-109">Konum: 'T</span><span class="sxs-lookup"><span data-stu-id="ec3ec-109">location : 'T</span></span>
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="aeacf-110">Çıkış: [birim](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="aeacf-110">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+
+
+## <a name="output--unit"></a><span data-ttu-id="ec3ec-110">Çıkış: [birim](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="ec3ec-110">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
 
 
-## <a name="type-parameters"></a><span data-ttu-id="aeacf-111">Tür Parametreleri</span><span class="sxs-lookup"><span data-stu-id="aeacf-111">Type Parameters</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="ec3ec-111">Tür Parametreleri</span><span class="sxs-lookup"><span data-stu-id="ec3ec-111">Type Parameters</span></span>
 
-### <a name="t"></a><span data-ttu-id="aeacf-112">Görüntülenemeyen</span><span class="sxs-lookup"><span data-stu-id="aeacf-112">'T</span></span>
+### <a name="t"></a><span data-ttu-id="ec3ec-112">Görüntülenemeyen</span><span class="sxs-lookup"><span data-stu-id="ec3ec-112">'T</span></span>
 
