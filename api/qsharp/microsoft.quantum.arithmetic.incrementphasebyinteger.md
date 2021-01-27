@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger
 title: Incrementphasebyınteger işlemi
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: IncrementPhaseByInteger
 qsharp.summary: Increments an unsigned quantum register by a classical integer, using phase rotations.
-ms.openlocfilehash: 54b83b3d4460c05478543c51f8f9c0b0e7f5b1fa
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: cc7922b2940cb979394958d5eb4e9933144eb062
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96222924"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843157"
 ---
 # <a name="incrementphasebyinteger-operation"></a>Incrementphasebyınteger işlemi
 
@@ -28,7 +28,7 @@ operation IncrementPhaseByInteger (increment : Int, target : Microsoft.Quantum.A
 ```
 
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `target`Bir işaretsiz tamsayı $x $ ' i küçük endian kodlamasıyla ve `increment` $a $ ' e eşit olarak kodluyor olduğunu varsayalım.
 Daha sonra bu işlem, toplama işleminin gerçekleştiği modül $2 ^ n $, burada $n = \texttt{Length (Target!)} ' nin gerçekleştirildiği, Unitary $ \ket{x} \mapsto \ket{x + a} $ öğesini uygular $.
