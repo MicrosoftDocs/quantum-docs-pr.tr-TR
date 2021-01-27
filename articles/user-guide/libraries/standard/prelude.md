@@ -4,17 +4,17 @@ description: Klasik işlevler ve Unitary, döndürme ve ölçüm işlemleri dahi
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4d15226fe46be79b7d3e6f414f33f1debd691f40
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6ed5b1677a204b9425f229a3ea0855bb789f3f75
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692121"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857198"
 ---
 # <a name="the-prelude"></a>Prelude dili #
 
@@ -109,13 +109,13 @@ $H $ ve $T $ kapıları kullanarak herhangi bir tek qubit işlemi hızlı bir ş
 $T $ Gate, işlem tarafından uygulanır <xref:Microsoft.Quantum.Intrinsic.T> ve `(Qubit => Unit is Adj + Ctl)` tek bir-qubit üzerinde Unitary işlemi olduğunu belirten imzaya sahiptir.
 
 Bu, herhangi bir rastgele tek qubit işlemi açıklamaya yetecek olsa da, farklı hedef makineler Pauli işleçleri hakkında daha etkili temsiller olabilir. bu nedenle, Prelude, bu tür döndürmeler için çeşitli yollar içerir.
-Bunların en temel değeri, <xref:Microsoft.Quantum.Intrinsic.r> belirtilen Pauli ekseninin etrafında bir döndürme uygulayan işlemdir. \begin{Equation} R (\sigma, \fi) \mathrel{: =} \exp (-i \phi \ Sigma/2), \end{Equation}; burada $ \sigma $ bir Pauli işleci, $ \phi $ bir açı ve $ \exp $, matris üstel değerini temsil eder.
+Bunların en temel değeri, <xref:Microsoft.Quantum.Intrinsic.R> belirtilen Pauli ekseninin etrafında bir döndürme uygulayan işlemdir. \begin{Equation} R (\sigma, \fi) \mathrel{: =} \exp (-i \phi \ Sigma/2), \end{Equation}; burada $ \sigma $ bir Pauli işleci, $ \phi $ bir açı ve $ \exp $, matris üstel değerini temsil eder.
 `((Pauli, Double, Qubit) => Unit is Adj + Ctl)`Girişin ilk iki bölümü, Unitary işleci $R (\sigma, \fi) $ ' i belirtmek için gereken klasik bağımsız değişkenleri $ \sigma $ ve $ \phi $ olarak temsil eden imzaya sahiptir.
 Türü tek qubit Unitary olan bir işlem elde etmek için $ \sigma $ ve $ \phi $ öğesini kısmen uygulayabiliriz.
 Örneğin, `R(PauliZ, PI() / 4, _)` türü vardır `(Qubit => Unit is Adj + Ctl)` .
 
 > [!NOTE]
-> <xref:Microsoft.Quantum.Intrinsic.r>İşlem giriş açısını 2 ' ye böler ve-1 ile çarpar.
+> <xref:Microsoft.Quantum.Intrinsic.R>İşlem giriş açısını 2 ' ye böler ve-1 ile çarpar.
 > $Z $ döndürmeler için bu, $ \ket {0} $ eigenstate 'in $-\phi/$2 ile döndürüldüğü ve $ \ket $ eigenstate $ \phi/$2 tarafından döndürülerek $ \ket $ eigenstate 'in $ {1} {1} \ket $ eigenstate 'e göreli olarak $ \phi $ ile döndürüldüğü anlamına gelir {0} .
 >
 > Bu, özellikle de `T` `R(PauliZ, PI() / 8, _)` ilgisiz [küresel bir aşamaya](xref:microsoft.quantum.glossary#global-phase)göre farklılık gösterir.
@@ -217,7 +217,7 @@ Birincisi, tek qubit ölçümleri gerçekleştirirken oldukça yaygın olduğund
 <xref:Microsoft.Quantum.Intrinsic.M>Işlem Pauli $Z $ işlecini tek bir qubit üzerinde ölçer ve imza içeriyor `(Qubit => Result)` .
 `M(q)`, `Measure([PauliZ], [q])` ile eşdeğerdir.
 
-<xref:microsoft.quantum.measurement.MultiM>Pauli $Z $ işlecini her bir qubit dizisi üzerinde *ayrı olarak* ölçer ve her bir *array* `Result` qubit için elde edilen değer dizisini döndürür.
+<xref:Microsoft.Quantum.Measurement.MultiM>Pauli $Z $ işlecini her bir qubit dizisi üzerinde *ayrı olarak* ölçer ve her bir  `Result` qubit için elde edilen değer dizisini döndürür.
 Bazı durumlarda bu, iyileştirilebilir. İmza ( `Qubit[] => Result[])` .
 `MultiM(qs)` eşittir:
 

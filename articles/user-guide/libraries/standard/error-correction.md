@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 94251e185cea65c5fc08ed70d5fba9b7b19501e3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fc8e46aa22cb2575de42cfc3d4f57c43e5d3f7b0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692034"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857203"
 ---
 # <a name="error-correction"></a>Hata Düzeltme #
 
@@ -84,7 +84,7 @@ Canon, hata düzeltme kodları belirtmeye yardımcı olmak için Q# birkaç fark
 
 - <xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister>`= Qubit[]`: Bir qubits kaydının bir hata düzeltme kodunun kod bloğu olarak yorumlanması gerektiğini gösterir.
 - <xref:Microsoft.Quantum.ErrorCorrection.Syndrome>`= Result[]`: Bir ölçüm sonuçları dizisinin, bir kod bloğunda ölçülen sendromu olarak yorumlanması gerektiğini gösterir.
-- <xref:Microsoft.Quantum.ErrorCorrection.RecoveryFn>`= (Syndrome -> Pauli[])`: Bir eşitleniyor işlevinin *classical* , bir sendromu yorumlamak ve uygulanması gereken bir düzeltme döndürmesi için kullanılması gerektiğini belirtir.
+- <xref:Microsoft.Quantum.ErrorCorrection.RecoveryFn>`= (Syndrome -> Pauli[])`: Bir eşitleniyor işlevinin  , bir sendromu yorumlamak ve uygulanması gereken bir düzeltme döndürmesi için kullanılması gerektiğini belirtir.
 - <xref:Microsoft.Quantum.ErrorCorrection.EncodeOp>`= ((Qubit[], Qubit[]) => LogicalRegister)`: Bir işlemin bir hata düzeltme kodunun kod bloğunu oluşturmak için, verileri yeni Andalla qubits ile birlikte temsil eden bir işlem olduğunu gösterir.
 - <xref:Microsoft.Quantum.ErrorCorrection.DecodeOp>`= (LogicalRegister => (Qubit[], Qubit[]))`: Bir işlemin kod bloğunu, verileri veri qubits 'e düzeltmede hata kodu bloğunu ve sendromu bilgilerini temsil etmek için kullanılan anetla qubits 'i temsil ettiğini belirtir.
 - <xref:Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp>`= (LogicalRegister => Syndrome)`: Kod tarafından korunan durumu etkilemeden, bir kod bloğunun sendromu bilgilerini ayıklamak için kullanılması gereken bir işlemi gösterir.
