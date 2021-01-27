@@ -4,17 +4,18 @@ description: Q# için hızlı başvuru sayfaları
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020
+ms.topic: reference
 uid: microsoft.quantum.guide.quickref
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9141259f7bd59342bd6e28be9e18bc4c6fe14419
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: d02b03dbf69742131cc75cb899a08dfaaca94e94
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835902"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858556"
 ---
-# <a name="quick-reference-pages"></a><span data-ttu-id="e1b51-103">Hızlı başvuru sayfaları</span><span class="sxs-lookup"><span data-stu-id="e1b51-103">Quick reference pages</span></span>
+# <a name="quick-reference-pages"></a><span data-ttu-id="89055-103">Hızlı başvuru sayfaları</span><span class="sxs-lookup"><span data-stu-id="89055-103">Quick reference pages</span></span>
 
-* [<span data-ttu-id="e1b51-104"> Q# Jupyter Not Defterleri için IQ# Magic Komutları</span><span class="sxs-lookup"><span data-stu-id="e1b51-104">IQ# Magic Commands for Q# Jupyter Notebooks</span></span>](xref:microsoft.quantum.guide.quickref.iqsharp)
+* [<span data-ttu-id="89055-104"> Q# Jupyter Not Defterleri için IQ# Magic Komutları</span><span class="sxs-lookup"><span data-stu-id="89055-104">IQ# Magic Commands for Q# Jupyter Notebooks</span></span>](xref:microsoft.quantum.guide.quickref.iqsharp)
