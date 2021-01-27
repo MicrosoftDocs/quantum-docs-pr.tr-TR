@@ -4,18 +4,17 @@ description: Q# projelerinizi ve Microsoft Quantum geliştirme setinizi güncel 
 author: bradben
 ms.author: v-benbra
 ms.date: 5/30/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d9678a61f5fe4ca466b6a84e9e4b68321c5baee3
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: 1b5def3226bd073c878f8573aaddd757d733ec48
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834933"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858054"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum geliştirme setini (QDK) güncelleştirme
 
@@ -282,7 +281,7 @@ Güncelleştirme yordamı, ilk olarak Conda veya .NET CLI ve PIP kullanarak yük
     %workspace reload
     ```
 
-***
+**_
 
 Artık mevcut Q# Jupyter Not Defterlerinizi çalıştırmak için güncelleştirilmiş IQ# çekirdeğini kullanabilirsiniz.
 
@@ -301,7 +300,7 @@ Artık mevcut Q# Jupyter Not Defterlerinizi çalıştırmak için güncelleştir
 1. Quantum VS Code uzantısını güncelleştirin
 
     - VS Code’u yeniden başlatın
-    - **Uzantılar** sekmesine gidin
+    - _ *Extensions** sekmesine gidin
     - **Visual Studio Code için Microsoft Quantum geliştirme seti** uzantısını seçin
     - Uzantıyı yeniden yükleyin
 

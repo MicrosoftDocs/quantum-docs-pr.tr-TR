@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e9b593ba69ed41a9fb3c1298b5b945a4cbe43d5d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692244"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858327"
 ---
 # <a name="data-structures-and-modeling"></a>Veri yapıları ve modelleme #
 
@@ -72,7 +72,7 @@ ApplyToEach(
 ## <a name="oracles"></a>Oracles ##
 
 [Aşama tahmini](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) ve [genliği](https://en.wikipedia.org/wiki/Amplitude_amplification) yükseltme belgelerinin bir Oracle kavramı sık görülen bir şekilde görünür.
-Burada Oracle terimi, bir qubits kümesi üzerinde davranan ve yanıtı bir aşama olarak döndüren bir kara kutu hisse alt yordamını ifade eder.
+Burada Oracle terimi, bir qubits kümesi üzerinde davranan ve yanıtı bir aşama olarak döndüren bir hisse alt yordamını ifade eder.
 Bu alt yordam, genellikle Oracle 'ı kabul eden bir hisse algoritması girişi olarak düşünülebilir, diğer parametrelere ek olarak bir dizi hisse ve bir dizi işlem uygular ve bu hisse için bir çağrı, temel bir geçit gibi bir çağrı sağlar.
 Kuşkusuz, büyük algoritmayı gerçekten uygulamak için, Oracle 'ın, temel kapıların somut bir şekilde ayrıştırma sağlanması gerekir, ancak Oracle 'ı çağıran algoritmayı anlamak için bu ayrıştırma gerekmez.
 ' De Q# , bu soyutlama, bu işlemler ilk sınıf değerlerdir, örneğin, işlemler bir siyah kutu ile hisse algoritması uygulamalarına geçirilebilirler.

@@ -1,6 +1,6 @@
 ---
 Başlık: hisse bilgi işlem açıklamasında vektörler ve matrisler: vektörlerin ve matrislerle nasıl çalışacağınızı öğrenin.
-Yazar: Histumwriter uid: Microsoft. hisse. Concepts. vektörms. Author: v-benköşeli MS. Date: 12/11/2017 MS. Topic: article No-loc:
+Yazar: Histumwriter uid: Microsoft. hisse. Concepts. vektörms. Author: v-benköşeli MS. Date: 12/11/2017 MS. Topic: kavramsal No-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -85,7 +85,7 @@ Yazar: Histumwriter uid: Microsoft. hisse. Concepts. vektörms. Author: v-benkö
 
 # <a name="vectors-and-matrices"></a>Vektörler ve matrisler
 
-Vektör ve matrislerle ilgili bazı benzerlik, hisse bilgi işlem anlamak için önemlidir. Aşağıdaki kısa bir giriş sağlıyoruz ve ilgilendiğiniz okuyucular *, mg, G. (1993) gibi doğrusal algela 'da standart bir başvuruyu okumak için önerilir. Doğrusal algeköşeli giriş (Vol. 3). Kaynak listesi, MA: kaynak Lesley-Cambridge Press* veya [Doğrusal algedeniz](http://joshua.smcvt.edu/linearalgebra/)gibi bir çevrimiçi başvuru.
+Vektör ve matrislerle ilgili bazı benzerlik, hisse bilgi işlem anlamak için önemlidir. Aşağıdaki kısa bir giriş sağlıyoruz ve ilgilendiğiniz okuyucular *, mg, G. (1993) gibi doğrusal algela 'da standart bir başvuruyu okumak için önerilir. Doğrusal algeköşeli giriş (Vol. 3). Kaynak, MA: Wellesley-Cambridge Press* veya [Doğrusal algedeniz](http://joshua.smcvt.edu/linearalgebra/)gibi çevrimiçi bir başvuruya sahip.
 
 Boyutun (veya boyutunun) bir sütun vektörü (veya basitçe [*vektör*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ v $ , $ bir $ $ $ $ sütun olarak düzenlenmiş n karmaşık sayıların (v_1, v_2, \lnoktalar, V_n) bir koleksiyonudur $ :
 
@@ -126,7 +126,7 @@ au_2 + bv_2\\\\
 au_n + bv_n \end{bmatrix} .
 $$
 
-A [*matrix*](https://en.wikipedia.org/wiki/Matrix_(mathematics)) n boyutundaki bir $ matris \times $ , $ $ $ $ $ aşağıda gösterildiği gibi, k satırı ve n $ sütunları halinde düzenlenmiş bir MN karmaşık sayı koleksiyonudur:
+A [](https://en.wikipedia.org/wiki/Matrix_(mathematics)) n boyutundaki bir $ matris \times $ , $ $ $ $ $ aşağıda gösterildiği gibi, k satırı ve n $ sütunları halinde düzenlenmiş bir MN karmaşık sayı koleksiyonudur:
 
 $$M = 
 \begin{bmatrix}
@@ -164,7 +164,7 @@ P_ { M1 } ~~ P_ { m2 } ~~ \cdots ~~ P_ { MP}
 
 $P girişlerinin $ $ P_ { ık } = \sum _j M_ { IJ } N_ { JK } $ . Örneğin, $ P_ 11 ' in { ilk } $ satırı N ilk sütununun iç ürünüdür $ $ $ $ . Vector öğesinin yalnızca bir matrisin özel durumu olduğundan, bu tanım matris-vektör çarpörüne genişletilir. 
 
-Dikkate aldığımız tüm matrisler, satır ve sütun sayısının eşit olduğu ve yalnızca 1 sütuna karşılık gelen vektörlerin bulunduğu kare matrisleri olacaktır $ $ . Tek bir özel kare matrisi, [*identity matrix*](https://en.wikipedia.org/wiki/Identity_matrix) $ \boldone $ Tüm köşegen öğelerini 1 ' e eşit $ $ ve kalan öğeleri 0 ' a eşit $ $ olan, belirtilen kimlik matrisi ' dir:
+Dikkate aldığımız tüm matrisler, satır ve sütun sayısının eşit olduğu ve yalnızca 1 sütuna karşılık gelen vektörlerin bulunduğu kare matrisleri olacaktır $ $ . Tek bir özel kare matrisi, [](https://en.wikipedia.org/wiki/Identity_matrix) $ \boldone $ Tüm köşegen öğelerini 1 ' e eşit $ $ ve kalan öğeleri 0 ' a eşit $ $ olan, belirtilen kimlik matrisi ' dir:
 
 $$\boldone=\begin{bmatrix}
 1 ~~ 0 ~~ \cdots ~~ 0\\\\
@@ -174,7 +174,7 @@ $$\boldone=\begin{bmatrix}
 
 Bir kare matris $ a için $ , $ $ AB B 'nin [*ters*](https://en.wikipedia.org/wiki/Invertible_matrix) bir matris olduğunu söyliyoruz $ = = \boldone $ . Bir matrisin tersi de mevcut değildir, ancak mevcut olduğunda, $ bir ^ { -1 olduğunu gösterir } $ . 
 
-Her matris için $ $ , adjoint veya eşleniği devrik, $ $ $ $ $ { IJ } = m_ { Ji N_ } ^ \* $ bir matris N. A 'nın adjoint $ , $ genellikle $ a ^ olarak gösterilir \dagger $ . $ $ [*unitary*](https://en.wikipedia.org/wiki/Unitary_matrix) $ Uu ^ \dagger = u ^ \dagger u = \boldone $ veya equivalently, $ u ^ { -1 } = U ^ \dagger $ olan bir matris u olduğunu söyliyoruz.  Belki de Unitary matrislerinin en önemli özelliği, bir vektör 'nin norm düzeyini korumıdır.  Bu durum 
+Her matris için $ $ , adjoint veya eşleniği devrik, $ $ $ $ $ { IJ } = m_ { Ji N_ } ^ \* $ bir matris N. A 'nın adjoint $ , $ genellikle $ a ^ olarak gösterilir \dagger $ . $ $ [](https://en.wikipedia.org/wiki/Unitary_matrix) $ Uu ^ \dagger = u ^ \dagger u = \boldone $ veya equivalently, $ u ^ { -1 } = U ^ \dagger $ olan bir matris u olduğunu söyliyoruz.  Belki de Unitary matrislerinin en önemli özelliği, bir vektör 'nin norm düzeyini korumıdır.  Bu durum 
 
 $$\langlev, v \rangle = v ^ \dagger v = v ^ \dagger u ^ { -1 } U v = v ^ \dagger u ^ \dagger u v = \langle u v, U v \rangle .$$  
 
@@ -244,7 +244,7 @@ $$
     CG \/\ DG \ DH \end{bmatrix} .
 $$
 
-Tencursor ürünlerini çevreleyen son yararlı bir notational kuralı, herhangi bir vektör $ v $ veya matris $ d $ , $ v ^ { \otimes n } $ veya $ k ^ n için de { \otimes } $ $ n $ katlama yinelenen bir Tensor ürünü için kısa bir seçenektir.  Örnek:
+Tencursor ürünlerini çevreleyen son yararlı bir notational kuralı, herhangi bir vektör $ v $ veya matris $ d $ , $ v ^ { \otimes n } $ veya $ k ^ n için de { \otimes } $ $ n $ katlama yinelenen bir Tensor ürünü için kısa bir seçenektir.  Örneğin:
 
 \begin{align}
 &\begin{bmatrix}1 \\\\ 0 \end{bmatrix} ^ { \otimes 1 } = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} , \qquad \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} ^ { \otimes 2 } = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} , \qquad \begin{bmatrix} 1 \\\\ -1 \end{bmatrix} ^ { \otimes 2 } = \begin{bmatrix} 1- \\\\ 1 \\\\ -1 \\\\ 1 \end{bmatrix} ,\\\\

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.Fold
 title: Fold işlevi
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Fold
 qsharp.summary: Iterates a function `f` through an array `array`, returning `f(f(f(initialState, array[0]), array[1]), ...)`.
-ms.openlocfilehash: a42f9a832c18bd612c1ae416187f3f2513eed54d
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: d12e070058178ce2cbdd70cade5bc16607a55d5e
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96221173"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98848597"
 ---
 # <a name="fold-function"></a>Fold işlevi
 
@@ -58,3 +58,14 @@ Tüm öğelerinin üzerinde yinelendikten sonra klasör tarafından döndürüle
 ### <a name="t"></a>Görüntülenemeyen
 
 `array`Öğelerin türü.
+
+## <a name="example"></a>Örnek
+
+```qsharp
+function Plus(a : Double, b : Double) {
+    return a + b;
+}
+function Sum(xs : Double[]) {
+    return Fold(Plus, 0.0, xs);
+}
+```
