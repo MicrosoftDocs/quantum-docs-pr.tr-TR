@@ -4,17 +4,17 @@ description: Microsoft Quantum Geliştirme Seti önizlemesinde yapılan son gün
 author: bradben
 ms.author: v-benbra
 ms.date: 8/30/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1c3c502b6487482f06820e07425b8516f259fb0d
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 8aa6072e9b495db6e127cac350d5bfaec1b090ce
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231800"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856657"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -24,6 +24,16 @@ Yükleme yönergeleri için bu [yükleme kılavuzuna](xref:microsoft.quantum.ins
 
 Güncelleştirme yönergeleri için bu [güncelleştirme kılavuzuna](xref:microsoft.quantum.update) başvurun.
 
+## <a name="version-0152101125897"></a>Sürüm 0.15.2101125897
+
+*Yayın tarihi: 26 Ocak 2021*
+
+- Basitleştirilmiş qubit ayırma, qubit ayırmak için daha uygun sözdizimi sağlayan, [ Q# dil deposundaki ayrıntılara bakın](https://github.com/microsoft/qsharp-language/blob/main/Approved/1-implicitly-scoped-qubit-allocation.md).
+- `azure-quantum`Azure hisse adına en iyi duruma getirme işlerinin gönderilmesi için Python istemcisini, Ayrıca, örneğin, `qdk` `qdk.chemistry` Q# nwchem, Psi4 ve openmoldova 'ları gibi çeşitli kimya paketleri için giriş dosyaları oluşturmaya yönelik bir Python tabanlı kolay bir katman içeren QDK-Python deposu oluşturuldu.
+- Parantezler artık işlem ve işlev türleri ve `if` , `elif` , `while` ve deyimleri için isteğe bağlıdır `until` . `for` `use` Ve deyimleri için parantez `borrow` kullanım dışı bırakılmıştır.
+- En iyi derinlik için geliştirilmiş genişlik tahminleri, [bkz. Ayrıntılar](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159).
+- (Miktar) kullanarak açık matris olarak sağlanan Unitary işlemini uygulama `ApplyUnitary` ([391 kitaplıkları #](https://github.com/microsoft/QuantumLibraries/pull/391), Dmydeniz Fedoriaka tarafından sunulan dış katkı)
+- https://github.com/microsoft/iqsharp/issues/387Çekirdek başlatma ile ilgili performans etkisi azaltılarak düzeltildi Q# .
 ## <a name="version-0142011120240"></a>Sürüm 0.14.2011120240
 
 *Yayın tarihi: 25 Kasım, 2020*
@@ -211,7 +221,7 @@ Bu sürüm aşağıdakileri içerir:
 
 Bu sürüm aşağıdakileri içerir:
 
-- Birim testi için yeni test özniteliği burada Q# GÜNCELLEŞTIRILMIŞ API belgelerine ve [here](xref:Microsoft.Quantum.Diagnostics.Test) test & hata ayıklama kılavuzuna bakın [here](xref:microsoft.quantum.guide.testingdebugging)
+- Birim testi için yeni test özniteliği burada Q# GÜNCELLEŞTIRILMIŞ API belgelerine ve [](xref:Microsoft.Quantum.Diagnostics.Test) test & hata ayıklama kılavuzuna bakın [](xref:microsoft.quantum.guide.testingdebugging)
 - Program çalıştırma hatası durumunda yığın izlemesi eklendi Q#
 - Visual Studio Code’da kesme noktaları desteğinin [OmniSharp C# Visual Studio Code uzantısında](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) güncelleştirilmesi gerekiyor
 
@@ -486,14 +496,7 @@ Bu sürüm yeni bir kuantum kimyası kitaplığını da içerir:
 
 Yeni kimya kitaplığı ile kitaplıkları yeni bir GitHub deposuna [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) ayırıyoruz.  Örnekler [Microsoft/Quantum](https://github.com/Microsoft/Quantum) deposunda kalır.  Her ikisine yönelik katkılarınızı bekliyoruz!
 
-Bu sürüm, topluluk tarafından bildirilen sorunlara yönelik hata düzeltmelerini ve özellikleri içerir:
-
-* IntelliSense için Q# ? ([UserVoice](https://quantum.uservoice.com/forums/906943/suggestions/32656918)).
-* .qs dosyaları ([UserVoice](https://quantum.uservoice.com/forums/906097/suggestions/32593049)).
-* İf deyiminde küme ayraçları kısaltıldığında oluşan hata iletisi geliştirildi ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/34718518)).
-* Değiştirilebilir (yeniden) bağlama işleminde tanımlama grubu ayrıştırma desteği ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/35020444)).
-* Sağlanan BitFlipCode Çalıştırılırken Oluşan Hata ([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546)).
-* H2SimulationGUI’nin bazen çok yüksek tepe değerleri göstermesi ([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34668370)).
+Bu sürüm, topluluk tarafından bildirilen sorunlara yönelik hata düzeltmeleri ve özellikleri içerir.
 
 ### <a name="community-contributions"></a>Topluluk Katkıları
 
@@ -509,15 +512,7 @@ Belgeler, yazım ve imla düzeltmeleri ile içeriğin düzeltilmesine yönelik �
 
 *Sürüm tarihi: 10 Eylül 2018*
 
-Bu sürüm, topluluk tarafından bildirilen sorunlara yönelik hata düzeltmelerini içerir. Şunları içerir:
-
-* Shift işlecinin kullanılamaması ([GitHub](https://github.com/Microsoft/Quantum/issues/75)).
-* `DumpMachine` / `DumpRegister` öğesinin konsola yazdırılırken `QCTraceSimulator` aşamasında başarısız olması ([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34709680)).
-* 0 qubitin ayrılmasına izin verme ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34768069-allow-allocating-0-qubits)).
-* `AssertQubitState` öğesinin açık Complex() çağrısı gerektirmesi ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34713733-assertqubitstate-requires-explicit-complex-call)).
-* `Measure` işleminin macOS’de her zaman `One` döndürmesi ([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546)).
-
-Teşekkür ederiz! 
+Bu sürüm, topluluk tarafından bildirilen sorunlara yönelik hata düzeltmelerini içerir.
 
 ## <a name="version-0218063001"></a>Sürüm 0.2.1806.3001
 

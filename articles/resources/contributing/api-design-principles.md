@@ -4,17 +4,17 @@ description: Q# API tasarım Ilkeleri
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b8623ba7e876c4ccda42d0ddaa07c0012a763292
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 452b32141dc660acbe8ef28530f1430e5acff9aa
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231783"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856694"
 ---
 # <a name="no-locq-api-design-principles"></a>Q# API tasarım Ilkeleri
 
@@ -67,7 +67,7 @@ Bu makalede bu ilkeler listelenmekte ve API 'leri tasarlarken bunların nasıl u
   *Örnekler:*
   - Öğesine adlı bir işlemi yeniden `EstimateExpectation` adlandırırken   `EstimateAverage` ,   `EstimateExpectation` var olan kodun doğru şekilde çalışmaya devam edebilmesi için özgün işlemi yeni adında çağıran adlı yeni bir işlem tanıtın.
 
-- ✅**DO** Kullanıcı kullanım dışı @"microsoft.quantum.core.deprecated" Bırakıla iletişim kurmak için özniteliğini kullanın.
+- ✅ Kullanıcı kullanım dışı @"microsoft.quantum.core.deprecated" Bırakıla iletişim kurmak için özniteliğini kullanın.
 
 - ✅ Bir işlemi veya işlevi yeniden adlandırırken, yeni adı bir dize girişi **olarak sağlayın** `@Deprecated` .
 
@@ -145,14 +145,14 @@ Bu makalede bu ilkeler listelenmekte ve API 'leri tasarlarken bunların nasıl u
   *Örnekler:*
   - Bir işlem `TrainModel` çok sayıda yapılandırma seçeneği kullanıma sunarsa, bu seçeneklerin yeni bir udt olarak kullanıma   `TrainingOptions` sunulmasına ve yeni bir işlev sağlamaya yönelik olarak,   `DefaultTrainingOptions : Unit -> TrainingOptions` kitaplık geliştiricilerinin uygun şekilde yeni udt öğeleri eklemesine izin verirken, kullanıcıların Traıningoptions udt değerlerinde belirli adlandırılmış öğeleri geçersiz kılmasına izin verir.
 
-- ✅**DO** Kullanıcı tanımlı yeni türler için adlandırılmış öğeleri, kullanıcıların doğru demet oluşturmayı bilmesini gerektirmek için tercih edin.
+- ✅ Kullanıcı tanımlı yeni türler için adlandırılmış öğeleri, kullanıcıların doğru demet oluşturmayı bilmesini gerektirmek için tercih edin.
 
   *Örnekler:*
   - Kutupsal ayrıştırma içinde karmaşık bir sayıyı temsil ettiğinizde, tercih edilir   `newtype ComplexPolar = (Magnitude: Double, Argument: Double)`   `newtype ComplexPolar = (Double, Double)` .
 
 **Anahtar ilkesi:** bilişsel yükün azaltılması ve kullanıcının ek kavramlar ve terminoloji öğrenmesini gerektirmeyen yollarla Kullanıcı tanımlı türleri kullanın.
 
-- ⛔️ **DON'T** , kullanıcının bir unsarmadan işlecini () sık kullanmasını gerektiren `!` ya da genellikle birden çok düzey sarmalama düzeyi gerektiren Kullanıcı tanımlı türler sunmaz. Olası risk azaltma stratejileri şunlardır:
+- ⛔️  , kullanıcının bir unsarmadan işlecini () sık kullanmasını gerektiren `!` ya da genellikle birden çok düzey sarmalama düzeyi gerektiren Kullanıcı tanımlı türler sunmaz. Olası risk azaltma stratejileri şunlardır:
 
   - Kullanıcı tanımlı bir türü tek bir öğe ile kullanıma sunmadığında, bu öğe için bir ad tanımlamayı göz önünde bulundurun. Örneğin, tercih edin `newtype Encoder = (Apply : (Qubit[] => Unit is Adj + Ctl))` `newtype Encoder = (Qubit[] => Unit is Adj + Ctl)` .
 
@@ -245,7 +245,7 @@ Bu makalede bu ilkeler listelenmekte ve API 'leri tasarlarken bunların nasıl u
       - @"microsoft.quantum.arithmetic.measurefxp"
       - @"microsoft.quantum.arithmetic.measureinteger"
 
-    - **Uygula**: bir veya daha fazla qubits 'e hisse veya işlem dizisi uygulayın ve bu qubits 'in durumunun tutarlı bir şekilde değişmesine neden olur. Bu fiil, Q terminolojinin en genel fiildir \# ve daha **SHOULD NOT BE** belirli bir fiil daha doğrudan ilgili olduğunda kullanılmamalıdır.
+    - **Uygula**: bir veya daha fazla qubits 'e hisse veya işlem dizisi uygulayın ve bu qubits 'in durumunun tutarlı bir şekilde değişmesine neden olur. Bu fiil, Q terminolojinin en genel fiildir \# ve daha  belirli bir fiil daha doğrudan ilgili olduğunda kullanılmamalıdır.
 
   - **İsimler**:
 

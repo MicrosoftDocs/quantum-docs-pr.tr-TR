@@ -4,21 +4,21 @@ description: Microsoft Quantum Development Kit ile gerçek dünya Kimya sorunlar
 author: martinro
 ms.author: martinro
 ms.date: 10/17/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.broombridge
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e580fd8267cc7ba30533d557eceb486f8c205be6
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e83d2d52fcdb2a30179ca6994d2c90f41cef7dbb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835783"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856207"
 ---
 # <a name="broombridge-quantum-chemistry-schema"></a>Broombridge hisse Chemistry şeması # 
 
-[Nwchem](http://www.nwchem-sw.org/) gibi güçlü hesaplama Kimya yazılımı, çok çeşitli gerçek dünya Kimya sorunlarını modeletmenize olanak tanır. Microsoft hisse dili Mistry kitaplığı ile NWChem molesel modellere erişmek için **Broombridge**adlı bir [YAML](https://en.wikipedia.org/wiki/YAML)tabanlı şema kullanırsınız. Ad, bazı çemberlerde Hamiltonians 'in bir doğulu olarak ünkülbir yerde yer aldığı bir [yer işaretine](https://en.wikipedia.org/wiki/Broom_Bridge) başvuru olarak seçilmiştir. 
+[Nwchem](http://www.nwchem-sw.org/) gibi güçlü hesaplama Kimya yazılımı, çok çeşitli gerçek dünya Kimya sorunlarını modeletmenize olanak tanır. Microsoft hisse dili Mistry kitaplığı ile NWChem molesel modellere erişmek için **Broombridge** adlı bir [YAML](https://en.wikipedia.org/wiki/YAML)tabanlı şema kullanırsınız. Ad, bazı çemberlerde Hamiltonians 'in bir doğulu olarak ünkülbir yerde yer aldığı bir [yer işaretine](https://en.wikipedia.org/wiki/Broom_Bridge) başvuru olarak seçilmiştir. 
 
 [Nwchem](https://github.com/nwchemgit/nwchem) , Izin verilen eğitim topluluk lisansı (ECL) 2,0 lisansı kapsamında lisanslanan açık kaynaklı bir projem. [Broombridge hisse Chemistry şeması](https://docs.microsoft.com/quantum/libraries/chemistry/schema/spec_v_0_2)), [RFC 2119](https://tools.ietf.org/html/rfc2119) ' den sonrakı bir [tanım](https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/broombridge-0.1.schema.json) ve MIT Lisansı kapsamında lisanslanan bir [Doğrulayıcı betiği](https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/validator.py) içeren bir açık kaynak şemadır. 
 

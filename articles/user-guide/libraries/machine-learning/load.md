@@ -4,17 +4,17 @@ description: Microsoft Quantum Development Kit (QDK) ile bir sınıflandırıcı
 author: geduardo
 ms.author: v-edsanc
 ms.date: 02/16/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.load
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: cd6fdb6bb33a65ee02ac8c43f40df9abeff9c841
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7ebfe085e50d4647fdb1027250cf3134f8d8f8c2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833703"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856466"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>Kendi veri kümelerinizi yükleyin ve sınıflandırın
 
@@ -75,7 +75,7 @@ Bu datsets 'ler şuna benzer bir dosya ile temsil edilebilir `data.json` :
 
 Farklı kediler ve köpekler için yüksekliklerde ve ağırlıklarla küçük bir veri kümeniz olduğunu varsayalım. Bu veri kümesi, bir modeli eğitmek için çok küçüktür, ancak bir veri kümesini yükleme işlemini göstermek için yeterli olacaktır.
 
-| Yükseklik (a) | Ağırlık (kg) | Hayvan |
+| Yükseklik (a) | Weight (kg) | Hayvan |
 |-----------|------------|--------|
 | 0,54      | 30         | Li    |
 | 0,30      | 8          | Kedi    |

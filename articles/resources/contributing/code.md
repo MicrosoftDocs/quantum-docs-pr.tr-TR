@@ -4,17 +4,17 @@ description: Örnek ve kitaplık kodunun Microsoft Quantum Development Kit (QDK)
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 47845c4f3520e8c50cf8aefd9bf9e8f086c42842
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 54ef15db2b850e6a3bff38945c57129361517bfe
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691811"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856686"
 ---
 # <a name="contributing-code"></a>Koda Katkıda Bulunma
 
@@ -34,7 +34,7 @@ Bu nedenle, bir katkı tarafından eklenen işlevlerin iyi test edildiğini ve b
 Q#Canon gibi kitaplıkları oluşturan işlevler, işlemler ve Kullanıcı tanımlı türler, [**Microsoft/Histumlibraries**](https://github.com/Microsoft/QuantumLibraries/) deposunda geliştirmenin bir parçası olarak otomatik olarak test edilir.
 Örneğin, yeni bir çekme isteği açıldığında, [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) yapılandırmanızla, çekme isteğindeki değişikliklerin, hisse programlama topluluğunun bağlı olduğu mevcut işlevleri bozmadığını kontrol eder.
 
-En son Q# sürümde, birim testleri özniteliği kullanılarak tanımlanır `@Test("QuantumSimulator")` . Bağımsız değişken, "Histumsimülatör", "Toffzeytin", "Tracesimülatör" veya Run hedefini belirten tam nitelikli bir ad olabilir. Farklı çalışma hedeflerini tanımlayan birkaç öznitelik aynı çağrılabilir öğesine iliştirilebilir. Bazı testlerimizde, xUnit çerçevesine biten tüm işlevleri ve işlemleri sunan kullanım dışı [Microsoft. hisse. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) paketini kullanmaya devam edersiniz Q# `Test` . [xUnit](https://xunit.github.io/) Bu paket artık birim testlerini tanımlamak için gerekli değildir. 
+En son Q# sürümde, birim testleri özniteliği kullanılarak tanımlanır `@Test("QuantumSimulator")` . Bağımsız değişken, "Histumsimülatör", "Toffzeytin", "Tracesimülatör" veya Run hedefini belirten tam nitelikli bir ad olabilir. Farklı çalışma hedeflerini tanımlayan birkaç öznitelik aynı çağrılabilir öğesine iliştirilebilir. Bazı testlerimizde, xUnit çerçevesine biten tüm işlevleri ve işlemleri sunan kullanım dışı [Microsoft. hisse. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) paketini kullanmaya devam edersiniz Q# `Test` . [](https://xunit.github.io/) Bu paket artık birim testlerini tanımlamak için gerekli değildir. 
 
 Aşağıdaki işlev, <xref:Microsoft.Quantum.Canon.Fst> ve <xref:Microsoft.Quantum.Canon.Snd> işlevlerinin her ikisinin de bir temsilci örneğinde doğru çıkışları döndürmesini sağlamak için kullanılır.
 `Fst`Veya çıkışı `Snd` yanlışsa, `fail` test başarısız olmasına neden olması için ifade kullanılır.
@@ -59,7 +59,7 @@ function PairTest () : Unit {
 Standart kitaplıklar kılavuzunun [Test bölümündeki](xref:microsoft.quantum.libraries.diagnostics) teknikler kullanılarak daha karmaşık koşullar denetlenebilir.
 Örneğin, aşağıdaki test `H(q); X(q); H(q);` tarafından çağrılışını <xref:Microsoft.Quantum.Canon.ApplyWith> , ile aynı şeyi yapar `Z(q)` .
 
-```Q#
+```qsharp
 @Test("QuantumSimulator")
 operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);

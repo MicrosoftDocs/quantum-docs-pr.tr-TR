@@ -1,6 +1,6 @@
 ---
 Başlık: hisse bilgi işlem sözlüğü açıklaması: hisse kullanımı için kullanılan genel terimler, Eylemler ve nesneler sözlüğü.
-Yazar: bradben MS. Author: v-benköşeli MS. Date: 9/1/2020 MS. Topic: article uid: Microsoft. hisse. sözlük No-loc:
+Yazar: bradben MS. Author: v-benköşeli MS. Date: 9/1/2020 MS. Topic: başvuru uid: Microsoft. hisse. sözlük No-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -151,11 +151,11 @@ Klasik Logic Gates kavramını temel alan belirli iç hisse [işlemleri](xref:mi
 
 ## <a name="hadamard"></a>Hadamard
 
-Hadamard işlemi (Hadamard kapısı veya dönüştürme olarak da bilinir), tek bir [qubit](xref:microsoft.quantum.glossary#qubit) üzerinde çalışır ve [superposition](xref:microsoft.quantum.glossary#superposition) $ \ket { } $ $ \ket { } $ qubit başlangıçta $ \ket { 0 } $ durumundaysa, bunu 0 veya 1 ' in hatta bir üst konumuna koyar. Q#' De, bu işlem önceden tanımlı işlem tarafından uygulanır [`H`](xref:Microsoft.Quantum.Intrinsic.H) .
+Hadamard işlemi (Hadamard kapısı veya dönüştürme olarak da bilinir), tek bir [qubit](xref:microsoft.quantum.glossary#qubit) üzerinde çalışır ve [](xref:microsoft.quantum.glossary#superposition) $ \ket { } $ $ \ket { } $ qubit başlangıçta $ \ket { 0 } $ durumundaysa, bunu 0 veya 1 ' in hatta bir üst konumuna koyar. Q#' De, bu işlem önceden tanımlı işlem tarafından uygulanır [`H`](xref:Microsoft.Quantum.Intrinsic.H) .
 
 ## <a name="immutable"></a>Değişmez
 
-Değeri değiştirilemeyen bir değişken. İçinde değişmez bir değişken Q# , `let` anahtar sözcüğü kullanılarak oluşturulur. Değiştirilebilen değişkenleri bildirmek için *can* , öğesini bildirmek için [kesilebilir](xref:microsoft.quantum.glossary#immutable) anahtar sözcüğünü ve `set` değeri değiştirmek için anahtar sözcüğünü kullanın. 
+Değeri değiştirilemeyen bir değişken. İçinde değişmez bir değişken Q# , `let` anahtar sözcüğü kullanılarak oluşturulur. Değiştirilebilen değişkenleri bildirmek için  , öğesini bildirmek için [kesilebilir](xref:microsoft.quantum.glossary#immutable) anahtar sözcüğünü ve `set` değeri değiştirmek için anahtar sözcüğünü kullanın. 
 
 ## <a name="measurement"></a>Ölçüm
 

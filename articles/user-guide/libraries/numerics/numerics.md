@@ -4,17 +4,17 @@ description: Microsoft hisse türü kitaplığı 'nda bulunan türler ve işleml
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.numerics.usage
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dfcb8e9e5a15d0881750d67cf58d7ad47cbecd3a
-ms.sourcegitcommit: 897ace8b506adb2331e911ee5633dceced566174
+ms.openlocfilehash: 92efd3b8677d2f27bc59f986ce6c9e915cd23652
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91764134"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856437"
 ---
 # <a name="using-the-numerics-library"></a>Numerics kitaplığını kullanma
 
@@ -39,7 +39,7 @@ Numerics kitaplığı aşağıdaki türleri destekler
 1. **`SignedLittleEndian`**: `LittleEndian` İki öğesinin tamamlayıcısı içinde depolanan işaretli bir tamsayıyı temsil ettiğinden olduğu gibi.
 1. **`FixedPoint`**: Bir qubit dizisi ve ikili nokta konumundan oluşan gerçek bir sayıyı temsil eder `qArr2 : Qubit[]` `pos` . Bu, ikili noktanın solundaki ikili basamak sayısını sayar. `qArr2` , ile aynı şekilde depolanır `SignedLittleEndian` .
 
-## <a name="operations"></a>İşlemler
+## <a name="operations"></a>Operations
 
 Yukarıdaki üç türden her biri için çeşitli işlemler mevcuttur:
 
@@ -95,7 +95,7 @@ operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
 
 $ \Sin (x) $ gibi kesintisiz işlevleri bir hisse bilgisayarında değerlendirmek için, $x $ 'nin hisse numarası olduğu, `FixedPoint` hisse geliştirme seti Numerics kitaplığı, işlemleri `EvaluatePolynomialFxP` ve sunar `Evaluate[Even/Odd]PolynomialFxP` .
 
-Birincisi, `EvaluatePolynomialFxP` , $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cnoktalar + a_dx ^ d, $ $ ($d $ *derecesini*gösterir) biçiminde bir polinom değerini değerlendirebilmenizi sağlar. Bunu yapmak için, gerekli olan polinom katsayıları `[a_0,..., a_d]` (türü `Double[]` ), giriş `x : FixedPoint` ve çıkış `y : FixedPoint` (başlangıçta sıfır):
+Birincisi, `EvaluatePolynomialFxP` , $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cnoktalar + a_dx ^ d, $ $ ($d $ *derecesini* gösterir) biçiminde bir polinom değerini değerlendirebilmenizi sağlar. Bunu yapmak için, gerekli olan polinom katsayıları `[a_0,..., a_d]` (türü `Double[]` ), giriş `x : FixedPoint` ve çıkış `y : FixedPoint` (başlangıçta sıfır):
 ```qsharp
 EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
