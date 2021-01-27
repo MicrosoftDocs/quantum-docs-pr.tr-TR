@@ -1,30 +1,30 @@
 ---
-title: Ürdün-Wigner temsili
-description: Hamiltonian işleçlerini, bir hisse bilgisayarında daha kolay bir şekilde uygulanabilen Unitary matrisleriyle eşleyen Ürdün-Wigner gösterimi hakkında bilgi edinin.
+title: Jordan-Wigner temsili
+description: Hamiltonian işleçlerini bir hisse bilgisayarında daha kolay bir şekilde uygulanabilen Unitary matrisleriyle eşleyen Jordan-Wigner temsili hakkında bilgi edinin.
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 29abb4d2ef11239a58af45bc4eee3bd60d20a6c7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 738c8262ea66b8a02ea7541e402953237dc2ea48
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833846"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844131"
 ---
-# <a name="jordan-wigner-representation"></a>Ürdün-Wigner temsili
+# <a name="jordan-wigner-representation"></a>Jordan-Wigner temsili
 
 İkinci quantiilaHamiltonians, $a ^ \dağılım $ (oluşturma) ve $a $ (annıılasyon) bakımından kolayca temsil edilirken, bu işlemler hisse bilgisayarları 'nda temel işlemler değildir.
 Sonuç olarak, bunları bir hisse bir bilgisayar için uygulamak istiyoruz, işleçleri bir hisse bilgisayar üzerinde uygulanabilen Unitary matrisleriyle eşleştirmemiz gerekir.
 Ürdün – Wigner temsili bir eşleme sağlar.
 Ancak, Bravyi – Kitaev temsili gibi diğerleri de mevcuttur ve kendi göreli avantajları ve dezavantajları vardır.
-Ürdün-Wigner gösteriminin ana avantajı basittür.
+Jordan-Wigner gösteriminin ana avantajı basittür.
 
-Ürdün-Wigner temsili türetmek için doğrudan ileri sarma.
+Jordan-Wigner temsili türetmek için doğrudan ileri sarma.
 Bir State $ \ket {0} _j $ 'ın, döndürme ORBIT $j $ 'ın boş olduğunu ve $ \ket {1} _j $ 'ın dolu olduğunu gösterir.
 Bu, qubits 'in belirli bir dönüş orbisi 'nin mesleklerinden doğal olarak depolayabileceği anlamına gelir.
 Daha sonra bu $a ^ \ dagger_j {0} \tus_j = \ket {1} _j $ ve $a ^ \ dagger_j \demet {1} _j = $0.
@@ -51,14 +51,14 @@ Tam oluşturma işlemi aşağıdaki gibidir:
 \begin{hizalaması} a ^ \ dagger_1 &= \left (\frac{X-iY} {2} \ sağ) \otimes 1 \otimes 1 \\ \\ bir ^ \ dagger_2 &= Z\otimes\left (\frac{X-iY} {2} \right) \otimes 1 \ otimes 1 \otimes \cnoktalar \otimes 1, bir \\ \\ ^ \ dagger_3 &= z\otimes z\otimes \Left (\frac{X-iY} \ {2} sağ) \otimes 1, \\ \\ \vnoktalara bir \\ \\ ^ \ dagger_N &= z\otimes z\otimes Z\otimes Z \otimes \cnoktalar \Otimes Z\otimes \left (\frac{x-iy} {2} \right). & \label{EQ: JW} \end{hizalaması}
 
 Ayrıca, Pauli işleçleri açısından, $n _j $ sayı işleçlerini ifade etmek de kullanışlıdır.
-Ktam, $Z $ işleçlerinin dizeleri (Ürdün-Wigner dizeleri olarak bilinir), bu değişikliği yaptıktan sonra iptal eder.
+Ktam, $Z $ işleçlerinin dizeleri (Jordan-Wigner dizeler olarak bilinir), bu değişikliği yaptıktan sonra iptal eder.
 Bunu yaptıktan sonra (ve bu $X _jY_j = iZ_j $), \begin{Equation} n_j = a ^ \ dagger_j a_j = \frac{(1-Z_j)} {2} .
 \end{Equation}
 
 
-## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Ürdün-Wigner gösteriminde Hamiltonians oluşturuluyor
+## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Jordan-Wigner gösteriminde Hamiltonians oluşturma
 
-Ürdün-Wigner gösterimini çağırdıktan sonra Hamiltonian 'yi Pauli işleçleri toplamına çevirmek, düz bir işlemdir.
+Jordan-Wigner gösterimini belirledikten sonra, Hamiltonian 'ın toplam Pauli işleçleri toplamına dönüştürülmesi, düz bir iletmektir.
 Tek bir, Fermıonic Hamiltonian içindeki her bir $a ^ \dağılım $ ve $a $ işleçlerinin her birini yukarıda verilen Pauli-Operators dizeleriyle değiştirmek yeterlidir.
 Bu değişimi gerçekleştirdiğinde, Hamiltonian içinde yalnızca beş terim sınıfı vardır.
 Bu beş sınıf, tek gövdedeki ve Hamiltonian 'daki iki gövdede bulunan $p, q $ ve $p, q, r, s $ farklı yollarla ilgilidir.

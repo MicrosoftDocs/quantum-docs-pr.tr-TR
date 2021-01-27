@@ -4,18 +4,17 @@ description: Python kullanarak Q# uygulaması oluşturmayı öğrenin.
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.python
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f6a2a7d1888cfe458fa3989a27d71fcdeed0f01f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: 1ec40b6f1b7a8d9144860e3b8cfd554eb51bae81
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834168"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844262"
 ---
 # <a name="develop-with-no-locq-and-python"></a>Q# ve Python ile geliştirme
 
@@ -72,7 +71,7 @@ Q# işlemlerini çağırmak için Python konak programları geliştirmek üzere 
     > `/path/to/dotnet-iqsharp`, dosya sisteminizdeki `dotnet-iqsharp` aracının mutlak yolu ile değiştirilmelidir.
     > Genellikle bu, kullanıcı profili klasörünüzdeki `.dotnet/tools` altında bulunur.
     
-***
+**_
 
 İşte bu kadar! Artık Jupyter için hem `qsharp` Python paketine hem de IQ# çekirdeğine sahipsiniz. Bu paket Python’dan Q# işlemlerini derleyip çalıştırmak için gereken temel işlevselliği sağlar ve Q# Jupyter Not Defterlerini kullanmanıza olanak tanır.
 
@@ -113,7 +112,7 @@ Farklı bir düzenleyici kullanmak istiyorsanız, yukarıdaki yönergelerle gere
 1. Çağırdığınız işlemin sonucunu görmeniz gerekir. Bu durumda, işleminiz rastgele bir sonuç oluşturduğundan ekranda `0` veya `1` yazdırılmış olduğunu görürsünüz. Programı tekrar tekrar çalıştırırsanız her sonucu yaklaşık olarak yarı sürede görmeniz gerekir.
 
 > [!NOTE]
-> * Python kodu yalnızca normal bir Python programıdır. Python programını yazmak ve Q# işlemlerini çağırmak için Python tabanlı Jupyter Not Defterleri dahil olmak üzere herhangi bir Python ortamını kullanabilirsiniz. Python programı, Python kodunun kendisi ile aynı klasörde bulunan tüm .qs dosyalarından Q# işlemlerini içeri aktarabilir.
+> _ Python kodu yalnızca normal bir Python programıdır. Python programını yazmak ve Q# işlemlerini çağırmak için Python tabanlı Jupyter Not Defterleri dahil olmak üzere herhangi bir Python ortamını kullanabilirsiniz. Python programı, Python kodunun kendisi ile aynı klasörde bulunan tüm .qs dosyalarından Q# işlemlerini içeri aktarabilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

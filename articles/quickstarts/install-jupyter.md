@@ -4,18 +4,17 @@ description: Jupyter Not Defterleri kullanarak Q# uygulaması oluşturmayı öğ
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b34d89ab33a4644c1dd4342949685f9bf84babd8
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
-ms.translationtype: HT
+ms.openlocfilehash: 4cef9b7252a2199b2ea995c4cf819a3582d9ca8f
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771392"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844287"
 ---
 # <a name="develop-with-no-locq-jupyter-notebooks"></a>Q# Jupyter Not Defterleri ile geliştirme
 
@@ -69,7 +68,7 @@ IQ# (ay-kü-şarp olarak okunur) öncelikli olarak Jupyter ve Python tarafından
 > `/path/to/dotnet-iqsharp`, dosya sisteminizdeki `dotnet-iqsharp` aracının mutlak yolu ile değiştirilmelidir.
 > Genellikle bu, kullanıcı profili klasörünüzdeki `.dotnet/tools` altında bulunur.
     
-***
+**_
 
 İşte bu kadar! Artık Jupyter için IQ# çekirdeğine sahipsiniz. Bu çekirdek Q# Jupyter Not Defterlerinden Q# işlemlerini derlemek ve çalıştırmak için gereken temel işlevselliği sağlar.
 
@@ -85,7 +84,7 @@ Artık basit bir Q# işlemi yazıp çalıştırarak Q# Jupyter Notebook yükleme
 
     - Jupyter Notebook otomatik olarak tarayıcınızda açılmazsa komut satırı tarafından sağlanan URL’yi kopyalayıp tarayıcınıza yapıştırın.
 
-1. Bir Q# çekirdeği ile Jupyter Not Defteri oluşturmak için **Yeni → Q#** seçeneğini belirleyin ve aşağıdaki kodu birinci not defteri hücresine ekleyin:
+1. Çekirdekle bir Jupyter Notebook oluşturmak için _ *New Q# →** öğesini seçin Q# ve ilk not defteri hücresine aşağıdaki kodu ekleyin:
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 

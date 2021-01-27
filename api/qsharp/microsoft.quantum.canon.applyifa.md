@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfA
 title: ApplyIfA işlemi
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfA
 qsharp.summary: Applies a adjointable operation conditioned on a classical bit.
-ms.openlocfilehash: d2880bbb95ebaf621ef9e5885051b94f32a3f1cc
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 8bdca1bf286d564dfbb540bc9d63c035d2196f00
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96218776"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845033"
 ---
 # <a name="applyifa-operation"></a>ApplyIfA işlemi
 
@@ -28,7 +28,7 @@ operation ApplyIfA<'T> (op : ('T => Unit is Adj), bit : Bool, target : 'T) : Uni
 ```
 
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 Bir işlem `op` ve bir bit değeri verildiğinde, `bit` if ise için geçerlidir `op` `target` `bit` `true` . Varsa, `false` hiçbir şey olmaz `target` .
 Sonek, `A` uygulanacak işlemin adjointable olduğunu gösterir.
@@ -60,6 +60,19 @@ Op 'ın uygulanıp uygulanmadığını denetleyen bir Boole değeri.
 ### <a name="t"></a>Görüntülenemeyen
 
 Koşullu olarak uygulanacak işlemin giriş türü.
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki, bir qubits kaydını bir değer dizisi olarak verilen bir klasik bit dizesiyle temsil eden bir hesaplama tabanlı duruma hazırlar `Bool` :
+
+```qsharp
+let bitstring = [true, false, true];
+using (register = Qubit(3)) {
+    ApplyToEach(ApplyIf(X, _, _), Zipped(bitstring, register));
+    // register should now be in the state |101⟩.
+    ...
+}
+```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
