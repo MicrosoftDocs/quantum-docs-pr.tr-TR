@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyWithCA
 title: ApplyWithCA işlemi
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyWithCA
 qsharp.summary: Given two operations, applies one as conjugated with the other.
-ms.openlocfilehash: e86c452e9693c5a4d0d4e5a36471ab46bbf66dfe
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: a5ce7dc5ddfbb2fc06743d36614129c371850da2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96208151"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841138"
 ---
 # <a name="applywithca-operation"></a>ApplyWithCA işlemi
 
@@ -28,7 +28,7 @@ operation ApplyWithCA<'T> (outerOperation : ('T => Unit is Adj), innerOperation 
 ```
 
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 Sırasıyla Unitary işleçleri $U $ ve $V $ tarafından tanımlanan iki işlem, bu dosyaları ^ {\abger} V U $ $U dizisine uygular. Diğer bir deyişle, bu işlem $U $ ile $V $ Birleşik tarafından verilen Unitary işlecini uygular.
 
