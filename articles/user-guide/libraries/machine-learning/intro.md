@@ -4,17 +4,17 @@ description: Makine öğrenimi 'nin hisse sistemlerinde nasıl kullanıldığın
 author: alexeib2
 ms.author: alexeib
 ms.date: 11/22/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9f7f892fb2b76432942c86163497c22f0c73d51f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e2f4a4a63eef40474856426b3b29652b5d3053b2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833796"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854028"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>Hisse Machine Learning giriş
 
@@ -30,7 +30,7 @@ Sınıflandırma, \{ belirli veri örneklerinin $ y_1, y_2, \lnoktalar, y_d $ s�
 Geleneksel yöntemlere benzer şekilde, hisse sınıflandırması üç adımdan oluşur:
 - veri kodlama
 - sınıflandırıcı durumunun hazırlanması
-- ölçüm, ölçümün dayalı doğası nedeniyle, bu üç adım birden çok kez tekrarlanmış olmalıdır. Hem kodlama hem de sınıflandırıcı durumunun bilgi işlem miktarı *hisse*kullanım yoluyla yapılır. Kodlama devresi genellikle veri odaklı ve parametre-ücretsiz olsa da, sınıflandırıcı devresi uygun bir öğrenme parametreleri kümesi içerir. 
+- ölçüm, ölçümün dayalı doğası nedeniyle, bu üç adım birden çok kez tekrarlanmış olmalıdır. Hem kodlama hem de sınıflandırıcı durumunun bilgi işlem miktarı *hisse* kullanım yoluyla yapılır. Kodlama devresi genellikle veri odaklı ve parametre-ücretsiz olsa da, sınıflandırıcı devresi uygun bir öğrenme parametreleri kümesi içerir. 
 
 Önerilen çözümde, sınıflandırıcı devresi tek qubit döndürmeler ve iki qubit kontrollü döndürmeler oluşur. Burada öğrenme parametreleri, döndürme açıtlardır. Döndürme ve denetlenen döndürme kapıları, hisse alma işlemi için *evrensel* olarak bilinir. Bu, tüm Unitary ağırlığı, söz konusu kapıları oluşan uzun bir devreye göre parçalanabileceği anlamına gelir.
 
@@ -41,7 +41,7 @@ Bu nedenle çözüm, düşük dereceli bir polinom çekirdeği olan destek vekt�
 
 Basit bir hisse sınıflandırıcı tasarımı, geleneksel destek vektör makinesi (SVM) çözümüyle karşılaştırılabilir. SVM 'nin büyük/küçük bir bir çekirdek biçimi olan $ \sum \ alpha_j k (x_j, x) $k $ gibi bir veri $x örneği için çıkarım, belirli bir çekirdek işlevidir.
 
-Buna karşılık, hisse bir sınıflandırıcı $p tahmine ici kullanır (y │ x, U (\teta)) = 〈 U (\teta) x | D | U (\teta) x 〉 $. Bu, ruıt ile benzerdir ancak teknik olarak oldukça farklıdır. Bu nedenle, basit bir genlik kodlaması kullanıldığında, $p (y │ x, U (\teta)) $, $x $ ' ın yükseltilmiş tudes biçiminde bir ikinci dereceden formdur, ancak bu formun katmaları artık bağımsız olarak öğrenilmemelidir; Bunlar, genellikle, "$" vekt$x örünün boyutundan büyük ölçüde daha az öğrendiği $ \teta $ parametrelerine sahip olan devre $U (\teta) $ öğesinin matris öğelerinden toplanır. Özgün özelliklerde $p polinom derecesi (y │ x, U (\teta)) $, $x $ $l $ kopyaları üzerinde hisse bir ürün kodlaması kullanılarak $2 ^ l $ değerine artırılabilir.
+Buna karşılık, bir hisse bir sınıflandırıcı $p (y │ x, U (\teta)) = 〈 U (\teta) x | M | U (\teta) x 〉 $ kullanır ve bu da daha da benzer ancak teknik açıdan oldukça farklıdır. Bu nedenle, basit bir genlik kodlaması kullanıldığında, $p (y │ x, U (\teta)) $, $x $ ' ın yükseltilmiş tudes biçiminde bir ikinci dereceden formdur, ancak bu formun katmaları artık bağımsız olarak öğrenilmemelidir; Bunlar, genellikle, "$" vekt$x örünün boyutundan büyük ölçüde daha az öğrendiği $ \teta $ parametrelerine sahip olan devre $U (\teta) $ öğesinin matris öğelerinden toplanır. Özgün özelliklerde $p polinom derecesi (y │ x, U (\teta)) $, $x $ $l $ kopyaları üzerinde hisse bir ürün kodlaması kullanılarak $2 ^ l $ değerine artırılabilir.
 
 Mimarimiz görece basit devreleri araştırır. bu nedenle, tüm aralıklarda veri özellikleri arasındaki tüm bağıntıları yakalamak için *hızlı* bir şekilde olmalıdır. Aşağıdaki şekilde, en faydalı hızlı bir şekilde, devtoze devre bileşeni örneği gösterilmektedir. Bu geometriye sahip bir devre yalnızca $3 n + 1 $ kapısından oluşuyor olsa da, hesapladığı Unitary ağırlığı, $2 ^ n $ özellikleri arasında önemli bir çapraz konuşmayı sağlar.
 

@@ -4,17 +4,17 @@ description: Q#Büyük olasılıkla geçersiz qubits için kodunuzu denetlemek �
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 18371b3798d0eaa12d4e7107f58f44379594619f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 9014097ace7c9f19d93a92372da40f71fa7f87ee
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90836004"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858618"
 ---
 # <a name="quantum-trace-simulator-invalidated-qubits-use-checker"></a>Hisse izleme simülatörü: geçersiz qubits kullanım denetleyicisi
 
@@ -34,11 +34,11 @@ operation UseReleasedQubit() : Unit {
 }
 ```
 
-`H`İşlemi uygulamasına uyguladığınızda `q[0]` , önceden yayımlanmış bir qubit 'e işaret eder ve bu, tanımsız davranışa neden olabilir. Geçersiz kılınan qubits kullanım denetleyicisi etkinleştirildiğinde, `InvalidatedQubitsUseCheckerException` Program zaten yayınlanmış bir qubit 'e bir işlem uygularsa özel durumu oluşturur. Daha fazla bilgi için bkz. <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException>.
+`H`İşlemi uygulamasına uyguladığınızda `q[0]` , önceden yayımlanmış bir qubit 'e işaret eder ve bu, tanımsız davranışa neden olabilir. Geçersiz kılınan qubits kullanım denetleyicisi etkinleştirildiğinde, `InvalidatedQubitsUseCheckerException` Program zaten yayınlanmış bir qubit 'e bir işlem uygularsa özel durumu oluşturur. Daha fazla bilgi için bkz. <xref:Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.InvalidatedQubitsUseCheckerException>.
 
 ## <a name="invoking-the-invalidated-qubits-use-checker"></a>Geçersiz kılınan qubits kullanım denetleyicisi çağrılıyor
 
-Geçersiz kılınan qubits kullanım denetleyicisi ile hisse izleme simülatörünü çalıştırmak için bir örnek oluşturmanız <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> , `UseInvalidatedQubitsUseChecker` özelliği **true**olarak ayarlamanız ve sonra <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> parametresi olarak yeni bir örnek oluşturmanız gerekir `QCTraceSimulatorConfiguration` . 
+Geçersiz kılınan qubits kullanım denetleyicisi ile hisse izleme simülatörünü çalıştırmak için bir örnek oluşturmanız <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> , `UseInvalidatedQubitsUseChecker` özelliği **true** olarak ayarlamanız ve sonra <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> parametresi olarak yeni bir örnek oluşturmanız gerekir `QCTraceSimulatorConfiguration` . 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -78,4 +78,4 @@ namespace Quantum.MyProgram
 - Hisse Geliştirme Seti [hisse izi simülatörü](xref:microsoft.quantum.machines.qc-trace-simulator.intro) genel bakış.
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API başvurusu.
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>API başvurusu.
-- <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException>API başvurusu.
+- <xref:Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.InvalidatedQubitsUseCheckerException>API başvurusu.

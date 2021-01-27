@@ -1,6 +1,6 @@
 ---
 Başlık: hisse devreleri açıklaması: hisse bağlantı diyagramlarında basit ve karmaşık hisse operasyonlarını görsel olarak nasıl temsil ettiğini öğrenin.
-Yazar: Histumwriter uid: Microsoft. hisse. Concepts. devreler MS. Author: v-benköşeli MS. Date: 12/11/2017 MS. Topic: article No-loc:
+Yazar: Histumwriter uid: Microsoft. hisse. Concepts. devreler MS. Author: v-benköşeli MS. Date: 12/11/2017 MS. Topic: kavramsal No-loc:
 - "Q#"
 - "$$v"
 - "$$"

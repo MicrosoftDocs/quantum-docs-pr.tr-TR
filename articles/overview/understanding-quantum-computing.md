@@ -9,16 +9,16 @@ uid: microsoft.quantum.overview.understanding
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 332afb4ea7de01da5d8f22fee6517032ed4f9fc1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: c6c6249fd56c6fb65550c81ffee902eca555b0cd
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835001"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855101"
 ---
 # <a name="understanding-quantum-computing"></a>Kuantum bilişimini anlama
 
-Kuantum bilişimi, bilgileri işlemek için kuantum mekaniği ilkelerini kullanır. Bu nedenle, kuantum bilişimi klasik bilişimden farklı bir yaklaşım gerektirir. Bu farkın bir örneği, kuantum bilgisayarlarda kullanılan işlemcidir. Klasik bilgisayarlarda alışıldık silikon tabanlı çipler kullanılırken, kuantum bilgisayarlarda atom, iyon, foton veya elektron gibi kuantum sistemleri kullanılır. Kuantum bilgisayarlarda, 1 ve 0 değerine sahip farklı kuantum süper pozisyonlarında hazırlanabilecek bitleri göstermek için kuantum özellikleri kullanılır.  
+Kuantum bilişimi, bilgileri işlemek için kuantum mekaniği ilkelerini kullanır. Bu nedenle, kuantum bilişimi klasik bilişimden farklı bir yaklaşım gerektirir. Bu farkın bir örneği, kuantum bilgisayarlarda kullanılan işlemcidir. Klasik bilgisayarların tanıdık bir Silicon tabanlı yongalar kullanması durumunda, hisse bilgisayarları, alar, yatlar, fotokopi makineleri veya elektrikler gibi hisse maların yanı sıra hisse anlarca, her tip Klasik bilgisayarlar, sırasıyla 1 ve 0 olan ikili mantık tabanlı süper öğeleri ve altları kullanır, ancak hisse bilgisayarları, 1 ve 0 farklı hisse malarda hazırlanabilecek bitleri temsil etmek için hisse özelliklerini kullanır.  
 
 Kuantum malzemesi, kuantum mekaniği kanunlarına göre davranır ve olasılık hesaplama, süper konum ve dolaşıklık gibi kavramlardan yararlanır. Bu kavramlar, karmaşık sorunları çözmek için kuantum bilişiminin gücünden yararlanan kuantum algoritmalarının temelini sağlar. Bu makalede, kuantum bilişiminin temel aldığı önemli kuantum mekaniği kavramlarından bazıları açıklanmaktadır.
 
@@ -52,7 +52,7 @@ Bu karşılıklı bağımlılığın yanı sıra, parçacıklar son derece büy�
 
 ### <a name="qubits-and-probability"></a>Kubitler ve olasılık
 
-Klasik bilgisayarlar bilgileri, 1 veya 0 durumlarından birine sahip olabilen ancak asla ikisine birden sahip olamayan bitlerde depolayıp işler. Bunun kuantum bilişimindeki eşdeğeri, kuantum parçacığının durumunu temsil eden **kubittir**. Süper konum nedeniyle, kubitler 1, 0 ya da bunların arasındaki herhangi bir değer olabilir. Bir kubit, yapılandırmasına bağlı olarak, 1 veya 0 değerine çökmeye yönelik belirli bir *olasılığa* sahiptir. Kubitin iki durumdan birine çökme olasılığı, **kuantum girişimi** ile belirlenir. 
+Klasik bilgisayarlar bilgileri, 1 veya 0 durumlarından birine sahip olabilen ancak asla ikisine birden sahip olamayan bitlerde depolayıp işler. Bunun kuantum bilişimindeki eşdeğeri, kuantum parçacığının durumunu temsil eden **kubittir**. Süper konum nedeniyle, kubitler 1, 0 ya da bunların arasındaki herhangi bir değer olabilir. Bir kubit, yapılandırmasına bağlı olarak, 1 veya 0 değerine çökmeye yönelik belirli bir *olasılığa* sahiptir. Kubitin iki durumdan birine çökme olasılığı, **kuantum girişimi** ile belirlenir.
 
 Resminizi çeken arkadaşınızı hatırladınız mı? Kamerasında *girişim* filtreleri olarak adlandırılan özel filtreler olduğunu varsayalım. *70/30* filtresini seçer ve resim çekmeye başlarsa, resimlerin %70’inde sola baktığınız, %30’unda ise sağa baktığınız görülür. Filtre, davranış olasılığını etkilemek için kameranın normal durumuna girişimde bulunmuştur.
 

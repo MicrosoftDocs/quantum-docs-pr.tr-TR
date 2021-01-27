@@ -4,17 +4,17 @@ description: Microsoft hisse dili Mistry kitaplığı için broombridge hisse Ki
 author: guanghaolow
 ms.author: gulow
 ms.date: 05/28/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 851d10c0137deecf8e861aad30b5e08a9ae61754
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 8d26b56d88f365144510692466bfffc7feb71d88
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833770"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854056"
 ---
 # <a name="broombridge-specification-v02"></a>Broombridge belirtimi v 0.2 #
 
@@ -171,7 +171,7 @@ Her sorun açıklaması nesnesinin `coulomb_repulsion` değeri bir basit Quantit
 Her sorun açıklaması nesnesinin `energy_offet` değeri bir basit Quantity nesnesi olan bir ÖZELLIĞI olmalıdır.
 > NOTUN `coulomb_repulsion` Ve `energy_offet` birlikte eklenen değerler, Hamiltonian 'nin kimlik terimini yakalar.
 
-##### <a name="one-electron-integrals-object"></a>Tek bir elektron Integrals nesnesi #####
+##### <a name="one-electron-integrals-object"></a>One-Electron Integrals nesnesi #####
 
 Bu bölüm normatıve 'dir.
 
@@ -201,7 +201,7 @@ one_electron_integrals:     # required
 > Broombridge, 1 tabanlı dizin oluşturma kullanır.
 
 
-##### <a name="two-electron-integrals-object"></a>İki elektron Integrals nesnesi #####
+##### <a name="two-electron-integrals-object"></a>Two-Electron Integrals nesnesi #####
 
 Bu bölüm normatıve 'dir.
 

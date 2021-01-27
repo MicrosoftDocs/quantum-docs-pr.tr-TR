@@ -1,6 +1,6 @@
 ---
 Başlık: Gelişmiş matris kavramları açıklaması: hisse algoritmalarından bahseve benzetimini yapmak için kullanılan temel araçlar olan eigenvektörler, eigenvalues ve matris üsleri hakkında bilgi edinin.
-Yazar: Histumwriter uid: Microsoft. hisse. Concepts. Matrix-Gelişmiş MS. Author: v-benköşeli MS. Date: 12/11/2017 MS. Topic: article No-loc:
+Yazar: Histumwriter uid: Microsoft. hisse. Concepts. Matrix-Gelişmiş MS. Author: v-benköşeli MS. Date: 12/11/2017 MS. Topic: kavramsal No-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -97,7 +97,7 @@ C 'nin $ $ bir sayı ise, f CV ise M 'nin [*eigenvector*](https://en.wikipedia.o
 
 Örneğin, kimlik matrisi için her vektör $ v, $ eigenvalue 1 içeren bir eigenvector değeridir $ $ .
 
-Diğer bir örnek olarak, [*diagonal matrix*](https://en.wikipedia.org/wiki/Diagonal_matrix) $ $ köşegen üzerinde yalnızca sıfır olmayan girdilerin bulunduğu diyagonal bir matrisi göz önünde bulundurun:
+Diğer bir örnek olarak, [](https://en.wikipedia.org/wiki/Diagonal_matrix) $ $ köşegen üzerinde yalnızca sıfır olmayan girdilerin bulunduğu diyagonal bir matrisi göz önünde bulundurun:
 
 $$
 \begin{bmatrix}

@@ -8,6 +8,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.Extended
 - summary: "{-1,1}Yates 'in yöntemi kullanılarak Kodlamadaki bir Boole Işlevinin Hadamard dönüşümünü hesaplar"
   uid: Microsoft.Quantum.Synthesis.FastHadamardTransformed
+- summary: Her 2 düzeyi Unitary için, karşılık gelen 1-qubit kapısı uygulandıktan önce ve sonra ters çevrilmelidir. Kolaylık sağlaması için 0 ile sonuç elde edin.
+  uid: Microsoft.Quantum.Synthesis.FlipMasks
 - summary: Hedefler 0 değilse, bir tek dizi olarak bir MCMTMask türü oluşturur, aksi takdirde boş bir dizi döndürür.
   uid: Microsoft.Quantum.Synthesis.GateMask
 - summary: Y 'yi x 'e dönüştürmek için en fazla iki MCMT maskesi hesaplar.
@@ -20,6 +22,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.RMEncoding
 - summary: Yeni bir dizinin uzunluk olarak döndürüldüğü `2^numVars` , büyük olasılıkla `table` `false` girdilerle veya öğelere kesilmenin gerekli olduğu değişken sayısına göre, bir dizi Boole değerinden Truth tablosunu ayarlar `2^numVars` .
   uid: Microsoft.Quantum.Synthesis.SizeAdjustedTruthTable
+- summary: Verilen dizinin kare matrisini temsil ettiğini denetler.
+  uid: Microsoft.Quantum.Synthesis.SquareMatrixFact
 - summary: İşlem kapısı maskeleri, PERMÜTASYONA geçirin.
   uid: Microsoft.Quantum.Synthesis.TBSMain
 - summary: ", İzin [x] öğesini x 'e dönüştürecek ve geçerli permütasyon 'yi güncelleştiren geçit maskelerini hesaplar."
@@ -34,6 +38,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.UpdatedPermutation
 - summary: Tamsayıya 0 bit ekleyin
   uid: Microsoft.Quantum.Synthesis.WithZeroInsertedAt
+- summary: ''
+  uid: Microsoft.Quantum.Synthesis._TwoLevelDecomposition
 name: Microsoft.Quantum.Synthesis
 newtypes:
 - summary: Değişken dizinleri temel alarak ayrıştırma sırasında durum
@@ -54,8 +60,15 @@ operations:
   uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecompositionWithVariableOrder
 - summary: ', Dönüştürme tabanlı senklik kullanarak bir PERMÜTASYONA, bir hisse cıklarca rekabet eden bir permütasyon.'
   uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation
+- summary: 2x2 Unitary matrisi tarafından tanımlanan tek qubit kapısı uygular.
+  uid: Microsoft.Quantum.Synthesis.ApplySingleQubitUnitary
 - summary: ''
   uid: Microsoft.Quantum.Synthesis.ApplyTransposition
+- summary: >-
+    2 ^ n x 2 ^ n Unitary matrisi tarafından tanımlanan geçit uygular.
+
+    Matris Unitary değilse veya boyut yanlış ise başarısız olur.
+  uid: Microsoft.Quantum.Synthesis.ApplyUnitary
 - summary: '@"microsoft.quantum.intrinsic.x" `target` `func` İçindeki klasik atama için Boolean işlevi true olarak değerlendirilirse, işlemini üzerine uygular `controlRegister` .'
   uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTable
 - summary: '@"microsoft.quantum.intrinsic.x" `target` `func` İçindeki klasik atama için Boolean işlevi true olarak değerlendirilirse, işlemini üzerine uygular `controlRegister` .'
@@ -63,9 +76,9 @@ operations:
 summary: Bu ad alanı, permütasyon ve Boole işlevlerine dayalı olarak hisse işleme işlemlerine yönelik işlevler ve işlemler içerir.
 uid: Microsoft.Quantum.Synthesis
 metadata:
-  ms.openlocfilehash: 2f92f4662252148ff0e093f5392f5f00f26b661f
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: e238fdedcc931bb02c35591014d20b50b695b116
+  ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92734202"
+  ms.lasthandoff: 01/26/2021
+  ms.locfileid: "98855181"

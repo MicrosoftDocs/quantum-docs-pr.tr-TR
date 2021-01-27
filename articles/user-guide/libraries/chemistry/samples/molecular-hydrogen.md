@@ -4,17 +4,17 @@ description: Q#Molesel Hydrogen 'ın enerji düzeyi değerlerini tahmin eden ör
 author: guanghaolow
 ms.author: gulow
 ms.date: 07/02/2020
-ms.topic: article-type-from-white-list
+ms.topic: sample
 uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 81fba0c52c854d61f9143659795fb4d3c3cee8b9
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 60935e7c1e8c674fab3a546c1f110f589d2e6b77
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691531"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855049"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Enerji düzeyi tahminleri edinme
 Enerji seviyelerinin değerlerini tahmin etmek, hisse Chemistry 'ın asıl uygulamalarından biridir. Bu makalede, bu işlemi, molesel Hydrogen 'nin kurallı örneği için nasıl gerçekleştirebileceğiniz özetlenmektedir. Bu bölümde başvurulan örnek, [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) Kimya örnekleri deposunda bulunur. Çıktıyı gösteren daha fazla görsel örnek [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) tanıtım olur.

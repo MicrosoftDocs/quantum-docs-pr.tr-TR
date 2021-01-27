@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8f4b69250ed49bd56c3066d5cd40db4b8abfc9cb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690865"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858697"
 ---
 # <a name="higher-order-control-flow"></a>Denetim akışı Higher-Order #
 
@@ -164,7 +164,7 @@ U(1, time / Float(nSteps), target);
 
 Bu noktada artık, *her şey için* ücretlendirilir – Suzuki genişletmesi olmadan bir sorun olabilir.
 Genişleme, $ \eqref{EQ: Trour-Suzuki-0} $ tarafından bir çok özel yineleme düzeniyle rekabet altına alınmıştır.
-Bu yineleme deseninin uygulanma ölçütü <xref:Microsoft.Quantum.Canon.DecomposedIntoTimestepsCA> :
+Bu yineleme deseninin uygulanma ölçütü <xref:Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA> :
 
 ```qsharp
 // The 2 indicates how many terms we need to decompose,
@@ -213,7 +213,7 @@ Bu oluşturma işlemi tam `ApplyWith` olarak, Yeni işlediğimiz gövdesini buna
 ```
 
 Burada, ' nin <xref:Microsoft.Quantum.Canon.ApplyPauliFromBitString> ile kullanım için kısmen uygulanması $P $ ' i uygulamak için kullandık `ApplyWith` .
-Ancak, *Denetim* kaydını istenen formumuza dönüştürmemiz gerektiğini unutmayın. bu nedenle, hedefte iç işlemi kısmen uygulayacağız `(Controlled oracle)` . *target*
+Ancak, *Denetim* kaydını istenen formumuza dönüştürmemiz gerektiğini unutmayın. bu nedenle, hedefte iç işlemi kısmen uygulayacağız `(Controlled oracle)` . 
 Bu, `ApplyWith` tam olarak istediğiniz gibi, denetim yazmacını $P $ ile birlikte bırakır.
 
 Bu noktada yapılabiliriz, ancak yeni operasyonumuzın, functor uygulama gibi "uygun değil" olarak karşılanmıyor `Controlled` .
