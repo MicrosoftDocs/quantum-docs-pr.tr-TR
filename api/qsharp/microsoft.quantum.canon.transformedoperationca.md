@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.TransformedOperationCA
 title: TransformedOperationCA işlevi
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: TransformedOperationCA
 qsharp.summary: Given a function and an operation, returns a new operation whose input is transformed by the given function.
-ms.openlocfilehash: fa204433dc8195dd27fa40980fb2262f8a3848bb
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: bb39530ae28e17d07a6a5c2bb2d35f81be312d15
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96204853"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840118"
 ---
 # <a name="transformedoperationca-function"></a>TransformedOperationCA işlevi
 
@@ -53,6 +53,14 @@ Yeni bir işlem olan tbat `fn` , girişiyle birlikte çağrı yapar ve sonuç ç
 ### <a name="u"></a>' U
 
 
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki çağrı, @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" giriş için tasarlanan bir işlemi @"Microsoft.Quantum.Arithmetic.BigEndian" , türü girdileri kabul eden bir işleme dönüştürmek için kullanır @"Microsoft.Quantum.Arithmetic.LittleEndian" :
+
+```qsharp
+let leOp = TransformedOperation(LittleEndianAsBigEndian, ApplyXorInPlaceBE);
+```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
