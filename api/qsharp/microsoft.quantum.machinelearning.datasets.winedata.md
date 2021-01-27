@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.Datasets.WineData
 title: WineData işlemi
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning.Datasets
 qsharp.name: WineData
 qsharp.summary: ''
-ms.openlocfilehash: 0da808158ff5faec309ddb732be2c004fe81dafc
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 84d0d0f8557a60f22114c3175aeaebbf6de19117
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96196523"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857174"
 ---
-# <a name="winedata-operation"></a><span data-ttu-id="c4b40-102">WineData işlemi</span><span class="sxs-lookup"><span data-stu-id="c4b40-102">WineData operation</span></span>
+# <a name="winedata-operation"></a><span data-ttu-id="639bb-102">WineData işlemi</span><span class="sxs-lookup"><span data-stu-id="639bb-102">WineData operation</span></span>
 
-<span data-ttu-id="c4b40-103">Ad alanı: [Microsoft. hisse. Machinöğrenim. DataSet](xref:Microsoft.Quantum.MachineLearning.Datasets)</span><span class="sxs-lookup"><span data-stu-id="c4b40-103">Namespace: [Microsoft.Quantum.MachineLearning.Datasets](xref:Microsoft.Quantum.MachineLearning.Datasets)</span></span>
+<span data-ttu-id="639bb-103">Ad alanı: [Microsoft. hisse. Machinöğrenim. DataSet](xref:Microsoft.Quantum.MachineLearning.Datasets)</span><span class="sxs-lookup"><span data-stu-id="639bb-103">Namespace: [Microsoft.Quantum.MachineLearning.Datasets](xref:Microsoft.Quantum.MachineLearning.Datasets)</span></span>
 
-<span data-ttu-id="c4b40-104">Paket: [Microsoft. hisse. Machine-öğrenim](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="c4b40-104">Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span></span>
+<span data-ttu-id="639bb-104">Paket: [Microsoft. hisse. Machine-öğrenim](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="639bb-104">Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span></span>
 
 
 
@@ -28,5 +28,5 @@ operation WineData () : Microsoft.Quantum.MachineLearning.LabeledSample[]
 ```
 
 
-## <a name="output--labeledsample"></a><span data-ttu-id="c4b40-105">Çıkış: [Labeledsample](xref:Microsoft.Quantum.MachineLearning.LabeledSample)[]</span><span class="sxs-lookup"><span data-stu-id="c4b40-105">Output : [LabeledSample](xref:Microsoft.Quantum.MachineLearning.LabeledSample)[]</span></span>
+## <a name="output--labeledsample"></a><span data-ttu-id="639bb-105">Çıkış: [Labeledsample](xref:Microsoft.Quantum.MachineLearning.LabeledSample)[]</span><span class="sxs-lookup"><span data-stu-id="639bb-105">Output : [LabeledSample](xref:Microsoft.Quantum.MachineLearning.LabeledSample)[]</span></span>
 
