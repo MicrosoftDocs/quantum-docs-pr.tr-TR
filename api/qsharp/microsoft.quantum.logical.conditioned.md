@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Logical.Conditioned
 title: Koşullu işlev
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: Conditioned
 qsharp.summary: Returns one of two values, depending on the value of a Boolean condition.
-ms.openlocfilehash: c0f55d4db95ad1f0d2b7f291cbc6ba8ae704cb81
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: ea3b8eba960acceb6540978c6fccd9f796b0f67d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96198495"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98817296"
 ---
 # <a name="conditioned-function"></a>Koşullu işlev
 
@@ -62,7 +62,7 @@ Olduğunda döndürülecek değer `condition` `false` .
 
 En fazla kısa devre davranýþý, şunlar eşdeğerdir:
 
-```Q#
+```qsharp
 let x = condition ? ifTrue | ifFalse;
 let x = Conditioned(condition, ifTrue, ifFalse);
 ```
