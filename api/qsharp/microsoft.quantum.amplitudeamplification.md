@@ -1,56 +1,56 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification
 title: Microsoft. hisse. yükseltilmiş Tudeamplifi ad alanı
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/23/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.AmplitudeAmplification
 qsharp.summary: This namespace contains functions and operations for performing amplitude amplification.
-ms.openlocfilehash: f265f1f8b41513f9201a758f85451e768b7564e2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: a014f923de62c5e660c1c0fc839fbe60e80f8ba9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191423"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845840"
 ---
-# <a name="microsoftquantumamplitudeamplification-namespace"></a><span data-ttu-id="a7b87-102">Microsoft. hisse. yükseltilmiş Tudeamplifi ad alanı</span><span class="sxs-lookup"><span data-stu-id="a7b87-102">Microsoft.Quantum.AmplitudeAmplification namespace</span></span>
+# <a name="microsoftquantumamplitudeamplification-namespace"></a><span data-ttu-id="f62c8-102">Microsoft. hisse. yükseltilmiş Tudeamplifi ad alanı</span><span class="sxs-lookup"><span data-stu-id="f62c8-102">Microsoft.Quantum.AmplitudeAmplification namespace</span></span>
 
-<span data-ttu-id="a7b87-103">Bu ad alanı, genliğini gerçekleştirmeye yönelik işlevler ve işlemler içerir.</span><span class="sxs-lookup"><span data-stu-id="a7b87-103">This namespace contains functions and operations for performing amplitude amplification.</span></span>
+<span data-ttu-id="f62c8-103">Bu ad alanı, genliğini gerçekleştirmeye yönelik işlevler ve işlemler içerir.</span><span class="sxs-lookup"><span data-stu-id="f62c8-103">This namespace contains functions and operations for performing amplitude amplification.</span></span>
 
 
 
-## <a name="description"></a><span data-ttu-id="a7b87-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a7b87-104">Description</span></span>
+## <a name="description"></a><span data-ttu-id="f62c8-104">Description</span><span class="sxs-lookup"><span data-stu-id="f62c8-104">Description</span></span>
 
-<span data-ttu-id="a7b87-105">Kısmi yansıtımları ile yükümlülüğü uygulayan, burada uygulanan en genel genme biçimidir.</span><span class="sxs-lookup"><span data-stu-id="a7b87-105">Oblivious amplitude amplification with partial reflections is the most general form of amplitude amplification implemented here.</span></span>
+<span data-ttu-id="f62c8-105">Kısmi yansıtımları ile yükümlülüğü uygulayan, burada uygulanan en genel genme biçimidir.</span><span class="sxs-lookup"><span data-stu-id="f62c8-105">Oblivious amplitude amplification with partial reflections is the most general form of amplitude amplification implemented here.</span></span>
 
-<span data-ttu-id="a7b87-106">Bu işlem AmpAmpObliviousByReflectionPhases aracılığıyla çağrılır.</span><span class="sxs-lookup"><span data-stu-id="a7b87-106">This is called through the operation AmpAmpObliviousByReflectionPhases.</span></span>
+<span data-ttu-id="f62c8-106">Bu işlem AmpAmpObliviousByReflectionPhases aracılığıyla çağrılır.</span><span class="sxs-lookup"><span data-stu-id="f62c8-106">This is called through the operation AmpAmpObliviousByReflectionPhases.</span></span>
 
-<span data-ttu-id="a7b87-107">Bu iki kayıt içerir: `ancillaRegister` ve `systemRegister` .</span><span class="sxs-lookup"><span data-stu-id="a7b87-107">This has two registers: `ancillaRegister` and `systemRegister`.</span></span>
+<span data-ttu-id="f62c8-107">Bu iki kayıt içerir: `ancillaRegister` ve `systemRegister` .</span><span class="sxs-lookup"><span data-stu-id="f62c8-107">This has two registers: `ancillaRegister` and `systemRegister`.</span></span>
 
-<span data-ttu-id="a7b87-108">Bu `ReflectionOracle` , yalnızca yazmaç üzerinde işlem gören bu tür yansımaları için iki Oracles kabul eder `ancillaRegister` .</span><span class="sxs-lookup"><span data-stu-id="a7b87-108">This accepts two oracles for these reflections of type `ReflectionOracle` which act only on the `ancillaRegister` register.</span></span>
+<span data-ttu-id="f62c8-108">Bu `ReflectionOracle` , yalnızca yazmaç üzerinde işlem gören bu tür yansımaları için iki Oracles kabul eder `ancillaRegister` .</span><span class="sxs-lookup"><span data-stu-id="f62c8-108">This accepts two oracles for these reflections of type `ReflectionOracle` which act only on the `ancillaRegister` register.</span></span>
 
-<span data-ttu-id="a7b87-109">Bu, `ObliviousOracle` her iki kasada de birlikte çalışan bir Oracle özel için, türü bir Oracle özel bakış düzeyini kabul eder.</span><span class="sxs-lookup"><span data-stu-id="a7b87-109">This accepts an oracle special to oblivious amplitude amplification of type `ObliviousOracle` which acts jointly on both register.</span></span>
+<span data-ttu-id="f62c8-109">Bu, `ObliviousOracle` her iki kasada de birlikte çalışan bir Oracle özel için, türü bir Oracle özel bakış düzeyini kabul eder.</span><span class="sxs-lookup"><span data-stu-id="f62c8-109">This accepts an oracle special to oblivious amplitude amplification of type `ObliviousOracle` which acts jointly on both register.</span></span>
 
-<span data-ttu-id="a7b87-110">Giriş durumunun, `ancillaRegister` ilk yansıma işlecinin benzersiz $-$1 eigenstate olduğu varsayılır $I-2 \ ayraç {s} \ köşeli {s} $.</span><span class="sxs-lookup"><span data-stu-id="a7b87-110">The input state to `ancillaRegister` is assumed to be the unique $-1$ eigenstate of the first reflection operator $I - 2\ket{s}\bra{s}$.</span></span>
+<span data-ttu-id="f62c8-110">Giriş durumunun, `ancillaRegister` ilk yansıma işlecinin benzersiz $-$1 eigenstate olduğu varsayılır $I-2 \ ayraç {s} \ köşeli {s} $.</span><span class="sxs-lookup"><span data-stu-id="f62c8-110">The input state to `ancillaRegister` is assumed to be the unique $-1$ eigenstate of the first reflection operator $I - 2\ket{s}\bra{s}$.</span></span>
 
-<span data-ttu-id="a7b87-111">Bir hedef hisse cıya ilişkin yansıtıcılıkları genellikle bu durumu hesaplama tabanlı $ \ket{0\cnoktalar 0} $ ' dan hazırlayan bir Oracle erişimi varsayıldığında uygulanır.</span><span class="sxs-lookup"><span data-stu-id="a7b87-111">Reflections about a target quantum state are often implemented by assuming access to an oracle that prepare that state from the computational basis $\ket{0\cdots 0}$.</span></span>
+<span data-ttu-id="f62c8-111">Bir hedef hisse cıya ilişkin yansıtıcılıkları genellikle bu durumu hesaplama tabanlı $ \ket{0\cnoktalar 0} $ ' dan hazırlayan bir Oracle erişimi varsayıldığında uygulanır.</span><span class="sxs-lookup"><span data-stu-id="f62c8-111">Reflections about a target quantum state are often implemented by assuming access to an oracle that prepare that state from the computational basis $\ket{0\cdots 0}$.</span></span>
 
-<span data-ttu-id="a7b87-112">Bu Oracles için kuralımız iki kayıt gerektirir: tek bir-qubit `flagQubit` kayıt ve Anyalakaydet kaydındaki diğer her şey için bir kayıt.</span><span class="sxs-lookup"><span data-stu-id="a7b87-112">Our convention for these oracles requires two registers: a single-qubit `flagQubit` register, and a register for everything else on the ancillaRegister register.</span></span>
+<span data-ttu-id="f62c8-112">Bu Oracles için kuralımız iki kayıt gerektirir: tek bir-qubit `flagQubit` kayıt ve Anyalakaydet kaydındaki diğer her şey için bir kayıt.</span><span class="sxs-lookup"><span data-stu-id="f62c8-112">Our convention for these oracles requires two registers: a single-qubit `flagQubit` register, and a register for everything else on the ancillaRegister register.</span></span>
 
-<span data-ttu-id="a7b87-113">Oracle türü, `StateOracle` {1} `flagQubit` bazı gerçek genlerle kasada $ \ket $ tarafından işaretlenen hedef durumu oluşturmak için her iki kasada de birlikte yürütülür.</span><span class="sxs-lookup"><span data-stu-id="a7b87-113">The oracle of type `StateOracle` acts jointly on both registers to create the target state flagged by $\ket{1}$ in the `flagQubit` register with some real amplitude.</span></span>
+<span data-ttu-id="f62c8-113">Oracle türü, `StateOracle` {1} `flagQubit` bazı gerçek genlerle kasada $ \ket $ tarafından işaretlenen hedef durumu oluşturmak için her iki kasada de birlikte yürütülür.</span><span class="sxs-lookup"><span data-stu-id="f62c8-113">The oracle of type `StateOracle` acts jointly on both registers to create the target state flagged by $\ket{1}$ in the `flagQubit` register with some real amplitude.</span></span>
 
-<span data-ttu-id="a7b87-114">`ReflectionOracle`Bu bayrak durumuyla ilgili yansıma, işlem tarafından oluşturulur `TargetStateReflectionOracle` .</span><span class="sxs-lookup"><span data-stu-id="a7b87-114">The reflection `ReflectionOracle` about the this flag state is generated by the operation `TargetStateReflectionOracle`.</span></span>
+<span data-ttu-id="f62c8-114">`ReflectionOracle`Bu bayrak durumuyla ilgili yansıma, işlem tarafından oluşturulur `TargetStateReflectionOracle` .</span><span class="sxs-lookup"><span data-stu-id="f62c8-114">The reflection `ReflectionOracle` about the this flag state is generated by the operation `TargetStateReflectionOracle`.</span></span>
 
-<span data-ttu-id="a7b87-115">`ReflectionOracle`Giriş durumu hakkındaki yansıma, `ancillaRegister` stateoracle 'ı ters çeviren ve daha sonra reflectionstart () ile birlikte $ \ket{0\cnoktalar 0} $ hakkında yansıtılırken oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="a7b87-115">The reflection `ReflectionOracle` about the input state to `ancillaRegister` is generated by the inverting StateOracle and then reflecting about $\ket{0\cdots 0}$ with ReflectionStart().</span></span>
+<span data-ttu-id="f62c8-115">`ReflectionOracle`Giriş durumu hakkındaki yansıma, `ancillaRegister` stateoracle 'ı ters çeviren ve daha sonra reflectionstart () ile birlikte $ \ket{0\cnoktalar 0} $ hakkında yansıtılırken oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="f62c8-115">The reflection `ReflectionOracle` about the input state to `ancillaRegister` is generated by the inverting StateOracle and then reflecting about $\ket{0\cdots 0}$ with ReflectionStart().</span></span>
 
-<span data-ttu-id="a7b87-116">Oracle türü, `DeterministicStateOracle` `qubitState` hedef durumu yalnızca bayrak olmadan oluşturmak için kayıt defterlerine davranır.</span><span class="sxs-lookup"><span data-stu-id="a7b87-116">The oracle of type `DeterministicStateOracle` acts on the `qubitState` registers to create the target state exactly with no flag.</span></span>
+<span data-ttu-id="f62c8-116">Oracle türü, `DeterministicStateOracle` `qubitState` hedef durumu yalnızca bayrak olmadan oluşturmak için kayıt defterlerine davranır.</span><span class="sxs-lookup"><span data-stu-id="f62c8-116">The oracle of type `DeterministicStateOracle` acts on the `qubitState` registers to create the target state exactly with no flag.</span></span>
 
-<span data-ttu-id="a7b87-117">`AmpAmpObliviousByOraclePhases` , Oracles `StateOracle` ve yansıtımları yerine kabul eden bir zorunluluvou genliği yükseltme sürümüdür `ObliviousOracle` .</span><span class="sxs-lookup"><span data-stu-id="a7b87-117">`AmpAmpObliviousByOraclePhases` is a version of oblivious amplitude amplification that accepts oracles `StateOracle` and `ObliviousOracle` instead of reflections.</span></span>
+<span data-ttu-id="f62c8-117">`AmpAmpObliviousByOraclePhases` , Oracles `StateOracle` ve yansıtımları yerine kabul eden bir zorunluluvou genliği yükseltme sürümüdür `ObliviousOracle` .</span><span class="sxs-lookup"><span data-stu-id="f62c8-117">`AmpAmpObliviousByOraclePhases` is a version of oblivious amplitude amplification that accepts oracles `StateOracle` and `ObliviousOracle` instead of reflections.</span></span>
 
-<span data-ttu-id="a7b87-118">Genüzliği, `ObliviousOracle` Identity operatörü olan ve hiçbir sistem qubit (boş) olmayan, yükümlülüğü uygulayan özel bir durum olduğunu unutmayın `systemRegister` .</span><span class="sxs-lookup"><span data-stu-id="a7b87-118">Note that amplitude amplification is a special case of oblivious amplitude amplification where `ObliviousOracle` is the identity operator, and there are no system qubits i.e. `systemRegister` is empty.</span></span>
+<span data-ttu-id="f62c8-118">Genüzliği, `ObliviousOracle` Identity operatörü olan ve hiçbir sistem qubit (boş) olmayan, yükümlülüğü uygulayan özel bir durum olduğunu unutmayın `systemRegister` .</span><span class="sxs-lookup"><span data-stu-id="f62c8-118">Note that amplitude amplification is a special case of oblivious amplitude amplification where `ObliviousOracle` is the identity operator, and there are no system qubits i.e. `systemRegister` is empty.</span></span>
 
-<span data-ttu-id="a7b87-119">Bu işlem ve işlemi aracılığıyla çağrılır `AmpAmByReflectionPhases` `AmpAmpByOraclePhases` .</span><span class="sxs-lookup"><span data-stu-id="a7b87-119">This is called through the operation `AmpAmByReflectionPhases` and `AmpAmpByOraclePhases`.</span></span>
+<span data-ttu-id="f62c8-119">Bu işlem ve işlemi aracılığıyla çağrılır `AmpAmByReflectionPhases` `AmpAmpByOraclePhases` .</span><span class="sxs-lookup"><span data-stu-id="f62c8-119">This is called through the operation `AmpAmByReflectionPhases` and `AmpAmpByOraclePhases`.</span></span>
 
-<span data-ttu-id="a7b87-120">Grover aramasının standart durumunda kısmi yansıtılılıkları için aşamalar, AmpAmpPhasesStandard işlevi tarafından sağlanır.</span><span class="sxs-lookup"><span data-stu-id="a7b87-120">The phases for partial reflections in the standard case of Grover search is provided by the function AmpAmpPhasesStandard.</span></span>
+<span data-ttu-id="f62c8-120">Grover aramasının standart durumunda kısmi yansıtılılıkları için aşamalar, AmpAmpPhasesStandard işlevi tarafından sağlanır.</span><span class="sxs-lookup"><span data-stu-id="f62c8-120">The phases for partial reflections in the standard case of Grover search is provided by the function AmpAmpPhasesStandard.</span></span>
 
-<span data-ttu-id="a7b87-121">Örneğin, şu bağımlılıklara sahipsiniz: AmpAmpByOracle-> Ampampbyoracliaşamalar-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases.</span><span class="sxs-lookup"><span data-stu-id="a7b87-121">For instance, we have the following dependencies: AmpAmpByOracle -> AmpAmpByOraclePhases -> AmpAmpObliviousByOraclePhases -> AmpAmpObliviousByReflectionPhases.</span></span>
+<span data-ttu-id="f62c8-121">Örneğin, şu bağımlılıklara sahipsiniz: AmpAmpByOracle-> Ampampbyoracliaşamalar-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases.</span><span class="sxs-lookup"><span data-stu-id="f62c8-121">For instance, we have the following dependencies: AmpAmpByOracle -> AmpAmpByOraclePhases -> AmpAmpObliviousByOraclePhases -> AmpAmpObliviousByReflectionPhases.</span></span>
