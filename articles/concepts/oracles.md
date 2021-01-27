@@ -1,6 +1,6 @@
 ---
 Başlık: hisse Oracles açıklaması: ile nasıl çalışacağınızı ve başka bir algoritmaya girdi olarak kullanılan hisse Oracles, kara Box işlemlerini nasıl tanımlayacağınızı öğrenin.
-Yazar: cgranade uid: Microsoft. hisse. Concepts. Oracles MS. Author: chgranad MS. Date: 07/11/2018 MS. Topic: article No-loc:
+Yazar: cgranade uid: Microsoft. hisse. Concepts. Oracles MS. Author: chgranad MS. Date: 07/11/2018 MS. Topic: kavramsal No-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -134,7 +134,7 @@ Burada $ \alpha : \\ { 0, 1 \\ } ^ n \times \\ { 0, 1 \\ } ^ m \to \mathbb { C, 
 
 $$
 \begin{align}
-O o \ket { \psi } & = \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & , = 1 ^ n, y 0, 1 ^ m (x, y) O \sum _ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
+O o \ket { \psi } & = \sum _{ x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & , = 1 ^ n, y 0, 1 ^ m (x, y) O \sum_ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
              &= \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ e } \alpha (x, y) \ket { x } \ket { y \ OPLUS f (x) } .
 \end{align}
 $$
@@ -157,6 +157,9 @@ Ni $$
         &=(-1) ^ { f (0) } Z ^ { f (0)-f (1) } \ket { + } .
 \end{align}
 $$
+
+> [!NOTE]
+>$Z ^ { -1 } = Z ^ { \dagger } = Z $ ve bu nedenle $ z ^ { f (0)-f (1) } = z ^ { f (1)-f (0) } olduğunu unutmayın.$
 
 Daha genel olarak, Oracles görünümlerinin her ikisi de yalnızca tek bir bit yerine gerçek sayılar döndüren klasik işlevleri temsil edecek şekilde ayarlanabilir.
 

@@ -4,17 +4,17 @@ description: Hisse programlama aşamasında elektronik yapıların modellenmesi 
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.secondquantization
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6becd348f7b3957cb60b16bbd5a28228527e1d4c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: a08e20d5b53aa97cb12ead0dc3a36069d0ec5df8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835817"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858846"
 ---
 # <a name="second-quantization"></a>İkinci Quantitleştirme
 
@@ -84,7 +84,7 @@ $2N $ $ $ $ $ $ $ $ $ $ $ $ $ $ $/bit
 Örnek olarak, $N = $2 sonra durum $ $ \ayraç \ ayraç \ ayraç \ ayraç {0} {1} {1} {0} , $ $
 
 döndürme Orbitals $1 $ ve $2 $, kalan boş ile birlikte yer alar.
-Benzer şekilde, $ $ \ ayraç {0} \ EQUIV \ ayraç \ {0} _ {0} cnoktalar \ ayraç {0} _{N-1}, $ $
+Benzer şekilde, $ $ \ ayraç {0} \ EQUIV \ ayraç \ {0} _{0} cnoktalar \ ayraç {0}_{N-1}, $ $
 
 , elektriksiz değildir ve ' vakum State ' olarak bilinir.
 
@@ -211,12 +211,12 @@ Herhangi biri `FermionTerm` , aşağıdaki gibi otomatik olarak kurallı bir sı
     var signEqual = sign0 == sign1;
 ```
 
-## <a name="second-quantized-fermionic-hamiltonian"></a>İkinci Quantitik Gümıonic Hamiltonian
+## <a name="second-quantized-fermionic-hamiltonian"></a>Second-Quantized Fermıonic Hamiltonian
 
 Büyük olasılıkla, [elektronik sistemler için](xref:microsoft.quantum.chemistry.concepts.quantummodels) ücretlerdeki Hamiltonian 'nin oluşturma ve Ayla ilgili işleçler açısından yazılabilmesini unsurprising.
 Özellikle, $ \psı \_ j $, temeli oluşturan döndürme orbitleri ise
 
-\begin{Equation} \hat{H} = \sum \_ {PQ} h \_ {PQ} a ^ \_ \hanuger p a \_ q + \frac {1} {2} \sum \_ {pqrs} h \_ {pqrs} a ^ \dağılım \_ p a ^ \_ \_ \dokger q a ra \_ s + H \_ {\Textrm NUC}, \label{EQ: totalham} \end{Equation}; burada $h \_ {\textrm NUC} $, nükleer enerji
+\begin{Equation} \hat{H} = \sum \_ {PQ} h \_ {PQ} a ^ \_ \hanuger p a \_ q + \frac {1} {2} \sum \_ {pqrs} h \_ {pqrs} a ^ \dağılım \_ p a ^ \_ \_ \dokger q a ra \_ s + H \_ {\Textrm NUC}, \label{EQ: totalhemi} \end{Equation} burada $h \_ {\textrm NUC} $, Nunet enerji (Born-Oppenheimer yaklaşık olarak bir sabittir) ve
 
 \begin{hizalaması} h \_ {PQ} &= \int \_ {-\infty} ^ \infty \psı ^ \* \_ p (x \_ 1) \left (-\frac{\nabla ^ 2} {2} + V (x \_ 1) \right) \psı \_ q (x \_ 1) \mathrm{d} ^ 3x \_ 1, \end{hizalaması}
 

@@ -1,6 +1,6 @@
 ---
 Başlık: Pauli ölçümleri açıklaması: tek ve Multi-qubit Pauli ölçüm işlemleriyle nasıl çalışacağınızı öğrenin.
-Yazar: bradben uid: Microsoft. hisse. Concepts. Pauli MS. Author: v-benköşeli MS. Date: 12/11/2017 MS. Topic: Makale No-loc:
+Yazar: bradben uid: Microsoft. hisse. Concepts. Pauli MS. Author: v-benköşeli MS. Date: 12/11/2017 MS. Topic: kavramsal No-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -87,7 +87,7 @@ Yazar: bradben uid: Microsoft. hisse. Concepts. Pauli MS. Author: v-benköşeli 
 
 Önceki tartışmalarda hesaplama tabanlı ölçümlere odaklandık.
 Aslında, notational perspektifinden, işlem tabanlı ölçümlerde hızlı bir şekilde ifade etmek için uygun olan, hisse kullanımı açısından oluşan diğer yaygın ölçümler vardır.
-İle çalışırken Q# , çalıştırdığınız en yaygın ölçüm türü, diğer tabanlarda ölçümleri dahil etmek üzere hesaplama tabanlı ölçümleri *Pauli measurements* genelleştirmesi ve farklı qugeler arasında eşlik olması olasıdır.
+İle çalışırken Q# , çalıştırdığınız en yaygın ölçüm türü, diğer tabanlarda ölçümleri dahil etmek üzere hesaplama tabanlı ölçümleri genelleştirmesi ve farklı qugeler arasında eşlik olması olasıdır.
 Bu gibi durumlarda, bir Pauli işlecinin, genel olarak $ x, Y, z $ veya $ z \otimes z, x \otimes x, x \otimes Y $ , vb. gibi bir operatör ölçmesi konusunda tartışmak yaygındır. 
 
 > [!TIP]
@@ -139,7 +139,7 @@ $$
 
 Ayrıca, $ HS ^ \dagger $ ' i hisse durumu vektörüne uygulamak ve ardından Z ölçüsüne benzer ve $ $ aşağıdaki işlem ile eşdeğerdir `Measure([PauliY], [q])` :
 
-```Q#
+```qsharp
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {

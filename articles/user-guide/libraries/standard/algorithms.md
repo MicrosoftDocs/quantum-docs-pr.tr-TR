@@ -4,17 +4,17 @@ description: Genliği yükseltme, Fourier dönüşümü, Draper ve Beauregard ad
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.algorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 982103876b00718aa3b42c6bc3a07d242cde7594
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d4d8c35b3196ffb9915c6da06116b3c7dfd0562a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692221"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98859017"
 ---
 # <a name="quantum-algorithms"></a>Hisse algoritmaları #
 
@@ -49,7 +49,7 @@ Arka plan için [Standart genliği](https://arxiv.org/abs/quant-ph/0005055) yük
 Fourier Transform, klasik çözümlemenin temel bir aracıdır ve yalnızca hisse hesaplamalarında önemli bir araçtır.
 Buna ek olarak, *hisse* uygun bir şekilde bir hisse algoritması tasarımı yaparken, her ne kadar, bir klasik makinede ne kadar verimli hale gelir.
 
-QFT 'nin yaklaşık bir genelleştirme olarak, <xref:Microsoft.Quantum.Canon.ApproximateQft> istenen algoritmik doğruluğu için kesinlikle gerekli olmayan döndürmeler ayıklanarak daha fazla iyileştirmeler sağlayan bir işlem sağlıyoruz.
+QFT 'nin yaklaşık bir genelleştirme olarak, <xref:Microsoft.Quantum.Canon.ApproximateQFT> istenen algoritmik doğruluğu için kesinlikle gerekli olmayan döndürmeler ayıklanarak daha fazla iyileştirmeler sağlayan bir işlem sağlıyoruz.
 Yaklaşık QFT, dyadic $Z $-Rotation işleminin <xref:Microsoft.Quantum.Intrinsic.RFrac> yanı sıra <xref:Microsoft.Quantum.Intrinsic.H> işlemi gerektirir.
 Giriş ve çıkışın big endian kodlamada kodlandığını kabul edilir---Yani, index ile qubit, `0` ikili tamsayı gösteriminin en solundaki (en yüksek) bit olarak kodlanır.
 Bu, [ayraç](xref:microsoft.quantum.concepts.dirac)ile hizalanır; $ \ket $ durumunda bulunan üç qubit kayıt olarak $ {100} \ket $, {1} $q _1 $ ve $q _2 $ her ikisi de $ \gre$ durumunda olan $q _0 $ {0} .
