@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8aa6072e9b495db6e127cac350d5bfaec1b090ce
-ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.openlocfilehash: dd37581dff2a512a29eb7729ecbf81412917b8f8
+ms.sourcegitcommit: e915baf3b84ee3a562004c5b31d157d21533d450
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98856657"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99101467"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit Sürüm Notları
 
@@ -23,6 +23,15 @@ Bu makale her Quantum Development Kit sürümüne ilişkin bilgileri içerir.
 Yükleme yönergeleri için bu [yükleme kılavuzuna](xref:microsoft.quantum.install) başvurun.
 
 Güncelleştirme yönergeleri için bu [güncelleştirme kılavuzuna](xref:microsoft.quantum.update) başvurun.
+
+## <a name="version-0152101126807"></a>Sürüm 0.15.2101.126807
+
+*Yayın tarihi: 29 Ocak 2021*
+
+- Q#Ionq ve Honeywell sağlayıcılarını hedefleyen yürütülebilir dosyalar için derleyici 'ye proje şablonları eklendi
+- Q# Q# [0.15.2101125897](#version-0152101125897) sürümünde tanıtılan sözdiziminin değişikliklerini dahil etmek için, çekirdek söz dizimi vurgulamasını Güncelleştir
+- Dizileri Azure hisse 'e gönderilen programlara giriş bağımsız değişkenleri olarak geçirmeyi desteklemek için bugdüzeltmesini Q# `%azure.execute` , bkz. sorun [#401](https://github.com/microsoft/iqsharp/issues/401)
+- Docker görüntülerinin içinde kullanılırken "Izin reddedildi" hatasıyla karşılaşıldı `az` `iqsharp-base` , bkz. sorun [#404](https://github.com/microsoft/iqsharp/issues/404)
 
 ## <a name="version-0152101125897"></a>Sürüm 0.15.2101125897
 
@@ -34,6 +43,7 @@ Güncelleştirme yönergeleri için bu [güncelleştirme kılavuzuna](xref:micro
 - En iyi derinlik için geliştirilmiş genişlik tahminleri, [bkz. Ayrıntılar](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159).
 - (Miktar) kullanarak açık matris olarak sağlanan Unitary işlemini uygulama `ApplyUnitary` ([391 kitaplıkları #](https://github.com/microsoft/QuantumLibraries/pull/391), Dmydeniz Fedoriaka tarafından sunulan dış katkı)
 - https://github.com/microsoft/iqsharp/issues/387Çekirdek başlatma ile ilgili performans etkisi azaltılarak düzeltildi Q# .
+
 ## <a name="version-0142011120240"></a>Sürüm 0.14.2011120240
 
 *Yayın tarihi: 25 Kasım, 2020*
